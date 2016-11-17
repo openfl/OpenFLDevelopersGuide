@@ -1,0 +1,61 @@
+## Selecting and manipulating text {#selecting-and-manipulating-text}
+
+Flash Player 9 and later, Adobe AIR 1.0 and later
+
+You can select dynamic or input text. Since the text selection properties and methods of the TextField class use index positions to set the range of text to manipulate, you can programmatically select dynamic or input text even if you don’t know the content.
+
+**_Note:_ **_In Flash Professional, if you choose the selectable option on a static text field, the text field that is exported and placed on the display list is a regular, dynamic text field._
+
+**Selecting text**
+
+Flash Player 9 and later, Adobe AIR 1.0 and later
+
+The flash.text.TextField.selectable property is true by default, and you can programmatically select text using the setSelection() method.
+
+For example, you can set specific text within a text field to be selected when the user clicks the text field:
+
+var myTextField:TextField = new TextField();
+
+myTextField.text = &quot;No matter where you click on this text field the TEXT IN ALL CAPS is selected.&quot;; myTextField.autoSize = TextFieldAutoSize.LEFT;
+
+addChild(myTextField); addEventListener(MouseEvent.CLICK, selectText);
+
+function selectText(event:MouseEvent):void
+
+{
+
+myTextField.setSelection(49, 65);
+
+}
+
+Similarly, if you want text within a text field to be selected as the text is initially displayed, create an event handler function that is called as the text field is added to the display list.
+
+### Capturing user-selected text {#capturing-user-selected-text}
+
+Flash Player 9 and later, Adobe AIR 1.0 and later
+
+The TextField selectionBeginIndex and selectionEndIndex properties, which are “read-only” so they can’t be set to programmatically select text, can be used to capture whatever the user has currently selected. Additionally, input text fields can use the caretIndex property.
+
+For example, the following code traces the index values of user-selected text:
+
+var myTextField:TextField = new TextField();
+
+myTextField.text = &quot;Please select the TEXT IN ALL CAPS to see the index values for the first and last letters.&quot;;
+
+myTextField.autoSize = TextFieldAutoSize.LEFT; addChild(myTextField); addEventListener(MouseEvent.MOUSE_UP, selectText);
+
+function selectText(event:MouseEvent):void
+
+{
+
+trace(&quot;First letter index position: &quot; + myTextField.selectionBeginIndex); trace(&quot;Last letter index position: &quot; + myTextField.selectionEndIndex);
+
+}
+
+You can apply a collection of TextFormat object properties to the selection to change the text appearance. For more information about applying a collection of TextFormat properties to selected text, see
+
+“Formatting ranges of text
+
+within a text field” on page 383
+
+.
