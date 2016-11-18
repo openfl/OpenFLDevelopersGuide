@@ -1,4 +1,4 @@
-## Using the AIR file system API {#using-the-air-file-system-api}
+# Using the AIR file system API {#using-the-air-file-system-api}
 
 Adobe AIR 1.0 and later
 
@@ -49,7 +49,7 @@ The asynchronous versions let you initiate processes that run in the background 
 
 The synchronous versions let you write simpler code that does not rely on setting up event listeners. However, since other code cannot execute while a synchronous method is executing, important processes such as display object rendering and animation can be delayed.
 
-### Working with File objects in AIR {#working-with-file-objects-in-air}
+## Working with File objects in AIR {#working-with-file-objects-in-air}
 
 Adobe AIR 1.0 and later
 
@@ -661,7 +661,7 @@ AIR prevents you from using the openWithDefaultApplication() method to open cert
 
 **_Note:_ **_This limitation does not exist for an AIR application installed using a native installer (an extended desktop application)._
 
-### Getting file system information {#getting-file-system-information}
+## Getting file system information {#getting-file-system-information}
 
 Adobe AIR 1.0 and later
 
@@ -703,7 +703,7 @@ separator = &quot;\\&quot;;
 
 This code leads to problems on Linux. It is better to simply use the File.separator property.
 
-### Working with directories {#working-with-directories}
+## Working with directories {#working-with-directories}
 
 Adobe AIR 1.0 and later
 
@@ -835,7 +835,7 @@ Also included are the moveToTrash() and moveToTrashAsync() methods, which you ca
 
 .
 
-### Working with files {#working-with-files}
+## Working with files {#working-with-files}
 
 Adobe AIR 1.0 and later
 
@@ -988,7 +988,7 @@ You can use a temporary file to temporarily store information used in a session 
 
 You may want to delete the temporary file before closing the application, as it is _not_ automatically deleted on all devices.
 
-### Working with storage volumes {#working-with-storage-volumes}
+## Working with storage volumes {#working-with-storage-volumes}
 
 Adobe AIR 2 and later
 
@@ -1063,7 +1063,7 @@ You can use the spaceAvailable property of the rootDirectory property of a Stora
 
 [StorageVolume](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filesystem/StorageVolume.html) [StorageVolumeInfo](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filesystem/StorageVolumeInfo.html)
 
-### Reading and writing files {#reading-and-writing-files}
+## Reading and writing files {#reading-and-writing-files}
 
 Adobe AIR 1.0 and later
 

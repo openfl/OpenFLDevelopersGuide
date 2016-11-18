@@ -1,4 +1,4 @@
-## Restricting text input {#restricting-text-input}
+# Restricting text input {#restricting-text-input}
 
 Since input text fields are often used for forms or dialog boxes in applications, you may want to limit the types of characters a user can enter in a text field, or even keep the text hidden —for example, for a password. The flash.text.TextField class has a displayAsPassword property and a restrict property that you can set to control user input.
 

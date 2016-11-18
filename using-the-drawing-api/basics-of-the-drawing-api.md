@@ -1,4 +1,4 @@
-## Basics of the drawing API {#basics-of-the-drawing-api}
+# Basics of the drawing API {#basics-of-the-drawing-api}
 
 The drawing API is the name for the functionality built into ActionScript that allows you to create vector graphics— lines, curves, shapes, fills, and gradients—and display them on the screen using ActionScript. The flash.display.Graphics class provides this functionality. You can draw with ActionScript on any Shape, Sprite, or MovieClip instance, using the graphics property defined in each of those classes. (Each of those classes’ graphics property is in fact an instance of the Graphics class.)
 

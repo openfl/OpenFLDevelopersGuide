@@ -1,4 +1,4 @@
-## Overview of the JSON API {#overview-of-the-json-api}
+# Overview of the JSON API {#overview-of-the-json-api}
 
 The ActionScript JSON API consists of the JSON class and toJSON() member functions on a few native classes. For applications that require a custom JSON encoding for any class, the ActionScript framework provides ways to override the default encoding.
 
@@ -8,7 +8,7 @@ The JSON interface consists of an encoding method, stringify(), and a decoding m
 
 function(k, v):*
 
-### toJSON() methods {#tojson-methods}
+## toJSON() methods {#tojson-methods}
 
 The signature for toJSON() methods is
 

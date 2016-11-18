@@ -1,4 +1,4 @@
-## Reading external XML documents {#reading-external-xml-documents}
+# Reading external XML documents {#reading-external-xml-documents}
 
 You can use the URLLoader class to load XML data from a URL. To use the following code in your applications, replace the XML_URL value in the example with a valid URL:
 

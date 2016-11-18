@@ -1,4 +1,4 @@
-## Communicating between workers {#communicating-between-workers}
+# Communicating between workers {#communicating-between-workers}
 
 Flash Player 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
 
@@ -36,7 +36,7 @@ The value that’s passed to the setSharedProperty() method can be almost any ty
 
 The biggest advantage of using a shared property to pass data between workers is that it’s available even before the worker is running. You can call a background Worker object’s setSharedProperty() method to set a shared property even before the worker is running. When the parent worker calls the Worker’s start() method, the runtime calls the child worker’s main class’s constructor. Any shared properties that were set before start() was called are available for code in the child worker to read.
 
-### Passing data with a MessageChannel {#passing-data-with-a-messagechannel}
+## Passing data with a MessageChannel {#passing-data-with-a-messagechannel}
 
 A message channel provides a one-way data-passing link between two workers. Using a MessageChannel object to pass data between workers has one key advantage. When you send a message (an object) using a message channel, the MessageChannel object dispatches a channelMessage event. Code in the receiving worker can listen for that event to know when data is available. That way the receiving worker doesn’t need to continuously check for data updates.
 
@@ -78,7 +78,7 @@ The object returned by the receive method has the same data type as the object t
 
 .
 
-### Sharing data using a shareable ByteArray {#sharing-data-using-a-shareable-bytearray}
+## Sharing data using a shareable ByteArray {#sharing-data-using-a-shareable-bytearray}
 
 When an object is passed between two workers, the receiving worker gets a new object that’s a copy of the original one. The two objects are stored in different locations in the system’s memory. Consequently, each copy of the object that’s received increases the total memory used by the runtime. In addition, any changes that you make to an object in one worker do not affect the copy in the other worker. For more details about how data is copied, see
 
@@ -106,7 +106,7 @@ In addition, the flash.concurrent package includes classes that provide access c
 
 • [Condition class](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/concurrent/Condition.html)
 
-### Shared references and copied values {#shared-references-and-copied-values}
+## Shared references and copied values {#shared-references-and-copied-values}
 
 In the normal case, when you call Worker.setSharedProperty() or MessageChannel.send(), the object that’s passed to the receiving worker is passed by serializing it in AMF format. This has a few consequences:
 
@@ -132,7 +132,7 @@ There are five special cases of objects that are truly shared rather than copied
 
 When you pass an instance of one of these objects using the Worker.setSharedProperty() method or MessageChannel.send() method, each worker has a reference to the same underlying object. Changes made to an instance in one worker are immediately available in other workers. In addition, if you pass the same instance of one of these objects to a worker more than once, the runtime doesn&#039;t create a new copy of the object in the receiving worker. Instead, the same reference is re-used.
 
-### Additional data-sharing techniques {#additional-data-sharing-techniques}
+## Additional data-sharing techniques {#additional-data-sharing-techniques}
 
 In addition to the worker-specific mechanisms for passing data, workers can also exchange data using any of the existing apis that support sharing data between two swf applications, such as the following:
 

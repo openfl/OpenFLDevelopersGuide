@@ -1,4 +1,4 @@
-## Basics of error handling {#basics-of-error-handling}
+# Basics of error handling {#basics-of-error-handling}
 
 A run-time error is something that goes wrong in your ActionScript code that stops the ActionScript content from running as intended. To ensure that your ActionScript code runs smoothly for users, write code in your application that handles the error—that fixes it, works around it, or at least lets the user know that it has happened. This process is called _error handling_.
 

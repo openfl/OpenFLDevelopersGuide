@@ -1,4 +1,4 @@
-## The length property {#the-length-property}
+# The length property {#the-length-property}
 
 Every string has a length property, which is equal to the number of characters in the string:
 

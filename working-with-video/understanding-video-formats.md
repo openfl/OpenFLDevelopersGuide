@@ -1,4 +1,4 @@
-## Understanding video formats {#understanding-video-formats}
+# Understanding video formats {#understanding-video-formats}
 
 In addition to the Adobe FLV video format, Flash Player and Adobe AIR support video and audio encoded in H.264 and HE-AAC from within MPEG-4 standard file formats. These formats stream high quality video at lower bit rates. Developers can leverage industry standard tools, including Adobe Premiere Pro and Adobe After Effects, to create and deliver compelling video content.
 
@@ -37,7 +37,7 @@ For a detailed discussion and encoding settings in Adobe Media Encoder CS5, see 
 
 **_Note:_ **_On iOS, only video encoded with the Sorenson Spark and On2 VP6 codecs can be played back using the Video class. You can play back H.264 encoded video in the device video player by launching the URL to the video using the flash.net.navigateToURL() function. You can also play back H.264 video using the &lt;video&gt; tag in an html page displayed in a StageWebView object._
 
-### Flash Player and AIR compatibility with encoded video files {#flash-player-and-air-compatibility-with-encoded-video-files}
+## Flash Player and AIR compatibility with encoded video files {#flash-player-and-air-compatibility-with-encoded-video-files}
 
 Flash Player 7 supports FLV files that are encoded with the Sorenson™ Spark™ video codec. Flash Player 8 supports FLV files encoded with Sorenson Spark or On2 VP6 encoder in Flash Professional 8\. The On2 VP6 video codec supports an alpha channel.
 
@@ -59,7 +59,7 @@ The following table lists the supported codecs. It also shows the corresponding 
 | Speex (audio) | 10 | Flash Player 10, AIR 1.5 |
 | Nellymoser | 6 | Flash Player 6 |
 
-### Understanding the Adobe F4V and FLV video file formats {#understanding-the-adobe-f4v-and-flv-video-file-formats}
+## Understanding the Adobe F4V and FLV video file formats {#understanding-the-adobe-f4v-and-flv-video-file-formats}
 
 Adobe provides the F4V and FLV video file formats for streaming content to Flash Player and AIR. For a complete description of these video file formats, see [www.adobe.com/go/video_file_format](http://www.adobe.com/go/video_file_format).
 

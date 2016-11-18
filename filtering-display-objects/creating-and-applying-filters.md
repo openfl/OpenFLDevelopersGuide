@@ -1,4 +1,4 @@
-## Creating and applying filters {#creating-and-applying-filters}
+# Creating and applying filters {#creating-and-applying-filters}
 
 Filters allow you to apply a range of effects to bitmap and display objects, ranging from drop shadows to bevels and blurs. Each filter is defined as a class, so applying filters involves creating instances of filter objects, which is no different from constructing any other object. Once you’ve created an instance of a filter object, it can easily be applied to a display object by using the object’s filters property, or in the case of a BitmapData object, by using the applyFilter() method.
 
@@ -12,7 +12,7 @@ var myFilter:DropShadowFilter = new DropShadowFilter();
 
 Although not shown here, the DropShadowFilter() constructor (like all the filter classes’ constructors) accepts several optional parameters that can be used to customize the appearance of the filter effect.
 
-### Applying a filter {#applying-a-filter}
+## Applying a filter {#applying-a-filter}
 
 Once you&#039;ve constructed a filter object, you can apply it to a display object or a BitmapData object; how you apply the filter depends on the object to which you’re applying it.
 
@@ -92,7 +92,7 @@ myBitmapData.applyFilter(sourceBitmapData, rect, origin, new BlurFilter());
 
 The applyFilter() method applies a filter to a source BitmapData object, producing a new, filtered image. This method does not modify the original source image; instead, the result of the filter being applied to the source image is stored in the BitmapData instance on which the applyFilter() method is called.
 
-### How filters work {#how-filters-work}
+## How filters work {#how-filters-work}
 
 Display object filtering works by caching a copy of the original object as a transparent bitmap.
 
@@ -100,7 +100,7 @@ Once a filter has been applied to a display object, the runtime caches the objec
 
 Each display object usually contains two bitmaps: one with the original unfiltered source display object and another for the final image after filtering. The final image is used when rendering. As long as the display object does not change, the final image does not need updating.
 
-### Potential issues for working with filters {#potential-issues-for-working-with-filters}
+## Potential issues for working with filters {#potential-issues-for-working-with-filters}
 
 There are several potential sources of confusion or trouble to keep in mind when you’re working with filters.
 

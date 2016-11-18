@@ -1,4 +1,4 @@
-## Opening a URL in another application {#opening-a-url-in-another-application}
+# Opening a URL in another application {#opening-a-url-in-another-application}
 
 You can use the navigateToURL() function to open a URL in a web browser or other application. For content running in AIR, the navigateToURL() function opens the page in the default system web browser.
 

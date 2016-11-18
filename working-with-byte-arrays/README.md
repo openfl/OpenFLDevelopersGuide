@@ -52,7 +52,7 @@ trace(&quot;bytes.position is: &quot; + bytes.position);//display the position i
 
 trace(&quot;bytes length is: &quot; + bytes.length);// display the length
 
-### The position property {#the-position-property}
+## The position property {#the-position-property}
 
 The position property stores the current position of the pointer that indexes the ByteArray during reading or writing. The initial value of the position property is 0 (zero) as shown in the following code:
 
@@ -80,7 +80,7 @@ trace(&quot;The first 6 bytes are: &quot; + (bytes.readUTFBytes(6)));//Hello tra
 
 Notice that you can set the position property to a specific location in the ByteArray to read or write at that offset.
 
-### The bytesAvailable and length properties {#the-bytesavailable-and-length-properties}
+## The bytesAvailable and length properties {#the-bytesavailable-and-length-properties}
 
 The length and bytesAvailable properties tell you how long a ByteArray is and how many bytes remain in it from the current position to the end. The following example illustrates how you can use these properties. The example writes a String of text to the ByteArray and then reads the ByteArray one byte at a time until it encounters either the character “a” or the end (bytesAvailable &lt;= 0).
 
@@ -102,7 +102,7 @@ trace(&quot;Found the letter a; position is: &quot; + bytes.position); // 23 tra
 
 }
 
-### The endian property {#the-endian-property}
+## The endian property {#the-endian-property}
 
 Computers can differ in how they store multibyte numbers, that is, numbers that require more than 1 byte of memory to store them. An integer, for example, can take 4 bytes, or 32 bits, of memory. Some computers store the most significant byte of the number first, in the lowest memory address, and others store the least significant byte first. This attribute of a computer, or of byte ordering, is referred to as being either _big endian_ (most significant byte first) or _little endian_ (least significant byte first). For example, the number 0x31323334 would be stored as follows for big endian and little endian byte ordering, where a0 represents the lowest memory address of the 4 bytes and a3 represents the highest:
 
@@ -118,7 +118,7 @@ Computers can differ in how they store multibyte numbers, that is, numbers that 
 
 The endian property of the ByteArray class allows you to denote this byte order for multibyte numbers that you are processing. The acceptable values for this property are either &quot;bigEndian&quot; or &quot;littleEndian&quot; and the Endian class defines the constants BIG_ENDIAN and LITTLE_ENDIAN for setting the endian property with these strings.
 
-### The compress() and uncompress() methods {#the-compress-and-uncompress-methods}
+## The compress() and uncompress() methods {#the-compress-and-uncompress-methods}
 
 The compress() method allows you to compress a ByteArray in accordance with a compression algorithm that you specify as a parameter. The uncompress() method allows you to uncompress a compressed ByteArray in accordance with a compression algorithm. After calling compress() and uncompress(), the length of the byte array is set to the new length and the position property is set to the end.
 
@@ -134,7 +134,7 @@ The following example uncompresses a compressed ByteArray using the deflate algo
 
 bytes.uncompress(CompressionAlgorithm.LZMA);
 
-### Reading and writing objects {#reading-and-writing-objects}
+## Reading and writing objects {#reading-and-writing-objects}
 
 The readObject() and writeObject() methods read an object from and write an object to a ByteArray, encoded in serialized Action Message Format (AMF). AMF is a proprietary message protocol created by Adobe and used by various ActionScript 3.0 classes, including Netstream, NetConnection, NetStream, LocalConnection, and Shared Objects.
 

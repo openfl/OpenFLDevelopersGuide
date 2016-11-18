@@ -1,4 +1,4 @@
-## Traversing XML structures {#traversing-xml-structures}
+# Traversing XML structures {#traversing-xml-structures}
 
 One of the powerful features of XML is its ability to provide complex, nested data via a linear string of text characters. When you load data into an XML object, ActionScript parses the data and loads its hierarchical structure into memory (or it sends a run-time error if the XML data is not well formed).
 
@@ -86,7 +86,7 @@ var myXML:XML =
 
 var childName:String = &quot;book&quot;; trace(myXML.child(childName).title) // output: Dictionary
 
-### Accessing attributes {#accessing-attributes}
+## Accessing attributes {#accessing-attributes}
 
 Use the @ symbol (the attribute identifier operator) to access attributes in an XML or XMLList object, as shown in the following code:
 
@@ -142,7 +142,7 @@ employee.attribute(&quot;id&quot;) employee[&quot;@id&quot;] employee.@[&quot;id
 
 These are each equivalent to employee.@id. However, the syntax employee.@id is the preferred approach.
 
-### Filtering by attribute or element value {#filtering-by-attribute-or-element-value}
+## Filtering by attribute or element value {#filtering-by-attribute-or-element-value}
 
 You can use the parentheses operators— ( and ) —to filter elements with a specific element name or attribute value. Consider the following XML object:
 
@@ -236,7 +236,7 @@ var doc:XML =
 
 &lt;/body&gt;; trace(doc.p.(hasOwnProperty(&#039;@id&#039;) &amp;&amp; @id == &#039;123&#039;)); trace(doc.p.(hasOwnProperty(&#039;b&#039;) &amp;&amp; b == &#039;Bob&#039;));
 
-### Using the for..in and the for each..in statements {#using-the-for-in-and-the-for-each-in-statements}
+## Using the for..in and the for each..in statements {#using-the-for-in-and-the-for-each-in-statements}
 
 ActionScript 3.0 includes the for..in statement and the for each..in statement for iterating through XMLList objects. For example, consider the following XML object, myXML, and the XMLList object, myXML.item. The XMLList object, myXML.item, consists of the two item nodes of the XML object.
 

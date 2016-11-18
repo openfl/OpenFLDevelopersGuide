@@ -1,4 +1,4 @@
-## UDP sockets (AIR) {#udp-sockets-air}
+# UDP sockets (AIR) {#udp-sockets-air}
 
 Adobe AIR 2 and later
 

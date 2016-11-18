@@ -1,4 +1,4 @@
-## Advantages of the display list approach {#advantages-of-the-display-list-approach}
+# Advantages of the display list approach {#advantages-of-the-display-list-approach}
 
 In ActionScript 3.0, there are separate classes for different types of display objects. In ActionScript 1.0 and 2.0, many of the same types of objects are all included in one class: the MovieClip class.
 
@@ -16,7 +16,7 @@ In ActionScript 1.0 and 2.0, you could draw shapes only in a MovieClip object. I
 
 For example, each MovieClip object includes properties for the timeline of the movie clip, whereas a Shape object does not. The properties for managing the timeline can use a lot of memory and processor resources. In ActionScript 3.0, using the Shape object results in better performance. The Shape object has less overhead than the more complex MovieClip object. Flash Player and AIR do not need to manage unused MovieClip properties, which improves speed and reduces the memory footprint the object uses.
 
-### Improved depth management {#improved-depth-management}
+## Improved depth management {#improved-depth-management}
 
 In ActionScript 1.0 and 2.0, depth was managed through a linear depth management scheme and methods such as
 
@@ -32,7 +32,7 @@ In ActionScript 3.0, you can easily traverse the display list sequentially; ther
 
 In ActionScript 3.0, you can also access children in a display object container by using the getChildByName() method of the DisplayObjectContainer class.
 
-### Full traversal of the display list {#full-traversal-of-the-display-list}
+## Full traversal of the display list {#full-traversal-of-the-display-list}
 
 In ActionScript 1.0 and 2.0, you could not access some objects, such as vector shapes, that were drawn in the Flash authoring tool. In ActionScript 3.0, you can access all objects on the display list—both those created using ActionScript and all display objects created in the Flash authoring tool. For details, see
 
@@ -40,13 +40,13 @@ In ActionScript 1.0 and 2.0, you could not access some objects, such as vector s
 
 .
 
-### Off-list display objects {#off-list-display-objects}
+## Off-list display objects {#off-list-display-objects}
 
 In ActionScript 3.0, you can create display objects that are not on the visible display list. These are known as _off-list_ display objects. A display object is added to the visible display list only when you call the addChild() or addChildAt() method of a DisplayObjectContainer instance that has already been added to the display list.
 
 You can use off-list display objects to assemble complex display objects, such as those that have multiple display object containers containing multiple display objects. By keeping display objects off-list, you can assemble complicated objects without using the processing time to render these display objects. You can then add an off-list display object to the display list when it is needed. Also, you can move a child of a display object container on and off the display list and to any desired position in the display list at will.
 
-### Easier subclassing of display objects {#easier-subclassing-of-display-objects}
+## Easier subclassing of display objects {#easier-subclassing-of-display-objects}
 
 In ActionScript 1.0 and 2.0, you would often have to add new MovieClip objects to a SWF file to create basic shapes or to display bitmaps. In ActionScript 3.0, the DisplayObject class includes many built-in subclasses, including Shape and Bitmap. Because the classes in ActionScript 3.0 are more specialized for specific types of objects, it is easier to create basic subclasses of the built-in classes.
 

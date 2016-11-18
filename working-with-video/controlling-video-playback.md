@@ -1,4 +1,4 @@
-## Controlling video playback {#controlling-video-playback}
+# Controlling video playback {#controlling-video-playback}
 
 The NetStream class offers four main methods for controlling video playback:
 

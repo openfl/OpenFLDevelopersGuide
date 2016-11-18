@@ -1,4 +1,4 @@
-## Asynchronous decoding of bitmap images {#asynchronous-decoding-of-bitmap-images}
+# Asynchronous decoding of bitmap images {#asynchronous-decoding-of-bitmap-images}
 
 Flash Player 11 and later, Adobe AIR 2.6 and later
 

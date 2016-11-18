@@ -1,4 +1,4 @@
-## Sound example: Podcast Player {#sound-example-podcast-player}
+# Sound example: Podcast Player {#sound-example-podcast-player}
 
 A podcast is a sound file that is distributed over the Internet, on demand or by subscription. Podcasts are usually published as part of a series, which is also called a podcast channel. Because podcast episodes can last anywhere from one minute to many hours, they are usually streamed while playing. Podcast episodes, which are also called items, are usually delivered in the mp3 file format. Video podcasts are also popular, but this sample application plays only audio podcasts that use mp3 files.
 
@@ -45,7 +45,7 @@ The Podcast Player application starts by reading information about a number of p
 
 This example uses the URLLoader utility class to retrieve text-based data from a remote location or a local file. The Podcast Player first creates a URLLoader object to get a list of RSS feeds in XML format from the playerconfig.xml file. Next, when the user selects a specific feed from the list, a new URLLoader object is created to read the RSS data from that feed’s URL.
 
-### Simplifying sound loading and playback using the SoundFacade class {#simplifying-sound-loading-and-playback-using-the-soundfacade-class}
+## Simplifying sound loading and playback using the SoundFacade class {#simplifying-sound-loading-and-playback-using-the-soundfacade-class}
 
 The ActionScript 3.0 sound architecture is powerful but complex. Applications that only need basic sound loading and playback features can use a class that hides some of the complexity by providing a simpler set of method calls and events. In the world of software design patterns, such a class is called a _facade_.
 
@@ -229,7 +229,7 @@ this.playTimer = new Timer(this.progressInterval); this.playTimer.addEventListen
 
 The play() method calls the Sound.play() method if the sound is ready to play. The resulting SoundChannel object is stored in the sc property. The play() method then creates a Timer object that will be used to dispatch playback progress events at regular intervals.
 
-### Displaying playback progress {#displaying-playback-progress}
+## Displaying playback progress {#displaying-playback-progress}
 
 Creating a Timer object to drive playback monitoring is complex operation that you should only have to code once. Encapsulating this Timer logic in a reusable class like the SoundFacade class lets applications listen to the same kinds of progress events when a sound is loading and when it is playing.
 
@@ -255,7 +255,7 @@ playback” on page 451
 
 . Then it creates a new ProgressEvent instance with an event type of SoundFacade.PLAY_PROGRESS, with the bytesLoaded property set to the current position of the SoundChannel object and the bytesTotal property set to the estimated length of the sound data.
 
-### Pausing and resuming playback {#pausing-and-resuming-playback}
+## Pausing and resuming playback {#pausing-and-resuming-playback}
 
 The SoundFacade.play() method shown previously accepts a pos parameter corresponding to a starting position in the sound data. If the pos value is zero, the sound starts playing from the beginning.
 
@@ -299,7 +299,7 @@ play(this.pausePosition);
 
 The pause() method passes the current SoundChannel.position value to the play() method, which stores that value in the pausePosition property. The resume() method starts playing the same sound again using the pausePosition value as the starting point.
 
-### Extending the Podcast Player example {#extending-the-podcast-player-example}
+## Extending the Podcast Player example {#extending-the-podcast-player-example}
 
 This example presents a bare-bones Podcast Player that showcases the use of the reusable SoundFacade class. You could add other features to enhance the usefulness of this application, including the following:
 

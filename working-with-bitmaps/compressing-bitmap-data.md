@@ -1,4 +1,4 @@
-## Compressing bitmap data {#compressing-bitmap-data}
+# Compressing bitmap data {#compressing-bitmap-data}
 
 Flash Player 11.3 and later, AIR 3.3 and later
 

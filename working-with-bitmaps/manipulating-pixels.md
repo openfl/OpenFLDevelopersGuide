@@ -1,4 +1,4 @@
-## Manipulating pixels {#manipulating-pixels}
+# Manipulating pixels {#manipulating-pixels}
 
 The BitmapData class contains a set of methods that allow you to manipulate pixel data values.
 
@@ -54,7 +54,7 @@ var bitmapImage2:Bitmap = new Bitmap(bitmapDataObject2); addChild(bitmapImage2);
 
 bitmapImage2.x = 110;
 
-### Pixel-level collision detection {#pixel-level-collision-detection}
+## Pixel-level collision detection {#pixel-level-collision-detection}
 
 The BitmapData.hitTest() method performs pixel-level collision detection between the bitmap data and another object or point.
 

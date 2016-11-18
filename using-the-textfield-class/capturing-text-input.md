@@ -1,4 +1,4 @@
-## Capturing text input {#capturing-text-input}
+# Capturing text input {#capturing-text-input}
 
 By default, the type property of a text field is set to dynamic. If you set the type property to input using the TextFieldType class, you can collect user input and save the value for use in other parts of your application. Input text fields are useful for forms and any application that wants the user to define a text value for use elsewhere in the program.
 

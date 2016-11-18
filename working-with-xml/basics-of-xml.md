@@ -1,4 +1,4 @@
-## Basics of XML {#basics-of-xml}
+# Basics of XML {#basics-of-xml}
 
 XML is a standard way of representing structured information so that it is easy for computers to work with and reasonably easy for people to write and understand. XML is an abbreviation for eXtensible Markup Language. The XML standard is available at [www.w3.org/XML/](http://www.w3.org/XML/).
 

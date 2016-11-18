@@ -1,4 +1,4 @@
-## Basics of regular expressions {#basics-of-regular-expressions}
+# Basics of regular expressions {#basics-of-regular-expressions}
 
 A regular expression describes a pattern of characters. Regular expressions are typically used to verify that a text value conforms to a particular pattern (such as verifying that a user-entered phone number has the proper number of digits) or to replace portions of a text value that matches a particular pattern.
 

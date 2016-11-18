@@ -1,4 +1,4 @@
-## Multidimensional arrays {#multidimensional-arrays}
+# Multidimensional arrays {#multidimensional-arrays}
 
 Multidimensional arrays contain other arrays as elements. For example, consider a list of tasks that is stored as an indexed array of strings:
 
@@ -26,7 +26,7 @@ To retrieve the first task from Sunday’s list, use index 6 for Sunday and inde
 
 trace(masterTaskList[6][0]); // output: mow lawn
 
-### Associative array with an indexed array {#associative-array-with-an-indexed-array}
+## Associative array with an indexed array {#associative-array-with-an-indexed-array}
 
 To make the individual arrays easier to access, you can use an associative array for the days of the week and an indexed array for the task lists. Using an associative array allows you to use dot syntax when referring to a particular day of the week, but at the cost of extra run-time processing to access each element of the associative array. The following example uses an associative array as the basis of a task list, with a key and value pair for each day of the week:
 

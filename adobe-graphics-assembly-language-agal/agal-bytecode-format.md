@@ -1,4 +1,4 @@
-## AGAL bytecode format {#agal-bytecode-format}
+# AGAL bytecode format {#agal-bytecode-format}
 
 AGAL bytecode must use Endian.LITTLE_ENDIAN format.
 

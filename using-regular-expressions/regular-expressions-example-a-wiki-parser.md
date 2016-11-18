@@ -1,4 +1,4 @@
-## Regular expressions example: A Wiki parser {#regular-expressions-example-a-wiki-parser}
+# Regular expressions example: A Wiki parser {#regular-expressions-example-a-wiki-parser}
 
 This simple Wiki text conversion example illustrates a number of uses for regular expressions:
 
@@ -105,7 +105,7 @@ The ^ and $ symbols the regular expression match the beginning and end of a line
 
 The replace() method replaces all matching substrings (empty lines) with an empty string (&quot;&quot;). The g (global) flag in the regular expression ensures that the replace() method replaces all matches in the string (not simply the first one).
 
-### Converting URLs to HTML &lt;a&gt; tags {#converting-urls-to-html-a-tags}
+## Converting URLs to HTML &lt;a&gt; tags {#converting-urls-to-html-a-tags}
 
 When the user clicks the Test button in the sample application, if the user selected the urlToATag check box, the application calls the URLParser.urlToATag() static method to convert URL strings from the input Wiki string into HTML &lt;a&gt; tags.
 
@@ -133,7 +133,7 @@ The call to the replace() method employs the regular expression and assembles th
 
 The urlToATag() method then calls the emailToATag() method, which uses similar techniques to replace e-mail patterns with HTML &lt;a&gt; hyperlink strings. The regular expressions used to match HTTP, FTP, and e-mail URLs in this sample file are fairly simple, for the purposes of exemplification; there are much more complicated regular expressions for matching such URLs more correctly.
 
-### Converting U.S. dollar strings to euro strings {#converting-u-s-dollar-strings-to-euro-strings}
+## Converting U.S. dollar strings to euro strings {#converting-u-s-dollar-strings-to-euro-strings}
 
 When the user clicks the Test button in the sample application, if the user selected the dollarToEuro check box, the application calls the CurrencyConverter.usdToEuro() static method to convert U.S. dollar strings (such as &quot;$9.95&quot;) to euro strings (such as &quot;8.24 €&quot;), as follows:
 

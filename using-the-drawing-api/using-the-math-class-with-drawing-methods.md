@@ -1,4 +1,4 @@
-## Using the Math class with drawing methods {#using-the-math-class-with-drawing-methods}
+# Using the Math class with drawing methods {#using-the-math-class-with-drawing-methods}
 
 A Graphics object draws circles and squares, but can also draw more complex forms, particularly when the drawing methods are used in combination with the properties and methods of the Math class. The Math class contains constants of common mathematical interest, such as Math.PI (approximately 3.14159265...), a constant for the ratio of the circumference of a circle to its diameter. It also contains methods for trigonometry functions, including Math.sin(), Math.cos(), and Math.tan() among others. Drawing shapes using these methods and constants create more dynamic visual effects, particularly when used with repetition or recursion.
 

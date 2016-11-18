@@ -1,4 +1,4 @@
-## XML in ActionScript example: Loading RSSdata from the Internet {#xml-in-actionscript-example-loading-rssdata-from-the-internet}
+# XML in ActionScript example: Loading RSSdata from the Internet {#xml-in-actionscript-example-loading-rssdata-from-the-internet}
 
 The RSSViewer sample application shows a number of features of working with XML in ActionScript, including the following:
 
@@ -109,7 +109,7 @@ itemDescription, itemLink);
 
 The first three lines simply set string variables to represent the title, description and link properties of the item property of the XML data. The next line then calls the buildItemHTML() method to get HTML data in the form of an XMLList object, using the three new string variables as parameters.
 
-### Assembling XMLList data {#assembling-xmllist-data}
+## Assembling XMLList data {#assembling-xmllist-data}
 
 The HTML data (an XMLList object) is of the following form:
 
@@ -159,7 +159,7 @@ The xmlLoaded() method uses the return value of the buildItemHTML() method and c
 
 XML.prettyPrinting = false; rssOutput = outXML.toXMLString();
 
-### Extracting the title of the RSS feed and sending a custom event {#extracting-the-title-of-the-rss-feed-and-sending-a-custom-event}
+## Extracting the title of the RSS feed and sending a custom event {#extracting-the-title-of-the-rss-feed-and-sending-a-custom-event}
 
 The xmlLoaded() method sets a rssTitle string variable, based on information in the source RSS XML data:
 

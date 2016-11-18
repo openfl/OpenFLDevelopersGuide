@@ -1,4 +1,4 @@
-## Clipboard data formats {#clipboard-data-formats}
+# Clipboard data formats {#clipboard-data-formats}
 
 Flash Player 10 and later, Adobe AIR 1.0 and later
 
@@ -32,7 +32,7 @@ When copying and pasting data in response to a copy, cut, or paste event in HTML
 
 **_Note:_ **_Rich text format data is not available from the clipboardData property of the event object dispatched as a result of a paste event within HTML content._
 
-### Custom data formats {#custom-data-formats}
+## Custom data formats {#custom-data-formats}
 
 Flash Player 10 and later, Adobe AIR 1.0 and later
 
@@ -75,7 +75,7 @@ clipboard.getData(&quot;object&quot;, ClipboardTransferMode.ORIGINAL_ONLY);
 
 References are valid only if the Clipboard object originates from the current application. Use the ORIGINAL_PREFFERED transfer mode to access the reference when it is available, and the serialized clone when the reference is not available.
 
-### Deferred rendering {#deferred-rendering}
+## Deferred rendering {#deferred-rendering}
 
 Flash Player 10 and later, Adobe AIR 1.0 and later
 

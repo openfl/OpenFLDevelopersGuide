@@ -88,7 +88,7 @@ The primary difference between the key code and character values is that a key c
 
 The mappings between keys and their key codes is dependent on the device and the operating system. For this reason, you should not use key mappings to trigger actions. Instead, you should use the predefined constant values provided by the Keyboard class to reference the appropriate keyCode properties. For example, instead of using the key mapping for the Shift key, use the Keyboard.SHIFT constant (as shown in the preceding code sample).
 
-### KeyboardEvent precedence {#keyboardevent-precedence}
+## KeyboardEvent precedence {#keyboardevent-precedence}
 
 As with other events, the keyboard event sequence is determined by the display object hierarchy and not the order in which addEventListener() methods are assigned in code.
 

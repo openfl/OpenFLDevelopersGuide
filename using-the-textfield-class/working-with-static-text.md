@@ -1,4 +1,4 @@
-## Working with static text {#working-with-static-text}
+# Working with static text {#working-with-static-text}
 
 Static text is created only within Flash Professional. You cannot programmatically instantiate static text using ActionScript. Static text is useful if the text is short and is not intended to change (as dynamic text can). Think of static text as similar to a graphic element like a circle or square drawn on the Stage in Flash Professional. While static text is more limited than dynamic text, ActionScript 3.0 does allow you to read the property values of static text using the StaticText class. You can also use the TextSnapshot class to read values out of the static text.
 
@@ -26,7 +26,7 @@ myField.x = myFieldLabel.x; myField.y = myFieldLabel.y + 20;
 
 myField.autoSize = TextFieldAutoSize.LEFT; myField.text = &quot;and &quot; + myFieldLabel.text
 
-### Using the TextSnapshot class {#using-the-textsnapshot-class}
+## Using the TextSnapshot class {#using-the-textsnapshot-class}
 
 If you want to programmatically work with an existing static text instance, you can use the flash.text.TextSnapshot class to work with the textSnapshot property of a flash.display.DisplayObjectContainer. In other words, you create a TextSnapshot instance from the DisplayObjectContainer.textSnapshot property. You can then apply methods to that instance to retrieve values or select parts of the static text.
 

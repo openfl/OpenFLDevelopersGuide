@@ -1,4 +1,4 @@
-## Advanced use of the drawing API {#advanced-use-of-the-drawing-api}
+# Advanced use of the drawing API {#advanced-use-of-the-drawing-api}
 
 Flash Player 10 and later, Adobe AIR 1.5 and later
 
@@ -106,7 +106,7 @@ graphics.beginFill(0x442266);//set the color graphics.drawPath(squareCommands, s
 
 }
 
-### Defining winding rules {#defining-winding-rules}
+## Defining winding rules {#defining-winding-rules}
 
 Flash Player 10 and later, Adobe AIR 1.5 and later
 
@@ -176,7 +176,7 @@ _A star shape using different winding rules_
 
 And, as images are animated or used as textures on three-dimensional objects and overlap, the winding rules become more important.
 
-### Using graphics data classes {#using-graphics-data-classes}
+## Using graphics data classes {#using-graphics-data-classes}
 
 Flash Player 10 and later, Adobe AIR 1.5 and later
 
@@ -264,7 +264,7 @@ Calling the readGraphicsData() method returns a Vector instance containing IGrap
 
 There are several limitations to reading vector graphics with the readGraphicsData() method. For more information, see the [readGraphicsData() entry in the ActionScript Language Reference](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Graphics.html#readGraphicsData()).
 
-### About using drawTriangles() {#about-using-drawtriangles}
+## About using drawTriangles() {#about-using-drawtriangles}
 
 Flash Player 10 and later, Adobe AIR 1.5 and later
 

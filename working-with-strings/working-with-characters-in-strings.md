@@ -1,4 +1,4 @@
-## Working with characters in strings {#working-with-characters-in-strings}
+# Working with characters in strings {#working-with-characters-in-strings}
 
 Every character in a string has an index position in the string (an integer). The index position of the first character is
 

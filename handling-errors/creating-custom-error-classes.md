@@ -1,4 +1,4 @@
-## Creating custom error classes {#creating-custom-error-classes}
+# Creating custom error classes {#creating-custom-error-classes}
 
 You can extend one of the standard Error classes to create your own specialized error classes in ActionScript. There are a number of reasons to create your own error classes:
 

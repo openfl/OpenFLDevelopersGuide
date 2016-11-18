@@ -1,4 +1,4 @@
-## Using the System class {#using-the-system-class}
+# Using the System class {#using-the-system-class}
 
 The System class contains methods and properties that allow you to interact with the user’s operating system and retrieve the current memory usage of the runtime. The methods and properties of the System class also allow you to listen for imeComposition events, instruct the runtime to load external text files using the user’s current code page or to load them as Unicode, or set the contents of the user’s clipboard.
 
@@ -14,7 +14,7 @@ If you set System.useCodePage to true, remember that the traditional code page o
 
 To ensure that users on all platforms can view the external text files that are used in your application, you should encode all external text files as Unicode and leave System.useCodePage set to false by default. This way, the runtime interprets the text as Unicode.
 
-### Saving text to the clipboard {#saving-text-to-the-clipboard}
+## Saving text to the clipboard {#saving-text-to-the-clipboard}
 
 The System class includes a method called setClipboard() that allows the Flash runtime to set the contents of the user’s clipboard with a specified string. For security reasons, there is no Security.getClipboard() method, since such a method could potentially allow malicious sites to access the data last copied to the user’s clipboard.
 

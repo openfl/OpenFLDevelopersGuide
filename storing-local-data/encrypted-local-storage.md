@@ -1,4 +1,4 @@
-## Encrypted local storage {#encrypted-local-storage}
+# Encrypted local storage {#encrypted-local-storage}
 
 The [EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application&#039;s private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in &quot;Limitations of the encrypted local store&quot; and &quot;Best practices,&quot; below.
 
@@ -72,7 +72,7 @@ If the stronglyBound parameter is set to false (the default), only the publisher
 
 **_Note:_ **_In practice, setting stronglyBound to true does not add any additional data protection. A “malicious” user could still alter an application to gain access to items stored in the ELS. Furthermore, data is protected from external, non-user threats just as strongly whether stronglyBound is set to true or false. For these reasons, setting stronglyBound to true is discouraged._
 
-### Accessing data in the encrypted local store {#accessing-data-in-the-encrypted-local-store}
+## Accessing data in the encrypted local store {#accessing-data-in-the-encrypted-local-store}
 
 Adobe AIR 1.0 and later
 
@@ -80,7 +80,7 @@ You can retrieve a value from the encrypted local store by using the EncryptedLo
 
 var storedValue:ByteArray = EncryptedLocalStore.getItem(&quot;firstName&quot;); trace(storedValue.readUTFBytes(storedValue.length)); // &quot;Bob&quot;
 
-### Removing data from the encrypted local store {#removing-data-from-the-encrypted-local-store}
+## Removing data from the encrypted local store {#removing-data-from-the-encrypted-local-store}
 
 Adobe AIR 1.0 and later
 

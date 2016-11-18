@@ -1,4 +1,4 @@
-## Cloning arrays {#cloning-arrays}
+# Cloning arrays {#cloning-arrays}
 
 The Array class has no built-in method for making copies of arrays. You can create a _shallowcopy_ of an array by calling either the concat() or slice() methods with no arguments. In a shallow copy, if the original array has elements that are objects, only the references to the objects are copied rather than the objects themselves. The copy points to the same objects as the original does. Any changes made to the objects are reflected in both arrays.
 

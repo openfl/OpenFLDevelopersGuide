@@ -1,4 +1,4 @@
-## Using the Capabilities class {#using-the-capabilities-class}
+# Using the Capabilities class {#using-the-capabilities-class}
 
 The Capabilities class allows developers to determine the environment in which an application is being run. Using various properties of the Capabilities class, you can find out the resolution of the user’s system, whether the user’s system supports accessibility software, and the language of the user’s operating system, as well as the currently installed version of the Flash runtime.
 

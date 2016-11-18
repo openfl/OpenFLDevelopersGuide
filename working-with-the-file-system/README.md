@@ -60,7 +60,7 @@ For uploading and downloading operations, a SWF file can access files only withi
 
 See [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/FileReference.html).
 
-### Loading data from files {#loading-data-from-files}
+## Loading data from files {#loading-data-from-files}
 
 The FileReference.load() method lets you load data from a local file into memory.
 
@@ -170,7 +170,7 @@ and writing files” on page 689
 
 .
 
-### Saving data to local files {#saving-data-to-local-files}
+## Saving data to local files {#saving-data-to-local-files}
 
 The FileReference.save() method lets you save data to a local file. It starts by opening a dialog box to let the user enter a new filename and location to which to save a file. After the user selects the filename and location, the data is written to the new file. When the file is saved successfully, the properties of the FileReference object are populated with the properties of the local file.
 
@@ -338,7 +338,7 @@ writing files” on page 689
 
 .
 
-### Uploading files to a server {#uploading-files-to-a-server}
+## Uploading files to a server {#uploading-files-to-a-server}
 
 To upload files to a server, first call the browse() method to allow a user to select one or more files. Next, when the FileReference.upload() method is called, the selected file is transferred to the server. If the user selects multiple files using the FileReferenceList.browse() method, Flash Player creates an array of selected files called FileReferenceList.fileList. You can then use the FileReference.upload() method to upload each file individually.
 
@@ -652,7 +652,7 @@ Submit Query
 
 ------------Ij5GI3GI3ei4GI3ei4KM7GI3KM7KM7--
 
-### Downloading files from a server {#downloading-files-from-a-server}
+## Downloading files from a server {#downloading-files-from-a-server}
 
 You can let users download files from a server using the FileReference.download() method, which takes two parameters: request and defaultFileName. The first parameter is the URLRequest object that contains the URL of the file to download. The second parameter is optional—it lets you specify a default filename that appears in the download file dialog box. If you omit the second parameter, defaultFileName, the filename from the specified URL is used.
 
@@ -728,7 +728,7 @@ The following code demonstrates the ColdFusion script, download.cfm, that downlo
 
 &lt;/cfswitch&gt;
 
-### FileReferenceList class {#filereferencelist-class}
+## FileReferenceList class {#filereferencelist-class}
 
 The FileReferenceList class lets the user select one or more files to upload to a server-side script. The file upload is handled by the FileReference.upload() method, which must be called on each file that the user selects.
 

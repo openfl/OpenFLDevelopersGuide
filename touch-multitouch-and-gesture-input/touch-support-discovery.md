@@ -1,4 +1,4 @@
-## Touch support discovery {#touch-support-discovery}
+# Touch support discovery {#touch-support-discovery}
 
 Flash Player 10.1 and later, Adobe AIR 2 and later
 
@@ -28,7 +28,7 @@ See
 
 for an example that uses the Multitouch.inputMode property to set the input type before handling a touch event.
 
-### Test for touch input support {#test-for-touch-input-support}
+## Test for touch input support {#test-for-touch-input-support}
 
 Other properties of the Multitouch class provide values for fine-tuning your application to the current environment’s touch support. The Flash runtime populates values for the number of simultaneous touch points allowed or gestures available. If the runtime is in an environment that does not support the touch event handling your application needs, provide the user with an alternative. For example, provide mouse event handling or information about what features are available, or not, in the current environment.
 

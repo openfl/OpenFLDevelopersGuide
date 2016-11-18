@@ -1,4 +1,4 @@
-## Movie clip example: RuntimeAssetsExplorer {#movie-clip-example-runtimeassetsexplorer}
+# Movie clip example: RuntimeAssetsExplorer {#movie-clip-example-runtimeassetsexplorer}
 
 The Export for ActionScript functionality can be especially advantageous for libraries that may be useful across more than one project. If Flash Player or AIR executes a SWF file, symbols that have been exported to ActionScript are available to any SWF file within the same security sandbox as the SWF that loads it. In this way, a single Flash document can generate a SWF file that is designated for the sole purpose of holding graphical assets. This technique is particularly useful for larger projects where designers working on visual assets can work in parallel with developers who create a “wrapper” SWF file that then loads the graphical assets SWF file at run time. You can use this method to maintain a series of versioned files where graphical assets are not dependent upon the progress of programming development.
 
@@ -46,7 +46,7 @@ function getAssets():Array;
 
 }
 
-### Creating the asset library SWF file {#creating-the-asset-library-swf-file}
+## Creating the asset library SWF file {#creating-the-asset-library-swf-file}
 
 By defining the RuntimeLibrary interface, it’s possible to create multiple asset library SWF files that can be loaded into another SWF file. Making an individual SWF library of assets involves four tasks:
 
@@ -115,7 +115,7 @@ We’ll now connect the MovieClip-based assets to the new class by creating a ne
 
 After setting up your symbol’s export settings, publish the FLA. You now have your first run-time library. This SWF file could be loaded into another AVM2 SWF file and the AnimatingBox and AnimatingStar symbols would be available to the new SWF file.
 
-### Loading the library into another SWF file {#loading-the-library-into-another-swf-file}
+## Loading the library into another SWF file {#loading-the-library-into-another-swf-file}
 
 The last functional piece to deal with is the user interface for the asset explorer. In this example, the path to the run- time library is hard-coded as a variable named ASSETS_PATH. Alternatively, you could use the FileReference class—for example, to create an interface that browses for a particular SWF file on your hard drive.
 

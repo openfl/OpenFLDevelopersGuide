@@ -1,4 +1,4 @@
-## Working with sound metadata {#working-with-sound-metadata}
+# Working with sound metadata {#working-with-sound-metadata}
 
 Sound files that use the mp3 format can contain additional data about the sound in the form of ID3 tags.
 

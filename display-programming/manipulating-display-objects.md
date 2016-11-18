@@ -1,4 +1,4 @@
-## Manipulating display objects {#manipulating-display-objects}
+# Manipulating display objects {#manipulating-display-objects}
 
 Regardless of which display object you choose to use, there are a number of manipulations that all display objects have in common as elements that are displayed on the screen. For example, they can all be positioned on the screen, moved forward or backward in the stacking order of display objects, scaled, rotated, and so forth. Because all display objects inherit this functionality from their common base class (DisplayObject), this functionality behaves the same whether you’re manipulating a TextField instance, a Video instance, a Shape instance, or any other display object. The following sections detail several of these common display object manipulations.
 
@@ -226,7 +226,7 @@ Finally, to enhance the effect, you could apply a drop shadow filter to the disp
 
 .
 
-### Panning and scrolling display objects {#panning-and-scrolling-display-objects}
+## Panning and scrolling display objects {#panning-and-scrolling-display-objects}
 
 If you have a display object that is too large for the area in which you want it to display it, you can use the scrollRect property to define the viewable area of the display object. In addition, by changing the scrollRect property in response to user input, you can cause the content to pan left and right or scroll up and down.
 
@@ -280,7 +280,7 @@ display objects” on page 182
 
 .
 
-### Manipulating size and scaling objects {#manipulating-size-and-scaling-objects}
+## Manipulating size and scaling objects {#manipulating-size-and-scaling-objects}
 
 You can measure and manipulate the size of a display object in two ways, using either the dimension properties (width and height) or the scale properties (scaleX and scaleY).
 
@@ -322,7 +322,7 @@ Size changes are not proportional. In other words, if you change the height of a
 
 // to keep the size proportional. square.scaleY = square.scaleX;
 
-### Controlling distortion when scaling {#controlling-distortion-when-scaling}
+## Controlling distortion when scaling {#controlling-distortion-when-scaling}
 
 Normally when a display object is scaled (for example, stretched horizontally), the resulting distortion is spread equally across the object, so that each part is stretched the same amount. For graphics and design elements, this is probably what you want. However, sometimes it’s preferable to have control over which portions of the display object stretch and which portions remain unchanged. One common example of this is a button that’s a rectangle with rounded corners. With normal scaling, the corners of the button will stretch, making the corner radius change as the button resizes.
 
@@ -358,7 +358,7 @@ In this case, as the button scales up or down, the rounded corners will not stre
 
 _= 141;_
 
-### Caching display objects {#caching-display-objects}
+## Caching display objects {#caching-display-objects}
 
 As your designs in Flash grow in size, whether you are creating an application or complex scripted animations, you need to consider performance and optimization. When you have content that remains static (such as a rectangle Shape instance), Flash Player and AIR do not optimize the content. Therefore, when you change the position of the rectangle, Flash Player or AIR redraws the entire Shape instance.
 
@@ -455,7 +455,7 @@ When you set this matrix property, you can apply the following additional transf
 
 These transformations are applied directly to the cached bitmap.
 
-### Setting an opaque background color {#setting-an-opaque-background-color}
+## Setting an opaque background color {#setting-an-opaque-background-color}
 
 You can set an opaque background for a display object. For example, when your SWF has a background that contains complex vector art, you can set the opaqueBackground property to a specified color (typically the same color as the Stage). The color is specified as a number (commonly a hexadecimal color value). The background is then treated as a bitmap, which helps optimize performance.
 
@@ -471,7 +471,7 @@ In this case, the background color of the Shape named myShape is set to red (0xF
 
 Of course, this code would make more sense if it were used with a Stage with a solid red background. On another colored background, that color would be specified instead. For example, in a SWF with a white background, the opaqueBackground property would most likely be set to 0xFFFFFF, or pure white.
 
-### Applying blending modes {#applying-blending-modes}
+## Applying blending modes {#applying-blending-modes}
 
 Blending modes involve combining the colors of one image (the base image) with the colors of another image (the blend image) to produce a third image—the resulting image is the one that is actually displayed on the screen. Each pixel value in an image is processed with the corresponding pixel value of the other image to produce a pixel value for that same position in the result.
 
@@ -497,7 +497,7 @@ Every display object has a blendMode property that can be set to one of the foll
     . (Not supported under GPU rendering.)
 *   BlendMode.SUBTRACT (&quot;subtract&quot;): Commonly used to create an animated darkening dissolve effect between two images.
 
-### Adjusting DisplayObject colors {#adjusting-displayobject-colors}
+## Adjusting DisplayObject colors {#adjusting-displayobject-colors}
 
 You can use the methods of the ColorTransform class (flash.geom.ColorTransform) to adjust the color of a display object. Each display object has a transform property, which is an instance of the Transform class, and contains information about various transformations that are applied to the display object (such as rotation, changes in scale or position, and so forth). In addition to its information about geometric transformations, the Transform class also includes a colorTransform property, which is an instance of the ColorTransform class, and provides access to make color adjustments to the display object. To access the color transformation information of a display object, you can use code such as this:
 
@@ -577,7 +577,7 @@ colorTransformer.greenMultiplier = (loader.mouseY / loader.height) * 1;
 
 loader.addEventListener(MouseEvent.MOUSE_MOVE, adjustColor);
 
-### Rotating objects {#rotating-objects}
+## Rotating objects {#rotating-objects}
 
 Display objects can be rotated using the rotation property. You can read this value to find out whether an object has been rotated, or to rotate the object you can set this property to a number (in degrees) representing the amount of rotation to be applied to the object. For instance, this line of code rotates the object named square 45 degrees (one eighth of one complete revolution):
 
@@ -591,7 +591,7 @@ page 210
 
 .
 
-### Fading objects {#fading-objects}
+## Fading objects {#fading-objects}
 
 You can control the transparency of a display object to make it partially (or completely transparent), or change the transparency to make the object appear to fade in or out. The DisplayObject class’s alpha property defines the transparency (or more accurately, the opacity) of a display object. The alpha property can be set to any value between 0 and 1, where 0 is completely transparent, and 1 is completely opaque. For example, these lines of code make the object named myBall partially (50 percent) transparent when it is clicked with the mouse:
 
@@ -611,7 +611,7 @@ You can also alter the transparency of a display object using the color adjustme
 
 .
 
-### Masking display objects {#masking-display-objects}
+## Masking display objects {#masking-display-objects}
 
 You can use a display object as a mask to create a hole through which the contents of another display object are visible.
 

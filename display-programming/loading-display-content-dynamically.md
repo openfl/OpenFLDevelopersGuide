@@ -1,4 +1,4 @@
-## Loading display content dynamically {#loading-display-content-dynamically}
+# Loading display content dynamically {#loading-display-content-dynamically}
 
 You can load any of the following external display assets into an ActionScript 3.0 application:
 
@@ -34,7 +34,7 @@ container.addChild(pictLdr.content);
 
 }
 
-### Monitoring loading progress {#monitoring-loading-progress}
+## Monitoring loading progress {#monitoring-loading-progress}
 
 Once the file has started loading, a LoaderInfo object is created. A LoaderInfo object provides information such as load progress, the URLs of the loader and loadee, the number of bytes total for the media, and the nominal height and width of the media. A LoaderInfo object also dispatches events for monitoring the progress of the load.
 
@@ -77,7 +77,7 @@ For more information, see
 
 .
 
-### Specifying loading context {#specifying-loading-context}
+## Specifying loading context {#specifying-loading-context}
 
 When you load an external file into Flash Player or AIR through the load() or loadBytes() method of the Loader class, you can optionally specify a context parameter. This parameter is a LoaderContext object.
 
@@ -118,7 +118,7 @@ ldr.load(urlReq, context);
 
 For more information, see the [LoaderContext](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/system/LoaderContext.html) class in the [ActionScript 3.0 Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/system/LoaderContext.html).
 
-### Loading SWF files in AIR for iOS {#loading-swf-files-in-air-for-ios}
+## Loading SWF files in AIR for iOS {#loading-swf-files-in-air-for-ios}
 
 Adobe AIR 3.6 and later, iOS only
 
@@ -147,7 +147,7 @@ See also
 
 [Packaging and loading multiple SWFs in AIR apps on iOS](http://blogs.adobe.com/airodynamics/2012/11/09/packaging-and-loading-multiple-swfs-in-air-apps-on-ios/)
 
-### Using the ProLoader and ProLoaderInfo classes {#using-the-proloader-and-proloaderinfo-classes}
+## Using the ProLoader and ProLoaderInfo classes {#using-the-proloader-and-proloaderinfo-classes}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, and requires Flash Professional CS5.5
 

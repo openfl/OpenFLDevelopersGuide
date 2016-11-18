@@ -1,4 +1,4 @@
-## Event handling example: Alarm Clock {#event-handling-example-alarm-clock}
+# Event handling example: Alarm Clock {#event-handling-example-alarm-clock}
 
 The Alarm Clock example consists of a clock that allows the user to specify a time at which an alarm will go off, as well as a message to be displayed at that time. The Alarm Clock example builds on the SimpleClock application from
 
@@ -30,7 +30,7 @@ The primary functionality of the clock in this example, including tracking the t
 
 Providing notification when something happens is the job that events are made for. The AlarmClock class exposes the Alarm event, which other objects can listen for in order to perform desired actions. In addition, the AlarmClock class uses an instance of the Timer class to determine when to trigger its alarm. Like the AlarmClock class, the Timer class provides an event to notify other objects (an AlarmClock instance, in this case) when a certain amount of time has passed. As with most ActionScript applications, events form an important part of the functionality of the Alarm Clock sample application.
 
-### Triggering the alarm {#triggering-the-alarm}
+## Triggering the alarm {#triggering-the-alarm}
 
 As mentioned previously, the only functionality that the AlarmClock class actually provides relates to setting and triggering the alarm. The built-in Timer class (flash.utils.Timer) provides a way for a developer to define code that will be executed after a specified amount of time. The AlarmClock class uses a Timer instance to determine when to set off the alarm.
 
@@ -130,7 +130,7 @@ var alarm:AlarmEvent = new AlarmEvent(this.alarmMessage); this.dispatchEvent(ala
 
 A method that is registered as an event listener must be defined with the appropriate signature (that is, the set of parameters and return type of the method). To be a listener for the Timer class’s timer event, a method must define one parameter whose data type is TimerEvent (flash.events.TimerEvent), a subclass of the Event class. When the Timer instance calls its event listeners, it passes a TimerEvent instance as the event object.
 
-### Notifying others of the alarm {#notifying-others-of-the-alarm}
+## Notifying others of the alarm {#notifying-others-of-the-alarm}
 
 Like the Timer class, the AlarmClock class provides an event that allows other code to receive notifications when the alarm goes off. For a class to use the event-handling framework built into ActionScript, that class must implement the flash.events.IEventDispatcher interface. Most commonly, this is done by extending the flash.events.EventDispatcher class, which provides a standard implementation of IEventDispatcher (or by extending one of EventDispatcher’s subclasses). As described previously, the AlarmClock class extends the SimpleClock class, which (through a chain of inheritance) extends the EventDispatcher class. All of this means that the AlarmClock class already has built-in functionality to provide its own events.
 
@@ -140,7 +140,7 @@ var alarm:AlarmEvent = new AlarmEvent(this.alarmMessage); this.dispatchEvent(ala
 
 These lines of code are taken from the AlarmClock class’s onAlarm() method (shown in its entirety previously). The AlarmClock instance’s dispatchEvent() method is called, which in turn notifies all the registered listeners that the AlarmClock instance’s alarm event has been triggered. The parameter that is passed to dispatchEvent() is the event object that will be passed along to the listener methods. In this case, it is an instance of the AlarmEvent class, an Event subclass created specifically for this example.
 
-### Providing a custom alarm event {#providing-a-custom-alarm-event}
+## Providing a custom alarm event {#providing-a-custom-alarm-event}
 
 All event listeners receive an event object parameter with information about the particular event being triggered. In many cases, the event object is an instance of the Event class. However, in some cases it is useful to provide additional information to event listeners. A common way to accomplish this is to define a new class, a subclass of the Event class, and use an instance of that class as the event object. In this example, an AlarmEvent instance is used as the event object when the AlarmClock class’s alarm event is dispatched. The AlarmEvent class, shown here, provides additional information about the alarm event, specifically the alarm message:
 

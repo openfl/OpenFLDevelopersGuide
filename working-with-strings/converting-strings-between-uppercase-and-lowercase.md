@@ -1,4 +1,4 @@
-## Converting strings between uppercase and lowercase {#converting-strings-between-uppercase-and-lowercase}
+# Converting strings between uppercase and lowercase {#converting-strings-between-uppercase-and-lowercase}
 
 As the following example shows, the toLowerCase() method and the toUpperCase() method convert alphabetical characters in the string to lowercase and uppercase, respectively:
 

@@ -1,4 +1,4 @@
-## Arrays example: PlayList {#arrays-example-playlist}
+# Arrays example: PlayList {#arrays-example-playlist}
 
 The PlayList example demonstrates techniques for working with arrays, in the context of a music playlist application that manages a list of songs. These techniques are:
 
@@ -50,7 +50,7 @@ The first line of the constructor instantiates the _songs variable, so that it i
 
 sortList() method is called to set the initial sort-by property.
 
-### Adding a song to the list {#adding-a-song-to-the-list}
+## Adding a song to the list {#adding-a-song-to-the-list}
 
 When a user enters a new song into the application, the code in the data entry form calls the PlayList class’s addSong()
 
@@ -72,7 +72,7 @@ this._songs.push(song); this._needToSort = true;
 
 Inside addSong(), the _songs array’s push() method is called, adding the Song object that was passed to addSong() as a new element in that array. With the push() method, the new element is added to the end of the array, regardless of any sorting that might have been applied previously. This means that after the push() method has been called, the list of songs is likely to no longer be sorted correctly, so the _needToSort variable is set to true. In theory, the sortList() method could be called immediately, removing the need to keep track of whether the list is sorted or not at a given time. In practice, however, there is no need for the list of songs to be sorted until immediately before it is retrieved. By deferring the sorting operation, the application doesn’t perform sorting that is unnecessary if, for example, several songs are added to the list before it is retrieved.
 
-### Sorting the list of songs {#sorting-the-list-of-songs}
+## Sorting the list of songs {#sorting-the-list-of-songs}
 
 Because the Song instances that are managed by the playlist are complex objects, users of the application may wish to sort the playlist according to different properties, such as song title or year of publication. In the PlayList application, the task of sorting the list of songs has three parts: identifying the property by which the list should be sorted, indicating what sorting options need to be used when sorting by that property, and performing the actual sort operation.
 
@@ -132,7 +132,7 @@ When sorting by title or artist, it makes sense to sort alphabetically, but when
 
 With the sort property and sort options determined, the _songs array is actually sorted by calling its sortOn() method, passing those two values as parameters. The current sort property is recorded, as is the fact that the song list is currently sorted.
 
-### Combining array elements into a character-delimited string {#combining-array-elements-into-a-character-delimited-string}
+## Combining array elements into a character-delimited string {#combining-array-elements-into-a-character-delimited-string}
 
 In addition to using an array to maintain the song list in the PlayList class, in this example arrays are also used in the Song class to help manage the list of genres to which a given song belongs. Consider this snippet from the Song class’s definition:
 

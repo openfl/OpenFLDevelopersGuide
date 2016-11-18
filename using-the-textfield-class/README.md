@@ -46,7 +46,7 @@ Static text is created through Flash Professional only. You cannot create a stat
 
 .
 
-### Modifying the text field contents {#modifying-the-text-field-contents}
+## Modifying the text field contents {#modifying-the-text-field-contents}
 
 You can define dynamic text by assigning a string to the [flash.text.TextField.text](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/TextField.html#text) property. You assign a string directly to the property, as follows:
 
@@ -90,7 +90,7 @@ Alternatively, you can assign the text property a value from a remote variable. 
 
     .
 
-### Displaying HTML text {#displaying-html-text}
+## Displaying HTML text {#displaying-html-text}
 
 The flash.text.TextField class has an htmlText property that you can use to identify your text string as one containing HTML tags for formatting the content. As in the following example, you must assign your string value to the htmlText property (not the text property) for Flash Player or AIR to render the text as HTML:
 
@@ -104,7 +104,7 @@ Once you designate your content using the htmlText property, you can use style s
 
 .
 
-### Using images in text fields {#using-images-in-text-fields}
+## Using images in text fields {#using-images-in-text-fields}
 
 Another advantage to displaying your content as HTML text is that you can include images in the text field. You can reference an image, local or remote, using the img tag and have it appear within the associated text field.
 
@@ -144,7 +144,7 @@ addChild(myTextBox); myTextBox.htmlText = myText;
 
 The img tag supports JPEG, GIF, PNG, and SWF files.
 
-### Scrolling text in a text field {#scrolling-text-in-a-text-field}
+## Scrolling text in a text field {#scrolling-text-in-a-text-field}
 
 In many cases, your text can be longer than the text field displaying the text. Or you may have an input field that allows a user to input more text than can be displayed at one time. You can use the scroll-related properties of the flash.text.TextField class to manage lengthy content, either vertically or horizontally.
 

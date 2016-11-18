@@ -1,4 +1,4 @@
-## Managing focus {#managing-focus}
+# Managing focus {#managing-focus}
 
 An interactive object can receive focus, either programmatically or through a user action. Additionally, if the tabEnabled property is set to true, the user can pass focus from one object to another by pressing the Tab key. Note that the tabEnabled value is false by default, except in the following cases:
 

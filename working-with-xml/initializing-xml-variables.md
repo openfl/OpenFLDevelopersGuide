@@ -1,4 +1,4 @@
-## Initializing XML variables {#initializing-xml-variables}
+# Initializing XML variables {#initializing-xml-variables}
 
 You can assign an XML literal to an XML object, as follows:
 

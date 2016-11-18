@@ -1,4 +1,4 @@
-## Managing calendar dates and times {#managing-calendar-dates-and-times}
+# Managing calendar dates and times {#managing-calendar-dates-and-times}
 
 All of the calendar date and time management functions in ActionScript 3.0 are concentrated in the top-level Date class. The Date class contains methods and properties that let you handle dates and times in either Coordinated Universal Time (UTC) or in local time specific to a time zone. UTC is a standard time definition that is essentially the same as Greenwich Mean Time (GMT).
 
@@ -26,7 +26,7 @@ var nextDay:Date = new Date(&quot;Mon May 1 2006 11:30:00 AM&quot;);
 
 If the Date() constructor cannot successfully parse the string parameter, it will not raise an exception. However, the resulting Date object will contain an invalid date value.
 
-### Getting time unit values {#getting-time-unit-values}
+## Getting time unit values {#getting-time-unit-values}
 
 You can extract the values for various units of time within a Date object using properties or methods of the Date class. Each of the following properties gives you the value of a time unit in the Date object:
 
@@ -52,7 +52,7 @@ The properties just listed all represent components of the total date value. For
 
 If you want to get the value of the Date object in terms of milliseconds since January 1, 1970 (UTC), you can use the getTime() method. Its counterpart, the setTime() method, lets you change the value of an existing Date object using milliseconds since January 1, 1970 (UTC).
 
-### Performing date and time arithmetic {#performing-date-and-time-arithmetic}
+## Performing date and time arithmetic {#performing-date-and-time-arithmetic}
 
 You can perform addition and subtraction on dates and times with the Date class. Date values are kept internally in terms of milliseconds, so you should convert other values to milliseconds before adding them to or subtracting them from Date objects.
 
@@ -78,7 +78,7 @@ Next, the millisecondsPerDay constant is multiplied by 30 to represent 30 days�
 
 invoiceDate value and used to set the dueDate value.
 
-### Converting between time zones {#converting-between-time-zones}
+## Converting between time zones {#converting-between-time-zones}
 
 Date and time arithmetic comes in handy when you want to convert dates from one time zone to another. So does the getTimezoneOffset() method, which returns the value in minutes by which the Date object’s time zone differs from UTC. It returns a value in minutes because not all time zones are set to even-hour increments—some have half-hour offsets from neighboring zones.
 

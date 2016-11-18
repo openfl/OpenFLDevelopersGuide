@@ -1,4 +1,4 @@
-## Advanced text rendering {#advanced-text-rendering}
+# Advanced text rendering {#advanced-text-rendering}
 
 ActionScript 3.0 provides a variety of classes in the flash.text package to control the properties of displayed text, including embedded fonts, anti-aliasing settings, alpha channel control, and other specific settings. The ActionScript
 
@@ -55,7 +55,7 @@ You can only embed TrueType fonts directly in a Flex application. Fonts in other
 
 [Divillysausages.com: AS3 Font embedding masterclass](http://divillysausages.com/blog/as3_font_embedding_masterclass)
 
-### Controlling sharpness, thickness, and anti-aliasing {#controlling-sharpness-thickness-and-anti-aliasing}
+## Controlling sharpness, thickness, and anti-aliasing {#controlling-sharpness-thickness-and-anti-aliasing}
 
 By default, Flash Player or AIR determines the settings for text display controls like sharpness, thickness, and anti- aliasing as text resizes, changes color, or is displayed on various backgrounds. In some cases, like when you have very small or very large text, or text on a variety of unique backgrounds, you might want to maintain control over these settings. You can override Flash Player or AIR settings using the flash.text.TextRenderer class and its associated classes, like the CSMSettings class. These classes give you precise control over the rendering quality of embedded text. For more information about embedded fonts, see
 

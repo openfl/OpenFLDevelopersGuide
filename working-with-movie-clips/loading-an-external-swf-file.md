@@ -1,4 +1,4 @@
-## Loading an external SWF file {#loading-an-external-swf-file}
+# Loading an external SWF file {#loading-an-external-swf-file}
 
 In ActionScript 3.0, SWF files are loaded using the Loader class. To load an external SWF file, your ActionScript needs to do four things:
 

@@ -1,4 +1,4 @@
-## Making textures with noise functions {#making-textures-with-noise-functions}
+# Making textures with noise functions {#making-textures-with-noise-functions}
 
 To modify the appearance of a bitmap, you can apply a noise effect to it, using either the noise() method or the
 

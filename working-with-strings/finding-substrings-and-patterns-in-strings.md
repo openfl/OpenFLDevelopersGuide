@@ -1,4 +1,4 @@
-## Finding substrings and patterns in strings {#finding-substrings-and-patterns-in-strings}
+# Finding substrings and patterns in strings {#finding-substrings-and-patterns-in-strings}
 
 Substrings are sequential characters within a string. For example, the string &quot;abc&quot; has the following substrings: &quot;&quot;, &quot;a&quot;, &quot;ab&quot;, &quot;abc&quot;, &quot;b&quot;, &quot;bc&quot;, &quot;c&quot;. You can use ActionScript methods to locate substrings of a string.
 
@@ -28,7 +28,7 @@ trace(str.slice(-3,26)); // output: !!! trace(str.slice(-3,str.length)); // outp
 
 You can combine non-negative and negative integers as the parameters of the slice() method.
 
-### Finding the character position of a matching substring {#finding-the-character-position-of-a-matching-substring}
+## Finding the character position of a matching substring {#finding-the-character-position-of-a-matching-substring}
 
 You can use the indexOf() and lastIndexOf() methods to locate matching substrings within a string, as the following example shows:
 
@@ -48,7 +48,7 @@ If you include a second parameter with the lastIndexOf() method, the search is c
 
 var str:String = &quot;The moon, the stars, the sea, the land&quot; trace(str.lastIndexOf(&quot;the&quot;, 29)); // output: 21
 
-### Creating an array of substrings segmented by a delimiter {#creating-an-array-of-substrings-segmented-by-a-delimiter}
+## Creating an array of substrings segmented by a delimiter {#creating-an-array-of-substrings-segmented-by-a-delimiter}
 
 You can use the split() method to create an array of substrings, which is divided based on a delimiter. For example, you can segment a comma-delimited or tab-delimited string into multiple strings.
 
@@ -72,7 +72,7 @@ For more information, see
 
 and the [ActionScript 3.0 Reference for the Adobe](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html) [Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html).
 
-### Finding patterns in strings and replacing substrings {#finding-patterns-in-strings-and-replacing-substrings}
+## Finding patterns in strings and replacing substrings {#finding-patterns-in-strings-and-replacing-substrings}
 
 The String class includes the following methods for working with patterns in strings:
 

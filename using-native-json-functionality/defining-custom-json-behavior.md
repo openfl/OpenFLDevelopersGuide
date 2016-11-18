@@ -1,4 +1,4 @@
-## Defining custom JSON behavior {#defining-custom-json-behavior}
+# Defining custom JSON behavior {#defining-custom-json-behavior}
 
 To implement your own JSON encoding and decoding for native classes, you can choose from several options:
 
@@ -43,7 +43,7 @@ var dt:Date = new Date(); trace(JSON.stringify(dt));
 
 // &quot;any date format you like via toJSON: this.time:1317244361947 this.hours:14&quot;
 
-### Defining or overriding toJSON() at the class level {#defining-or-overriding-tojson-at-the-class-level}
+## Defining or overriding toJSON() at the class level {#defining-or-overriding-tojson-at-the-class-level}
 
 Applications aren&#039;t always required to use prototypes to redefine toJSON(). You can also define toJSON() as a member of a subclass if the parent class is not marked final. For example, you can extend the ByteArray class and define a public toJSON() function:
 
@@ -85,7 +85,7 @@ You can override, define, or redefine toJSON() on any ActionScript class. Howeve
 
 Native classes that don’t define toJSON() are serialized to JSON by the internal JSON implementation. Avoid replacing this built-in functionality if possible. If you define a toJSON() member, the JSON class uses your logic instead of its own functionality.
 
-### Using the JSON.stringify() replacer parameter {#using-the-json-stringify-replacer-parameter}
+## Using the JSON.stringify() replacer parameter {#using-the-json-stringify-replacer-parameter}
 
 Overriding toJSON() on the prototype is useful for changing a class’s JSON export behavior throughout an application. In some cases, though, your export logic might apply only to special cases under transient conditions. To accommodate such small-scope changes, you can use the replacer parameter of the JSON.stringify() method.
 
@@ -105,7 +105,7 @@ return &quot;any date format you like via replacer: &quot;+ &quot;holder[k].time
 
 });
 
-### Using the JSON.parse() reviver parameter {#using-the-json-parse-reviver-parameter}
+## Using the JSON.parse() reviver parameter {#using-the-json-parse-reviver-parameter}
 
 The reviver parameter of the JSON.parse() method does the opposite of the replacer function: It converts a JSON string into a usable ActionScript object. The reviver argument is a function that takes two parameters and returns any type:
 
@@ -113,7 +113,7 @@ function (k,v):*
 
 In this function, k is a key, and v is the value of k. Like stringify(), parse() traverses the JSON key-value pairs and applies the reviver function—if one exists—to each pair. A potential problem is the fact that the JSON class does not output an object’s ActionScript class name. Thus, it can be challenging to know which type of object to revive. This problem can be especially troublesome when objects are nested. In designing toJSON(), replacer, and reviver functions, you can devise ways to identify the ActionScript objects that are exported while keeping the original objects intact.
 
-### Parsing example {#parsing-example}
+## Parsing example {#parsing-example}
 
 The following example shows a strategy for reviving objects parsed from JSON strings. This example defines two classes: JSONGenericDictExample and JSONDictionaryExtnExample. Class JSONGenericDictExample is a custom dictionary class. Each record contains a person’s name and birthday, as well as a unique ID. Each time the JSONGenericDictExample constructor is called, it adds the newly created object to an internal static array with a statically incrementing integer as its ID. Class JSONGenericDictExample also defines a revive() method that extracts just the integer portion from the longer id member. The revive() method uses this integer to look up and return the correct revivable object.
 

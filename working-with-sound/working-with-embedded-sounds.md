@@ -1,4 +1,4 @@
-## Working with embedded sounds {#working-with-embedded-sounds}
+# Working with embedded sounds {#working-with-embedded-sounds}
 
 Using embedded sounds, instead of loading sound from an external file, is most useful for small sounds that are used as indicators within your application’s user interface, such as sounds that play when buttons are clicked.
 
@@ -22,7 +22,7 @@ var drum:DrumSound = new DrumSound(); var channel:SoundChannel = drum.play();
 
 DrumSound is a subclass of the flash.media.Sound class so it inherits the Sound class’s methods and properties, including the play() method as shown above.
 
-### Using an embedded sound file in Flex {#using-an-embedded-sound-file-in-flex}
+## Using an embedded sound file in Flex {#using-an-embedded-sound-file-in-flex}
 
 There are many ways to embed sound assets in a Flex application, including:
 

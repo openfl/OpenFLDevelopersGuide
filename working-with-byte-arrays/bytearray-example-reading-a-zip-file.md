@@ -1,4 +1,4 @@
-## ByteArray example: Reading a .zip file {#bytearray-example-reading-a-zip-file}
+# ByteArray example: Reading a .zip file {#bytearray-example-reading-a-zip-file}
 
 Adobe AIR 1.0 and later
 

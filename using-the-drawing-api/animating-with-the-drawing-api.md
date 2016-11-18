@@ -1,4 +1,4 @@
-## Animating with the drawing API {#animating-with-the-drawing-api}
+# Animating with the drawing API {#animating-with-the-drawing-api}
 
 One advantage of creating content with the drawing API is that you are not limited to positioning your content once. What you draw can be modified by maintaining and modifying the variables you use to draw. You can convey animation by changing variables and redrawing, either over a period of frames or with a timer.
 

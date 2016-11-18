@@ -1,4 +1,4 @@
-## Basics of strings {#basics-of-strings}
+# Basics of strings {#basics-of-strings}
 
 In programming parlance, a string is a text value—a sequence of letters, numbers, or other characters strung together into a single value. For instance, this line of code creates a variable with the data type String and assigns a literal string value to that variable:
 

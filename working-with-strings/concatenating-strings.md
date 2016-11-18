@@ -1,4 +1,4 @@
-## Concatenating strings {#concatenating-strings}
+# Concatenating strings {#concatenating-strings}
 
 Concatenation of strings means taking two strings and joining them sequentially into one. For example, you can use the + operator to concatenate two strings:
 

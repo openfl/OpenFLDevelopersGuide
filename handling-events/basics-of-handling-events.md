@@ -1,4 +1,4 @@
-## Basics of handling events {#basics-of-handling-events}
+# Basics of handling events {#basics-of-handling-events}
 
 You can think of events as occurrences of any kind in your SWF file that are of interest to you as a programmer. For example, most SWF files support user interaction of some sort—whether it&#039;s something as simple as responding to a mouse click or something more complex, such as accepting and processing data entered into a form. Any such user interaction with your SWF file is considered an event. Events can also occur without any direct user interaction, such as when data has finished loading from a server or when an attached camera has become active.
 

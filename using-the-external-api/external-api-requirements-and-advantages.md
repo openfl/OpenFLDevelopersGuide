@@ -1,4 +1,4 @@
-## External API requirements and advantages {#external-api-requirements-and-advantages}
+# External API requirements and advantages {#external-api-requirements-and-advantages}
 
 The external API is the portion of ActionScript that provides a mechanism for communication between ActionScript and code running in an “external application” that is acting as a container for Flash Player (commonly a web browser or stand-alone projector application). In ActionScript 3.0, the functionality of the external API is provided by the ExternalInterface class. In Flash Player versions prior to Flash Player 8, the fscommand() action was used to carry out communication with the container application. The ExternalInterface class is a replacement for fscommand().
 

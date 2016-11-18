@@ -1,4 +1,4 @@
-## Handling synchronous errors in an application {#handling-synchronous-errors-in-an-application}
+# Handling synchronous errors in an application {#handling-synchronous-errors-in-an-application}
 
 The most common error handling is synchronous error-handling logic, where you insert statements into your code to catch synchronous errors while an application is running. This type of error handling lets your application notice and recover from run-time errors when functions fail. The logic for catching a synchronous error includes try..catch..finally statements, which literally try an operation, catch any error response from the Flash runtime, and finally execute some other operation to handle the failed operation.
 
@@ -114,7 +114,7 @@ catch (error:IOError)
 
 As you become more familiar with the [ActionScript 3.0 Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html), you’ll notice which methods throw exceptions, as detailed in each method’s description.
 
-### The throw statement {#the-throw-statement}
+## The throw statement {#the-throw-statement}
 
 Flash runtimes throw exceptions when they encounter errors in your running application. In addition, you can explicitly throw exceptions yourself using the throw statement. When explicitly throwing errors, Adobe recommends that you throw instances of the Error class or its subclasses. The following code demonstrates a throw statement that throws an instance of the Error class, MyErr, and eventually calls a function, myFunction(), to respond after the error is thrown:
 
@@ -178,7 +178,7 @@ Notice that the catch statements are ordered so that the most specific data type
 
 **_Note:_ **_In the Java programming language, each function that can throw an exception must declare this fact, listing the exception classes it can throw in a throws clause attached to the function declaration. ActionScript does not require you to declare the exceptions thrown by a function._
 
-### Displaying a simple error message {#displaying-a-simple-error-message}
+## Displaying a simple error message {#displaying-a-simple-error-message}
 
 One of the biggest benefits of the new exception and error event model is that it allows you to tell users when and why an action has failed. Your part is to write the code to display the message and offer options in response.
 
@@ -238,7 +238,7 @@ var errorMessage:TextField = new TextField(); errorMessage.autoSize = TextFieldA
 
 Using a wider range of error classes and built-in compiler errors, ActionScript 3.0 offers more information than previous versions of ActionScript about why something has failed. This information enables you to build more stable applications with better error handling.
 
-### Rethrowing errors {#rethrowing-errors}
+## Rethrowing errors {#rethrowing-errors}
 
 When you build applications, there are several occasions in which you need to rethrow an error if you are unable to handle the error properly. For example, the following code shows a nested try..catch block, which rethrows a custom ApplicationError if the nested catch block is unable to handle the error:
 

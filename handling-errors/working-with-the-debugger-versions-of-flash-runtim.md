@@ -1,4 +1,4 @@
-## Working with the debugger versions of Flash runtimes {#working-with-the-debugger-versions-of-flash-runtimes}
+# Working with the debugger versions of Flash runtimes {#working-with-the-debugger-versions-of-flash-runtimes}
 
 Adobe provides developers with special editions of the Flash runtimes to assist debugging efforts. You obtain a copy of the debugger version of Flash Player when you install Adobe Flash Professional or Adobe Flash Builder. You also obtain a utility for the debugging of Adobe AIR applications, which is called ADL, when you install either of those tools, or as part of the Adobe AIR SDK.
 

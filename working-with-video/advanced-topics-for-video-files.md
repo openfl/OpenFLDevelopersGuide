@@ -1,4 +1,4 @@
-## Advanced topics for video files {#advanced-topics-for-video-files}
+# Advanced topics for video files {#advanced-topics-for-video-files}
 
 The following topics address some special issues for working with FLV files.
 
@@ -26,7 +26,7 @@ When SWF files that stream external FLV files are placed on Microsoft Windows Se
 
 For information about configuring Microsoft Windows 2003 and Microsoft IIS Server 6.0 to stream FLV video, see [www.adobe.com/go/tn_19439](http://www.adobe.com/go/tn_19439).
 
-### About targeting local FLV files on the Macintosh {#about-targeting-local-flv-files-on-the-macintosh}
+## About targeting local FLV files on the Macintosh {#about-targeting-local-flv-files-on-the-macintosh}
 
 If you attempt to play a local FLV from a non-system drive on an Apple® Macintosh® computer by using a path that uses a relative slash (/), the video will not play. Non-system drives include, but are not limited to, CD-ROMs, partitioned hard disks, removable storage media, and connected storage devices.
 

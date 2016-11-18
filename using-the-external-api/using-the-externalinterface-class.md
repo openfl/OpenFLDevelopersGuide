@@ -1,4 +1,4 @@
-## Using the ExternalInterface class {#using-the-externalinterface-class}
+# Using the ExternalInterface class {#using-the-externalinterface-class}
 
 Communication between ActionScript and the container application can take one of two forms: either ActionScript can call code (such as a JavaScript function) defined in the container, or code in the container can call an ActionScript function that has been designated as being callable. In either case, information can be sent to the code being called, and results can be returned to the code making the call.
 
@@ -20,7 +20,7 @@ if (ExternalInterface.available)
 
 The ExternalInterface.objectID property allows you to determine the unique identifier of the Flash Player instance (specifically, the id attribute of the object tag in Internet Explorer or the name attribute of the embed tag in browsers using the NPRuntime interface). This unique ID represents the current SWF document in the browser, and can be used to make reference to the SWF document—for example, when calling a JavaScript function in a container HTML page. When the Flash Player container is not a web browser, this property is null.
 
-### Calling external code from ActionScript {#calling-external-code-from-actionscript}
+## Calling external code from ActionScript {#calling-external-code-from-actionscript}
 
 The ExternalInterface.call() method executes code in the container application. It requires at least one parameter, a string containing the name of the function to be called in the container application. Any additional parameters passed to the ExternalInterface.call() method are passed along to the container as parameters of the function call.
 
@@ -58,7 +58,7 @@ page 848
 
 Whether the container is a web browser or another ActiveX container, if the call fails or the container method does not specify a return value, null is returned. The ExternalInterface.call() method throws a SecurityError exception if the containing environment belongs to a security sandbox to which the calling code does not have access. You can work around this by setting an appropriate value for allowScriptAccess in the containing environment. For example, to change the value of allowScriptAccess in an HTML page, you would edit the appropriate attribute in the object and embed tags.
 
-### Calling ActionScript code from the container {#calling-actionscript-code-from-the-container}
+## Calling ActionScript code from the container {#calling-actionscript-code-from-the-container}
 
 A container can only call ActionScript code that’s in a function—no other ActionScript code can be called by a container. To call an ActionScript function from the container application, you must do two things: register the function with the ExternalInterface class, and then call it from the container’s code.
 
@@ -106,7 +106,7 @@ page 848
 
 In either case, the return value of the ActionScript function is passed back to the container code, either directly as a value when the caller is JavaScript code in a browser, or serialized as an XML-formatted string when the caller is an ActiveX container.
 
-### The external API’s XML format {#the-external-api-s-xml-format}
+## The external API’s XML format {#the-external-api-s-xml-format}
 
 Communication between ActionScript and an application hosting the Shockwave Flash ActiveX control uses a specific XML format to encode function calls and values. There are two parts to the XML format used by the external API. One format is used to represent function calls. Another format is used to represent individual values; this format is used for parameters in functions as well as function return values. The XML format for function calls is used for calls to and from ActionScript. For a function call from ActionScript, Flash Player passes the XML to the container; for a call from the container, Flash Player expects the container application to pass it an XML string in this format. The following XML fragment shows an example XML-formatted function call:
 

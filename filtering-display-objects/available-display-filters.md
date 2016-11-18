@@ -1,4 +1,4 @@
-## Available display filters {#available-display-filters}
+# Available display filters {#available-display-filters}
 
 ActionScript 3.0 includes ten filter classes that you can apply to display objects and BitmapData objects:
 
@@ -57,7 +57,7 @@ bevel.quality = BitmapFilterQuality.HIGH; bevel.type = BitmapFilterType.INNER; b
 
 // Apply filter to the image. imageLoader.filters = [bevel];
 
-### Blur filter {#blur-filter}
+## Blur filter {#blur-filter}
 
 The BlurFilter class smears, or blurs, a display object and its contents. Blur effects are useful for giving the impression that an object is out of focus or for simulating fast movement, as in a motion blur. By setting the quality property of the blur filter too low, you can simulate a softly out-of-focus lens effect. Setting the quality property to high results in a smooth blur effect similar to a Gaussian blur.
 
@@ -79,7 +79,7 @@ blur.blurY = 10;
 
 blur.quality = BitmapFilterQuality.MEDIUM; redDotCutout.filters = [blur];
 
-### Drop shadow filter {#drop-shadow-filter}
+## Drop shadow filter {#drop-shadow-filter}
 
 Drop shadows give the impression that there is a separate light source situated above a target object. The position and intensity of this light source can be modified to produce a variety of different drop shadow effects.
 
@@ -109,7 +109,7 @@ shadow.angle = 25;
 
 // inner shadows and knockout effects. boxShadow.filters = [shadow];
 
-### Glow filter {#glow-filter}
+## Glow filter {#glow-filter}
 
 The GlowFilter class applies a lighting effect to display objects, making it appear that a light is being shined up from underneath the object to create a soft glow.
 
@@ -137,7 +137,7 @@ glow.blurY = 25;
 
 glow.quality = BitmapFilterQuality.MEDIUM; crossGraphic.filters = [glow];
 
-### Gradient bevel filter {#gradient-bevel-filter}
+## Gradient bevel filter {#gradient-bevel-filter}
 
 The GradientBevelFilter class lets you apply an enhanced bevel effect to display objects or BitmapData objects. Using a gradient color on the bevel greatly improves the spatial depth of the bevel, giving edges a more realistic, 3D appearance.
 
@@ -173,7 +173,7 @@ gradientBevel.quality = BitmapFilterQuality.HIGH;
 
 // Add the graphic to the display list. addChild(box);
 
-### Gradient glow filter {#gradient-glow-filter}
+## Gradient glow filter {#gradient-glow-filter}
 
 The GradientGlowFilter class lets you apply an enhanced glow effect to display objects or BitmapData objects. The effect gives you greater color control of the glow, and in turn produces a more realistic glow effect. Additionally, the gradient glow filter allows you to apply a gradient glow to the inner, outer, or upper edges of an object.
 
@@ -237,7 +237,7 @@ gradientGlow.blurX = (stage.mouseX / stage.stageWidth) * 255; gradientGlow.blurY
 
 stage.addEventListener(MouseEvent.CLICK, onClick); stage.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
 
-### Example: Combining basic filters {#example-combining-basic-filters}
+## Example: Combining basic filters {#example-combining-basic-filters}
 
 The following code example uses several basic filters, combined with a Timer for creating repeating actions, to create an animated traffic light simulation.
 
@@ -335,13 +335,13 @@ count++;
 
 // Create a timer to swap the filters at a 3 second interval. var timer:Timer = new Timer(3000, 9); timer.addEventListener(TimerEvent.TIMER, trafficControl); timer.start();
 
-### Color matrix filter {#color-matrix-filter}
+## Color matrix filter {#color-matrix-filter}
 
 The ColorMatrixFilter class is used to manipulate the color and alpha values of the filtered object. This allows you to create saturation changes, hue rotation (shifting a palette from one range of colors to another), luminance-to-alpha changes, and other color manipulation effects using values from one color channel and potentially applying them to other channels.
 
 Conceptually, the filter goes through the pixels in the source image one by one and separates each pixel into its red, green, blue, and alpha components. It then multiplies values provided in the color matrix by each of these values, adding the results together to determine the resulting color value that will be displayed on the screen for that pixel. The matrix property of the filter is an array of 20 numbers that are used in calculating the final color. For details of the specific algorithm used to calculate the color values, see the entry describing the ColorMatrixFilter class’s matrix property in the [ActionScript 3.0 Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filters/ColorMatrixFilter.html).
 
-### Convolution filter {#convolution-filter}
+## Convolution filter {#convolution-filter}
 
 The ConvolutionFilter class can be used to apply a wide range of imaging transformations to BitmapData objects or display objects, such as blurring, edge detection, sharpening, embossing, and beveling.
 
@@ -442,7 +442,7 @@ Although the effect of this matrix isn’t very noticeable, other matrix values 
 
 Notice that with most of these effects, the divisor is 1\. This is because the negative matrix values added to the positive matrix values result in 1 (or 0 in the case of edge detection, but the divisor property’s value cannot be 0).
 
-### Displacement map filter {#displacement-map-filter}
+## Displacement map filter {#displacement-map-filter}
 
 The DisplacementMapFilter class uses pixel values from a BitmapData object (known as the displacement map image) to perform a displacement effect on a new object. The displacement map image is typically different than the actual display object or BitmapData instance to which the filter is being applied. A displacement effect involves displacing pixels in the filtered image—in other words, shifting them away from their original location to some extent. This filter can be used to create a shifted, warped, or mottled effect.
 
@@ -623,7 +623,7 @@ The code first generates two gradient circles, which are combined together to fo
 
 The code then loads an image and, as the mouse moves, applies the displacement filter to the portion of the image that’s under the mouse. The gradient circles used as the displacement map image causes the displaced region to spread out away from the pointer. Notice that the gray regions of the displacement map image don’t cause any displacement. The gray color is 0x7F7F7F. The blue and red channels of that shade of gray exactly match the middle shade of those color channels, so there is no displacement in a gray area of the map image. Likewise, in the center of the circle there is no displacement. Although the color there isn’t gray, that color’s blue channel and red channel are identical to the blue channel and red channel of medium gray, and since blue and red are the colors that cause displacement, no displacement happens there.
 
-### Shader filter {#shader-filter}
+## Shader filter {#shader-filter}
 
 Flash Player 10 and later, Adobe AIR 1.5 and later
 

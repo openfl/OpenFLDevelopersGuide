@@ -1,4 +1,4 @@
-## Using Matrix objects {#using-matrix-objects}
+# Using Matrix objects {#using-matrix-objects}
 
 The [Matrix](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/geom/Matrix.html) class represents a transformation matrix that determines how to map points from one coordinate space to another. You can perform various graphical transformations on a display object by setting the properties of a Matrix object, applying that Matrix object to the matrix property of a Transform object, and then applying that Transform object as the transform property of the display object. These transformation functions include translation (_x_ and _y_ repositioning), rotation, scaling, and skewing.
 

@@ -1,4 +1,4 @@
-## Responding to error events and status {#responding-to-error-events-and-status}
+# Responding to error events and status {#responding-to-error-events-and-status}
 
 One of the most noticeable improvements to error handling in ActionScript 3.0 is the support for error event handling for responding to asynchronous errors while an application is running. (For a definition of asynchronous errors, see
 
@@ -108,7 +108,7 @@ trace(errorEvent.text);
 
 }
 
-### Working with status change events {#working-with-status-change-events}
+## Working with status change events {#working-with-status-change-events}
 
 Flash runtimes dynamically change the value of the netStatus.info.level or status.level properties for the classes that support the level property while an application is running. The classes that have the netStatus.info.level property are NetConnection, NetStream, and SharedObject. The classes that have the status.level property are HTTPStatusEvent, Camera, Microphone, and LocalConnection. You can write a handler function to respond to the change in level value and track communication errors.
 

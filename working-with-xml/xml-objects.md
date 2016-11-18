@@ -1,4 +1,4 @@
-## XML objects {#xml-objects}
+# XML objects {#xml-objects}
 
 An XML object may represent an XML element, attribute, comment, processing instruction, or text element.
 
@@ -50,7 +50,7 @@ and toXMLString() methods of the XML class.
 
 For details on these properties, see the [ActionScript 3.0 Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html).
 
-### XML methods {#xml-methods}
+## XML methods {#xml-methods}
 
 The following methods allow you to work with the hierarchical structure of XML objects:
 

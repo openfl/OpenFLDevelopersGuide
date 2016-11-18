@@ -1,4 +1,4 @@
-## Creating strings {#creating-strings}
+# Creating strings {#creating-strings}
 
 The String class is used to represent string (textual) data in ActionScript 3.0\. ActionScript strings support both ASCII and Unicode characters. The simplest way to create a string is to use a string literal. To declare a string literal, use straight double quotation mark (&quot;) or single quotation mark (&#039;) characters. For example, the following two strings are equivalent:
 

@@ -1,4 +1,4 @@
-## Formatting text {#formatting-text}
+# Formatting text {#formatting-text}
 
 You have several options for programmatically formatting the display of text. You can set properties directly on the TextField instance—for example, the TextFIeld.thickness, TextField.textColor, and TextField.textHeight properties.Or you can designate the content of the text field using the htmlText property and use the supported HTML tags, such as b, i, and u. But you can also apply TextFormat objects to text fields containing plain text, or StyleSheet objects to text fields containing the htmlText property. Using TextFormat and StyleSheet objects provides the most control and consistency over the appearance of text throughout your application. You can define a TextFormat or StyleSheet object and apply it to many or all text fields in your application.
 
@@ -22,7 +22,7 @@ addChild(tf);
 
 The TextField.setTextFormat() method only affects text that is already displayed in the text field. If the content in the TextField changes, your application might need to call the TextField.setTextFormat() method again to reapply the formatting. You can also set the TextField defaultTextFormat property to specify the format to be used for user-entered text.
 
-### Applying cascading style sheets {#applying-cascading-style-sheets}
+## Applying cascading style sheets {#applying-cascading-style-sheets}
 
 Text fields can contain either plain text or HTML-formatted text. Plain text is stored in the text property of the instance, and HTML text is stored in the htmlText property.
 
@@ -55,7 +55,7 @@ By design, a text field with a style sheet is not editable. If you have an input
 
 If a text field has a style sheet assigned to it, but later the TextField.styleSheet property is set to null, the contents of both TextField.text and TextField.htmlText properties add tags and attributes to their content to incorporate the formatting from the previously assigned style sheet. To preserve the original htmlText property, save it in a variable before setting the style sheet to null.
 
-### Loading an external CSS file {#loading-an-external-css-file}
+## Loading an external CSS file {#loading-an-external-css-file}
 
 The CSS approach to formatting is more powerful when you can load CSS information from an external file at run time. When the CSS data is external to the application itself, you can change the visual style of text in your application without having to change your ActionScript 3.0 source code. After your application has been deployed, you can change an external CSS file to change the look of the application, without having to redeploy the application SWF file.
 
@@ -135,7 +135,7 @@ When the CSS data is loaded, the onCSSFileLoaded() method executes and calls the
 
 method to transfer the style declarations to the StyleSheet object.
 
-### Formatting ranges of text within a text field {#formatting-ranges-of-text-within-a-text-field}
+## Formatting ranges of text within a text field {#formatting-ranges-of-text-within-a-text-field}
 
 A useful method of the flash.text.TextField class is the setTextFormat() method. Using setTextFormat(), you can assign specific properties to the contents of a part of a text field to respond to user input, such as forms that need to remind users that certain entries are required or to change the emphasis of a subsection of a passage of text within a text field as a user selects parts of the text.
 

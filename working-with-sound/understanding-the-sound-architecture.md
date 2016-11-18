@@ -1,4 +1,4 @@
-## Understanding the sound architecture {#understanding-the-sound-architecture}
+# Understanding the sound architecture {#understanding-the-sound-architecture}
 
 Your applications can load sound data from five main sources:
 

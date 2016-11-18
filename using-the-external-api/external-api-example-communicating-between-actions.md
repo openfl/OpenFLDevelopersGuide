@@ -1,4 +1,4 @@
-## External API example: Communicating between ActionScript and JavaScript in a web browser {#external-api-example-communicating-between-actionscript-and-javascript-in-a-web-browser}
+# External API example: Communicating between ActionScript and JavaScript in a web browser {#external-api-example-communicating-between-actionscript-and-javascript-in-a-web-browser}
 
 This sample application demonstrates appropriate techniques for communicating between ActionScript and JavaScript in a web browser, in the context of an Instant Messaging application that allows a person to chat with him or herself (hence the name of the application: Introvert IM). Messages are sent between an HTML form in the web page and a SWF interface using the external API. The techniques demonstrated by this example include the following:
 
@@ -157,7 +157,7 @@ private function timerHandler(event:TimerEvent):void
 
 Each time the timerHandler() method gets called, it once again checks the result of the isContainerReady() method. Once the container is initialized, that method returns true. The code then stops the Timer and calls the setupCallbacks() method to finish the process of setting up communication with the browser.
 
-### Exposing ActionScript methods to JavaScript {#exposing-actionscript-methods-to-javascript}
+## Exposing ActionScript methods to JavaScript {#exposing-actionscript-methods-to-javascript}
 
 As the previous example showed, once the code determines that the browser is ready, the setupCallbacks() method is called. This method prepares ActionScript to receive calls from JavaScript, as shown here:
 
@@ -173,7 +173,7 @@ private function setupCallbacks():void
 
 The setCallBacks() method finishes the task of preparing for communication with the container by calling ExternalInterface.addCallback() to register the two methods that will be available to be called from JavaScript. In this code, the first parameter—the name by which the method is known to JavaScript (&quot;newMessage&quot; and &quot;getStatus&quot;)—is the same as the method’s name in ActionScript. (In this case, there was no benefit to using different names, so the same name was reused for simplicity.) Finally, the ExternalInterface.call() method is used to call the JavaScript function setSWFIsReady(), which notifies the container that the ActionScript functions have been registered.
 
-### Communication from ActionScript to the browser {#communication-from-actionscript-to-the-browser}
+## Communication from ActionScript to the browser {#communication-from-actionscript-to-the-browser}
 
 The Introvert IM application demonstrates a range of examples of calling JavaScript functions in the container page. In the simplest case (an example from the setupCallbacks() method), the JavaScript function setSWFIsReady() is called without passing any parameters or receiving a value in return:
 
@@ -195,7 +195,7 @@ ExternalInterface.call(&quot;newMessage&quot;, message);
 
 Once again, ExternalInterface.call() is used to call the designated JavaScript function, notifying the browser of the new message. In addition, the message itself is passed as an additional parameter to ExternalInterface.call(), and consequently it is passed as a parameter to the JavaScript function newMessage().
 
-### Calling ActionScript code from JavaScript {#calling-actionscript-code-from-javascript}
+## Calling ActionScript code from JavaScript {#calling-actionscript-code-from-javascript}
 
 Communication is supposed to be a two-way street, and the Introvert IM application is no exception. Not only does the Flash Player IM client call JavaScript to send messages, but the HTML form calls JavaScript code to send messages to and ask for information from the SWF file as well. For example, when the SWF file notifies the container that it has finished establishing contact and it’s ready to communicate, the first thing the browser does is call the IMManager class’s getStatus() method to retrieve the initial user availability status from the SWF IM client. This is done in the web page, in the updateStatus() function, as follows:
 
@@ -257,7 +257,7 @@ getSWF(&quot;IntrovertIMApp&quot;).newMessage(message);
 
 The newMessage() ActionScript method expects one parameter, so the JavaScript message variable gets passed to ActionScript by using it as a parameter in the newMessage() method call in the JavaScript code.
 
-### Detecting the browser type {#detecting-the-browser-type}
+## Detecting the browser type {#detecting-the-browser-type}
 
 Because of differences in how browsers access content, it’s important to always use JavaScript to detect which browser the user is running and to access the movie according to the browser-specific syntax, using the window or document object, as shown in the getSWF() JavaScript function in this example:
 

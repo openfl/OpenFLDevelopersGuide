@@ -1,4 +1,4 @@
-## Copying bitmap data {#copying-bitmap-data}
+# Copying bitmap data {#copying-bitmap-data}
 
 To copy bitmap data from one image to another, you can use several methods: clone(), copyPixels(), copyChannel(), draw(), and drawWithQuality()(drawWithQuality method available in Flash Player 11.3 and higher; AIR 3.3 and higher).
 

@@ -1,4 +1,4 @@
-## Event listeners {#event-listeners}
+# Event listeners {#event-listeners}
 
 Event listeners, which are also called event handlers, are functions that Flash Player and AIR execute in response to specific events. Adding an event listener is a two-step process. First, you create a function or class method for Flash Player or AIR to execute in response to the event. This is sometimes called the listener function or the event handler function. Second, you use the addEventListener() method to register your listener function with the target of the event or any display list object that lies along the appropriate event flow.
 
@@ -188,7 +188,7 @@ clickHandler detected an event of type: click the this keyword refers to: [objec
 
 You would expect that this would refer to myListenerObj and that the trace output would be [object Object], but instead it refers to the global object. When you pass in a dynamic property name as an argument to addEventListener(), Flash Player or AIR is unable to create a bound method. This is because what you are passing as the listener parameter is nothing more than the memory address of your listener function, and Flash Player and AIR have no way to link that memory address with the myListenerObj instance.
 
-### Managing event listeners {#managing-event-listeners}
+## Managing event listeners {#managing-event-listeners}
 
 You can manage your listener functions using the methods of the IEventDispatcher interface. The IEventDispatcher interface is the ActionScript 3.0 version of the EventTarget interface of the DOM event model. Although the name IEventDispatcher may seem to imply that its main purpose is to send (or dispatch) event objects, the methods of this class are actually used much more frequently to register event listeners, check for event listeners, and remove event listeners. The IEventDispatcher interface defines five methods, as shown in the following code:
 
@@ -242,7 +242,7 @@ Checking for existing event listeners
 
 The final two methods of the IEventDispatcher interface provide useful information about the existence of event listeners. The hasEventListener() method returns true if an event listener is found for a specific event type on a particular display list object. The willTrigger() method also returns true if a listener is found for a particular display list object, but willTrigger() checks for listeners not only on that display object, but also on all of that display list object’s ancestors for all phases of the event flow.
 
-### Error events without listeners {#error-events-without-listeners}
+## Error events without listeners {#error-events-without-listeners}
 
 Exceptions, rather than events, are the primary mechanism for error handling in ActionScript 3.0, but exception handling does not work for asynchronous operations such as loading files. If an error occurs during such an asynchronous operation, Flash Player and AIR dispatch an error event object. If you do not create a listener for the error event, the debugger versions of Flash Player and AIR will bring up a dialog box with information about the error. For example, the debugger version of Flash Player produces the following dialog box describing the error when the application attempts to load a file from an invalid URL:
 

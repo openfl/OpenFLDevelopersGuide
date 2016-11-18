@@ -1,4 +1,4 @@
-## Extending the Array class {#extending-the-array-class}
+# Extending the Array class {#extending-the-array-class}
 
 The Array class is one of the few core classes that is not final, which means that you can create your own subclass of Array. This section provides an example of how to create a subclass of Array and discusses some of the issues that can arise during the process.
 

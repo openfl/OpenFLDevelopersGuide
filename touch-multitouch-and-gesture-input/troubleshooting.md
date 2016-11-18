@@ -1,4 +1,4 @@
-## Troubleshooting {#troubleshooting}
+# Troubleshooting {#troubleshooting}
 
 Flash Player 10.1 and later, Adobe AIR 2 and later
 

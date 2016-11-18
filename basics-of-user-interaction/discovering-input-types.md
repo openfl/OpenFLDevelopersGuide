@@ -1,4 +1,4 @@
-## Discovering input types {#discovering-input-types}
+# Discovering input types {#discovering-input-types}
 
 Flash Player 10.1 and later, Adobe AIR 2 and later
 

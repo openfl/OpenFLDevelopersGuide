@@ -1,4 +1,4 @@
-## Date and time example: Simple analog clock {#date-and-time-example-simple-analog-clock}
+# Date and time example: Simple analog clock {#date-and-time-example-simple-analog-clock}
 
 A simple analog clock example illustrates these two date and time concepts:
 
@@ -46,7 +46,7 @@ The class has two important properties:
 
 The SimpleClock class uses a default constructor. The initClock() method takes care of the real setup work, creating the clock face and starting the Timer instance ticking.
 
-### Creating the clock face {#creating-the-clock-face}
+## Creating the clock face {#creating-the-clock-face}
 
 The next lines in the SimpleClock code create the clock face that is used to display the time:
 
@@ -70,7 +70,7 @@ The size of the face can be passed in to the initClock() method. If no faceSize 
 
 Next, the application initializes the face and then adds it to the display list using the addChild() method inherited from the DisplayObjectContainer class. Then it calls the AnalogClockFace.draw() method to display the clock face once, showing the current time.
 
-### Starting the timer {#starting-the-timer}
+## Starting the timer {#starting-the-timer}
 
 After creating the clock face, the initClock() method sets up a timer:
 
@@ -94,7 +94,7 @@ public function onTick(event:TimerEvent):void
 
 The AnalogClockFace.draw() method simply draws the clock face and hands.
 
-### Displaying the current time {#displaying-the-current-time}
+## Displaying the current time {#displaying-the-current-time}
 
 Most of the code in the AnalogClockFace class involves setting up the clock face’s display elements. When the AnalogClockFace is initialized, it draws a circular outline, places a numeric text label at each hour mark, and then creates three Shape objects, one each for the hour hand, the minute hand, and the second hand on the clock.
 

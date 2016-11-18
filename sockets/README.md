@@ -221,7 +221,7 @@ ta.verticalScrollPosition = ta.maxVerticalScrollPosition;
 
 This method sets the verticalScrollPosition property, which is the line number of the top row of characters that is currently displayed, and sets it to the value of the maxVerticalScrollPosition property.
 
-### XML sockets {#xml-sockets}
+## XML sockets {#xml-sockets}
 
 An XML socket lets you create a connection to a remote server that remains open until explicitly closed. You can exchange string data, such as XML, between the server and client. A benefit of using an XML socket server is that the client does not need to explicitly request data. The server can send data without waiting for a request and can send data to every connected client connected.
 
@@ -409,7 +409,7 @@ _Each message you send to the XML socket server must be terminated by a newline 
 
 For more information, see XMLSocket.
 
-### Server sockets {#server-sockets}
+## Server sockets {#server-sockets}
 
 Adobe AIR 2 and later
 

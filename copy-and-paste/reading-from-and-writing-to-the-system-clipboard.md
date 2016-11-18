@@ -1,4 +1,4 @@
-## Reading from and writing to the system clipboard {#reading-from-and-writing-to-the-system-clipboard}
+# Reading from and writing to the system clipboard {#reading-from-and-writing-to-the-system-clipboard}
 
 Flash Player 10 and later, Adobe AIR 1.0 and later
 

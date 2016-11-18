@@ -1,4 +1,4 @@
-## Video example: Video Jukebox {#video-example-video-jukebox}
+# Video example: Video Jukebox {#video-example-video-jukebox}
 
 The following example builds a simple video jukebox which dynamically loads a list of videos to play back in a sequential order. This allows you to build an application that lets a user browse through a series of video tutorials, or perhaps specifies which advertisements should be played back before delivering the user’s requested video. This example demonstrates the following features of ActionScript 3.0:
 
@@ -50,7 +50,7 @@ The playlist XML object contains the raw XML from the external file, whereas the
 
 Finally, the xmlCompleteHandler() method calls the main() method which sets up the various component instances on the display list, as well as the NetConnection and NetStream objects which are used to load the external FLV files.
 
-### Creating the user interface {#creating-the-user-interface}
+## Creating the user interface {#creating-the-user-interface}
 
 To build the user interface you need to drag five Button instances onto the display list and give them the following instance names: playButton, pauseButton, stopButton, backButton, and forwardButton.
 
@@ -100,7 +100,7 @@ positionBar.mode = ProgressBarMode.MANUAL;
 
 Finally add a Label instance to the display list and give it an instance name of positionLabel. This Label instance’s value will be set by the timer instance
 
-### Listening for a video object’s metadata {#listening-for-a-video-object-s-metadata}
+## Listening for a video object’s metadata {#listening-for-a-video-object-s-metadata}
 
 When Flash Player encounters metadata for each of the loaded videos, the onMetaData() callback handler is called on the NetStream object’s client property. The following code initializes an Object and sets up the specified callback handler:
 
@@ -118,7 +118,7 @@ positionBar.move(vid.x, vid.y + vid.height); positionBar.width = vid.width;
 
 }
 
-### Dynamically loading a video {#dynamically-loading-a-video}
+## Dynamically loading a video {#dynamically-loading-a-video}
 
 To dynamically load each of the videos, the application uses a NetConnection and a NetStream object. The following code creates a NetConnection object and passes null to the connect() method. By specifying null, Flash Player connects to a video on the local server instead of connecting to a server, such as a Flash Media Server.
 
@@ -194,7 +194,7 @@ catch (error:Error)
 
 }
 
-### Controlling the volume of the video {#controlling-the-volume-of-the-video}
+## Controlling the volume of the video {#controlling-the-volume-of-the-video}
 
 You can control the volume for the dynamically loaded video by setting the soundTransform property on the NetStream object. The video jukebox application allows you to modify the volume level by changing the value of the volumeSlider Slider instance. The following code shows how you can change the volume level by assigning the value of the Slider component to a SoundTransform object which is set to the soundTransform property on the NetStream object:
 
@@ -206,7 +206,7 @@ volumeTransform.volume = event.value; ns.soundTransform = volumeTransform;
 
 }
 
-### Controlling video playback {#controlling-video-playback}
+## Controlling video playback {#controlling-video-playback}
 
 The rest of the application controls video playback when the video reaches the end of the video stream or the user skips to the previous or next video.
 

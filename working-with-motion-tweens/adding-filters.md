@@ -1,4 +1,4 @@
-## Adding filters {#adding-filters}
+# Adding filters {#adding-filters}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
@@ -14,7 +14,7 @@ The initFilters() method initializes the filters. Its first argument is an array
 
 motion_Box.initFilters([&quot;flash.filters.DropShadowFilter&quot;, &quot;flash.filters.GlowFilter&quot;, &quot;flash.filters.BevelFilter&quot;], [0, 0, 0]);
 
-### Adding filters {#adding-filters-0}
+## Adding filters {#adding-filters-0}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
@@ -52,7 +52,7 @@ motion_Box.addFilterPropertyArray(2, &quot;highlightAlpha&quot;, [1.00]);
 
 motion_Box.addFilterPropertyArray(2, &quot;highlightColor&quot;, [0xffffff]);
 
-### Adjusting color with the ColorMatrixFilter {#adjusting-color-with-the-colormatrixfilter}
+## Adjusting color with the ColorMatrixFilter {#adjusting-color-with-the-colormatrixfilter}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 

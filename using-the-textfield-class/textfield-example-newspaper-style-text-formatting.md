@@ -1,4 +1,4 @@
-## TextField Example: Newspaper-style text formatting {#textfield-example-newspaper-style-text-formatting}
+# TextField Example: Newspaper-style text formatting {#textfield-example-newspaper-style-text-formatting}
 
 The News Layout example formats text to look something like a story in a printed newspaper. The input text can contain a headline, a subtitle, and the body of the story. Given a display width and height, this News Layout example formats the headline and the subtitle to take the full width of the display area. The story text is distributed across two or more columns.
 
@@ -143,7 +143,7 @@ return format;
 
 The property names and the meaning of the property values differ between CSS style declarations and TextFormat objects. The getTextStyle() method translates CSS property values into the values expected by the TextFormat object.
 
-### Arranging story elements on the page {#arranging-story-elements-on-the-page}
+## Arranging story elements on the page {#arranging-story-elements-on-the-page}
 
 The StoryLayout class formats and lays out the headline, subtitle, and main text fields into a newspaper-style arrangement. The displayText() method initially creates and places the various fields.
 
@@ -175,7 +175,7 @@ storyTxt.text = this.content;
 
 Each field is placed below the previous field by setting its y property to equal the y property of the previous field plus its height. This dynamic placement calculation is needed because HeadlineTextField objects and MultiColumnTextField objects can change their height to fit their contents.
 
-### Altering font size to fit the field size {#altering-font-size-to-fit-the-field-size}
+## Altering font size to fit the field size {#altering-font-size-to-fit-the-field-size}
 
 Given a width in pixels and a maximum number of lines to display, the HeadlineTextField alters the font size to make the text fit the field. If the text is short, the font size is large, creating a tabloid-style headline. If the text is long, the font size is smaller.
 
@@ -291,7 +291,7 @@ return pointSize;
 
 The HeadlineTextField.fitText() method uses a simple recursive technique to size the font. First it guesses an average number of pixels per character in the text and from there calculates a starting point size. Then it changes the font size and checks whether the text has word wrapped to create more than the maximum number of text lines. If there are too many lines it calls the shrinkText() method to decrease the font size and try again. If there are not too many lines it calls the growText() method to increase the font size and try again. The process stops at the point where incrementing the font size by one more point would create too many lines.
 
-### Splitting text across multiple columns {#splitting-text-across-multiple-columns}
+## Splitting text across multiple columns {#splitting-text-across-multiple-columns}
 
 The MultiColumnTextField class spreads text among multiple TextField objects which are then arranged like newspaper columns.
 

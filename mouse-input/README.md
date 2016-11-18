@@ -96,7 +96,7 @@ In Adobe AIR, you can enable drag-and-drop support to allow users to drag data i
 
 .
 
-### Customizing the mouse cursor {#customizing-the-mouse-cursor}
+## Customizing the mouse cursor {#customizing-the-mouse-cursor}
 
 The mouse cursor (mouse pointer) can be hidden or swapped for any display object on the Stage. To hide the mouse cursor, call the Mouse.hide() method. Customize the cursor by calling Mouse.hide(), listening to the Stage for the MouseEvent.MOUSE_MOVE event, and setting the coordinates of a display object (your custom cursor) to the stageX and stageY properties of the event. The following example illustrates a basic execution of this task:
 

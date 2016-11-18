@@ -1,4 +1,4 @@
-## XML type conversion {#xml-type-conversion}
+# XML type conversion {#xml-type-conversion}
 
 You can convert XML objects and XMLList objects to String values. Similarly, you can convert strings to XML objects and XMLList objects. Also, keep in mind that all XML attribute values, names, and text values are strings. The following sections discuss all these forms of XML type conversion.
 
@@ -52,7 +52,7 @@ When using the trace() method to debug code, you will often want to use the toXM
 
 trace() method outputs more complete data.
 
-### Converting strings to XML objects {#converting-strings-to-xml-objects}
+## Converting strings to XML objects {#converting-strings-to-xml-objects}
 
 You can use the new XML() constructor to create an XML object from a string, as follows:
 
@@ -62,7 +62,7 @@ If you attempt to convert a string to XML from a string that represents invalid 
 
 var x:XML = new XML(&quot;&lt;a&gt;test&quot;); // throws an error
 
-### Converting attribute values, names, and text values from strings {#converting-attribute-values-names-and-text-values-from-strings}
+## Converting attribute values, names, and text values from strings {#converting-attribute-values-names-and-text-values-from-strings}
 
 All XML attribute values, names, and text values are String data types, and you may need to convert these to other data types. For example, the following code uses the Number() function to convert text values to numbers:
 

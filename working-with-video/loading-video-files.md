@@ -1,4 +1,4 @@
-## Loading video files {#loading-video-files}
+# Loading video files {#loading-video-files}
 
 Loading videos using the NetStream and NetConnection classes is a multistep process. As a best practice, the steps of adding the Video object to the display list, attaching the NetStream object to the Video instance, and calling the NetStream object’s play() method should be performed in the specified order:
 

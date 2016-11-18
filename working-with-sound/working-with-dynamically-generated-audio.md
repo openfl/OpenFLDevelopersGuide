@@ -1,4 +1,4 @@
-## Working with dynamically generated audio {#working-with-dynamically-generated-audio}
+# Working with dynamically generated audio {#working-with-dynamically-generated-audio}
 
 Flash Player 10 and later, Adobe AIR 1.5 and later
 
@@ -90,7 +90,7 @@ return returnBytes;
 
 }
 
-### Limitations on generated sounds {#limitations-on-generated-sounds}
+## Limitations on generated sounds {#limitations-on-generated-sounds}
 
 Flash Player 10 and later, Adobe AIR 1.5 and later
 

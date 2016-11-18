@@ -1,4 +1,4 @@
-## Domain Name System (DNS) records {#domain-name-system-dns-records}
+# Domain Name System (DNS) records {#domain-name-system-dns-records}
 
 Adobe AIR 2.0 and later
 

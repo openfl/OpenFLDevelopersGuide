@@ -1,4 +1,4 @@
-## Using the StageVideo class for hardware accelerated presentation {#using-the-stagevideo-class-for-hardware-accelerated-presentation}
+# Using the StageVideo class for hardware accelerated presentation {#using-the-stagevideo-class-for-hardware-accelerated-presentation}
 
 Flash Player 10.2 and later
 
@@ -95,7 +95,7 @@ More Help topics
 
 “Working with full-screen mode” on page 167
 
-### Using the StageVideo APIs {#using-the-stagevideo-apis}
+## Using the StageVideo APIs {#using-the-stagevideo-apis}
 
 Stage video is a mechanism within the runtime that enhances video playback and device performance. The runtime creates and maintains this mechanism; as a developer, your role is to configure your application to take advantage of it.
 

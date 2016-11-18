@@ -1,4 +1,4 @@
-## Mouse input example: WordSearch {#mouse-input-example-wordsearch}
+# Mouse input example: WordSearch {#mouse-input-example-wordsearch}
 
 This example demonstrates user interaction by handling mouse events. Users build as many words as possible from a random grid of letters, spelling by moving horizontally or vertically in the grid, but never using the same letter twice.This example demonstrates the following features of ActionScript 3.0:
 
@@ -22,13 +22,13 @@ To create a game that involves finding words, a dictionary is needed. The exampl
 
 words = dictionaryText.split(String.fromCharCode(13, 10));
 
-### Creating the user interface {#creating-the-user-interface}
+## Creating the user interface {#creating-the-user-interface}
 
 After the words have been stored, you can set up the user interface. Create two Button instances: one for submitting a word, and another for clearing a word that is currently being spelled. In each case, you must respond to user input by listening to the MouseEvent.CLICK event that the button broadcasts and then calling a function. In the setupUI() function, this code creates the listeners on the two buttons:
 
 submitWordButton.addEventListener(MouseEvent.CLICK,submitWord); clearWordButton.addEventListener(MouseEvent.CLICK,clearWord);
 
-### Generating a game board {#generating-a-game-board}
+## Generating a game board {#generating-a-game-board}
 
 The game board is a grid of random letters. In the generateBoard() function, a two-dimensional grid is created by nesting one loop inside another. The first loop increments rows and the second increments the total number of columns per row. Each of the cells created by these rows and columns contains a button that represents a letter on the board.
 
@@ -64,7 +64,7 @@ buttons.push(b);
 
 Although a listener is added for a MouseEvent.CLICK event on only one line, because it is in a for loop, it is assigned to each Button instance. Also, each button is assigned a name derived from its row and column position, which provides an easy way to reference the row and column of each button later in the code.
 
-### Building words from user input {#building-words-from-user-input}
+## Building words from user input {#building-words-from-user-input}
 
 Words can be spelled by selecting letters that are vertically or horizontally adjacent, but never using the same letter twice. Each click generates a mouse event, at which point the word the user is spelling must be checked to ensure it properly continues from letters that have previously been clicked. If it is not, the previous word is removed and a new one is started. This check occurs in the isLegalContinuation() method.
 
@@ -88,7 +88,7 @@ The charAt() and indexOf() methods of the String class retrieve the appropriate 
 
 return (Math.abs(prevButtonRow - currButtonRow) &lt;= 1) &amp;&amp; Math.abs(prevButtonCol - currButtonCol) &lt;= 1));
 
-### Checking word submissions {#checking-word-submissions}
+## Checking word submissions {#checking-word-submissions}
 
 To complete the code for the game, mechanisms for checking word submissions and tallying the score are needed. The
 
@@ -136,6 +136,6 @@ return -1;
 
 This function loops through all of the words in the dictionary. If the user’s word matches a word in the dictionary, its position in the dictionary is returned. The submitWord() method then checks the response and updates the score if the position is valid.
 
-### Customization {#customization}
+## Customization {#customization}
 
 At the beginning of the class are several constants. You can modify this game by modifying these variables. For example, you can change the amount of time available to play by increasing the TOTAL_TIME variable. You can also increase the PERCENT_VOWELS variable slightly to increase the likelihood of finding words.

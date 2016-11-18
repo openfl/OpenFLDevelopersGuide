@@ -1,4 +1,4 @@
-## Monitoring NetStream activity {#monitoring-netstream-activity}
+# Monitoring NetStream activity {#monitoring-netstream-activity}
 
 Flash Player 10.3 and later, Adobe AIR 2.7 and later
 
@@ -155,7 +155,7 @@ trace( &quot;Heartbeat on &quot; + streams[i].info.uri + &quot; at &quot; + stre
 
 }
 
-### Detecting player domain {#detecting-player-domain}
+## Detecting player domain {#detecting-player-domain}
 
 The URL and domain of the web page on which a user is viewing media content is not always readily available. If allowed by the hosting web site, you can use the ExternalInterface class to get the exact URL. However, some web sites that allow third-party video players do not allow the ExternalInterface to be used. In such cases, you can get the domain of the current web page from the pageDomain property of the Security class. The full URL is not divulged for user security and privacy reasons.
 

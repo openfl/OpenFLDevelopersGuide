@@ -1,4 +1,4 @@
-## Using Point objects {#using-point-objects}
+# Using Point objects {#using-point-objects}
 
 A [Point](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/geom/Point.html) object defines a Cartesian pair of coordinates. It represents location in a two-dimensional coordinate system, where _x_ represents the horizontal axis and _y_ represents the vertical axis.
 
@@ -20,7 +20,7 @@ import flash.geom.*;
 
 var pt1:Point = new Point(circle1.x, circle1.y); var pt2:Point = new Point(circle2.x, circle2.y); var distance:Number = Point.distance(pt1, pt2);
 
-### Translating coordinate spaces {#translating-coordinate-spaces}
+## Translating coordinate spaces {#translating-coordinate-spaces}
 
 If two display objects are in different display object containers, they can be in different coordinate spaces. You can use the localToGlobal() method of the DisplayObject class to translate the coordinates to the same (global) coordinate space, that of the Stage. For example, the following code finds the distance between the registration points of two display objects, circle1 and circle2, in the different display object containers:
 
@@ -42,7 +42,7 @@ var targetCenter:Point = new Point(target.x, target.y); targetCenter = target.lo
 
 var distance:Number = Point.distance(stageCenter, targetCenter);
 
-### Moving a display object by a specified angle and distance {#moving-a-display-object-by-a-specified-angle-and-distance}
+## Moving a display object by a specified angle and distance {#moving-a-display-object-by-a-specified-angle-and-distance}
 
 You can use the polar() method of the Point class to move a display object a specific distance by a specific angle. For example, the following code moves the myDisplayObject object 100 pixels by 60°:
 
@@ -56,7 +56,7 @@ var translatePoint:Point = Point.polar(distance, angle); myDisplayObject.x += tr
 
 myDisplayObject.y += translatePoint.y;
 
-### Other uses of the Point class {#other-uses-of-the-point-class}
+## Other uses of the Point class {#other-uses-of-the-point-class}
 
 You can use Point objects with the following methods and properties:
 

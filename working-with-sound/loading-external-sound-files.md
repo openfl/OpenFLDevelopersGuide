@@ -1,4 +1,4 @@
-## Loading external sound files {#loading-external-sound-files}
+# Loading external sound files {#loading-external-sound-files}
 
 Each instance of the Sound class exists to load and trigger the playback of a specific sound resource. An application can’t reuse a Sound object to load more than one sound. If it wants to load a new sound resource, it should create a new Sound object.
 

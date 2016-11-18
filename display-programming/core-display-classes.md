@@ -1,4 +1,4 @@
-## Core display classes {#core-display-classes}
+# Core display classes {#core-display-classes}
 
 The ActionScript 3.0 flash.display package includes classes for visual objects that can appear in Flash Player or AIR. The following illustration shows the subclass relationships of these core display object classes.
 

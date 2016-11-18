@@ -1,4 +1,4 @@
-## Drawing lines and curves {#drawing-lines-and-curves}
+# Drawing lines and curves {#drawing-lines-and-curves}
 
 All drawing that you do with a Graphics instance is based on basic drawing with lines and curves. Consequently, all ActionScript drawing must be performed using the same series of steps:
 
@@ -37,7 +37,7 @@ _While you are drawing, you can call the moveTo() method at any time to move the
 
 While drawing, if you have specified a fill color, you can close off the fill by calling the endFill() method. If you have not drawn a closed shape (in other words, if at the time you call endFill() the drawing point is not at the starting point of the shape), when you call the endFill() method the Flash runtime automatically closes the shape by drawing a straight line from the current drawing point to the location specified in the most recent moveTo() call. If you have started a fill and not called endFill(), calling beginFill() (or one of the other fill methods) closes the current fill and starts the new one.
 
-### Drawing straight lines {#drawing-straight-lines}
+## Drawing straight lines {#drawing-straight-lines}
 
 When you call the lineTo() method, the Graphics object draws a straight line from the current drawing point to the coordinates you specify as the two parameters in the method call, drawing with the line style you have specified. For example, this line of code puts the drawing point at the point 100, 100 then draws a line to the point 200, 200:
 
@@ -55,7 +55,7 @@ var triangleHeight:uint = 100; var triangle:Shape = new Shape();
 
 this.addChild(triangle);
 
-### Drawing curves {#drawing-curves}
+## Drawing curves {#drawing-curves}
 
 The curveTo() method draws a quadratic Bézier curve. This draws an arc that connects two points (called anchor points) while bending toward a third point (called the control point). The Graphics object uses the current drawing position as the first anchor point. When you call the curveTo() method, you pass four parameters: the x and y coordinates of the control point, followed by the x and y coordinates of the second anchor point. For example, the following code draws a curve starting at point 100, 100 and ending at point 200, 200\. Because the control point is at point 175, 125, this creates a curve that moves to the right and then downward:
 

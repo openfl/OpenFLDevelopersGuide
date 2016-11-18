@@ -1,4 +1,4 @@
-## Virtual keyboards {#virtual-keyboards}
+# Virtual keyboards {#virtual-keyboards}
 
 Flash Player 10.2 and later, AIR 2.6 and later
 
@@ -94,7 +94,7 @@ trace( &quot;tf2 dispatched: &quot; + event.type + &quot; -- &quot; + event.trig
 
 }
 
-### Adding virtual keyboard support for interactive objects {#adding-virtual-keyboard-support-for-interactive-objects}
+## Adding virtual keyboard support for interactive objects {#adding-virtual-keyboard-support-for-interactive-objects}
 
 Flash Player 10.2 and later, AIR 2.6 and later (but not supported on iOS)
 
@@ -308,7 +308,7 @@ customField.bounds = desiredBounds;
 
 _noScale. In other modes, the dimensions of the stage do not change; instead, the content is scaled to compensate._
 
-### Handling application display changes {#handling-application-display-changes}
+## Handling application display changes {#handling-application-display-changes}
 
 AIR 2.6 and later
 

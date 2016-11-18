@@ -1,4 +1,4 @@
-## Capabilities example: Detecting system capabilities {#capabilities-example-detecting-system-capabilities}
+# Capabilities example: Detecting system capabilities {#capabilities-example-detecting-system-capabilities}
 
 Flash Player 9 and later
 
@@ -34,7 +34,7 @@ var dp:Array = CapabilitiesGrabber.getCapabilities(); capabilitiesGrid.dataProvi
 
 The CapabilitiesGrabber.getCapabilities() method returns a sorted array of the Flash runtime and browser capabilities, which then gets set to the dataProvider property of the capabilitiesGrid DataGrid component instance on the Stage.
 
-### CapabilitiesGrabber class overview {#capabilitiesgrabber-class-overview}
+## CapabilitiesGrabber class overview {#capabilitiesgrabber-class-overview}
 
 Flash Player 9 and later
 
@@ -108,7 +108,7 @@ return itemArr;
 
 If the external API is available in the current user environment, the Flash runtime calls the JavaScript JS_getBrowserObjects() method, which loops over the browser’s navigator object and returns a string of URL- encoded values to ActionScript. This string is then converted into a URLVariables object (itemVars) and added to the itemArr array, which is returned to the calling script.
 
-### Communicating with JavaScript {#communicating-with-javascript}
+## Communicating with JavaScript {#communicating-with-javascript}
 
 Flash Player 9 and later
 

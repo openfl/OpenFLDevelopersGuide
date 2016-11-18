@@ -1,4 +1,4 @@
-## Controlling sound volume and panning {#controlling-sound-volume-and-panning}
+# Controlling sound volume and panning {#controlling-sound-volume-and-panning}
 
 An individual SoundChannel object controls both the left and the right stereo channels for a sound. If an mp3 sound is a monaural sound, the left and right stereo channels of the SoundChannel object will contain identical waveforms.
 

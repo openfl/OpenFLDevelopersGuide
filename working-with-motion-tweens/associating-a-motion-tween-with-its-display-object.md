@@ -1,4 +1,4 @@
-## Associating a motion tween with its display objects {#associating-a-motion-tween-with-its-display-objects}
+# Associating a motion tween with its display objects {#associating-a-motion-tween-with-its-display-objects}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 

@@ -1,4 +1,4 @@
-## Playing video in full-screen mode {#playing-video-in-full-screen-mode}
+# Playing video in full-screen mode {#playing-video-in-full-screen-mode}
 
 Flash Player and AIR allow you to create a full-screen application for your video playback, and support scaling video to full screen.
 

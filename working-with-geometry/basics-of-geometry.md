@@ -1,4 +1,4 @@
-## Basics of geometry {#basics-of-geometry}
+# Basics of geometry {#basics-of-geometry}
 
 The flash.geom package contains classes that define geometric objects such as points, rectangles, and transformation matrixes. These classes don’t necessarily provide functionality by themselves; however, they are used to define the properties of objects that are used in other classes.
 

@@ -1,4 +1,4 @@
-## Creating MovieClip objects with ActionScript {#creating-movieclip-objects-with-actionscript}
+# Creating MovieClip objects with ActionScript {#creating-movieclip-objects-with-actionscript}
 
 One way of adding content to the screen in Flash is by dragging assets from the library onto the Stage, but that is not the only workflow. For complex projects, experienced developers commonly prefer to create movie clips programatically. This approach brings several advantages: easier re-use of code, faster compile-time speed, and more sophisticated modifications that are available only to ActionScript.
 

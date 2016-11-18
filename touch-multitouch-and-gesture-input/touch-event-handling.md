@@ -1,4 +1,4 @@
-## Touch event handling {#touch-event-handling}
+# Touch event handling {#touch-event-handling}
 
 Flash Player 10.1 and later, Adobe AIR 2 and later
 
@@ -58,7 +58,7 @@ _“Troubleshooting” on page 593_
 
 _for more information._
 
-### Touch event phases {#touch-event-phases}
+## Touch event phases {#touch-event-phases}
 
 Track touch events through various stages over and outside an InteractiveObject just as you do for mouse events. And, track touch events through the beginning, middle, and end of a touch interaction. The TouchEvent class provides values for handling touchBegin, touchMove, and touchEnd events.
 

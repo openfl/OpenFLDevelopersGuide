@@ -1,4 +1,4 @@
-## Event objects {#event-objects}
+# Event objects {#event-objects}
 
 Event objects serve two main purposes in the new event-handling system. First, event objects represent actual events by storing information about specific events in a set of properties. Second, event objects contain a set of methods that allow you to manipulate event objects and affect the behavior of the event-handling system.
 
@@ -110,7 +110,7 @@ The currentTarget property
 
 The currentTarget property contains a reference to the object that is currently processing the event object. Although it may seem odd not to know which node is currently processing the event object that you are examining, keep in mind that you can add a listener function to any display object in that event object&#039;s event flow, and the listener function can be placed in any location. Moreover, the same listener function can be added to different display objects. As a project increases in size and complexity, the currentTarget property becomes more and more useful.
 
-### Understanding Event class methods {#understanding-event-class-methods}
+## Understanding Event class methods {#understanding-event-class-methods}
 
 There are three categories of Event class methods:
 
@@ -141,7 +141,7 @@ The preventDefault() method will work only if the event’s default behavior can
 
 Canceling the default behavior has no effect on the progress of an event object through the event flow. Use the event flow methods of the Event class to remove an event object from the event flow.
 
-### Subclasses of the Event class {#subclasses-of-the-event-class}
+## Subclasses of the Event class {#subclasses-of-the-event-class}
 
 For many events, the common set of properties defined in the Event class is sufficient. Other events, however, have unique characteristics that cannot be captured by the properties available in the Event class. For these events, ActionScript 3.0 defines several subclasses of the Event class.
 

@@ -152,7 +152,7 @@ var urlRequest:URLRequest = new URLRequest( [&quot;http://www.example.com/test.c
 
 When you define variables within the URLVariables constructor or within the URLVariables.decode() method, make sure that you URL-encode the characters that have a special meaning in a URI string. For example, when you use an ampersand in a parameter name or value, you must encode the ampersand by changing it from &amp; to %26 because the ampersand acts as a delimiter for parameters. The top-level encodeURIComponent() function can be used for this purpose.
 
-### Using the URLLoader class {#using-the-urlloader-class}
+## Using the URLLoader class {#using-the-urlloader-class}
 
 The URLLoader class let you send a request to a server and access the information returned. You can also use the URLLoader class to access files on the local file system in contexts where local file access is permitted (such as the Flash Player local-with-filesystem sandbox and the AIR application sandbox). The URLLoader class downloads data from a URL as text, binary data, or URL-encoded variables. The URLLoader class dispatches events such as complete, httpStatus, ioError, open, progress, and securityError.
 
@@ -180,7 +180,7 @@ request.data = dataXML.toXMLString(); request.method = URLRequestMethod.POST; va
 
 The previous snippet creates an XML document named dataXML that contains the XML packet to be sent to the server. The example sets the URLRequest contentType property to &quot;text/xml&quot; and assigns the XML document to the URLRequest data property. Finally, the example creates a URLLoader object and sends the request to the remote script by using the load() method.
 
-### Using the URLStream class {#using-the-urlstream-class}
+## Using the URLStream class {#using-the-urlstream-class}
 
 The URLStream class provides access to the downloading data as the data arrives. The URLStream class also lets you close a stream before it finishes downloading. The downloaded data is available as raw binary data.
 
@@ -190,7 +190,7 @@ The httpResponseStatus event (AIR)
 
 In Adobe AIR, the URLStream class dispatches an httpResponseStatus event in addition to the httpStatus event. The httpResponseStatus event is delivered before any response data. The httpResponseStatus event (represented by the HTTPStatusEvent class) includes a responseURL property, which is the URL that the response was returned from, and a responseHeaders property, which is an array of URLRequestHeader objects representing the response headers that the response returned.
 
-### Loading data from external documents {#loading-data-from-external-documents}
+## Loading data from external documents {#loading-data-from-external-documents}
 
 When you build dynamic applications, it can be useful to load data from external files or from server-side scripts. This lets you build dynamic applications without having to edit or recompile your application. For example, if you build a “tip of the day” application, you can write a server-side script that retrieves a random tip from a database and saves it to a text file once a day. Then your application can load the contents of a static text file instead of querying the database each time.
 
@@ -354,7 +354,7 @@ var dataXML:XML = XML(event.target.data); trace(dataXML.toXMLString());
 
 }
 
-### Communicating with external scripts {#communicating-with-external-scripts}
+## Communicating with external scripts {#communicating-with-external-scripts}
 
 In addition to loading external data files, you can also use the URLVariables class to send variables to a server-side script and process the server’s response. This is useful, for example, if you are programming a game and want to send the user’s score to a server to calculate whether it should be added to the high scores list, or even send a user’s login information to a server for validation. A server-side script can process the user name and password, validate it against a database, and return confirmation of whether the user-supplied credentials are valid.
 

@@ -57,7 +57,7 @@ About the SharedObject class
 
 Using the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) class, you can create and delete shared objects, as well as detect the current size of a SharedObject object that you are using.
 
-### Creating a shared object {#creating-a-shared-object}
+## Creating a shared object {#creating-a-shared-object}
 
 To create a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) object, use the SharedObject.getLocal() method, which has the following syntax:
 
@@ -378,7 +378,7 @@ public var mySO:SharedObject = SharedObject.getLocal(&quot;preferences&quot;); p
 
 This creates a preferences.sol file and a history.sol file in the Flex application’s local directory.
 
-### Creating a secure SharedObject {#creating-a-secure-sharedobject}
+## Creating a secure SharedObject {#creating-a-secure-sharedobject}
 
 When you create either a local or remote SharedObject using getLocal() or getRemote(), there is an optional parameter named secure that determines whether access to this shared object is restricted to SWF files that are delivered over an HTTPS connection. If this parameter is set to true and your SWF file is delivered over HTTPS, Flash Player creates a new secure shared object or gets a reference to an existing secure shared object. This secure shared object can be read from or written to only by SWF files delivered over HTTPS that call SharedObject.getLocal() with the secure parameter set to true. If this parameter is set to false and your SWF file is delivered over HTTPS, Flash Player creates a new shared object or gets a reference to an existing shared object.
 
@@ -402,7 +402,7 @@ trace(&quot;Unable to create SharedObject.&quot;);
 
 Regardless of the value of this parameter, the created shared objects count toward the total amount of disk space allowed for a domain.
 
-### Displaying contents of a shared object {#displaying-contents-of-a-shared-object}
+## Displaying contents of a shared object {#displaying-contents-of-a-shared-object}
 
 Values are stored in shared objects within the data property. You can loop over each value within a shared object instance by using a for..in loop, as the following example shows:
 
@@ -418,7 +418,7 @@ trace(i + &quot;:\t&quot; + so.data[i]);
 
 }
 
-### Destroying shared objects {#destroying-shared-objects}
+## Destroying shared objects {#destroying-shared-objects}
 
 To destroy a SharedObject on the client, use the SharedObject.clear() method. This does not destroy directories in the default path for the application’s shared objects.
 
@@ -428,7 +428,7 @@ public function destroySharedObject():void { mySO.clear();
 
 }
 
-### SharedObject example {#sharedobject-example}
+## SharedObject example {#sharedobject-example}
 
 The following example shows that you can store simple objects, such as a Date object, in a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) object without having to manually serialize and deserialize those objects.
 

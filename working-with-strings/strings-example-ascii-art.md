@@ -1,4 +1,4 @@
-## Strings example: ASCII art {#strings-example-ascii-art}
+# Strings example: ASCII art {#strings-example-ascii-art}
 
 This ASCII Art example shows a number of features of working with the String class in ActionScript 3.0, including the following:
 
@@ -71,7 +71,7 @@ imageInfo.whiteThreshold = parseInt(imageProperties[2], 16); imageInfo.blackThre
 
 The entire contents of the text file are contained in a single String instance, the _imageInfoLoader.data property. Using the split() method with the newline character (&quot;\n&quot;) as a parameter, the String instance is divided into an Array (lines) whose elements are the individual lines of the text file. Next, the code uses a loop to work with each of the lines (except the first, because it contains only headers rather than actual content). Inside the loop, the split() method is used once again to divide the contents of the single line into a set of values (the Array object named imageProperties). The parameter used with the split() method in this case is the tab (&quot;\t&quot;) character, because the values in each line are delineated by tab characters.
 
-### Using String methods to normalize image titles {#using-string-methods-to-normalize-image-titles}
+## Using String methods to normalize image titles {#using-string-methods-to-normalize-image-titles}
 
 One of the design decisions for this application is that all the image titles are displayed using a standard format, with the first letter of each word capitalized (except for a few words that are commonly not capitalized in English titles). Rather than assume that the text file contains properly formatted titles, the application formats the titles while they’re being extracted from the text file.
 
@@ -151,7 +151,7 @@ In English, the initial character of each word in a title is _not_ capitalized i
 3.  The remaining characters of the original word are extracted using substring(1), which extracts a substring starting at index 1 (the second letter) through the end of the string (indicated by leaving off the second parameter of the substring() method).
 4.  The final word is created by combining the newly capitalized first letter with the remaining letters using string concatenation: firstLetter + otherLetters.
 
-### Generating the ASCII art text {#generating-the-ascii-art-text}
+## Generating the ASCII art text {#generating-the-ascii-art-text}
 
 The BitmapToAsciiConverter class provides the functionality of converting a bitmap image to its ASCII text representation. This process is performed by the parseBitmapData() method, which is partially shown here:
 

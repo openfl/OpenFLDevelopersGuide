@@ -1,4 +1,4 @@
-## Copying motion tween scripts in Flash {#copying-motion-tween-scripts-in-flash}
+# Copying motion tween scripts in Flash {#copying-motion-tween-scripts-in-flash}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 

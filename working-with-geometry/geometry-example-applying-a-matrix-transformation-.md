@@ -1,4 +1,4 @@
-## Geometry example: Applying a matrix transformation to a display object {#geometry-example-applying-a-matrix-transformation-to-a-display-object}
+# Geometry example: Applying a matrix transformation to a display object {#geometry-example-applying-a-matrix-transformation-to-a-display-object}
 
 The DisplayObjectTransformer sample application shows a number of features of using the Matrix class to transform a display object, including the following:
 
@@ -125,7 +125,7 @@ angle = Math.PI * 2 * angle / 100;
 
 sourceMatrix.rotate(angle); return sourceMatrix;
 
-### Calling the MatrixTransformer.transform() method from the application {#calling-the-matrixtransformer-transform-method-from-the-application}
+## Calling the MatrixTransformer.transform() method from the application {#calling-the-matrixtransformer-transform-method-from-the-application}
 
 The application contains a user interface for getting the transformation parameters from the user. It then passes these values, along with the matrix property of the transform property of the display object, to the Matrix.transform() method, as follows:
 

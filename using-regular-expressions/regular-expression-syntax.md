@@ -1,4 +1,4 @@
-## Regular expression syntax {#regular-expression-syntax}
+# Regular expression syntax {#regular-expression-syntax}
 
 This section describes all of the elements of ActionScript regular expression syntax. As you’ll see, regular expressions can have many complexities and nuances. You can find detailed resources on regular expressions on the web and in bookstores. Keep in mind that different programming environments implement regular expressions in different ways. ActionScript 3.0 implements regular expressions as defined in the ECMAScript edition 3 language specification (ECMA-262).
 
@@ -74,7 +74,7 @@ The sections that follow describe syntax for defining regular expression pattern
 
 .
 
-### Characters, metacharacters, and metasequences {#characters-metacharacters-and-metasequences}
+## Characters, metacharacters, and metasequences {#characters-metacharacters-and-metasequences}
 
 The simplest regular expression is one that matches a sequence of characters, as in the following example:
 
@@ -164,7 +164,7 @@ Metasequences are sequences of characters that have special meaning in a regular
 | \W | Matches any character other than a word character. |
 | \\x**_nn_** | Matches the character with the specified ASCII value, as defined by the hexadecimal number _nn_. |
 
-### Character classes {#character-classes}
+## Character classes {#character-classes}
 
 You use character classes to specify a list of characters to match one position in the regular expression. You define character classes with square brackets ( [ and ] ). For example, the following regular expression defines a character class that matches bag, beg, big, bog, or bug:
 
@@ -220,7 +220,7 @@ You must type the caret (^) character at the _beginning_ of a character class to
 
 /[!.,#+*%$&amp;^]/
 
-### Quantifiers {#quantifiers}
+## Quantifiers {#quantifiers}
 
 You use quantifiers to specify repetitions of characters or sequences in patterns, as follows:
 
@@ -282,7 +282,7 @@ For more information, see
 
 .
 
-### Alternation {#alternation}
+## Alternation {#alternation}
 
 Use the | (pipe) character in a regular expression to have the regular expression engine consider alternatives for a match. For example, the following regular expression matches any one of the words cat, dog, pig, rat:
 
@@ -312,7 +312,7 @@ For more information, see
 
 .
 
-### Groups {#groups}
+## Groups {#groups}
 
 You can specify a group in a regular expression by using parentheses, as follows:
 
@@ -472,7 +472,7 @@ trace(result.dom); // example
 
 **_Note:_ **_Named groups are not part of the ECMAScript language specification. They are an added feature in ActionScript 3.0._
 
-### Flags and properties {#flags-and-properties}
+## Flags and properties {#flags-and-properties}
 
 The following table lists the five flags that you can set for regular expressions. Each flag can be accessed as a property of the regular expression object.
 

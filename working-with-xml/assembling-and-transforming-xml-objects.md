@@ -1,4 +1,4 @@
-## Assembling and transforming XML objects {#assembling-and-transforming-xml-objects}
+# Assembling and transforming XML objects {#assembling-and-transforming-xml-objects}
 
 Use the prependChild() method or the appendChild() method to add a property to the beginning or end of an XML object’s list of properties, as the following example shows:
 

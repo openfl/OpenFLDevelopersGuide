@@ -1,4 +1,4 @@
-## Creating gradient lines and fills {#creating-gradient-lines-and-fills}
+# Creating gradient lines and fills {#creating-gradient-lines-and-fills}
 
 The graphics object can also draw strokes and fills with gradients rather than solid colors. A gradient stroke is created with the lineGradientStyle() method and a gradient fill is created with the beginGradientFill() method.
 

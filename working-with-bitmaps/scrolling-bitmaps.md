@@ -1,4 +1,4 @@
-## Scrolling bitmaps {#scrolling-bitmaps}
+# Scrolling bitmaps {#scrolling-bitmaps}
 
 Imagine you have created a street mapping application where each time the user moves the map you are required to update the view (even if the map has been moved by just a few pixels).
 

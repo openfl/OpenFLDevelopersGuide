@@ -1,4 +1,4 @@
-## IPv6 addresses {#ipv6-addresses}
+# IPv6 addresses {#ipv6-addresses}
 
 Flash Player 9.0.115.0 and later support IPv6 (Internet Protocol version 6). IPv6 is a version of Internet Protocol that supports 128-bit addresses (an improvement on the earlier IPv4 protocol that supports 32-bit addresses). You might need to activate IPv6 on your networking interfaces. For more information, see the Help for the operating system hosting the data.
 

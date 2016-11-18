@@ -1,4 +1,4 @@
-## Comparing strings {#comparing-strings}
+# Comparing strings {#comparing-strings}
 
 You can use the following operators to compare strings: &lt;, &lt;=, !=, ==, =&gt;, and &gt;. These operators can be used with conditional statements, such as if and while, as the following example shows:
 

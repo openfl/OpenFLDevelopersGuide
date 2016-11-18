@@ -1,4 +1,4 @@
-## Using XML namespaces {#using-xml-namespaces}
+# Using XML namespaces {#using-xml-namespaces}
 
 Namespaces in an XML object (or document) identify the type of data that the object contains. For example, in sending and delivering XML data to a web service that uses the SOAP messaging protocol, you declare the namespace in the opening tag of the XML:
 

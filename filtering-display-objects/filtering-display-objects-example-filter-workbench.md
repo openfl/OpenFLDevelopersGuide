@@ -1,4 +1,4 @@
-## Filtering display objects example: Filter Workbench {#filtering-display-objects-example-filter-workbench}
+# Filtering display objects example: Filter Workbench {#filtering-display-objects-example-filter-workbench}
 
 The Filter Workbench provides a user interface to apply different filters to images and other visual content and see the resulting code that can be used to generate the same effect in ActionScript. In addition to providing a tool for experimenting with filters, this application demonstrates the following techniques:
 
@@ -63,7 +63,7 @@ There are a few features and limitations in the application’s filter panels:
 *   The convolution filter, which is only available using ActionScript, includes a set of commonly used convolution matrix values, or custom values can be specified. However, while the ConvolutionFilter class accepts a matrix of any size, the Filter Workbench application uses a fixed 3 x 3 matrix, the most commonly used filter size.
 *   The displacement map filter and shader filter, which are only available in ActionScript, are not available in the Filter Workbench application.
 
-### Creating filter instances {#creating-filter-instances}
+## Creating filter instances {#creating-filter-instances}
 
 The Filter Workbench application includes a set of classes, one for each of the available filters, which are used by the individual panels to create the filters. When a user selects a filter, the ActionScript code associated with the filter panel creates an instance of the appropriate filter factory class. (These classes are known as _factory classes_ because their purpose is to create instances of other objects, much like a real-world factory creates individual products.)
 
@@ -131,7 +131,7 @@ return _filter;
 
 In the ConvolutionFactory class’s implementation of the getFilter() method, it returns a ConvolutionFilter instance, although any object that calls getFilter() doesn’t necessarily know that—according to the definition of the getFilter() method that ConvolutionFactory follows, it must return any BitmapFilter instance, which could be an instance of any of the ActionScript filter classes.
 
-### Applying filters to display objects {#applying-filters-to-display-objects}
+## Applying filters to display objects {#applying-filters-to-display-objects}
 
 As explained previously, the Filter Workbench application uses an instance of the FilterWorkbenchController class (hereafter referred to as the “controller instance”), which performs the actual task of applying filters to the selected visual object. Before the controller instance can apply a filter, it first needs to know what image or visual content the filter should be applied to. When the user selects an image, the application calls the setFilterTarget() method in the FilterWorkbenchController class, passing in one of the constants defined in the ImageType class:
 

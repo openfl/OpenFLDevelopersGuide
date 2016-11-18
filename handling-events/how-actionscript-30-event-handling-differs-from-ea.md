@@ -1,4 +1,4 @@
-## How ActionScript 3.0 event handling differs from earlier versions {#how-actionscript-3-0-event-handling-differs-from-earlier-versions}
+# How ActionScript 3.0 event handling differs from earlier versions {#how-actionscript-3-0-event-handling-differs-from-earlier-versions}
 
 The most noticeable difference between event handling in ActionScript 3.0 and event handling in previous versions of ActionScript is that in ActionScript 3.0 there is only one system for event handling, whereas in previous versions of ActionScript there are several different event-handling systems. This section begins with an overview of how event handling worked in previous versions of ActionScript, and then discusses how event handling has changed for ActionScript 3.0.
 
@@ -20,7 +20,7 @@ Unfortunately, the syntax used by the various event models overlap in various wa
 
 Another complexity introduced by the different event-handling models was that the scope of the event handler function varied widely depending on the mechanism used. In other words, the meaning of the this keyword was not consistent among the event-handling systems.
 
-### Event handling in ActionScript 3.0 {#event-handling-in-actionscript-3-0}
+## Event handling in ActionScript 3.0 {#event-handling-in-actionscript-3-0}
 
 ActionScript 3.0 introduces a single event-handling model that replaces the many different event-handling mechanisms that existed in previous versions of the language. The new event model is based on the Document Object Model (DOM) Level 3 Events Specification. Although the SWF file format does not adhere specifically to the Document Object Model standard, there are sufficient similarities between the display list and the structure of the DOM to make implementation of the DOM event model possible. An object on the display list is analogous to a node in the DOM hierarchical structure, and the terms _display list object_ and _node_ are used interchangeably throughout this discussion.
 

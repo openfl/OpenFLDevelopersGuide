@@ -1,4 +1,4 @@
-## Methods for using regular expressions with strings {#methods-for-using-regular-expressions-with-strings}
+# Methods for using regular expressions with strings {#methods-for-using-regular-expressions-with-strings}
 
 The RegExp class includes two methods: exec() and test().
 
@@ -12,7 +12,7 @@ var pattern:RegExp = /Class-\w/; var str = &quot;Class-A&quot;;
 
 trace(pattern.test(str)); // output: true
 
-### The exec() method {#the-exec-method}
+## The exec() method {#the-exec-method}
 
 The exec() method of the RegExp class checks the supplied string for a match of the regular expression and returns an array with the following:
 
@@ -49,7 +49,7 @@ trace(result.index, &quot;\t&quot;, pattern.lastIndex, &quot;\t&quot;, result); 
 
 // 27 35 seashore
 
-### String methods that use RegExp parameters {#string-methods-that-use-regexp-parameters}
+## String methods that use RegExp parameters {#string-methods-that-use-regexp-parameters}
 
 The following methods of the String class take regular expressions as parameters: match(), replace(), search(), and split(). For more information on these methods, see
 

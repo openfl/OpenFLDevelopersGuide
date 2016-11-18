@@ -1,4 +1,4 @@
-## Accessing raw sound data {#accessing-raw-sound-data}
+# Accessing raw sound data {#accessing-raw-sound-data}
 
 The SoundMixer.computeSpectrum() method lets an application read the raw sound data for the waveform that is currently being played. If more than one SoundChannel object is currently playing the SoundMixer.computeSpectrum() method shows the combined sound data of every SoundChannel object mixed together.
 

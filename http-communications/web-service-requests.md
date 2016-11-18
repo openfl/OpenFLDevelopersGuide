@@ -1,4 +1,4 @@
-## Web service requests {#web-service-requests}
+# Web service requests {#web-service-requests}
 
 There are a variety of HTTP-based web services. The main types include:
 
@@ -152,7 +152,7 @@ return url;
 
 &lt;/html&gt;
 
-### XML-RPC web service requests {#xml-rpc-web-service-requests}
+## XML-RPC web service requests {#xml-rpc-web-service-requests}
 
 An XML-RPC web service takes its call parameters as an XML document rather than as a set of URL variables. To conduct a transaction with an XML-RPC web service, create a properly formatted XML message and send it to the web service using the HTTP POST method. In addition, you should set the Content-Type header for the request so that the server treats the request data as XML.
 
@@ -402,7 +402,7 @@ return result;
 
 &lt;/html&gt;
 
-### SOAP web service requests {#soap-web-service-requests}
+## SOAP web service requests {#soap-web-service-requests}
 
 SOAP builds on the general XML-RPC web service concept and provides a richer, albeit more complex, means for transferring typed data. SOAP web services typically provide a Web Service Description Language file (WSDL) that specifies the web service calls, data types, and service URL. While ActionScript 3 does not provide direct support for SOAP, you can construct a SOAP XML message “by hand,” post it to the server, and then parse the results. However, for anything except the simplest SOAP web service, you can probably save a significant amount of development time using an existing SOAP library.
 

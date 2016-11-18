@@ -1,4 +1,4 @@
-## Controlling time intervals {#controlling-time-intervals}
+# Controlling time intervals {#controlling-time-intervals}
 
 When you develop applications using Adobe Flash CS4 Professional, you have access to the timeline, which provides a steady, frame-by-frame progression through your application. In pure ActionScript projects, however, you must rely on other timing mechanisms.
 
@@ -12,7 +12,7 @@ Loop statements generally execute as fast as the local machine allows, which mea
 
 The ActionScript 3.0 Timer class provides a powerful solution. Using the ActionScript 3.0 event model, the Timer class dispatches timer events whenever a specified time interval is reached.
 
-### The Timer class {#the-timer-class}
+## The Timer class {#the-timer-class}
 
 The preferred way to handle timing functions in ActionScript 3.0 is to use the Timer class (flash.utils.Timer), which can be used to dispatch events whenever an interval is reached.
 
@@ -92,7 +92,7 @@ tick 4
 
 tick 5 Time&#039;s Up!
 
-### Timing functions in the flash.utils package {#timing-functions-in-the-flash-utils-package}
+## Timing functions in the flash.utils package {#timing-functions-in-the-flash-utils-package}
 
 ActionScript 3.0 contains a number of timing functions similar to those that were available in ActionScript 2.0\. These functions are provided as package-level functions in the flash.utils package, and they operate just as they did in ActionScript 2.0.
 

@@ -1,4 +1,4 @@
-## Associative arrays {#associative-arrays}
+# Associative arrays {#associative-arrays}
 
 An associative array, sometimes called a _hash_ or _map_, uses _keys_ instead of a numeric index to organize stored values. Each key in an associative array is a unique string that is used to access a stored value. An associative array is an instance of the Object class, which means that each key corresponds to a property name. Associative arrays are unordered collections of key and value pairs. Your code should not expect the keys of an associative array to be in a specific order.
 
@@ -36,7 +36,7 @@ var monitorInfo:Array = new Array(); monitorInfo[&quot;type&quot;] = &quot;Flat 
 
 There is no advantage in using the Array constructor to create an associative array. You cannot use the Array.length property or any of the methods of the Array class with associative arrays, even if you use the Array constructor or the Array data type. The use of the Array constructor is best left for the creation of indexed arrays.
 
-### Associative arrays with object keys (Dictionaries) {#associative-arrays-with-object-keys-dictionaries}
+## Associative arrays with object keys (Dictionaries) {#associative-arrays-with-object-keys-dictionaries}
 
 You can use the Dictionary class to create an associative array that uses objects for keys rather than strings. Such arrays are sometimes called dictionaries, hashes, or maps. For example, consider an application that determines the location of a Sprite object based on its association with a specific container. You can use a Dictionary object to map each Sprite object to a container.
 

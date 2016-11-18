@@ -1,4 +1,4 @@
-## Using Rectangle objects {#using-rectangle-objects}
+# Using Rectangle objects {#using-rectangle-objects}
 
 A [Rectangle](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/geom/Rectangle.html) object defines a rectangular area. A Rectangle object has a position, defined by the _x_ and _y_ coordinates of its upper-left corner, a width property, and a height property. You can define these properties for a new Rectangle object by calling the Rectangle() constructor function, as follows:
 
@@ -96,7 +96,7 @@ The inflatePt() method works similarly, except that it takes a Point object as i
 
 values.
 
-### Finding unions and intersections of Rectangle objects {#finding-unions-and-intersections-of-rectangle-objects}
+## Finding unions and intersections of Rectangle objects {#finding-unions-and-intersections-of-rectangle-objects}
 
 You use the union() method to find the rectangular region formed by the boundaries of two rectangles:
 
@@ -126,7 +126,7 @@ var target2:Rectangle = new Rectangle(0, 0, 300, 300); trace(circleBounds.inters
 
 Similarly, you can use the intersects() method to find out whether the bounding rectangles of two display objects overlap. Use the getRect() method of the DisplayObject class to include any additional space that the strokes of a display object add to a bounding region.
 
-### Other uses of Rectangle objects {#other-uses-of-rectangle-objects}
+## Other uses of Rectangle objects {#other-uses-of-rectangle-objects}
 
 Rectangle objects are used in the following methods and properties:
 

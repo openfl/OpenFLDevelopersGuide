@@ -1,4 +1,4 @@
-## HTML copy and paste in AIR {#html-copy-and-paste-in-air}
+# HTML copy and paste in AIR {#html-copy-and-paste-in-air}
 
 Adobe AIR 1.0 and later
 
@@ -14,7 +14,7 @@ By default, AIR copies selected items in response to the copy command, which can
 
 To prevent the default behavior, your event handler can call the preventDefault() method of the dispatched event object.
 
-### Using the clipboardData property of the event object {#using-the-clipboarddata-property-of-the-event-object}
+## Using the clipboardData property of the event object {#using-the-clipboarddata-property-of-the-event-object}
 
 Adobe AIR 1.0 and later
 

@@ -1,4 +1,4 @@
-## Working with display objects {#working-with-display-objects}
+# Working with display objects {#working-with-display-objects}
 
 Now that you understand the basic concepts of the Stage, display objects, display object containers, and the display list, this section provides you with some more specific information about working with display objects in ActionScript 3.0.
 
@@ -8,7 +8,7 @@ All display objects are subclasses of the DisplayObject class, and as such they 
 
 You cannot create a DisplayObject instance using the DisplayObject class constructor. You must create another type of object (an object that is a subclass of the DisplayObject class), such as a Sprite, to instantiate an object with the new operator. Also, if you want to create a custom display object class, you must create a subclass of one of the display object subclasses that has a usable constructor function (such as the Shape class or the Sprite class). For more information, see the [DisplayObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html) class description in the [ActionScript 3.0 Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html).
 
-### Adding display objects to the display list {#adding-display-objects-to-the-display-list}
+## Adding display objects to the display list {#adding-display-objects-to-the-display-list}
 
 When you instantiate a display object, it will not appear on-screen (on the Stage) until you add the display object instance to a display object container that is on the display list. For example, in the following code, the myText TextField object would not be visible if you omitted the last line of code. In the last line of code, the this keyword must refer to a display object container that is already added to the display list.
 
@@ -22,7 +22,7 @@ Any display objects that you create _without_ using ActionScript—for example, 
 
 button1.width = 200;
 
-### Working with display object containers {#working-with-display-object-containers}
+## Working with display object containers {#working-with-display-object-containers}
 
 If a DisplayObjectContainer object is deleted from the display list, or if it is moved or transformed in some other way, each display object in the DisplayObjectContainer is also deleted, moved, or transformed.
 
@@ -106,7 +106,7 @@ In addition to the methods described above, the DisplayObjectContainer class def
 
 Recall that a display object that is off the display list—one that is not included in a display object container that is a child of the Stage—is known as an _off-list_ display object.
 
-### Traversing the display list {#traversing-the-display-list}
+## Traversing the display list {#traversing-the-display-list}
 
 As you’ve seen, the display list is a tree structure. At the top of the tree is the Stage, which can contain multiple display objects. Those display objects that are themselves display object containers can contain other display objects, or display object containers.
 
@@ -162,7 +162,7 @@ Adobe Flex
 
 If you use Flex, you should know that Flex defines many component display object classes, and these classes override the display list access methods of the DisplayObjectContainer class. For example, the Container class of the mx.core package overrides the addChild() method and other methods of the DisplayObjectContainer class (which the Container class extends). In the case of the addChild() method, the class overrides the method in such a way that you cannot add all types of display objects to a Container instance in Flex. The overridden method, in this case, requires that the child object that you are adding be a type of mx.core.UIComponent object.
 
-### Setting Stage properties {#setting-stage-properties}
+## Setting Stage properties {#setting-stage-properties}
 
 The Stage class overrides most properties and methods of the DisplayObject class. If you call one of these overridden properties or methods, Flash Player and AIR throw an exception. For example, the Stage object does not have x or y properties, since its position is fixed as the main container for the application. The x and y properties refer to the position of a display object relative to its container, and since the Stage is not contained in another display object container, these properties do not apply.
 
@@ -437,7 +437,7 @@ Using direct mode requires Microsoft DirectX 9 with VRAM 128 MB on Windows and O
 
 You can activate direct and gpu acceleration modes on a per-SWF basis through the Flash Publish Settings dialog box, using the Hardware Acceleration menu on the Flash tab. If you choose None, the window mode reverts to default, transparent, or opaque, as specified by the Window Mode setting on the HTML tab.
 
-### Handling events for display objects {#handling-events-for-display-objects}
+## Handling events for display objects {#handling-events-for-display-objects}
 
 The DisplayObject class inherits from the EventDispatcher class. This means that every display object can participate fully in the event model (described in
 
@@ -473,7 +473,7 @@ One important issue to keep in mind when working with display object events is t
 
 .
 
-### Choosing a DisplayObject subclass {#choosing-a-displayobject-subclass}
+## Choosing a DisplayObject subclass {#choosing-a-displayobject-subclass}
 
 With several options to choose from, one of the important decisions you’ll make when you’re working with display objects is which display object to use for what purpose. Here are some guidelines to help you decide. These same suggestions apply whether you need an instance of a class or you’re choosing a base class for a class you’re creating:
 

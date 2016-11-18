@@ -1,4 +1,4 @@
-## Taking advantage of mipmapping {#taking-advantage-of-mipmapping}
+# Taking advantage of mipmapping {#taking-advantage-of-mipmapping}
 
 _MIP maps_ (also known as _mipmaps_), are bitmaps grouped together and associated with a texture to increase runtime rendering quality and performance. Each bitmap image in the MIP map is a version of the main bitmap image, but at a reduced level of detail from the main image.
 

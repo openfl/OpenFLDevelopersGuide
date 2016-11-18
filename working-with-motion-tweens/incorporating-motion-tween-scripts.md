@@ -1,4 +1,4 @@
-## Incorporating motion tween scripts {#incorporating-motion-tween-scripts}
+# Incorporating motion tween scripts {#incorporating-motion-tween-scripts}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
@@ -18,7 +18,7 @@ Then the script creates the Motion object:
 
 motion_Symbol1_2 = new Motion();
 
-### Motion object names {#motion-object-names}
+## Motion object names {#motion-object-names}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 

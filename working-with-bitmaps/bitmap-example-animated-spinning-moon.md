@@ -1,4 +1,4 @@
-## Bitmap example: Animated spinning moon {#bitmap-example-animated-spinning-moon}
+# Bitmap example: Animated spinning moon {#bitmap-example-animated-spinning-moon}
 
 The Animated spinning moon example demonstrates techniques for working with Bitmap objects and bitmap image data (BitmapData objects). The example creates an animation of a spinning, spherical moon using a flat image of the moon’s surface as the raw image data. The following techniques are demonstrated:
 
@@ -38,7 +38,7 @@ textureMap = event.target.content.bitmapData;
 
 Notice that the event object parameter is named event, and it’s an instance of the Event class. Every instance of the Event class has a target property, which refers to the object triggering the event (in this case, the LoaderInfo instance on which the addEventListener() method was called, as described previously). The LoaderInfo object, in turn, has a content property that (once the loading process is complete) contains the Bitmap instance with the loaded bitmap image. If you want to display the image directly on the screen, you can attach this Bitmap instance (event.target.content) to a display object container. (You could also attach the Loader object to a display object container). However, in this sample, the loaded content is used as a source of raw image data rather than being displayed on the screen. Consequently, the first line of the imageLoadComplete() method reads the bitmapData property of the loaded Bitmap instance (event.target.content.bitmapData) and stores it in the instance variable named textureMap, which is used as a source of the image data to create the animation of the rotating moon. This is described next.
 
-### Creating animation by copying pixels {#creating-animation-by-copying-pixels}
+## Creating animation by copying pixels {#creating-animation-by-copying-pixels}
 
 A basic definition of animation is the illusion of motion, or change, created by changing an image over time. In this sample, the goal is to create the illusion of a spherical moon rotating around its vertical axis. However, for the purposes of the animation, you can ignore the spherical distortion aspect of the sample. Consider the actual image that’s loaded and used as the source of the moon image data:
 
@@ -134,7 +134,7 @@ new Rectangle(sourceX, 0, sphere.width, sphere.height), new Point(0, 0));
 
 Remember that this code is called repeatedly, every 15 milliseconds. As the source rectangle’s location is continuously shifted, and the pixels are copied onto sphere, the appearance on the screen is that the moon photo image represented by sphere continuously slides. In other words, the moon appears to rotate continuously.
 
-### Creating the spherical appearance {#creating-the-spherical-appearance}
+## Creating the spherical appearance {#creating-the-spherical-appearance}
 
 The moon, of course, is a sphere and not a rectangle. Consequently, the sample needs to take the rectangular moon surface photo, as it continuously animates, and convert it into a sphere. This involves two separate steps: a mask is used to hide all the content except for a circular region of the moon surface photo, and a displacement map filter is used to distort the appearance of the moon photo to make it look three-dimensional.
 
@@ -180,7 +180,7 @@ page 267
 
 .
 
-### Creating a bitmap image by setting pixel values {#creating-a-bitmap-image-by-setting-pixel-values}
+## Creating a bitmap image by setting pixel values {#creating-a-bitmap-image-by-setting-pixel-values}
 
 One important aspect of a displacement map filter is that it actually involves two images. One image, the source image, is the image that is actually altered by the filter. In this sample, the source image is the Bitmap instance named sphere. The other image used by the filter is known as the map image. The map image is not actually displayed on the screen. Instead, the color of each of its pixels is used as an input to the displacement function—the color of the pixel at a certain x, y coordinate in the map image determines how much displacement (physical shift in position) is applied to the pixel at that x, y coordinate in the source image.
 

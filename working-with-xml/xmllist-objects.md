@@ -1,4 +1,4 @@
-## XMLList objects {#xmllist-objects}
+# XMLList objects {#xmllist-objects}
 
 An XMLList instance represents an arbitrary collection of XML objects. It can contain full XML documents, XML fragments, or the results of an XML query.
 

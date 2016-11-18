@@ -1,4 +1,4 @@
-## Basics of arrays {#basics-of-arrays}
+# Basics of arrays {#basics-of-arrays}
 
 Often in programming you’ll need to work with a set of items rather than a single object. For example, in a music player application, you might want to have a list of songs waiting to be played. You wouldn’t want to have to create a separate variable for each song on that list. It would be preferable to have all the Song objects together in a bundle, and be able to work with them as a group.
 

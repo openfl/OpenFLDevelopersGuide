@@ -1,4 +1,4 @@
-## Display object example: SpriteArranger {#display-object-example-spritearranger}
+# Display object example: SpriteArranger {#display-object-example-spritearranger}
 
 The SpriteArranger sample application builds upon the Geometric Shapes sample application described separately in
 
@@ -126,7 +126,7 @@ The GeometricSprite class also provides the following methods:
 
     objects” on page 207
 
-### Adding display objects to the canvas {#adding-display-objects-to-the-canvas}
+## Adding display objects to the canvas {#adding-display-objects-to-the-canvas}
 
 When the user clicks the Add Shape button, the application calls the addShape() method of the DrawingCanvas class. It instantiates a new GeometricSprite by calling the appropriate constructor function of one of the GeometricSprite subclasses, as the following example shows:
 
@@ -198,7 +198,7 @@ desc += i + &quot;: &quot; + child + &#039;\n&#039;;
 
 The resulting string is used to set the text property of the outputTxt text field.
 
-### Clicking and dragging display objects {#clicking-and-dragging-display-objects}
+## Clicking and dragging display objects {#clicking-and-dragging-display-objects}
 
 When the user clicks on a GeometricSprite instance, the application calls the onMouseDown() event handler. As the following shows, this event handler is set to listen for mouse down events in the constructor function of the GeometricSprite class:
 
@@ -238,7 +238,7 @@ The onMouseUp() method calls the onMouseUp() method of the GeometricSprite objec
 
 stopDrag() method of the GeometricSprite object.
 
-### Rearranging display object layering {#rearranging-display-object-layering}
+## Rearranging display object layering {#rearranging-display-object-layering}
 
 The user interface for the application includes buttons labeled Move Back, Move Down, Move Up, and Move to Front. When the user clicks one of these buttons, the application calls the corresponding method of the DrawingCanvas class: moveToBack(), moveDown(), moveUp(), or moveToFront(). For example, the moveToBack() method includes the following code:
 

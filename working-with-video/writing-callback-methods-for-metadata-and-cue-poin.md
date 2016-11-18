@@ -1,4 +1,4 @@
-## Writing callback methods for metadata and cue points {#writing-callback-methods-for-metadata-and-cue-points}
+# Writing callback methods for metadata and cue points {#writing-callback-methods-for-metadata-and-cue-points}
 
 You can trigger actions in your application when specific metadata is received by the player or when specific cue points are reached. When these events occur, you must use specific callback methods as event handlers. The NetStream class specifies the following metadata events that can occur during playback: onCuePoint (FLV files only), onImageData, onMetaData, onPlayStatus, onTextData, and onXMPData.
 
@@ -52,7 +52,7 @@ trace(&quot;metadata&quot;);
 
 The previous code listens for the onMetaData callback method and calls the metaDataHandler() method, which traces a string. If the Flash runtime encountered a cue point, no errors would be generated even though no onCuePoint callback method is defined.
 
-### Create a custom class and define methods to handle the callback methods {#create-a-custom-class-and-define-methods-to-handle-the-callback-methods}
+## Create a custom class and define methods to handle the callback methods {#create-a-custom-class-and-define-methods-to-handle-the-callback-methods}
 
 The following code sets the NetStream object’s client property to a custom class, CustomClient, which defines handlers for the callback methods:
 
@@ -86,7 +86,7 @@ trace(&quot;metadata&quot;);
 
 The CustomClient class defines a handler for the onMetaData callback handler. If a cue point was encountered and the onCuePoint callback handler was called, an asyncError event (AsyncErrorEvent.ASYNC_ERROR) would be dispatched saying “flash.net.NetStream was unable to invoke callback onCuePoint.” To prevent this error, you would either need to define an onCuePoint callback method in your CustomClient class, or define an event handler for the asyncError event.
 
-### Extend the NetStream class and add methods to handle the callback methods {#extend-the-netstream-class-and-add-methods-to-handle-the-callback-methods}
+## Extend the NetStream class and add methods to handle the callback methods {#extend-the-netstream-class-and-add-methods-to-handle-the-callback-methods}
 
 The following code creates an instance of the CustomNetStream class, which is defined in a later code listing:
 
@@ -176,7 +176,7 @@ trace(&quot;cue point&quot;);
 
 }
 
-### Extend the NetStream class and make it dynamic {#extend-the-netstream-class-and-make-it-dynamic}
+## Extend the NetStream class and make it dynamic {#extend-the-netstream-class-and-make-it-dynamic}
 
 You can extend the NetStream class and make the subclass dynamic so that onCuePoint and onMetaData callback handlers can be added dynamically. This is demonstrated in the following listing:
 
@@ -234,7 +234,7 @@ trace(&quot;cue point&quot;);
 
 }
 
-### Set the NetStream object’s client property to this {#set-the-netstream-object-s-client-property-to-this}
+## Set the NetStream object’s client property to this {#set-the-netstream-object-s-client-property-to-this}
 
 By setting the client property to this, the application looks in the current scope for onMetaData() and
 

@@ -1,4 +1,4 @@
-## Playing sounds {#playing-sounds}
+# Playing sounds {#playing-sounds}
 
 Playing a loaded sound can be as simple as calling the Sound.play() method for a Sound object, as follows:
 
@@ -42,7 +42,7 @@ To resume playing the sound, pass the previously stored position value to restar
 
 channel = snd.play(pausePosition);
 
-### Monitoring playback {#monitoring-playback}
+## Monitoring playback {#monitoring-playback}
 
 Your application might want to know when a sound stops playing so it can start playing another sound, or clean up some resources used during the previous playback. The SoundChannel class dispatches an Event.SOUND_COMPLETE event when its sound finishes playing. Your application can listen for this event and take appropriate action, as shown below:
 
@@ -122,6 +122,6 @@ The Event.ENTER_FRAME event can be dispatched many times per second. In some cas
 
 .
 
-### Stopping streaming sounds {#stopping-streaming-sounds}
+## Stopping streaming sounds {#stopping-streaming-sounds}
 
 There is a quirk in the playback process for sounds that are streaming—that is, for sounds that are still loading while they are being played. When your application calls the SoundChannel.stop() method on a SoundChannel instance that is playing back a streaming sound, the sound playback stops for one frame, and then on the next frame, it restarts from the beginning of the sound. This occurs because the sound loading process is still underway. To stop both the loading and the playback of a streaming sound, call the Sound.close() method.

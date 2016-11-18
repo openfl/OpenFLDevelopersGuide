@@ -1,4 +1,4 @@
-## Obtaining string representations of other objects {#obtaining-string-representations-of-other-objects}
+# Obtaining string representations of other objects {#obtaining-string-representations-of-other-objects}
 
 You can obtain a String representation for any kind of object. All objects have a toString() method for this purpose:
 

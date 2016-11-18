@@ -1,4 +1,4 @@
-## Basics of display programming {#basics-of-display-programming}
+# Basics of display programming {#basics-of-display-programming}
 
 Each application built with ActionScript 3.0 has a hierarchy of displayed objects known as the _display list_, illustrated below. The display list contains all the visible elements in the application.
 

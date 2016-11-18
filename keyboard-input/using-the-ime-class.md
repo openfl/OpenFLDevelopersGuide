@@ -1,4 +1,4 @@
-## Using the IME class {#using-the-ime-class}
+# Using the IME class {#using-the-ime-class}
 
 The IME class lets you manipulate the operating system’s IME within Flash Player or Adobe AIR. Using ActionScript, you can determine the following:
 
@@ -58,7 +58,7 @@ trace(&quot;IME is not installed. Please install an IME and try again.&quot;);
 
 The previous code first checks to see if the user has an IME installed using the Capabilities.hasIME property. If this property is set to true, the code then checks whether the user’s IME is currently enabled, using the IME.enabled property.
 
-### Determining which IME conversion mode is currently enabled {#determining-which-ime-conversion-mode-is-currently-enabled}
+## Determining which IME conversion mode is currently enabled {#determining-which-ime-conversion-mode-is-currently-enabled}
 
 When building multilingual applications, you may need to determine which conversion mode the user currently has active. The following code demonstrates how to check whether the user has an IME installed, and if so, which IME conversion mode is currently active:
 
@@ -116,7 +116,7 @@ tf.text = &quot;Please install an IME and try again.&quot;;
 
 The previous code first checks to see whether the user has an IME installed. Next it checks which conversion mode the current IME is using by comparing the IME.conversionMode property against each of the constants in the IMEConversionMode class.
 
-### Setting the IME conversion mode {#setting-the-ime-conversion-mode}
+## Setting the IME conversion mode {#setting-the-ime-conversion-mode}
 
 When you change the conversion mode of the user’s IME, you need to make sure that the code is wrapped in a try..catch block, because setting a conversion mode using the conversionMode property can throw an error if the IME is unable to set the conversion mode. The following code demonstrates how to use a try..catch block when setting the IME.conversionMode property:
 
@@ -150,7 +150,7 @@ statusText.text = &quot;Unable to set conversion mode.\n&quot; + error.message;
 
 The previous code first creates a text field, which is used to display a status message to the user. Next, if the IME is installed, the code enables the IME and sets the conversion mode to Korean. If the user’s computer does not have a Korean IME installed, an error is thrown by Flash Player or AIR and is caught by the try..catch block. The try..catch block displays the error message in the previously created text field.
 
-### Disabling the IME for certain text fields {#disabling-the-ime-for-certain-text-fields}
+## Disabling the IME for certain text fields {#disabling-the-ime-for-certain-text-fields}
 
 In some cases, you may want to disable the user’s IME while they type characters. For example, if you had a text field that only accepts numeric input, you may not want the IME to come up and slow down data entry.
 
@@ -202,7 +202,7 @@ IME.enabled = true;
 
 This example creates two input text fields, phoneTxt and nameTxt, and then adds two event listeners to the phoneTxt text field. When the user sets focus to the phoneTxt text field, a FocusEvent.FOCUS_IN event is dispatched and the IME is disabled. When the phoneTxt text field loses focus, the FocusEvent.FOCUS_OUT event is dispatched to re- enable the IME.
 
-### Listening for IME composition events {#listening-for-ime-composition-events}
+## Listening for IME composition events {#listening-for-ime-composition-events}
 
 IME composition events are dispatched when a composition string is being set. For example, if the user has their IME enabled and active and types a string in Japanese, the IMEEvent.IME_COMPOSITION event would dispatch as soon as the user selects the composition string. In order to listen for the IMEEvent.IME_COMPOSITION event, you need to add an event listener to the static ime property in the System class (flash.system.System.ime.addEventListener(...)), as shown in the following example:
 

@@ -1,4 +1,4 @@
-## Detecting accelerometer changes {#detecting-accelerometer-changes}
+# Detecting accelerometer changes {#detecting-accelerometer-changes}
 
 To use the accelerometer sensor, instantiate an Accelerometer object and register for update events it dispatches. The
 

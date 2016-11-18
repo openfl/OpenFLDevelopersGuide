@@ -1,4 +1,4 @@
-## Stage orientation {#stage-orientation}
+# Stage orientation {#stage-orientation}
 
 AIR 2.0 and later
 
@@ -24,7 +24,7 @@ The aspect ratio of the stage can be derived by simply comparing the current wid
 
 var aspect:String = this.stage.stageWidth &gt;= this.stage.stageHeight ? StageAspectRatio.LANDSCAPE : StageAspectRatio.PORTRAIT;
 
-### Automatic orientation {#automatic-orientation}
+## Automatic orientation {#automatic-orientation}
 
 When auto-orientation is on and a user rotates their device, the operating system re-orients the entire user interface, including the system taskbar and your application. As a result, the aspect ratio of the stage changes from portrait to landscape or landscape to portrait. When the aspect ratio changes, the stage dimensions also change.
 
@@ -54,7 +54,7 @@ The orientationChange event can also be used to detect orientation changes. The 
 
 **_Note:_ **_On some mobile platforms, the stage dispatches a cancelable orientationChanging event before dispatching the resize or orientationChange events. Since the event is not supported on all platforms, avoid relying on it._
 
-### Manual orientation {#manual-orientation}
+## Manual orientation {#manual-orientation}
 
 AIR 2.6 and later
 

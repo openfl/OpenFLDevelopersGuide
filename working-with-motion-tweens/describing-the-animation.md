@@ -1,4 +1,4 @@
-## Describing the animation {#describing-the-animation}
+# Describing the animation {#describing-the-animation}
 
 Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 

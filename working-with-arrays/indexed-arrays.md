@@ -1,4 +1,4 @@
-## Indexed arrays {#indexed-arrays}
+# Indexed arrays {#indexed-arrays}
 
 Indexed arrays store a series of one or more values organized such that each value can be accessed using an unsigned integer value. The first index is always the number 0, and the index increments by 1 for each subsequent element added to the array. In ActionScript 3.0, two classes are used as indexed arrays: the Array class and the Vector class.
 
@@ -151,7 +151,7 @@ If any of the source elements can’t be converted, an error occurs.
 
 When code calls the Vector.&lt;T&gt;() global function, if an element in the source array is an instance of a subclass of the specified base type, the element is added to the result Vector (no error occurs). Using the Vector.&lt;T&gt;() global function is the only way to convert a Vector with base type T to a Vector with a base type that’s a superclass of T.
 
-### Inserting array elements {#inserting-array-elements}
+## Inserting array elements {#inserting-array-elements}
 
 The most basic way to add an element to an indexed array is to use the array access ([]) operator. To set the value of an indexed array element, use the Array or Vector object name and index number on the left side of an assignment statement:
 
@@ -177,7 +177,7 @@ The push() and unshift() methods both return an unsigned integer that represents
 
 **_Note:_ **_If a Vector object’s fixed property is true, the total number of elements in the Vector can’t change. If you try to add a new element to a fixed-length Vector using the techniques described here, an error occurs._
 
-### Retrieving values and removing array elements {#retrieving-values-and-removing-array-elements}
+## Retrieving values and removing array elements {#retrieving-values-and-removing-array-elements}
 
 The simplest way to retrieve the value of an element from an indexed array is to use the array access ([]) operator. To retrieve the value of an indexed array element, use the Array or Vector object name and index number on the right side of an assignment statement:
 
@@ -217,7 +217,7 @@ trace(oceans); // output: Arctic,Pacific
 
 **_Note:_ **_If a Vector object’s fixed property is true, the total number of elements in the Vector can’t change. If you try to remove an element from or truncate a fixed-length Vector using the techniques described here, an error occurs._
 
-### Sorting an array {#sorting-an-array}
+## Sorting an array {#sorting-an-array}
 
 There are three methods—reverse(), sort(), and sortOn()—that allow you to change the order of an indexed array, either by sorting or reversing the order. All of these methods modify the existing array. The following table summarizes these methods and their behavior for Array and Vector objects:
 
@@ -387,7 +387,7 @@ Angelou 1928
 
 */
 
-### Querying an array {#querying-an-array}
+## Querying an array {#querying-an-array}
 
 Four methods of the Array and Vector classes—concat(), join(), slice(), and toString()—all query the array for information, but do not modify the array. The concat() and slice() methods both return new arrays, while the join() and toString() methods both return strings. The concat() method takes a new array or list of elements as arguments and combines it with the existing array to create a new array. The slice() method has two parameters, aptly named startIndex and an endIndex, and returns a new array containing a copy of the elements “sliced” from the existing array. The slice begins with the element at startIndex and ends with the element just before endIndex. That bears repeating: the element at endIndex is not included in the return value.
 

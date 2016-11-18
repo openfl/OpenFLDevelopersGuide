@@ -1,4 +1,4 @@
-## Handling errors example: CustomErrors application {#handling-errors-example-customerrors-application}
+# Handling errors example: CustomErrors application {#handling-errors-example-customerrors-application}
 
 The CustomErrors application demonstrates techniques for working with custom errors when building an application. These techniques are:
 
@@ -133,7 +133,7 @@ break;
 
 If the user chooses to cancel the script by clicking Yes, a FatalError is thrown, causing the application to terminate.
 
-### Building a custom validator {#building-a-custom-validator}
+## Building a custom validator {#building-a-custom-validator}
 
 The custom Validator class contains a single method, validateEmployeeXML(). The validateEmployeeXML() method takes a single argument, employee, which is the XML packet that you want to validate. The validateEmployeeXML() method is as follows:
 
@@ -171,7 +171,7 @@ To be validated, an employee must belong to one (and only one) cost center. If t
 
 You can add additional checks to the validateEmployeeXML() method—for example, to ensure that the ssn node contains a valid number, or that the employee has at least one phone number and e-mail address defined, and that both values are valid. You can also modify the XML so that each employee has a unique ID and specifies the ID of their manager.
 
-### Defining the ApplicationError class {#defining-the-applicationerror-class}
+## Defining the ApplicationError class {#defining-the-applicationerror-class}
 
 The ApplicationError class serves as the base class for both the FatalError and WarningError classes. The ApplicationError class extends the Error class, and defines its own custom methods and properties, including defining an error ID, severity, and an XML object that contains the custom error codes and messages. This class also defines two static constants that are used to define the severity of each error type.
 
@@ -245,7 +245,7 @@ return &quot;[APPLICATION ERROR #&quot; + id + &quot;] &quot; + message;
 
 }
 
-### Defining the FatalError class {#defining-the-fatalerror-class}
+## Defining the FatalError class {#defining-the-fatalerror-class}
 
 The FatalError class extends the custom ApplicationError class and defines three methods: the FatalError constructor, getTitle(), and toString(). The first method, the FatalError constructor, takes a single integer argument, errorID, and sets the error’s severity using the static constant values defined in the ApplicationError class, and gets the specific error’s error message by calling the getMessageText() method in the ApplicationError class. The FatalError constructor is as follows:
 
@@ -281,7 +281,7 @@ return &quot;[FATAL ERROR #&quot; + id + &quot;] &quot; + message;
 
 }
 
-### Defining the WarningError class {#defining-the-warningerror-class}
+## Defining the WarningError class {#defining-the-warningerror-class}
 
 The WarningError class extends the ApplicationError class and is nearly identical to the FatalError class, except for a couple minor string changes and sets the error severity to ApplicationError.WARNING instead of ApplicationError.FATAL, as seen in the following code:
 

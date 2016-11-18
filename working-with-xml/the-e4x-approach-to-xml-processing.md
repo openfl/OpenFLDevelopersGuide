@@ -1,4 +1,4 @@
-## The E4X approach to XML processing {#the-e4x-approach-to-xml-processing}
+# The E4X approach to XML processing {#the-e4x-approach-to-xml-processing}
 
 The ECMAScript for XML specification defines a set of classes and functionality for working with XML data. These classes and functionality are known collectively as _E4X._ ActionScript 3.0 includes the following E4X classes: XML, XMLList, QName, and Namespace.
 

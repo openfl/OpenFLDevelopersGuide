@@ -1,4 +1,4 @@
-## Types of errors {#types-of-errors}
+# Types of errors {#types-of-errors}
 
 When you develop and run applications, you encounter different types of errors and error terminology. The following list introduces the major error types and terms:
 

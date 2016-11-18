@@ -1,4 +1,4 @@
-## Animating objects {#animating-objects}
+# Animating objects {#animating-objects}
 
 Animation is the process of making something move, or alternatively, of making something change over time. Scripted animation is a fundamental part of video games, and is often used to add polish and useful interaction clues to other applications.
 

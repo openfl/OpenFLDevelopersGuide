@@ -1,4 +1,4 @@
-## Gesture event handling {#gesture-event-handling}
+# Gesture event handling {#gesture-event-handling}
 
 Flash Player 10.1 and later, Adobe AIR 2 and later
 
@@ -102,7 +102,7 @@ _“Troubleshooting” on page 593_
 
 _for more information._
 
-### Gesture phases {#gesture-phases}
+## Gesture phases {#gesture-phases}
 
 Additionally, the gesture events can be tracked through phases, so you can track properties as the gesture is taking place. For example, you can track x-coordinates as an object is moved with a swipe gesture. Use those values to draw a line through all the points in its path after the swipe is complete. Or, visually change a display object as it is dragged across a screen using a pan gesture. Change the object again once the pan gesture is complete.
 

@@ -1,4 +1,4 @@
-## Drawing shapes using built-in methods {#drawing-shapes-using-built-in-methods}
+# Drawing shapes using built-in methods {#drawing-shapes-using-built-in-methods}
 
 For convenience when drawing common shapes such as circles, ellipses, rectangles, and rectangles with rounded corners, ActionScript 3.0 has methods that draw these common shapes for you. These are the drawCircle(), drawEllipse(), drawRect(), and drawRoundRect() methods of the Graphics class. These methods may be used in place of the lineTo() and curveTo() methods. Note, however, that you must still specify line and fill styles before calling these methods.
 

@@ -1,4 +1,4 @@
-## Using cue points and metadata {#using-cue-points-and-metadata}
+# Using cue points and metadata {#using-cue-points-and-metadata}
 
 Use the NetStream callback methods to capture and process cue point and metadata events as the video plays.
 
@@ -48,7 +48,7 @@ This code uses one of several techniques to set the object on which the callback
 
 .
 
-### Using video metadata {#using-video-metadata}
+## Using video metadata {#using-video-metadata}
 
 You can use the OnMetaData() and OnXMPData() functions to access the metadata information in your video file, including cue points.
 
@@ -450,7 +450,7 @@ For more information on XMP, see:
 
 • [www.adobe.com/devnet/xmp/](http://www.adobe.com/devnet/xmp/)
 
-### Using image metadata {#using-image-metadata}
+## Using image metadata {#using-image-metadata}
 
 The onImageData event sends image data as a byte array through an AMF0 data channel. The data can be in JPEG, PNG, or GIF formats. Define an onImageData() callback method to process this information, in the same way that you would define callback methods for onCuePoint and onMetaData. The following example accesses and displays image data using an onImageData() callback method:
 
@@ -466,7 +466,7 @@ var loader:Loader = new Loader();
 
 }
 
-### Using text metadata {#using-text-metadata}
+## Using text metadata {#using-text-metadata}
 
 The onTextData event sends text data through an AMF0 data channel. The text data is in UTF-8 format and contains additional information about formatting, based on the 3GP timed-text specification. This specification defines a standardized subtitle format. Define an onTextData() callback method to process this information, in the same way that you would define callback methods for onCuePoint or onMetaData. In the following example, the onTextData() method displays the track ID number and corresponding track text.
 

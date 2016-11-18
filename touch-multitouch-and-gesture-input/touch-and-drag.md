@@ -1,4 +1,4 @@
-## Touch and drag {#touch-and-drag}
+# Touch and drag {#touch-and-drag}
 
 Flash Player 10.1 and later, Adobe AIR 2 and later
 

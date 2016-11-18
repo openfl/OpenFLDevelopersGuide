@@ -1,4 +1,4 @@
-## Understanding cue points {#understanding-cue-points}
+# Understanding cue points {#understanding-cue-points}
 
 You can embed cue points in an Adobe F4V or FLV video file during encoding. Historically, cue points were embedded in movies to give the projectionist a visual signal that indicated the reel of film was nearing the end. In Adobe F4V and FLV video formats, a cue point allows you to trigger one or more other actions in your application at the time that it occurs in the video stream.
 

@@ -1,4 +1,4 @@
-## Network connectivity changes {#network-connectivity-changes}
+# Network connectivity changes {#network-connectivity-changes}
 
 Adobe AIR 1.0 and later
 
@@ -60,7 +60,7 @@ To use these classes in Adobe® Flash® CS3 Professional, drag the ServiceMonito
 
 import air.net.*;
 
-### HTTP monitoring {#http-monitoring}
+## HTTP monitoring {#http-monitoring}
 
 Adobe AIR 1.0 and later
 
@@ -76,7 +76,7 @@ trace(&quot;Status change. Current status: &quot; + monitor.available);
 
 }
 
-### Socket monitoring {#socket-monitoring}
+## Socket monitoring {#socket-monitoring}
 
 Adobe AIR 1.0 and later
 

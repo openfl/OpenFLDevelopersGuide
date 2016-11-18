@@ -1,4 +1,4 @@
-## Working with MovieClip objects {#working-with-movieclip-objects}
+# Working with MovieClip objects {#working-with-movieclip-objects}
 
 When you publish a SWF file, Flash converts all movie clip symbol instances on the Stage to MovieClip objects. You can make a movie clip symbol available to ActionScript by giving it an instance name in the Instance Name field of the Property inspector. When the SWF file is created, Flash generates the code that creates the MovieClip instance on the Stage and declares a variable using the instance name. If you have named movie clips that are nested inside other named movie clips, those child movie clips are treated like properties of the parent movie clip—you can access the child movie clip using dot syntax. For example, if a movie clip with the instance name childClip is nested within another clip with the instance name parentClip, you can make the child clip’s timeline animation play by calling this code:
 

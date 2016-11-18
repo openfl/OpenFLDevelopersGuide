@@ -1,4 +1,4 @@
-## Capturing sound input {#capturing-sound-input}
+# Capturing sound input {#capturing-sound-input}
 
 The Microphone class lets your application connect to a microphone or other sound input device on the user’s system and broadcast the input audio to that system’s speakers or send the audio data to a remote server, such as Flash Media Server. You can access the raw audio data from the microphone and record or process it; you can also send the audio directly to the system’s speakers or send compressed audio data to a remote server. You can use either Speex or Nellymoser codec for data sent to a remote server. (The Speex codec is supported starting with Flash Player 10 and Adobe AIR 1.5.)
 
@@ -56,7 +56,7 @@ In order for Flash Player to display the settings dialog, the application window
 
 Content running in the AIR application sandbox does not need the permission of the user to access the microphone. Thus, status events for muting and unmuting the microphone are never dispatched. Content running in AIR outside the application sandbox does require permission from the user, so these status events can be dispatched.
 
-### Routing microphone audio to local speakers {#routing-microphone-audio-to-local-speakers}
+## Routing microphone audio to local speakers {#routing-microphone-audio-to-local-speakers}
 
 Audio input from a microphone can be routed to the local system speakers by calling the
 
@@ -68,13 +68,13 @@ The following code shows how to route the audio from a local microphone to the l
 
 var mic:Microphone = Microphone.getMicrophone(); mic.setUseEchoSuppression(true); mic.setLoopBack(true);
 
-### Altering microphone audio {#altering-microphone-audio}
+## Altering microphone audio {#altering-microphone-audio}
 
 Your application can alter the audio data that comes from a microphone in two ways. First, it can change the gain of the input sound, which effectively multiplies the input values by a specified amount to create a louder or quieter sound. The Microphone.gain property accepts numeric values between 0 and 100 inclusive. A value of 50 acts like a multiplier of one and specifies normal volume. A value of zero acts like a multiplier of zero and effectively silences the input audio. Values above 50 specify higher than normal volume.
 
 Your application can also change the sample rate of the input audio. Higher sample rates increase sound quality, but they also create denser data streams that use more resources for transmission and storage. The Microphone.rate property represents the audio sample rate measured in kilohertz (kHz). The default sample rate is 8 kHz. You can set the Microphone.rate property to a value higher than 8 kHz if your microphone supports the higher rate. For example, setting the Microphone.rate property to a value of 11 sets the sample rate to 11 kHz; setting it to 22 sets the sample rate to 22 kHz, and so on. The sample rates available depend on the selected codec. When you use the Nellymoser codec, you can specify 5, 8, 11, 16, 22 and 44 kHz as the sample rate. When you use Speex codec (available starting in Flash Player 10 and Adobe AIR 1.5), you can only use 16 kHz.
 
-### Detecting microphone activity {#detecting-microphone-activity}
+## Detecting microphone activity {#detecting-microphone-activity}
 
 To conserve bandwidth and processing resources, Flash Player tries to detect when no sound is being transmitted by a microphone. When the microphone’s activity level stays below the silence level threshold for a period of time, Flash Player stops transmitting the audio input and dispatches a simple ActivityEvent instead. If you use the Speex codec (available in Flash Player 10 or later and Adobe AIR 1.5 or later), set the silence level to 0, to ensure that the application continuously transmits audio data. Speex voice activity detection automatically reduces bandwidth.
 
@@ -136,7 +136,7 @@ trace(&quot;status: level=&quot; + event.level + &quot;, code=&quot; + event.cod
 
 When you run the above example, speak or makes noises into your system microphone and watch the resulting trace statements appear in a console or debug window.
 
-### Sending audio to and from a media server {#sending-audio-to-and-from-a-media-server}
+## Sending audio to and from a media server {#sending-audio-to-and-from-a-media-server}
 
 Additional audio capabilities are available when using ActionScript with a streaming media server such as Flash Media Server.
 
@@ -146,7 +146,7 @@ The Speex codec is available starting with Flash Player 10 and Adobe AIR 1.5\. T
 
 For more information, see the Flash Media Server documentation online at [www.adobe.com/go/learn_fms_docs_en](http://www.adobe.com/go/learn_fms_docs_en).
 
-### Capturing microphone sound data {#capturing-microphone-sound-data}
+## Capturing microphone sound data {#capturing-microphone-sound-data}
 
 Flash Player 10.1 and later, Adobe AIR 2 and later
 
