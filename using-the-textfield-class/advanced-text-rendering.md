@@ -65,7 +65,7 @@ By default, OpenFL determines the settings for text display controls like sharpn
 
 **_Note:_ **_The flash.text.TextField.antiAliasType property must have the value AntiAliasType.ADVANCED in order for you to set the sharpness, thickness, or the gridFitType property, or to use the TextRenderer.setAdvancedAntiAliasingTable() method._
 
-The following example applies custom continuous stroke modulation (CSM) properties and formatting to displayed text using an embedded font called myFont. When the user clicks the displayed text, OpenFL or Adobe AIR applies the custom settings:
+The following example applies custom continuous stroke modulation (CSM) properties and formatting to displayed text using an embedded font called myFont. When the user clicks the displayed text, OpenFL applies the custom settings:
 
 var format:TextFormat = new TextFormat(); format.color = 0x336699;
 

@@ -1,6 +1,6 @@
 # Using the IME class {#using-the-ime-class}
 
-The IME class lets you manipulate the operating system’s IME within OpenFL or Adobe AIR. Using Haxe, you can determine the following:
+The IME class lets you manipulate the operating system’s IME within OpenFL. Using Haxe, you can determine the following:
 
 • If an IME is installed on the user&#039;s computer (Capabilities.hasIME)
 

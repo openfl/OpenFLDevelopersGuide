@@ -1,63 +1,32 @@
 # Core display classes {#core-display-classes}
 
-The Haxe flash.display package includes classes for visual objects that can appear in OpenFL. The following illustration shows the subclass relationships of these core display object classes.
+The openfl.display package includes classes for visual objects that can appear in OpenFL. The following illustration shows the subclass relationships of these core display object classes.
 
-The illustration shows the class inheritance of display object classes. Note that some of these classes, specifically StaticText, TextField, and Video, are not in the flash.display package, but they still inherit from the DisplayObject class.
+![](../assets/dp_DisplayObject_subclasses_popup.png)
 
-All classes that extend the DisplayObject class inherit its methods and properties. For more information, see
+The illustration shows the class inheritance of display object classes. Note that some of these classes, specifically StaticText, TextField, and Video, are not in the openfl.display package, but they still inherit from the DisplayObject class.
 
-“Properties and methods of the DisplayObject class” on page 158
+All classes that extend the DisplayObject class inherit its methods and properties. For more information, see [Properties and methods of the DisplayObject class](working-with-display-objects.md#properties-and-methods-of-the-displayobject-class).
 
-.
+You can instantiate objects of the following classes contained in the openfl.display package:
 
-You can instantiate objects of the following classes contained in the flash.display package:
+*   Bitmap&mdash;You use the Bitmap class to define bitmap objects, either loaded from external files or rendered through Haxe. You can load bitmaps from external files through the Loader class. You can load GIF, JPG, or PNG files. You can also create a BitmapData object with custom data and then create a Bitmap object that uses that data. You can use the methods of the BitmapData class to alter bitmaps, whether they are loaded or created in Haxe. For more information, see [Loading display objects](loading-display-content-dynamically.md#loading-display-objects) and [Working with bitmaps](../working-with-bitmaps/README.md).
 
-*   Bitmap—You use the Bitmap class to define bitmap objects, either loaded from external files or rendered through Haxe. You can load bitmaps from external files through the Loader class. You can load GIF, JPG, or PNG files. You can also create a BitmapData object with custom data and then create a Bitmap object that uses that data. You can use the methods of the BitmapData class to alter bitmaps, whether they are loaded or created in Haxe. For more information, see
+*   Loader&mdash;You use the Loader class to load external assets (either projects or graphics). For more information, see [Loading display content dynamically](loading-display-content-dynamically.md).
 
-    “Loading display objects” on page 198
+*   Shape&mdash;You use the Shape class to create vector graphics, such as rectangles, lines, circles, and so on. For more information, see [Using the drawing API](../using-the-drawing-api/README.md).
 
-    and
+*   SimpleButton&mdash;A SimpleButton object is the OpenFL representation of a button symbol created in the Flash authoring tool. A SimpleButton instance has four button states: up, down, over, and hit test (the area that responds to mouse and keyboard events).
 
-    “Working with bitmaps” on
+*   Sprite&mdash;A Sprite object can contain graphics of its own, and it can contain child display objects. (The Sprite class extends the DisplayObjectContainer class). For more information, see [Working with display object containers](working-with-display-objects\working-with-display-object-containers.md) and [Using the drawing API](../using-the-drawing-api/README.md).
 
-    page 242
+*   MovieClip&mdash;A MovieClip object is the OpenFL form of a movie clip symbol created in the Flash authoring tool. In practice, a MovieClip is similar to a Sprite object, except that it also has a timeline. For more information, see [Working with movie clips](../working-with-movie-clips/README.md).
 
-    .
-*   Loader—You use the Loader class to load external assets (either projects or graphics). For more information, see
+The following classes, which are not in the openfl.display package, are subclasses of the DisplayObject class:
 
-    “Loading display content dynamically” on page 198
+*   The TextField class, included in the openfl.text package, is a display object for text display and input. For more information, see [Basics of Working with text](../basics-of-working-with-text/README.md).
 
-    .
-*   Shape—You use the Shape class to create vector graphics, such as rectangles, lines, circles, and so on. For more information, see
-
-    “Using the drawing API” on page 222
-
-    .
-*   SimpleButton—A SimpleButton object is the Haxe representation of a button symbol created in the Flash authoring tool. A SimpleButton instance has four button states: up, down, over, and hit test (the area that responds to mouse and keyboard events).
-*   Sprite—A Sprite object can contain graphics of its own, and it can contain child display objects. (The Sprite class extends the DisplayObjectContainer class). For more information, see
-
-    “Working with display object containers” on
-
-    page 159
-
-    and
-
-    “Using the drawing API” on page 222
-
-    .
-*   MovieClip—A MovieClip object is the Haxe form of a movie clip symbol created in the Flash authoring tool. In practice, a MovieClip is similar to a Sprite object, except that it also has a timeline. For more information, see
-
-    “Working with movie clips” on page 322
-
-    .
-
-The following classes, which are not in the flash.display package, are subclasses of the DisplayObject class:
-
-*   The TextField class, included in the flash.text package, is a display object for text display and input. For more information, see
-
-    “Basics of Working with text” on page 371
-
-    .
+<!-- 
 *   The TextLine class, included in the flash.text.engine package, is the display object used to display lines of text composed by the Flash Text Engine and the Text Layout Framework. For more information, see
 
     “Using the Flash
@@ -69,47 +38,41 @@ The following classes, which are not in the flash.display package, are subclasse
     “Using the Text Layout Framework” on page 426
 
     .
-*   The Video class, included in the flash.media package, is the display object used for displaying video files. For more information, see
+-->
 
-    “Working with video” on page 474
+*   The Video class, included in the openfl.media package, is the display object used for displaying video files. For more information, see [Working with video](../working-with-video/README.md).
 
-    .
+The following classes in the openfl.display package extend the DisplayObject class, but you cannot create instances of them. Instead, they serve as parent classes for other display objects, combining common functionality into a single class.
 
-The following classes in the flash.display package extend the DisplayObject class, but you cannot create instances of them. Instead, they serve as parent classes for other display objects, combining common functionality into a single class.
-
-*   AVM1Movie—The AVM1Movie class is used to represent loaded projects that are authored in Haxe 1.0 and 2.0.
-*   DisplayObjectContainer—The Loader, Stage, Sprite, and MovieClip classes each extend the DisplayObjectContainer class. For more information, see
+<!-- 
+*   AVM1Movie&mdash;The AVM1Movie class is used to represent loaded projects that are authored in Haxe 1.0 and 2.0.
+*   DisplayObjectContainer&mdash;The Loader, Stage, Sprite, and MovieClip classes each extend the DisplayObjectContainer class. For more information, see
 
     “Working with display object containers” on page 159
 
     .
-*   InteractiveObject—InteractiveObject is the base class for all objects used to interact with the mouse and keyboard. SimpleButton, TextField, Loader, Sprite, Stage, and MovieClip objects are all subclasses of the InteractiveObject class. For more information on creating mouse and keyboard interaction, see
+-->
 
-    “Basics of user interaction” on
+*   InteractiveObject&mdash;InteractiveObject is the base class for all objects used to interact with the mouse and keyboard. SimpleButton, TextField, Loader, Sprite, Stage, and MovieClip objects are all subclasses of the InteractiveObject class. For more information on creating mouse and keyboard interaction, see [Basics of user interaction](../basics-of-user-interaction/README.md).
 
-page 556
+*   MorphShape&mdash;These objects are created when you create a shape tween in the Flash authoring tool. You cannot instantiate them using Haxe, but they can be accessed from the display list.
 
-.
+*   Stage&mdash;The Stage class extends the DisplayObjectContainer class. There is one Stage instance for an application, and it is at the top of the display list hierarchy. To access the Stage, use the stage property of any DisplayObject instance. For more information, see [Setting Stage properties](working-with-display-objects\setting-stage-properties.md).
 
-*   MorphShape—These objects are created when you create a shape tween in the Flash authoring tool. You cannot instantiate them using Haxe, but they can be accessed from the display list.
-*   Stage—The Stage class extends the DisplayObjectContainer class. There is one Stage instance for an application, and it is at the top of the display list hierarchy. To access the Stage, use the stage property of any DisplayObject instance. For more information, see
+Also, the StaticText class, in the openfl.text package, extends the DisplayObject class, but you cannot create an instance of it in code. Static text fields are created only in SWF-based assets.
 
-    “Setting Stage properties” on page 164
-
-    .
-
-Also, the StaticText class, in the flash.text package, extends the DisplayObject class, but you cannot create an instance of it in code. Static text fields are created only in Flash.
+<!--
 
 The following classes are not display objects or display object containers, and do not appear in the display list, but do display graphics on the stage. These classes draw into a rectangle, called a viewport, positioned relative to the stage.
 
-*   StageVideo—The StageVideo class displays video content, using hardware acceleration, when possible. This class is available starting in OpenFL 10.2\. For more information, see
+*   &mdash;The StageVideo class displays video content, using hardware acceleration, when possible. This class is available starting in OpenFL 10.2\. For more information, see
 
     “Using the StageVideo class for hardware
 
     accelerated presentation” on page 512
 
     .
-*   StageWebView—The StageWebView class displays HTML content. This class is available starting in AIR 2.5\. For more information, see
+*   StageWebView&mdash;The StageWebView class displays HTML content. This class is available starting in AIR 2.5\. For more information, see
 
     “StageWebView objects” on page 1026
 
@@ -123,3 +86,5 @@ The following fl.display classes provide functionality that parallels the flash.
 
 *   fl.display.ProLoader—Analogous to flash.display.Loader
 *   fl.display.ProLoaderInfo—Analogous to flash.display.LoaderInfo
+
+-->

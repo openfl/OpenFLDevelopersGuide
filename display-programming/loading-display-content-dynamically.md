@@ -8,7 +8,7 @@ You can load any of the following external display assets into an Haxe applicati
 
 You load these assets by using the Loader class.
 
-**Loading display objects**
+## Loading display objects {#loading-display-objects}
 
 Loader objects are used to load projects and graphics files into an application. The Loader class is a subclass of the DisplayObjectContainer class. A Loader object can contain only one child display object in its display list—the display object representing the SWF or graphic file that it loads. When you add a Loader object to the display list, as in the following code, you also add the loaded child display object to the display list once it loads:
 

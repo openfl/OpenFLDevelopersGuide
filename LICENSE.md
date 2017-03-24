@@ -1,7 +1,7 @@
 License
 =======
 
-"OpenFL Developer's Guide" is a derivative of "Haxe 
+"OpenFL Developer's Guide" is a derivative of "ActionScript 3.0 
 Developer's Guide" by Adobe Systems Incorporated, used under CC-BY-SA. 
 "OpenFL Developer's Guide" is licensed under CC-BY-SA by Joshua Granick 
 and other OpenFL contributors.
