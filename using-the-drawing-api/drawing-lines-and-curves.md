@@ -1,6 +1,6 @@
 # Drawing lines and curves {#drawing-lines-and-curves}
 
-All drawing that you do with a Graphics instance is based on basic drawing with lines and curves. Consequently, all ActionScript drawing must be performed using the same series of steps:
+All drawing that you do with a Graphics instance is based on basic drawing with lines and curves. Consequently, all Haxe drawing must be performed using the same series of steps:
 
 *   Define line and fill styles
 *   Set the initial drawing position
@@ -9,11 +9,11 @@ All drawing that you do with a Graphics instance is based on basic drawing with 
 
 **Defining line and fill styles**
 
-To draw with the graphics property of a Shape, Sprite, or MovieClip instance, you must first define the style (line size and color, fill color) to use when drawing. Just like when you use the drawing tools in Adobe® Flash® Professional or another drawing application, when you’re using ActionScript to draw you can draw with or without a stroke, and with or without a fill color. You specify the appearance of the stroke using the lineStyle() or lineGradientStyle() method. To create a solid line, use the lineStyle() method. When calling this method, the most common values you’ll specify are the first three parameters: line thickness, color, and alpha. For example, this line of code tells the Shape named myShape to draw lines that are 2 pixels thick, red (0x990000), and 75% opaque:
+To draw with the graphics property of a Shape, Sprite, or MovieClip instance, you must first define the style (line size and color, fill color) to use when drawing. Just like when you use the drawing tools in Adobe® Flash® Professional or another drawing application, when you’re using Haxe to draw you can draw with or without a stroke, and with or without a fill color. You specify the appearance of the stroke using the lineStyle() or lineGradientStyle() method. To create a solid line, use the lineStyle() method. When calling this method, the most common values you’ll specify are the first three parameters: line thickness, color, and alpha. For example, this line of code tells the Shape named myShape to draw lines that are 2 pixels thick, red (0x990000), and 75% opaque:
 
 myShape.graphics.lineStyle(2, 0x990000, .75);
 
-The default value for the alpha parameter is 1.0 (100%), so you can leave that parameter off if you want a completely opaque line. The lineStyle() method also accepts two additional parameters for pixel hinting and scale mode; for more information about using those parameters see the description of the Graphics.lineStyle() method in the [ActionScript 3.0 Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Graphics.html#lineStyle()).
+The default value for the alpha parameter is 1.0 (100%), so you can leave that parameter off if you want a completely opaque line. The lineStyle() method also accepts two additional parameters for pixel hinting and scale mode; for more information about using those parameters see the description of the Graphics.lineStyle() method in the [Haxe Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Graphics.html#lineStyle()).
 
 To create a gradient line, use the lineGradientStyle() method. This method is described in
 

@@ -1,20 +1,20 @@
 # Chapter 38: Working with the file system {#chapter-38-working-with-the-file-system}
 
-Flash® Player provides basic file reading and writing capabilities, via the FileReference class. For security reasons, when running in Flash Player, the user must always grant permission before you can read or write a file.
+Flash® Player provides basic file reading and writing capabilities, via the FileReference class. For security reasons, when running in OpenFL, the user must always grant permission before you can read or write a file.
 
-Adobe® AIR® provides more complete access to the file system of the host computer than is available in Flash Player. Using the AIR file system API, you can access and manage directories and files, create directories and files, write data to files, and so on.
+Adobe® AIR® provides more complete access to the file system of the host computer than is available in OpenFL. Using the AIR file system API, you can access and manage directories and files, create directories and files, write data to files, and so on.
 
 **More Help topics**
 
-[flash.net.FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/FileReference.html) [flash.net.FileReferenceList](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/FileReferenceList.html) [flash.filesystem.File](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filesystem/File.html) [flash.filesystem.FileStream](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filesystem/File.html)
+[flash.net.FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html) [flash.net.FileReferenceList](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReferenceList.html) [flash.filesystem.File](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/File.html) [flash.filesystem.FileStream](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/File.html)
 
 **Using the FileReference class**
 
 A FileReference object represents a data file on a client or server machine. The methods of the FileReference class let your application load and save data files locally, and transfer file data to and from remote servers.
 
-The FileReference class offers two different approaches to loading, transferring, and saving data files. Since its introduction, the FileReference class has includedthe browse() method, the upload() method, and the download() method. Use the browse() method to let the user select a file. Use the upload() method to transfer the file data to a remote server. Use the download() method to retrieve that data from the server and save it in a local file. Starting with Flash Player 10 and Adobe AIR 1.5, the FileReference class includes the load() and save() methods. The load() and save() methods allow you to access and save local files directly as well. The use of those methods is similar to the equivalent-named methods in the URLLoader and Loader classes.
+The FileReference class offers two different approaches to loading, transferring, and saving data files. Since its introduction, the FileReference class has includedthe browse() method, the upload() method, and the download() method. Use the browse() method to let the user select a file. Use the upload() method to transfer the file data to a remote server. Use the download() method to retrieve that data from the server and save it in a local file. Starting with OpenFL 10 and Adobe AIR 1.5, the FileReference class includes the load() and save() methods. The load() and save() methods allow you to access and save local files directly as well. The use of those methods is similar to the equivalent-named methods in the URLLoader and Loader classes.
 
-**_Note:_ **_The File class, which extends the FileReference class, and the FileStream class provide additional functions for working with files and the local file system. The File and FileStream classes are only supported in AIR and not in the Flash Player._
+**_Note:_ **_The File class, which extends the FileReference class, and the FileStream class provide additional functions for working with files and the local file system. The File and FileStream classes are only supported in AIR and not in the OpenFL._
 
 **FileReference class**
 
@@ -54,11 +54,11 @@ The FileReference object properties such as name, size, or modificationDate are 
 
 **_Note:_ **_When performing a download, only the FileReference.name property is populated before the download is complete. After the file has been downloaded, all properties are available._
 
-While calls to the FileReference.browse(), FileReferenceList.browse(), FileReference.download(), FileReference.load(), or FileReference.save() methods are executing, most players continue SWF file playback including dispatching events and executing code.
+While calls to the FileReference.browse(), FileReferenceList.browse(), FileReference.download(), FileReference.load(), or FileReference.save() methods are executing, most players continue project playback including dispatching events and executing code.
 
-For uploading and downloading operations, a SWF file can access files only within its own domain, including any domains specified by a policy file. You need to put a policy file on the server containing the file if that server is not in the same domain as the SWF file initiating the upload or download.
+For uploading and downloading operations, a project can access files only within its own domain, including any domains specified by a policy file. You need to put a policy file on the server containing the file if that server is not in the same domain as the project initiating the upload or download.
 
-See [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/FileReference.html).
+See [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html).
 
 ## Loading data from files {#loading-data-from-files}
 
@@ -340,7 +340,7 @@ writing files” on page 689
 
 ## Uploading files to a server {#uploading-files-to-a-server}
 
-To upload files to a server, first call the browse() method to allow a user to select one or more files. Next, when the FileReference.upload() method is called, the selected file is transferred to the server. If the user selects multiple files using the FileReferenceList.browse() method, Flash Player creates an array of selected files called FileReferenceList.fileList. You can then use the FileReference.upload() method to upload each file individually.
+To upload files to a server, first call the browse() method to allow a user to select one or more files. Next, when the FileReference.upload() method is called, the selected file is transferred to the server. If the user selects multiple files using the FileReferenceList.browse() method, OpenFL creates an array of selected files called FileReferenceList.fileList. You can then use the FileReference.upload() method to upload each file individually.
 
 **_Note:_ **_Using the FileReference.browse() method allows you to upload single files only. To allow a user to upload multiple files, use the FileReferenceList.browse() method._
 
@@ -424,21 +424,21 @@ When you attempt to upload a file using the FileReference.upload() method, the f
 
 • ioError event (IOErrorEvent.IO_ERROR): Dispatched if the upload process fails for any of the following reasons:
 
-• An input/output error occurred while Flash Player is reading, writing, or transmitting the file.
+• An input/output error occurred while OpenFL is reading, writing, or transmitting the file.
 
-• The SWF tried to upload a file to a server that requires authentication (such as a user name and password). During upload, Flash Player does not provide a means for users to enter passwords.
+• The SWF tried to upload a file to a server that requires authentication (such as a user name and password). During upload, OpenFL does not provide a means for users to enter passwords.
 
 • The url parameter contains an invalid protocol. The FileReference.upload() method must use either HTTP or HTTPS.
 
-_Flash Player does not offer complete support for servers that require authentication. Only SWF files that are running in a browser using the browser plug-in or Microsoft ActiveX_® _control can provide a dialog box to prompt the user to_
+_OpenFL does not offer complete support for servers that require authentication. Only projects that are running in a browser using the browser plug-in or Microsoft ActiveX_® _control can provide a dialog box to prompt the user to_
 
 _enter a user name and password for authentication, and then only for downloads. For uploads using the plug-in or ActiveX control or upload/download using either the stand-alone or external player, the file transfer fails._
 
-To create a server script in ColdFusion to accept a file upload from Flash Player, you can use code similar to the following:
+To create a server script in ColdFusion to accept a file upload from OpenFL, you can use code similar to the following:
 
 &lt;cffile action=&quot;upload&quot; filefield=&quot;Filedata&quot; destination=&quot;#ExpandPath(&#039;./&#039;)#&quot; nameconflict=&quot;OVERWRITE&quot; /&gt;
 
-This ColdFusion code uploads the file sent by Flash Player and saves it to the same directory as the ColdFusion template, overwriting any file with the same name. The previous code shows the bare minimum amount of code necessary to accept a file upload; this script should not be used in a production environment. Ideally, add data validation to ensure that users upload only accepted file types, such as an image instead of a potentially dangerous server-side script.
+This ColdFusion code uploads the file sent by OpenFL and saves it to the same directory as the ColdFusion template, overwriting any file with the same name. The previous code shows the bare minimum amount of code necessary to accept a file upload; this script should not be used in a production environment. Ideally, add data validation to ensure that users upload only accepted file types, such as an image instead of a potentially dangerous server-side script.
 
 The following code demonstrates file uploads using PHP, and it includes data validation. The script limits the number of uploaded files in the upload directory to 10, ensures that the file is less than 200 KB, and permits only JPEG, GIF, or PNG files to be uploaded and saved to the file system.
 
@@ -556,13 +556,13 @@ trace(&quot;uploaded&quot;);
 
 }
 
-The previous example creates a URLVariables object that you pass to the remote server- side script. In previous versions of ActionScript, you could pass variables to the server upload script by passing values in the query string. ActionScript 3.0 allows you to pass variables to the remote script using a URLRequest object, which allows you to pass data using either the POST or GET method; this, in turn, makes passing larger sets of data easier and cleaner. In order to specify whether the variables are passed using the GET or POST request method, you can set the URLRequest.method property to either URLRequestMethod.GET or URLRequestMethod.POST, respectively.
+The previous example creates a URLVariables object that you pass to the remote server- side script. In previous versions of Haxe, you could pass variables to the server upload script by passing values in the query string. Haxe allows you to pass variables to the remote script using a URLRequest object, which allows you to pass data using either the POST or GET method; this, in turn, makes passing larger sets of data easier and cleaner. In order to specify whether the variables are passed using the GET or POST request method, you can set the URLRequest.method property to either URLRequestMethod.GET or URLRequestMethod.POST, respectively.
 
-ActionScript 3.0 also lets you override the default Filedata upload file field name by providing a second parameter to the upload() method, as demonstrated in the previous example (which replaced the default value Filedata with Custom1).
+Haxe also lets you override the default Filedata upload file field name by providing a second parameter to the upload() method, as demonstrated in the previous example (which replaced the default value Filedata with Custom1).
 
-By default, Flash Player does not attempt to send a test upload, although you can override this default by passing a value of true as the third parameter to the upload() method. The purpose of the test upload is to check whether the actual file upload will be successful and that server authentication, if required, will succeed.
+By default, OpenFL does not attempt to send a test upload, although you can override this default by passing a value of true as the third parameter to the upload() method. The purpose of the test upload is to check whether the actual file upload will be successful and that server authentication, if required, will succeed.
 
-**_Note:_ **_A test upload occurs only on Windows-based Flash Players at this time._
+**_Note:_ **_A test upload occurs only on Windows-based OpenFLs at this time._
 
 The server script that handles the file upload should expect an HTTP POST request with the following elements:
 
@@ -656,7 +656,7 @@ Submit Query
 
 You can let users download files from a server using the FileReference.download() method, which takes two parameters: request and defaultFileName. The first parameter is the URLRequest object that contains the URL of the file to download. The second parameter is optional—it lets you specify a default filename that appears in the download file dialog box. If you omit the second parameter, defaultFileName, the filename from the specified URL is used.
 
-The following code downloads a file named index.xml from the same directory as the SWF file:
+The following code downloads a file named index.xml from the same directory as the project:
 
 var request:URLRequest = new URLRequest(&quot;index.xml&quot;); var fileRef:FileReference = new FileReference(); fileRef.download(request);
 
@@ -666,7 +666,7 @@ var request:URLRequest = new URLRequest(&quot;index.xml&quot;); var fileToDownlo
 
 Renaming a file can be useful if the server filename was not intuitive or was server-generated. It’s also good to explicitly specify the defaultFileName parameter when you download a file using a server-side script, instead of downloading the file directly. For example, you need to specify the defaultFileName parameter if you have a server-side script that downloads specific files based on URL variables passed to it. Otherwise, the default name of the downloaded file is the name of your server-side script.
 
-Data can be sent to the server using the download() method by appending parameters to the URL for the server script to parse. The following ActionScript 3.0 snippet downloads a document based on which parameters are passed to a ColdFusion script:
+Data can be sent to the server using the download() method by appending parameters to the URL for the server script to parse. The following Haxe snippet downloads a document based on which parameters are passed to a ColdFusion script:
 
 package
 
@@ -798,6 +798,6 @@ trace(&quot;uploaded&quot;);
 
 }
 
-Because the Event.COMPLETE event is added to each individual FileReference object in the array, Flash Player calls the
+Because the Event.COMPLETE event is added to each individual FileReference object in the array, OpenFL calls the
 
 completeHandler() method when each individual file finishes uploading.

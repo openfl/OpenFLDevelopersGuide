@@ -2,7 +2,7 @@
 
 The News Layout example formats text to look something like a story in a printed newspaper. The input text can contain a headline, a subtitle, and the body of the story. Given a display width and height, this News Layout example formats the headline and the subtitle to take the full width of the display area. The story text is distributed across two or more columns.
 
-This example illustrates the following ActionScript programming techniques:
+This example illustrates the following Haxe programming techniques:
 
 *   Extending the TextField class
 *   Loading and applying an external CSS file
@@ -15,10 +15,10 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 | --- | --- |
 | NewsLayout.mxml or | The user interface for the application for Flex (MXML) or Flash (FLA). |
 | com/example/programmingas3/ne wslayout/StoryLayoutComponent.a s | A Flex UIComponent class that places the StoryLayout instance. |
-| com/example/programmingas3/ne wslayout/StoryLayout.as | The main ActionScript class that arranges all the components of a news story for display. |
+| com/example/programmingas3/ne wslayout/StoryLayout.as | The main Haxe class that arranges all the components of a news story for display. |
 | com/example/programmingas3/ne wslayout/FormattedTextField.as | A subclass of the TextField class that manages its own TextFormat object. |
 | com/example/programmingas3/ne wslayout/HeadlineTextField.as | A subclass of the FormattedTextField class that adjusts font sizes to fit a desired width. |
-| com/example/programmingas3/ne wslayout/MultiColumnTextField.as | An ActionScript class that splits text across two or more columns. |
+| com/example/programmingas3/ne wslayout/MultiColumnTextField.as | An Haxe class that splits text across two or more columns. |
 | story.css | A CSS file that defines text styles for the layout. |
 
 **Reading the external CSS file**

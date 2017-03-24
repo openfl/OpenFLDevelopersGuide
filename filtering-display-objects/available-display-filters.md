@@ -1,6 +1,6 @@
 # Available display filters {#available-display-filters}
 
-ActionScript 3.0 includes ten filter classes that you can apply to display objects and BitmapData objects:
+Haxe includes ten filter classes that you can apply to display objects and BitmapData objects:
 
 *   Bevel filter (BevelFilter class)
 *   Blur filter (BlurFilter class)
@@ -13,11 +13,11 @@ ActionScript 3.0 includes ten filter classes that you can apply to display objec
 *   Displacement map filter (DisplacementMapFilter class)
 *   Shader filter (ShaderFilter class)
 
-The first six filters are simple filters that can be used to create one specific effect, with some customization of the effect available. Those six filters can be applied using ActionScript, and can also be applied to objects in Flash Professional using the Filters panel. Consequently, even if you’re applying filters using ActionScript, if you have Flash Professional you can use the visual interface to quickly try out different filters and settings to figure out how to create a desired effect.
+The first six filters are simple filters that can be used to create one specific effect, with some customization of the effect available. Those six filters can be applied using Haxe, and can also be applied to objects in Flash Professional using the Filters panel. Consequently, even if you’re applying filters using Haxe, if you have Flash Professional you can use the visual interface to quickly try out different filters and settings to figure out how to create a desired effect.
 
-The final four filters are available in ActionScript only. Those filters, the color matrix filter, convolution filter, displacement map filter, and shader filter, are much more flexible in the types of effects that they can be used to create. Rather than being optimized for a single effect, they provide power and flexibility. For example, by selecting different values for its matrix, the convolution filter can be used to create effects such as blurring, embossing, sharpening, finding color edges, transformations, and more.
+The final four filters are available in Haxe only. Those filters, the color matrix filter, convolution filter, displacement map filter, and shader filter, are much more flexible in the types of effects that they can be used to create. Rather than being optimized for a single effect, they provide power and flexibility. For example, by selecting different values for its matrix, the convolution filter can be used to create effects such as blurring, embossing, sharpening, finding color edges, transformations, and more.
 
-Each of the filters, whether simple or complex, can be customized using their properties. Generally, you have two choices for setting filter properties. All the filters let you set the properties by passing parameter values to the filter object’s constructor. Alternatively, whether or not you set the filter properties by passing parameters, you can adjust the filters later by setting values for the filter object’s properties. Most of the example code listings set the properties directlyto make the example easier to follow. Nevertheless, you could usually achieve the same result in fewer lines of code by passing the values as parameters in the filter object’s constructor. For more details on the specifics of each filter, its properties and its constructor parameters, see the listings for the flash.filters package in the [ActionScript 3.0](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filters/package-detail.html) [Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filters/package-detail.html).
+Each of the filters, whether simple or complex, can be customized using their properties. Generally, you have two choices for setting filter properties. All the filters let you set the properties by passing parameter values to the filter object’s constructor. Alternatively, whether or not you set the filter properties by passing parameters, you can adjust the filters later by setting values for the filter object’s properties. Most of the example code listings set the properties directlyto make the example easier to follow. Nevertheless, you could usually achieve the same result in fewer lines of code by passing the values as parameters in the filter object’s constructor. For more details on the specifics of each filter, its properties and its constructor parameters, see the listings for the flash.filters package in the [Haxe](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/package-detail.html) [Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/package-detail.html).
 
 **Bevel filter**
 
@@ -339,7 +339,7 @@ count++;
 
 The ColorMatrixFilter class is used to manipulate the color and alpha values of the filtered object. This allows you to create saturation changes, hue rotation (shifting a palette from one range of colors to another), luminance-to-alpha changes, and other color manipulation effects using values from one color channel and potentially applying them to other channels.
 
-Conceptually, the filter goes through the pixels in the source image one by one and separates each pixel into its red, green, blue, and alpha components. It then multiplies values provided in the color matrix by each of these values, adding the results together to determine the resulting color value that will be displayed on the screen for that pixel. The matrix property of the filter is an array of 20 numbers that are used in calculating the final color. For details of the specific algorithm used to calculate the color values, see the entry describing the ColorMatrixFilter class’s matrix property in the [ActionScript 3.0 Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filters/ColorMatrixFilter.html).
+Conceptually, the filter goes through the pixels in the source image one by one and separates each pixel into its red, green, blue, and alpha components. It then multiplies values provided in the color matrix by each of these values, adding the results together to determine the resulting color value that will be displayed on the screen for that pixel. The matrix property of the filter is an array of 20 numbers that are used in calculating the final color. For details of the specific algorithm used to calculate the color values, see the entry describing the ColorMatrixFilter class’s matrix property in the [Haxe Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/ColorMatrixFilter.html).
 
 ## Convolution filter {#convolution-filter}
 
@@ -374,7 +374,7 @@ Similarly, this matrix will cause the pixels of an image to shift one pixel to t
 
 Notice that in this case, the pixel itself has no effect on the final value of the pixel displayed in that location on the final image—only the value of the pixel to the right is used to determine the pixel’s resulting value.
 
-In ActionScript, you create the matrix as a combination of an Array instance containing the values and two properties specifying the number of rows and columns in the matrix. The following example loads an image and, when the image finishes loading, applies a convolution filter to the image using the matrix in the previous listing:
+In Haxe, you create the matrix as a combination of an Array instance containing the values and two properties specifying the number of rows and columns in the matrix. The following example loads an image and, when the image finishes loading, applies a convolution filter to the image using the matrix in the previous listing:
 
 // Load an image onto the Stage. var loader:Loader = new Loader();
 
@@ -625,11 +625,11 @@ The code then loads an image and, as the mouse moves, applies the displacement f
 
 ## Shader filter {#shader-filter}
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
 The ShaderFilter class lets you use a custom filter effect defined as a Pixel Bender shader. Because the filter effect is written as a Pixel Bender shader, the effect can be completely customized. The filtered content is passed in to the shader as an image input, and the result of the shader operation becomes the filter result.
 
-**_Note:_ **_The Shader filter is available in ActionScript starting with Flash Player 10 and Adobe AIR 1.5._
+**_Note:_ **_The Shader filter is available in Haxe starting with OpenFL 10 and Adobe AIR 1.5._
 
 To apply a shader filter to an object, you first create a Shader instance representing the Pixel Bender shader that you are using. For details on the procedure for creating a Shader instance and on how to specify input image and parameter values, see
 

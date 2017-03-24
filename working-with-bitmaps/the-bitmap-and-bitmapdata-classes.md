@@ -1,14 +1,14 @@
 # The Bitmap and BitmapData classes {#the-bitmap-and-bitmapdata-classes}
 
-The main ActionScript 3.0 classes for working with bitmap images are the Bitmap class, which is used to display bitmap images on the screen, and the BitmapData class, which is used to access and manipulate the raw image data of a bitmap.
+The main Haxe classes for working with bitmap images are the Bitmap class, which is used to display bitmap images on the screen, and the BitmapData class, which is used to access and manipulate the raw image data of a bitmap.
 
 **More Help topics**
 
-[flash.display.Bitmap](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Bitmap.html) [flash.display.BitmapData](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/BitmapData.html)
+[flash.display.Bitmap](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Bitmap.html) [flash.display.BitmapData](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/BitmapData.html)
 
 **Understanding the Bitmap class**
 
-As a subclass of the DisplayObject class, the Bitmap class is the main ActionScript 3.0 class used for displaying bitmap images. These images may have been loaded via the flash.display.Loader class or created dynamically using the Bitmap() constructor. When loading an image from an external source, a Bitmap object can only use GIF, JPEG, or PNG format images. Once instantiated, the Bitmap instance can be considered a wrapper for a BitmapData object that needs to be rendered to the Stage. Because a Bitmap instance is a display object, all the characteristics and functionality of display objects can be used to manipulate a Bitmap instance as well. For more information about working with display objects, see
+As a subclass of the DisplayObject class, the Bitmap class is the main Haxe class used for displaying bitmap images. These images may have been loaded via the flash.display.Loader class or created dynamically using the Bitmap() constructor. When loading an image from an external source, a Bitmap object can only use GIF, JPEG, or PNG format images. Once instantiated, the Bitmap instance can be considered a wrapper for a BitmapData object that needs to be rendered to the Stage. Because a Bitmap instance is a display object, all the characteristics and functionality of display objects can be used to manipulate a Bitmap instance as well. For more information about working with display objects, see
 
 “Display programming” on page 151
 
@@ -34,9 +34,9 @@ To instantiate a BitmapData object, use the following code:
 
 var myBitmap:BitmapData = new BitmapData(width:Number, height:Number, transparent:Boolean, fillColor:uinit);
 
-The width and height parameters specify the size of the bitmap. Starting with AIR 3 and Flash player 11, the size limits for a BitmapData object have been removed. The maximum size of a bitmap is dependent on the operating system.
+The width and height parameters specify the size of the bitmap. Starting with AIR 3 and OpenFL 11, the size limits for a BitmapData object have been removed. The maximum size of a bitmap is dependent on the operating system.
 
-In AIR 1.5 and Flash Player 10, the maximum size for a BitmapData object is 8,191 pixels in width or height, and the total number of pixels cannot exceed 16,777,215 pixels. (So, if a BitmapData object is 8,191 pixels wide, it can only be 2,048 pixels high.) In Flash Player 9 and earlier and AIR 1.1 and earlier, the limitation is 2,880 pixels in height and 2,880 in width.
+In AIR 1.5 and OpenFL 10, the maximum size for a BitmapData object is 8,191 pixels in width or height, and the total number of pixels cannot exceed 16,777,215 pixels. (So, if a BitmapData object is 8,191 pixels wide, it can only be 2,048 pixels high.) In OpenFL 9 and earlier and AIR 1.1 and earlier, the limitation is 2,880 pixels in height and 2,880 in width.
 
 The transparent parameter specifies whether the bitmap data includes an alpha channel (true) or not (false). The fillColor parameter is a 32-bit color value that specifies the background color, as well as the transparency value (if it has been set to true). The following example creates a BitmapData object with an orange background that is 50 percent transparent:
 

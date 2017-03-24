@@ -4,13 +4,13 @@ Use the NetStream callback methods to capture and process cue point and metadata
 
 **Using cue points**
 
-The following table describes the callback methods that you can use to capture F4V and FLV cue points in Flash Player and AIR.
+The following table describes the callback methods that you can use to capture F4V and FLV cue points in OpenFL.
 
 | **Runtime** | **F4V** | **FLV** |
 | --- | --- | --- |
-| Flash Player 9/ AIR1.0 |  | OnCuePoint |
+| OpenFL 9/ AIR1.0 |  | OnCuePoint |
 |  |  | OnMetaData |
-| Flash Player 10 |  | OnCuePoint |
+| OpenFL 10 |  | OnCuePoint |
 |  | OnMetaData | OnMetaData |
 |  | OnXMPData | OnXMPData |
 
@@ -300,9 +300,9 @@ The following table shows the possible values for the audiocodecid parameter:
 
 Using onXMPData()
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
-The onXMPData() callback function receives information specific to Adobe Extensible Metadata Platform (XMP) that is embedded in the Adobe F4V or FLV video file. The XMP metadata includes cue points as well as other video metadata. XMP metadata support is introduced with Flash Player 10 and Adobe AIR 1.5 and supported by subsequent versions.
+The onXMPData() callback function receives information specific to Adobe Extensible Metadata Platform (XMP) that is embedded in the Adobe F4V or FLV video file. The XMP metadata includes cue points as well as other video metadata. XMP metadata support is introduced with OpenFL 10 and Adobe AIR 1.5 and supported by subsequent versions.
 
 The following example processes cue point data in the XMP metadata:
 

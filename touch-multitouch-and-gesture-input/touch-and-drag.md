@@ -1,8 +1,8 @@
 # Touch and drag {#touch-and-drag}
 
-Flash Player 10.1 and later, Adobe AIR 2 and later
+OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Two methods were added to [the Sprite class](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Sprite.html) to provide additional support for touch-enabled applications supporting touch-point input: Sprite.startTouchDrag() and Sprite.stopTouchDrag(). These methods behave the same as Sprite.startDrag() and Sprite.stopDrag() do for mouse events. However, notice the Sprite.startTouchDrag() and Sprite.stopTouchDrag() methods both take touchPointID values as parameters.
+Two methods were added to [the Sprite class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Sprite.html) to provide additional support for touch-enabled applications supporting touch-point input: Sprite.startTouchDrag() and Sprite.stopTouchDrag(). These methods behave the same as Sprite.startDrag() and Sprite.stopDrag() do for mouse events. However, notice the Sprite.startTouchDrag() and Sprite.stopTouchDrag() methods both take touchPointID values as parameters.
 
 The runtime assigns the touchPointID value to the event object for a touch event. Use this value to respond to a specific touch point in the case the environment supports multiple, simultaneous, touch points (even if it does not handle gestures). For more information about the touchPointID property, see
 

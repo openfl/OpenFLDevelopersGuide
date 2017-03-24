@@ -1,6 +1,6 @@
 # Compressing bitmap data {#compressing-bitmap-data}
 
-Flash Player 11.3 and later, AIR 3.3 and later
+OpenFL 11.3 and later, AIR 3.3 and later
 
 The flash.display.BitmapData.encode() method lets you natively compress bitmap data into one of the following image compression formats:
 

@@ -26,7 +26,7 @@ trace(&quot;Unable to match RegExp.&quot;);
 
 }
 
-If you want to send the user’s system capabilities to a server-side script so that the information can be stored in a database, you can use the following ActionScript code:
+If you want to send the user’s system capabilities to a server-side script so that the information can be stored in a database, you can use the following Haxe code:
 
 var url:String = &quot;log_visitor.cfm&quot;;
 

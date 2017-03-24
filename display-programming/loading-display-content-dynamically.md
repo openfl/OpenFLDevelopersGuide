@@ -1,16 +1,16 @@
 # Loading display content dynamically {#loading-display-content-dynamically}
 
-You can load any of the following external display assets into an ActionScript 3.0 application:
+You can load any of the following external display assets into an Haxe application:
 
-*   A SWF file authored in ActionScript 3.0—This file can be a Sprite, MovieClip, or any class that extends Sprite. In AIR applications on iOS, only SWF files that do not contain ActionScript bytecode can be loaded. This means that SWF files containing embedded data, such as images and sound can be loaded, but not SWF files containing executable code.
+*   A project authored in Haxe—This file can be a Sprite, MovieClip, or any class that extends Sprite. In AIR applications on iOS, only projects that do not contain Haxe bytecode can be loaded. This means that projects containing embedded data, such as images and sound can be loaded, but not projects containing executable code.
 *   An image file—This includes JPG, PNG, and GIF files.
-*   An AVM1 SWF file—This is a SWF file written in ActionScript 1.0 or 2.0\. (not supported in mobile AIR applications)
+*   An AVM1 project—This is a project written in Haxe 1.0 or 2.0\. (not supported in mobile AIR applications)
 
 You load these assets by using the Loader class.
 
 **Loading display objects**
 
-Loader objects are used to load SWF files and graphics files into an application. The Loader class is a subclass of the DisplayObjectContainer class. A Loader object can contain only one child display object in its display list—the display object representing the SWF or graphic file that it loads. When you add a Loader object to the display list, as in the following code, you also add the loaded child display object to the display list once it loads:
+Loader objects are used to load projects and graphics files into an application. The Loader class is a subclass of the DisplayObjectContainer class. A Loader object can contain only one child display object in its display list—the display object representing the SWF or graphic file that it loads. When you add a Loader object to the display list, as in the following code, you also add the loaded child display object to the display list once it loads:
 
 var pictLdr:Loader = new Loader(); var pictURL:String = &quot;banana.jpg&quot;
 
@@ -18,7 +18,7 @@ var pictURLReq:URLRequest = new URLRequest(pictURL); pictLdr.load(pictURLReq);
 
 this.addChild(pictLdr);
 
-Once the SWF file or image is loaded, you can move the loaded display object to another display object container, such as the container DisplayObjectContainer object in this example:
+Once the project or image is loaded, you can move the loaded display object to another display object container, such as the container DisplayObjectContainer object in this example:
 
 import flash.display.*; import flash.net.URLRequest; import flash.events.Event;
 
@@ -38,7 +38,7 @@ container.addChild(pictLdr.content);
 
 Once the file has started loading, a LoaderInfo object is created. A LoaderInfo object provides information such as load progress, the URLs of the loader and loadee, the number of bytes total for the media, and the nominal height and width of the media. A LoaderInfo object also dispatches events for monitoring the progress of the load.
 
-The following diagram shows the different uses of the LoaderInfo object—for the instance of the main class of the SWF file, for a Loader object, and for an object loaded by the Loader object:
+The following diagram shows the different uses of the LoaderInfo object—for the instance of the main class of the project, for a Loader object, and for an object loaded by the Loader object:
 
 **loaderInfo property**
 
@@ -79,20 +79,20 @@ For more information, see
 
 ## Specifying loading context {#specifying-loading-context}
 
-When you load an external file into Flash Player or AIR through the load() or loadBytes() method of the Loader class, you can optionally specify a context parameter. This parameter is a LoaderContext object.
+When you load an external file into OpenFL through the load() or loadBytes() method of the Loader class, you can optionally specify a context parameter. This parameter is a LoaderContext object.
 
 The LoaderContext class includes three properties that let you define the context of how the loaded content can be used:
 
-*   checkPolicyFile: Use this property only when loading an image file (not a SWF file). If you set this property to true, the Loader checks the origin server for a policy file (see
+*   checkPolicyFile: Use this property only when loading an image file (not a project). If you set this property to true, the Loader checks the origin server for a policy file (see
 
     “Website controls (policy files)” on page 1051
 
-    ). This is necessary only for content originating from domains other than that of the SWF file containing the Loader object. If the server grants permission to the Loader domain, ActionScript from SWF files in the Loader domain can access data in the loaded image; in other words, you can use the BitmapData.draw() command to access data in the loaded image.
+    ). This is necessary only for content originating from domains other than that of the project containing the Loader object. If the server grants permission to the Loader domain, Haxe from projects in the Loader domain can access data in the loaded image; in other words, you can use the BitmapData.draw() command to access data in the loaded image.
 
-Note that a SWF file from other domains than that of the Loader object can call Security.allowDomain() to permit a specific domain.
+Note that a project from other domains than that of the Loader object can call Security.allowDomain() to permit a specific domain.
 
-*   securityDomain: Use this property only when loading a SWF file (not an image). Specify this for a SWF file from a domain other than that of the file containing the Loader object. When you specify this option, Flash Player checks for the existence of a policy file, and if one exists, SWF files from the domains permitted in the cross-policy file can cross-script the loaded SWF content. You can specify flash.system.SecurityDomain.currentDomain as this parameter.
-*   applicationDomain: Use this property only when loading a SWF file written in ActionScript 3.0 (not an image or a SWF file written in ActionScript 1.0 or 2.0). When loading the file, you can specify that the file be included in the same application domain as that of the Loader object, by setting the applicationDomain parameter to flash.system.ApplicationDomain.currentDomain. By putting the loaded SWF file in the same application domain, you can access its classes directly. This can be useful if you are loading a SWF file that contains embedded media, which you can access via their associated class names. For more information, see
+*   securityDomain: Use this property only when loading a project (not an image). Specify this for a project from a domain other than that of the file containing the Loader object. When you specify this option, OpenFL checks for the existence of a policy file, and if one exists, projects from the domains permitted in the cross-policy file can cross-script the loaded SWF content. You can specify flash.system.SecurityDomain.currentDomain as this parameter.
+*   applicationDomain: Use this property only when loading a project written in Haxe (not an image or a project written in Haxe 1.0 or 2.0). When loading the file, you can specify that the file be included in the same application domain as that of the Loader object, by setting the applicationDomain parameter to flash.system.ApplicationDomain.currentDomain. By putting the loaded project in the same application domain, you can access its classes directly. This can be useful if you are loading a project that contains embedded media, which you can access via their associated class names. For more information, see
 
     “Working with application
 
@@ -108,7 +108,7 @@ var urlReq:URLRequest = new [URLRequest(&quot;http://www.[your_domain_here].com/
 
 ldr.load(urlReq, context);
 
-Here’s an example of checking for a policy file when loading a SWF from another domain, in order to place the file in the same security sandbox as the Loader object. Additionally, the code adds the classes in the loaded SWF file to the same application domain as that of the Loader object:
+Here’s an example of checking for a policy file when loading a SWF from another domain, in order to place the file in the same security sandbox as the Loader object. Additionally, the code adds the classes in the loaded project to the same application domain as that of the Loader object:
 
 var context:LoaderContext = new LoaderContext(); context.securityDomain = SecurityDomain.currentDomain; context.applicationDomain = ApplicationDomain.currentDomain;
 
@@ -116,18 +116,18 @@ var urlReq:URLRequest = new [URLRequest(&quot;http://www.[your_domain_here].com/
 
 ldr.load(urlReq, context);
 
-For more information, see the [LoaderContext](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/system/LoaderContext.html) class in the [ActionScript 3.0 Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/system/LoaderContext.html).
+For more information, see the [LoaderContext](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/system/LoaderContext.html) class in the [Haxe Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/system/LoaderContext.html).
 
-## Loading SWF files in AIR for iOS {#loading-swf-files-in-air-for-ios}
+## Loading projects in AIR for iOS {#loading-swf-files-in-air-for-ios}
 
 Adobe AIR 3.6 and later, iOS only
 
-On iOS devices, there are restrictions on loading and compiling code at runtime. Because of these restrictions, there are some necessary differences in the task of loading external SWF files into your application:
+On iOS devices, there are restrictions on loading and compiling code at runtime. Because of these restrictions, there are some necessary differences in the task of loading external projects into your application:
 
-*   All SWF files that contain ActionScript code must be included in the application package. No SWF containing code can be loaded from an external source such as over a network. As part of packaging the application, all ActionScript code in all SWF files in the application package is compiled to native code for iOS devices.
-*   You can’t load, unload, and then re-load a SWF file. If you attempt to do this, an error occurs.
-*   The behavior of loading into memory and then unloading it is the same as with desktop platforms. If you load a SWF file then unload it, all visual assets contained in the SWF are unloaded from memory. However, any class references to an ActionScript class in the loaded SWF remain in memory and can be accessed in ActionScript code.
-*   All loaded SWF files must be loaded in the same application domain as the main SWF file. This is not the default behavior, so for each SWF you load you must create a LoaderContext object specifying the main application domain, and pass that LoaderContext object to the Loader.load() method call. If you attempt to load a SWF in an application domain other than the main SWF application domain, an error occurs. This is true even if the loaded SWF only contains visual assets and no ActionScript code.
+*   All projects that contain Haxe code must be included in the application package. No SWF containing code can be loaded from an external source such as over a network. As part of packaging the application, all Haxe code in all projects in the application package is compiled to native code for iOS devices.
+*   You can’t load, unload, and then re-load a project. If you attempt to do this, an error occurs.
+*   The behavior of loading into memory and then unloading it is the same as with desktop platforms. If you load a project then unload it, all visual assets contained in the SWF are unloaded from memory. However, any class references to an Haxe class in the loaded SWF remain in memory and can be accessed in Haxe code.
+*   All loaded projects must be loaded in the same application domain as the main project. This is not the default behavior, so for each SWF you load you must create a LoaderContext object specifying the main application domain, and pass that LoaderContext object to the Loader.load() method call. If you attempt to load a SWF in an application domain other than the main SWF application domain, an error occurs. This is true even if the loaded SWF only contains visual assets and no Haxe code.
 
 The following example shows the code to use to load a SWF from the application package into the main SWF’s application domain:
 
@@ -139,9 +139,9 @@ var loaderContext:LoaderContext = new LoaderContext(false, ApplicationDomain.cur
 
 loader.load(url, loaderContext);
 
-A SWF file containing only assets and no code can be loaded from the application package or over a network. In either case, the SWF file must still be loaded into the main application domain.
+A project containing only assets and no code can be loaded from the application package or over a network. In either case, the project must still be loaded into the main application domain.
 
-For AIR versions prior to AIR 3.6, all code is stripped from SWFs other than the main application SWF during the compilation process. SWF files containing only visual assets can be included in the application package and loaded at runtime, but no code. If you attempt to load a SWF that contains ActionScript code, an error occurs. The error causes an “Uncompiled ActionScript” error dialog to appear in the application.
+For AIR versions prior to AIR 3.6, all code is stripped from SWFs other than the main application SWF during the compilation process. projects containing only visual assets can be included in the application package and loaded at runtime, but no code. If you attempt to load a SWF that contains Haxe code, an error occurs. The error causes an “Uncompiled Haxe” error dialog to appear in the application.
 
 See also
 
@@ -149,22 +149,22 @@ See also
 
 ## Using the ProLoader and ProLoaderInfo classes {#using-the-proloader-and-proloaderinfo-classes}
 
-Flash Player 9 and later, Adobe AIR 1.0 and later, and requires Flash Professional CS5.5
+OpenFL 9 and later, Adobe AIR 1.0 and later, and requires Flash Professional CS5.5
 
 To help with remote shared library (RSL) preloading, Flash Professional CS5.5 introduces the fl.display.ProLoader and fl.display.ProLoaderInfo classes. These classes mirror the flash.display.Loader and flash.display.LoaderInfo classes but provide a more consistent loading experience.
 
-In particular, ProLoader helps you load SWF files that use the Text Layout Framework (TLF) with RSL preloading. At runtime, SWF files that preload other SWF files or SWZ files, such as TLF, require an internal-only SWF wrapper file. The extra layer of complexity imposed by the SWF wrapper file can result in unwanted behavior. ProLoader solves this complexity to load these files as though they were ordinary SWF files. The solution used by the ProLoader class is transparent to the user and requires no special handling in ActionScript. In addition, ProLoader loads ordinary SWF content correctly.
+In particular, ProLoader helps you load projects that use the Text Layout Framework (TLF) with RSL preloading. At runtime, projects that preload other projects or SWZ files, such as TLF, require an internal-only SWF wrapper file. The extra layer of complexity imposed by the SWF wrapper file can result in unwanted behavior. ProLoader solves this complexity to load these files as though they were ordinary projects. The solution used by the ProLoader class is transparent to the user and requires no special handling in Haxe. In addition, ProLoader loads ordinary SWF content correctly.
 
-In Flash Professional CS5.5 and later, you can safely replace all usages of the Loader class with the ProLoader class. Then, export your application to Flash Player 10.2 or higher so that ProLoader can access the required ActionScript functionality. You can also use ProLoader while targeting earlier versions of Flash Player that support ActionScript 3.0\. However, you get full advantage of ProLoader features only with Flash Player 10.2 or higher. Always use ProLoader when you use TLF in Flash Professional CS5.5 or later. ProLoader is not needed in environments other than Flash Professional.
+In Flash Professional CS5.5 and later, you can safely replace all usages of the Loader class with the ProLoader class. Then, export your application to OpenFL 10.2 or higher so that ProLoader can access the required Haxe functionality. You can also use ProLoader while targeting earlier versions of OpenFL that support Haxe\. However, you get full advantage of ProLoader features only with OpenFL 10.2 or higher. Always use ProLoader when you use TLF in Flash Professional CS5.5 or later. ProLoader is not needed in environments other than Flash Professional.
 
-**_Important:_ **_For SWF files published in Flash Professional CS5.5 and later, you can always use the fl.display.ProLoader and fl.display.ProLoaderInfo classes instead of flash.display.Loader and flash.display.LoaderInfo._
+**_Important:_ **_For projects published in Flash Professional CS5.5 and later, you can always use the fl.display.ProLoader and fl.display.ProLoaderInfo classes instead of flash.display.Loader and flash.display.LoaderInfo._
 
 Issues addressed by the ProLoader class
 
-The ProLoader class addresses issues that the legacy Loader class was not designed to handle. These issues stem from RSL preloading of TLF libraries. Specifically, they apply to SWF files that use a Loader object to load other SWF files. Addressed issues include the following:
+The ProLoader class addresses issues that the legacy Loader class was not designed to handle. These issues stem from RSL preloading of TLF libraries. Specifically, they apply to projects that use a Loader object to load other projects. Addressed issues include the following:
 
-*   **Scripting between the loading file and the loaded file does not behave as expected.** The ProLoader class automatically sets the loading SWF file as the parent of the loaded SWF file. Thus, communications from the loading SWF file go directly to the loaded SWF file.
-*   **The SWF application must actively manage the loading process.** Doing so requires implementation of extra events, such as added, removed, addedToStage, and removedFromStage. If your application targets Flash Player
+*   **Scripting between the loading file and the loaded file does not behave as expected.** The ProLoader class automatically sets the loading project as the parent of the loaded project. Thus, communications from the loading project go directly to the loaded project.
+*   **The SWF application must actively manage the loading process.** Doing so requires implementation of extra events, such as added, removed, addedToStage, and removedFromStage. If your application targets OpenFL
 
 10.2 or later, ProLoader removes the need for this extra work.
 

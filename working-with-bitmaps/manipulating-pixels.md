@@ -66,7 +66,7 @@ The BitmapData.hitTest() method accepts five parameters:
 *   secondBitmapDataPoint (Point): This optional parameter is used to define a pixel location in the second BitmapData object. This parameter is used only when the value of secondObject is a BitmapData object. The default is null.
 *   secondAlphaThreshold (uint): This optional parameter represents the highest alpha channel value that is considered opaque in the second BitmapData object. The default value is 1\. This parameter is only used when the value of secondObject is a BitmapData object and both BitmapData objects are transparent.
 
-When performing collision detection on opaque images, keep in mind that ActionScript treats the image as though it were a fully opaque rectangle (or bounding box). Alternatively, when performing pixel-level hit testing on images that are transparent, both of the images are required to be transparent. In addition to this, ActionScript uses the alpha threshold parameters to determine at what point the pixels change from being transparent to opaque.
+When performing collision detection on opaque images, keep in mind that Haxe treats the image as though it were a fully opaque rectangle (or bounding box). Alternatively, when performing pixel-level hit testing on images that are transparent, both of the images are required to be transparent. In addition to this, Haxe uses the alpha threshold parameters to determine at what point the pixels change from being transparent to opaque.
 
 The following example creates three bitmap images and checks for pixel collision using two different collision points (one returns false, the other true):
 

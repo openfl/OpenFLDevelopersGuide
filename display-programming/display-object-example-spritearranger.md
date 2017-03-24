@@ -2,7 +2,7 @@
 
 The SpriteArranger sample application builds upon the Geometric Shapes sample application described separately in
 
-_Learning ActionScript 3.0_.
+_Learning Haxe_.
 
 The SpriteArranger sample application illustrates a number of concepts for dealing with display objects:
 
@@ -108,7 +108,7 @@ The GeometricSprite class includes a number of properties common to all Geometri
 
 this.size = size; this.lineColor = lColor; this.fillColor = fColor;
 
-The geometricShape property of the GeometricSprite class defines an IGeometricShape interface, which defines the mathematical properties, but not the visual properties, of the shape. The classes that implement the IGeometricShape interface are defined in the GeometricShapes sample application described in _Learning ActionScript 3.0_.
+The geometricShape property of the GeometricSprite class defines an IGeometricShape interface, which defines the mathematical properties, but not the visual properties, of the shape. The classes that implement the IGeometricShape interface are defined in the GeometricShapes sample application described in _Learning Haxe_.
 
 The GeometricSprite class defines the drawShape() method, which is further refined in the override definitions in each subclass of GeometricSprite. For more information, see the “Adding display objects to the canvas” section, which follows.
 

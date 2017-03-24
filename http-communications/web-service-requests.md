@@ -6,7 +6,7 @@ There are a variety of HTTP-based web services. The main types include:
 *   XML-RPC
 *   SOAP
 
-To use a web service in ActionScript 3, you create a URLRequest object, construct the web service call using either URL variables or an XML document, and send the call to the service using a URLLoader object. The Flex framework contains several classes that make it easier to use web services—especially useful when accessing complex SOAP services. Starting with Flash Professional CS3, you can use the Flex classes in applications developed with Flash Professional as well as in applications developed in Flash Builder.
+To use a web service in Haxe 3, you create a URLRequest object, construct the web service call using either URL variables or an XML document, and send the call to the service using a URLLoader object. The Flex framework contains several classes that make it easier to use web services—especially useful when accessing complex SOAP services. Starting with Flash Professional CS3, you can use the Flex classes in applications developed with Flash Professional as well as in applications developed in Flash Builder.
 
 In HTML-based AIR applications, you can use either the URLRequest and URLLoader classes or the JavaScript XMLHttpRequest class. If desired, you can also create a SWF library that exposes the web service components of the Flex framework to your JavaScript code.
 
@@ -30,9 +30,9 @@ REST-style web services use HTTP method verbs to designate the basic action and 
 
 [http://service.example.com/?method=getItem&amp;id=d3452](http://service.example.com/?method=getItem&amp;id=d3452)
 
-To access a REST-style web service with ActionScript, you can use the URLRequest, URLVariables, and URLLoader classes. In JavaScript code within an AIR application, you can also use an XMLHttpRequest.
+To access a REST-style web service with Haxe, you can use the URLRequest, URLVariables, and URLLoader classes. In JavaScript code within an AIR application, you can also use an XMLHttpRequest.
 
-Programming a REST-style web service call in ActionScript, typically involves the following steps:
+Programming a REST-style web service call in Haxe, typically involves the following steps:
 
 1.  Create a URLRequest object.
 2.  Set the service URL and HTTP method verb on the request object.
@@ -42,7 +42,7 @@ Programming a REST-style web service call in ActionScript, typically involves th
 6.  Send the call to the service with a URLLoader object.
 7.  Handle the complete event dispatched by the URLLoader that indicates that the service call is complete. It is also wise to listen for the various error events that can be dispatched by a URLLoader object.
 
-For example, consider a web service that exposes a test method that echoes the call parameters back to the requestor. The following ActionScript code could be used to call the service:
+For example, consider a web service that exposes a test method that echoes the call parameters back to the requestor. The following Haxe code could be used to call the service:
 
 import flash.events.Event; import flash.events.ErrorEvent;
 
@@ -404,9 +404,9 @@ return result;
 
 ## SOAP web service requests {#soap-web-service-requests}
 
-SOAP builds on the general XML-RPC web service concept and provides a richer, albeit more complex, means for transferring typed data. SOAP web services typically provide a Web Service Description Language file (WSDL) that specifies the web service calls, data types, and service URL. While ActionScript 3 does not provide direct support for SOAP, you can construct a SOAP XML message “by hand,” post it to the server, and then parse the results. However, for anything except the simplest SOAP web service, you can probably save a significant amount of development time using an existing SOAP library.
+SOAP builds on the general XML-RPC web service concept and provides a richer, albeit more complex, means for transferring typed data. SOAP web services typically provide a Web Service Description Language file (WSDL) that specifies the web service calls, data types, and service URL. While Haxe 3 does not provide direct support for SOAP, you can construct a SOAP XML message “by hand,” post it to the server, and then parse the results. However, for anything except the simplest SOAP web service, you can probably save a significant amount of development time using an existing SOAP library.
 
-The Flex framework includes libraries for accessing SOAP web services. In Flash Builder the library, rpc.swc, is automatically included in Flex projects, since it is part of the Flex framework. In Flash Professional, you can add the Flex framework.swc and rpc.swc to the library path of a project and then access the Flex classes with ActionScript.
+The Flex framework includes libraries for accessing SOAP web services. In Flash Builder the library, rpc.swc, is automatically included in Flex projects, since it is part of the Flex framework. In Flash Professional, you can add the Flex framework.swc and rpc.swc to the library path of a project and then access the Flex classes with Haxe.
 
 **More Help topics**
 

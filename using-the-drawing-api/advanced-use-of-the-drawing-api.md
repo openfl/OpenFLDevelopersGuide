@@ -1,10 +1,10 @@
 # Advanced use of the drawing API {#advanced-use-of-the-drawing-api}
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
-Flash Player 10, Adobe AIR 1.5, and later Flash runtimes, support an advanced set of drawing features. The drawing API enhancements for these runtimes expand upon the drawing methods from previous releases so you can establish data sets to generate shapes, alter shapes at runtime, and create three-dimensional effects. The drawing API enhancements consolidate existing methods into alternative commands. These commands leverage vector arrays and enumeration classes to provide data sets for drawing methods. Using vector arrays allows for more complex shapes to render quickly and for developers to change the array values programmatically for dynamic shape rendering at runtime.
+OpenFL 10, Adobe AIR 1.5, and later Flash runtimes, support an advanced set of drawing features. The drawing API enhancements for these runtimes expand upon the drawing methods from previous releases so you can establish data sets to generate shapes, alter shapes at runtime, and create three-dimensional effects. The drawing API enhancements consolidate existing methods into alternative commands. These commands leverage vector arrays and enumeration classes to provide data sets for drawing methods. Using vector arrays allows for more complex shapes to render quickly and for developers to change the array values programmatically for dynamic shape rendering at runtime.
 
-The drawing features introduced in Flash Player 10 are described in the following sections:
+The drawing features introduced in OpenFL 10 are described in the following sections:
 
 “Drawing Paths” on
 
@@ -26,7 +26,7 @@ drawTriangles()” on page 241
 
 .
 
-The following tasks are things you’ll likely want to accomplish using the advanced drawing API in ActionScript:
+The following tasks are things you’ll likely want to accomplish using the advanced drawing API in Haxe:
 
 *   Using Vector objects to store data for drawing methods
 *   Defining paths for drawing shapes programmatically in a single operation
@@ -50,15 +50,15 @@ The following reference list contains important terms that you will encounter in
 
 **Drawing Paths**
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
 The section on drawing lines and curves (see
 
 “Drawing lines and curves” on page 223
 
-) introduced the commands for drawing a single line (Graphics.lineTo()) or curve (Graphics.curveTo()) and then moving the line to another point (Graphics.moveTo()) to form a shape. The [Graphics.drawPath()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Graphics.html#drawPath()) and [Graphics.drawTriangles()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Graphics.html#drawTriangles()) methods accept a set of objects representing those same drawing commands as a parameter. With these methods, you can provide a series of Graphics.lineTo(), Graphics.curveTo(), or Graphics.moveTo() commands for the Flash runtime to execute in a single statement.
+) introduced the commands for drawing a single line (Graphics.lineTo()) or curve (Graphics.curveTo()) and then moving the line to another point (Graphics.moveTo()) to form a shape. The [Graphics.drawPath()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Graphics.html#drawPath()) and [Graphics.drawTriangles()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Graphics.html#drawTriangles()) methods accept a set of objects representing those same drawing commands as a parameter. With these methods, you can provide a series of Graphics.lineTo(), Graphics.curveTo(), or Graphics.moveTo() commands for the Flash runtime to execute in a single statement.
 
-The [GraphicsPathCommand](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/GraphicsPathCommand.html) enumeration class defines a set of constants that correspond to drawing commands. You pass a series of these constants (wrapped in a Vector instance) as a parameter for the Graphics.drawPath() method. Then with a single command you can render an entire shape, or several shapes. You can also alter the values passed to these methods to change an existing shape.
+The [GraphicsPathCommand](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/GraphicsPathCommand.html) enumeration class defines a set of constants that correspond to drawing commands. You pass a series of these constants (wrapped in a Vector instance) as a parameter for the Graphics.drawPath() method. Then with a single command you can render an entire shape, or several shapes. You can also alter the values passed to these methods to change an existing shape.
 
 In addition to the Vector of drawing commands, the drawPath() method needs a set of coordinates that correspond to the coordinates for each drawing command. Create a Vector instance containing coordinates (Number instances) and pass it to the drawPath() method as the second (data) argument.
 
@@ -108,7 +108,7 @@ graphics.beginFill(0x442266);//set the color graphics.drawPath(squareCommands, s
 
 ## Defining winding rules {#defining-winding-rules}
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
 The enhanced drawing API also introduces the concept of path “winding”: the direction for a path. The winding for a path is either positive (clockwise) or negative (counter-clockwise). The order in which the renderer interprets the coordinates provided by the vector for the data parameter determines the winding.
 
@@ -140,7 +140,7 @@ _Winding rules for intersecting areas_
 
 **Winding rule names**
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
 The names refer to a more specific rule that defines how these fills are managed. Positively wound paths are assigned a value of +1; negatively wound paths are assigned a value of -1\. Starting from a point within an enclosed area of a shape, draw a line from that point extending out indefinitely. The number of times that line crosses a path, and the combined values of those paths, are used to determine the fill. For even-odd winding, the count of times the line crosses a path is used. When the count is odd, the area is filled. For even counts, the area is unfilled. For non-zero winding, the values assigned to the paths are used. When the combined values of the path are not 0, the area is filled. When the combined value is 0, the area is unfilled.
 
@@ -154,9 +154,9 @@ _Winding rule counts and fills_
 
 Using winding rules
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
-These fill rules are complicated, but in some situations they are necessary. For example, consider drawing a star shape. With the standard even-odd rule, the shape would require ten different lines. With the non-zero winding rule, those ten lines are reduced to five. Here is the ActionScript for a star with five lines and a non-zero winding rule:
+These fill rules are complicated, but in some situations they are necessary. For example, consider drawing a star shape. With the standard even-odd rule, the shape would require ten different lines. With the non-zero winding rule, those ten lines are reduced to five. Here is the Haxe for a star with five lines and a non-zero winding rule:
 
 graphics.beginFill(0x60A0FF);
 
@@ -178,9 +178,9 @@ And, as images are animated or used as textures on three-dimensional objects and
 
 ## Using graphics data classes {#using-graphics-data-classes}
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
-The enhanced drawing API includes a set of classes in the flash.display package that implement the [IGraphicsData](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/IGraphicsData.html) interface. These classes act as value objects (data containers) that represent the drawing methods of the drawing API.
+The enhanced drawing API includes a set of classes in the flash.display package that implement the [IGraphicsData](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/IGraphicsData.html) interface. These classes act as value objects (data containers) that represent the drawing methods of the drawing API.
 
 The following classes implement the IGraphicsData interface:
 
@@ -195,7 +195,7 @@ The following classes implement the IGraphicsData interface:
 
 With these classes, you can store a complete drawing in a Vector object of IGraphicsData type (Vector.&lt;IGraphicsData&gt;). You can then reuse the graphics data as the data source for other shape instances or to store drawing information for later use.
 
-Notice you have multiple fill classes for each style of fill, but only one stroke class. ActionScript has only one stroke IGraphicsData class because the stroke class uses the fill classes to define its style. So every stroke is actually defined by a combination of the stroke class and a fill class. Otherwise, the API for these graphics data classes mirror the methods they represent in the flash.display.Graphics class:
+Notice you have multiple fill classes for each style of fill, but only one stroke class. Haxe has only one stroke IGraphicsData class because the stroke class uses the fill classes to define its style. So every stroke is actually defined by a combination of the stroke class and a fill class. Otherwise, the API for these graphics data classes mirror the methods they represent in the flash.display.Graphics class:
 
 | **Graphics Method** | **Corresponding Class** |
 | --- | --- |
@@ -210,7 +210,7 @@ Notice you have multiple fill classes for each style of fill, but only one strok
 | moveTo() lineTo() curveTo() drawPath() | GraphicsPath |
 | drawTriangles() | GraphicsTrianglePath |
 
-In addition, the [GraphicsPath class](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/GraphicsPath.html) has its own GraphicsPath.moveTo(), GraphicsPath.lineTo(), GraphicsPath.curveTo(), GraphicsPath.wideLineTo(), and GraphicsPath.wideMoveTo() utility methods to easily define those commands for a GraphicsPath instance. These utility methods simplify the task of defining or updating the commands and data values directly.
+In addition, the [GraphicsPath class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/GraphicsPath.html) has its own GraphicsPath.moveTo(), GraphicsPath.lineTo(), GraphicsPath.curveTo(), GraphicsPath.wideLineTo(), and GraphicsPath.wideMoveTo() utility methods to easily define those commands for a GraphicsPath instance. These utility methods simplify the task of defining or updating the commands and data values directly.
 
 **Drawing with vector graphics data**
 
@@ -256,21 +256,21 @@ When using graphics data classes, the fill is rendered whenever three or more po
 
 Reading vector graphics data
 
-Flash Player 11.6 and later, Adobe AIR 3.6 and later
+OpenFL 11.6 and later, Adobe AIR 3.6 and later
 
-In addition to drawing vector content to a display object, in Flash Player 11.6 and Adobe AIR 3.6 and later you can use the Graphics class’s readGraphicsData() method to obtain a data representation of the vector graphics content of a display object. This can be used to create a snapshot of a graphic to save, copy, create a spritesheet at run time, and more.
+In addition to drawing vector content to a display object, in OpenFL 11.6 and Adobe AIR 3.6 and later you can use the Graphics class’s readGraphicsData() method to obtain a data representation of the vector graphics content of a display object. This can be used to create a snapshot of a graphic to save, copy, create a spritesheet at run time, and more.
 
 Calling the readGraphicsData() method returns a Vector instance containing IGraphicsData objects. These are the same objects used to draw vector graphics with the drawGraphicsData() method.
 
-There are several limitations to reading vector graphics with the readGraphicsData() method. For more information, see the [readGraphicsData() entry in the ActionScript Language Reference](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Graphics.html#readGraphicsData()).
+There are several limitations to reading vector graphics with the readGraphicsData() method. For more information, see the [readGraphicsData() entry in the Haxe Language Reference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Graphics.html#readGraphicsData()).
 
 ## About using drawTriangles() {#about-using-drawtriangles}
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
-Another advanced method introduced in Flash Player 10 and Adobe AIR 1.5, [Graphics.drawTriangles()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Graphics.html#drawTriangles()), is like the [Graphics.drawPath()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Graphics.html#drawPath()) method. The Graphics.drawTriangles() method also uses a Vector.&lt;Number&gt; object to specify point locations for drawing a path.
+Another advanced method introduced in OpenFL 10 and Adobe AIR 1.5, [Graphics.drawTriangles()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Graphics.html#drawTriangles()), is like the [Graphics.drawPath()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Graphics.html#drawPath()) method. The Graphics.drawTriangles() method also uses a Vector.&lt;Number&gt; object to specify point locations for drawing a path.
 
-However, the real purpose for the Graphics.drawTriangles() method is to facilitate three-dimensional effects through ActionScript. For information about using Graphics.drawTriangles() to produce three-dimensional effects, see
+However, the real purpose for the Graphics.drawTriangles() method is to facilitate three-dimensional effects through Haxe. For information about using Graphics.drawTriangles() to produce three-dimensional effects, see
 
 “Using triangles for 3D effects” on page 363
 

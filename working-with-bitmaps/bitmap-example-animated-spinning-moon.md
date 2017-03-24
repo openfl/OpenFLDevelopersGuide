@@ -46,7 +46,7 @@ As you can see, the image is not one or several spheres; it’s a rectangular ph
 
 Notice that the image actually contains two copies of the moon surface photograph next to each other. This image is the source image from which image data is copied repeatedly to create the appearance of motion. By having two copies of the image next to each other, a continuous, uninterrupted scrolling effect can more easily be created. Let’s walk through the process of the animation step-by-step to see how this works.
 
-The process actually involves two separate ActionScript objects. First, there is the loaded source image, which in the code is represented by the BitmapData instance named textureMap. As described previously, textureMap is populated with image data as soon as the external image loads, using this code:
+The process actually involves two separate Haxe objects. First, there is the loaded source image, which in the code is represented by the BitmapData instance named textureMap. As described previously, textureMap is populated with image data as soon as the external image loads, using this code:
 
 textureMap = event.target.content.bitmapData;
 
@@ -74,7 +74,7 @@ var rotationTimer:Timer = new Timer(15); rotationTimer.addEventListener(TimerEve
 
 The code first creates the Timer instance named rotationTimer; the parameter passed to the Timer() constructor indicates that rotationTimer should trigger its timer event every 15 milliseconds. Next, the addEventListener() method is called, specifying that when the timer event (TimerEvent.TIMER) occurs, the method rotateMoon() is called. Finally, the timer is actually started by calling its start() method.
 
-Because of the way rotationTimer is defined, approximately every 15 milliseconds Flash Player calls the rotateMoon() method in the MoonSphere class, which is where the animation of the moon happens. The source code of the rotateMoon() method is as follows:
+Because of the way rotationTimer is defined, approximately every 15 milliseconds OpenFL calls the rotateMoon() method in the MoonSphere class, which is where the animation of the moon happens. The source code of the rotateMoon() method is as follows:
 
 private function rotateMoon(event:TimerEvent):void
 
@@ -172,7 +172,7 @@ With every cycle of the rotating moon animation, the BitmapData content of spher
 
 Remember, the Bitmap instance is not the actual bitmap data; it is a display object that displays the bitmap data on the screen. To use an analogy, a Bitmap instance is like the slide projector that is used to display photographic slides on a screen, and a BitmapData object is like the actual photographic slide that can be presented through a slide projector. A filter can be applied directly to a BitmapData object, which would be comparable to drawing directly onto a photographic slide to alter the image. A filter can also be applied to any display object, including a Bitmap instance; this would be like placing a filter in front of the slide projector’s lens to distort the output shown on the screen (without altering the original slide at all). Because the raw bitmap data is accessible through a Bitmap instance’s bitmapData property, the filter could have been applied directly to the raw bitmap data. However, in this case, it makes sense to apply the filter to the Bitmap display object rather than to the bitmap data.
 
-For detailed information about using the displacement map filter in ActionScript, see
+For detailed information about using the displacement map filter in Haxe, see
 
 “Filtering display objects” on
 

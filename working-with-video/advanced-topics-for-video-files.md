@@ -22,7 +22,7 @@ When you work with FLV files, you might have to configure your server to work wi
 
 Microsoft changed the way streaming media is handled in Microsoft Internet Information Services (IIS) 6.0 web server from earlier versions. Earlier versions of IIS do not require any modification to stream Flash Video. In IIS 6.0, the default web server that comes with Windows 2003, the server requires a MIME type to recognize that FLV files are streaming media.
 
-When SWF files that stream external FLV files are placed on Microsoft Windows Server® 2003 and are viewed in a browser, the SWF file plays correctly, but the FLV video does not stream. This issue affects all FLV files placed on Windows Server 2003, including files you make with earlier versions of the Flash authoring tool, and the Macromedia Flash Video Kit for Dreamweaver MX 2004 from Adobe. These files work correctly if you test them on other operating systems.
+When projects that stream external FLV files are placed on Microsoft Windows Server® 2003 and are viewed in a browser, the project plays correctly, but the FLV video does not stream. This issue affects all FLV files placed on Windows Server 2003, including files you make with earlier versions of the Flash authoring tool, and the Macromedia Flash Video Kit for Dreamweaver MX 2004 from Adobe. These files work correctly if you test them on other operating systems.
 
 For information about configuring Microsoft Windows 2003 and Microsoft IIS Server 6.0 to stream FLV video, see [www.adobe.com/go/tn_19439](http://www.adobe.com/go/tn_19439).
 
@@ -30,7 +30,7 @@ For information about configuring Microsoft Windows 2003 and Microsoft IIS Serve
 
 If you attempt to play a local FLV from a non-system drive on an Apple® Macintosh® computer by using a path that uses a relative slash (/), the video will not play. Non-system drives include, but are not limited to, CD-ROMs, partitioned hard disks, removable storage media, and connected storage devices.
 
-**_Note:_ **_The reason for this failure is a limitation of the operating system, not a limitation in Flash Player or AIR._
+**_Note:_ **_The reason for this failure is a limitation of the operating system, not a limitation in OpenFL._
 
 For an FLV file to play from a non-system drive on a Macintosh, refer to it with an absolute path using a colon-based notation (:) rather than slash-based notation (/). The following list shows the difference in the two kinds of notation:
 

@@ -30,6 +30,6 @@ System.setClipboard(errorString);
 
 }
 
-Flash Player 10 and AIR 1.0
+OpenFL 10 and AIR 1.0
 
 You can use the Clipboard class to read and write clipboard data in response to a user event. In AIR, a user event is not required for code running in the application sandbox to access the clipboard.

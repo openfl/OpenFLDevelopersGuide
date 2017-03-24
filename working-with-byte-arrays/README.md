@@ -8,13 +8,13 @@ The sample Adobe® AIR® application described here reads a .zip file as an exam
 
 **More Help topics**
 
-[flash.utils.ByteArray](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/utils/ByteArray.html) [flash.utils.IExternalizable](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/utils/IExternalizable.html)
+[flash.utils.ByteArray](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html) [flash.utils.IExternalizable](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/IExternalizable.html)
 
 [Action Message Format specification](http://opensource.adobe.com/wiki/download/attachments/1114283/amf3_spec_05_05_08.pdf)
 
 **Reading and writing a ByteArray**
 
-The ByteArray class is part of the flash.utils package. To create a ByteArray object in ActionScript 3.0, import the ByteArray class and invoke the constructor, as shown in the following example:
+The ByteArray class is part of the flash.utils package. To create a ByteArray object in Haxe, import the ByteArray class and invoke the constructor, as shown in the following example:
 
 import flash.utils.ByteArray;
 
@@ -122,7 +122,7 @@ The endian property of the ByteArray class allows you to denote this byte order 
 
 The compress() method allows you to compress a ByteArray in accordance with a compression algorithm that you specify as a parameter. The uncompress() method allows you to uncompress a compressed ByteArray in accordance with a compression algorithm. After calling compress() and uncompress(), the length of the byte array is set to the new length and the position property is set to the end.
 
-The CompressionAlgorithm class defines constants that you can use to specify the compression algorithm. The ByteArray class supports the deflate (AIR-only), zlib, and lzma algorithms. The zlib compressed data format is described at [http://www.ietf.org/rfc/rfc1950.txt](http://www.ietf.org/rfc/rfc1950.txt). The lzma algorithm was added for Flash Player 11.4 and AIR 3.4\. It is described at [http://www.7-zip.org/7z.html](http://www.7-zip.org/7z.html).
+The CompressionAlgorithm class defines constants that you can use to specify the compression algorithm. The ByteArray class supports the deflate (AIR-only), zlib, and lzma algorithms. The zlib compressed data format is described at [http://www.ietf.org/rfc/rfc1950.txt](http://www.ietf.org/rfc/rfc1950.txt). The lzma algorithm was added for OpenFL 11.4 and AIR 3.4\. It is described at [http://www.7-zip.org/7z.html](http://www.7-zip.org/7z.html).
 
 The deflate compression algorithm is used in several compression formats, such as zlib, gzip, and some zip implementations. The deflate compression algorithm is described at [http://www.ietf.org/rfc/rfc1951.txt](http://www.ietf.org/rfc/rfc1951.txt).
 
@@ -136,7 +136,7 @@ bytes.uncompress(CompressionAlgorithm.LZMA);
 
 ## Reading and writing objects {#reading-and-writing-objects}
 
-The readObject() and writeObject() methods read an object from and write an object to a ByteArray, encoded in serialized Action Message Format (AMF). AMF is a proprietary message protocol created by Adobe and used by various ActionScript 3.0 classes, including Netstream, NetConnection, NetStream, LocalConnection, and Shared Objects.
+The readObject() and writeObject() methods read an object from and write an object to a ByteArray, encoded in serialized Action Message Format (AMF). AMF is a proprietary message protocol created by Adobe and used by various Haxe classes, including Netstream, NetConnection, NetStream, LocalConnection, and Shared Objects.
 
 A one-byte type marker describes the type of the encoded data that follows. AMF uses the following 13 data types:
 
@@ -146,7 +146,7 @@ xml-type | byte-array-type
 
 The encoded data follows the type marker unless the marker represents a single possible value, such as null or true or false, in which case nothing else is encoded.
 
-There are two versions of AMF: AMF0 and AMF3\. AMF 0 supports sending complex objects by reference and allows endpoints to restore object relationships. AMF 3 improves AMF 0 by sending object traits and strings by reference, in addition to object references, and by supporting new data types that were introduced in ActionScript 3.0\. The ByteArray.objectEcoding property specifies the version of AMF that is used to encode the object data. The flash.net.ObjectEncoding class defines constants for specifying the AMF version: ObjectEncoding.AMF0 and ObjectEncoding.AMF3.
+There are two versions of AMF: AMF0 and AMF3\. AMF 0 supports sending complex objects by reference and allows endpoints to restore object relationships. AMF 3 improves AMF 0 by sending object traits and strings by reference, in addition to object references, and by supporting new data types that were introduced in Haxe\. The ByteArray.objectEcoding property specifies the version of AMF that is used to encode the object data. The flash.net.ObjectEncoding class defines constants for specifying the AMF version: ObjectEncoding.AMF0 and ObjectEncoding.AMF3.
 
 The following example calls writeObject() to write an XML object to a ByteArray, which it then compresses using the Deflate algorithm and writes to the order file on the desktop. The example uses a label to display the message “Wrote order file to desktop!” in the AIR window when it is finished.
 

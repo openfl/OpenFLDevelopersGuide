@@ -4,7 +4,7 @@ A podcast is a sound file that is distributed over the Internet, on demand or by
 
 This example is not a full-featured podcast aggregator application. For example, it does not manage subscriptions to specific podcasts or remember which podcasts the user has listened to the next time the application is run. It could serve as a starting point for a more full-featured podcast aggregator.
 
-The Podcast Player example illustrates the following ActionScript programming techniques:
+The Podcast Player example illustrates the following Haxe programming techniques:
 
 • Reading an external RSS feed and parsing its XML content
 
@@ -26,13 +26,13 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 | comp/example/progra mmingas3/podcastplay er/SoundPlayer.as | Class for the SoundPlayer movie clip symbol containing the user interface logic for the sound player (Flash only). |
 | comp/example/progra mmingas3/podcastplay er/PlayButtonRenderer. as | Custom cell renderer for displaying a play button in a data grid cell (Flash only). |
 | com/example/program mingas3/podcastplayer | A base class that provides common properties and methods for the RSSChannel class and the RSSItem class. |
-| com/example/program mingas3/podcastplayer | An ActionScript class that holds data about an RSS channel. |
+| com/example/program mingas3/podcastplayer | An Haxe class that holds data about an RSS channel. |
 
 | **File** | **Description** |
 | --- | --- |
-| com/example/program mingas3/podcastplayer | An ActionScript class that holds data about an RSS item. |
-| com/example/program mingas3/podcastplayer | The main ActionScript class for the application. It encapsulates the methods and events of the Sound class and the SoundChannel class and adds support for pausing and resuming playback. |
-| com/example/program mingas3/podcastplayer | An ActionScript class that retrieves data from a remote URL. |
+| com/example/program mingas3/podcastplayer | An Haxe class that holds data about an RSS item. |
+| com/example/program mingas3/podcastplayer | The main Haxe class for the application. It encapsulates the methods and events of the Sound class and the SoundChannel class and adds support for pausing and resuming playback. |
+| com/example/program mingas3/podcastplayer | An Haxe class that retrieves data from a remote URL. |
 | playerconfig.xml | An XML file containing a list of RSS feeds that represent podcast channels. |
 | comp/example/progra mmingas3/utils/DateUt il.as | Class that is used for easy date formatting (Flash only). |
 
@@ -47,7 +47,7 @@ This example uses the URLLoader utility class to retrieve text-based data from a
 
 ## Simplifying sound loading and playback using the SoundFacade class {#simplifying-sound-loading-and-playback-using-the-soundfacade-class}
 
-The ActionScript 3.0 sound architecture is powerful but complex. Applications that only need basic sound loading and playback features can use a class that hides some of the complexity by providing a simpler set of method calls and events. In the world of software design patterns, such a class is called a _facade_.
+The Haxe sound architecture is powerful but complex. Applications that only need basic sound loading and playback features can use a class that hides some of the complexity by providing a simpler set of method calls and events. In the world of software design patterns, such a class is called a _facade_.
 
 The SoundFacade class presents a single interface for performing the following tasks:
 
@@ -59,7 +59,7 @@ The SoundFacade class presents a single interface for performing the following t
 
 • Pausing and resuming playback of the sound using the Sound object and the SoundChannel object
 
-The SoundFacade class tries to offer most of the functionality of the ActionScript sound classes with less complexity. The following code shows the class declaration, the class properties, and the SoundFacade() constructor method:
+The SoundFacade class tries to offer most of the functionality of the Haxe sound classes with less complexity. The following code shows the class declaration, the class properties, and the SoundFacade() constructor method:
 
 public class SoundFacade extends EventDispatcher
 

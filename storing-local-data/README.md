@@ -1,6 +1,6 @@
 # Chapter 39: Storing local data {#chapter-39-storing-local-data}
 
-You use the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) class to store small amounts of data on the client computer. In Adobe AIR, you can also use the [EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/data/EncryptedLocalStore.html) class to store small amounts of privacy-sensitive user data on the local computer in an AIR application.
+You use the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) class to store small amounts of data on the client computer. In Adobe AIR, you can also use the [EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/data/EncryptedLocalStore.html) class to store small amounts of privacy-sensitive user data on the local computer in an AIR application.
 
 You can also read and write files on the file system and (in Adobe AIR) access local database files. For more information, see
 
@@ -32,7 +32,7 @@ A shared object, sometimes referred to as a “Flash cookie,” is a data file t
 
 **About shared objects**
 
-Shared objects function like browser cookies. You use the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) class to store data on the user’s local hard disk and call that data during the same session or in a later session. Applications can access only their own SharedObject data, and only if they are running on the same domain. The data is not sent to the server and is not accessible by other applications running on other domains, but can be made accessible by applications from the same domain.
+Shared objects function like browser cookies. You use the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) class to store data on the user’s local hard disk and call that data during the same session or in a later session. Applications can access only their own SharedObject data, and only if they are running on the same domain. The data is not sent to the server and is not accessible by other applications running on other domains, but can be made accessible by applications from the same domain.
 
 **Shared objects compared with cookies**
 
@@ -55,11 +55,11 @@ Cookies that adhere to the RFC 2109 standard generally have the following proper
 
 About the SharedObject class
 
-Using the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) class, you can create and delete shared objects, as well as detect the current size of a SharedObject object that you are using.
+Using the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) class, you can create and delete shared objects, as well as detect the current size of a SharedObject object that you are using.
 
 ## Creating a shared object {#creating-a-shared-object}
 
-To create a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) object, use the SharedObject.getLocal() method, which has the following syntax:
+To create a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) object, use the SharedObject.getLocal() method, which has the following syntax:
 
 SharedObject.getLocal(&quot;objectName&quot; [, pathname]): SharedObject
 
@@ -73,38 +73,38 @@ This creates a file on the client’s machine called preferences.sol.
 
 The term _local_ refers to the location of the shared object. In this case, Adobe® Flash® Player stores the SharedObject file locally in the client’s home directory.
 
-When you create a shared object, Flash Player creates a new directory for the application and domain inside its sandbox. It also creates a *.sol file that stores the SharedObject data. The default location of this file is a subdirectory of the user’s home directory. The following table shows the default locations of this directory:
+When you create a shared object, OpenFL creates a new directory for the application and domain inside its sandbox. It also creates a *.sol file that stores the SharedObject data. The default location of this file is a subdirectory of the user’s home directory. The following table shows the default locations of this directory:
 
 | **Operating System** | **Location** |
 | --- | --- |
-| Windows 95/98/ME/2000/XP | c:/Documents and Settings/_username_/Application Data/Macromedia/Flash Player/#SharedObjects |
-| Windows Vista/Windows 7 | c:/Users/_username_/AppData/Roaming/Macromedia/Flash Player/#SharedObjects |
-| Macintosh OS X | /Users/_username_/Library/Preferences/Macromedia/Flash Player/#SharedObjects/_web_domain_/_path_to_application_/_applicatio n_name_/_object_n_ame.sol |
+| Windows 95/98/ME/2000/XP | c:/Documents and Settings/_username_/Application Data/Macromedia/OpenFL/#SharedObjects |
+| Windows Vista/Windows 7 | c:/Users/_username_/AppData/Roaming/Macromedia/OpenFL/#SharedObjects |
+| Macintosh OS X | /Users/_username_/Library/Preferences/Macromedia/OpenFL/#SharedObjects/_web_domain_/_path_to_application_/_applicatio n_name_/_object_n_ame.sol |
 | Linux/Unix | /home/username/.macromedia/Flash_Player/#SharedObjects/_web_doma in_/_path_to_appl_ication/_application_name_/_object_name_.sol |
 
 Below the #SharedObjects directory is a randomly-named directory. Below that is a directory that matches the hostname, then the path to the application, and finally the *.sol file.
 
-For example, if you request an application named MyApp.swf on the local host, and within a subdirectory named /sos, Flash Player stores the *.sol file in the following location on Windows XP:
+For example, if you request an application named MyApp.swf on the local host, and within a subdirectory named /sos, OpenFL stores the *.sol file in the following location on Windows XP:
 
-c:/Documents and Settings/fred/Application Data/Macromedia/Flash Player/#SharedObjects/KROKWXRK/#localhost/sos/MyApp.swf/data.sol
+c:/Documents and Settings/fred/Application Data/Macromedia/OpenFL/#SharedObjects/KROKWXRK/#localhost/sos/MyApp.swf/data.sol
 
-**_Note:_ **_If you do not provide a name in the SharedObject.getLocal() method, Flash Player names the file undefined.sol._
+**_Note:_ **_If you do not provide a name in the SharedObject.getLocal() method, OpenFL names the file undefined.sol._
 
-By default, Flash can save locally persistent SharedObject objects of up to 100 KB per domain. This value is user- configurable. When the application tries to save data to a shared object that would make it bigger than 100 KB, Flash Player displays the Local Storage dialog box, which lets the user allow or deny more local storage for the domain that is requesting access.
+By default, Flash can save locally persistent SharedObject objects of up to 100 KB per domain. This value is user- configurable. When the application tries to save data to a shared object that would make it bigger than 100 KB, OpenFL displays the Local Storage dialog box, which lets the user allow or deny more local storage for the domain that is requesting access.
 
 **Specifying a path**
 
-You can use the optional _pathname_ parameter to specify a location for the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) file. This file must be a subdirectory of that domain’s SharedObject directory. For example, if you request an application on the localhost and specify the following:
+You can use the optional _pathname_ parameter to specify a location for the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) file. This file must be a subdirectory of that domain’s SharedObject directory. For example, if you request an application on the localhost and specify the following:
 
 mySO = SharedObject.getLocal(&quot;myObjectFile&quot;,&quot;/&quot;);
 
-Flash Player writes the SharedObject file in the /#localhost directory (or /localhost if the application is offline). This is useful if you want more than one application on the client to be able to access the same shared object. In this case, the client could run two Flex applications, both of which specify a path to the shared object that is the root of the domain; the client could then access the same shared object from both applications. To share data between more than application without persistence, you can use the LocalConnection object.
+OpenFL writes the SharedObject file in the /#localhost directory (or /localhost if the application is offline). This is useful if you want more than one application on the client to be able to access the same shared object. In this case, the client could run two Flex applications, both of which specify a path to the shared object that is the root of the domain; the client could then access the same shared object from both applications. To share data between more than application without persistence, you can use the LocalConnection object.
 
-If you specify a directory that does not exist, Flash Player does not create a SharedObject file.
+If you specify a directory that does not exist, OpenFL does not create a SharedObject file.
 
 Adding data to a shared object
 
-You add data to a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html)’s *.sol file using the data property of the SharedObject object. To add new data to the shared object, use the following syntax:
+You add data to a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html)’s *.sol file using the data property of the SharedObject object. To add new data to the shared object, use the following syntax:
 
 _sharedObject_name_.data._variable_ = _value_;
 
@@ -114,13 +114,13 @@ public var currentUserName:String = &quot;Reiner&quot;;
 
 public var itemsArray:Array = new Array(101,346,483); public var currentUserIsAdmin:Boolean = true; mySO.data.userName = currentUserName; mySO.data.itemNumbers = itemsArray; mySO.data.adminPrivileges = currentUserIsAdmin;
 
-After you assign values to the data property, you must instruct Flash Player to write those values to the SharedObject’s file. To force Flash Player to write the values to the SharedObject’s file, use the SharedObject.flush() method, as follows:
+After you assign values to the data property, you must instruct OpenFL to write those values to the SharedObject’s file. To force OpenFL to write the values to the SharedObject’s file, use the SharedObject.flush() method, as follows:
 
 mySO.flush();
 
-If you do not call the SharedObject.flush() method, Flash Player writes the values to the file when the application quits. However, this does not provide the user with an opportunity to increase the available space that Flash Player has to store the data if that data exceeds the default settings. Therefore, it is a good practice to call SharedObject.flush().
+If you do not call the SharedObject.flush() method, OpenFL writes the values to the file when the application quits. However, this does not provide the user with an opportunity to increase the available space that OpenFL has to store the data if that data exceeds the default settings. Therefore, it is a good practice to call SharedObject.flush().
 
-When using the flush() method to write shared objects to a user’s hard drive, you should be careful to check whether the user has explicitly disabled local storage using the Flash Player Settings Manager ([www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html)), as shown in the following example:
+When using the flush() method to write shared objects to a user’s hard drive, you should be careful to check whether the user has explicitly disabled local storage using the OpenFL Settings Manager ([www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html)), as shown in the following example:
 
 var so:SharedObject = SharedObject.getLocal(&quot;test&quot;); trace(&quot;Current SharedObject size is &quot; + so.size + &quot; bytes.&quot;); so.flush();
 
@@ -128,7 +128,7 @@ Storing objects in shared objects
 
 You can store simple objects such as Arrays or Strings in a SharedObject’s data property.
 
-The following example is an ActionScript class that defines methods that control the interaction with the shared object. These methods let the user add and remove objects from the shared object. This class stores an ArrayCollection that contains simple objects.
+The following example is an Haxe class that defines methods that control the interaction with the shared object. These methods let the user add and remove objects from the shared object. This class stores an ArrayCollection that contains simple objects.
 
 package {
 
@@ -174,7 +174,7 @@ mySO.flush();
 
 }
 
-The following Flex application creates an instance of the ActionScript class for each of the types of shared objects it needs. It then calls methods on that class when the user adds or removes blogs or site URLs.
+The following Flex application creates an instance of the Haxe class for each of the types of shared objects it needs. It then calls methods on that class when the user adds or removes blogs or site URLs.
 
 &lt;?xml version=&quot;1.0&quot;?&gt;
 
@@ -362,7 +362,7 @@ id=&quot;mySitesGrid&quot; dataProvider=&quot;{localSites}&quot; width=&quot;400
 
 Storing typed objects in shared objects
 
-You can store typed ActionScript instances in shared objects. You do this by calling the flash.net.registerClassAlias() method to register the class. If you create an instance of your class and store it in the data member of your shared object and later read the object out, you will get a typed instance. By default, the SharedObject objectEncoding property supports AMF3 encoding, and unpacks your stored instance from the SharedObject object; the stored instance retains the same type you specified when you called the registerClassAlias() method.
+You can store typed Haxe instances in shared objects. You do this by calling the flash.net.registerClassAlias() method to register the class. If you create an instance of your class and store it in the data member of your shared object and later read the object out, you will get a typed instance. By default, the SharedObject objectEncoding property supports AMF3 encoding, and unpacks your stored instance from the SharedObject object; the stored instance retains the same type you specified when you called the registerClassAlias() method.
 
 (iOS only) Prevent cloud backup of local shared objects
 
@@ -380,9 +380,9 @@ This creates a preferences.sol file and a history.sol file in the Flex applicati
 
 ## Creating a secure SharedObject {#creating-a-secure-sharedobject}
 
-When you create either a local or remote SharedObject using getLocal() or getRemote(), there is an optional parameter named secure that determines whether access to this shared object is restricted to SWF files that are delivered over an HTTPS connection. If this parameter is set to true and your SWF file is delivered over HTTPS, Flash Player creates a new secure shared object or gets a reference to an existing secure shared object. This secure shared object can be read from or written to only by SWF files delivered over HTTPS that call SharedObject.getLocal() with the secure parameter set to true. If this parameter is set to false and your SWF file is delivered over HTTPS, Flash Player creates a new shared object or gets a reference to an existing shared object.
+When you create either a local or remote SharedObject using getLocal() or getRemote(), there is an optional parameter named secure that determines whether access to this shared object is restricted to projects that are delivered over an HTTPS connection. If this parameter is set to true and your project is delivered over HTTPS, OpenFL creates a new secure shared object or gets a reference to an existing secure shared object. This secure shared object can be read from or written to only by projects delivered over HTTPS that call SharedObject.getLocal() with the secure parameter set to true. If this parameter is set to false and your project is delivered over HTTPS, OpenFL creates a new shared object or gets a reference to an existing shared object.
 
-This shared object can be read from or written to by SWF files delivered over non-HTTPS connections. If your SWF file is delivered over a non-HTTPS connection and you try to set this parameter to true, the creation of a new shared object (or the access of a previously created secure shared object) fails, an error is thrown, and the shared object is set to null. If you attempt to run the following snippet from a non-HTTPS connection, the SharedObject.getLocal() method will throw an error:
+This shared object can be read from or written to by projects delivered over non-HTTPS connections. If your project is delivered over a non-HTTPS connection and you try to set this parameter to true, the creation of a new shared object (or the access of a previously created secure shared object) fails, an error is thrown, and the shared object is set to null. If you attempt to run the following snippet from a non-HTTPS connection, the SharedObject.getLocal() method will throw an error:
 
 try
 
@@ -430,7 +430,7 @@ public function destroySharedObject():void { mySO.clear();
 
 ## SharedObject example {#sharedobject-example}
 
-The following example shows that you can store simple objects, such as a Date object, in a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/SharedObject.html) object without having to manually serialize and deserialize those objects.
+The following example shows that you can store simple objects, such as a Date object, in a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) object without having to manually serialize and deserialize those objects.
 
 The following example begins by welcoming you as a first-time visitor. When you click Log Out, the application stores the current date in a shared object. The next time you launch this application or refresh the page, the application welcomes you back with a reminder of the time you logged out.
 

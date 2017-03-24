@@ -4,4 +4,4 @@ The flash.geom package contains classes that define geometric objects such as po
 
 **More Help topics**
 
-[flash.geom package](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/geom/package-detail.html)
+[flash.geom package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/geom/package-detail.html)

@@ -1,6 +1,6 @@
 # Using Rectangle objects {#using-rectangle-objects}
 
-A [Rectangle](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/geom/Rectangle.html) object defines a rectangular area. A Rectangle object has a position, defined by the _x_ and _y_ coordinates of its upper-left corner, a width property, and a height property. You can define these properties for a new Rectangle object by calling the Rectangle() constructor function, as follows:
+A [Rectangle](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/geom/Rectangle.html) object defines a rectangular area. A Rectangle object has a position, defined by the _x_ and _y_ coordinates of its upper-left corner, a width property, and a height property. You can define these properties for a new Rectangle object by calling the Rectangle() constructor function, as follows:
 
 import flash.geom.Rectangle; var rx:Number = 0;
 

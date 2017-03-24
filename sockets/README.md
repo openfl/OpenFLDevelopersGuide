@@ -2,23 +2,23 @@
 
 A socket is a type of network connection established between two computer processes. Typically, the processes are running on two different computers attached to the same Internet Protocol (IP) network. However, the connected processes can be running on the same computer using the special “local host” IP address.
 
-Adobe Flash Player supports client-side Transport Control Protocol (TCP) sockets. A Flash Player application can connect to another process acting as a socket server, but cannot accept incoming connection requests from other processes. In other words, a Flash Player application can connect to a TCP server, but cannot serve as one.
+Adobe OpenFL supports client-side Transport Control Protocol (TCP) sockets. A OpenFL application can connect to another process acting as a socket server, but cannot accept incoming connection requests from other processes. In other words, a OpenFL application can connect to a TCP server, but cannot serve as one.
 
-The Flash Player API also includes the XMLSocket class. The XMLSocket class uses a Flash Player-specific protocol that allows you to exchange XML messages with a server that understands that protocol. The XMLSocket class was introduced in ActionScript 1 and is still supported to provide backward compatibility. In general, the Socket class should be used for new applications unless you are connecting to a server specifically created to communicate with Flash XMLSockets.
+The OpenFL API also includes the XMLSocket class. The XMLSocket class uses a OpenFL-specific protocol that allows you to exchange XML messages with a server that understands that protocol. The XMLSocket class was introduced in Haxe 1 and is still supported to provide backward compatibility. In general, the Socket class should be used for new applications unless you are connecting to a server specifically created to communicate with Flash XMLSockets.
 
 Adobe AIR adds several additional classes for socket-based network programming. AIR applications can act as TCP socket servers with the ServerSocket class and can connect to socket servers requiring SSL or TLS security with the SecureSocket class. AIR applications can also send and receive Universal Datagram Protocol (UDP) messages with the DatagramSocket class.
 
 **More Help topics**
 
-[flash.net package](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/package-detail.html)
+[flash.net package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/package-detail.html)
 
 “Connecting to sockets” on page 1068
 
 **TCP sockets**
 
-The Transmission Control Protocol (TCP) provides a way to exchange messages over a persistent network connection. TCP guarantees that any messages sent arrive in the correct order (barring major network problems). TCP connections require a “client” and a “server.” Flash Player can create client sockets. Adobe AIR can, additionally, create server sockets.
+The Transmission Control Protocol (TCP) provides a way to exchange messages over a persistent network connection. TCP guarantees that any messages sent arrive in the correct order (barring major network problems). TCP connections require a “client” and a “server.” OpenFL can create client sockets. Adobe AIR can, additionally, create server sockets.
 
-The following ActionScript APIs provide TCP connections:
+The following Haxe APIs provide TCP connections:
 
 *   Socket — allows a client application to connect to a server. The Socket class cannot listen for incoming connections.
 *   SecureSocket (AIR) — allows a client application to connect to a trusted server and engage in encrypted communications.
@@ -33,7 +33,7 @@ A binary socket connection is similar to an XML socket except that the client an
 
 The Socket class enables you to make socket connections and to read and write raw binary data. The Socket class is useful for interoperating with servers that use binary protocols. By using binary socket connections, you can write code that interacts with several different Internet protocols, such as POP3, SMTP, IMAP, and NNTP. This interaction, in turn, enables your applications to connect to mail and news servers.
 
-Flash Player can interface with a server by using the binary protocol of that server directly. Some servers use the big- endian byte order, and some use the little-endian byte order. Most servers on the Internet use the big-endian byte order because “network byte order” is big-endian. The little-endian byte order is popular because the Intel® x86 architecture uses it. You should use the endian byte order that matches the byte order of the server that is sending or receiving data. All operations that are performed by the IDataInput and IDataOutput interfaces, and the classes that implement those interfaces (ByteArray, Socket, and URLStream), are encoded by default in big-endian format; that is, with the most significant byte first. This default byte order was chosen to match Java and the official network byte order. To change whether big-endian or little-endian byte order is used, you can set the endian property to Endian.BIG_ENDIAN or Endian.LITTLE_ENDIAN.
+OpenFL can interface with a server by using the binary protocol of that server directly. Some servers use the big- endian byte order, and some use the little-endian byte order. Most servers on the Internet use the big-endian byte order because “network byte order” is big-endian. The little-endian byte order is popular because the Intel® x86 architecture uses it. You should use the endian byte order that matches the byte order of the server that is sending or receiving data. All operations that are performed by the IDataInput and IDataOutput interfaces, and the classes that implement those interfaces (ByteArray, Socket, and URLStream), are encoded by default in big-endian format; that is, with the most significant byte first. This default byte order was chosen to match Java and the official network byte order. To change whether big-endian or little-endian byte order is used, you can set the endian property to Endian.BIG_ENDIAN or Endian.LITTLE_ENDIAN.
 
 _The Socket class inherits all the methods defined by the IDataInput and IDataOutput interfaces (located in the flash.utils package). Those methods must be used to write to and read from the Socket._
 
@@ -95,13 +95,13 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 
 Telnet socket application overview
 
-**Flash Player 9 and later, Adobe AIR 1.0 and later**
+**OpenFL 9 and later, Adobe AIR 1.0 and later**
 
 The main TelnetSocket.mxml file is responsible for creating the user interface (UI) for the entire application.
 
 In addition to the UI, this file also defines two methods, login() and sendCommand(), to connect the user to the specified server.
 
-The following code lists the ActionScript in the main application file:
+The following code lists the Haxe in the main application file:
 
 import com.example.programmingas3.socket.Telnet;
 
@@ -125,7 +125,7 @@ The first line of code imports the Telnet class from the custom com.example.prog
 
 Telnet class overview
 
-**Flash Player 9 and later, Adobe AIR 1.0 and later**
+**OpenFL 9 and later, Adobe AIR 1.0 and later**
 
 The Telnet class is responsible for connecting to the remote Telnet server and sending/receiving data. The Telnet class declares the following private variables:
 
@@ -175,7 +175,7 @@ msg(error.message + &quot;\n&quot;); socket.close();
 
 Writing data to a socket
 
-**Flash Player 9 and later, Adobe AIR 1.0 and later**
+**OpenFL 9 and later, Adobe AIR 1.0 and later**
 
 To write data to a socket connection, you call any of the write methods in the Socket class. These write methods include writeBoolean(), writeByte(), writeBytes(), writeDouble(), and others. Then, flush the data in the output buffer using the flush() method. In the Telnet server, data is written to the socket connection using the writeBytes() method which takes the byte array as a parameter and sends it to the output buffer. The writeBytesToSocket() method is as follows:
 
@@ -191,7 +191,7 @@ This method gets called by the sendCommand() method of the main application file
 
 Displaying messages from the socket server
 
-**Flash Player 9 and later, Adobe AIR 1.0 and later**
+**OpenFL 9 and later, Adobe AIR 1.0 and later**
 
 Whenever a message is received from the socket server, or an event occurs, the custom msg() method is called. This method appends a string to the TextArea on the Stage and calls a custom setScroll() method, which causes the TextArea component to scroll to the bottom. The msg() method is as follows:
 
@@ -207,9 +207,9 @@ If you didn’t automatically scroll the contents of the TextArea component, use
 
 Scrolling a TextArea component
 
-**Flash Player 9 and later, Adobe AIR 1.0 and later**
+**OpenFL 9 and later, Adobe AIR 1.0 and later**
 
-The setScroll() method contains a single line of ActionScript that scrolls the TextArea component’s contents vertically so the user can see the last line of the returned text. The following snippet shows the setScroll() method:
+The setScroll() method contains a single line of Haxe that scrolls the TextArea component’s contents vertically so the user can see the last line of the returned text. The following snippet shows the setScroll() method:
 
 public function setScroll():void
 
@@ -225,7 +225,7 @@ This method sets the verticalScrollPosition property, which is the line number o
 
 An XML socket lets you create a connection to a remote server that remains open until explicitly closed. You can exchange string data, such as XML, between the server and client. A benefit of using an XML socket server is that the client does not need to explicitly request data. The server can send data without waiting for a request and can send data to every connected client connected.
 
-In Flash Player, and in Adobe AIR content outside the application sandbox, XML socket connections require the presence of a socket policy file on the target server. For more information, see
+In OpenFL, and in Adobe AIR content outside the application sandbox, XML socket connections require the presence of a socket policy file on the target server. For more information, see
 
 “Website controls (policy files)” on
 
@@ -239,7 +239,7 @@ and
 
 The XMLSocket class cannot tunnel through firewalls automatically because, unlike the Real-Time Messaging Protocol (RTMP), XMLSocket has no HTTP tunneling capability. If you need to use HTTP tunneling, consider using Flash Remoting or Flash Media Server (which supports RTMP) instead.
 
-The following restrictions apply to how and where content in Flash Player or in an AIR application outside of the application security sandbox can use an XMLSocket object to connect to the server:
+The following restrictions apply to how and where content in OpenFL or in an AIR application outside of the application security sandbox can use an XMLSocket object to connect to the server:
 
 *   For content outside of the application security sandbox, the XMLSocket.connect() method can connect only to TCP port numbers greater than or equal to 1024\. One consequence of this restriction is that the server daemons that communicate with the XMLSocket object must also be assigned to port numbers greater than or equal to 1024\. Port numbers below 1024 are often used by system services such as FTP (21), Telnet (23), SMTP (25), HTTP (80), and POP3 (110), so XMLSocket objects are barred from these ports for security reasons. The port number restriction limits the possibility that these resources will be inappropriately accessed and abused.
 *   For content outside of the application security sandbox, the XMLSocket.connect() method can connect only to computers in the same domain where the content resides. (This restriction is identical to the security rules for URLLoader.load().) To connect to a server daemon running in a domain other than the one where the content resides, you can create a cross-domain policy file on the server that allows access from specific domains. For details on cross-domain policy files, see
@@ -256,12 +256,12 @@ When you invoke the XMLSocket.connect() method, the application opens a TCP/IP c
 
 *   The XMLSocket.close() method of the XMLSocket class is called.
 *   No more references to the XMLSocket object exist.
-*   Flash Player exits.
+*   OpenFL exits.
 *   The connection is broken (for example, the modem disconnects).
 
 **Connecting to a server with the XMLSocket class**
 
-To create a socket connection, you must create a server-side application to wait for the socket connection request and send a response to the Flash Player or AIR application. This type of server-side application can be written in AIR or in another programming language such as Java, Python, or Perl. To use the XMLSocket class, the server computer must run a daemon that understands the simple protocol used by the XMLSocket class:
+To create a socket connection, you must create a server-side application to wait for the socket connection request and send a response to the OpenFL application. This type of server-side application can be written in AIR or in another programming language such as Java, Python, or Perl. To use the XMLSocket class, the server computer must run a daemon that understands the simple protocol used by the XMLSocket class:
 
 *   XML messages are sent over a full-duplex TCP/IP stream socket connection.
 *   Each XML message is a complete XML document, terminated by a zero (0) byte.
@@ -269,7 +269,7 @@ To create a socket connection, you must create a server-side application to wait
 
 Creating and connecting to a Java XML socket server
 
-**Flash Player 9 and later, Adobe AIR 1.0 and later**
+**OpenFL 9 and later, Adobe AIR 1.0 and later**
 
 The following code demonstrates a simple XMLSocket server written in Java that accepts incoming connections and displays the received messages in the command prompt window. By default, a new server is created on port 8080 of your local machine, although you can specify a different port number when starting your server from the command line.
 
@@ -399,7 +399,7 @@ trace(&quot;[&quot; + event.type + &quot;] &quot; + event.data);
 
 }
 
-To send data to the XMLSocket server, you use the XMLSocket.send() method and pass an XML object or string. Flash Player converts the supplied parameter to a String object and sends the content to the XMLSocket server followed by a zero (0) byte:
+To send data to the XMLSocket server, you use the XMLSocket.send() method and pass an XML object or string. OpenFL converts the supplied parameter to a String object and sends the content to the XMLSocket server followed by a zero (0) byte:
 
 xmlsock.send(xmlFormattedData);
 

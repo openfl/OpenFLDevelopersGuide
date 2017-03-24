@@ -4,7 +4,7 @@ Playing a loaded sound can be as simple as calling the Sound.play() method for a
 
 var snd:Sound = new Sound(new URLRequest(&quot;smallSound.mp3&quot;)); snd.play();
 
-When playing back sounds using ActionScript 3.0, you can perform the following operations:
+When playing back sounds using Haxe, you can perform the following operations:
 
 *   Play a sound from a specific starting position
 *   Pause a sound and resume playback from the same position later
@@ -28,7 +28,7 @@ In this example, the sound is played from a point one second after the start of 
 
 **Pausing and resuming a sound**
 
-If your application plays long sounds, like songs or podcasts, you probably want to let users pause and resume the playback of those sounds. A sound cannot literally be paused during playback in ActionScript; it can only be stopped. However, a sound can be played starting from any point. You can record the position of the sound at the time it was stopped, and then replay the sound starting at that position later.
+If your application plays long sounds, like songs or podcasts, you probably want to let users pause and resume the playback of those sounds. A sound cannot literally be paused during playback in Haxe; it can only be stopped. However, a sound can be played starting from any point. You can record the position of the sound at the time it was stopped, and then replay the sound starting at that position later.
 
 For example, let’s say your code loads and plays a sound file like this:
 

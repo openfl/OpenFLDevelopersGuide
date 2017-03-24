@@ -4,7 +4,7 @@ This discussion explains how to interact with the user’s system. It shows you 
 
 **More Help topics**
 
-[flash.system.System](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/system/System.html) [flash.system.Capabilities](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/system/Capabilities.html)
+[flash.system.System](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/system/System.html) [flash.system.Capabilities](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/system/Capabilities.html)
 
 **Basics of the client system environment**
 
@@ -30,7 +30,7 @@ The following reference list contains important terms:
 
 **Clipboard** The operating system’s container for holding text or items that are copied or cut, and from which items are pasted into applications.
 
-**Application domain** A mechanism for separating classes used in different SWF files, so that if the SWF files include different classes with the same name, the classes don’t overwrite each other.
+**Application domain** A mechanism for separating classes used in different projects, so that if the projects include different classes with the same name, the classes don’t overwrite each other.
 
 **IME (input method editor)** A program (or operating system tool) that is used to enter complex characters or symbols using a standard keyboard.
 

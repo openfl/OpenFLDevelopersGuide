@@ -1,9 +1,9 @@
 # Chapter 13: Working with bitmaps {#chapter-13-working-with-bitmaps}
 
-In addition to its vector drawing capabilities, ActionScript 3.0 includes the ability to create bitmap images or manipulate the pixel data of external bitmap images that are loaded into a SWF. With the ability to access and change individual pixel values, you can create your own filter-like image effects and use the built-in noise functions to create textures and random noise.
+In addition to its vector drawing capabilities, Haxe includes the ability to create bitmap images or manipulate the pixel data of external bitmap images that are loaded into a SWF. With the ability to access and change individual pixel values, you can create your own filter-like image effects and use the built-in noise functions to create textures and random noise.
 
-*   [Renaun Erickson: Rendering game assets in ActionScript using blitting techniques](http://www.adobe.com/devnet/flex/articles/actionscript_blitting.html)
-*   [Bitmap programming](http://my.safaribooksonline.com/0596526946/bitmap_programming): Chapter 26 of Essential ActionScript 3 by Colin Moock (O&#039;Reilly Media, 2007)
+*   [Renaun Erickson: Rendering game assets in Haxe using blitting techniques](http://www.adobe.com/devnet/flex/articles/Haxe_blitting.html)
+*   [Bitmap programming](http://my.safaribooksonline.com/0596526946/bitmap_programming): Chapter 26 of Essential Haxe 3 by Colin Moock (O&#039;Reilly Media, 2007)
 *   [Mike Jones: Working with Sprites in Pushbutton Engine](http://blog.flashgen.com/2011/03/22/working-with-sprites-in-pushbutton-engine/)
 *   [Flash &amp; Math: Pixel Particles Made Simple](http://www.flashandmath.com/intermediate/pixtut/)
 *   [Flixel](http://flixel.org/)
@@ -48,7 +48,7 @@ Bitmap images that use either the GIF or PNG formats can have an extra byte (alp
 
 GIF images allow single-bit transparency, which means that you can specify a single color, from a 256-color palette, to be transparent. PNG images, on the other hand, can have up to 256 levels of transparency. This function is especially beneficial when images or text are required to blend into backgrounds.
 
-ActionScript 3.0 replicates this extra transparency pixel byte within the BitmapData class. Similar to the PNG transparency model, ActionScript offers up to 256 levels of transparency.
+Haxe replicates this extra transparency pixel byte within the BitmapData class. Similar to the PNG transparency model, Haxe offers up to 256 levels of transparency.
 
 Important concepts and terms
 

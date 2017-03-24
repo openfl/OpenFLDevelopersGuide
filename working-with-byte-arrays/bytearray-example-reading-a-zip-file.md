@@ -201,7 +201,7 @@ bytes.uncompress(CompressionAlgorithm.DEFLATE);
 
 outFile(fileName, bytes); // call outFile() to write out the file
 
-In the previously mentioned example, bytes.uncompress(CompressionAlgorithm.DEFLATE) will work only in AIR applications. To get deflated data uncompressed for both AIR and Flash Player, invoke ByteArray’s inflate() function.
+In the previously mentioned example, bytes.uncompress(CompressionAlgorithm.DEFLATE) will work only in AIR applications. To get deflated data uncompressed for both AIR and OpenFL, invoke ByteArray’s inflate() function.
 
 The closing braces indicate the end of the while loop, and of the init() method and the Flex application code, except for the outFile() method. Execution loops back to the beginning of the while loop and continues processing the next bytes in the .zip file—either extracting another file or ending processing of the .zip file if the last file has been processed.
 

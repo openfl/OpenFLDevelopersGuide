@@ -1,6 +1,6 @@
 # Video example: Video Jukebox {#video-example-video-jukebox}
 
-The following example builds a simple video jukebox which dynamically loads a list of videos to play back in a sequential order. This allows you to build an application that lets a user browse through a series of video tutorials, or perhaps specifies which advertisements should be played back before delivering the user’s requested video. This example demonstrates the following features of ActionScript 3.0:
+The following example builds a simple video jukebox which dynamically loads a list of videos to play back in a sequential order. This allows you to build an application that lets a user browse through a series of video tutorials, or perhaps specifies which advertisements should be played back before delivering the user’s requested video. This example demonstrates the following features of Haxe:
 
 • Updating a playhead based on a video file’s playback progress
 
@@ -102,7 +102,7 @@ Finally add a Label instance to the display list and give it an instance name of
 
 ## Listening for a video object’s metadata {#listening-for-a-video-object-s-metadata}
 
-When Flash Player encounters metadata for each of the loaded videos, the onMetaData() callback handler is called on the NetStream object’s client property. The following code initializes an Object and sets up the specified callback handler:
+When OpenFL encounters metadata for each of the loaded videos, the onMetaData() callback handler is called on the NetStream object’s client property. The following code initializes an Object and sets up the specified callback handler:
 
 client = new Object(); client.onMetaData = metadataHandler;
 
@@ -120,7 +120,7 @@ positionBar.move(vid.x, vid.y + vid.height); positionBar.width = vid.width;
 
 ## Dynamically loading a video {#dynamically-loading-a-video}
 
-To dynamically load each of the videos, the application uses a NetConnection and a NetStream object. The following code creates a NetConnection object and passes null to the connect() method. By specifying null, Flash Player connects to a video on the local server instead of connecting to a server, such as a Flash Media Server.
+To dynamically load each of the videos, the application uses a NetConnection and a NetStream object. The following code creates a NetConnection object and passes null to the connect() method. By specifying null, OpenFL connects to a video on the local server instead of connecting to a server, such as a Flash Media Server.
 
 The following code creates both the NetConnection and NetStream instances, defines an event listener for the
 

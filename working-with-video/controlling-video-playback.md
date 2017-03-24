@@ -2,13 +2,13 @@
 
 The NetStream class offers four main methods for controlling video playback:
 
-[pause()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/NetStream.html#pause()): Pauses playback of a video stream. If the video is already paused, calling this method does nothing.
+[pause()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/NetStream.html#pause()): Pauses playback of a video stream. If the video is already paused, calling this method does nothing.
 
-[resume()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/NetStream.html#resume()): Resumes playback of a video stream that is paused. If the video is already playing, calling this method does nothing.
+[resume()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/NetStream.html#resume()): Resumes playback of a video stream that is paused. If the video is already playing, calling this method does nothing.
 
-[seek()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/NetStream.html#seek()): Seeks the keyframe closest to the specified location (an offset, in seconds, from the beginning of the stream).
+[seek()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/NetStream.html#seek()): Seeks the keyframe closest to the specified location (an offset, in seconds, from the beginning of the stream).
 
-[togglePause()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/NetStream.html#togglePause()): Pauses or resumes playback of a stream.
+[togglePause()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/NetStream.html#togglePause()): Pauses or resumes playback of a stream.
 
 **_Note:_ **_There is no stop() method. In order to stop a stream you must pause playback and seek to the beginning of the video stream._
 

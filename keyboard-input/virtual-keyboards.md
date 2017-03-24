@@ -1,6 +1,6 @@
 # Virtual keyboards {#virtual-keyboards}
 
-Flash Player 10.2 and later, AIR 2.6 and later
+OpenFL 10.2 and later, AIR 2.6 and later
 
 Mobile devices, such as phones and tablets, often provide a virtual, software keyboard instead of a physical one. The classes in the Flash API let you:
 
@@ -96,7 +96,7 @@ trace( &quot;tf2 dispatched: &quot; + event.type + &quot; -- &quot; + event.trig
 
 ## Adding virtual keyboard support for interactive objects {#adding-virtual-keyboard-support-for-interactive-objects}
 
-Flash Player 10.2 and later, AIR 2.6 and later (but not supported on iOS)
+OpenFL 10.2 and later, AIR 2.6 and later (but not supported on iOS)
 
 Normally, the virtual keyboard only opens when a TextField object is tapped. You can configure an instance of the InteractiveObject class to open the virtual keyboard when it receives focus.
 

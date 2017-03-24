@@ -1,6 +1,6 @@
 # Chapter 31: Mouse input {#chapter-31-mouse-input}
 
-Your application can create interactivity by capturing and responding to mouse input. Note that this section assumes that you are already familiar with the ActionScript 3.0 event model. For more information, see
+Your application can create interactivity by capturing and responding to mouse input. Note that this section assumes that you are already familiar with the Haxe event model. For more information, see
 
 “Handling events” on
 
@@ -16,13 +16,13 @@ For information on discovering what kind of mouse support is available (such as 
 
 **More Help topics**
 
-[flash.ui.Mouse](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/ui/Mouse.html) [flash.events.MouseEvent](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/MouseEvent.html)
+[flash.ui.Mouse](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Mouse.html) [flash.events.MouseEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/MouseEvent.html)
 
 “Touch, multitouch and gesture input” on page 581
 
 **Capturing mouse input**
 
-Mouse clicks create mouse events that can be used to trigger interactive functionality. You can add an event listener to the Stage to listen for mouse events that occur anywhere within the SWF file. You can also add event listeners to objects on the Stage that inherit from InteractiveObject (for example, Sprite or MovieClip); these listeners are triggered when the object is clicked.
+Mouse clicks create mouse events that can be used to trigger interactive functionality. You can add an event listener to the Stage to listen for mouse events that occur anywhere within the project. You can also add event listeners to objects on the Stage that inherit from InteractiveObject (for example, Sprite or MovieClip); these listeners are triggered when the object is clicked.
 
 As with keyboard events, mouse events bubble. In the following example, because square is a child of the Stage, the event dispatches both from the sprite square as well as from the Stage object when the square is clicked:
 

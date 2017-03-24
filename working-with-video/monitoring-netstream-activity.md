@@ -1,6 +1,6 @@
 # Monitoring NetStream activity {#monitoring-netstream-activity}
 
-Flash Player 10.3 and later, Adobe AIR 2.7 and later
+OpenFL 10.3 and later, Adobe AIR 2.7 and later
 
 You can monitor NetStream activity to collect the information required to support media usage analysis and reporting. The monitoring features discussed in this section allow you to create media measurement libraries that collect data without close coupling to the particular video player displaying the media. This allows your client developers to choose their favorite video players when using your library. Use the NetMonitor class to monitor the creation and activity of NetStream objects in an application. The NetMonitor class provides a list of the active NetStreams existing at any given time and also dispatches an event whenever a NetStream object is created.
 

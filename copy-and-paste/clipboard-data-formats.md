@@ -1,25 +1,25 @@
 # Clipboard data formats {#clipboard-data-formats}
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
-Clipboard formats describe the data placed in a Clipboard object. Flash Player or AIR automatically translates the standard data formats between ActionScript data types and system clipboard formats. In addition, application objects can be transferred within and between ActionScript-based applications using application-defined formats.
+Clipboard formats describe the data placed in a Clipboard object. OpenFL automatically translates the standard data formats between Haxe data types and system clipboard formats. In addition, application objects can be transferred within and between Haxe-based applications using application-defined formats.
 
-A Clipboard object can contain representations of the same information in different formats. For example, a Clipboard object representing a Sprite could include a reference format for use within the same application, a serialized format for use by another application running in Flash Player or AIR, a bitmap format for use by an image editor, and a file list format, perhaps with deferred rendering to encode a PNG file, for copying or dragging a representation of the Sprite to the file system.
+A Clipboard object can contain representations of the same information in different formats. For example, a Clipboard object representing a Sprite could include a reference format for use within the same application, a serialized format for use by another application running in OpenFL, a bitmap format for use by an image editor, and a file list format, perhaps with deferred rendering to encode a PNG file, for copying or dragging a representation of the Sprite to the file system.
 
 **Standard data formats**
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
 The constants defining the standard format names are provided in the ClipboardFormats class:
 
 | **Constant** | **Description** |
 | --- | --- |
-| TEXT_FORMAT | Text-format data is translated to and from the ActionScript String class. |
+| TEXT_FORMAT | Text-format data is translated to and from the Haxe String class. |
 | HTML_FORMAT | Text with HTML markup. |
-| RICH_TEXT_FORMAT | Rich-text-format data is translated to and from the ActionScript ByteArray class. The RTF markup is not interpreted or translated in any way. |
-| BITMAP_FORMAT | (AIR only) Bitmap-format data is translated to and from the ActionScript BitmapData class. |
-| FILE_LIST_FORMAT | (AIR only) File-list-format data is translated to and from an array of ActionScript File objects. |
-| URL_FORMAT | (AIR only) URL-format data is translated to and from the ActionScript String class. |
+| RICH_TEXT_FORMAT | Rich-text-format data is translated to and from the Haxe ByteArray class. The RTF markup is not interpreted or translated in any way. |
+| BITMAP_FORMAT | (AIR only) Bitmap-format data is translated to and from the Haxe BitmapData class. |
+| FILE_LIST_FORMAT | (AIR only) File-list-format data is translated to and from an array of Haxe File objects. |
+| URL_FORMAT | (AIR only) URL-format data is translated to and from the Haxe String class. |
 
 When copying and pasting data in response to a copy, cut, or paste event in HTML content hosted in an AIR application, MIME types must be used instead of the ClipboardFormat strings. The valid data MIME types are:
 
@@ -34,7 +34,7 @@ When copying and pasting data in response to a copy, cut, or paste event in HTML
 
 ## Custom data formats {#custom-data-formats}
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
 You can use application-defined custom formats to transfer objects as references or as serialized copies. References are valid only within the same application. Serialized objects can be transferred between applications, but can be used only with objects that remain valid when serialized and deserialized. Objects can usually be serialized if their properties are either simple types or serializable objects.
 
@@ -42,7 +42,7 @@ To add a serialized object to a Clipboard object, set the _serializable_ paramet
 
 **Transfer modes**
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
 When an object is written to the clipboard using a custom data format, the object data can be read from the clipboard either as a reference or as a serialized copy of the original object. There are four transfer modes that determine whether objects are transferred as references or as serialized copies:
 
@@ -55,7 +55,7 @@ When an object is written to the clipboard using a custom data format, the objec
 
 Reading and writing custom data formats
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
 When writing an object to the clipboard, you can use any string that does not begin with the reserved prefixes air: or flash: for the _format_ parameter. Use the same string as the format to read the object. The following examples illustrate how to read and write objects to the clipboard:
 
@@ -77,7 +77,7 @@ References are valid only if the Clipboard object originates from the current ap
 
 ## Deferred rendering {#deferred-rendering}
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
 If creating a data format is computationally expensive, you can use deferred rendering by supplying a function that supplies the data on demand. The function is called only if a receiver of the drop or paste operation requests data in the deferred format.
 
@@ -89,7 +89,7 @@ If a data format of the same type is added to a Clipboard object with the setDat
 
 **Pasting text using a deferred rendering function**
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
 The following example illustrates how to implement a deferred rendering function.
 

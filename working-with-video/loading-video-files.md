@@ -34,10 +34,10 @@ function asyncErrorHandler(event:AsyncErrorEvent):void
 
 vid.attachNetStream(ns);
 
-1.  Call the NetStream object’s play() method with the video file url as an argument to start the video playing. The following snippet loads and plays a video file named “video.mp4” in the same directory as the SWF file:
+1.  Call the NetStream object’s play() method with the video file url as an argument to start the video playing. The following snippet loads and plays a video file named “video.mp4” in the same directory as the project:
 
 ns.play(&quot;video.mp4&quot;);
 
 **More Help topics**
 
-[Flex: Spark VideoPlayer control](http://help.adobe.com/en_US/flex/using/WSc78f87379113c38b-669905c51221a3b97af-8000.html) [spark.components.VideoDisplay](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/spark/components/VideoDisplay.html?allClasses=1)
+[Flex: Spark VideoPlayer control](http://help.adobe.com/en_US/flex/using/WSc78f87379113c38b-669905c51221a3b97af-8000.html) [spark.components.VideoDisplay](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/spark/components/VideoDisplay.html?allClasses=1)

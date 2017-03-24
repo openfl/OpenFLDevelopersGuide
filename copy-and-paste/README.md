@@ -1,6 +1,6 @@
 # Chapter 33: Copy and paste {#chapter-33-copy-and-paste}
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
 Use the classes in the clipboard API to copy information to and from the system clipboard. The data formats that can be transferred into or out of an application running in Adobe® Flash® Player or Adobe® AIR® include:
 
@@ -22,7 +22,7 @@ Use the classes in the clipboard API to copy information to and from the system 
 
 **Basics of copy-and-paste**
 
-Flash Player 10 and later, Adobe AIR 1.0 and later
+OpenFL 10 and later, Adobe AIR 1.0 and later
 
 The copy-and-paste API contains the following classes.
 
@@ -30,9 +30,9 @@ The copy-and-paste API contains the following classes.
 | --- | --- |
 | flash.desktop | 
 
-*   [Clipboard](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/desktop/Clipboard.html)
-*   [ClipboardFormats](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/desktop/ClipboardFormats.html)
-*   [ClipboardTransferMode](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/desktop/ClipboardTransferMode.html)
+*   [Clipboard](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/desktop/Clipboard.html)
+*   [ClipboardFormats](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/desktop/ClipboardFormats.html)
+*   [ClipboardTransferMode](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/desktop/ClipboardTransferMode.html)
 
  |
 

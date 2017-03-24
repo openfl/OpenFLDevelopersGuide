@@ -1,6 +1,6 @@
 # Asynchronous decoding of bitmap images {#asynchronous-decoding-of-bitmap-images}
 
-Flash Player 11 and later, Adobe AIR 2.6 and later
+OpenFL 11 and later, Adobe AIR 2.6 and later
 
 When you work with bitmap images, you can asynchronously decode and load the bitmap images to improve your application’s perceived performance. Decoding a bitmap image asynchronously can take the same time as decoding the image synchronously in many cases. However, the bitmap image gets decoded in a separate thread before the associated Loader object sends the COMPLETE event. Hence, you can asynchronously decode larger images after loading them.
 

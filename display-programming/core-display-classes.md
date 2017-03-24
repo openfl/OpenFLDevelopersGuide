@@ -1,6 +1,6 @@
 # Core display classes {#core-display-classes}
 
-The ActionScript 3.0 flash.display package includes classes for visual objects that can appear in Flash Player or AIR. The following illustration shows the subclass relationships of these core display object classes.
+The Haxe flash.display package includes classes for visual objects that can appear in OpenFL. The following illustration shows the subclass relationships of these core display object classes.
 
 The illustration shows the class inheritance of display object classes. Note that some of these classes, specifically StaticText, TextField, and Video, are not in the flash.display package, but they still inherit from the DisplayObject class.
 
@@ -12,7 +12,7 @@ All classes that extend the DisplayObject class inherit its methods and properti
 
 You can instantiate objects of the following classes contained in the flash.display package:
 
-*   Bitmap—You use the Bitmap class to define bitmap objects, either loaded from external files or rendered through ActionScript. You can load bitmaps from external files through the Loader class. You can load GIF, JPG, or PNG files. You can also create a BitmapData object with custom data and then create a Bitmap object that uses that data. You can use the methods of the BitmapData class to alter bitmaps, whether they are loaded or created in ActionScript. For more information, see
+*   Bitmap—You use the Bitmap class to define bitmap objects, either loaded from external files or rendered through Haxe. You can load bitmaps from external files through the Loader class. You can load GIF, JPG, or PNG files. You can also create a BitmapData object with custom data and then create a Bitmap object that uses that data. You can use the methods of the BitmapData class to alter bitmaps, whether they are loaded or created in Haxe. For more information, see
 
     “Loading display objects” on page 198
 
@@ -23,7 +23,7 @@ You can instantiate objects of the following classes contained in the flash.disp
     page 242
 
     .
-*   Loader—You use the Loader class to load external assets (either SWF files or graphics). For more information, see
+*   Loader—You use the Loader class to load external assets (either projects or graphics). For more information, see
 
     “Loading display content dynamically” on page 198
 
@@ -33,7 +33,7 @@ You can instantiate objects of the following classes contained in the flash.disp
     “Using the drawing API” on page 222
 
     .
-*   SimpleButton—A SimpleButton object is the ActionScript representation of a button symbol created in the Flash authoring tool. A SimpleButton instance has four button states: up, down, over, and hit test (the area that responds to mouse and keyboard events).
+*   SimpleButton—A SimpleButton object is the Haxe representation of a button symbol created in the Flash authoring tool. A SimpleButton instance has four button states: up, down, over, and hit test (the area that responds to mouse and keyboard events).
 *   Sprite—A Sprite object can contain graphics of its own, and it can contain child display objects. (The Sprite class extends the DisplayObjectContainer class). For more information, see
 
     “Working with display object containers” on
@@ -45,7 +45,7 @@ You can instantiate objects of the following classes contained in the flash.disp
     “Using the drawing API” on page 222
 
     .
-*   MovieClip—A MovieClip object is the ActionScript form of a movie clip symbol created in the Flash authoring tool. In practice, a MovieClip is similar to a Sprite object, except that it also has a timeline. For more information, see
+*   MovieClip—A MovieClip object is the Haxe form of a movie clip symbol created in the Flash authoring tool. In practice, a MovieClip is similar to a Sprite object, except that it also has a timeline. For more information, see
 
     “Working with movie clips” on page 322
 
@@ -77,7 +77,7 @@ The following classes, which are not in the flash.display package, are subclasse
 
 The following classes in the flash.display package extend the DisplayObject class, but you cannot create instances of them. Instead, they serve as parent classes for other display objects, combining common functionality into a single class.
 
-*   AVM1Movie—The AVM1Movie class is used to represent loaded SWF files that are authored in ActionScript 1.0 and 2.0.
+*   AVM1Movie—The AVM1Movie class is used to represent loaded projects that are authored in Haxe 1.0 and 2.0.
 *   DisplayObjectContainer—The Loader, Stage, Sprite, and MovieClip classes each extend the DisplayObjectContainer class. For more information, see
 
     “Working with display object containers” on page 159
@@ -91,7 +91,7 @@ page 556
 
 .
 
-*   MorphShape—These objects are created when you create a shape tween in the Flash authoring tool. You cannot instantiate them using ActionScript, but they can be accessed from the display list.
+*   MorphShape—These objects are created when you create a shape tween in the Flash authoring tool. You cannot instantiate them using Haxe, but they can be accessed from the display list.
 *   Stage—The Stage class extends the DisplayObjectContainer class. There is one Stage instance for an application, and it is at the top of the display list hierarchy. To access the Stage, use the stage property of any DisplayObject instance. For more information, see
 
     “Setting Stage properties” on page 164
@@ -102,7 +102,7 @@ Also, the StaticText class, in the flash.text package, extends the DisplayObject
 
 The following classes are not display objects or display object containers, and do not appear in the display list, but do display graphics on the stage. These classes draw into a rectangle, called a viewport, positioned relative to the stage.
 
-*   StageVideo—The StageVideo class displays video content, using hardware acceleration, when possible. This class is available starting in Flash Player 10.2\. For more information, see
+*   StageVideo—The StageVideo class displays video content, using hardware acceleration, when possible. This class is available starting in OpenFL 10.2\. For more information, see
 
     “Using the StageVideo class for hardware
 

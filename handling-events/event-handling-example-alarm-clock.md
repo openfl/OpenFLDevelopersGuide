@@ -4,7 +4,7 @@ The Alarm Clock example consists of a clock that allows the user to specify a ti
 
 “Working with dates and times” on page 1
 
-Alarm Clock illustrates several aspects of working with events in ActionScript 3.0, including:
+Alarm Clock illustrates several aspects of working with events in Haxe, including:
 
 *   Listening and responding to an event
 *   Notifying listeners of an event
@@ -28,7 +28,7 @@ The primary functionality of the clock in this example, including tracking the t
 
 . The AlarmClock class extends the SimpleClock class from that example by adding the functionality required for an alarm clock, including setting the alarm time and providing notification when the alarm “goes off.”
 
-Providing notification when something happens is the job that events are made for. The AlarmClock class exposes the Alarm event, which other objects can listen for in order to perform desired actions. In addition, the AlarmClock class uses an instance of the Timer class to determine when to trigger its alarm. Like the AlarmClock class, the Timer class provides an event to notify other objects (an AlarmClock instance, in this case) when a certain amount of time has passed. As with most ActionScript applications, events form an important part of the functionality of the Alarm Clock sample application.
+Providing notification when something happens is the job that events are made for. The AlarmClock class exposes the Alarm event, which other objects can listen for in order to perform desired actions. In addition, the AlarmClock class uses an instance of the Timer class to determine when to trigger its alarm. Like the AlarmClock class, the Timer class provides an event to notify other objects (an AlarmClock instance, in this case) when a certain amount of time has passed. As with most Haxe applications, events form an important part of the functionality of the Alarm Clock sample application.
 
 ## Triggering the alarm {#triggering-the-alarm}
 
@@ -132,7 +132,7 @@ A method that is registered as an event listener must be defined with the approp
 
 ## Notifying others of the alarm {#notifying-others-of-the-alarm}
 
-Like the Timer class, the AlarmClock class provides an event that allows other code to receive notifications when the alarm goes off. For a class to use the event-handling framework built into ActionScript, that class must implement the flash.events.IEventDispatcher interface. Most commonly, this is done by extending the flash.events.EventDispatcher class, which provides a standard implementation of IEventDispatcher (or by extending one of EventDispatcher’s subclasses). As described previously, the AlarmClock class extends the SimpleClock class, which (through a chain of inheritance) extends the EventDispatcher class. All of this means that the AlarmClock class already has built-in functionality to provide its own events.
+Like the Timer class, the AlarmClock class provides an event that allows other code to receive notifications when the alarm goes off. For a class to use the event-handling framework built into Haxe, that class must implement the flash.events.IEventDispatcher interface. Most commonly, this is done by extending the flash.events.EventDispatcher class, which provides a standard implementation of IEventDispatcher (or by extending one of EventDispatcher’s subclasses). As described previously, the AlarmClock class extends the SimpleClock class, which (through a chain of inheritance) extends the EventDispatcher class. All of this means that the AlarmClock class already has built-in functionality to provide its own events.
 
 Other code can register to be notified of the AlarmClock class’s alarm event by calling the addEventListener() method that AlarmClock inherits from EventDispatcher. When an AlarmClock instance is ready to notify other code that its alarm event has been raised, it does so by calling the dispatchEvent() method, which is also inherited from EventDispatcher.
 
@@ -195,7 +195,7 @@ super(ALARM); this.message = message;
 
 The best way to create a custom event object class is to define a class that extends the Event class, as shown in the preceding example. To supplement the inherited functionality, the AlarmEvent class defines a property message that contains the text of the alarm message associated with the event; the message value is passed in as a parameter in the AlarmEvent constructor. The AlarmEvent class also defines the constant ALARM, which can be used to refer to the specific event (alarm) when calling the AlarmClock class’s addEventListener() method.
 
-In addition to adding custom functionality, every Event subclass must override the inherited clone() method as part of the ActionScript event-handling framework. Event subclasses can also optionally override the inherited toString() method to include the custom event’s properties in the value returned when the toString() method is called.
+In addition to adding custom functionality, every Event subclass must override the inherited clone() method as part of the Haxe event-handling framework. Event subclasses can also optionally override the inherited toString() method to include the custom event’s properties in the value returned when the toString() method is called.
 
 /**
 

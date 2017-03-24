@@ -12,7 +12,7 @@ myShape.y = 212;
 
 The display object positioning system treats the Stage as a Cartesian coordinate system (the common grid system with a horizontal x axis and vertical y axis). The origin of the coordinate system (the 0,0 coordinate where the x and y axes meet) is at the top-left corner of the Stage. From there, x values are positive going right and negative going left, while (in contrast to typical graphing systems) y values are positive going down and negative going up. For example, the previous lines of code move the object myShape to the x coordinate 17 (17 pixels to the right of the origin) and y coordinate 212 (212 pixels below the origin).
 
-By default, when a display object is created using ActionScript, the x and y properties are both set to 0, placing the object at the top-left corner of its parent content.
+By default, when a display object is created using Haxe, the x and y properties are both set to 0, placing the object at the top-left corner of its parent content.
 
 **Changing position relative to the Stage**
 
@@ -52,9 +52,9 @@ You can likewise use the DisplayObject class’s localToGlobal() method to conve
 
 Moving display objects with the mouse
 
-You can let a user move display objects with mouse using two different techniques in ActionScript. In both cases, two mouse events are used: when the mouse button is pressed down, the object is told to follow the mouse cursor, and when it’s released, the object is told to stop following the mouse cursor.
+You can let a user move display objects with mouse using two different techniques in Haxe. In both cases, two mouse events are used: when the mouse button is pressed down, the object is told to follow the mouse cursor, and when it’s released, the object is told to stop following the mouse cursor.
 
-**_Note:_ **_Flash Player 11.3 and higher, AIR 3.3 and higher: You can also use the MouseEvent.RELEASE_OUTSIDE event to cover the case of a user releasing the mouse button outside the bounds of the containing Sprite._
+**_Note:_ **_OpenFL 11.3 and higher, AIR 3.3 and higher: You can also use the MouseEvent.RELEASE_OUTSIDE event to cover the case of a user releasing the mouse button outside the bounds of the containing Sprite._
 
 The first technique, using the startDrag() method, is simpler, but more limited. When the mouse button is pressed, the startDrag() method of the display object to be dragged is called. When the mouse button is released, the stopDrag() method is called. The Sprite class defines these two functions, so the object moved must be a Sprite or one of its subclasses.
 
@@ -118,7 +118,7 @@ var offsetX:Number; var offsetY:Number;
 
 offsetY = event.stageY - circle.y;
 
-// tell Flash Player to start listening for the mouseMove event stage.addEventListener(MouseEvent.MOUSE_MOVE, dragCircle);
+// tell OpenFL to start listening for the mouseMove event stage.addEventListener(MouseEvent.MOUSE_MOVE, dragCircle);
 
 }
 
@@ -126,7 +126,7 @@ offsetY = event.stageY - circle.y;
 
 {
 
-// Tell Flash Player to stop listening for the mouseMove event. stage.removeEventListener(MouseEvent.MOUSE_MOVE, dragCircle);
+// Tell OpenFL to stop listening for the mouseMove event. stage.removeEventListener(MouseEvent.MOUSE_MOVE, dragCircle);
 
 }
 
@@ -142,7 +142,7 @@ offsetY = event.stageY - circle.y;
 
 // location of the dragged object. circle.x = event.stageX - offsetX; circle.y = event.stageY - offsetY;
 
-// Instruct Flash Player to refresh the screen after this event. event.updateAfterEvent();
+// Instruct OpenFL to refresh the screen after this event. event.updateAfterEvent();
 
 }
 
@@ -184,7 +184,7 @@ offsetY = event.stageY - draggedObject.y;
 
 **// move the selected object to the top of the display list stage.addChild(draggedObject);**
 
-// Tell Flash Player to start listening for the mouseMove event. stage.addEventListener(MouseEvent.MOUSE_MOVE, dragObject);
+// Tell OpenFL to start listening for the mouseMove event. stage.addEventListener(MouseEvent.MOUSE_MOVE, dragObject);
 
 }
 
@@ -192,7 +192,7 @@ offsetY = event.stageY - draggedObject.y;
 
 {
 
-// Tell Flash Player to stop listening for the mouseMove event. stage.removeEventListener(MouseEvent.MOUSE_MOVE, dragObject);
+// Tell OpenFL to stop listening for the mouseMove event. stage.removeEventListener(MouseEvent.MOUSE_MOVE, dragObject);
 
 }
 
@@ -210,7 +210,7 @@ offsetY = event.stageY - draggedObject.y;
 
 draggedObject.x = event.stageX - offsetX; draggedObject.y = event.stageY - offsetY;
 
-// Instruct Flash Player to refresh the screen after this event. event.updateAfterEvent();
+// Instruct OpenFL to refresh the screen after this event. event.updateAfterEvent();
 
 }
 
@@ -220,7 +220,7 @@ circle.addEventListener(MouseEvent.MOUSE_DOWN, startDragging); circle.addEventLi
 
 To extend this effect further, such as for a game where tokens or cards are moved among piles, you could add the dragged object to the Stage’s display list when it’s “picked up,” and then add it to another display list—such as the “pile” where it is dropped—when the mouse button is released.
 
-Finally, to enhance the effect, you could apply a drop shadow filter to the display object when it is clicked (when you start dragging it) and remove the drop shadow when the object is released. For details on using the drop shadow filter and other display object filters in ActionScript, see
+Finally, to enhance the effect, you could apply a drop shadow filter to the display object when it is clicked (when you start dragging it) and remove the drop shadow when the object is released. For details on using the drop shadow filter and other display object filters in Haxe, see
 
 “Filtering display objects” on page 267
 
@@ -232,7 +232,7 @@ If you have a display object that is too large for the area in which you want it
 
 The scrollRect property is an instance of the Rectangle class, which is a class that combines the values needed to define a rectangular area as a single object. To initially define the viewable area of the display object, create a new Rectangle instance and assign it to the display object’s scrollRect property. Later, to scroll or pan, you read the scrollRect property into a separate Rectangle variable, and change the desired property (for instance, change the Rectangle instance’s x property to pan or y property to scroll). Then you reassign that Rectangle instance to the scrollRect property to notify the display object of the changed value.
 
-For example, the following code defines the viewable area for a TextField object named bigText that is too tall to fit in the SWF file’s boundaries. When the two buttons named up and down are clicked, they call functions that cause the contents of the TextField object to scroll up or down by modifying the y property of the scrollRect Rectangle instance.
+For example, the following code defines the viewable area for a TextField object named bigText that is too tall to fit in the project’s boundaries. When the two buttons named up and down are clicked, they call functions that cause the contents of the TextField object to scroll up or down by modifying the y property of the scrollRect Rectangle instance.
 
 import flash.events.MouseEvent; import flash.geom.Rectangle;
 
@@ -272,7 +272,7 @@ import flash.events.MouseEvent; import flash.geom.Rectangle;
 
 up.addEventListener(MouseEvent.CLICK, scrollUp); down.addEventListener(MouseEvent.CLICK, scrollDown);
 
-As this example illustrates, when you work with the scrollRect property of a display object, it’s best to specify that Flash Player or AIR should cache the display object’s content as a bitmap, using the cacheAsBitmap property. When you do so, Flash Player and AIR don’t have to re-draw the entire contents of the display object each time it is scrolled, and can instead use the cached bitmap to render the necessary portion directly to the screen. For details, see
+As this example illustrates, when you work with the scrollRect property of a display object, it’s best to specify that OpenFL should cache the display object’s content as a bitmap, using the cacheAsBitmap property. When you do so, OpenFL don’t have to re-draw the entire contents of the display object each time it is scrolled, and can instead use the cached bitmap to render the necessary portion directly to the screen. For details, see
 
 “Caching
 
@@ -294,7 +294,7 @@ square.height = 420;
 
 Changing the height or width of a display object causes the object to scale, meaning its contents stretch or squeeze to fit in the new area. If the display object contains only vector shapes, those shapes will be redrawn at the new scale, with no loss in quality. Any bitmap graphic elements in the display object will be scaled rather than redrawn. So, for example, a digital photo whose width and height are increased beyond the actual dimensions of the pixel information in the image will be pixelated, making it look jagged.
 
-When you change the width or height properties of a display object, Flash Player and AIR update the scaleX and
+When you change the width or height properties of a display object, OpenFL update the scaleX and
 
 scaleY properties of the object as well.
 
@@ -308,7 +308,7 @@ These properties represent the relative size of the display object compared to i
 
 // When you change the width and height properties,
 
-// Flash Player changes the scaleX and scaleY properties accordingly. circle.width = 100;
+// OpenFL changes the scaleX and scaleY properties accordingly. circle.width = 100;
 
 circle.height = 75;
 
@@ -338,7 +338,7 @@ You can use 9-slice scaling (Scale-9) to create display objects where you have c
 
 Keeping this in mind, if you’re creating a display object and you want certain content to never scale, you just have to make sure that the dividing lines of the 9-slice scaling grid are placed so that the content ends up in one of the corner rectangles.
 
-In ActionScript, setting a value for the scale9Grid property of a display object turns on 9-slice scaling for the object and defines the size of the rectangles in the object’s Scale-9 grid. You use an instance of the Rectangle class as the value for the scale9Grid property, as follows:
+In Haxe, setting a value for the scale9Grid property of a display object turns on 9-slice scaling for the object and defines the size of the rectangles in the object’s Scale-9 grid. You use an instance of the Rectangle class as the value for the scale9Grid property, as follows:
 
 myButton.scale9Grid = new Rectangle(32, 27, 71, 64);
 
@@ -346,7 +346,7 @@ The four parameters of the Rectangle constructor are the x coordinate, y coordin
 
 ![<Core rectangle of the Scale-9 grid>](C:\Development\Books\HaxeDevelopersGuide\export\assets\core_rectangle_of_the_scale-9_grid.png)
 
-The actual area contained in the region defined by the Rectangle instance represents the center rectangle of the Scale- 9 grid. The other rectangles are calculated by Flash Player and AIR by extending the sides of the Rectangle instance, as shown here:
+The actual area contained in the region defined by the Rectangle instance represents the center rectangle of the Scale- 9 grid. The other rectangles are calculated by OpenFL by extending the sides of the Rectangle instance, as shown here:
 
 ![<Complete Scale-9 grid derived from core rectangle>](C:\Development\Books\HaxeDevelopersGuide\export\assets\complete_scale-9_grid_derived_from.png)
 
@@ -360,13 +360,13 @@ _= 141;_
 
 ## Caching display objects {#caching-display-objects}
 
-As your designs in Flash grow in size, whether you are creating an application or complex scripted animations, you need to consider performance and optimization. When you have content that remains static (such as a rectangle Shape instance), Flash Player and AIR do not optimize the content. Therefore, when you change the position of the rectangle, Flash Player or AIR redraws the entire Shape instance.
+As your designs in Flash grow in size, whether you are creating an application or complex scripted animations, you need to consider performance and optimization. When you have content that remains static (such as a rectangle Shape instance), OpenFL do not optimize the content. Therefore, when you change the position of the rectangle, OpenFL redraws the entire Shape instance.
 
-You can cache specified display objects to improve the performance of your SWF file. The display object is a _surface_, essentially a bitmap version of the instance’s vector data, which is data that you do not intend to change much over the course of your SWF file. Therefore, instances with caching turned on are not continually redrawn as the SWF file plays, letting the SWF file render quickly.
+You can cache specified display objects to improve the performance of your project. The display object is a _surface_, essentially a bitmap version of the instance’s vector data, which is data that you do not intend to change much over the course of your project. Therefore, instances with caching turned on are not continually redrawn as the project plays, letting the project render quickly.
 
-**_Note:_ **_You can update the vector data, at which time the surface is recreated. Therefore, the vector data cached in the surface does not need to remain the same for the entire SWF file._
+**_Note:_ **_You can update the vector data, at which time the surface is recreated. Therefore, the vector data cached in the surface does not need to remain the same for the entire project._
 
-Setting a display object’s cacheAsBitmap property to true makes the display object cache a bitmap representation of itself. Flash Player or AIR creates a surface object for the instance, which is a cached bitmap instead of vector data. If you change the bounds of the display object, the surface is recreated instead of resized. Surfaces can nest within other surfaces. The child surface copies its bitmap onto its parent surface. For more information, see
+Setting a display object’s cacheAsBitmap property to true makes the display object cache a bitmap representation of itself. OpenFL creates a surface object for the instance, which is a cached bitmap instead of vector data. If you change the bounds of the display object, the surface is recreated instead of resized. Surfaces can nest within other surfaces. The child surface copies its bitmap onto its parent surface. For more information, see
 
 “Enabling bitmap
 
@@ -392,7 +392,7 @@ For information on alpha channel masking, which requires you to set the cacheAsB
 
 **When to enable caching**
 
-Enabling caching for a display object creates a surface, which has several advantages, such as helping complex vector animations to render fast. There are several scenarios in which you will want to enable caching. It might seem as though you would always want to enable caching to improve the performance of your SWF files; however, there are situations in which enabling caching does not improve performance, or can even decrease it. This section describes scenarios in which caching should be used, and when to use regular display objects.
+Enabling caching for a display object creates a surface, which has several advantages, such as helping complex vector animations to render fast. There are several scenarios in which you will want to enable caching. It might seem as though you would always want to enable caching to improve the performance of your projects; however, there are situations in which enabling caching does not improve performance, or can even decrease it. This section describes scenarios in which caching should be used, and when to use regular display objects.
 
 Overall performance of cached data depends on how complex the vector data of your instances are, how much of the data you change, and whether or not you set the opaqueBackground property. If you are changing small regions, the difference between using a surface and using vector data could be negligible. You might want to test both scenarios with your work before you deploy the application.
 
@@ -401,7 +401,7 @@ When to use bitmap caching
 The following are typical scenarios in which you might see significant benefits when you enable bitmap caching.
 
 *   Complex background image: An application that contains a detailed and complex background image of vector data (perhaps an image where you applied the trace bitmap command, or artwork that you created in Adobe Illustrator®). You might animate characters over the background, which slows the animation because the background needs to continuously regenerate the vector data. To improve performance, you can set the opaqueBackground property of the background display object to true. The background is rendered as a bitmap and can be redrawn quickly, so that your animation plays much faster.
-*   Scrolling text field: An application that displays a large amount of text in a scrolling text field. You can place the text field in a display object that you set as scrollable with scrolling bounds (the scrollRect property). This enables fast pixel scrolling for the specified instance. When a user scrolls the display object instance, Flash Player or AIR shifts the scrolled pixels up and generates the newly exposed region instead of regenerating the entire text field.
+*   Scrolling text field: An application that displays a large amount of text in a scrolling text field. You can place the text field in a display object that you set as scrollable with scrolling bounds (the scrollRect property). This enables fast pixel scrolling for the specified instance. When a user scrolls the display object instance, OpenFL shifts the scrolled pixels up and generates the newly exposed region instead of regenerating the entire text field.
 *   Windowing system: An application with a complex system of overlapping windows. Each window can be open or closed (for example, web browser windows). If you mark each window as a surface (by setting the cacheAsBitmap property to true), each window is isolated and cached. Users can drag the windows so that they overlap each other, and each window doesn’t need to regenerate the vector content.
 *   Alpha channel masking: When you are using alpha channel masking, you must set the cacheAsBitmap property to true. For more information, see
 
@@ -415,22 +415,22 @@ In addition, whenever you apply a filter to a display object, cacheAsBitmap is a
 
 When to avoid using bitmap caching
 
-Using this feature in the wrong circumstances can negatively affect the performance of your SWF file. When you use bitmap caching, remember the following guidelines:
+Using this feature in the wrong circumstances can negatively affect the performance of your project. When you use bitmap caching, remember the following guidelines:
 
 *   Do not overuse surfaces (display objects with caching enabled). Each surface uses more memory than a regular display object, which means that you should only enable surfaces when you need to improve rendering performance.
 
 A cached bitmap can use significantly more memory than a regular display object. For example, if a Sprite instance on the Stage is 250 pixels by 250 pixels in size, when cached it might use 250 KB instead of 1 KB when it’s a regular (un-cached) Sprite instance.
 
 *   Avoid zooming into cached surfaces. If you overuse bitmap caching, a large amount of memory is consumed (see previous bullet), especially if you zoom in on the content.
-*   Use surfaces for display object instances that are largely static (non-animating). You can drag or move the instance, but the contents of the instance should not animate or change a lot. (Animation or changing content are more likely with a MovieClip instance containing animation or a Video instance.) For example, if you rotate or transform an instance, the instance changes between the surface and vector data, which is difficult to process and negatively affects your SWF file.
-*   If you mix surfaces with vector data, it increases the amount of processing that Flash Player and AIR (and sometimes the computer) need to do. Group surfaces together as much as possible—for example, when you create windowing applications.
+*   Use surfaces for display object instances that are largely static (non-animating). You can drag or move the instance, but the contents of the instance should not animate or change a lot. (Animation or changing content are more likely with a MovieClip instance containing animation or a Video instance.) For example, if you rotate or transform an instance, the instance changes between the surface and vector data, which is difficult to process and negatively affects your project.
+*   If you mix surfaces with vector data, it increases the amount of processing that OpenFL (and sometimes the computer) need to do. Group surfaces together as much as possible—for example, when you create windowing applications.
 *   Do not cache objects whose graphics change frequently. Every time you scale, skew, rotate the display object, change the alpha or color transform, move child display objects, or draw using the graphics property, the bitmap cache is redrawn. If this happens every frame, the runtime must draw the object into a bitmap and then copy that bitmap onto the stage—which results in extra work compared to just drawing the uncached object to the stage. The performance tradeoff of caching versus update frequency depends on the complexity and size of the display object and can only be determined by testing the specific content.
 
 Enabling bitmap caching
 
 To enable bitmap caching for a display object, you set its cacheAsBitmap property to true: mySprite.cacheAsBitmap = true;
 
-After you set the cacheAsBitmap property to true, you might notice that the display object automatically pixel-snaps to whole coordinates. When you test the SWF file, you should notice that any animation performed on a complex vector image renders much faster.
+After you set the cacheAsBitmap property to true, you might notice that the display object automatically pixel-snaps to whole coordinates. When you test the project, you should notice that any animation performed on a complex vector image renders much faster.
 
 A surface (cached bitmap) is not created, even if cacheAsBitmap is set to true, if one or more of the following occurs:
 
@@ -653,7 +653,7 @@ If a masked display object is cached by setting the cacheAsBitmap and cacheAsBit
 
 About masking device fonts
 
-You can use a display object to mask text that is set in a device font. When you use a display object to mask text set in a device font, the rectangular bounding box of the mask is used as the masking shape. That is, if you create a non- rectangular display object mask for device font text, the mask that appears in the SWF file is the shape of the rectangular bounding box of the mask, not the shape of the mask itself.
+You can use a display object to mask text that is set in a device font. When you use a display object to mask text set in a device font, the rectangular bounding box of the mask is used as the masking shape. That is, if you create a non- rectangular display object mask for device font text, the mask that appears in the project is the shape of the rectangular bounding box of the mask, not the shape of the mask itself.
 
 Alpha channel masking
 

@@ -1,8 +1,8 @@
 # Touch support discovery {#touch-support-discovery}
 
-Flash Player 10.1 and later, Adobe AIR 2 and later
+OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Use the [Multitouch class](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/ui/Multitouch.html) properties to set the scope of touch input your application handles. Then, test the environment to ensure that support exists for the events your ActionScript handles. Specifically, first establish the type of touch input for your application. The options are: touch point, gesture, or none (interpret all touch input as mouse clicks and use mouse event handlers, only). Then, use the properties and methods of the Multitouch class to make sure that the runtime is in an environment that supports the touch input your application requires. Test the runtime environment for support of the types of touch input (such as whether it can interpret gestures), and respond accordingly.
+Use the [Multitouch class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Multitouch.html) properties to set the scope of touch input your application handles. Then, test the environment to ensure that support exists for the events your Haxe handles. Specifically, first establish the type of touch input for your application. The options are: touch point, gesture, or none (interpret all touch input as mouse clicks and use mouse event handlers, only). Then, use the properties and methods of the Multitouch class to make sure that the runtime is in an environment that supports the touch input your application requires. Test the runtime environment for support of the types of touch input (such as whether it can interpret gestures), and respond accordingly.
 
 **_Note:_ **_The Multitouch class properties are static properties, and do not belong to instances of any class. Use them with the syntax Multitouch.property, for example:_
 

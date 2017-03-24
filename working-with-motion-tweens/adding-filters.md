@@ -1,6 +1,6 @@
 # Adding filters {#adding-filters}
 
-Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
+OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
 If the target object of a motion tween contains filters, those filters are added using the initFilters() and
 
@@ -8,7 +8,7 @@ addFilterPropertyArray() methods of the Motion class.
 
 **Initializing the filters array**
 
-Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
+OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
 The initFilters() method initializes the filters. Its first argument is an array of the fully qualified class names of all the filters applied to the display object. This array of filter names is generated from the filters list for the motion tween in Flash. In your copy of the script, you can remove or add any of the filters in the flash.filters package to this array. The following call initializes the filters list for the target display object. It applies the DropShadowFilter, GlowFilter, and BevelFilter and copies the list to each keyframe in the Motion object.
 
@@ -16,7 +16,7 @@ motion_Box.initFilters([&quot;flash.filters.DropShadowFilter&quot;, &quot;flash.
 
 ## Adding filters {#adding-filters-0}
 
-Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
+OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
 The addFilterPropertyArray() method describes the properties of an initialized filter with the following arguments:
 
@@ -54,9 +54,9 @@ motion_Box.addFilterPropertyArray(2, &quot;highlightColor&quot;, [0xffffff]);
 
 ## Adjusting color with the ColorMatrixFilter {#adjusting-color-with-the-colormatrixfilter}
 
-Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
+OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
-After the ColorMatrixFilter has been initialized, you can set the appropriate AdjustColor properties to adjust the brightness, contrast, saturation, and hue of the tweened display object. Typically, the AdjustColor filter is applied when the motion tween is created in Flash; you can fine-tune it in your copy of the ActionScript. The following example transforms the hue and saturation of the display object as it moves.
+After the ColorMatrixFilter has been initialized, you can set the appropriate AdjustColor properties to adjust the brightness, contrast, saturation, and hue of the tweened display object. Typically, the AdjustColor filter is applied when the motion tween is created in Flash; you can fine-tune it in your copy of the Haxe. The following example transforms the hue and saturation of the display object as it moves.
 
 motion_Leaf_1.initFilters([&quot;flash.filters.ColorMatrix&quot;], [0], -1, -1);
 

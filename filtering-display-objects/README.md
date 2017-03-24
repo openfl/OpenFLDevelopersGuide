@@ -1,10 +1,10 @@
 # Chapter 14: Filtering display objects {#chapter-14-filtering-display-objects}
 
-Historically, the application of filter effects to bitmap images has been the domain of specialized image-editing software such as Adobe Photoshop® and Adobe Fireworks®. ActionScript 3.0 includes the flash.filters package, which contains a series of bitmap effect filter classes. These effects allow developers to programmatically apply filters to bitmaps and display objects and achieve many of the same effects that are available in graphics manipulation applications.
+Historically, the application of filter effects to bitmap images has been the domain of specialized image-editing software such as Adobe Photoshop® and Adobe Fireworks®. Haxe includes the flash.filters package, which contains a series of bitmap effect filter classes. These effects allow developers to programmatically apply filters to bitmaps and display objects and achieve many of the same effects that are available in graphics manipulation applications.
 
 **Basics of filtering display objects**
 
-One of the ways to add polish to an application is to add simple graphic effects. You can add a drop shadow behind a photo to create the illusion of 3-d, or a glow around a button to show that it is active. ActionScript 3.0 includes ten filters that you can apply to any display object or to a BitmapData instance. The built-in filters range from basic, such as the drop shadow and glow filters, to complex, such as the displacement map filter and the convolution filter.
+One of the ways to add polish to an application is to add simple graphic effects. You can add a drop shadow behind a photo to create the illusion of 3-d, or a glow around a button to show that it is active. Haxe includes ten filters that you can apply to any display object or to a BitmapData instance. The built-in filters range from basic, such as the drop shadow and glow filters, to complex, such as the displacement map filter and the convolution filter.
 
 **_Note:_ **_In addition to the built-in filters, you can also program custom filters and effects using Pixel Bender. See_
 
@@ -28,4 +28,4 @@ The following reference list contains important terms that you might encounter w
 
 **More Help topics**
 
-[flash.filters package](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/filters/package-detail.html) [flash.display.DisplayObject.filters](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html#filters) [flash.display.BitmapData.applyFilter()](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/BitmapData.html#applyFilter())
+[flash.filters package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/package-detail.html) [flash.display.DisplayObject.filters](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/DisplayObject.html#filters) [flash.display.BitmapData.applyFilter()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/BitmapData.html#applyFilter())

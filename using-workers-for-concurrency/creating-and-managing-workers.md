@@ -1,6 +1,6 @@
 # Creating and managing workers {#creating-and-managing-workers}
 
-Flash Player 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
+OpenFL 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
 
 The first step in using a worker for concurrency is to create a background worker. You use two types of objects to create a worker. First is a Worker instance, which is what you create. The other is a WorkerDomain object, which creates the Worker and manages the running Worker objects in an application.
 
@@ -12,7 +12,7 @@ At any time, you can access the current Worker instance (the worker in which the
 
 **Creating a Worker object from a swf**
 
-Just as the main swf runs within the primordial worker, a background worker executes the code of a single swf file. To use a background worker, you must author and compile the worker’s code as a swf file. To create the background worker, the parent worker needs access to that swf file’s bytes as a ByteArray object. You pass that ByteArray to the WorkerDomain object’s createWorker() method to actually create the worker.
+Just as the main swf runs within the primordial worker, a background worker executes the code of a single project. To use a background worker, you must author and compile the worker’s code as a project. To create the background worker, the parent worker needs access to that project’s bytes as a ByteArray object. You pass that ByteArray to the WorkerDomain object’s createWorker() method to actually create the worker.
 
 There are three main ways to get the background worker swf as a ByteArray object:
 
@@ -38,7 +38,7 @@ The worker swf is compiled into the main swf as a ByteArray subclass named BgWor
 
 Loading an external worker swf
 
-Use a URLLoader object to load an external swf file. The swf file must come from the same security domain, such as a swf file loaded from the same internet domain as the main swf or included in an AIR application package.
+Use a URLLoader object to load an external project. The project must come from the same security domain, such as a project loaded from the same internet domain as the main swf or included in an AIR application package.
 
 var workerLoader:URLLoader = new URLLoader(); workerLoader.dataFormat = URLLoaderDataFormat.BINARY; workerLoader.addEventListener(Event.COMPLETE, loadComplete); workerLoader.load(new URLRequest(&quot;BgWorker.swf&quot;));
 
@@ -56,7 +56,7 @@ var bgWorker:Worker = WorkerDomain.current.createWorker(workerBytes);
 
 }
 
-When the URLLoader finishes loading the swf file, the swf’s bytes are available in the URLLoader object’s data
+When the URLLoader finishes loading the project, the swf’s bytes are available in the URLLoader object’s data
 
 property (event.target.data in the example).
 
@@ -106,7 +106,7 @@ else // entry point for the background worker
 
 }
 
-If you use this technique, use an if statement to branch the swf file code within the main class’s constructor or a method it calls. To determine whether the code is running in the main worker or the background worker, check the current Worker object’s isPrimordial property, as shown in the example.
+If you use this technique, use an if statement to branch the project code within the main class’s constructor or a method it calls. To determine whether the code is running in the main worker or the background worker, check the current Worker object’s isPrimordial property, as shown in the example.
 
 ## Starting a worker’s execution {#starting-a-worker-s-execution}
 

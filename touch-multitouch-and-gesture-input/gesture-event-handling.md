@@ -1,8 +1,8 @@
 # Gesture event handling {#gesture-event-handling}
 
-Flash Player 10.1 and later, Adobe AIR 2 and later
+OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Handle gesture events in the same way as basic touch events. You can listen for a series of gesture events defined by the event type constants in the [TransformGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/TransformGestureEvent.html) class, the [GestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/GestureEvent.html) class and the [PressAndTapGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/PressAndTapGestureEvent.html) class.
+Handle gesture events in the same way as basic touch events. You can listen for a series of gesture events defined by the event type constants in the [TransformGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TransformGestureEvent.html) class, the [GestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/GestureEvent.html) class and the [PressAndTapGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/PressAndTapGestureEvent.html) class.
 
 To handle a gesture touch event:
 

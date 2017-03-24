@@ -24,7 +24,7 @@ The following reference list contains important geometry terms:
 
 **Origin** The point in a coordinate space where the x-axis meets the y-axis. This point has the coordinate 0, 0.
 
-**Point** A single location in a coordinate space. In the 2-d coordinate system used in ActionScript, the location along the x-axis and the y-axis (the point’s coordinates) define the point.
+**Point** A single location in a coordinate space. In the 2-d coordinate system used in Haxe, the location along the x-axis and the y-axis (the point’s coordinates) define the point.
 
 **Registration point** In a display object, the origin (0, 0 coordinate) of its coordinate space.
 
@@ -34,5 +34,5 @@ The following reference list contains important geometry terms:
 
 **Transformation** An adjustment to a visual characteristic of a graphic, such as rotating the object, altering its scale, skewing or distorting its shape, or altering its color.
 
-1.  **axis** The horizontal axis in the 2-d coordinate system used in ActionScript.
-2.  **axis** The vertical axis in the 2-d coordinate system used in ActionScript.
+1.  **axis** The horizontal axis in the 2-d coordinate system used in Haxe.
+2.  **axis** The vertical axis in the 2-d coordinate system used in Haxe.

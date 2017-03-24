@@ -2,7 +2,7 @@
 
 You can use an instance of the TextField class to display text or create a text input field on the screen in Adobe® Flash® Player or Adobe® AIR™. The TextField class is the basis for other text-based components, such as the TextArea components or the TextInput components.
 
-Text field content can be pre-specified in the SWF file, loaded from a text file or database, or entered by a user interacting with your application. Within a text field, the text can appear as rendered HTML content, with images embedded in the rendered HTML. After you create an instance of a text field, you can use flash.text classes, such as TextFormat and StyleSheet, to control the appearance of the text. The [flash.text package](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/package-detail.html) contains nearly all the classes related to creating, managing, and formatting text in ActionScript.
+Text field content can be pre-specified in the project, loaded from a text file or database, or entered by a user interacting with your application. Within a text field, the text can appear as rendered HTML content, with images embedded in the rendered HTML. After you create an instance of a text field, you can use flash.text classes, such as TextFormat and StyleSheet, to control the appearance of the text. The [flash.text package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/text/package-detail.html) contains nearly all the classes related to creating, managing, and formatting text in Haxe.
 
 You can format text by defining the formatting with a TextFormat object and assigning that object to the text field. If your text field contains HTML text, you can apply a StyleSheet object to the text field to assign styles to specific pieces of the text field content. The TextFormat object or StyleSheet object contains properties defining the appearance of the text, such as color, size, and weight. The TextFormat object assigns the properties to all the content within a text field or to a range of text. For example, within the same text field, one sentence can be bold red text and the next sentence can be blue italic text.
 
@@ -38,9 +38,9 @@ Input text is any text entered by a user or dynamic text that a user can edit. Y
 
 *   Static text
 
-Static text is created through Flash Professional only. You cannot create a static text instance using ActionScript
+Static text is created through Flash Professional only. You cannot create a static text instance using Haxe
 
-3.0\. However, you can use ActionScript classes like StaticText and TextSnapshot to manipulate an existing static text instance. For more information, see
+3.0\. However, you can use Haxe classes like StaticText and TextSnapshot to manipulate an existing static text instance. For more information, see
 
 “Working with static text” on page 386
 
@@ -48,7 +48,7 @@ Static text is created through Flash Professional only. You cannot create a stat
 
 ## Modifying the text field contents {#modifying-the-text-field-contents}
 
-You can define dynamic text by assigning a string to the [flash.text.TextField.text](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/text/TextField.html#text) property. You assign a string directly to the property, as follows:
+You can define dynamic text by assigning a string to the [flash.text.TextField.text](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/text/TextField.html#text) property. You assign a string directly to the property, as follows:
 
 myTextField.text = &quot;Hello World&quot;;
 
@@ -81,7 +81,7 @@ addChild(myTextBox); myTextBox.text = myText;
 Alternatively, you can assign the text property a value from a remote variable. You have three options for loading text values from remote sources:
 
 *   The flash.net.URLLoader and flash.net.URLRequest classes load variables for the text from a local or remote location.
-*   The FlashVars attribute is embedded in the HTML page hosting the SWF file and can contain values for text variables.
+*   The FlashVars attribute is embedded in the HTML page hosting the project and can contain values for text variables.
 *   The flash.net.SharedObject class manages persistent storage of values. For more information, see
 
     “Storing local
@@ -92,11 +92,11 @@ Alternatively, you can assign the text property a value from a remote variable. 
 
 ## Displaying HTML text {#displaying-html-text}
 
-The flash.text.TextField class has an htmlText property that you can use to identify your text string as one containing HTML tags for formatting the content. As in the following example, you must assign your string value to the htmlText property (not the text property) for Flash Player or AIR to render the text as HTML:
+The flash.text.TextField class has an htmlText property that you can use to identify your text string as one containing HTML tags for formatting the content. As in the following example, you must assign your string value to the htmlText property (not the text property) for OpenFL to render the text as HTML:
 
 var myText:String = &quot;&lt;p&gt;This is &lt;b&gt;some&lt;/b&gt; content to &lt;i&gt;render&lt;/i&gt; as &lt;u&gt;HTML&lt;/u&gt; text.&lt;/p&gt;&quot;; myTextBox.htmlText = myText;
 
-Flash Player and AIR support a subset of HTML tags and entities for the htmlText property. The flash.text.TextField.htmlText property description in the ActionScript 3.0 Reference provides detailed information about the supported HTML tags and entities.
+OpenFL support a subset of HTML tags and entities for the htmlText property. The flash.text.TextField.htmlText property description in the Haxe Reference provides detailed information about the supported HTML tags and entities.
 
 Once you designate your content using the htmlText property, you can use style sheets or the textformat tag to manage the formatting of your content. For more information, see
 
@@ -108,7 +108,7 @@ Once you designate your content using the htmlText property, you can use style s
 
 Another advantage to displaying your content as HTML text is that you can include images in the text field. You can reference an image, local or remote, using the img tag and have it appear within the associated text field.
 
-The following example creates a text field named myTextBox and includes a JPG image of an eye, stored in the same directory as the SWF file, within the displayed text:
+The following example creates a text field named myTextBox and includes a JPG image of an eye, stored in the same directory as the project, within the displayed text:
 
 package
 
@@ -142,7 +142,7 @@ addChild(myTextBox); myTextBox.htmlText = myText;
 
 }
 
-The img tag supports JPEG, GIF, PNG, and SWF files.
+The img tag supports JPEG, GIF, PNG, and projects.
 
 ## Scrolling text in a text field {#scrolling-text-in-a-text-field}
 

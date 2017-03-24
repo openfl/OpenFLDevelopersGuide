@@ -19,7 +19,7 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 
 **Setting the listeners**
 
-The application first creates three listeners. The first listens for a dispatched event from the control panel that a rebuild of the satellites is necessary. The second listens to changes to the size of the SWF file’s stage. The third listens for each passing frame in the SWF file and to redraw using the doEveryFrame() function.
+The application first creates three listeners. The first listens for a dispatched event from the control panel that a rebuild of the satellites is necessary. The second listens to changes to the size of the project’s stage. The third listens for each passing frame in the project and to redraw using the doEveryFrame() function.
 
 ## Creating the satellites {#creating-the-satellites}
 
@@ -31,7 +31,7 @@ As each satellite is created, a reference to it is added to the satellites array
 
 ## Updating the satellite position {#updating-the-satellite-position}
 
-The doEveryFrame() function is the heart of the application’s animation process. It is called for every frame, at a rate equal the framerate of the SWF file. Because the variables of the draw change slightly, this conveys the appearance of animation.
+The doEveryFrame() function is the heart of the application’s animation process. It is called for every frame, at a rate equal the framerate of the project. Because the variables of the draw change slightly, this conveys the appearance of animation.
 
 The function first clears all previous draws and redraws the background. Then, it loops through each satellite container and increments the position property of each satellite, and updates the radius and orbitRadius properties that may have changed from user interaction with the control panel. Finally, the satellite updates to its new position by calling the draw() method of the Satellite class.
 
@@ -52,4 +52,4 @@ This example is only a basic schematic of how to generate visuals using the draw
 *   The satellite radius does not have to be circular; it could use the Math class to move according to a sine wave, for example.
 *   Satellites could use hit detection with other satellites.
 
-The drawing API can be used as an alternative to creating visual effects in the Flash authoring environment, drawing basic shapes at run time. But it can also be used to create visual effects of a variety and scope that are not possible to create by hand. Using the drawing API and a bit of mathematics, the ActionScript author can give life to many unexpected creations.
+The drawing API can be used as an alternative to creating visual effects in the Flash authoring environment, drawing basic shapes at run time. But it can also be used to create visual effects of a variety and scope that are not possible to create by hand. Using the drawing API and a bit of mathematics, the Haxe author can give life to many unexpected creations.

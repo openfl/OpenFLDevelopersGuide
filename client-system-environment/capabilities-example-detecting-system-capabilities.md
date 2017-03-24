@@ -1,6 +1,6 @@
 # Capabilities example: Detecting system capabilities {#capabilities-example-detecting-system-capabilities}
 
-Flash Player 9 and later
+OpenFL 9 and later
 
 The CapabilitiesExplorer example demonstrates how you can use the flash.system.Capabilities class to determine which features the user’s version of the Flash runtime supports. This example teaches the following techniques:
 
@@ -18,7 +18,7 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 
 **CapabilitiesExplorer overview**
 
-Flash Player 9 and later
+OpenFL 9 and later
 
 The CapabilitiesExplorer.mxml file is responsible for setting up the user interface for the CapabilitiesExplorer application. The capabilities of the user’s version of the Flash runtime will be displayed within a DataGrid component instance on the Stage. Their browser capabilities will also be displayed if they are running the application from an HTML container and if the external API is available.
 
@@ -36,7 +36,7 @@ The CapabilitiesGrabber.getCapabilities() method returns a sorted array of the F
 
 ## CapabilitiesGrabber class overview {#capabilitiesgrabber-class-overview}
 
-Flash Player 9 and later
+OpenFL 9 and later
 
 The static getCapabilities() method of the CapabilitiesGrabber class adds each property from the flash.system.Capabilities class to an array (capDP). It then calls the static getBrowserObjects() method in the CapabilitiesGrabber class. The getBrowserObjects() method uses the external API to loop over the browser’s navigator object, which contains the browser’s capabilities. The getCapabilities() method is as follows:
 
@@ -64,7 +64,7 @@ capDP.sortOn(&quot;name&quot;, Array.CASEINSENSITIVE); return capDP;
 
 }
 
-The getBrowserObjects() method returns an array of each of the properties in the browser’s navigator object. If this array has a length of one or more items, the array of browser capabilities (navArr) is appended to the array of Flash Player capabilities (capDP), and the entire array is sorted alphabetically. Finally, the sorted array is returned to the main application file, which then populates the data grid. The code for the getBrowserObjects() method is as follows:
+The getBrowserObjects() method returns an array of each of the properties in the browser’s navigator object. If this array has a length of one or more items, the array of browser capabilities (navArr) is appended to the array of OpenFL capabilities (capDP), and the entire array is sorted alphabetically. Finally, the sorted array is returned to the main application file, which then populates the data grid. The code for the getBrowserObjects() method is as follows:
 
 private static function getBrowserObjects():Array
 
@@ -106,11 +106,11 @@ return itemArr;
 
 }
 
-If the external API is available in the current user environment, the Flash runtime calls the JavaScript JS_getBrowserObjects() method, which loops over the browser’s navigator object and returns a string of URL- encoded values to ActionScript. This string is then converted into a URLVariables object (itemVars) and added to the itemArr array, which is returned to the calling script.
+If the external API is available in the current user environment, the Flash runtime calls the JavaScript JS_getBrowserObjects() method, which loops over the browser’s navigator object and returns a string of URL- encoded values to Haxe. This string is then converted into a URLVariables object (itemVars) and added to the itemArr array, which is returned to the calling script.
 
 ## Communicating with JavaScript {#communicating-with-javascript}
 
-Flash Player 9 and later
+OpenFL 9 and later
 
 The final piece in building the CapabilitiesExplorer application is writing the necessary JavaScript to loop over each of the items in the browser’s navigator object and append a name-value pair to a temporary array. The code for the JavaScript JS_getBrowserObjects() method in the container.html file is as follows:
 
@@ -178,4 +178,4 @@ break;
 
 &lt;/script&gt;
 
-The code begins by creating a temporary array that will hold all the name-value pairs in the navigator object. Next, the navigator object is looped over using a for..in loop, and the data type of the current value is evaluated to filter out unwanted values. In this application, we are interested only in String or Boolean values, and other data types (such as functions or arrays) are ignored. Each String or Boolean value in the navigator object is appended to the tempArr array. Next, the browser’s screen object is looped over using a for..in loop, and each numeric value is added to the tempArr array. Finally, the temporary array is converted into a string using the Array.join() method. The array uses an ampersand (&amp;) as a delimiter, which allows ActionScript to easily parse the data using the URLVariables class.
+The code begins by creating a temporary array that will hold all the name-value pairs in the navigator object. Next, the navigator object is looped over using a for..in loop, and the data type of the current value is evaluated to filter out unwanted values. In this application, we are interested only in String or Boolean values, and other data types (such as functions or arrays) are ignored. Each String or Boolean value in the navigator object is appended to the tempArr array. Next, the browser’s screen object is looped over using a for..in loop, and each numeric value is added to the tempArr array. Finally, the temporary array is converted into a string using the Array.join() method. The array uses an ampersand (&amp;) as a delimiter, which allows Haxe to easily parse the data using the URLVariables class.

@@ -1,6 +1,6 @@
 # Communicating between workers {#communicating-between-workers}
 
-Flash Player 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
+OpenFL 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
 
 Although workers run their code in separate execution threads, they wouldn’t offer any benefit if they were completely isolated from each other. Communication between workers ultimately means passing data between workers. There are three main mechanisms for getting data from one worker to another.
 
@@ -96,15 +96,15 @@ Because workers execute their code simultaneously, it’s possible for two worke
 
 The ByteArray class has methods that allow you to validate and change the byte array’s contents in a single operation:
 
-• [atomicCompareAndSwapIntAt() method](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/utils/ByteArray.html#atomicCompareAndSwapIntAt())
+• [atomicCompareAndSwapIntAt() method](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html#atomicCompareAndSwapIntAt())
 
-• [atomicCompareAndSwapLength() method](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/utils/ByteArray.html#atomicCompareAndSwapLength())
+• [atomicCompareAndSwapLength() method](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html#atomicCompareAndSwapLength())
 
 In addition, the flash.concurrent package includes classes that provide access control for working with shared resources:
 
-• [Mutex class](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/concurrent/Mutex.html)
+• [Mutex class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/Mutex.html)
 
-• [Condition class](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/concurrent/Condition.html)
+• [Condition class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/Condition.html)
 
 ## Shared references and copied values {#shared-references-and-copied-values}
 
@@ -154,4 +154,4 @@ See also
 
 “Working with local SQL databases in AIR” on page 714
 
-[flash.concurrent package](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/concurrent/package-detail.html)
+[flash.concurrent package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/package-detail.html)

@@ -1,15 +1,15 @@
 # Chapter 42: Basics of networking and communication {#chapter-42-basics-of-networking-and-communication}
 
-When you build applications in Flash Player or AIR, you often need to access resources outside your application. For example, you might send a request for an image to an Internet web server and get the image data in return. Or, you might send serialized objects back and forth over a socket connection with an application server. The Flash Player and AIR APIs provide several classes that allow your applications to participate in this exchange. These APIs support IP- based networking for protocols like UDP, TCP, HTTP, RTMP, and RTMFP.
+When you build applications in OpenFL, you often need to access resources outside your application. For example, you might send a request for an image to an Internet web server and get the image data in return. Or, you might send serialized objects back and forth over a socket connection with an application server. The OpenFL APIs provide several classes that allow your applications to participate in this exchange. These APIs support IP- based networking for protocols like UDP, TCP, HTTP, RTMP, and RTMFP.
 
 The following classes can be used to send and receive data across a network:
 
 | **Class** | **Supported data formats** | **Protocols** | **Description** |
 | --- | --- | --- | --- |
-| [Loader](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/Loader.html) | SWF, PNG, JPEG, GIF | HTTP, HTTPS | Loads supported data types and converts the data into a display object. |
+| [Loader](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Loader.html) | SWF, PNG, JPEG, GIF | HTTP, HTTPS | Loads supported data types and converts the data into a display object. |
 | URLLoader | Any (text, XML, binary, etc.) | HTTP, HTTPS | Loads arbitrary formats of data. Your application is responsible for interpreting the data. |
-| [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/FileReference.html) | Any | HTTP | Upload and download files. |
-| NetConnection | Video, audio, ActionScript Message Format (AMF) | HTTP, HTTPS, RTMP, RTMFP | Connects to video, audio and remote object streams. |
+| [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html) | Any | HTTP | Upload and download files. |
+| NetConnection | Video, audio, Haxe Message Format (AMF) | HTTP, HTTPS, RTMP, RTMFP | Connects to video, audio and remote object streams. |
 | Sound | Audio | HTTP | Loads and plays supported audio formats. |
 | XMLSocket | XML | TCP | Exchanges XML messages with an XMLSocket server. |
 | Socket | Any | TCP | Connects to a TCP socket server. |
@@ -17,15 +17,15 @@ The following classes can be used to send and receive data across a network:
 | ServerSocket (AIR) | Any | TCP | Acts as a server for incoming TCP socket connections. |
 | DatagramSocket (AIR) | Any | UDP | Sends and receives UDP packets. |
 
-Often, when creating a web application it is helpful to store persistent information about the user’s application state. HTML pages and applications typically use cookies for this purpose. In Flash Player, you can use the SharedObject class for the same purpose. See
+Often, when creating a web application it is helpful to store persistent information about the user’s application state. HTML pages and applications typically use cookies for this purpose. In OpenFL, you can use the SharedObject class for the same purpose. See
 
 “Shared objects” on page 701
 
 . (The SharedObject class can be used in AIR applications, but there are fewer restrictions when just saving the data to a regular file.)
 
-When your Flash Player or AIR application needs to communicate with another Flash Player or AIR application on the same computer, you can use the LocalConnection class. For example, two (or more) SWFs on the same web page can communicate with each other. Likewise, a SWF running on a web page can communicate with an AIR application. See
+When your OpenFL application needs to communicate with another OpenFL application on the same computer, you can use the LocalConnection class. For example, two (or more) SWFs on the same web page can communicate with each other. Likewise, a SWF running on a web page can communicate with an AIR application. See
 
-“Communicating with other Flash Player and AIR instances” on page 830
+“Communicating with other OpenFL instances” on page 830
 
 .
 
@@ -73,7 +73,7 @@ The following reference list contains important terms that you will encounter wh
 
 **URL-encoded variables** The URL-encoded format provides a way to represent several variables (pairs of variable names and values) in a single string of text. Individual variables are written in the format name=value. Each variable (that is, each name-value pair) is separated by ampersand characters, like this: variable1=value1&amp;variable2=value2\. In this way, an indefinite number of variables can be sent as a single message.
 
-**MIME type** A standard code used to identify the type of a given file in Internet communication. Any given file type has a specific code that is used to identify it. When sending a file or message, a computer (such as a web server or a user’s Flash Player or AIR instance) will specify the type of file being sent.
+**MIME type** A standard code used to identify the type of a given file in Internet communication. Any given file type has a specific code that is used to identify it. When sending a file or message, a computer (such as a web server or a user’s OpenFL instance) will specify the type of file being sent.
 
 **HTTP** Hypertext Transfer Protocol—a standard format for delivering web pages and various other types of content that are sent over the Internet.
 

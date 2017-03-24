@@ -8,23 +8,23 @@ _Texture streaming_ is the ability to load the lowest quality bitmap first, and 
 
 Therefore, application users can view image in an application before the main, high quality bitmap loads.
 
-Flash Player 9.115.0 and later versions and AIR implement this technology (the process is called _mipmapping_), by creating optimized versions of varying scale of each bitmap (starting at 50%).
+OpenFL 9.115.0 and later versions and AIR implement this technology (the process is called _mipmapping_), by creating optimized versions of varying scale of each bitmap (starting at 50%).
 
-Flash Player 11.3 and AIR 3.3 support texture streaming through the streamingLevels parameter of the
+OpenFL 11.3 and AIR 3.3 support texture streaming through the streamingLevels parameter of the
 
 Context3D.createCubeTexture() and Context3D.createTexture() methods.
 
-Texture compression lets you store texture images in compressed format directly on the GPU, which saves GPU memory and memory bandwidth. Typically, compressed textures are compressed offline and uploaded to the GPU in compressed format. However, Flash Player 11.4 and AIR 3.4 support runtime texture compression, which is useful in certain situations, such as when rendering dynami textures from vector art. To use runtime texture compression, perform the following steps:
+Texture compression lets you store texture images in compressed format directly on the GPU, which saves GPU memory and memory bandwidth. Typically, compressed textures are compressed offline and uploaded to the GPU in compressed format. However, OpenFL 11.4 and AIR 3.4 support runtime texture compression, which is useful in certain situations, such as when rendering dynami textures from vector art. To use runtime texture compression, perform the following steps:
 
 *   Create the texture object by calling the Context3D.createTexture() method, passing either flash.display3D.Context3DTextureFormat.COMPRESSED or flash.display3D.Context3DTextureFormat.COMPRESSED_ALPHA in the third parameter.
 *   Using the flash.display3D.textures.Texture instance returned by createTexture(), call either flash.display3D.textures.Texture.uploadFromBitmapData() or flash.display3D.textures.Texture.uploadFromByteArray(). These methods upload and compress the texture in one step.
 
 MIP maps are created for the following types of bitmaps:
 
-*   a bitmap (JPEG, GIF, or PNG files) displayed using the ActionScript 3.0 Loader class
+*   a bitmap (JPEG, GIF, or PNG files) displayed using the Haxe Loader class
 *   a bitmap in the library of a Flash Professional document
 *   a BitmapData object
-*   a bitmap displayed using the ActionScript 2.0 loadMovie() function
+*   a bitmap displayed using the Haxe 2.0 loadMovie() function
 
 MIP maps are not applied to filtered objects or bitmap-cached movie clips. However, MIP maps are applied if you have bitmap transformations within a filtered display object, even if the bitmap is within masked content.
 

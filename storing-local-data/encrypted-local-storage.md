@@ -1,6 +1,6 @@
 # Encrypted local storage {#encrypted-local-storage}
 
-The [EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application&#039;s private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in &quot;Limitations of the encrypted local store&quot; and &quot;Best practices,&quot; below.
+The [EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application&#039;s private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in &quot;Limitations of the encrypted local store&quot; and &quot;Best practices,&quot; below.
 
 **_Note:_ **_In addition to the encrypted local store, AIR also provides encryption for content stored in SQL databases. For details, see_
 
@@ -48,7 +48,7 @@ The best practices for using the ELS include:
 
 **More Help topics**
 
-[flash.data.EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/data/EncryptedLocalStore.html)
+[flash.data.EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/data/EncryptedLocalStore.html)
 
 **Adding data to the encrypted local store**
 

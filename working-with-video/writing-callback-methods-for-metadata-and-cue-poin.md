@@ -2,7 +2,7 @@
 
 You can trigger actions in your application when specific metadata is received by the player or when specific cue points are reached. When these events occur, you must use specific callback methods as event handlers. The NetStream class specifies the following metadata events that can occur during playback: onCuePoint (FLV files only), onImageData, onMetaData, onPlayStatus, onTextData, and onXMPData.
 
-You must write callback methods for these handlers, or the Flash runtime may throw errors. For example, the following code plays an FLV file named video.flv in the same folder where the SWF file resides:
+You must write callback methods for these handlers, or the Flash runtime may throw errors. For example, the following code plays an FLV file named video.flv in the same folder where the project resides:
 
 var nc:NetConnection = new NetConnection(); nc.connect(null);
 

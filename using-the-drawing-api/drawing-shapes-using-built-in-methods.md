@@ -1,6 +1,6 @@
 # Drawing shapes using built-in methods {#drawing-shapes-using-built-in-methods}
 
-For convenience when drawing common shapes such as circles, ellipses, rectangles, and rectangles with rounded corners, ActionScript 3.0 has methods that draw these common shapes for you. These are the drawCircle(), drawEllipse(), drawRect(), and drawRoundRect() methods of the Graphics class. These methods may be used in place of the lineTo() and curveTo() methods. Note, however, that you must still specify line and fill styles before calling these methods.
+For convenience when drawing common shapes such as circles, ellipses, rectangles, and rectangles with rounded corners, Haxe has methods that draw these common shapes for you. These are the drawCircle(), drawEllipse(), drawRect(), and drawRoundRect() methods of the Graphics class. These methods may be used in place of the lineTo() and curveTo() methods. Note, however, that you must still specify line and fill styles before calling these methods.
 
 The following example recreates the example of drawing red, green, and blue squares with width and height of 100 pixels. This code uses the drawRect() method, and additionally specifies that the fill color has an alpha of 50% (0.5):
 

@@ -1,6 +1,6 @@
 # Chapter 30: Keyboard input {#chapter-30-keyboard-input}
 
-Your application can capture and respond to keyboard input and can manipulate an IME to let users type non-ASCII text characters in multibyte languages. Note that this section assumes that you are already familiar with the ActionScript 3.0 event model. For more information, see
+Your application can capture and respond to keyboard input and can manipulate an IME to let users type non-ASCII text characters in multibyte languages. Note that this section assumes that you are already familiar with the Haxe event model. For more information, see
 
 “Handling events” on page 125
 
@@ -16,7 +16,7 @@ An Input Method Editor (IME) allows users to type complex characters and symbols
 
 **More Help topics**
 
-[flash.events.KeyboardEvent](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/KeyboardEvent.html) [flash.system.IME](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/system/IME.html)
+[flash.events.KeyboardEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/KeyboardEvent.html) [flash.system.IME](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/system/IME.html)
 
 **Capturing keyboard input**
 
@@ -76,7 +76,7 @@ The TextField class also reports a textInput event that you can listen for when 
 
 .
 
-**_Note:_ **_In the AIR runtime, a keyboard event can be canceled. In the Flash Player runtime, a keyboard event cannot be canceled._
+**_Note:_ **_In the AIR runtime, a keyboard event can be canceled. In the OpenFL runtime, a keyboard event cannot be canceled._
 
 **Key codes and character codes**
 
@@ -84,7 +84,7 @@ You can access the keyCode and charCode properties of a keyboard event to determ
 
 The primary difference between the key code and character values is that a key code value represents a particular key on the keyboard (the 1 on a keypad is different than the 1 in the top row, but the key that generates “1” and the key that generates “!” are the same key) and the character value represents a particular character (the R and r characters are different).
 
-**_Note:_ **_For the mappings between keys and their character code values in ASCII, see the_ [_flash.ui.Keyboard_](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/ui/Keyboard.html) _class in the_ [_ActionScript 3.0 Reference for the Adobe Flash Platform_](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/ui/Keyboard.html)_._
+**_Note:_ **_For the mappings between keys and their character code values in ASCII, see the_ [_flash.ui.Keyboard_](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Keyboard.html) _class in the_ [_Haxe Reference for the Adobe Flash Platform_](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Keyboard.html)_._
 
 The mappings between keys and their key codes is dependent on the device and the operating system. For this reason, you should not use key mappings to trigger actions. Instead, you should use the predefined constant values provided by the Keyboard class to reference the appropriate keyCode properties. For example, instead of using the key mapping for the Shift key, use the Keyboard.SHIFT constant (as shown in the preceding code sample).
 
@@ -110,4 +110,4 @@ trace(event.currentTarget.name + &quot; hears key press: &quot; + String.fromCha
 
 Because there is a listener on both the text field and its parent container, the reportKeyDown() function is called twice for every keystroke inside the TextField. Note that for each key pressed, the text field dispatches an event before the container movie clip dispatches an event.
 
-The operating system and the web browser will process keyboard events before Adobe Flash Player or AIR. For example, in Microsoft Internet Explorer, pressing Ctrl+W closes the browser window before any contained SWF file dispatches a keyboard event.
+The operating system and the web browser will process keyboard events before Adobe OpenFL. For example, in Microsoft Internet Explorer, pressing Ctrl+W closes the browser window before any contained project dispatches a keyboard event.

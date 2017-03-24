@@ -28,7 +28,7 @@ Text fields can contain either plain text or HTML-formatted text. Plain text is 
 
 You can use CSS style declarations to define text styles that you can apply to many different text fields. CSS style declarations can be created in your application code or loaded in at run time from an external CSS file.
 
-The flash.text.StyleSheet class handles CSS styles. The StyleSheet class recognizes a limited set of CSS properties. For a detailed list of the style properties that the StyleSheet class supports, see the flash.textStylesheet entry in the ActionScript 3.0 Reference.
+The flash.text.StyleSheet class handles CSS styles. The StyleSheet class recognizes a limited set of CSS properties. For a detailed list of the style properties that the StyleSheet class supports, see the flash.textStylesheet entry in the Haxe Reference.
 
 As the following example shows, you can create CSS in your code and apply those styles to HTML text by using a StyleSheet object:
 
@@ -46,7 +46,7 @@ After creating a StyleSheet object, the example code creates a simple object to 
 
 For CSS styles to take effect, the style sheet should be applied to the TextField object before the htmlText property is set.
 
-By design, a text field with a style sheet is not editable. If you have an input text field and assign a style sheet to it, the text field shows the properties of the style sheet, but the text field does not allow users to enter new text into it. Also, you cannot use the following ActionScript APIs on a text field with an assigned style sheet:
+By design, a text field with a style sheet is not editable. If you have an input text field and assign a style sheet to it, the text field shows the properties of the style sheet, but the text field does not allow users to enter new text into it. Also, you cannot use the following Haxe APIs on a text field with an assigned style sheet:
 
 *   The TextField.replaceText() method
 *   The TextField.replaceSelectedText() method
@@ -57,7 +57,7 @@ If a text field has a style sheet assigned to it, but later the TextField.styleS
 
 ## Loading an external CSS file {#loading-an-external-css-file}
 
-The CSS approach to formatting is more powerful when you can load CSS information from an external file at run time. When the CSS data is external to the application itself, you can change the visual style of text in your application without having to change your ActionScript 3.0 source code. After your application has been deployed, you can change an external CSS file to change the look of the application, without having to redeploy the application SWF file.
+The CSS approach to formatting is more powerful when you can load CSS information from an external file at run time. When the CSS data is external to the application itself, you can change the visual style of text in your application without having to change your Haxe source code. After your application has been deployed, you can change an external CSS file to change the look of the application, without having to redeploy the application project.
 
 The StyleSheet.parseCSS() method converts a string that contains CSS data into style declarations in the StyleSheet object. The following example shows how to read an external CSS file and apply its style declarations to a TextField object.
 
@@ -83,7 +83,7 @@ color: #0000CC;
 
 }
 
-Next is the ActionScript code for a class that loads the example.css file and applies the styles to TextField content:
+Next is the Haxe code for a class that loads the example.css file and applies the styles to TextField content:
 
 package
 

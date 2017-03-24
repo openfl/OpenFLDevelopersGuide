@@ -1,14 +1,14 @@
 # Chapter 63: Using workers for concurrency {#chapter-63-using-workers-for-concurrency}
 
-Flash Player 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
+OpenFL 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
 
-ActionScript workers make it possible to execute code concurrently, or in other words, to execute code in the background without interrupting the main code’s execution.
+Haxe workers make it possible to execute code concurrently, or in other words, to execute code in the background without interrupting the main code’s execution.
 
-The ActionScript concurrency apis are available on desktop platforms only in Flash Player 11.4 and later, and AIR 3.4 and later. Concurrency is not supported in AIR for mobile platforms.
+The Haxe concurrency apis are available on desktop platforms only in OpenFL 11.4 and later, and AIR 3.4 and later. Concurrency is not supported in AIR for mobile platforms.
 
 **Understanding workers and concurrency**
 
-Flash Player 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
+OpenFL 11.4 and later, Adobe AIR 13.4 and later for desktop platforms
 
 When an application doesn’t use workers, the application’s code executes in a single linear block of executing steps known as an execution _thread_. The thread executes the code that a developer writes. It also executes much of the code that’s part of the runtime, most notably the code that updates the screen when display objects’ properties change.
 
@@ -23,7 +23,7 @@ Although code is written in chunks as methods and classes, at run time the code 
 
 As described in the example, the hypothetical steps 1-5 run in sequence within a single block of time called a frame. Because they run in sequence in a single thread, the runtime can’t interrupt one step of the process to run another one. At a frame rate of 30 frames-per-second, the runtime has less than one thirtieth of a second to execute all those operations. In many cases that is enough time for the code to run, and the runtime simply waits during the remaining time. However, suppose the xml data that loads in step 3 is a very large, deeply nested xml structure. As the code loops over the xml and creates objects, it might conceivably take longer than one thirtieth of a second to do that work. In that case, the later steps (responding to the mouse and redrawing the screen) do not happen as soon as they should. This causes the screen to freeze and stutter as the screen isn’t redrawn fast enough in response to the user moving the mouse.
 
-If all the code executes in the same thread, there is only one way to avoid occasional stutters and freezes. This is to not do long-running operations such as looping over a large set of data. ActionScript workers provide another solution. Using a worker, you can execute long-running code in a separate worker. Each worker runs in a separate thread, so the background worker performs the long-running operation in its own thread. That frees up the main worker’s execution thread to redraw the screen each frame without being blocked by other work.
+If all the code executes in the same thread, there is only one way to avoid occasional stutters and freezes. This is to not do long-running operations such as looping over a large set of data. Haxe workers provide another solution. Using a worker, you can execute long-running code in a separate worker. Each worker runs in a separate thread, so the background worker performs the long-running operation in its own thread. That frees up the main worker’s execution thread to redraw the screen each frame without being blocked by other work.
 
 The ability to run multiple code operations at the same time in this way is known as _concurrency_. When the background worker finishes its work, or at “progress” points along the way, you can send the main worker notifications and data. In this way, you can write code that performs complex or time consuming operations but avoid the bad user experience of having the screen freeze.
 

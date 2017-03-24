@@ -1,6 +1,6 @@
 # Playing video in full-screen mode {#playing-video-in-full-screen-mode}
 
-Flash Player and AIR allow you to create a full-screen application for your video playback, and support scaling video to full screen.
+OpenFL allow you to create a full-screen application for your video playback, and support scaling video to full screen.
 
 For AIR content running in full-screen mode on the desktop, the system screen saver and power-saving options are disabled during play until either the video input stops or the user exits full-screen mode.
 
@@ -10,9 +10,9 @@ For full details on using full-screen mode, see
 
 .
 
-Enabling full-screen mode for Flash Player in a browser
+Enabling full-screen mode for OpenFL in a browser
 
-Before you can implement full-screen mode for Flash Player in a browser, enable it through the Publish template for your application. Templates that allow full screen include &lt;object&gt; and &lt;embed&gt; tags that contain an allowFullScreen parameter. The following example shows the allowFullScreen parameter in an &lt;embed&gt; tag.
+Before you can implement full-screen mode for OpenFL in a browser, enable it through the Publish template for your application. Templates that allow full screen include &lt;object&gt; and &lt;embed&gt; tags that contain an allowFullScreen parameter. The following example shows the allowFullScreen parameter in an &lt;embed&gt; tag.
 
 &lt;object classid=&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot; id=&quot;fullScreen&quot; width=&quot;100%&quot; height=&quot;100%&quot;
 
@@ -44,7 +44,7 @@ In Flex, ensure that the HTML template includes &lt;object&gt; and &lt;embed&gt;
 
 Initiating full-screen mode
 
-For Flash Player content running in a browser, you initiate full-screen mode for video in response to either a mouse click or a keypress. For example, you can initiate full-screen mode when the user clicks a button labeled Full Screen or selects a Full Screen command from a context menu. To respond to the user, add an event listener to the object on which the action occurs. The following code adds an event listener to a button that the user clicks to enter full-screen mode:
+For OpenFL content running in a browser, you initiate full-screen mode for video in response to either a mouse click or a keypress. For example, you can initiate full-screen mode when the user clicks a button labeled Full Screen or selects a Full Screen command from a context menu. To respond to the user, add an event listener to the object on which the action occurs. The following code adds an event listener to a button that the user clicks to enter full-screen mode:
 
 var fullScreenButton:Button = new Button(); fullScreenButton.label = &quot;Full Screen&quot;; addChild(fullScreenButton);
 
@@ -72,7 +72,7 @@ stage.displayState = StageDisplayState.FULL_SCREEN;
 
 }
 
-Though this example invokes an event handler in response to a mouse click, the technique of going to full-screen mode is the same for both Flash Player and AIR. Define the rectangle that you want to scale and then set the Stage.displayState property. For more information, see the [ActionScript 3.0 Reference for the Adobe Flash](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html) [Platform](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html).
+Though this example invokes an event handler in response to a mouse click, the technique of going to full-screen mode is the same for both OpenFL. Define the rectangle that you want to scale and then set the Stage.displayState property. For more information, see the [Haxe Reference for the Adobe Flash](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/index.html) [Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/index.html).
 
 The complete example, which follows, adds code that creates the connection and the NetStream object for the video and begins to play it.
 
@@ -140,7 +140,7 @@ The onMetaData() function is a callback function for handling video metadata, if
 
 Leaving full-screen mode
 
-A user can leave full-screen mode by entering one of the keyboard shortcuts, such as the Escape key. You can end full- screen mode in ActionScript by setting the Stage.displayState property to StageDisplayState.NORMAL. The code in the following example ends full-screen mode when the NetStream.Play.Stop netStatus event occurs.
+A user can leave full-screen mode by entering one of the keyboard shortcuts, such as the Escape key. You can end full- screen mode in Haxe by setting the Stage.displayState property to StageDisplayState.NORMAL. The code in the following example ends full-screen mode when the NetStream.Play.Stop netStatus event occurs.
 
 videoStream.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler);
 
@@ -154,7 +154,7 @@ if(event.info.code == &quot;NetStream.Play.Stop&quot;) stage.displayState = Stag
 
 Full-screen hardware acceleration
 
-When you rescale a rectangular area of the stage to full-screen mode, Flash Player or AIR uses hardware acceleration, if it&#039;s available and enabled. The runtime uses the video adapter on the computer to speed up scaling of the video, or a portion of the stage, to full-screen size. Under these circumstances, Flash Player applications can often profit by switching to the StageVideo class from the Video class (or Camera class; Flash Player 11.4/AIR 3.4 and higher).
+When you rescale a rectangular area of the stage to full-screen mode, OpenFL uses hardware acceleration, if it&#039;s available and enabled. The runtime uses the video adapter on the computer to speed up scaling of the video, or a portion of the stage, to full-screen size. Under these circumstances, OpenFL applications can often profit by switching to the StageVideo class from the Video class (or Camera class; OpenFL 11.4/AIR 3.4 and higher).
 
 For more information on hardware acceleration in full-screen mode, see
 

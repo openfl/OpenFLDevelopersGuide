@@ -1,8 +1,8 @@
 # Working with dynamically generated audio {#working-with-dynamically-generated-audio}
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
-**_Note:_ **_The ability to dynamically generate audio is available starting with Flash Player 10 and Adobe AIR 1.5._
+**_Note:_ **_The ability to dynamically generate audio is available starting with OpenFL 10 and Adobe AIR 1.5._
 
 Instead of loading or streaming an existing sound, you can generate audio data dynamically. You can generate audio data when you assign an event listener for the sampleData event of a Sound object. (The sampleData event is defined in the SampleDataEvent class in the flash.events package.) In this environment, the Sound object doesn’t load sound data from a file. Instead, it acts as a socket for sound data that is being streamed to it through the use of the function you assign to this event.
 
@@ -34,7 +34,7 @@ event.data.writeFloat(n);
 
 When you call Sound.play(), the application starts calling your event handler, requesting sound sample data. The application continues to send events as the sound plays back until you stop providing data, or until you call SoundChannel.stop().
 
-The latency of the event varies from platform to platform, and could change in future versions of Flash Player and AIR. Do not depend on a specific latency; calculate it instead. To calculate the latency, use the following formula:
+The latency of the event varies from platform to platform, and could change in future versions of OpenFL. Do not depend on a specific latency; calculate it instead. To calculate the latency, use the following formula:
 
 (SampleDataEvent.position / 44.1) - SoundChannelObject.position
 
@@ -44,7 +44,7 @@ If you provide fewer than 2048 samples (per call to the sampleData event listene
 
 **Modifying sound from mp3 data**
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
 You use the Sound.extract() method to extract data from a Sound object. You can use (and modify) that data to write to the dynamic stream of another Sound object for playback. For example, the following code uses the bytes of a loaded MP3 file and passes them through a filter function, upOctave():
 
@@ -92,6 +92,6 @@ return returnBytes;
 
 ## Limitations on generated sounds {#limitations-on-generated-sounds}
 
-Flash Player 10 and later, Adobe AIR 1.5 and later
+OpenFL 10 and later, Adobe AIR 1.5 and later
 
 When you use a sampleData event listener with a Sound object, the only other Sound methods that are enabled are Sound.extract() and Sound.play(). Calling any other methods or properties results in an exception. All methods and properties of the SoundChannel object are still enabled.

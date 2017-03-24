@@ -1,6 +1,6 @@
 # Filtering display objects example: Filter Workbench {#filtering-display-objects-example-filter-workbench}
 
-The Filter Workbench provides a user interface to apply different filters to images and other visual content and see the resulting code that can be used to generate the same effect in ActionScript. In addition to providing a tool for experimenting with filters, this application demonstrates the following techniques:
+The Filter Workbench provides a user interface to apply different filters to images and other visual content and see the resulting code that can be used to generate the same effect in Haxe. In addition to providing a tool for experimenting with filters, this application demonstrates the following techniques:
 
 *   Creating instances of various filters
 *   Applying multiple filters to a display object
@@ -40,9 +40,9 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 | com/example/programmingas3/filterWorkbench/ImageType.as | This class serves as a value object containing the type and URL of a single image file to which the application can load and apply filters. The class also includes a set of constants representing the actual image files available. |
 | images/sampleAnimation.swf, images/sampleImage1.jpg, images/sampleImage2.jpg | Images and other visual content to which filters are applied in the application. |
 
-**Experimenting with ActionScript filters**
+**Experimenting with Haxe filters**
 
-The Filter Workbench application is designed to help you experiment with various filter effects and generate the relevant ActionScript code for that effect. The application lets you select from three different files containing visual content, including bitmap images and an animation created by Flash, and apply eight different ActionScript filters to the selected image, either individually or in combination with other filters. The application includes the following filters:
+The Filter Workbench application is designed to help you experiment with various filter effects and generate the relevant Haxe code for that effect. The application lets you select from three different files containing visual content, including bitmap images and an animation created by Flash, and apply eight different Haxe filters to the selected image, either individually or in combination with other filters. The application includes the following filters:
 
 *   Bevel (flash.filters.BevelFilter)
 *   Blur (flash.filters.BlurFilter)
@@ -60,12 +60,12 @@ As the user adjusts the filter properties, the preview updates in real time. The
 There are a few features and limitations in the application’s filter panels:
 
 *   The color matrix filter includes a set of controls for directly manipulating common image properties including brightness, contrasts, saturation, and hue. In addition, custom color matrix values can be specified.
-*   The convolution filter, which is only available using ActionScript, includes a set of commonly used convolution matrix values, or custom values can be specified. However, while the ConvolutionFilter class accepts a matrix of any size, the Filter Workbench application uses a fixed 3 x 3 matrix, the most commonly used filter size.
-*   The displacement map filter and shader filter, which are only available in ActionScript, are not available in the Filter Workbench application.
+*   The convolution filter, which is only available using Haxe, includes a set of commonly used convolution matrix values, or custom values can be specified. However, while the ConvolutionFilter class accepts a matrix of any size, the Filter Workbench application uses a fixed 3 x 3 matrix, the most commonly used filter size.
+*   The displacement map filter and shader filter, which are only available in Haxe, are not available in the Filter Workbench application.
 
 ## Creating filter instances {#creating-filter-instances}
 
-The Filter Workbench application includes a set of classes, one for each of the available filters, which are used by the individual panels to create the filters. When a user selects a filter, the ActionScript code associated with the filter panel creates an instance of the appropriate filter factory class. (These classes are known as _factory classes_ because their purpose is to create instances of other objects, much like a real-world factory creates individual products.)
+The Filter Workbench application includes a set of classes, one for each of the available filters, which are used by the individual panels to create the filters. When a user selects a filter, the Haxe code associated with the filter panel creates an instance of the appropriate filter factory class. (These classes are known as _factory classes_ because their purpose is to create instances of other objects, much like a real-world factory creates individual products.)
 
 Whenever the user changes a property value on the panel, the panel’s code calls the appropriate method in the factory class. Each factory class includes specific methods that the panel uses to create the appropriate filter instance. For example, if the user selects the Blur filter, the application creates a BlurFactory instance. The BlurFactory class includes a modifyFilter() method that accepts three parameters: blurX, blurY, and quality, which together are used to create the desired BlurFilter instance:
 
@@ -129,7 +129,7 @@ return _filter;
 
 }
 
-In the ConvolutionFactory class’s implementation of the getFilter() method, it returns a ConvolutionFilter instance, although any object that calls getFilter() doesn’t necessarily know that—according to the definition of the getFilter() method that ConvolutionFactory follows, it must return any BitmapFilter instance, which could be an instance of any of the ActionScript filter classes.
+In the ConvolutionFactory class’s implementation of the getFilter() method, it returns a ConvolutionFilter instance, although any object that calls getFilter() doesn’t necessarily know that—according to the definition of the getFilter() method that ConvolutionFactory follows, it must return any BitmapFilter instance, which could be an instance of any of the Haxe filter classes.
 
 ## Applying filters to display objects {#applying-filters-to-display-objects}
 

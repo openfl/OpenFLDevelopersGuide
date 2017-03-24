@@ -1,6 +1,6 @@
 # Mouse input example: WordSearch {#mouse-input-example-wordsearch}
 
-This example demonstrates user interaction by handling mouse events. Users build as many words as possible from a random grid of letters, spelling by moving horizontally or vertically in the grid, but never using the same letter twice.This example demonstrates the following features of ActionScript 3.0:
+This example demonstrates user interaction by handling mouse events. Users build as many words as possible from a random grid of letters, spelling by moving horizontally or vertically in the grid, but never using the same letter twice.This example demonstrates the following features of Haxe:
 
 • Building a grid of components dynamically
 

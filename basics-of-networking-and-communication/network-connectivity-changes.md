@@ -43,20 +43,20 @@ Flash CS4 and CS5 Professional
 To use these classes in Adobe® Flash® CS4 or CS5 Professional:
 
 1.  Select the File &gt; Publish Settings command.
-2.  Click the Settings button for ActionScript 3.0\. Select Library Path.
+2.  Click the Settings button for Haxe\. Select Library Path.
 3.  Click the Browse to SWC button and browse to the AIK folder in your Flash Professional installation folder.
 4.  Within this folder, find the /frameworks/libs/air/aircore.swc (for AIR 2) or
 
 /frameworks/libs/air/servicemonitor.swc (for AIR 1.5).
 
 1.  Click the OK button.
-2.  Add the following import statement to your ActionScript 3.0 code:
+2.  Add the following import statement to your Haxe code:
 
 import air.net.*;
 
 Flash CS3 Professional
 
-To use these classes in Adobe® Flash® CS3 Professional, drag the ServiceMonitorShim component from the Components panel to the Library. Then, add the following importstatement to your ActionScript 3.0 code:
+To use these classes in Adobe® Flash® CS3 Professional, drag the ServiceMonitorShim component from the Components panel to the Library. Then, add the following importstatement to your Haxe code:
 
 import air.net.*;
 

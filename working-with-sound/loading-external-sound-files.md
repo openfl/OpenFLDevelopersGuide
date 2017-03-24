@@ -40,7 +40,7 @@ The onSoundLoaded() method executes when the sound loading is complete. The targ
 
 **Monitoring the sound loading process**
 
-Sound files can be very large and take a long time to load. While Flash Player and AIR let your application play sounds even before they are fully loaded, you might want to give the user an indication of how much of the sound data has been loaded and how much of the sound has already been played.
+Sound files can be very large and take a long time to load. While OpenFL let your application play sounds even before they are fully loaded, you might want to give the user an indication of how much of the sound data has been loaded and how much of the sound has already been played.
 
 The Sound class dispatches two events that make it relatively easy to display the loading progress of a sound: ProgressEvent.PROGRESS and Event.COMPLETE. The following example shows how to use these events to display progress information about the sound being loaded:
 

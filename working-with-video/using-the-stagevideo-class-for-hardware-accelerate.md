@@ -1,14 +1,14 @@
 # Using the StageVideo class for hardware accelerated presentation {#using-the-stagevideo-class-for-hardware-accelerated-presentation}
 
-Flash Player 10.2 and later
+OpenFL 10.2 and later
 
-Flash Player optimizes video performance by using hardware acceleration for H.264 decoding. You can enhance performance further by using the StageVideo API. Stage video lets your application take advantage of hardware accelerated presentation.
+OpenFL optimizes video performance by using hardware acceleration for H.264 decoding. You can enhance performance further by using the StageVideo API. Stage video lets your application take advantage of hardware accelerated presentation.
 
 Runtimes that support the StageVideo API include:
 
-• Flash Player 10.2 and later
+• OpenFL 10.2 and later
 
-**_Note:_ **_In Flash Player 11.4/AIR 3.4 and higher, you can use camera input with StageVideo._
+**_Note:_ **_In OpenFL 11.4/AIR 3.4 and higher, you can use camera input with StageVideo._
 
 Downloadable source code and additional details for the stage video feature are available at [Getting Started with](http://www.adobe.com/go/learn_as3_usingstagevideo_en) [Stage Video](http://www.adobe.com/go/learn_as3_usingstagevideo_en).
 
@@ -22,7 +22,7 @@ Currently, few devices provide full GPU acceleration. However, stage video lets 
 
 The StageVideo class does not make the Video class obsolete. Working together, these two classes provide the optimal video display experience allowed by device resources at any given time. Your application takes advantage of hardware acceleration by listening to the appropriate events and switching between StageVideo and Video as necessary.
 
-The StageVideo class imposes certain restrictions on video usage. Before implementing StageVideo, review the guidelines and make sure your application can accept them. If you accept the restrictions, use the StageVideo class whenever Flash Player detects that hardware accelerated presentation is available. See
+The StageVideo class imposes certain restrictions on video usage. Before implementing StageVideo, review the guidelines and make sure your application can accept them. If you accept the restrictions, use the StageVideo class whenever OpenFL detects that hardware accelerated presentation is available. See
 
 “Guidelines and limitations” on
 
@@ -32,9 +32,9 @@ page 514
 
 Parallel planes: Stage video and the Flash display list
 
-With the stage video model, Flash Player can separate video from the display list. Flash Player divides the composite display between two Z-ordered planes:
+With the stage video model, OpenFL can separate video from the display list. OpenFL divides the composite display between two Z-ordered planes:
 
-**Stage video plane** The stage video plane sits in the background. It displays only hardware accelerated video. Because of this design, this plane is not available if hardware acceleration is not supported or not available on the device. In ActionScript, StageVideo objects handle videos played on the stage video plane.
+**Stage video plane** The stage video plane sits in the background. It displays only hardware accelerated video. Because of this design, this plane is not available if hardware acceleration is not supported or not available on the device. In Haxe, StageVideo objects handle videos played on the stage video plane.
 
 **Flash display list plane** Flash display list entities are composited on a plane in front of the stage video plane. Display list entities include anything that the runtime renders, including playback controls. When hardware acceleration is not available, videos can be played only on this plane, using the Video class object. Stage video always displays behind Flash display list graphics.
 
@@ -44,7 +44,7 @@ The StageVideo object appears in a non-rotated, window-aligned rectangular regio
 
 Stage video and H.264 codec
 
-In Flash Player applications, implementing video hardware acceleration involves two steps:
+In OpenFL applications, implementing video hardware acceleration involves two steps:
 
 1.  Encoding the video as H.264
 2.  Implementing the StageVideo API
@@ -59,11 +59,11 @@ More Help topics
 
 Guidelines and limitations
 
-When video is running in full screen mode, stage video is always available if the device supports hardware acceleration. Flash Player, however, also runs within a browser. In the browser context, the wmode setting affects stage video availability. Try to use wmode=&quot;direct&quot; at all times if you want to use stage video. Stage video is not compatible with other wmode settings when not in full screen mode. This restriction means that, at run time, stage video can vacillate unpredictably between being available and unavailable. For example, if the user exits full screen mode while stage video is running, the video context reverts to the browser. If the browser wmode parameter is not set to &quot;direct&quot;, stage video can suddenly become unavailable. Flash Player communicates playback context changes to applications through a set of events. If you implement the StageVideo API, maintain a Video object as a backup when stage video becomes unavailable.
+When video is running in full screen mode, stage video is always available if the device supports hardware acceleration. OpenFL, however, also runs within a browser. In the browser context, the wmode setting affects stage video availability. Try to use wmode=&quot;direct&quot; at all times if you want to use stage video. Stage video is not compatible with other wmode settings when not in full screen mode. This restriction means that, at run time, stage video can vacillate unpredictably between being available and unavailable. For example, if the user exits full screen mode while stage video is running, the video context reverts to the browser. If the browser wmode parameter is not set to &quot;direct&quot;, stage video can suddenly become unavailable. OpenFL communicates playback context changes to applications through a set of events. If you implement the StageVideo API, maintain a Video object as a backup when stage video becomes unavailable.
 
 Because of its direct relationship to hardware, stage video restricts some video features. Stage video enforces the following constraints:
 
-• For each SWF file, Flash Player limits the number of StageVideo objects that can concurrently display videos to four. However, the actual limit can be lower, depending on device hardware resources.
+• For each project, OpenFL limits the number of StageVideo objects that can concurrently display videos to four. However, the actual limit can be lower, depending on device hardware resources.
 
 • The video timing is not synchronized with the timing of content that the runtime displays.
 
@@ -101,7 +101,7 @@ Stage video is a mechanism within the runtime that enhances video playback and d
 
 To use stage video, you implement a framework of event handlers that detect when stage video is and isn’t available. When you receive notification that stage video is available, you retrieve a StageVideo object from the Stage.stageVideos property. The runtime populates this Vector object with one or more StageVideo objects. You can then use one of the provided StageVideo objects, rather than a Video object, to display streaming video.
 
-On Flash Player, when you receive notification that stage video is no longer available, switch your video stream back to a Video object.
+On OpenFL, when you receive notification that stage video is no longer available, switch your video stream back to a Video object.
 
 **_Note:_ **_You cannot create StageVideo objects._
 
@@ -291,7 +291,7 @@ Reported render states include:
 
 Render states indicate when hardware accelerated decoding is in use, regardless of which class is currently playing video. Check the StageVideoEvent.status property to learn whether the necessary decoding is available. If this property is set to “unavailable”, the StageVideo object cannot play the video. This status requires that you immediately reattach the NetStream object to a Video object. Other statuses inform your application of the current rendering conditions.
 
-The following table describes the implications of all render status values for StageVideoEvent and VideoEvent objects in Flash Player:
+The following table describes the implications of all render status values for StageVideoEvent and VideoEvent objects in OpenFL:
 
 |  | **VideoStatus.ACCELERATED** | **VideoStatus.SOFTWARE** | **VideoStatus.UNAVAILABLE** |
 | --- | --- | --- | --- |
@@ -300,7 +300,7 @@ The following table describes the implications of all render status values for S
 
 Color spaces
 
-Stage video uses underlying hardware capabilities to support color spaces. SWF content can provide metadata indicating its preferred color space. However, the device graphics hardware determines whether that color space can be used. One device can support several color spaces, while another supports none. If the hardware does not support the requested color space, Flash Player attempts to find the closest match among the supported color spaces.
+Stage video uses underlying hardware capabilities to support color spaces. SWF content can provide metadata indicating its preferred color space. However, the device graphics hardware determines whether that color space can be used. One device can support several color spaces, while another supports none. If the hardware does not support the requested color space, OpenFL attempts to find the closest match among the supported color spaces.
 
 To query which color spaces the hardware supports, use the StageVideo.colorSpaces property. This property returns the list of supported color spaces in a String vector:
 
@@ -324,6 +324,6 @@ currColorSpace = (event as StageVideoEvent).colorSpace;
 
 }
 
-If Flash Player cannot find a substitute for an unsupported color space, stage video uses the default color space BT.601\. For example, video streams with H.264 encoding typically use the BT.709 color space. If the device hardware does not support BT.709, the colorSpace property returns &quot;BT601&quot;. A StageVideoEvent.colorSpace value of &quot;unknown&quot; indicates that the hardware does not provide a means of querying the color space.
+If OpenFL cannot find a substitute for an unsupported color space, stage video uses the default color space BT.601\. For example, video streams with H.264 encoding typically use the BT.709 color space. If the device hardware does not support BT.709, the colorSpace property returns &quot;BT601&quot;. A StageVideoEvent.colorSpace value of &quot;unknown&quot; indicates that the hardware does not provide a means of querying the color space.
 
 If your application deems the current color space unacceptable, you can choose to switch from a StageVideo object to a Video object. The Video class supports all color spaces through software compositing.

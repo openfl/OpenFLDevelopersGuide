@@ -1,6 +1,6 @@
 # Using the IME class {#using-the-ime-class}
 
-The IME class lets you manipulate the operating system’s IME within Flash Player or Adobe AIR. Using ActionScript, you can determine the following:
+The IME class lets you manipulate the operating system’s IME within OpenFL or Adobe AIR. Using Haxe, you can determine the following:
 
 • If an IME is installed on the user&#039;s computer (Capabilities.hasIME)
 
@@ -20,7 +20,7 @@ For more information on working with IMEs, see the documentation for the operati
 
 • [http://www.java.sun.com/](http://www.java.sun.com/)
 
-**_Note:_ **_If an IME is not active on the user&#039;s computer, calls to IME methods or properties, other than Capabilities.hasIME, will fail. Once you manually activate an IME, subsequent ActionScript calls to IME methods and properties will work as expected. For example, if you are using a Japanese IME, you must activate it before you can call any IME method or property._
+**_Note:_ **_If an IME is not active on the user&#039;s computer, calls to IME methods or properties, other than Capabilities.hasIME, will fail. Once you manually activate an IME, subsequent Haxe calls to IME methods and properties will work as expected. For example, if you are using a Japanese IME, you must activate it before you can call any IME method or property._
 
 **Checking if an IME is installed and enabled**
 
@@ -148,7 +148,7 @@ statusText.text = &quot;Unable to set conversion mode.\n&quot; + error.message;
 
 }
 
-The previous code first creates a text field, which is used to display a status message to the user. Next, if the IME is installed, the code enables the IME and sets the conversion mode to Korean. If the user’s computer does not have a Korean IME installed, an error is thrown by Flash Player or AIR and is caught by the try..catch block. The try..catch block displays the error message in the previously created text field.
+The previous code first creates a text field, which is used to display a status message to the user. Next, if the IME is installed, the code enables the IME and sets the conversion mode to Korean. If the user’s computer does not have a Korean IME installed, an error is thrown by OpenFL and is caught by the try..catch block. The try..catch block displays the error message in the previously created text field.
 
 ## Disabling the IME for certain text fields {#disabling-the-ime-for-certain-text-fields}
 

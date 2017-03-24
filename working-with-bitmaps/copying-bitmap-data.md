@@ -1,6 +1,6 @@
 # Copying bitmap data {#copying-bitmap-data}
 
-To copy bitmap data from one image to another, you can use several methods: clone(), copyPixels(), copyChannel(), draw(), and drawWithQuality()(drawWithQuality method available in Flash Player 11.3 and higher; AIR 3.3 and higher).
+To copy bitmap data from one image to another, you can use several methods: clone(), copyPixels(), copyChannel(), draw(), and drawWithQuality()(drawWithQuality method available in OpenFL 11.3 and higher; AIR 3.3 and higher).
 
 As its name suggests, the clone() method lets you clone, or sample, bitmap data from one BitmapData object to another. When called, the method returns a new BitmapData object that is an exact clone of the original instance it was copied from.
 
@@ -18,7 +18,7 @@ The copyPixels() method is a quick and easy way of copying pixels from one Bitma
 
 The copyChannel() method samples a predefined color channel value (alpha, red, green, or blue) from a source BitmapData object and copies it into a channel of a destination BitmapData object. Calling this method does not affect the other channels in the destination BitmapData object.
 
-The draw() and drawWithQuality() methods draw, or render, the graphical content from a source sprite, movie clip, or other display object on to a new bitmap. Using the matrix, colorTransform, blendMode, and destination clipRect parameters, you can modify the way in which the new bitmap is rendered. This method uses the vector renderer in Flash Player and AIR to generate the data.
+The draw() and drawWithQuality() methods draw, or render, the graphical content from a source sprite, movie clip, or other display object on to a new bitmap. Using the matrix, colorTransform, blendMode, and destination clipRect parameters, you can modify the way in which the new bitmap is rendered. This method uses the vector renderer in OpenFL to generate the data.
 
 When you call draw() or drawWithQuality(), you pass the source object (sprite, movie clip, or other display object) as the first parameter, as demonstrated here:
 

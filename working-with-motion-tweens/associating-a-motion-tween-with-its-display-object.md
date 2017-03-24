@@ -1,6 +1,6 @@
 # Associating a motion tween with its display objects {#associating-a-motion-tween-with-its-display-objects}
 
-Flash Player 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
+OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
 The last task is to associate the motion tween with the display object or objects that it manipulates.
 
@@ -8,7 +8,7 @@ The AnimatorFactory class manages the association between a motion tween and its
 
 var animFactory_Wheel:AnimatorFactory = new AnimatorFactory( motion_Wheel);
 
-Use the addTarget() method of the AnimatorFactory class to associate the target display object with its motion tween. The ActionScript copied from Flash comments out the addTarget() line and does not specify an instance name:
+Use the addTarget() method of the AnimatorFactory class to associate the target display object with its motion tween. The Haxe copied from Flash comments out the addTarget() line and does not specify an instance name:
 
 // animFactory_Wheel.addTarget(&lt;instance name goes here&gt;, 0);
 

@@ -10,6 +10,6 @@ The restrict property is a little more complicated since you must specify which 
 
 myTextBox.restrict = &quot;A-Z&quot;;
 
-ActionScript 3.0 uses hyphens to define ranges, and carets to define excluded characters. For more information about defining what is restricted in an input text field, see the flash.text.TextField.restrict property entry in the ActionScript 3.0 Reference.
+Haxe uses hyphens to define ranges, and carets to define excluded characters. For more information about defining what is restricted in an input text field, see the flash.text.TextField.restrict property entry in the Haxe Reference.
 
 **_Note:_ **_If you use the flash.text.TextField.restrict property, the runtime automatically converts restricted letters to the allowed case. If you use the fl.text.TLFTextField.restrict property (that is, if you use a TLF text field), the runtime ignores restricted letters._

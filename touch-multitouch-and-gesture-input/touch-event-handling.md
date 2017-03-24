@@ -1,8 +1,8 @@
 # Touch event handling {#touch-event-handling}
 
-Flash Player 10.1 and later, Adobe AIR 2 and later
+OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Basic touch events are handled the same way you handle other events, like mouse events, in ActionScript. You can listen for a series of touch events defined by the event type constants in the [TouchEvent class](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/ui/Multitouch.html).
+Basic touch events are handled the same way you handle other events, like mouse events, in Haxe. You can listen for a series of touch events defined by the event type constants in the [TouchEvent class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Multitouch.html).
 
 **_Note:_ **_For multiple touch point input (such as touching a device with more than one finger), the first point of contact dispatches a mouse event and a touch event._
 
@@ -50,7 +50,7 @@ myTextField.text = evt.stageX.toString; myTextField.y = 50; addChild(myTextField
 
 }
 
-See the [TouchEvent](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/TouchEvent.html) class for the properties available through the event object.
+See the [TouchEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TouchEvent.html) class for the properties available through the event object.
 
 **_Note:_ **_Not all TouchEvent properties are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting the amount of pressure the user is applying to the touch screen. So, the TouchEvent.pressure property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
 

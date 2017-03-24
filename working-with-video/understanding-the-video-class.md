@@ -1,6 +1,6 @@
 # Understanding the Video class {#understanding-the-video-class}
 
-The Video class enables you to display live streaming video in an application without embedding it in your SWF file. You can capture and play live video using the Camera.getCamera() method. You can also use the Video class to play back video files over HTTP or from the local file system. There are several different ways to use Video in your projects:
+The Video class enables you to display live streaming video in an application without embedding it in your project. You can capture and play live video using the Camera.getCamera() method. You can also use the Video class to play back video files over HTTP or from the local file system. There are several different ways to use Video in your projects:
 
 • Load a video file dynamically using the NetConnection and NetStream classes and display the video in a Video object.
 

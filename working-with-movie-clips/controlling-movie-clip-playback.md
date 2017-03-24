@@ -1,8 +1,8 @@
 # Controlling movie clip playback {#controlling-movie-clip-playback}
 
-Flash uses the metaphor of a timeline to convey animation or a change in state. Any visual element that employs a timeline must be either a MovieClip object or extend from the MovieClip class. While ActionScript can direct any movie clip to stop, play, or go to another point on the timeline, it cannot be used to dynamically create a timeline or add content at specific frames; this is only possible using the Flash authoring tool.
+Flash uses the metaphor of a timeline to convey animation or a change in state. Any visual element that employs a timeline must be either a MovieClip object or extend from the MovieClip class. While Haxe can direct any movie clip to stop, play, or go to another point on the timeline, it cannot be used to dynamically create a timeline or add content at specific frames; this is only possible using the Flash authoring tool.
 
-When a MovieClip is playing, it progresses along its timeline at a speed dictated by the frame rate of the SWF file. Alternatively, you can override this setting by setting the Stage.frameRate property in ActionScript.
+When a MovieClip is playing, it progresses along its timeline at a speed dictated by the frame rate of the project. Alternatively, you can override this setting by setting the Stage.frameRate property in Haxe.
 
 **Playing movie clips and stopping playback**
 
@@ -64,9 +64,9 @@ In normal playback, if a movie clip contains more than a single frame, it will l
 
 Sending a movie clip to a new frame is a simple affair. Calling either gotoAndPlay() or gotoAndStop() will jump the movie clip to the frame number specified as a parameter. Alternatively, you can pass a string that matches the name of a frame label. Any frame on the timeline can be assigned a label. To do this, select a frame on the timeline and then enter a name in the Frame Label field on the Property inspector.
 
-The advantages of using frame labels instead of numbers are particularly evident when creating a complex movie clip. When the number of frames, layers, and tweens in an animation becomes large, consider labeling important frames with explanatory descriptions that represent shifts in the behavior of the movie clip (for example, “off,” “walking,” or “running”). This improves code readability and also provides flexibility, since ActionScript calls that go to a labeled frame are pointers to a single reference—the label—rather than a specific frame number. If later on you decide to move a particular segment of the animation to a different frame, you will not need to change your ActionScript code as long as you keep the same label for the frames in the new location.
+The advantages of using frame labels instead of numbers are particularly evident when creating a complex movie clip. When the number of frames, layers, and tweens in an animation becomes large, consider labeling important frames with explanatory descriptions that represent shifts in the behavior of the movie clip (for example, “off,” “walking,” or “running”). This improves code readability and also provides flexibility, since Haxe calls that go to a labeled frame are pointers to a single reference—the label—rather than a specific frame number. If later on you decide to move a particular segment of the animation to a different frame, you will not need to change your Haxe code as long as you keep the same label for the frames in the new location.
 
-To represent frame labels in code, ActionScript 3.0 includes the FrameLabel class. Each instance of this class represents a single frame label, and has a name property representing the name of the frame label as specified in the Property inspector, and a frame property representing the frame number of the frame where the label is placed on the timeline.
+To represent frame labels in code, Haxe includes the FrameLabel class. Each instance of this class represents a single frame label, and has a name property representing the name of the frame label as specified in the Property inspector, and a frame property representing the frame number of the frame where the label is placed on the timeline.
 
 In order to get access to the FrameLabel instances associated with a movie clip instance, the MovieClip class includes two properties that directly return FrameLabel objects. The currentLabels property returns an array that consists of all FrameLabel objects across the entire timeline of a movie clip. The currentLabel property returns a string containing the name of the frame label encountered most recently along the timeline.
 
@@ -80,7 +80,7 @@ if (robot.currentLabel == &quot;walking&quot;)
 
 }
 
-Flash Player 11.3 and AIR 3.3 added the frameLabel event to the FrameLabel class. You can assign an event handler to the FrameLabel instance that represents a frame label. The event is dispatched when the playhead enters the frame.
+OpenFL 11.3 and AIR 3.3 added the frameLabel event to the FrameLabel class. You can assign an event handler to the FrameLabel instance that represents a frame label. The event is dispatched when the playhead enters the frame.
 
 The following example creates a FrameLabel instance for the second frame label in the Array of frame labels for the MovieClip. It then registers an event handler for the frameLabel event:
 
@@ -94,10 +94,10 @@ function onFrameLabel(e:Event):void {
 
 ## Working with scenes {#working-with-scenes}
 
-In the Flash authoring environment, you can use scenes to demarcate a series of timelines that a SWF file will progress through. Using the second parameter of the gotoAndPlay() or gotoAndStop() methods, you can specify a scene to send the playhead to. All FLA files start with only the initial scene, but you can create new scenes.
+In the Flash authoring environment, you can use scenes to demarcate a series of timelines that a project will progress through. Using the second parameter of the gotoAndPlay() or gotoAndStop() methods, you can specify a scene to send the playhead to. All FLA files start with only the initial scene, but you can create new scenes.
 
 Using scenes is not always the best approach because scenes have a number of drawbacks. A Flash document that contains multiple scenes can be difficult to maintain, particularly in multiauthor environments. Multiple scenes can also be inefficient in bandwidth, because the publishing process merges all scenes into a single timeline. This causes a progressive download of all scenes, even if they are never played. For these reasons, use of multiple scenes is often discouraged except for organizing lengthy multiple timeline-based animations.
 
-The scenes property of the MovieClip class returns an array of Scene objects representing all the scenes in the SWF file. The currentScene property returns a Scene object that represents the scene that is currently playing.
+The scenes property of the MovieClip class returns an array of Scene objects representing all the scenes in the project. The currentScene property returns a Scene object that represents the scene that is currently playing.
 
 The Scene class has several properties that give information about a scene. The labels property returns an array of FrameLabel objects representing the frame labels in that scene. The name property returns the scene’s name as a string. The numFrames property returns an int representing the total number of frames in the scene.
