@@ -18,10 +18,10 @@ The `frameRate` property of the Stage class is used to set the frame rate for al
 
 When the portion of the screen representing OpenFL is resized, the runtime automatically adjusts the Stage contents to compensate. The Stage class’s scaleMode property determines how the Stage contents are adjusted. This property can be set to four different values, defined as constants in the openfl.display.StageScaleMode class:
 
-*   `StageScaleMode.EXACT_FIT` scales the SWF to fill the new stage dimensions without regard for the original content aspect ratio. The scale factors might not be the same for width and height, so the content can appear squeezed or stretched if the aspect ratio of the stage is changed.
-*   `StageScaleMode.SHOW_ALL` scales the SWF to fit entirely within the new stage dimensions without changing the content aspect ratio. This scale mode displays all of the content, but can result in “letterbox” borders, like the black bars that appear when viewing a wide-screen movie on a standard television.
-*   `StageScaleMode.NO_BORDER` scales the SWF to entirely fill the new stage dimensions without changing the aspect ratio of the content. This scale mode makes full use of the stage display area, but can result in cropping.
-*   `StageScaleMode.NO_SCALE` — does not scale the SWF. If the new stage dimensions are smaller, the content is cropped; if larger, the added space is blank.
+*   `StageScaleMode.EXACT_FIT` scales the project to fill the new stage dimensions without regard for the original content aspect ratio. The scale factors might not be the same for width and height, so the content can appear squeezed or stretched if the aspect ratio of the stage is changed.
+*   `StageScaleMode.SHOW_ALL` scales the project to fit entirely within the new stage dimensions without changing the content aspect ratio. This scale mode displays all of the content, but can result in “letterbox” borders, like the black bars that appear when viewing a wide-screen movie on a standard television.
+*   `StageScaleMode.NO_BORDER` scales the project to entirely fill the new stage dimensions without changing the aspect ratio of the content. This scale mode makes full use of the stage display area, but can result in cropping.
+*   `StageScaleMode.NO_SCALE` — does not scale the project. If the new stage dimensions are smaller, the content is cropped; if larger, the added space is blank.
 
 > On Flash Player, OpenFL will respect the above StageScaleMode settings, but on other platforms, OpenFL will behave like `StageScaleMode.NO_SCALE` by default, or `StageScaleMode.SHOW_ALL` if you set a window width and height in your project file
 
@@ -35,7 +35,7 @@ Consequently, having `scaleMode` set to `StageScaleMode.NO_SCALE` allows you to 
 // it should resize when the window resizes.
 // controlBar is a display object (e.g. a Sprite) containing several
 // buttons; it should stay positioned at the bottom-left corner of the
-// Stage (below mainContent) and it should not resize when the SWF
+// Stage (below mainContent) and it should not resize when the project
 // resizes.
 
 import openfl.display.Stage;
@@ -45,20 +45,20 @@ import openfl.events.Event;
 
 ...
 
-var swfStage = mainContent.stage;
-swfStage.scaleMode = StageScaleMode.NO_SCALE;
-swfStage.align = StageAlign.TOP_LEFT;
-swfStage.addEventListener (Event.RESIZE, resizeDisplay);
+var stage = mainContent.stage;
+stage.scaleMode = StageScaleMode.NO_SCALE;
+stage.align = StageAlign.TOP_LEFT;
+stage.addEventListener (Event.RESIZE, resizeDisplay);
 
 ...
 
 private function resizeDisplay (event:Event):Void {
 	
-	var swfWidth = swfStage.stageWidth;
-	var swfHeight = swfStage.stageHeight;
+	var width = stage.stageWidth;
+	var height = stage.stageHeight;
 	
 	// Resize the main content area
-	var newContentHeight = swfHeight - controlBar.height;
+	var newContentHeight = height - controlBar.height;
 	mainContent.height = newContentHeight;
 	mainContent.scaleX = mainContent.scaleY;
 	
