@@ -1,18 +1,12 @@
 # Basics of the drawing API {#basics-of-the-drawing-api}
 
-The drawing API is the name for the functionality built into Haxe that allows you to create vector graphics— lines, curves, shapes, fills, and gradients—and display them on the screen using Haxe. The flash.display.Graphics class provides this functionality. You can draw with Haxe on any Shape, Sprite, or MovieClip instance, using the graphics property defined in each of those classes. (Each of those classes’ graphics property is in fact an instance of the Graphics class.)
+The drawing API is the name for the functionality built into OpenFL that allows you to create vector graphics—lines, curves, shapes, fills, and gradients—and display them on the screen using Haxe code. The openfl.display.Graphics class provides this functionality. You can draw with Haxe code on any Shape, Sprite, or MovieClip instance, using the `graphics` property defined in each of those classes. (Each of those classes’ `graphics` property is in fact an instance of the Graphics class.)
 
 If you’re just getting started with drawing with code, the Graphics class includes several methods that make it easy to draw common shapes like circles, ellipses, rectangles, and rectangles with rounded corners. You can draw them as empty lines or filled shapes. When you need more advanced functionality, the Graphics class also includes methods for drawing lines and quadratic Bézier curves, which you can use in conjunction with the trigonometry functions in the Math class to create any shape you need.
 
-Flash runtimes (such as OpenFL 10 and Adobe AIR 1.5 and later versions) add an additional API for drawing, which allow you to programmatically draw entire shapes with a single command. Once you’re familiar with the Graphics class and tasks covered in “Basics of using the drawing API”, continue to
+OpenFL adds an additional API for drawing, which allow you to programmatically draw entire shapes with a single command. Once you’re familiar with the Graphics class and tasks covered in [Basics of using the drawing API](#basics-of-the-drawing-api), continue to [Advanced use of the drawing API](advanced-use-of-the-drawing-api\README.md) to learn more about these drawing API features.
 
-“Advanced use of the drawing API”
-
-on page 235
-
-to learn more about these drawing API features.
-
-Important concepts and terms
+### Important concepts and terms
 
 The following reference list contains important terms that you will encounter while using the drawing API:
 
