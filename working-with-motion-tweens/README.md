@@ -2,7 +2,7 @@
 
 OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
-“Animating objects” on page 192
+"Animating objects" on page 192
 
 describes how to implement scripted animation in Haxe.
 

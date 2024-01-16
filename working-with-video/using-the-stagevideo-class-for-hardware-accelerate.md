@@ -24,7 +24,7 @@ The StageVideo class does not make the Video class obsolete. Working together, t
 
 The StageVideo class imposes certain restrictions on video usage. Before implementing StageVideo, review the guidelines and make sure your application can accept them. If you accept the restrictions, use the StageVideo class whenever OpenFL detects that hardware accelerated presentation is available. See
 
-“Guidelines and limitations” on
+"Guidelines and limitations" on
 
 page 514
 
@@ -55,7 +55,7 @@ Stage video eliminates GPU-to-CPU read-back. In other words, the GPU no longer s
 
 More Help topics
 
-“Understanding video formats” on page 475
+"Understanding video formats" on page 475
 
 Guidelines and limitations
 
@@ -83,7 +83,7 @@ Because of its direct relationship to hardware, stage video restricts some video
 
 • You can place the video only on full pixel boundaries.
 
-• Though GPU rendering is the best available for the given device hardware, it is not 100% “pixel identical” across devices. Slight variations occur due to driver and platform differences.
+• Though GPU rendering is the best available for the given device hardware, it is not 100% "pixel identical" across devices. Slight variations occur due to driver and platform differences.
 
 • A few devices do not support all required color spaces. For example, some devices do not support BT.709, the H.264 standard. In such cases, you can use BT.601 for fast display.
 
@@ -93,7 +93,7 @@ In most cases, these limitations do not affect video player applications. If you
 
 More Help topics
 
-“Working with full-screen mode” on page 167
+"Working with full-screen mode" on page 167
 
 ## Using the StageVideo APIs {#using-the-stagevideo-apis}
 
@@ -129,9 +129,9 @@ Follow these top-level steps to implement the StageVideo feature:
 
 1.  Listen for the StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event to find out when the Stage.stageVideos vector has changed. See
 
-    “Using the
+    "Using the
 
-    StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event” on page 517
+    StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event" on page 517
 
     .
 2.  If the StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event reports that stage video is available, use the Stage.stageVideos Vector object within the event handler to access a StageVideo object.
@@ -142,14 +142,14 @@ StageVideo.attachCamera().
 1.  Play the video using NetStream.play().
 2.  Listen for the StageVideoEvent.RENDER_STATE event on the StageVideo object to determine the status of playing the video. Receipt of this event also indicates that the width and height properties of the video have been initialized or changed. See
 
-    “Using the StageVideoEvent.RENDER_STATE and VideoEvent.RENDER_STATE events” on
+    "Using the StageVideoEvent.RENDER_STATE and VideoEvent.RENDER_STATE events" on
 
     page 519
 
     .
 3.  Listen for the VideoEvent.RENDER_STATE event on the Video object. This event provides the same statuses as StageVideoEvent.RENDER_STATE, so you can also use it to determine whether GPU acceleration is available. Receipt of this event also indicates that the width and height properties of the video have been initialized or changed. See
 
-    “Using the StageVideoEvent.RENDER_STATE and VideoEvent.RENDER_STATE events” on
+    "Using the StageVideoEvent.RENDER_STATE and VideoEvent.RENDER_STATE events" on
 
     page 519
 
@@ -289,7 +289,7 @@ Reported render states include:
 
 • RENDER_STATUS_ACCELERATED
 
-Render states indicate when hardware accelerated decoding is in use, regardless of which class is currently playing video. Check the StageVideoEvent.status property to learn whether the necessary decoding is available. If this property is set to “unavailable”, the StageVideo object cannot play the video. This status requires that you immediately reattach the NetStream object to a Video object. Other statuses inform your application of the current rendering conditions.
+Render states indicate when hardware accelerated decoding is in use, regardless of which class is currently playing video. Check the StageVideoEvent.status property to learn whether the necessary decoding is available. If this property is set to "unavailable", the StageVideo object cannot play the video. This status requires that you immediately reattach the NetStream object to a Video object. Other statuses inform your application of the current rendering conditions.
 
 The following table describes the implications of all render status values for StageVideoEvent and VideoEvent objects in OpenFL:
 

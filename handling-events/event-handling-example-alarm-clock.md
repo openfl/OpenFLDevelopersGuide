@@ -2,7 +2,7 @@
 
 The Alarm Clock example consists of a clock that allows the user to specify a time at which an alarm will go off, as well as a message to be displayed at that time. The Alarm Clock example builds on the SimpleClock application from
 
-“Working with dates and times” on page 1
+"Working with dates and times" on page 1
 
 Alarm Clock illustrates several aspects of working with events in Haxe, including:
 
@@ -24,9 +24,9 @@ To get the Flash Professional application files for this sample, see [http://www
 
 The primary functionality of the clock in this example, including tracking the time and displaying the clock face, reuses the SimpleClock application code, which is described in
 
-“Date and time example: Simple analog clock” on page 6
+"Date and time example: Simple analog clock" on page 6
 
-. The AlarmClock class extends the SimpleClock class from that example by adding the functionality required for an alarm clock, including setting the alarm time and providing notification when the alarm “goes off.”
+. The AlarmClock class extends the SimpleClock class from that example by adding the functionality required for an alarm clock, including setting the alarm time and providing notification when the alarm "goes off."
 
 Providing notification when something happens is the job that events are made for. The AlarmClock class exposes the Alarm event, which other objects can listen for in order to perform desired actions. In addition, the AlarmClock class uses an instance of the Timer class to determine when to trigger its alarm. Like the AlarmClock class, the Timer class provides an event to notify other objects (an AlarmClock instance, in this case) when a certain amount of time has passed. As with most Haxe applications, events form an important part of the functionality of the Alarm Clock sample application.
 

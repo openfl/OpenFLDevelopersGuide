@@ -85,7 +85,7 @@ Each File object has two properties that each define its path:
 | nativePath | Specifies the platform-specific path to a file. For example, on Windows a path might be &quot;c:\Sample directory\test.txt&quot; whereas on Mac OS it could be &quot;/Sample directory/test.txt&quot;. A nativePath property uses the backslash (\) character as the directory separator character on Windows, and it uses the forward slash (/) character on Mac OS and Linux. |
 | url | This may use the file URL scheme to point to a file. For example, on Windows a path might be &quot;file:///c:/Sample%20directory/test.txt&quot; whereas on Mac OS it could be &quot;file:///Sample%20directory/test.txt&quot;. The runtime includes other special URL schemes besides file and are described in
 
-“Supported AIR URL schemes” on page 677
+"Supported AIR URL schemes" on page 677
 
  |
 
@@ -234,7 +234,7 @@ For example:
 
 The URL (and url property) for a File object created with File.applicationStorageDirectory uses the app- storage URL scheme (see
 
-“Supported AIR URL schemes” on page 677
+"Supported AIR URL schemes" on page 677
 
 ), as in the following:
 
@@ -250,7 +250,7 @@ var dir:File = File.applicationDirectory; dir = dir.resolvePath(&quot;images&quo
 
 The URL (and url property) for a File object created with File.applicationDirectory uses the app URL scheme (see
 
-“Supported AIR URL schemes” on page 677
+"Supported AIR URL schemes" on page 677
 
 ), as in the following:
 
@@ -266,7 +266,7 @@ You can point a File object to the operating system’s temporary or cache direc
 
 In most operating systems the cache directory is a temporary directory. On iOS, the cache directory corresponds to the application library’s Caches directory. Files in this directory are not backed up to online storage, and can potentially be deleted by the operating system if the device’s available storage space is too low. For more information, see
 
-“Controlling file backup and caching” on page 677
+"Controlling file backup and caching" on page 677
 
 .
 
@@ -276,11 +276,11 @@ Pointing to the file system root
 
 The File.getRootDirectories() method lists all root volumes, such as C: and mounted volumes, on a Windows computer. On Mac OS and Linux, this method always returns the unique root directory for the machine (the &quot;/&quot; directory). The StorageVolumeInfo.getStorageVolumes() method provides more detailed information on mounted storage volumes (see
 
-“Working with storage volumes” on page 687
+"Working with storage volumes" on page 687
 
 ).
 
-**_Note:_** _The root of the file system is not readable on Android. A File object referencing the directory with the native path, “/”, is returned, but the properties of that object do not have accurate values. For example, spaceAvailable is always 0._
+**_Note:_** _The root of the file system is not readable on Android. A File object referencing the directory with the native path, "/", is returned, but the properties of that object do not have accurate values. For example, spaceAvailable is always 0._
 
 Pointing to an explicit directory
 
@@ -308,7 +308,7 @@ file.url = urlStr;
 
 For more information, see
 
-“Modifying File paths” on page 676
+"Modifying File paths" on page 676
 
 .
 
@@ -334,9 +334,9 @@ Pointing to the directory from which the application was invoked
 
 You can get the directory location from which an application is invoked, by checking the currentDirectory property of the InvokeEvent object dispatched when the application is invoked. For details, see
 
-“Capturing command line
+"Capturing command line
 
-arguments” on page 879
+arguments" on page 879
 
 .
 
@@ -352,7 +352,7 @@ Pointing to an explicit file path
 
 **Important:** Pointing to an explicit path can lead to code that does not work across platforms. For example, the path C:/foo.txt only works on Windows. You can use the static properties of the File object, such as File.applicationStorageDirectory, to locate a directory that works cross-platform. Then use the resolvePath() method (see
 
-“Modifying File paths” on page 676
+"Modifying File paths" on page 676
 
 ) to navigate to a relative path.
 
@@ -384,7 +384,7 @@ Use the forward slash (/) character as the path delimiter for the nativePath pro
 
 For more information, see
 
-“Modifying File paths” on page 676
+"Modifying File paths" on page 676
 
 .
 
@@ -394,7 +394,7 @@ Enumerating files in a directory
 
 You can use the getDirectoryListing() method of a File object to get an array of File objects pointing to files and subdirectories at the root level of a directory. For more information, see
 
-“Enumerating directories” on page 683
+"Enumerating directories" on page 683
 
 .
 
@@ -410,7 +410,7 @@ The File class includes the following methods that present a system dialog box i
 
 These methods are each asynchronous. The browseForOpen() and browseForSave() methods dispatch the select event when the user selects a file (or a target path, in the case of browseForSave()). With the browseForOpen() and browseForSave() methods, upon selection the target File object points to the selected files. The browseForOpenMultiple() method dispatches a selectMultiple event when the user selects files. The selectMultiple event is of type FileListEvent, which has a files property that is an array of File objects (pointing to the selected files).
 
-For example, the following code presents the user with an “Open” dialog box in which the user can select a file:
+For example, the following code presents the user with an "Open" dialog box in which the user can select a file:
 
 var fileToOpen:File = File.documentsDirectory; selectTextFile(fileToOpen);
 
@@ -619,15 +619,15 @@ Typically the space available for a directory or file is the same as the space a
 
 Adding a file or directory to a volume generally requires more space than the actual size of the file or the size of the contents of the directory. For example, the operating system may require more space to store index information. Or the disk sectors required may use additional space. Also, available space changes dynamically. So, you cannot expect to allocate all of the reported space for file storage. For information on writing to the file system, see
 
-“Reading and
+"Reading and
 
-writing files” on page 689
+writing files" on page 689
 
 .
 
 The StorageVolumeInfo.getStorageVolumes() method provides more detailed information on mounted storage volumes (see
 
-“Working with storage volumes” on page 687
+"Working with storage volumes" on page 687
 
 ).
 
@@ -711,7 +711,7 @@ The runtime provides you with capabilities to work with directories on the local
 
 For details on creating File objects that point to directories, see
 
-“Pointing a File object to a directory” on page 671
+"Pointing a File object to a directory" on page 671
 
 .
 
@@ -727,7 +727,7 @@ If the directory exists, the createDirectory() method does nothing.
 
 Also, in some modes, a FileStream object creates directories when opening files. Missing directories are created when you instantiate a FileStream instance with the fileMode parameter of the FileStream() constructor set to FileMode.APPEND or FileMode.WRITE. For more information, see
 
-“Workflow for reading and writing files” on
+"Workflow for reading and writing files" on
 
 page 689
 
@@ -801,7 +801,7 @@ The directory that you specify as the newLocation parameter of the copyTo() meth
 
 For details, see
 
-“Copying and moving files” on page 685
+"Copying and moving files" on page 685
 
 .
 
@@ -811,7 +811,7 @@ Adobe AIR 1.0 and later
 
 The File class includes a deleteDirectory() method and a deleteDirectoryAsync() method. These methods delete directories, the first working synchronously, the second working asynchronously (see
 
-“AIR file basics” on
+"AIR file basics" on
 
 page 667
 
@@ -831,7 +831,7 @@ function completeHandler(event:Event):void { trace(&quot;Deleted.&quot;)
 
 Also included are the moveToTrash() and moveToTrashAsync() methods, which you can use to move a directory to the System trash. For details, see
 
-“Moving a file to the trash” on page 687
+"Moving a file to the trash" on page 687
 
 .
 
@@ -841,15 +841,15 @@ Adobe AIR 1.0 and later
 
 Using the AIR file API, you can add basic file interaction capabilities to your applications. For example, you can read and write files, copy and delete files, and so on. Since your applications can access the local file system, refer to
 
-“AIR
+"AIR
 
-security” on page 1076
+security" on page 1076
 
 , if you haven&#039;t already done so.
 
 **_Note:_** _You can associate a file type with an AIR application (so that double-clicking it opens the application). For details, see_
 
-_“Managing file associations” on page 888_
+_"Managing file associations" on page 888_
 
 _._
 
@@ -872,7 +872,7 @@ The File class includes the following properties that provide information about 
 | name | The name of the file or directory (including the file extension, if there is one) on the local disk. |
 | nativePath | The full path in the host operating system representation. See
 
-“Paths of File objects” on page 668
+"Paths of File objects" on page 668
 
 . |
 | parent | The folder that contains the folder or file represented by the File object. This property is null if the File object references a file or directory in the root of the file system. |
@@ -880,7 +880,7 @@ The File class includes the following properties that provide information about 
 | type | Obsolete—use the extension property. (On the Macintosh, this property is the four-character file type, which is only used in Mac OS versions prior to Mac OS X.) |
 | url | The URL for the file or directory. See
 
-“Paths of File objects” on page 668
+"Paths of File objects" on page 668
 
 . |
 
@@ -892,9 +892,9 @@ Adobe AIR 1.0 and later
 
 The File class includes two methods for copying files or directories: copyTo() and copyToAsync(). The File class includes two methods for moving files or directories: moveTo() and moveToAsync(). The copyTo() and moveTo() methods work synchronously, and the copyToAsync() and moveToAsync() methods work asynchronously (see
 
-“AIR
+"AIR
 
-file basics” on page 667
+file basics" on page 667
 
 ).
 
@@ -906,7 +906,7 @@ var original:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&
 
 In this example, the value of overwrite parameter of the copyTo() method (the second parameter) is set to true. By setting overwrite to true, an existing target file is overwritten. This parameter is optional. If you set it to false (the default value), the operation dispatches an IOErrorEvent event if the target file exists (and the file is not copied).
 
-The “Async” versions of the copy and move methods work asynchronously. Use the addEventListener() method to monitor completion of the task or error conditions, as in the following code:
+The "Async" versions of the copy and move methods work asynchronously. Use the addEventListener() method to monitor completion of the task or error conditions, as in the following code:
 
 var original = File.documentsDirectory;
 
@@ -934,7 +934,7 @@ Adobe AIR 1.0 and later
 
 The File class includes a deleteFile() method and a deleteFileAsync() method. These methods delete files, the first working synchronously, the second working asynchronously (see
 
-“AIR file basics” on page 667
+"AIR file basics" on page 667
 
 ).
 
@@ -952,7 +952,7 @@ function completeHandler(event:Event):void { trace(&quot;Deleted.&quot;)
 
 Also included are the moveToTrash() and moveToTrashAsync methods, which you can use to move a file or directory to the System trash. For details, see
 
-“Moving a file to the trash” on page 687
+"Moving a file to the trash" on page 687
 
 .
 
@@ -962,9 +962,9 @@ Adobe AIR 1.0 and later
 
 The File class includes a moveToTrash() method and a moveToTrashAsync() method. These methods send a file or directory to the System trash, the first working synchronously, the second working asynchronously (see
 
-“AIR file
+"AIR file
 
-basics” on page 667
+basics" on page 667
 
 ).
 
@@ -1051,11 +1051,11 @@ trace(volumes[i].name, volumes[i].rootDirectory.nativePath);
 
 **_Note:_** _On modern Linux distributions, the getStorageVolumes() method returns objects corresponding to physical devices and network drives mounted at particular locations._
 
-The File.getRootDirectories() method lists the root directories (see [“Pointing to the file system root” on](#696154181379824-_bookmark409) [page 673](#696154181379824-_bookmark409). However, the StorageVolume objects (enumerated by the StorageVolumeInfo.getStorageVolumes() method) provides more information about the storage volumes.
+The File.getRootDirectories() method lists the root directories (see ["Pointing to the file system root" on](#696154181379824-_bookmark409) [page 673](#696154181379824-_bookmark409). However, the StorageVolume objects (enumerated by the StorageVolumeInfo.getStorageVolumes() method) provides more information about the storage volumes.
 
 You can use the spaceAvailable property of the rootDirectory property of a StorageVolume object to get the space available on a storage volume. (See
 
-“Determining space available on a volume” on page 680
+"Determining space available on a volume" on page 680
 
 .)
 
@@ -1085,7 +1085,7 @@ file = file.resolvePath(&quot;AIR Test/testFile.txt&quot;);
 
 This example uses the File.documentsDirectory property and the resolvePath() method of a File object to initialize the File object. However, there are many other ways to point a File object to a file. For more information, see
 
-“Pointing a File object to a file” on page 674
+"Pointing a File object to a file" on page 674
 
 .
 
@@ -1099,25 +1099,25 @@ For example, the following code initializes a FileStream object that is used to 
 
 var fileStream:FileStream = new FileStream(); fileStream.open(file, FileMode.WRITE);
 
-For more information, see [“Initializing a FileStream object, and opening and closing files” on page 691](#696154181379824-_bookmark423) and [“FileStream open modes” on page 690](#696154181379824-_bookmark422).
+For more information, see ["Initializing a FileStream object, and opening and closing files" on page 691](#696154181379824-_bookmark423) and ["FileStream open modes" on page 690](#696154181379824-_bookmark422).
 
 If you opened the file asynchronously (using the openAsync() method), add and set up event listeners for the FileStream object.
 
 These event listener methods respond to events dispatched by the FileStream object in various situations. These situations include when data is read in from the file, when I/O errors are encountered, or when the complete amount of data to be written has been written.
 
-For details, see [“Asynchronous programming and the events generated by a FileStream object opened asynchronously”](#696154181379824-_bookmark425) [on page 695](#696154181379824-_bookmark425).
+For details, see ["Asynchronous programming and the events generated by a FileStream object opened asynchronously"](#696154181379824-_bookmark425) [on page 695](#696154181379824-_bookmark425).
 
 Include code for reading and writing data, as needed.
 
 There are many methods of the FileStream class related to reading and writing. (They each begin with &quot;read&quot; or &quot;write&quot;.) The method you choose to use to read or write data depends on the format of the data in the target file.
 
-For example, if the data in the target file is UTF-encoded text, you may use the readUTFBytes() and writeUTFBytes() methods. If you want to deal with the data as byte arrays, you may use the readByte(), readBytes(), writeByte(), and writeBytes() methods. For details, see [“Data formats, and choosing the read and](#696154181379824-_bookmark426) [write methods to use” on page 695](#696154181379824-_bookmark426).
+For example, if the data in the target file is UTF-encoded text, you may use the readUTFBytes() and writeUTFBytes() methods. If you want to deal with the data as byte arrays, you may use the readByte(), readBytes(), writeByte(), and writeBytes() methods. For details, see ["Data formats, and choosing the read and](#696154181379824-_bookmark426) [write methods to use" on page 695](#696154181379824-_bookmark426).
 
-If you opened the file asynchronously, then be sure that enough data is available before calling a read method. For details, see [“The read buffer and the bytesAvailable property of a FileStream object” on page 693](#696154181379824-_bookmark424).
+If you opened the file asynchronously, then be sure that enough data is available before calling a read method. For details, see ["The read buffer and the bytesAvailable property of a FileStream object" on page 693](#696154181379824-_bookmark424).
 
 Before writing to a file, if you want to check the amount of disk space available, you can check the spaceAvailable property of the File object. For more information, see
 
-“Determining space available on a volume” on page 680
+"Determining space available on a volume" on page 680
 
 .
 
@@ -1125,7 +1125,7 @@ Call the close() method of the FileStream object when you are done working with 
 
 Calling the close() method makes the file available to other applications.
 
-For details, see [“Initializing a FileStream object, and opening and closing files” on page 691](#696154181379824-_bookmark423).
+For details, see ["Initializing a FileStream object, and opening and closing files" on page 691](#696154181379824-_bookmark423).
 
 To see a sample application that uses the FileStream class to read and write files, see the following articles at the Adobe AIR Developer Center:
 
@@ -1174,7 +1174,7 @@ var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&qu
 
 myFileStream.open(myFile, FileMode.READ);
 
-The fileMode parameter (the second parameter of the open() and openAsync() methods), specifies the mode in which to open the file: for read, write, append, or update. For details, see the previous section, [“FileStream open](#696154181379824-_bookmark422) [modes” on page 690](#696154181379824-_bookmark422).
+The fileMode parameter (the second parameter of the open() and openAsync() methods), specifies the mode in which to open the file: for read, write, append, or update. For details, see the previous section, ["FileStream open](#696154181379824-_bookmark422) [modes" on page 690](#696154181379824-_bookmark422).
 
 If you use the openAsync() method to open the file for asynchronous file operations, set up event listeners to handle the asynchronous events:
 
@@ -1202,11 +1202,11 @@ The file is opened for synchronous or asynchronous operations, depending upon wh
 
 openAsync() method. For details, see
 
-“AIR file basics” on page 667
+"AIR file basics" on page 667
 
 .
 
-If you set the fileMode parameter to FileMode.READ or FileMode.UPDATE in the open method of the FileStream object, data is read into the read buffer as soon as you open the FileStream object. For details, see [“The read buffer and](#696154181379824-_bookmark424) [the bytesAvailable property of a FileStream object” on page 693](#696154181379824-_bookmark424).
+If you set the fileMode parameter to FileMode.READ or FileMode.UPDATE in the open method of the FileStream object, data is read into the read buffer as soon as you open the FileStream object. For details, see ["The read buffer and](#696154181379824-_bookmark424) [the bytesAvailable property of a FileStream object" on page 693](#696154181379824-_bookmark424).
 
 You can call the close() method of a FileStream object to close the associated file, making it available for use by other applications.
 
@@ -1434,7 +1434,7 @@ Some UTF-encoded text files begin with a &quot;UTF-BOM&quot; (byte order mark) c
 
 For an example of reading and writing to a text file, see
 
-“Example: Reading an XML file into an XML object” on
+"Example: Reading an XML file into an XML object" on
 
 page 698
 
@@ -1446,9 +1446,9 @@ There are some other read and write methods (such as readDouble() and writeDoubl
 
 File formats are often more complex than simple text formats. For example, an MP3 file includes compressed data that can only be interpreted with the decompression and decoding algorithms specific to MP3 files. MP3 files also may include ID3 tags that contain meta tag information about the file (such as the title and artist for a song). There are multiple versions of the ID3 format, but the simplest (ID3 version 1) is discussed in the
 
-“Example: Reading and writing
+"Example: Reading and writing
 
-data with random access” on page 699
+data with random access" on page 699
 
 section.
 
@@ -1529,7 +1529,7 @@ var outputString:String = &#039;&lt;?xml version=&quot;1.0&quot; encoding=&quot;
 
 fileStream.writeUTFBytes(outputString); fileStream.close();
 
-These examples use the readUTFBytes() and writeUTFBytes() methods, because they assume that the files are in UTF-8 format. If not, you may need to use a different method (see [“Data formats, and choosing the read and write](#696154181379824-_bookmark426) [methods to use” on page 695](#696154181379824-_bookmark426)).
+These examples use the readUTFBytes() and writeUTFBytes() methods, because they assume that the files are in UTF-8 format. If not, you may need to use a different method (see ["Data formats, and choosing the read and write](#696154181379824-_bookmark426) [methods to use" on page 695](#696154181379824-_bookmark426)).
 
 The previous examples use FileStream objects opened for synchronous operation. You can also open files for asynchronous operations (which rely on event listener functions to respond to events). For example, the following code shows how to read an XML file asynchronously:
 

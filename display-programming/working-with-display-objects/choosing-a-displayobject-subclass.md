@@ -6,7 +6,7 @@ With several options to choose from, one of the important decisions you’ll mak
     *   Bitmap for displaying a bitmap image.
     *   TextField for adding text.
     *   Video for displaying video.
-    *   Shape for a “canvas” for drawing content on-screen. In particular, if you want to create an instance for drawing shapes on the screen, and it won’t be a container for other display objects, you’ll gain significant performance benefits using Shape instead of Sprite or MovieClip.
+    *   Shape for a "canvas" for drawing content on-screen. In particular, if you want to create an instance for drawing shapes on the screen, and it won’t be a container for other display objects, you’ll gain significant performance benefits using Shape instead of Sprite or MovieClip.
     *   MorphShape, StaticText, or SimpleButton for items created by the Flash authoring tool. (You can’t create instances of these classes programmatically, but you can create variables with these data types to refer to items created using the Flash authoring tool.)
 *   If you need a variable to refer to the main Stage, use the Stage class as its data type.
 *   If you need a container for loading an external project or image file, use a Loader instance. The loaded content will be added to the display list as a child of the Loader instance. Its data type will depend on the nature of the loaded content, as follows:

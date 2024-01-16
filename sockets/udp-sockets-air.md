@@ -16,7 +16,7 @@ Your AIR application can send and receive UDP messages with the DatagramSocket a
 4.  Send messages by calling the send() method, passing in the IP address and port of the target computer
 5.  Receive messages by responding to the data event. The DatagramSocketDataEvent object dispatched for this event contains a ByteArray object containing the message data.
 
-The following code example illustrates how an application can send and receive UDP messages. The example sends a single message containing the string, “Hello.”, to the target computer. It also traces the contents of any messages received.
+The following code example illustrates how an application can send and receive UDP messages. The example sends a single message containing the string, "Hello.", to the target computer. It also traces the contents of any messages received.
 
 package
 

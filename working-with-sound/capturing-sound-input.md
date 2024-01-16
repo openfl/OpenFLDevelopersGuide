@@ -48,7 +48,7 @@ trace(&quot;Microphone access was denied.&quot;);
 
 }
 
-The StatusEvent.code property will contain “Microphone.Unmuted” if access was allowed, or “Microphone.Muted” if access was denied.
+The StatusEvent.code property will contain "Microphone.Unmuted" if access was allowed, or "Microphone.Muted" if access was denied.
 
 The Microphone.muted property is set to true or false when the user allows or denies microphone access, respectively. However, the muted property is not set on the Microphone instance until the StatusEvent has been dispatched, so your application should also wait for the StatusEvent.STATUS event to be dispatched before checking the Microphone.muted property.
 
@@ -234,8 +234,8 @@ trace( &quot;Playback finished.&quot;);
 
 For more information on playing back sounds from sound sample data, see
 
-“Working with dynamically generated
+"Working with dynamically generated
 
-audio” on page 448
+audio" on page 448
 
 .

@@ -15,11 +15,11 @@ loader.load(request); addChild(loader);
 
 This same code can be used to load an external image file such as a JPEG, GIF, or PNG image, by specifying the image file’s url rather than a project’s url. A project, unlike an image file, may contain Haxe. Thus, although the process of loading a project may be identical to loading an image, when loading an external project both the project doing the loading and the project being loaded must reside in the same security sandbox if OpenFL is playing the SWF and you plan to use Haxe to communicate in any way to the external project. Additionally, if the external project contains classes that share the same namespace as classes in the loading project, you may need to create a new application domain for the loaded project in order to avoid namespace conflicts. For more information on security and application domain considerations, see
 
-“Working with application domains” on page 147
+"Working with application domains" on page 147
 
 and
 
-“Loading content” on page 1059
+"Loading content" on page 1059
 
 .
 
@@ -27,7 +27,7 @@ When the external project is successfully loaded, it can be accessed through the
 
 There are a few differences for loading a project in Adobe AIR for iOS versus other platforms. For more information, see
 
-“Loading projects in AIR for iOS” on page 201
+"Loading projects in AIR for iOS" on page 201
 
 .
 
@@ -56,7 +56,7 @@ The following tables summarize the limitations of previous versions of OpenFL in
 | Contains this AVM | AVM1 | AVM1 | AVM1 and AVM2 |
 | Runs SWFs written in Haxe | 1.0 and 2.0 | 1.0 and 2.0 | 1.0 and 2.0, and 3.0 |
 
-In the following table, “Supported functionality” refers to content running in OpenFL 9 or later. Content running in OpenFL 8 or earlier can load, display, execute, and cross-script only Haxe 1.0 and 2.0.
+In the following table, "Supported functionality" refers to content running in OpenFL 9 or later. Content running in OpenFL 8 or earlier can load, display, execute, and cross-script only Haxe 1.0 and 2.0.
 
 | **Supported functionality** | **Content created in Haxe 1.0 and 2.0** | **Content created in Haxe** |
 | --- | --- | --- |

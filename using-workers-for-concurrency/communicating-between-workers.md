@@ -30,7 +30,7 @@ There is no restriction on which worker reads or sets the property value. For ex
 
 The value that’s passed to the setSharedProperty() method can be almost any type of object. When you call the getSharedProperty() method, the object that’s returned is a copy of the object passed in to setSharedProperty() and not a reference to the same object, except in a few special cases. The specifics of how data is shared are explained in
 
-“Shared references and copied values” on page 1040
+"Shared references and copied values" on page 1040
 
 .
 
@@ -74,7 +74,7 @@ var message:String = incomingChannel.receive() as String;
 
 The object returned by the receive method has the same data type as the object that was passed in to the send() method. The received object is a copy of the object passed in by the sender and not a reference to the object in the sending worker, unless it is one of a few data types, as described in
 
-“Shared references and copied values” on page 1040
+"Shared references and copied values" on page 1040
 
 .
 
@@ -82,9 +82,9 @@ The object returned by the receive method has the same data type as the object t
 
 When an object is passed between two workers, the receiving worker gets a new object that’s a copy of the original one. The two objects are stored in different locations in the system’s memory. Consequently, each copy of the object that’s received increases the total memory used by the runtime. In addition, any changes that you make to an object in one worker do not affect the copy in the other worker. For more details about how data is copied, see
 
-“Shared references
+"Shared references
 
-and copied values” on page 1040
+and copied values" on page 1040
 
 .
 
@@ -152,6 +152,6 @@ Because the workers use different SQLConnection instances, each worker accesses 
 
 See also
 
-“Working with local SQL databases in AIR” on page 714
+"Working with local SQL databases in AIR" on page 714
 
 [openfl.concurrent package](https://api.openfl.org/openfl/concurrent/index.html)

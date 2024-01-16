@@ -55,9 +55,9 @@ font-weight: normal; text-align: left;
 
 The technique used to read the external CSS file is the same as the technique described in
 
-“Loading an external CSS
+"Loading an external CSS
 
-file” on page 381
+file" on page 381
 
 . When the CSS file has been loaded the application executes the onCSSFileLoaded() method, shown below.
 
@@ -475,4 +475,4 @@ justifyLastLine(field, lastLine);
 
 }
 
-After the preferredHeight property has been set by calling the getOptimalHeight() method, the layoutColumns() method iterates through the TextField objects, setting the height of each to the preferredHeight value. The layoutColumns() method then distributes just enough lines of text to each field so that no scrolling occurs in any individual field, and the text in each successive field begins where the text in the previous field ended. If the text alignment style has been set to “justify” then the justifyLastLine() method is called to justify the final line of text in a field. Otherwise that last line would be treated as an end-of-paragraph line and not justified.
+After the preferredHeight property has been set by calling the getOptimalHeight() method, the layoutColumns() method iterates through the TextField objects, setting the height of each to the preferredHeight value. The layoutColumns() method then distributes just enough lines of text to each field so that no scrolling occurs in any individual field, and the text in each successive field begins where the text in the previous field ended. If the text alignment style has been set to "justify" then the justifyLastLine() method is called to justify the final line of text in a field. Otherwise that last line would be treated as an end-of-paragraph line and not justified.

@@ -1,6 +1,6 @@
 # Defining winding rules {#defining-winding-rules}
 
-The enhanced drawing API also introduces the concept of path “winding”: the direction for a path. The winding for a path is either positive (clockwise) or negative (counter-clockwise). The order in which the renderer interprets the coordinates provided by the vector for the data parameter determines the winding.
+The enhanced drawing API also introduces the concept of path "winding": the direction for a path. The winding for a path is either positive (clockwise) or negative (counter-clockwise). The order in which the renderer interprets the coordinates provided by the vector for the data parameter determines the winding.
 
 ![](/assets/gv_winding_positive_negative.png)
 
@@ -8,7 +8,7 @@ _Positive and negative winding_
 
 **_A._** _Arrows indicate drawing direction_ **_B._** _Positively wound (clockwise)_ **_C._** _Negatively wound (counter-clockwise)_
 
-Additionally, notice that the `Graphics.drawPath()` method has an optional third parameter called “winding”:
+Additionally, notice that the `Graphics.drawPath()` method has an optional third parameter called "winding":
 
 ```haxe
 drawPath (commands:Vector<Int>, data:Vector<Float>, winding:String = GraphicsPathWinding.EVEN_ODD):Void

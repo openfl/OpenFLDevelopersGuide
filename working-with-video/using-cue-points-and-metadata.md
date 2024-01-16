@@ -44,7 +44,7 @@ parameters: name: point1 time: 0.418 type: navigation
 
 This code uses one of several techniques to set the object on which the callback method runs. You can use other techniques; for more information, see
 
-“Writing callback methods for metadata and cue points” on page 487
+"Writing callback methods for metadata and cue points" on page 487
 
 .
 
@@ -257,7 +257,7 @@ The following table shows the possible values for video metadata that are passed
 | aacaot | AAC audio object type; 0, 1, or 2 are supported. |
 | avclevel | AVC IDC level number such as 10, 11, 20, 21, and so on. |
 | avcprofile | AVC profile number such as 55, 77, 100, and so on. |
-| audiocodecid | A string that indicates the audio codec (code/decode technique) that was used - for example “.Mp3” or “mp4a” |
+| audiocodecid | A string that indicates the audio codec (code/decode technique) that was used - for example ".Mp3" or "mp4a" |
 | audiodatarate | A number that indicates the rate at which audio was encoded, in kilobytes per second. |
 | audiodelay | A number that indicates what time in the FLV file &quot;time 0&quot; of the original FLV file exists. The video content needs to be delayed by a small amount to properly synchronize the audio. |
 | canSeekToEnd | A Boolean value that is true if the FLV file is encoded with a keyframe on the last frame, which allows seeking to the end of a progressive -download video file. It is false if the FLV file is not encoded with a keyframe on the last frame. |
@@ -266,9 +266,9 @@ The following table shows the possible values for video metadata that are passed
 | framerate | A number that is the frame rate of the FLV file. |
 | height | A number that is the height of the FLV file, in pixels. |
 | seekpoints | An array that lists the available keyframes as timestamps in milliseconds. Optional. |
-| tags | An array of key-value pairs that represent the information in the “ilst” atom, which is the equivalent of ID3 tags for MP4 files. iTunes uses these tags. Can be used to display artwork, if available. |
+| tags | An array of key-value pairs that represent the information in the "ilst" atom, which is the equivalent of ID3 tags for MP4 files. iTunes uses these tags. Can be used to display artwork, if available. |
 | trackinfo | Object that provides information on all the tracks in the MP4 file, including their sample description ID. |
-| videocodecid | A string that is the codec version that was used to encode the video. - for example, “avc1” or “VP6F” |
+| videocodecid | A string that is the codec version that was used to encode the video. - for example, "avc1" or "VP6F" |
 
 | **Parameter** | **Description** |
 | --- | --- |

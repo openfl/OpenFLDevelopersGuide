@@ -31,13 +31,13 @@ OpenFL 10.1 and later, Adobe AIR 2 and later
 
 When the Flash Platform is running in an environment that supports touch input, InteractiveObject instances can listen for touch events and call handlers. Generally, you handle touch, multitouch, and gesture events as you would other events in Haxe (see
 
-“Handling events” on page 125
+"Handling events" on page 125
 
 for basic information about event handling with Haxe).
 
 However, for the Flash runtime to interpret a touch or gesture, the runtime must be running in a hardware and software environment that supports touch or multitouch input. See
 
-“Discovering input types” on page 558
+"Discovering input types" on page 558
 
 for a chart comparing different touch screen types. Additionally, if the runtime is running within a container application (such as a browser), then that container passes the input to the runtime. In some cases, the current hardware and operating system environment support multitouch, but the browser containing the Flash runtime interprets the input and does not pass it on to the runtime. Or, it can simply ignore the input altogether.
 
@@ -45,7 +45,7 @@ The following diagram shows the flow of input from user to runtime:
 
 _Flow of input from user to the Flash Platform runtime_
 
-Fortunately, the Haxe API for developing touch applications includes classes, methods, and properties to determine the support for touch or multitouch input in the runtime environment. The API you use to determine support for touch input are the “discovery API” for touch event handling.
+Fortunately, the Haxe API for developing touch applications includes classes, methods, and properties to determine the support for touch or multitouch input in the runtime environment. The API you use to determine support for touch input are the "discovery API" for touch event handling.
 
 Important concepts and terms
 
@@ -77,7 +77,7 @@ Discovery
 
 The discovery API provides the ability to test the hardware and software environment at runtime. The values populated by the runtime determine the touch input available to the Flash runtime in its current context. Also, use the collection of discovery properties and methods to set your application to react to mouse events (instead of touch events in case some touch input is not supported by the environment). For more information, see
 
-“Touch support discovery”
+"Touch support discovery"
 
 on page 584
 
@@ -95,11 +95,11 @@ Haxe manages touch input events with event listeners and event handlers as it do
 
 Typically, use the discovery API to conditionally handle the events your application handles, and how they are handled. Once the application knows the runtime environment, it can call the appropriate handler or establish the correct event object when the user interacts with the application. Or, the application can indicate that specific input cannot be handled in the current environment and provide the user with an alternative or information. For more information, see
 
-“Touch event handling” on page 585
+"Touch event handling" on page 585
 
 and
 
-“Gesture event handling” on page 589
+"Gesture event handling" on page 589
 
 .
 

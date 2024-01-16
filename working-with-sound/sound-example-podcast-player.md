@@ -249,9 +249,9 @@ new ProgressEvent(PLAY_PROGRESS, false, false, this.sc.position, estimatedLength
 
 The onPlayTimer() method implements the size estimation technique described in the section
 
-“Monitoring
+"Monitoring
 
-playback” on page 451
+playback" on page 451
 
 . Then it creates a new ProgressEvent instance with an event type of SoundFacade.PLAY_PROGRESS, with the bytesLoaded property set to the current position of the SoundChannel object and the bytesTotal property set to the estimated length of the sound data.
 

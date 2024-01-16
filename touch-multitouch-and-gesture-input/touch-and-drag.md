@@ -6,7 +6,7 @@ Two methods were added to [the Sprite class](https://api.openfl.org/openfl/displ
 
 The runtime assigns the touchPointID value to the event object for a touch event. Use this value to respond to a specific touch point in the case the environment supports multiple, simultaneous, touch points (even if it does not handle gestures). For more information about the touchPointID property, see
 
-“Touch Point ID” on page 587
+"Touch Point ID" on page 587
 
 .
 

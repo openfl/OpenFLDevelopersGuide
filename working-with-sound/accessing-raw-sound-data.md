@@ -23,13 +23,13 @@ The SoundMixer.computeSpectrum() method has some limitations:
 *   Because sound data from a microphone or from RTMP streams do not pass through the global SoundMixer object, the SoundMixer.computeSpectrum() method will not return data from those sources.
 *   If one or more of the sounds being played come from sources outside the current content sandbox, security restrictions will cause the SoundMixer.computeSpectrum() method to throw an error. For more detail about the security limitations of the SoundMixer.computeSpectrum() method please see
 
-    “Security considerations when
+    "Security considerations when
 
-    loading and playing sounds” on page 454
+    loading and playing sounds" on page 454
 
     and
 
-    “Accessing loaded media as data” on page 1065
+    "Accessing loaded media as data" on page 1065
 
     .
 

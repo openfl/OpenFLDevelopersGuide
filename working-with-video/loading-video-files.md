@@ -34,7 +34,7 @@ function asyncErrorHandler(event:AsyncErrorEvent):void
 
 vid.attachNetStream(ns);
 
-1.  Call the NetStream object’s play() method with the video file url as an argument to start the video playing. The following snippet loads and plays a video file named “video.mp4” in the same directory as the project:
+1.  Call the NetStream object’s play() method with the video file url as an argument to start the video playing. The following snippet loads and plays a video file named "video.mp4" in the same directory as the project:
 
 ns.play(&quot;video.mp4&quot;);
 

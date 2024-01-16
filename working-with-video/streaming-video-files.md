@@ -1,6 +1,6 @@
 # Streaming video files {#streaming-video-files}
 
-To stream files from Flash Media Server, you can use the NetConnection and NetStream classes to connect to a remote server instance and play a specified stream. To specify a Real-Time Messaging Protocol (RTMP) server, you pass the desired RTMP URL, such as “rtmp://localhost/appName/appInstance”, to the NetConnection.connect() method instead of passing null. To play a specific live or recorded stream from the specified Flash Media Server, you pass an identifying name for live data published by NetStream.publish(), or a recorded filename for playback to the NetStream.play() method.
+To stream files from Flash Media Server, you can use the NetConnection and NetStream classes to connect to a remote server instance and play a specified stream. To specify a Real-Time Messaging Protocol (RTMP) server, you pass the desired RTMP URL, such as "rtmp://localhost/appName/appInstance", to the NetConnection.connect() method instead of passing null. To play a specific live or recorded stream from the specified Flash Media Server, you pass an identifying name for live data published by NetStream.publish(), or a recorded filename for playback to the NetStream.play() method.
 
 **Sending video to a server**
 

@@ -10,7 +10,7 @@ From a practical standpoint, it makes sense to synchronize scripted animation wi
 
 **_Note:_** _Another way to perform an action repeatedly over time is to use the Timer class. A Timer instance triggers an event notification each time a specified amount of time has past. You could write code that performs animation by handling the Timer class’s timer event, setting the time interval to a small one (some fraction of a second). For more information about using the Timer class, see_
 
-_“Controlling time intervals” on page 4_
+_"Controlling time intervals" on page 4_
 
 _._
 

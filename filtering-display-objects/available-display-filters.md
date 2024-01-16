@@ -17,7 +17,7 @@ The first six filters are simple filters that can be used to create one specific
 
 The final four filters are available in Haxe only. Those filters, the color matrix filter, convolution filter, displacement map filter, and shader filter, are much more flexible in the types of effects that they can be used to create. Rather than being optimized for a single effect, they provide power and flexibility. For example, by selecting different values for its matrix, the convolution filter can be used to create effects such as blurring, embossing, sharpening, finding color edges, transformations, and more.
 
-Each of the filters, whether simple or complex, can be customized using their properties. Generally, you have two choices for setting filter properties. All the filters let you set the properties by passing parameter values to the filter object’s constructor. Alternatively, whether or not you set the filter properties by passing parameters, you can adjust the filters later by setting values for the filter object’s properties. Most of the example code listings set the properties directlyto make the example easier to follow. Nevertheless, you could usually achieve the same result in fewer lines of code by passing the values as parameters in the filter object’s constructor. For more details on the specifics of each filter, its properties and its constructor parameters, see the listings for the openfl.filters package in the [Haxe](https://api.openfl.org/openfl/filters/index.html) [Reference for the Adobe Flash Platform](https://api.openfl.org/openfl/filters/index.html).
+Each of the filters, whether simple or complex, can be customized using their properties. Generally, you have two choices for setting filter properties. All the filters let you set the properties by passing parameter values to the filter object’s constructor. Alternatively, whether or not you set the filter properties by passing parameters, you can adjust the filters later by setting values for the filter object’s properties. Most of the example code listings set the properties directlyto make the example easier to follow. Nevertheless, you could usually achieve the same result in fewer lines of code by passing the values as parameters in the filter object’s constructor. For more details on the specifics of each filter, its properties and its constructor parameters, see the listings for the [openfl.filters package in the OpenFL API Reference](https://api.openfl.org/openfl/filters/index.html)
 
 **Bevel filter**
 
@@ -354,7 +354,7 @@ Consider the most commonly used type of matrix, which is a three by three matrix
 | N | P | N |
 | N | N | N |
 
-When the convolution filter is applied to a certain pixel, it will look at the color value of the pixel itself (“P” in the example), as well as the values of the surrounding pixels (labeled “N” in the example). However, by setting values in the matrix, you specify how much priority certain pixels have in affecting the resulting image.
+When the convolution filter is applied to a certain pixel, it will look at the color value of the pixel itself ("P" in the example), as well as the values of the surrounding pixels (labeled "N" in the example). However, by setting values in the matrix, you specify how much priority certain pixels have in affecting the resulting image.
 
 For example, the following matrix, applied using a convolution filter, will leave an image exactly as it was:
 
@@ -506,7 +506,7 @@ These settings cause the filtered image’s pixels to shift 250 pixels to the le
 
 1.  It finds the corresponding pixel in the map image. For example, when the filter calculates the displacement amount for the pixel in the upper-left corner of the filtered image, it looks at the pixel in the upper-left corner of the map image.
 2.  It determines the value of the specified color channel in the map pixel. In this case, the x component color channel is the red channel, so the filter looks to see what the value of the red channel of the map image is at the pixel in question. Since the map image is solid red, the pixel’s red channel is 0xFF, or 255\. This is used as the displacement value.
-3.  It compares the displacement value to the “middle” value (127, which is halfway between 0 and 255). If the displacement value is lower than the middle value, the pixel shifts in a positive direction (to the right for x displacement; down for y displacement). On the other hand, if the displacement value is higher than the middle value (as in this example), the pixel shifts in a negative direction (to the left for x displacement; up for y displacement). To be more precise, the filter subtracts the displacement value from 127, and the result (positive or negative) is the relative amount of displacement that is applied.
+3.  It compares the displacement value to the "middle" value (127, which is halfway between 0 and 255). If the displacement value is lower than the middle value, the pixel shifts in a positive direction (to the right for x displacement; down for y displacement). On the other hand, if the displacement value is higher than the middle value (as in this example), the pixel shifts in a negative direction (to the left for x displacement; up for y displacement). To be more precise, the filter subtracts the displacement value from 127, and the result (positive or negative) is the relative amount of displacement that is applied.
 4.  Finally, it determines the actual amount of displacement by determining what percentage of full displacement the relative displacement value represents. In this case, full red means 100% displacement. That percentage is then multiplied by the x scale or y scale value to determine the number of pixels of displacement that will be applied. In this example, 100% times a multiplier of 250 determines the amount of displacement—roughly 125 pixels to the left.
 
 Because no values are specified for y component and y scale, the defaults (which cause no displacement) are used— that’s why the image doesn’t shift at all in the vertical direction.
@@ -633,7 +633,7 @@ The ShaderFilter class lets you use a custom filter effect defined as a Pixel Be
 
 To apply a shader filter to an object, you first create a Shader instance representing the Pixel Bender shader that you are using. For details on the procedure for creating a Shader instance and on how to specify input image and parameter values, see
 
-“Working with Pixel Bender shaders” on page 300
+"Working with Pixel Bender shaders" on page 300
 
 .
 
@@ -649,6 +649,6 @@ var myFilter:ShaderFilter = new ShaderFilter(myShader);
 
 For a complete example of using a shader filter, see
 
-“Using a shader as a filter” on page 318
+"Using a shader as a filter" on page 318
 
 .

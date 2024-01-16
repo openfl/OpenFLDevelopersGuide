@@ -29,13 +29,13 @@ The following classes, which are not in the openfl.display package, are subclass
 <!-- 
 *   The TextLine class, included in the openfl.text.engine package, is the display object used to display lines of text composed by the Flash Text Engine and the Text Layout Framework. For more information, see
 
-    “Using the Flash
+    "Using the Flash
 
-    Text Engine” on page 397
+    Text Engine" on page 397
 
     and
 
-    “Using the Text Layout Framework” on page 426
+    "Using the Text Layout Framework" on page 426
 
     .
 -->
@@ -48,7 +48,7 @@ The following classes in the openfl.display package extend the DisplayObject cla
 *   AVM1Movie&mdash;The AVM1Movie class is used to represent loaded projects that are authored in Haxe 1.0 and 2.0.
 *   DisplayObjectContainer&mdash;The Loader, Stage, Sprite, and MovieClip classes each extend the DisplayObjectContainer class. For more information, see
 
-    “Working with display object containers” on page 159
+    "Working with display object containers" on page 159
 
     .
 -->
@@ -67,20 +67,20 @@ The following classes are not display objects or display object containers, and 
 
 *   &mdash;The StageVideo class displays video content, using hardware acceleration, when possible. This class is available starting in OpenFL 10.2\. For more information, see
 
-    “Using the StageVideo class for hardware
+    "Using the StageVideo class for hardware
 
-    accelerated presentation” on page 512
+    accelerated presentation" on page 512
 
     .
 *   StageWebView&mdash;The StageWebView class displays HTML content. This class is available starting in AIR 2.5\. For more information, see
 
-    “StageWebView objects” on page 1026
+    "StageWebView objects" on page 1026
 
     .
 
 The following fl.display classes provide functionality that parallels the openfl.display.Loader and LoaderInfo classes. Use these classes instead of their openfl.display counterparts if you are developing in the Flash Professional environment (CS5.5 or later). In that environment, these classes help solve issues involving TLF with RSL preloading. For more information, see
 
-“Using the ProLoader and ProLoaderInfo classes” on page 202
+"Using the ProLoader and ProLoaderInfo classes" on page 202
 
 .
 

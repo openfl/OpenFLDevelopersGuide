@@ -10,11 +10,11 @@ In addition to the classes in the openfl.text package, you can use the openfl.ev
 
 **More Help topics**
 
-“Assigning text formats” on page 380
+"Assigning text formats" on page 380
 
-“Displaying HTML text” on page 375
+"Displaying HTML text" on page 375
 
-“Applying cascading style sheets” on page 380
+"Applying cascading style sheets" on page 380
 
 **Displaying text**
 
@@ -32,7 +32,7 @@ Dynamic text includes content that is loaded from an external source, such as a 
 
 Input text is any text entered by a user or dynamic text that a user can edit. You can set up a style sheet to format input text, or use the openfl.text.TextFormat class to assign properties to the text field for the input content. For more information, see
 
-“Capturing text input” on page 378
+"Capturing text input" on page 378
 
 .
 
@@ -42,7 +42,7 @@ Static text is created through Flash Professional only. You cannot create a stat
 
 3.0\. However, you can use Haxe classes like StaticText and TextSnapshot to manipulate an existing static text instance. For more information, see
 
-“Working with static text” on page 386
+"Working with static text" on page 386
 
 .
 
@@ -84,9 +84,9 @@ Alternatively, you can assign the text property a value from a remote variable. 
 *   The FlashVars attribute is embedded in the HTML page hosting the project and can contain values for text variables.
 *   The openfl.net.SharedObject class manages persistent storage of values. For more information, see
 
-    “Storing local
+    "Storing local
 
-    data” on page 701
+    data" on page 701
 
     .
 
@@ -100,7 +100,7 @@ OpenFL support a subset of HTML tags and entities for the htmlText property. The
 
 Once you designate your content using the htmlText property, you can use style sheets or the textformat tag to manage the formatting of your content. For more information, see
 
-“Formatting text” on page 380
+"Formatting text" on page 380
 
 .
 

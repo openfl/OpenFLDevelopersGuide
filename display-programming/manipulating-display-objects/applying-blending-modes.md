@@ -22,7 +22,7 @@ Every display object has a `blendMode` property that can be set to one of the fo
 <!--
 *   `BlendMode.SHADER` (&quot;shader&quot;): Used to specify that a Pixel Bender shader is used to create a custom blending effect. For more information about using shaders, see
 
-    “Working with Pixel Bender shaders” on page 300
+    "Working with Pixel Bender shaders" on page 300
 
     . (Not supported under GPU rendering.)
 -->

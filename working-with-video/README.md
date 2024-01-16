@@ -10,7 +10,7 @@ One important capability of Adobe® Flash® Player and Adobe® AIR™ is the abi
 
 • [StageVideo class](https://api.openfl.org/openfl/media/StageVideo.html): The Video class typically uses software decoding and rendering. When GPU hardware acceleration is available on a device, your application can take best advantage of hardware accelerated presentation by switching to the StageVideo class. The StageVideo API includes a set of events that tell your code when to switch between StageVideo and Video objects. Stage video imposes some minor restrictions on video playback. If your application accepts those limitations, implement the StageVideo API. See
 
-“Guidelines and limitations” on page 514
+"Guidelines and limitations" on page 514
 
 .
 
@@ -34,4 +34,4 @@ Important concepts and terms
 
 **Progressive download** When a video file is delivered from a standard web server, the video data is loaded using progressive download, meaning the video information loads in sequence. This has the benefit that the video can begin playing before the entire file is downloaded; however, it prevents you from jumping ahead to a part of the video that hasn’t loaded.
 
-**Streaming** As an alternative to progressive download, a special video server can be used to deliver video over the Internet using a technique known as streaming (sometimes called “true streaming”). With streaming, the viewer’s computer never downloads the entire video at one time. To speed up download times, at any moment the computer only needs a portion of the total video information. Because a special server controls the delivery of the video content, any part of the video can be accessed at any time, rather than needing to wait for it to download before accessing it.
+**Streaming** As an alternative to progressive download, a special video server can be used to deliver video over the Internet using a technique known as streaming (sometimes called "true streaming"). With streaming, the viewer’s computer never downloads the entire video at one time. To speed up download times, at any moment the computer only needs a portion of the total video information. Because a special server controls the delivery of the video content, any part of the video can be accessed at any time, rather than needing to wait for it to download before accessing it.

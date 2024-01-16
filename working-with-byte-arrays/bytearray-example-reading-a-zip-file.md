@@ -95,7 +95,7 @@ var compSize:uint; var uncompSize:uint; var compMethod:int; var signature:int;
 
 *   Defines File (zfile) and FileStream (zStream) objects to represent the .zip file, and specifies the location of the
 
-.zip file from which the files are extracted—a file named “HelloAIR.zip” in the desktop directory.
+.zip file from which the files are extracted—a file named "HelloAIR.zip" in the desktop directory.
 
 // File variables for accessing .zip file
 

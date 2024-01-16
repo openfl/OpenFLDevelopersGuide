@@ -4,7 +4,7 @@ The [EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore
 
 **_Note:_** _In addition to the encrypted local store, AIR also provides encryption for content stored in SQL databases. For details, see_
 
-_“Using encryption with SQL databases” on page 758_
+_"Using encryption with SQL databases" on page 758_
 
 _._
 
@@ -12,7 +12,7 @@ You may want to use the encrypted local store to cache information that must be 
 
 On desktop platforms, AIR uses DPAPI on Windows, KeyChain on Mac OS and iOS, and KeyRing or KWallet on Linux to associate the encrypted local store to each application and user. The encrypted local store uses AES-CBC 128- bit encryption.
 
-On Android, the data stored by the EncryptedLocalStorage class are not encrypted. Instead the data is protected by the user-level security provided by the operating system. The Android operating system assigns every application a separate user ID. Applications can only access their own files and files created in public locations (such as the removable storage card). Note that on “rooted” Android devices, applications running with root privileges CAN access the files of other applications. Thus on a rooted device, the encrypted local store does not provide as high a level of data protection as it does on on a non-rooted device.
+On Android, the data stored by the EncryptedLocalStorage class are not encrypted. Instead the data is protected by the user-level security provided by the operating system. The Android operating system assigns every application a separate user ID. Applications can only access their own files and files created in public locations (such as the removable storage card). Note that on "rooted" Android devices, applications running with root privileges CAN access the files of other applications. Thus on a rooted device, the encrypted local store does not provide as high a level of data protection as it does on on a non-rooted device.
 
 Information in the encrypted local store is only available to AIR application content in the application security sandbox.
 
@@ -70,7 +70,7 @@ For an item that is stored with stronglyBound set to true, subsequent calls to g
 
 If the stronglyBound parameter is set to false (the default), only the publisher ID needs to stay the same for the application to read the data. The bits of the application may change (and they need to be signed by the same publisher), but they do not need to be the exact same bits as were in application that stored the data. Updated applications with the same publisher ID as the original can continue to access the data.
 
-**_Note:_** _In practice, setting stronglyBound to true does not add any additional data protection. A “malicious” user could still alter an application to gain access to items stored in the ELS. Furthermore, data is protected from external, non-user threats just as strongly whether stronglyBound is set to true or false. For these reasons, setting stronglyBound to true is discouraged._
+**_Note:_** _In practice, setting stronglyBound to true does not add any additional data protection. A "malicious" user could still alter an application to gain access to items stored in the ELS. Furthermore, data is protected from external, non-user threats just as strongly whether stronglyBound is set to true or false. For these reasons, setting stronglyBound to true is discouraged._
 
 ## Accessing data in the encrypted local store {#accessing-data-in-the-encrypted-local-store}
 

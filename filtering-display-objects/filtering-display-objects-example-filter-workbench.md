@@ -133,7 +133,7 @@ In the ConvolutionFactory class’s implementation of the getFilter() method, it
 
 ## Applying filters to display objects {#applying-filters-to-display-objects}
 
-As explained previously, the Filter Workbench application uses an instance of the FilterWorkbenchController class (hereafter referred to as the “controller instance”), which performs the actual task of applying filters to the selected visual object. Before the controller instance can apply a filter, it first needs to know what image or visual content the filter should be applied to. When the user selects an image, the application calls the setFilterTarget() method in the FilterWorkbenchController class, passing in one of the constants defined in the ImageType class:
+As explained previously, the Filter Workbench application uses an instance of the FilterWorkbenchController class (hereafter referred to as the "controller instance"), which performs the actual task of applying filters to the selected visual object. Before the controller instance can apply a filter, it first needs to know what image or visual content the filter should be applied to. When the user selects an image, the application calls the setFilterTarget() method in the FilterWorkbenchController class, passing in one of the constants defined in the ImageType class:
 
 public function setFilterTarget(targetType:ImageType):void
 
@@ -233,7 +233,7 @@ Next, the code assigns the array of filters to the display object’s filters pr
 
 _currentTarget.filters = _currentFilters;
 
-Finally, since this most recently added filter is still the “working” filter, it shouldn’t be permanently applied to the display object, so it is removed from the _currentFilters array:
+Finally, since this most recently added filter is still the "working" filter, it shouldn’t be permanently applied to the display object, so it is removed from the _currentFilters array:
 
 _currentFilters.pop();
 

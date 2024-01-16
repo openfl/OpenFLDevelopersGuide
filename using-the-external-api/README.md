@@ -35,7 +35,7 @@ The following reference list contains important terms relevant to this feature:
 
 **Projector** An executable file that includes SWF content and an embedded version of OpenFL. You can create a projector file using Flash Professional or the standalone OpenFL. Projectors are commonly used to distribute projects by CD-ROM or in similar situations where download size is not an issue and the SWF author wants to be certain the user will be able to run the project, regardless of whether OpenFL is installed on the user’s computer.
 
-**Proxy** A go-between application or code that calls code in one application (the “external application”) on behalf of another application (the “calling application”), and returns values to the calling application. A proxy can be used for various reasons, including:
+**Proxy** A go-between application or code that calls code in one application (the "external application") on behalf of another application (the "calling application"), and returns values to the calling application. A proxy can be used for various reasons, including:
 
 *   To simplify the process of making external function calls by converting native function calls in the calling application into the format understood by the external application.
 *   To work around security or other restrictions that prevent the caller from communicating directly with the external application.
@@ -81,6 +81,6 @@ To test an example of Haxe-to-ActiveX container communication:
 
 For full examples of using the external API to communicate with an HTML page, see the following topic:
 
-*   “External API example: Communicating between Haxe and JavaScript in a web browser” on page 849
+*   "External API example: Communicating between Haxe and JavaScript in a web browser" on page 849
 
 Those examples include the full code, including Haxe and container error-checking code, which you should use when writing code using the external API. For another full example using the external API, see the class example for the [ExternalInterface class in the OpenFL API Reference](https://api.openfl.org/openfl/external/ExternalInterface.html).

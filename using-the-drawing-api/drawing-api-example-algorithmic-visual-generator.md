@@ -1,12 +1,12 @@
 # Drawing API example: Algorithmic Visual Generator {#drawing-api-example-algorithmic-visual-generator}
 
-The Algorithmic Visual Generator example dynamically draws to the stage several “satellites”, or circles moving in a circular orbit. Among the features explored are:
+The Algorithmic Visual Generator example dynamically draws to the stage several "satellites", or circles moving in a circular orbit. Among the features explored are:
 
 *   Using the drawing API to draw a basic shape with dynamic appearances
 *   Connecting user interaction with the properties that are used in a draw
 *   Conveying animation by clearing the stage on each frame and redrawing
 
-The example in the previous subsection animated a solitary “satellite” using the Event.ENTER_FRAME event. This example expands upon this, building a control panel with series of sliders that immediately update the visual display of several satellites. This example formalizes the code into external classes and wraps the satellite creation code into a loop, storing a reference to each satellite in a satellites array.
+The example in the previous subsection animated a solitary "satellite" using the Event.ENTER_FRAME event. This example expands upon this, building a control panel with series of sliders that immediately update the visual display of several satellites. This example formalizes the code into external classes and wraps the satellite creation code into a loop, storing a reference to each satellite in a satellites array.
 
 To get the application files for this sample, see [www.adobe.com/go/learn_programmingAS3samples_flash](http://www.adobe.com/go/learn_programmingAS3samples_flash). The application files can be found in the folder Samples/AlgorithmicVisualGenerator. This folder contains the following files:
 

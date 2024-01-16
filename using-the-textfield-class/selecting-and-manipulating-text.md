@@ -28,7 +28,7 @@ Similarly, if you want text within a text field to be selected as the text is in
 
 ## Capturing user-selected text {#capturing-user-selected-text}
 
-The TextField selectionBeginIndex and selectionEndIndex properties, which are “read-only” so they can’t be set to programmatically select text, can be used to capture whatever the user has currently selected. Additionally, input text fields can use the caretIndex property.
+The TextField selectionBeginIndex and selectionEndIndex properties, which are "read-only" so they can’t be set to programmatically select text, can be used to capture whatever the user has currently selected. Additionally, input text fields can use the caretIndex property.
 
 For example, the following code traces the index values of user-selected text:
 
@@ -48,8 +48,8 @@ trace(&quot;First letter index position: &quot; + myTextField.selectionBeginInde
 
 You can apply a collection of TextFormat object properties to the selection to change the text appearance. For more information about applying a collection of TextFormat properties to selected text, see
 
-“Formatting ranges of text
+"Formatting ranges of text
 
-within a text field” on page 383
+within a text field" on page 383
 
 .

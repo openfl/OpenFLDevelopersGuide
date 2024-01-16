@@ -2,9 +2,9 @@
 
 Your application can create interactivity by using Haxe to respond to user activity. Note that this section assumes that you are already familiar with the Haxe event model. For more information, see
 
-“Handling
+"Handling
 
-events” on page 125
+events" on page 125
 
 .
 
@@ -18,7 +18,7 @@ Important concepts and terms
 
 It’s important to familiarize yourself with the following key user interaction terms before proceeding:
 
-**Character code** A numeric code representing a character in the current character set (associated with a key being pressed on the keyboard). For example, “D” and “d” have different character codes even though they’re created by the same key on a U.S. English keyboard.
+**Character code** A numeric code representing a character in the current character set (associated with a key being pressed on the keyboard). For example, "D" and "d" have different character codes even though they’re created by the same key on a U.S. English keyboard.
 
 **Context menu** The menu that appears when a user right-clicks or uses a particular keyboard-mouse combination. Context menu commands typically apply directly to what has been clicked. For example, a context menu for an image may contain a command to show the image in a separate window and a command to download it.
 

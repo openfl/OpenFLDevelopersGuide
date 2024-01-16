@@ -14,13 +14,13 @@ To look up a record, you pass a query string and the class object representing t
 
 | **Record class** | **Query string** | **Example query string** |
 | --- | --- | --- |
-| ARecord | host name | “example.com” |
-| AAAARecord | host name | “example.com” |
-| MXRecord | host name | “example.com” |
-| PTRRecord | IP address | “208.77.188.166” |
-| SRVRecord | Service identifier: _service._protocol.host | “_sip._tcp.example.com” |
+| ARecord | host name | "example.com" |
+| AAAARecord | host name | "example.com" |
+| MXRecord | host name | "example.com" |
+| PTRRecord | IP address | "208.77.188.166" |
+| SRVRecord | Service identifier: _service._protocol.host | "_sip._tcp.example.com" |
 
-The following code example looks up the IP address of the host “example.com”.
+The following code example looks up the IP address of the host "example.com".
 
 package
 

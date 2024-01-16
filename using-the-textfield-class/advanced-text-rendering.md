@@ -35,7 +35,7 @@ You can embed fonts in an application in many ways, including:
 *   Creating and referencing a font symbol
 *   Creating and using a run-time shared library containing embedded font symbols
 
-For more details about how to embed fonts in applications, see “Embedded fonts for dynamic or input text fields” in
+For more details about how to embed fonts in applications, see "Embedded fonts for dynamic or input text fields" in
 
 _Using Flash_.
 
@@ -47,7 +47,7 @@ You can embed fonts in a Flex application in many ways, including:
 *   Using the @font-face style declaration
 *   Establish a class for the font and use the [Embed] tag to embed it.
 
-You can only embed TrueType fonts directly in a Flex application. Fonts in other formats, such as Type 1 Postscript fonts, can first be embedded in a project using Flash Professional and then that project can be used in your Flex application. For more details about using embedded fonts from projects in Flex, see “Embedding fonts from projects” in _Using Flex 4_.
+You can only embed TrueType fonts directly in a Flex application. Fonts in other formats, such as Type 1 Postscript fonts, can first be embedded in a project using Flash Professional and then that project can be used in your Flex application. For more details about using embedded fonts from projects in Flex, see "Embedding fonts from projects" in _Using Flex 4_.
 
 **More Help topics**
 
@@ -59,7 +59,7 @@ You can only embed TrueType fonts directly in a Flex application. Fonts in other
 
 By default, OpenFL determines the settings for text display controls like sharpness, thickness, and anti- aliasing as text resizes, changes color, or is displayed on various backgrounds. In some cases, like when you have very small or very large text, or text on a variety of unique backgrounds, you might want to maintain control over these settings. You can override OpenFL settings using the openfl.text.TextRenderer class and its associated classes, like the CSMSettings class. These classes give you precise control over the rendering quality of embedded text. For more information about embedded fonts, see
 
-“Using embedded fonts” on page 384
+"Using embedded fonts" on page 384
 
 .
 

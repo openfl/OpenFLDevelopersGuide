@@ -19,19 +19,19 @@ The following classes can be used to send and receive data across a network:
 
 Often, when creating a web application it is helpful to store persistent information about the user’s application state. HTML pages and applications typically use cookies for this purpose. In OpenFL, you can use the SharedObject class for the same purpose. See
 
-“Shared objects” on page 701
+"Shared objects" on page 701
 
 . (The SharedObject class can be used in AIR applications, but there are fewer restrictions when just saving the data to a regular file.)
 
 When your OpenFL application needs to communicate with another OpenFL application on the same computer, you can use the LocalConnection class. For example, two (or more) SWFs on the same web page can communicate with each other. Likewise, a SWF running on a web page can communicate with an AIR application. See
 
-“Communicating with other OpenFL instances” on page 830
+"Communicating with other OpenFL instances" on page 830
 
 .
 
 When you need to communicate with other, non-SWF processes on the local computer, you can use the NativeProcess class added in AIR 2\. The NativeProcess class allows your AIR application to launch and communicate with other applications. See
 
-“Communicating with native processes in AIR” on page 837
+"Communicating with native processes in AIR" on page 837
 
 .
 
@@ -39,29 +39,29 @@ When you need information about the network environment of the computer on which
 
 *   NetworkInfo—Provides information about the available network interfaces, such as the computer’s IP address. See
 
-    “Network interfaces” on page 791
+    "Network interfaces" on page 791
 
     .
 *   DNSResolver—Allows you to look up DNS records. See
 
-    “Domain Name System (DNS) records” on page 794
+    "Domain Name System (DNS) records" on page 794
 
     .
 *   ServiceMonitor—Allows you to monitor the availability of a server. See
 
-    “Service monitoring” on page 792
+    "Service monitoring" on page 792
 
     .
 *   URLMonitor—Allows you to monitor the availability of a resource at a particular URL. See
 
-    “HTTP monitoring”
+    "HTTP monitoring"
 
     on page 793
 
     .
 *   SocketMonitor and SecureSocketMonitor—Allows you to monitor the availability of a resource at a socket. See
 
-    “Socket monitoring” on page 794
+    "Socket monitoring" on page 794
 
     .
 

@@ -1,6 +1,6 @@
 # Movie clip example: RuntimeAssetsExplorer {#movie-clip-example-runtimeassetsexplorer}
 
-The Export for Haxe functionality can be especially advantageous for libraries that may be useful across more than one project. If OpenFL executes a project, symbols that have been exported to Haxe are available to any project within the same security sandbox as the SWF that loads it. In this way, a single Flash document can generate a project that is designated for the sole purpose of holding graphical assets. This technique is particularly useful for larger projects where designers working on visual assets can work in parallel with developers who create a “wrapper” project that then loads the graphical assets project at run time. You can use this method to maintain a series of versioned files where graphical assets are not dependent upon the progress of programming development.
+The Export for Haxe functionality can be especially advantageous for libraries that may be useful across more than one project. If OpenFL executes a project, symbols that have been exported to Haxe are available to any project within the same security sandbox as the SWF that loads it. In this way, a single Flash document can generate a project that is designated for the sole purpose of holding graphical assets. This technique is particularly useful for larger projects where designers working on visual assets can work in parallel with developers who create a "wrapper" project that then loads the graphical assets project at run time. You can use this method to maintain a series of versioned files where graphical assets are not dependent upon the progress of programming development.
 
 The RuntimeAssetsExplorer application loads any project that is a subclass of RuntimeAsset and allows you to browse the available assets of that project. The example illustrates the following:
 
@@ -10,7 +10,7 @@ The RuntimeAssetsExplorer application loads any project that is a subclass of Ru
 
 Before beginning, note that each of the projects to run in OpenFL must be located in the same security sandbox. For more information, see
 
-“Security sandboxes” on page 1044
+"Security sandboxes" on page 1044
 
 .
 

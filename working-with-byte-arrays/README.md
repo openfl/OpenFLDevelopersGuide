@@ -83,7 +83,7 @@ Notice that you can set the position property to a specific location in the Byte
 
 ## The bytesAvailable and length properties {#the-bytesavailable-and-length-properties}
 
-The length and bytesAvailable properties tell you how long a ByteArray is and how many bytes remain in it from the current position to the end. The following example illustrates how you can use these properties. The example writes a String of text to the ByteArray and then reads the ByteArray one byte at a time until it encounters either the character “a” or the end (bytesAvailable &lt;= 0).
+The length and bytesAvailable properties tell you how long a ByteArray is and how many bytes remain in it from the current position to the end. The following example illustrates how you can use these properties. The example writes a String of text to the ByteArray and then reads the ByteArray one byte at a time until it encounters either the character "a" or the end (bytesAvailable &lt;= 0).
 
 var bytes:ByteArray = new ByteArray();
 
@@ -149,7 +149,7 @@ The encoded data follows the type marker unless the marker represents a single p
 
 There are two versions of AMF: AMF0 and AMF3\. AMF 0 supports sending complex objects by reference and allows endpoints to restore object relationships. AMF 3 improves AMF 0 by sending object traits and strings by reference, in addition to object references, and by supporting new data types that were introduced in Haxe\. The ByteArray.objectEcoding property specifies the version of AMF that is used to encode the object data. The openfl.net.ObjectEncoding class defines constants for specifying the AMF version: ObjectEncoding.AMF0 and ObjectEncoding.AMF3.
 
-The following example calls writeObject() to write an XML object to a ByteArray, which it then compresses using the Deflate algorithm and writes to the order file on the desktop. The example uses a label to display the message “Wrote order file to desktop!” in the AIR window when it is finished.
+The following example calls writeObject() to write an XML object to a ByteArray, which it then compresses using the Deflate algorithm and writes to the order file on the desktop. The example uses a label to display the message "Wrote order file to desktop!" in the AIR window when it is finished.
 
 import openfl.filesystem.*; import openfl.display.Sprite; import openfl.display.TextField; import openfl.utils.ByteArray;
 

@@ -12,11 +12,11 @@ Sound data can be fully loaded before it is played back, or it can be streamed, 
 
 The Haxe sound classes support sound files that are stored in the mp3 format. They cannot directly load or play sound files in other formats, such as WAV or AIFF. However, starting with OpenFL 9.0.115.0, AAC audio files can be loaded and played using the NetStream class. This is the same technique as is used for loading and playing video content. For more information on this technique, see
 
-“Working with video” on page 474
+"Working with video" on page 474
 
 .
 
-Using Adobe Flash Professional, you can import WAV or AIFF sound files and then embed them into your application’s projects in the mp3 format. The Flash Authoring tool also lets you compress embedded sound files to reduce their file size, though this size reduction comes at the expense of sound quality. For more information see “Importing Sounds” in _Using Flash_.
+Using Adobe Flash Professional, you can import WAV or AIFF sound files and then embed them into your application’s projects in the mp3 format. The Flash Authoring tool also lets you compress embedded sound files to reduce their file size, though this size reduction comes at the expense of sound quality. For more information see "Importing Sounds" in _Using Flash_.
 
 The Haxe sound architecture makes use of the following classes in the openfl.media package.
 

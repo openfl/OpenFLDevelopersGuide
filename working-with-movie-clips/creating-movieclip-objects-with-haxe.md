@@ -16,7 +16,7 @@ To export a symbol for Haxe code:
 2.  If necessary, activate the Advanced settings.
 3.  In the Linkage section, activate the "Export for ActionScript" checkbox. This will activate the Class and Base Class fields, and will also make it available to Haxe when building with OpenFL.
 
-By default, the Class field is populated with the symbol name, with spaces removed (for example, a symbol named “Tree House” would become “TreeHouse”). To specify that the symbol should use a custom class for its behavior, enter the full name of the class including its package in this field. If you want to be able to create instances of the symbol in Haxe code, but don’t need to add any additional behavior, you can leave the class name as-is.
+By default, the Class field is populated with the symbol name, with spaces removed (for example, a symbol named "Tree House" would become "TreeHouse"). To specify that the symbol should use a custom class for its behavior, enter the full name of the class including its package in this field. If you want to be able to create instances of the symbol in Haxe code, but don’t need to add any additional behavior, you can leave the class name as-is.
 
 The Base Class field’s value defaults to openfl.display.MovieClip (which will become openfl.display.MovieClip when including the SWF asset in OpenFL). If you want your symbol to extend the functionality of another customer class, you can specify that class’s name instead, as long as that class extends the Sprite (or MovieClip) class.
 

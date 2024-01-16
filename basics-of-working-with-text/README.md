@@ -12,11 +12,11 @@ The StageText class, available starting in AIR 3, provides a native text input f
 
 For more information on these topics, see:
 
-*   “Using the TextField class” on page 373
+*   "Using the TextField class" on page 373
 
-*   “Using the Flash Text Engine” on page 397
+*   "Using the Flash Text Engine" on page 397
 
-*   “Using the Text Layout Framework” on page 426
+*   "Using the Text Layout Framework" on page 426
 
 *   [Native text input with StageText](http://goo.gl/A0L15)
 

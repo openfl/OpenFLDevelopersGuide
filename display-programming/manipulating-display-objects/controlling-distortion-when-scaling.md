@@ -44,25 +44,25 @@ You can cache specified display objects to improve the performance of your proje
 
 Setting a display object’s cacheAsBitmap property to true makes the display object cache a bitmap representation of itself. OpenFL creates a surface object for the instance, which is a cached bitmap instead of vector data. If you change the bounds of the display object, the surface is recreated instead of resized. Surfaces can nest within other surfaces. The child surface copies its bitmap onto its parent surface. For more information, see
 
-“Enabling bitmap
+"Enabling bitmap
 
-caching” on page 184
+caching" on page 184
 
 .
 
 The DisplayObject class’s opaqueBackground property and scrollRect property are related to bitmap caching using the cacheAsBitmap property. Although these three properties are independent of each other, the opaqueBackground and scrollRect properties work best when an object is cached as a bitmap—you see performance benefits for the opaqueBackground and scrollRect properties only when you set cacheAsBitmap to true. For more information about scrolling display object content, see
 
-“Panning and scrolling display objects” on page 178
+"Panning and scrolling display objects" on page 178
 
 . For more information about setting an opaque background, see
 
-“Setting an opaque background color” on page 185
+"Setting an opaque background color" on page 185
 
 .
 
 For information on alpha channel masking, which requires you to set the cacheAsBitmap property to true, see
 
-“Masking display objects” on page 190
+"Masking display objects" on page 190
 
 .
 
@@ -81,7 +81,7 @@ The following are typical scenarios in which you might see significant benefits 
 *   Windowing system: An application with a complex system of overlapping windows. Each window can be open or closed (for example, web browser windows). If you mark each window as a surface (by setting the cacheAsBitmap property to true), each window is isolated and cached. Users can drag the windows so that they overlap each other, and each window doesn’t need to regenerate the vector content.
 *   Alpha channel masking: When you are using alpha channel masking, you must set the cacheAsBitmap property to true. For more information, see
 
-    “Masking display objects” on page 190
+    "Masking display objects" on page 190
 
     .
 

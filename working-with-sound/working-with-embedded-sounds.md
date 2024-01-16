@@ -8,13 +8,13 @@ The exact method of embedding a sound file into your application’s project var
 
 **Using an embedded sound file in Flash**
 
-The Flash authoring tool lets you import sounds in a number of sound formats and store them as symbols in the Library. You can then assign them to frames in the timeline or to the frames of a button state, use them with Behaviors, or use them directly in Haxe code. This section describes how to use embedded sounds in Haxe code with the Flash authoring tool. For information about the other ways to use embedded sounds in Flash, see “Importing Sounds” in _Using Flash_.
+The Flash authoring tool lets you import sounds in a number of sound formats and store them as symbols in the Library. You can then assign them to frames in the timeline or to the frames of a button state, use them with Behaviors, or use them directly in Haxe code. This section describes how to use embedded sounds in Haxe code with the Flash authoring tool. For information about the other ways to use embedded sounds in Flash, see "Importing Sounds" in _Using Flash_.
 
 To embed a sound file using the Flash authoring tool:
 
 1.  Select File &gt; Import &gt; Import to Library, and then select a sound file and import it.
 2.  Right-click the name of the imported file in the Library panel, and select Properties. Click the Export for Haxe checkbox.
-3.  In the Class field, enter a name to use when referring to this embedded sound in Haxe. By default, it will use the name of the sound file in this field. If the filename includes a period, as in the name “DrumSound.mp3”, you must change it to something like “DrumSound”; Haxe does not allow a period character in a class name. The Base Class field should still show openfl.media.Sound.
+3.  In the Class field, enter a name to use when referring to this embedded sound in Haxe. By default, it will use the name of the sound file in this field. If the filename includes a period, as in the name "DrumSound.mp3", you must change it to something like "DrumSound"; Haxe does not allow a period character in a class name. The Base Class field should still show openfl.media.Sound.
 4.  Click OK. You might see a dialog box saying that a definition for this class could not be found in the classpath. Click OK and continue. If you entered a class name that doesn’t match the name of any of the classes in your application’s classpath, a new class that inherits from the openfl.media.Sound class is automatically generated for you.
 5.  To use the embedded sound, you reference the class name for that sound in Haxe. For example, the following code starts by creating a new instance of the automatically generated DrumSound class:
 
@@ -66,4 +66,4 @@ var smallSound:Sound = new soundClass() as Sound; smallSound.play();
 
 }
 
-To use the embedded sound to set a property of a Flex component, it should be cast as an instance of the mx.core.SoundAsset class instead of as an instance of the Sound class. For a similar example that uses the SoundAsset class see “Embedded asset classes” in Learning Haxe.
+To use the embedded sound to set a property of a Flex component, it should be cast as an instance of the mx.core.SoundAsset class instead of as an instance of the Sound class. For a similar example that uses the SoundAsset class see "Embedded asset classes" in Learning Haxe.

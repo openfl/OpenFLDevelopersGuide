@@ -26,7 +26,7 @@ As the illustration shows, display elements fall into one or more of the followi
     
     ![](../assets/dp_bananaFrame.png)
     
-    **_A._** _A SimpleButton object. This type of display object has different “up,” “down,” and “over” states._ **_B._ **_A Bitmap object. In this case, the Bitmap object was loaded from an external JPEG through a Loader object._ **_C._ **_A Shape object. The “picture frame” contains a rounded rectangle that is drawn in Haxe. This Shape object has a Drop Shadow filter applied to it._ **_D._ **_A TextField object._
+    **_A._** _A SimpleButton object. This type of display object has different "up," "down," and "over" states._ **_B._ **_A Bitmap object. In this case, the Bitmap object was loaded from an external JPEG through a Loader object._ **_C._ **_A Shape object. The "picture frame" contains a rounded rectangle that is drawn in Haxe. This Shape object has a Drop Shadow filter applied to it._ **_D._ **_A TextField object._
 
     In the context of discussing display objects, DisplayObjectContainer objects are also known as _display object containers_ or simply _containers_. As noted earlier, the Stage is a display object container.
 

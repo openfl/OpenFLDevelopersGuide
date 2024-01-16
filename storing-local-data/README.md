@@ -4,11 +4,11 @@ You use the [SharedObject](https://api.openfl.org/openfl/net/SharedObject.html) 
 
 You can also read and write files on the file system and (in Adobe AIR) access local database files. For more information, see
 
-“Working with the file system” on page 653
+"Working with the file system" on page 653
 
 and
 
-“Working with local SQL databases in AIR” on
+"Working with local SQL databases in AIR" on
 
 page 714
 
@@ -16,19 +16,19 @@ page 714
 
 There are a number of security factors that relate to shared objects. For more information, see
 
-“Shared objects” on
+"Shared objects" on
 
 page 1074
 
 in
 
-“Security” on page 1042
+"Security" on page 1042
 
 .
 
 **Shared objects**
 
-A shared object, sometimes referred to as a “Flash cookie,” is a data file that can be created on your computer by the sites that you visit. Shared objects are most often used to enhance your web-browsing experience—for example, by allowing you to personalize the look and feel of a website that you frequently visit.
+A shared object, sometimes referred to as a "Flash cookie," is a data file that can be created on your computer by the sites that you visit. Shared objects are most often used to enhance your web-browsing experience—for example, by allowing you to personalize the look and feel of a website that you frequently visit.
 
 **About shared objects**
 

@@ -31,7 +31,7 @@ While you’re working with sound in Haxe, you’ll likely work with several cla
 
 You can also use several other classes to perform more specific tasks when you’re working with sound in Haxe; for more information on all the sound-related classes, see
 
-“Understanding the sound architecture” on page 442
+"Understanding the sound architecture" on page 442
 
 .
 

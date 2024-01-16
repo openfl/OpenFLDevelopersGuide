@@ -167,9 +167,9 @@ The example code first creates the FileReference object named fileRef and then c
 
 In Adobe AIR, the FileStream class provides additional functionality for reading data from a local file. See
 
-“Reading
+"Reading
 
-and writing files” on page 689
+and writing files" on page 689
 
 .
 
@@ -335,9 +335,9 @@ When all of the data loads from the file, the code calls the onComplete() method
 
 In Adobe AIR, the FileStream class provides additional functionality for writing data to a local file. See
 
-“Reading and
+"Reading and
 
-writing files” on page 689
+writing files" on page 689
 
 .
 
@@ -571,7 +571,7 @@ The server script that handles the file upload should expect an HTTP POST reques
 
 • Content-Type with a value of multipart/form-data.
 
-• Content-Disposition with a name attribute set to “Filedata” and a filename attribute set to the name of the original file. You can specify a custom name attribute by passing a value for the uploadDataFieldName parameter in the FileReference.upload() method.
+• Content-Disposition with a name attribute set to "Filedata" and a filename attribute set to the name of the original file. You can specify a custom name attribute by passing a value for the uploadDataFieldName parameter in the FileReference.upload() method.
 
 • The binary contents of the file. Here is a sample HTTP POST request:
 

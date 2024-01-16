@@ -87,13 +87,13 @@ The Adobe FLV file format contains encoded audio and video data for delivery by 
 
 **_Note:_** _You can create FLV files by importing video into Flash and exporting it as an FLV file. You can use the FLV Export plug-in to export FLV files from supported video-editing applications. To load FLV files from a web server, register the filename extension and MIME type with your web server. Check your web server documentation. The MIME type for FLV files is video/x-flv. For more information, see_
 
-_“About configuring FLV files for hosting on a server” on page 506_
+_"About configuring FLV files for hosting on a server" on page 506_
 
 _._
 
 For more information on FLV files, see
 
-“Advanced topics for video files” on page 505
+"Advanced topics for video files" on page 505
 
 .
 

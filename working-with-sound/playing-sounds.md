@@ -118,7 +118,7 @@ When the entire sound has been played, the onPlaybackComplete() method executes,
 
 The Event.ENTER_FRAME event can be dispatched many times per second. In some cases, you won’t want to display playback progress that frequently. In those cases, your application can set up its own timing mechanism using the openfl.util.Timer class; see
 
-“Working with dates and times” on page 1
+"Working with dates and times" on page 1
 
 .
 

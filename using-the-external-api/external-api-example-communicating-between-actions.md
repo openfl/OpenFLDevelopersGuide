@@ -14,7 +14,7 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 | IntrovertIMApp.fla or | The main application file for Flash (FLA) or Flex (MXML). |
 | com/example/programmingas3/introvertIM/IMManager.as | The class that establishes and manages communication between Haxe and the container. |
 | com/example/programmingas3/introvertIM/IMMessageEvent.as | Custom event type, dispatched by the IMManager class when a message is received from the container. |
-| com/example/programmingas3/introvertIM/IMStatus.as | Enumeration whose values represent the different “availability” status values that can be selected in the application. |
+| com/example/programmingas3/introvertIM/IMStatus.as | Enumeration whose values represent the different "availability" status values that can be selected in the application. |
 | html-flash/IntrovertIMApp.html or | The HTML page for the application for Flash (html- flash/IntrovertIMApp.html) or the template that is used to create the container HTML page for the application for Adobe Flex (html- template/index.template.html). This file contains all the JavaScript functions that make up the container part of the application. |
 
 **Preparing for Haxe-browser communication**
@@ -183,7 +183,7 @@ In another example from the isContainerReady() method, Haxe calls the isReady() 
 
 var result:Boolean = ExternalInterface.call(&quot;isReady&quot;);
 
-You can also pass parameters to JavaScript functions using the external API. For instance, consider the IMManager class’s sendMessage() method, which is called when the user is sending a new message to his or her “conversation partner”:
+You can also pass parameters to JavaScript functions using the external API. For instance, consider the IMManager class’s sendMessage() method, which is called when the user is sending a new message to his or her "conversation partner":
 
 public function sendMessage(message:String):void
 
@@ -224,7 +224,7 @@ var currentStatus = getSWF(&quot;IntrovertIMApp&quot;).getStatus(); document.for
 The code checks the value of the swfReady variable, which tracks whether the project has notified the browser that it has registered its methods with the ExternalInterface class. If the project is ready to receive communication, the next line (var currentStatus = ...) actually calls the getStatus() method in the IMManager class. Three things happen in this line of code:
 
 *   The getSWF() JavaScript function is called, returning a reference to the JavaScript object representing the project. The parameter passed to getSWF() determines which browser object is returned in case there is more than one project in an HTML page. The value passed to that parameter must match the id attribute of the object tag and name attribute of the embed tag used to include the project.
-*   Using the reference to the project, the getStatus() method is called as though it’s a method of the SWF object. In this case the function name “ getStatus” is used because that’s the name under which the Haxe function is registered using ExternalInterface.addCallback().
+*   Using the reference to the project, the getStatus() method is called as though it’s a method of the SWF object. In this case the function name " getStatus" is used because that’s the name under which the Haxe function is registered using ExternalInterface.addCallback().
 *   The getStatus() Haxe method returns a value, and that value is assigned to the currentStatus variable, which is then assigned as the content (the value property) of the status text field.
 
 **_Note:_** _If you’re following along in the code, you’ve probably noticed that in the source code for the updateStatus() function, the line of code that calls the getSWF() function, is actually written as follows: var currentStatus = getSWF(&quot;${application}&quot;).getStatus(); The ${application} text is a placeholder in the HTML page template; when Adobe Flash Builder generates the actual HTML page for the application, this placeholder text is replaced by the same text that is used as the object tag’s id attribute and the embed tag’s name attribute (IntrovertIMApp in the example). That is the value that is expected by the getSWF() function._

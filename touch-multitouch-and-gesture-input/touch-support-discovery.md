@@ -24,7 +24,7 @@ Multitouch.inputMode=MultitouchInputMode.TOUCH_POINT and use the TouchEvent clas
 
 See
 
-“Touch event handling” on page 585
+"Touch event handling" on page 585
 
 for an example that uses the Multitouch.inputMode property to set the input type before handling a touch event.
 
@@ -34,10 +34,10 @@ Other properties of the Multitouch class provide values for fine-tuning your app
 
 You can also use the API for keyboard, touch, and mouse support, see
 
-“Discovering input types” on page 558
+"Discovering input types" on page 558
 
 . For more information about compatibility testing, see
 
-“Troubleshooting” on page 593
+"Troubleshooting" on page 593
 
 .

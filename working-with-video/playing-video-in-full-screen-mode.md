@@ -6,7 +6,7 @@ For AIR content running in full-screen mode on the desktop, the system screen sa
 
 For full details on using full-screen mode, see
 
-“Working with full-screen mode” on page 167
+"Working with full-screen mode" on page 167
 
 .
 
@@ -136,7 +136,7 @@ public function onMetaData(infoObject:Object):void
 
 The onMetaData() function is a callback function for handling video metadata, if any exists. A callback function is a function that the runtime calls in response to some type of occurrence or event. In this example, the onMetaData()function is a stub that satisfies the requirement to provide the function. For more information, see
 
-“Writing callback methods for metadata and cue points” on page 487
+"Writing callback methods for metadata and cue points" on page 487
 
 Leaving full-screen mode
 
@@ -158,14 +158,14 @@ When you rescale a rectangular area of the stage to full-screen mode, OpenFL use
 
 For more information on hardware acceleration in full-screen mode, see
 
-“Working with full-screen mode” on
+"Working with full-screen mode" on
 
 page 167
 
 . For more information on StageVideo, see
 
-“Using the StageVideo class for hardware accelerated
+"Using the StageVideo class for hardware accelerated
 
-presentation” on page 512
+presentation" on page 512
 
 .

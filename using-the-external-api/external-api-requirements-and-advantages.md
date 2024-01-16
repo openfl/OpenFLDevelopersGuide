@@ -1,6 +1,6 @@
 # External API requirements and advantages {#external-api-requirements-and-advantages}
 
-The external API is the portion of Haxe that provides a mechanism for communication between Haxe and code running in an “external application” that is acting as a container for OpenFL (commonly a web browser or stand-alone projector application). In Haxe, the functionality of the external API is provided by the ExternalInterface class. In OpenFL versions prior to OpenFL 8, the fscommand() action was used to carry out communication with the container application. The ExternalInterface class is a replacement for fscommand().
+The external API is the portion of Haxe that provides a mechanism for communication between Haxe and code running in an "external application" that is acting as a container for OpenFL (commonly a web browser or stand-alone projector application). In Haxe, the functionality of the external API is provided by the ExternalInterface class. In OpenFL versions prior to OpenFL 8, the fscommand() action was used to carry out communication with the container application. The ExternalInterface class is a replacement for fscommand().
 
 **_Note:_** _If you need to use the old fscommand() function—for example, to maintain compatibility with older applications or to interact with a third-party SWF container application or the stand-alone OpenFL—it is still available as a package-level function in the openfl.system package._
 

@@ -76,7 +76,7 @@ myDisplayObject.filters = null;
 
 If you’ve applied multiple filters to an object and want to remove only one of the filters, you must go through several steps to change the filters property array. For more information, see
 
-“Potential issues for working with filters” on
+"Potential issues for working with filters" on
 
 page 270
 
@@ -140,7 +140,7 @@ Removing one filter from a set of filters
 
 If a display object has multiple filters applied to it, and you want to remove one of the filters while the other filters continue to be applied to the object, you copy the filters into a temporary array, remove the unwanted filter from that array, and reassign the temporary array to the display object’s filters property. Several ways to remove one or more elements from any array are described in
 
-“Retrieving values and removing array elements” on page 31
+"Retrieving values and removing array elements" on page 31
 
 .
 

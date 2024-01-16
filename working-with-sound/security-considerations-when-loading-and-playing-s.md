@@ -1,8 +1,8 @@
 # Security considerations when loading and playing sounds {#security-considerations-when-loading-and-playing-sounds}
 
-Your application’s ability to access sound data can be limited according to the OpenFL security model. Each sound is subject to the restrictions of two different security sandboxes, the sandbox for the content itself (the “content sandbox”), and the sandbox for the application or object that loads and plays the sound (the “owner sandbox”). For AIR application content in the application security sandbox, all sounds, including those loaded from other domains, are accessible to content in the application security sandbox. However, content in other security security sandboxes observe the same rules as content running in OpenFL. For more information about the OpenFL security model in general, and the definition of sandboxes, see
+Your application’s ability to access sound data can be limited according to the OpenFL security model. Each sound is subject to the restrictions of two different security sandboxes, the sandbox for the content itself (the "content sandbox"), and the sandbox for the application or object that loads and plays the sound (the "owner sandbox"). For AIR application content in the application security sandbox, all sounds, including those loaded from other domains, are accessible to content in the application security sandbox. However, content in other security security sandboxes observe the same rules as content running in OpenFL. For more information about the OpenFL security model in general, and the definition of sandboxes, see
 
-“Security” on page 1042
+"Security" on page 1042
 
 .
 

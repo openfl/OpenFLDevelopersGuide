@@ -58,7 +58,7 @@ loader.load(url, loaderContext);
 
 A project containing only assets and no code can be loaded from the application package or over a network. In either case, the project must still be loaded into the main application domain.
 
-For AIR versions prior to AIR 3.6, all code is stripped from SWFs other than the main application SWF during the compilation process. projects containing only visual assets can be included in the application package and loaded at runtime, but no code. If you attempt to load a SWF that contains Haxe code, an error occurs. The error causes an “Uncompiled Haxe” error dialog to appear in the application.
+For AIR versions prior to AIR 3.6, all code is stripped from SWFs other than the main application SWF during the compilation process. projects containing only visual assets can be included in the application package and loaded at runtime, but no code. If you attempt to load a SWF that contains Haxe code, an error occurs. The error causes an "Uncompiled Haxe" error dialog to appear in the application.
 
 See also
 

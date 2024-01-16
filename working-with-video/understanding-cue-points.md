@@ -12,7 +12,7 @@ You can use several different kinds of cue points with Flash video. You can use 
 
 Navigation cue points create a keyframe at the specified cue point location, so you can use code to move a video player&#039;s playhead to that location. You can set particular points in a video file where you might want users to seek. For example, your video might have multiple chapters or segments, and you can control the video by embedding navigation cue points in the video file.
 
-For more information on encoding Adobe video files with cue points, see “Embed cue points” in _Using Flash_.
+For more information on encoding Adobe video files with cue points, see "Embed cue points" in _Using Flash_.
 
 You can access cue point parameters by writing Haxe. Cue point parameters are a part of the event object received by the callback handler.
 
@@ -26,14 +26,14 @@ onMetaData() or the onXMPData() callback functions and trigger the cue point usi
 
 3.0\. For more information on F4V cue points, see
 
-“Using onXMPData()” on page 498
+"Using onXMPData()" on page 498
 
 .
 
 For more information on handling cue points and metadata, see
 
-“Writing callback methods for metadata and cue
+"Writing callback methods for metadata and cue
 
-points” on page 487
+points" on page 487
 
 .

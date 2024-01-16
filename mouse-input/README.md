@@ -2,7 +2,7 @@
 
 Your application can create interactivity by capturing and responding to mouse input. Note that this section assumes that you are already familiar with the Haxe event model. For more information, see
 
-“Handling events” on
+"Handling events" on
 
 page 125
 
@@ -10,7 +10,7 @@ page 125
 
 For information on discovering what kind of mouse support is available (such as persistent cursor, stylus or touch input) during runtime, see
 
-“Discovering input types” on page 558
+"Discovering input types" on page 558
 
 .
 
@@ -19,7 +19,7 @@ For information on discovering what kind of mouse support is available (such as 
 [openfl.ui.Mouse](https://api.openfl.org/openfl/ui/Mouse.html)
 [openfl.events.MouseEvent](https://api.openfl.org/openfl/events/MouseEvent.html)
 
-“Touch, multitouch and gesture input” on page 581
+"Touch, multitouch and gesture input" on page 581
 
 **Capturing mouse input**
 
@@ -45,7 +45,7 @@ Alternatively, the stageX and stageY properties refer to the global coordinates 
 
 **_Note:_** _In full-screen mode, you can configure the application to use mouse locking. Mouse locking disables the cursor and enables unbounded mouse movement. For more information, see_
 
-_“Working with full-screen mode” on page 167_
+_"Working with full-screen mode" on page 167_
 
 _._
 
@@ -85,7 +85,7 @@ circle.stopDrag(); trace(circle.dropTarget.name);
 
 For more details, see the section on creating mouse drag interaction in
 
-“Changing position” on page 173
+"Changing position" on page 173
 
 .
 
@@ -93,7 +93,7 @@ Drag-and-drop in AIR
 
 In Adobe AIR, you can enable drag-and-drop support to allow users to drag data into and out of your application. For more details, see
 
-“Drag and drop in AIR” on page 608
+"Drag and drop in AIR" on page 608
 
 .
 

@@ -6,7 +6,7 @@ The Video class enables you to display live streaming video in an application wi
 
 • Capture input from the user’s camera. For more information, see
 
-“Working with cameras” on page 521
+"Working with cameras" on page 521
 
 .
 
@@ -20,14 +20,14 @@ Even though the Video class is in the openfl.media package, it inherits from the
 
 For more information see
 
-“Manipulating display objects” on page 173
+"Manipulating display objects" on page 173
 
 ,
 
-“Working with geometry” on page 210
+"Working with geometry" on page 210
 
 , and
 
-“Filtering display objects” on page 267
+"Filtering display objects" on page 267
 
 .

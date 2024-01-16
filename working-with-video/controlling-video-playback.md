@@ -86,7 +86,7 @@ The previous code generates the following output:
 
 NetStream.Play.Start NetStream.Buffer.Empty NetStream.Buffer.Full NetStream.Buffer.Empty NetStream.Buffer.Full NetStream.Buffer.Empty NetStream.Buffer.Full NetStream.Buffer.Flush NetStream.Play.Stop NetStream.Buffer.Empty NetStream.Buffer.Flush
 
-The two codes that you want to specifically listen for are “NetStream.Play.Start” and “NetStream.Play.Stop” which signal the beginning and end of the video’s playback. The following snippet uses a switch statement to filter these two codes and trace a message:
+The two codes that you want to specifically listen for are "NetStream.Play.Start" and "NetStream.Play.Stop" which signal the beginning and end of the video’s playback. The following snippet uses a switch statement to filter these two codes and trace a message:
 
 function statusHandler(event:NetStatusEvent):void
 

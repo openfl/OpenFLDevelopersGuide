@@ -50,7 +50,7 @@ return (num1 + num2);
 
 If the container is some other ActiveX container, this method causes the OpenFL ActiveX control to dispatch its FlashCall event. The specified function name and any parameters are serialized into an XML string by OpenFL. The container can access that information in the request property of the event object and use it to determine how to execute its own code. To return a value to Haxe, the container code calls the ActiveX object’s SetReturnValue() method, passing the result (serialized into an XML string) as a parameter of that method. For more information about the XML format used for this communication, see
 
-“The external API’s XML format” on
+"The external API’s XML format" on
 
 page 848
 
@@ -98,7 +98,7 @@ var callResult = flashObject.myFunction(&quot;my name&quot;);
 
 Alternatively, when calling an Haxe function in a project running in a desktop application, the registered function name and any parameters must be serialized into an XML-formatted string. Then the call is actually performed by calling the CallFunction() method of the ActiveX control with the XML string as a parameter. For more information about the XML format used for this communication, see
 
-“The external API’s XML format” on
+"The external API’s XML format" on
 
 page 848
 

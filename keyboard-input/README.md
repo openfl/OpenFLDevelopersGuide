@@ -2,13 +2,13 @@
 
 Your application can capture and respond to keyboard input and can manipulate an IME to let users type non-ASCII text characters in multibyte languages. Note that this section assumes that you are already familiar with the Haxe event model. For more information, see
 
-“Handling events” on page 125
+"Handling events" on page 125
 
 .
 
 For information on discovering what kind of keyboard support is available (such as physical, virtual, alphanumeric, or 12-button numeric) during runtime, see
 
-“Discovering input types” on page 558
+"Discovering input types" on page 558
 
 .
 
@@ -73,7 +73,7 @@ tf.borderColor = 0x000000;
 
 The TextField class also reports a textInput event that you can listen for when a user enters text. For more information, see
 
-“Capturing text input” on page 378
+"Capturing text input" on page 378
 
 .
 
@@ -83,7 +83,7 @@ The TextField class also reports a textInput event that you can listen for when 
 
 You can access the keyCode and charCode properties of a keyboard event to determine what key was pressed and then trigger other actions. The keyCode property is a numeric value that corresponds to the value of a key on the keyboard. The charCode property is the numeric value of that key in the current character set. (The default character set is UTF- 8, which supports ASCII.)
 
-The primary difference between the key code and character values is that a key code value represents a particular key on the keyboard (the 1 on a keypad is different than the 1 in the top row, but the key that generates “1” and the key that generates “!” are the same key) and the character value represents a particular character (the R and r characters are different).
+The primary difference between the key code and character values is that a key code value represents a particular key on the keyboard (the 1 on a keypad is different than the 1 in the top row, but the key that generates "1" and the key that generates "!" are the same key) and the character value represents a particular character (the R and r characters are different).
 
 **_Note:_** _For the mappings between keys and their character code values in ASCII, see the [openfl.ui.Keyboard class in the OpenFL API Reference](https://api.openfl.org/openfl/ui/Keyboard.html)._
 

@@ -31,7 +31,7 @@ You can set the following properties of a URLRequest object in any security sand
 | digest | A string that uniquely identifies the signed Adobe platform component to be stored to (or retrieved from) the Adobe® Flash® Player cache. |
 | method | The HTTP request method, such as a GET or POST. (Content running in the AIR application security domain can specify strings other than &quot;GET&quot; or &quot;POST&quot; as the method property. Any HTTP verb is allowed and &quot;GET&quot; is the default method. See
 
-“AIR security” on page 1076
+"AIR security" on page 1076
 
 .) |
 | requestHeaders | The array of HTTP request headers to be appended to the HTTP request. Note that permission to set some headers is restricted in OpenFL as well as in AIR content running outside the application security sandbox. |
@@ -45,7 +45,7 @@ In AIR, you can set additional properties of the URLRequest class, which are onl
 | manageCookies | Specifies whether the HTTP protocol stack should manage cookies (true, the default value) or not (false) for this request. Setting this property is only supported in the AIR application sandbox. |
 | authenticate | Specifies whether authentication requests should be handled (true) for this request. Setting this property is only supported in the AIR application sandbox. The default is to authenticate requests—which may cause an authentication dialog box to be displayed if the server requires credentials. You can also set the user name and password using the URLRequestDefaults class—see
 
-“Setting URLRequest defaults (AIR only)” on page 812
+"Setting URLRequest defaults (AIR only)" on page 812
 
 . |
 | cacheResponse | Specifies whether response data should be cached for this request. Setting this property is only supported in the AIR application sandbox. The default is to cache the response (true). |
@@ -54,7 +54,7 @@ In AIR, you can set additional properties of the URLRequest class, which are onl
 
 **_Note:_** _The HTMLLoader class has related properties for settings pertaining to content loaded by an HTMLLoader object. For details, see_
 
-_“About the HTMLLoader class” on page 981_
+_"About the HTMLLoader class" on page 981_
 
 _._
 
@@ -122,9 +122,9 @@ mailto:
 
 You can use the mailto scheme in URLRequest objects passed to the navigateToURL() function. See
 
-“Opening a URL
+"Opening a URL
 
-in another application” on page 827
+in another application" on page 827
 
 .
 
@@ -132,7 +132,7 @@ You can use a URLRequest object that uses any of these URI schemes to define the
 
 However, you can only use these AIR-specific URI schemes (app: and app-storage:) in content in the application security sandbox. For more information, see
 
-“AIR security” on page 1076
+"AIR security" on page 1076
 
 .
 
@@ -164,7 +164,7 @@ The URLLoader class let you send a request to a server and access the informatio
 
 The Haxe event-handling model is significantly different than the Haxe 2.0 model, which used the LoadVars.onData, LoadVars.onHTTPStatus, and LoadVars.onLoad event handlers. For more information on handling events in Haxe, see
 
-“Handling events” on page 125
+"Handling events" on page 125
 
 Downloaded data is not available until the download has completed. You can monitor the progress of the download (bytes loaded and bytes total) by listening for the progress event to be dispatched. However, if a file loads quickly enough a progress event might not be dispatched. When a file has successfully downloaded, the complete event is dispatched. By setting the URLLoader dataFormat property, you can receive the data as text, raw binary data, or as a URLVariables object.
 
@@ -198,7 +198,7 @@ In Adobe AIR, the URLStream class dispatches an httpResponseStatus event in addi
 
 ## Loading data from external documents {#loading-data-from-external-documents}
 
-When you build dynamic applications, it can be useful to load data from external files or from server-side scripts. This lets you build dynamic applications without having to edit or recompile your application. For example, if you build a “tip of the day” application, you can write a server-side script that retrieves a random tip from a database and saves it to a text file once a day. Then your application can load the contents of a static text file instead of querying the database each time.
+When you build dynamic applications, it can be useful to load data from external files or from server-side scripts. This lets you build dynamic applications without having to edit or recompile your application. For example, if you build a "tip of the day" application, you can write a server-side script that retrieves a random tip from a database and saves it to a text file once a day. Then your application can load the contents of a static text file instead of querying the database each time.
 
 The following snippet creates a URLRequest and URLLoader object, which loads the contents of an external text file, params.txt:
 

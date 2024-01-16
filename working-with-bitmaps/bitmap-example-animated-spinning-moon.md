@@ -148,7 +148,7 @@ Note that since MoonSphere is a display object (it is based on the Sprite class)
 
 Simply hiding parts of the photo using a circle-shaped mask isn’t enough to create a realistic-looking rotating-sphere effect. Because of the way the photo of the moon’s surface was taken, its dimensions aren’t proportional; the portions of the image that are more toward the top or bottom of the image are more distorted and stretched compared to the portions in the equator. To distort the appearance of the moon photo to make it look three-dimensional, we’ll use a displacement map filter.
 
-A displacement map filter is a type of filter that is used to distort an image. In this case, the moon photo will be “distorted” to make it look more realistic, by squeezing the top and bottom of the image horizontally, while leaving the middle unchanged. Assuming the filter operates on a square-shaped portion of the photo, squeezing the top and bottom but not the middle will turn the square into a circle. A side effect of animating this distorted image is that the middle of the image seems to move farther in actual pixel distance than the areas close to the top and bottom, which creates the illusion that the circle is actually a three-dimensional object (a sphere).
+A displacement map filter is a type of filter that is used to distort an image. In this case, the moon photo will be "distorted" to make it look more realistic, by squeezing the top and bottom of the image horizontally, while leaving the middle unchanged. Assuming the filter operates on a square-shaped portion of the photo, squeezing the top and bottom but not the middle will turn the square into a circle. A side effect of animating this distorted image is that the middle of the image seems to move farther in actual pixel distance than the areas close to the top and bottom, which creates the illusion that the circle is actually a three-dimensional object (a sphere).
 
 The following code is used to create the displacement map filter, named displaceFilter: var displaceFilter:DisplacementMapFilter;
 
@@ -158,7 +158,7 @@ new Point(radius, 0), BitmapDataChannel.RED, BitmapDataChannel.GREEN, radius, 0)
 
 The first parameter, fisheyeLens, is known as the map image; in this case it is a BitmapData object that is created programmatically. The creation of that image is described in
 
-“Creating a bitmap image by setting pixel values” on
+"Creating a bitmap image by setting pixel values" on
 
 page 261
 
@@ -174,7 +174,7 @@ Remember, the Bitmap instance is not the actual bitmap data; it is a display obj
 
 For detailed information about using the displacement map filter in Haxe, see
 
-“Filtering display objects” on
+"Filtering display objects" on
 
 page 267
 

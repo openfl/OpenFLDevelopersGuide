@@ -54,7 +54,7 @@ See the [TouchEvent](https://api.openfl.org/openfl/events/TouchEvent.html) class
 
 **_Note:_** _Not all TouchEvent properties are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting the amount of pressure the user is applying to the touch screen. So, the TouchEvent.pressure property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
 
-_“Troubleshooting” on page 593_
+_"Troubleshooting" on page 593_
 
 _for more information._
 

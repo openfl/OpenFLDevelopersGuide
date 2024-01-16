@@ -6,9 +6,9 @@ For the URLRequest object you pass as the request parameter of this function, on
 
 The first parameter of the navigateToURL() function, the navigate parameter, is a URLRequest object (see
 
-“Using
+"Using
 
-the URLRequest class” on page 811
+the URLRequest class" on page 811
 
 ). The second is an optional window parameter, in which you can specify the window name. For example, the following code opens the [www.adobe.com](http://www.adobe.com/) web page:
 
@@ -22,7 +22,7 @@ When using the navigateToURL() function, URI schemes are permitted based on the 
 
 Some APIs allow you to launch content in a web browser. For security reasons, some URI schemes are prohibited when using these APIs in AIR. The list of prohibited schemes depends on the security sandbox of the code using the API. (For details on security sandboxes, see
 
-“AIR security” on page 1076
+"AIR security" on page 1076
 
 .)
 

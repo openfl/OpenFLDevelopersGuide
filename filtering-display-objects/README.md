@@ -8,9 +8,9 @@ One of the ways to add polish to an application is to add simple graphic effects
 
 **_Note:_** _In addition to the built-in filters, you can also program custom filters and effects using Pixel Bender. See_
 
-_“Working_
+_"Working_
 
-_with Pixel Bender shaders” on page 300_
+_with Pixel Bender shaders" on page 300_
 
 _._
 

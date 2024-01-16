@@ -66,7 +66,7 @@ addChild(myTextField);
 
 **_Note:_** _Not all GestureEvent, TransformGestureEvent, and PressAndTapGestureEvent event types are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting a multi-finger swipe. So, the InteractiveObject gestureSwipe events are not supported on those devices. Try testing for specific event support to ensure your application works, and see_
 
-_“Troubleshooting” on page 593_
+_"Troubleshooting" on page 593_
 
 _for more information._
 
@@ -98,7 +98,7 @@ function rothandler(evt:TransformGestureEvent): void { evt.target.parent.rotatio
 
 **_Note:_** _Not all TransformGestureEvent properties are supported in all runtime environments. For example, not all touch- enabled devices are capable or detecting the rotation of a gesture on the screen. So, the TransformGestureEvent.rotation property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
 
-_“Troubleshooting” on page 593_
+_"Troubleshooting" on page 593_
 
 _for more information._
 
@@ -138,7 +138,7 @@ evt.target.alpha = 1;
 
 **_Note:_** _The frequency of the update phase depends on the runtime’s environment. Some operating system and hardware combinations do not relay updates at all._
 
-Gesture phase is “all” for simple gesture events
+Gesture phase is "all" for simple gesture events
 
 Some gesture event objects do not track individual phases of the gesture event, and instead populate the event object’s phase property with the value all. The simple gestures swipe and two-finger tap do not track the event by multiple phases. The phase property of the event object for an InteractiveObject listening for the gestureSwipe or gestureTwoFingerTap events is always all once the event is dispatched:
 

@@ -5,7 +5,7 @@ The Stage class overrides most properties and methods of the DisplayObject class
 <!--
 **_Note:_** _Some properties and methods of the Stage class are only available to display objects that are in the same security sandbox as the first project loaded. For details, see_
 
-_“Stage security” on page 1063_
+_"Stage security" on page 1063_
 
 _._
 -->
@@ -19,7 +19,7 @@ The `frameRate` property of the Stage class is used to set the frame rate for al
 When the portion of the screen representing OpenFL is resized, the runtime automatically adjusts the Stage contents to compensate. The Stage class’s scaleMode property determines how the Stage contents are adjusted. This property can be set to four different values, defined as constants in the openfl.display.StageScaleMode class:
 
 *   `StageScaleMode.EXACT_FIT` scales the project to fill the new stage dimensions without regard for the original content aspect ratio. The scale factors might not be the same for width and height, so the content can appear squeezed or stretched if the aspect ratio of the stage is changed.
-*   `StageScaleMode.SHOW_ALL` scales the project to fit entirely within the new stage dimensions without changing the content aspect ratio. This scale mode displays all of the content, but can result in “letterbox” borders, like the black bars that appear when viewing a wide-screen movie on a standard television.
+*   `StageScaleMode.SHOW_ALL` scales the project to fit entirely within the new stage dimensions without changing the content aspect ratio. This scale mode displays all of the content, but can result in "letterbox" borders, like the black bars that appear when viewing a wide-screen movie on a standard television.
 *   `StageScaleMode.NO_BORDER` scales the project to entirely fill the new stage dimensions without changing the aspect ratio of the content. This scale mode makes full use of the stage display area, but can result in cropping.
 *   `StageScaleMode.NO_SCALE` — does not scale the project. If the new stage dimensions are smaller, the content is cropped; if larger, the added space is blank.
 
@@ -125,7 +125,7 @@ This does not apply to projects running in the stand-alone Flash Player.
 <!--
 There are also security-related restrictions for using full-screen mode with Flash Player in a browser. These restrictions are described in
 
-“Security” on page 1042
+"Security" on page 1042
 
 .
 -->
@@ -233,7 +233,7 @@ stage.fullScreenSourceRect = new Rectangle(0,0,320,240); stage.displayState = St
 
 }
 
-When this property is set to a valid rectangle and the displayState property is set to full-screen mode, OpenFL scale the specified area. The actual Stage size in pixels within Haxe does not change. OpenFL enforce a minimum limit for the size of the rectangle to accommodate the standard “Press Esc to exit full-screen mode” message. This limit is usually around 260 by 30 pixels but can vary depending on platform and OpenFL version.
+When this property is set to a valid rectangle and the displayState property is set to full-screen mode, OpenFL scale the specified area. The actual Stage size in pixels within Haxe does not change. OpenFL enforce a minimum limit for the size of the rectangle to accommodate the standard "Press Esc to exit full-screen mode" message. This limit is usually around 260 by 30 pixels but can vary depending on platform and OpenFL version.
 
 _The fullScreenSourceRect property can only be set when OpenFL is not in full-screen mode. To use this property correctly, set this property first, then set the displayState property to full-screen mode._
 

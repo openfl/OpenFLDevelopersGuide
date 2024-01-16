@@ -12,7 +12,7 @@ The names of the phases make more sense if you conceive of the display list as a
 
 ![](../assets/eh_displaylistVhierarchy.png)
 
-If a user clicks on Child1 Node, OpenFL dispatches an event object into the event flow. As the following image shows, the object’s journey starts at Stage, moves down to Parent Node, then moves to Child1 Node, and then “bubbles” back up to Stage, moving through Parent Node again on its journey back to Stage.
+If a user clicks on Child1 Node, OpenFL dispatches an event object into the event flow. As the following image shows, the object’s journey starts at Stage, moves down to Parent Node, then moves to Child1 Node, and then "bubbles" back up to Stage, moving through Parent Node again on its journey back to Stage.
 
 ![](../assets/eh_stage_parent_Node.png)
 

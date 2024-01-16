@@ -1,6 +1,6 @@
 # Chapter 43: Sockets {#chapter-43-sockets}
 
-A socket is a type of network connection established between two computer processes. Typically, the processes are running on two different computers attached to the same Internet Protocol (IP) network. However, the connected processes can be running on the same computer using the special “local host” IP address.
+A socket is a type of network connection established between two computer processes. Typically, the processes are running on two different computers attached to the same Internet Protocol (IP) network. However, the connected processes can be running on the same computer using the special "local host" IP address.
 
 Adobe OpenFL supports client-side Transport Control Protocol (TCP) sockets. A OpenFL application can connect to another process acting as a socket server, but cannot accept incoming connection requests from other processes. In other words, a OpenFL application can connect to a TCP server, but cannot serve as one.
 
@@ -12,11 +12,11 @@ Adobe AIR adds several additional classes for socket-based network programming. 
 
 [openfl.net package](https://api.openfl.org/openfl/net/index.html)
 
-“Connecting to sockets” on page 1068
+"Connecting to sockets" on page 1068
 
 **TCP sockets**
 
-The Transmission Control Protocol (TCP) provides a way to exchange messages over a persistent network connection. TCP guarantees that any messages sent arrive in the correct order (barring major network problems). TCP connections require a “client” and a “server.” OpenFL can create client sockets. Adobe AIR can, additionally, create server sockets.
+The Transmission Control Protocol (TCP) provides a way to exchange messages over a persistent network connection. TCP guarantees that any messages sent arrive in the correct order (barring major network problems). TCP connections require a "client" and a "server." OpenFL can create client sockets. Adobe AIR can, additionally, create server sockets.
 
 The following Haxe APIs provide TCP connections:
 
@@ -33,7 +33,7 @@ A binary socket connection is similar to an XML socket except that the client an
 
 The Socket class enables you to make socket connections and to read and write raw binary data. The Socket class is useful for interoperating with servers that use binary protocols. By using binary socket connections, you can write code that interacts with several different Internet protocols, such as POP3, SMTP, IMAP, and NNTP. This interaction, in turn, enables your applications to connect to mail and news servers.
 
-OpenFL can interface with a server by using the binary protocol of that server directly. Some servers use the big- endian byte order, and some use the little-endian byte order. Most servers on the Internet use the big-endian byte order because “network byte order” is big-endian. The little-endian byte order is popular because the Intel® x86 architecture uses it. You should use the endian byte order that matches the byte order of the server that is sending or receiving data. All operations that are performed by the IDataInput and IDataOutput interfaces, and the classes that implement those interfaces (ByteArray, Socket, and URLStream), are encoded by default in big-endian format; that is, with the most significant byte first. This default byte order was chosen to match Java and the official network byte order. To change whether big-endian or little-endian byte order is used, you can set the endian property to Endian.BIG_ENDIAN or Endian.LITTLE_ENDIAN.
+OpenFL can interface with a server by using the binary protocol of that server directly. Some servers use the big- endian byte order, and some use the little-endian byte order. Most servers on the Internet use the big-endian byte order because "network byte order" is big-endian. The little-endian byte order is popular because the Intel® x86 architecture uses it. You should use the endian byte order that matches the byte order of the server that is sending or receiving data. All operations that are performed by the IDataInput and IDataOutput interfaces, and the classes that implement those interfaces (ByteArray, Socket, and URLStream), are encoded by default in big-endian format; that is, with the most significant byte first. This default byte order was chosen to match Java and the official network byte order. To change whether big-endian or little-endian byte order is used, you can set the endian property to Endian.BIG_ENDIAN or Endian.LITTLE_ENDIAN.
 
 _The Socket class inherits all the methods defined by the IDataInput and IDataOutput interfaces (located in the openfl.utils package). Those methods must be used to write to and read from the Socket._
 
@@ -63,7 +63,7 @@ The CertificateStatus class defines string constants that represent the possible
 *   Revoked—the issuing certificate authority has revoked the certificate.
 *   Trusted—the certificate is valid and trusted. A SecureSocket object can only connect to a server that uses a valid, trusted certificate.
 *   Unknown—the SecureSocket object has not validated the certificate yet. The serverCertificateStatus property has this status value before you call connect() and before either a connect or an ioError event is dispatched.
-*   Untrusted signers—the certificate does not “chain” to a trusted root certificate in the trust store of the client computer.
+*   Untrusted signers—the certificate does not "chain" to a trusted root certificate in the trust store of the client computer.
 
 Communicating with a SecureSocket object requires a server that uses a secure protocol and has a valid, trusted certificate. In other respects, using a SecureSocket object is the same as using a Socket object.
 
@@ -227,13 +227,13 @@ An XML socket lets you create a connection to a remote server that remains open 
 
 In OpenFL, and in Adobe AIR content outside the application sandbox, XML socket connections require the presence of a socket policy file on the target server. For more information, see
 
-“Website controls (policy files)” on
+"Website controls (policy files)" on
 
 page 1051
 
 and
 
-“Connecting to sockets” on page 1068
+"Connecting to sockets" on page 1068
 
 .
 
@@ -244,7 +244,7 @@ The following restrictions apply to how and where content in OpenFL or in an AIR
 *   For content outside of the application security sandbox, the XMLSocket.connect() method can connect only to TCP port numbers greater than or equal to 1024\. One consequence of this restriction is that the server daemons that communicate with the XMLSocket object must also be assigned to port numbers greater than or equal to 1024\. Port numbers below 1024 are often used by system services such as FTP (21), Telnet (23), SMTP (25), HTTP (80), and POP3 (110), so XMLSocket objects are barred from these ports for security reasons. The port number restriction limits the possibility that these resources will be inappropriately accessed and abused.
 *   For content outside of the application security sandbox, the XMLSocket.connect() method can connect only to computers in the same domain where the content resides. (This restriction is identical to the security rules for URLLoader.load().) To connect to a server daemon running in a domain other than the one where the content resides, you can create a cross-domain policy file on the server that allows access from specific domains. For details on cross-domain policy files, see
 
-    “AIR security” on page 1076
+    "AIR security" on page 1076
 
     .
 
@@ -422,7 +422,7 @@ To listen for incoming socket connections:
 3.  Call the listen() method
 4.  Respond to the connect event, which provides a Socket object for each incoming connection The ServerSocket object continues to listen for new connections until you call the close() method.
 
-The following code example illustrates how to create a socket server application. The example listens for incoming connections on port 8087\. When a connection is received, the example sends a message (the string “Connected.”) to the client socket. Thereafter, the server echoes any messages received back to the client.
+The following code example illustrates how to create a socket server application. The example listens for incoming connections on port 8087\. When a connection is received, the example sends a message (the string "Connected.") to the client socket. Thereafter, the server echoes any messages received back to the client.
 
 package
 

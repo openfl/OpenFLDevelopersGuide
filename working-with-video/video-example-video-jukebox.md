@@ -166,7 +166,7 @@ catch (error:TypeError)
 
 }
 
-The previous code evaluates the code property of the info object and filters whether the code is “NetStream.Play.Start”, “NetStream.Play.StreamNotFound”, or “NetStream.Play.Stop”. All other codes will be ignored. If the net stream is starting the code starts the Timer instance which updates the playhead. If the net stream cannot be found or is stopped, the Timer instance is stopped and the application attempts to play the next video in the playlist.
+The previous code evaluates the code property of the info object and filters whether the code is "NetStream.Play.Start", "NetStream.Play.StreamNotFound", or "NetStream.Play.Stop". All other codes will be ignored. If the net stream is starting the code starts the Timer instance which updates the playhead. If the net stream cannot be found or is stopped, the Timer instance is stopped and the application attempts to play the next video in the playlist.
 
 Every time the Timer executes, the positionBar progress bar instance updates its current position by calling the setProgress() method of the ProgressBar class and the positionLabel Label instance is updated with the time elapsed and total time of the current video.
 

@@ -23,7 +23,7 @@ this.addChild (myClonedChildContainer);
 myClonedChildContainer.x = 110;
 ```
 
-The `copyPixels()` method is a quick and easy way of copying pixels from one BitmapData object to another. The method takes a rectangular snapshot (defined by the `sourceRect` parameter) of the source image and copies it to another rectangular area (of equal size). The location of the newly “pasted” rectangle is defined within the `destPoint` parameter.
+The `copyPixels()` method is a quick and easy way of copying pixels from one BitmapData object to another. The method takes a rectangular snapshot (defined by the `sourceRect` parameter) of the source image and copies it to another rectangular area (of equal size). The location of the newly "pasted" rectangle is defined within the `destPoint` parameter.
 
 The `copyChannel()` method samples a predefined color channel value (alpha, red, green, or blue) from a source BitmapData object and copies it into a channel of a destination BitmapData object. Calling this method does not affect the other channels in the destination BitmapData object.
 
