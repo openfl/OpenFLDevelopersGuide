@@ -105,11 +105,12 @@ The following code lists the Haxe in the main application file:
 
 import com.example.programmingas3.socket.Telnet;
 
-private var telnetClient:Telnet; private function connect():void
+private var telnetClient:Telnet;
+private function connect():void
 
 {
 
-telnetClient = new Telnet(serverName.text, int(portNumber.text), output); console.title = &quot;Connecting to &quot; + serverName.text + &quot;:&quot; + portNumber.text; console.enabled = true;
+telnetClient = new Telnet(serverName.text, int(portNumber.text), output); console.title = "Connecting to " + serverName.text + ":" + portNumber.text; console.enabled = true;
 
 }
 
@@ -117,11 +118,11 @@ private function sendCommand():void
 
 {
 
-var ba:ByteArray = new ByteArray(); ba.writeMultiByte(command.text + &quot;\n&quot;, &quot;UTF-8&quot;); telnetClient.writeBytesToSocket(ba); command.text = &quot;&quot;;
+var ba:ByteArray = new ByteArray(); ba.writeMultiByte(command.text + "\n", "UTF-8"); telnetClient.writeBytesToSocket(ba); command.text = "";
 
 }
 
-The first line of code imports the Telnet class from the custom com.example.programmingas.socket package. The second line of code declares an instance of the Telnet class, telnetClient, that is initialized later by the connect() method. Next, the connect() method is declared and initializes the telnetClient variable declared earlier. This method passes the user-specified telnet server name, telnet server port, and a reference to a TextArea component on the display list, which is used to display the text responses from the socket server. The final two lines of the connect() method set the title property for the Panel and enable the Panel component, which allows the user to send data to the remote server. The final method in the main application file, sendCommand(), is used to send the user&#039;s commands to the remote server as a ByteArray object.
+The first line of code imports the Telnet class from the custom com.example.programmingas.socket package. The second line of code declares an instance of the Telnet class, telnetClient, that is initialized later by the connect() method. Next, the connect() method is declared and initializes the telnetClient variable declared earlier. This method passes the user-specified telnet server name, telnet server port, and a reference to a TextArea component on the display list, which is used to display the text responses from the socket server. The final two lines of the connect() method set the title property for the Panel and enable the Panel component, which allows the user to send data to the remote server. The final method in the main application file, sendCommand(), is used to send the user's commands to the remote server as a ByteArray object.
 
 Telnet class overview
 
@@ -129,7 +130,11 @@ Telnet class overview
 
 The Telnet class is responsible for connecting to the remote Telnet server and sending/receiving data. The Telnet class declares the following private variables:
 
-private var serverURL:String; private var portNumber:int; private var socket:Socket; private var ta:TextArea; private var state:int = 0;
+private var serverURL:String;
+private var portNumber:int;
+private var socket:Socket;
+private var ta:TextArea;
+private var state:int = 0;
 
 The first variable, serverURL, contains the user-specified server address to connect to.
 
@@ -143,7 +148,7 @@ The fourth variable, ta, is a reference to a TextArea component instance on the 
 
 The final variable, state, is a numeric value that is used to determine which options your Telnet client supports.
 
-As you saw before, the Telnet class&#039;s constructor function is called by the connect() method in the main application file.
+As you saw before, the Telnet class's constructor function is called by the connect() method in the main application file.
 
 The Telnet constructor takes three parameters: server, port, and output. The server and port parameters specify the server name and port number where the Telnet server is running. The final parameter, output, is a reference to a TextArea component instance on the Stage where server output is displayed to users.
 
@@ -155,11 +160,11 @@ serverURL = server; portNumber = port; ta = output;
 
 socket = new Socket(); socket.addEventListener(Event.CONNECT, connectHandler); socket.addEventListener(Event.CLOSE, closeHandler); socket.addEventListener(ErrorEvent.ERROR, errorHandler);
 
-socket.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler); socket.addEventListener(ProgressEvent.SOCKET_DATA, dataHandler); Security.loadPolicyFile(&quot;http://&quot; + serverURL + &quot;/crossdomain.xml&quot;); try
+socket.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler); socket.addEventListener(ProgressEvent.SOCKET_DATA, dataHandler); Security.loadPolicyFile("http://" + serverURL + "/crossdomain.xml"); try
 
 {
 
-msg(&quot;Trying to connect to &quot; + serverURL + &quot;:&quot; + portNumber + &quot;\n&quot;); socket.connect(serverURL, portNumber);
+msg("Trying to connect to " + serverURL + ":" + portNumber + "\n"); socket.connect(serverURL, portNumber);
 
 }
 
@@ -167,7 +172,7 @@ catch (error:Error)
 
 {
 
-msg(error.message + &quot;\n&quot;); socket.close();
+msg(error.message + "\n"); socket.close();
 
 }
 
@@ -315,7 +320,7 @@ private SimpleServer(int port)
 
 {
 
-System.out.println(&quot;&gt;&gt; Starting SimpleServer&quot;); try
+System.out.println("&gt;&gt; Starting SimpleServer"); try
 
 {
 
@@ -323,7 +328,7 @@ socket = new ServerSocket(port); incoming = socket.accept();
 
 readerIn = new BufferedReader(new InputStreamReader(incoming.getInputStream())); printOut = new PrintStream(incoming.getOutputStream());
 
-printOut.println(&quot;Enter EXIT to exit.\r&quot;); out(&quot;Enter EXIT to exit.\r&quot;);
+printOut.println("Enter EXIT to exit.\r"); out("Enter EXIT to exit.\r");
 
 boolean done = false; while (!done)
 
@@ -341,9 +346,9 @@ else
 
 {
 
-out(&quot;Echo: &quot; + str + &quot;\r&quot;);
+out("Echo: " + str + "\r");
 
-if(str.trim().equals(&quot;EXIT&quot;))
+if(str.trim().equals("EXIT"))
 
 {
 
@@ -387,15 +392,16 @@ _If you’re unable to start the server because the files are not located within
 
 To connect to the XMLSocket from your application, you need to create a new instance of the XMLSocket class, and call the XMLSocket.connect() method while passing a host name and port number, as follows:
 
-var xmlsock:XMLSocket = new XMLSocket(); xmlsock.connect(&quot;127.0.0.1&quot;, 8080);
+var xmlsock:XMLSocket = new XMLSocket(); xmlsock.connect("127.0.0.1", 8080);
 
 Whenever you receive data from the server, the data event (openfl.events.DataEvent.DATA) is dispatched:
 
-xmlsock.addEventListener(DataEvent.DATA, onData); private function onData(event:DataEvent):void
+xmlsock.addEventListener(DataEvent.DATA, onData);
+private function onData(event:DataEvent):void
 
 {
 
-trace(&quot;[&quot; + event.type + &quot;] &quot; + event.data);
+trace("[" + event.type + "] " + event.data);
 
 }
 
@@ -428,11 +434,14 @@ package
 
 {
 
-import openfl.display.Sprite; import openfl.events.Event;
+import openfl.display.Sprite;
+import openfl.events.Event;
 
-import openfl.events.IOErrorEvent; import openfl.events.ProgressEvent;
+import openfl.events.IOErrorEvent;
+import openfl.events.ProgressEvent;
 
-import openfl.events.ServerSocketConnectEvent; import openfl.net.ServerSocket;
+import openfl.events.ServerSocketConnectEvent;
+import openfl.net.ServerSocket;
 
 import openfl.net.Socket;
 
@@ -456,13 +465,15 @@ try
 
 // Add the event listener
 
-serverSocket.addEventListener( Event.CONNECT, connectHandler ); serverSocket.addEventListener( Event.CLOSE, onClose );
+serverSocket.addEventListener( Event.CONNECT, connectHandler );
+serverSocket.addEventListener( Event.CLOSE, onClose );
 
-// Bind to local port 8087 serverSocket.bind( 8087, &quot;127.0.0.1&quot; );
+// Bind to local port 8087
+serverSocket.bind( 8087, "127.0.0.1" );
 
 // Listen for connections serverSocket.listen();
 
-trace( &quot;Listening on &quot; + serverSocket.localPort );
+trace( "Listening on " + serverSocket.localPort );
 
 }
 
@@ -480,13 +491,19 @@ public function connectHandler(event:ServerSocketConnectEvent):void
 
 {
 
-//The socket is provided by the event object var socket:Socket = event.socket as Socket; clientSockets.push( socket );
+//The socket is provided by the event object
+var socket:Socket = event.socket as Socket;
+clientSockets.push( socket );
 
-socket.addEventListener( ProgressEvent.SOCKET_DATA, socketDataHandler); socket.addEventListener( Event.CLOSE, onClientClose ); socket.addEventListener( IOErrorEvent.IO_ERROR, onIOError );
+socket.addEventListener( ProgressEvent.SOCKET_DATA, socketDataHandler);
+socket.addEventListener( Event.CLOSE, onClientClose );
+socket.addEventListener( IOErrorEvent.IO_ERROR, onIOError );
 
-//Send a connect message socket.writeUTFBytes(&quot;Connected.&quot;); socket.flush();
+//Send a connect message
+socket.writeUTFBytes("Connected.");
+socket.flush();
 
-trace( &quot;Sending connect message&quot; );
+trace( "Sending connect message" );
 
 }
 
@@ -498,11 +515,15 @@ var socket:Socket = event.target as Socket
 
 //Read the message from the socket
 
-var message:String = socket.readUTFBytes( socket.bytesAvailable ); trace( &quot;Received: &quot; + message);
+var message:String = socket.readUTFBytes( socket.bytesAvailable );
+trace( "Received: " + message);
 
-// Echo the received message back to the sender message = &quot;Echo -- &quot; + message; socket.writeUTFBytes( message ); socket.flush();
+// Echo the received message back to the sender
+message = "Echo -- " + message;
+socket.writeUTFBytes( message );
+socket.flush();
 
-trace( &quot;Sending: &quot; + message );
+trace( "Sending: " + message );
 
 }
 
@@ -510,7 +531,7 @@ private function onClientClose( event:Event ):void
 
 {
 
-trace( &quot;Connection to client closed.&quot; );
+trace( "Connection to client closed." );
 
 //Should also remove from clientSockets array...
 
@@ -520,7 +541,7 @@ private function onIOError( errorEvent:IOErrorEvent ):void
 
 {
 
-trace( &quot;IOError: &quot; + errorEvent.text );
+trace( "IOError: " + errorEvent.text );
 
 }
 
@@ -528,7 +549,7 @@ private function onClose( event:Event ):void
 
 {
 
-trace( &quot;Server socket closed by OS.&quot; );
+trace( "Server socket closed by OS." );
 
 }
 

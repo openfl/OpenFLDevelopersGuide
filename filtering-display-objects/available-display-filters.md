@@ -31,15 +31,19 @@ import openfl.display.*;
 
 import openfl.filters.BevelFilter;
 
-import openfl.filters.BitmapFilterQuality; import openfl.filters.BitmapFilterType; import openfl.net.URLRequest;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.BitmapFilterType;
+import openfl.net.URLRequest;
 
 // Load an image onto the Stage.
 
 var imageLoader:Loader = new Loader();
 
-var url:String = [&quot;http://www.helpexamples.com/flash/images/image3.jpg&quot;;](http://www.helpexamples.com/flash/images/image3.jpg) var urlReq:URLRequest = new URLRequest(url);
+var url:String = "http://www.helpexamples.com/flash/images/image3.jpg";
+var urlReq:URLRequest = new URLRequest(url);
 
-imageLoader.load(urlReq); addChild(imageLoader);
+imageLoader.load(urlReq);
+addChild(imageLoader);
 
 // Create the bevel filter and set filter properties. var bevel:BevelFilter = new BevelFilter();
 
@@ -65,19 +69,28 @@ The following example creates a circle object using the drawCircle() method of t
 
 import openfl.display.Sprite;
 
-import openfl.filters.BitmapFilterQuality; import openfl.filters.BlurFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.BlurFilter;
 
 // Draw a circle.
 
-var redDotCutout:Sprite = new Sprite(); redDotCutout.graphics.lineStyle(); redDotCutout.graphics.beginFill(0xFF0000); redDotCutout.graphics.drawCircle(145, 90, 25); redDotCutout.graphics.endFill();
+var redDotCutout:Sprite = new Sprite();
+redDotCutout.graphics.lineStyle();
+redDotCutout.graphics.beginFill(0xFF0000);
+redDotCutout.graphics.drawCircle(145, 90, 25);
+redDotCutout.graphics.endFill();
 
-// Add the circle to the display list. addChild(redDotCutout);
+// Add the circle to the display list.
+addChild(redDotCutout);
 
-// Apply the blur filter to the rectangle. var blur:BlurFilter = new BlurFilter(); blur.blurX = 10;
+// Apply the blur filter to the rectangle.
+var blur:BlurFilter = new BlurFilter();
+blur.blurX = 10;
 
 blur.blurY = 10;
 
-blur.quality = BitmapFilterQuality.MEDIUM; redDotCutout.filters = [blur];
+blur.quality = BitmapFilterQuality.MEDIUM;
+redDotCutout.filters = [blur];
 
 ## Drop shadow filter {#drop-shadow-filter}
 
@@ -95,11 +108,17 @@ import openfl.filters.DropShadowFilter;
 
 // Draw a box.
 
-var boxShadow:Sprite = new Sprite(); boxShadow.graphics.lineStyle(1); boxShadow.graphics.beginFill(0xFF3300); boxShadow.graphics.drawRect(0, 0, 100, 100); boxShadow.graphics.endFill(); addChild(boxShadow);
+var boxShadow:Sprite = new Sprite();
+boxShadow.graphics.lineStyle(1);
+boxShadow.graphics.beginFill(0xFF3300);
+boxShadow.graphics.drawRect(0, 0, 100, 100);
+boxShadow.graphics.endFill();
+addChild(boxShadow);
 
 // Apply the drop shadow filter to the box.
 
-var shadow:DropShadowFilter = new DropShadowFilter(); shadow.distance = 10;
+var shadow:DropShadowFilter = new DropShadowFilter();
+shadow.distance = 10;
 
 shadow.angle = 25;
 
@@ -119,15 +138,22 @@ The following code creates a cross using the Sprite class and applies a glow fil
 
 import openfl.display.Sprite;
 
-import openfl.filters.BitmapFilterQuality; import openfl.filters.GlowFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.GlowFilter;
 
 // Create a cross graphic.
 
-var crossGraphic:Sprite = new Sprite(); crossGraphic.graphics.lineStyle(); crossGraphic.graphics.beginFill(0xCCCC00); crossGraphic.graphics.drawRect(60, 90, 100, 20);
+var crossGraphic:Sprite = new Sprite();
+crossGraphic.graphics.lineStyle();
+crossGraphic.graphics.beginFill(0xCCCC00);
+crossGraphic.graphics.drawRect(60, 90, 100, 20);
 
-crossGraphic.graphics.drawRect(100, 50, 20, 100); crossGraphic.graphics.endFill(); addChild(crossGraphic);
+crossGraphic.graphics.drawRect(100, 50, 20, 100);
+crossGraphic.graphics.endFill(); addChild(crossGraphic);
 
-// Apply the glow filter to the cross shape. var glow:GlowFilter = new GlowFilter(); glow.color = 0x009922;
+// Apply the glow filter to the cross shape.
+var glow:GlowFilter = new GlowFilter();
+glow.color = 0x009922;
 
 glow.alpha = 1;
 
@@ -135,7 +161,8 @@ glow.blurX = 25;
 
 glow.blurY = 25;
 
-glow.quality = BitmapFilterQuality.MEDIUM; crossGraphic.filters = [glow];
+glow.quality = BitmapFilterQuality.MEDIUM;
+crossGraphic.filters = [glow];
 
 ## Gradient bevel filter {#gradient-bevel-filter}
 
@@ -145,11 +172,16 @@ The following code creates a rectangle object using the drawRect() method of the
 
 import openfl.display.Shape;
 
-import openfl.filters.BitmapFilterQuality; import openfl.filters.GradientBevelFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.GradientBevelFilter;
 
 // Draw a rectangle.
 
-var box:Shape = new Shape(); box.graphics.lineStyle(); box.graphics.beginFill(0xFEFE78); box.graphics.drawRect(100, 50, 90, 200); box.graphics.endFill();
+var box:Shape = new Shape();
+box.graphics.lineStyle();
+box.graphics.beginFill(0xFEFE78);
+box.graphics.drawRect(100, 50, 90, 200);
+box.graphics.endFill();
 
 // Apply a gradient bevel to the rectangle.
 
@@ -157,7 +189,9 @@ var gradientBevel:GradientBevelFilter = new GradientBevelFilter();
 
 gradientBevel.distance = 8;
 
-gradientBevel.angle = 225; // opposite of 45 degrees gradientBevel.colors = [0xFFFFCC, 0xFEFE78, 0x8F8E01]; gradientBevel.alphas = [1, 0, 1];
+gradientBevel.angle = 225; // opposite of 45 degrees
+gradientBevel.colors = [0xFFFFCC, 0xFEFE78, 0x8F8E01];
+gradientBevel.alphas = [1, 0, 1];
 
 gradientBevel.ratios = [0, 128, 255];
 
@@ -169,9 +203,11 @@ gradientBevel.quality = BitmapFilterQuality.HIGH;
 
 // Other properties let you set the filter strength and set options
 
-// for inner bevel and knockout effects. box.filters = [gradientBevel];
+// for inner bevel and knockout effects.
+box.filters = [gradientBevel];
 
-// Add the graphic to the display list. addChild(box);
+// Add the graphic to the display list.
+addChild(box);
 
 ## Gradient glow filter {#gradient-glow-filter}
 
@@ -181,11 +217,15 @@ The following example draws a circle on the Stage, and applies a gradient glow f
 
 import openfl.events.MouseEvent;
 
-import openfl.filters.BitmapFilterQuality; import openfl.filters.BitmapFilterType; import openfl.filters.GradientGlowFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.BitmapFilterType;
+import openfl.filters.GradientGlowFilter;
 
-// Create a new Shape instance. var shape:Shape = new Shape();
+// Create a new Shape instance.
+var shape:Shape = new Shape();
 
-// Draw the shape. shape.graphics.beginFill(0xFF0000, 100);
+// Draw the shape.
+shape.graphics.beginFill(0xFF0000, 100);
 
 shape.graphics.moveTo(0, 0);
 
@@ -195,9 +235,11 @@ shape.graphics.lineTo(100, 100);
 
 shape.graphics.lineTo(0, 100);
 
-shape.graphics.lineTo(0, 0); shape.graphics.endFill();
+shape.graphics.lineTo(0, 0);
+shape.graphics.endFill();
 
-// Position the shape on the Stage. addChild(shape);
+// Position the shape on the Stage.
+addChild(shape);
 
 shape.x = 100;
 
@@ -205,9 +247,12 @@ shape.y = 100;
 
 // Define a gradient glow.
 
-var gradientGlow:GradientGlowFilter = new GradientGlowFilter(); gradientGlow.distance = 0;
+var gradientGlow:GradientGlowFilter = new GradientGlowFilter();
+gradientGlow.distance = 0;
 
-gradientGlow.angle = 45; gradientGlow.colors = [0x000000, 0xFF0000]; gradientGlow.alphas = [0, 1];
+gradientGlow.angle = 45;
+gradientGlow.colors = [0x000000, 0xFF0000];
+gradientGlow.alphas = [0, 1];
 
 gradientGlow.ratios = [0, 255];
 
@@ -217,13 +262,16 @@ gradientGlow.blurY = 10;
 
 gradientGlow.strength = 2;
 
-gradientGlow.quality = BitmapFilterQuality.HIGH; gradientGlow.type = BitmapFilterType.OUTER;
+gradientGlow.quality = BitmapFilterQuality.HIGH;
+gradientGlow.type = BitmapFilterType.OUTER;
 
-// Define functions to listen for two events. function onClick(event:MouseEvent):void
+// Define functions to listen for two events.
+function onClick(event:MouseEvent):void
 
 {
 
-gradientGlow.strength++; shape.filters = [gradientGlow];
+gradientGlow.strength++;
+shape.filters = [gradientGlow];
 
 }
 
@@ -231,49 +279,82 @@ function onMouseMove(event:MouseEvent):void
 
 {
 
-gradientGlow.blurX = (stage.mouseX / stage.stageWidth) * 255; gradientGlow.blurY = (stage.mouseY / stage.stageHeight) * 255; shape.filters = [gradientGlow];
+gradientGlow.blurX = (stage.mouseX / stage.stageWidth) * 255;
+gradientGlow.blurY = (stage.mouseY / stage.stageHeight) * 255;
+shape.filters = [gradientGlow];
 
 }
 
-stage.addEventListener(MouseEvent.CLICK, onClick); stage.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
+stage.addEventListener(MouseEvent.CLICK, onClick);
+stage.addEventListener(MouseEvent.MOUSE_MOVE, onMouseMove);
 
 ## Example: Combining basic filters {#example-combining-basic-filters}
 
 The following code example uses several basic filters, combined with a Timer for creating repeating actions, to create an animated traffic light simulation.
 
-import openfl.display.Shape; import openfl.events.TimerEvent;
+import openfl.display.Shape;
+import openfl.events.TimerEvent;
 
-import openfl.filters.BitmapFilterQuality; import openfl.filters.BitmapFilterType; import openfl.filters.DropShadowFilter; import openfl.filters.GlowFilter;
+import openfl.filters.BitmapFilterQuality;
+import openfl.filters.BitmapFilterType;
+import openfl.filters.DropShadowFilter;
+import openfl.filters.GlowFilter;
 
-import openfl.filters.GradientBevelFilter; import openfl.utils.Timer;
+import openfl.filters.GradientBevelFilter;
+import openfl.utils.Timer;
 
-var count:Number = 1; var distance:Number = 8;
+var count:Number = 1;
+var distance:Number = 8;
 
-var angleInDegrees:Number = 225; // opposite of 45 degrees var colors:Array = [0xFFFFCC, 0xFEFE78, 0x8F8E01];
+var angleInDegrees:Number = 225; // opposite of 45 degrees
+var colors:Array = [0xFFFFCC, 0xFEFE78, 0x8F8E01];
 
 var alphas:Array = [1, 0, 1];
 
-var ratios:Array = [0, 128, 255]; var blurX:Number = 8;
+var ratios:Array = [0, 128, 255];
+var blurX:Number = 8;
 
-var blurY:Number = 8; var strength:Number = 1;
+var blurY:Number = 8;
+var strength:Number = 1;
 
-var quality:Number = BitmapFilterQuality.HIGH; var type:String = BitmapFilterType.INNER;
+var quality:Number = BitmapFilterQuality.HIGH;
+var type:String = BitmapFilterType.INNER;
 
 var knockout:Boolean = false;
 
-// Draw the rectangle background for the traffic light. var box:Shape = new Shape();
+// Draw the rectangle background for the traffic light.
+var box:Shape = new Shape();
 
-box.graphics.lineStyle(); box.graphics.beginFill(0xFEFE78); box.graphics.drawRect(100, 50, 90, 200); box.graphics.endFill();
+box.graphics.lineStyle();
+box.graphics.beginFill(0xFEFE78);
+box.graphics.drawRect(100, 50, 90, 200);
+box.graphics.endFill();
 
-// Draw the 3 circles for the three lights. var stopLight:Shape = new Shape(); stopLight.graphics.lineStyle(); stopLight.graphics.beginFill(0xFF0000); stopLight.graphics.drawCircle(145,90,25); stopLight.graphics.endFill();
+// Draw the 3 circles for the three lights.
+var stopLight:Shape = new Shape();
+stopLight.graphics.lineStyle();
+stopLight.graphics.beginFill(0xFF0000);
+stopLight.graphics.drawCircle(145,90,25);
+stopLight.graphics.endFill();
 
-var cautionLight:Shape = new Shape(); cautionLight.graphics.lineStyle(); cautionLight.graphics.beginFill(0xFF9900); cautionLight.graphics.drawCircle(145,150,25); cautionLight.graphics.endFill();
+var cautionLight:Shape = new Shape();
+cautionLight.graphics.lineStyle();
+cautionLight.graphics.beginFill(0xFF9900);
+cautionLight.graphics.drawCircle(145,150,25);
+cautionLight.graphics.endFill();
 
-var goLight:Shape = new Shape(); goLight.graphics.lineStyle(); goLight.graphics.beginFill(0x00CC00); goLight.graphics.drawCircle(145,210,25); goLight.graphics.endFill();
+var goLight:Shape = new Shape();
+goLight.graphics.lineStyle();
+goLight.graphics.beginFill(0x00CC00);
+goLight.graphics.drawCircle(145,210,25);
+goLight.graphics.endFill();
 
-// Add the graphics to the display list. addChild(box);
+// Add the graphics to the display list.
+addChild(box);
 
-addChild(stopLight); addChild(cautionLight); addChild(goLight);
+addChild(stopLight);
+addChild(cautionLight);
+addChild(goLight);
 
 // Apply a gradient bevel to the traffic light rectangle.
 
@@ -295,9 +376,11 @@ var greenGlow:GlowFilter = new GlowFilter(0x00CC00, 1, 30, 30, 1, 1, false, fals
 
 // Set the starting state of the lights (green on, red/yellow off). stopLight.filters = [innerShadow];
 
-cautionLight.filters = [innerShadow]; goLight.filters = [greenGlow];
+cautionLight.filters = [innerShadow];
+goLight.filters = [greenGlow];
 
-// Swap the filters based on the count value. function trafficControl(event:TimerEvent):void
+// Swap the filters based on the count value.
+function trafficControl(event:TimerEvent):void
 
 {
 
@@ -315,15 +398,23 @@ switch (count)
 
 case 1:
 
-stopLight.filters = [innerShadow]; cautionLight.filters = [yellowGlow]; goLight.filters = [innerShadow]; break;
+stopLight.filters = [innerShadow];
+cautionLight.filters = [yellowGlow];
+goLight.filters = [innerShadow];
+break;
 
 case 2:
 
-stopLight.filters = [redGlow]; cautionLight.filters = [innerShadow]; goLight.filters = [innerShadow]; break;
+stopLight.filters = [redGlow];
+cautionLight.filters = [innerShadow];
+goLight.filters = [innerShadow];
+break;
 
 case 3:
 
-stopLight.filters = [innerShadow]; cautionLight.filters = [innerShadow]; goLight.filters = [greenGlow];
+stopLight.filters = [innerShadow];
+cautionLight.filters = [innerShadow];
+goLight.filters = [greenGlow];
 
 break;
 
@@ -333,7 +424,10 @@ count++;
 
 }
 
-// Create a timer to swap the filters at a 3 second interval. var timer:Timer = new Timer(3000, 9); timer.addEventListener(TimerEvent.TIMER, trafficControl); timer.start();
+// Create a timer to swap the filters at a 3 second interval.
+var timer:Timer = new Timer(3000, 9);
+timer.addEventListener(TimerEvent.TIMER, trafficControl);
+timer.start();
 
 ## Color matrix filter {#color-matrix-filter}
 
@@ -378,7 +472,8 @@ In Haxe, you create the matrix as a combination of an Array instance containing 
 
 // Load an image onto the Stage. var loader:Loader = new Loader();
 
-var url:URLRequest = new [URLRequest(&quot;http://www.helpexamples.com/flash/images/image1.jpg&quot;);](http://www.helpexamples.com/flash/images/image1.jpg) loader.load(url);
+var url:URLRequest = new URLRequest("http://www.helpexamples.com/flash/images/image1.jpg");
+loader.load(url);
 
 this.addChild(loader);
 
@@ -457,15 +552,20 @@ The location and amount of displacement applied to a given pixel is determined b
 
 To understand how the displacement map filter works, consider a basic example. In the following code, an image is loaded, and when it finishes loading it is centered on the Stage and a displacement map filter is applied to it, causing the pixels in the entire image to shift horizontally to the left.
 
-import openfl.display.BitmapData; import openfl.display.Loader; import openfl.events.MouseEvent;
+import openfl.display.BitmapData;
+import openfl.display.Loader;
+import openfl.events.MouseEvent;
 
-import openfl.filters.DisplacementMapFilter; import openfl.geom.Point;
+import openfl.filters.DisplacementMapFilter;
+import openfl.geom.Point;
 
 import openfl.net.URLRequest;
 
-// Load an image onto the Stage. var loader:Loader = new Loader();
+// Load an image onto the Stage.
+var loader:Loader = new Loader();
 
-var url:URLRequest = new [URLRequest(&quot;http://www.helpexamples.com/flash/images/image3.jpg&quot;);](http://www.helpexamples.com/flash/images/image3.jpg) loader.load(url);
+var url:URLRequest = new URLRequest("http://www.helpexamples.com/flash/images/image3.jpg");
+loader.load(url);
 
 this.addChild(loader);
 
@@ -517,15 +617,22 @@ displacementMap.mode = DisplacementMapFilterMode.CLAMP;
 
 For a more complex example, the following listing uses a displacement map filter to create a magnifying glass effect on an image:
 
-import openfl.display.Bitmap; import openfl.display.BitmapData;
+import openfl.display.Bitmap;
+import openfl.display.BitmapData;
 
-import openfl.display.BitmapDataChannel; import openfl.display.GradientType; import openfl.display.Loader;
+import openfl.display.BitmapDataChannel;
+import openfl.display.GradientType;
+import openfl.display.Loader;
 
-import openfl.display.Shape; import openfl.events.MouseEvent;
+import openfl.display.Shape;
+import openfl.events.MouseEvent;
 
-import openfl.filters.DisplacementMapFilter; import openfl.filters.DisplacementMapFilterMode; import openfl.geom.Matrix;
+import openfl.filters.DisplacementMapFilter;
+import openfl.filters.DisplacementMapFilterMode;
+import openfl.geom.Matrix;
 
-import openfl.geom.Point; import openfl.net.URLRequest;
+import openfl.geom.Point;
+import openfl.net.URLRequest;
 
 // Create the gradient circles that will together form the
 
@@ -533,31 +640,43 @@ import openfl.geom.Point; import openfl.net.URLRequest;
 
 var type:String = GradientType.LINEAR;
 
-var redColors:Array = [0xFF0000, 0x000000]; var blueColors:Array = [0x0000FF, 0x000000]; var alphas:Array = [1, 1];
+var redColors:Array = [0xFF0000, 0x000000];
+var blueColors:Array = [0x0000FF, 0x000000];
+var alphas:Array = [1, 1];
 
 var ratios:Array = [0, 255];
 
-var xMatrix:Matrix = new Matrix(); xMatrix.createGradientBox(radius * 2, radius * 2); var yMatrix:Matrix = new Matrix();
+var xMatrix:Matrix = new Matrix();
+xMatrix.createGradientBox(radius * 2, radius * 2);
+var yMatrix:Matrix = new Matrix();
 
 yMatrix.createGradientBox(radius * 2, radius * 2, Math.PI / 2);
 
-var xCircle:Shape = new Shape(); xCircle.graphics.lineStyle(0, 0, 0);
+var xCircle:Shape = new Shape();
+xCircle.graphics.lineStyle(0, 0, 0);
 
 xCircle.graphics.beginGradientFill(type, redColors, alphas, ratios, xMatrix); xCircle.graphics.drawCircle(radius, radius, radius);
 
-var yCircle:Shape = new Shape(); yCircle.graphics.lineStyle(0, 0, 0);
+var yCircle:Shape = new Shape();
+yCircle.graphics.lineStyle(0, 0, 0);
 
-yCircle.graphics.beginGradientFill(type, blueColors, alphas, ratios, yMatrix); yCircle.graphics.drawCircle(radius, radius, radius);
+yCircle.graphics.beginGradientFill(type, blueColors, alphas, ratios, yMatrix);
+yCircle.graphics.drawCircle(radius, radius, radius);
 
-// Position the circles at the bottom of the screen, for reference. this.addChild(xCircle);
+// Position the circles at the bottom of the screen, for reference.
+this.addChild(xCircle);
 
-xCircle.y = stage.stageHeight - xCircle.height; this.addChild(yCircle);
+xCircle.y = stage.stageHeight - xCircle.height;
+this.addChild(yCircle);
 
-yCircle.y = stage.stageHeight - yCircle.height; yCircle.x = 200;
+yCircle.y = stage.stageHeight - yCircle.height;
+yCircle.x = 200;
 
-// Load an image onto the Stage. var loader:Loader = new Loader();
+// Load an image onto the Stage.
+var loader:Loader = new Loader();
 
-var url:URLRequest = new [URLRequest(&quot;http://www.helpexamples.com/flash/images/image1.jpg&quot;);](http://www.helpexamples.com/flash/images/image1.jpg) loader.load(url);
+var url:URLRequest = new URLRequest("http://www.helpexamples.com/flash/images/image1.jpg");
+loader.load(url);
 
 this.addChild(loader);
 

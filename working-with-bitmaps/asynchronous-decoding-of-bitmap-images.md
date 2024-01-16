@@ -15,9 +15,11 @@ The ImageDecodingPolicy class in the openfl.system package, allows you to specif
 
 The following code shows the usage of the ImageDecodingPolicy class:
 
-var loaderContext:LoaderContext = new LoaderContext(); loaderContext.imageDecodingPolicy = ImageDecodingPolicy.ON_LOAD var loader:Loader = new Loader();
+var loaderContext:LoaderContext = new LoaderContext();
+loaderContext.imageDecodingPolicy = ImageDecodingPolicy.ON_LOAD;
+var loader:Loader = new Loader();
 
-loader.load(new [URLRequest(&quot;http://www.adobe.com/myimage.png&quot;),](http://www.adobe.com/myimage.png) loaderContext);
+loader.load(new URLRequest("http://www.adobe.com/myimage.png"), loaderContext);
 
 You can still use ON_DEMAND decoding with Loader.load() and Loader.loadBytes() methods. However, all the other methods that take a LoaderContext object as an argument, ignore any ImageDecodingPolicy value passed.
 
@@ -27,17 +29,23 @@ package
 
 {
 
-import openfl.display.Loader; import openfl.display.Sprite; import openfl.events.Event; import openfl.net.URLRequest;
+import openfl.display.Loader;
+import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.net.URLRequest;
 
-import openfl.system.ImageDecodingPolicy; import openfl.system.LoaderContext;
+import openfl.system.ImageDecodingPolicy;
+import openfl.system.LoaderContext;
 
 public class AsyncTest extends Sprite
 
 {
 
-private var loaderContext:LoaderContext; private var loader:Loader;
+private var loaderContext:LoaderContext;
+private var loader:Loader;
 
-private var urlRequest:URLRequest; public function AsyncTest()
+private var urlRequest:URLRequest;
+public function AsyncTest()
 
 {
 
@@ -49,39 +57,45 @@ loaderContext.imageDecodingPolicy = ImageDecodingPolicy.ON_DEMAND; loader = new 
 
 loadImageSync();
 
-//Load the image asynchronously loaderContext = new LoaderContext();
+//Load the image asynchronously
+loaderContext = new LoaderContext();
 
-loaderContext.imageDecodingPolicy = ImageDecodingPolicy.ON_LOAD; loader = new Loader();
+loaderContext.imageDecodingPolicy = ImageDecodingPolicy.ON_LOAD;
+loader = new Loader();
 
 loadImageASync();
 
 }
 
-private function loadImageASync():void{ trace(&quot;Loading image asynchronously...&quot;);
+private function loadImageASync():void{
+	trace("Loading image asynchronously...");
 
-urlRequest = new [URLRequest(&quot;http://www.adobe.com/myimage.png&quot;);](http://www.adobe.com/myimage.png) urlRequest.useCache = false;
+urlRequest = new URLRequest("http://www.adobe.com/myimage.png");
+urlRequest.useCache = false;
 
-loader.load(urlRequest, loaderContext); loader.contentLoaderInfo.addEventListener
+loader.load(urlRequest, loaderContext);
 
-(Event.COMPLETE, onAsyncLoadComplete);
-
-}
-
-private function onAsyncLoadComplete(event:Event):void{ trace(&quot;Async. Image Load Complete&quot;);
+loader.contentLoaderInfo.addEventListener(Event.COMPLETE, onAsyncLoadComplete);
 
 }
 
-private function loadImageSync():void{ trace(&quot;Loading image synchronously...&quot;);
-
-urlRequest = new [URLRequest(&quot;http://www.adobe.com/myimage.png&quot;);](http://www.adobe.com/myimage.png) urlRequest.useCache = false;
-
-loader.load(urlRequest, loaderContext); loader.contentLoaderInfo.addEventListener
-
-(Event.COMPLETE, onSyncLoadComplete);
+private function onAsyncLoadComplete(event:Event):void{
+	trace("Async. Image Load Complete");
 
 }
 
-private function onSyncLoadComplete(event:Event):void{ trace(&quot;Sync. Image Load Complete&quot;);
+private function loadImageSync():void{
+trace("Loading image synchronously...");
+
+urlRequest = new URLRequest("http://www.adobe.com/myimage.png");
+urlRequest.useCache = false;
+
+loader.load(urlRequest, loaderContext);
+loader.contentLoaderInfo.addEventListener(Event.COMPLETE, onSyncLoadComplete);
+
+}
+
+private function onSyncLoadComplete(event:Event):void{ trace("Sync. Image Load Complete");
 
 }
 

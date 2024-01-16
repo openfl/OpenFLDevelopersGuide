@@ -8,7 +8,7 @@ myTextBox.type = TextFieldType.INPUT; myTextBox.background = true; myTextBox.dis
 
 The restrict property is a little more complicated since you must specify which characters the user is allowed to type in an input text field. You can allow specific letters, numbers, or ranges of letters, numbers, and characters. The following code allows the user to enter only uppercase letters (and not numbers or special characters) in the text field:
 
-myTextBox.restrict = &quot;A-Z&quot;;
+myTextBox.restrict = "A-Z";
 
 Haxe uses hyphens to define ranges, and carets to define excluded characters. For more information about defining what is restricted in an input text field, see the [openfl.text.TextField.restrict property entry in the OpenFL API Reference](https://api.openfl.org/openfl/text/TextField.html#restrict).
 

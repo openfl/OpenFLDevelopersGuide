@@ -14,7 +14,7 @@ if (result != null)
 
 {
 
-trace(&quot;input: &quot; + result.input); trace(&quot;platform: &quot; + result[1]); trace(&quot;majorVersion: &quot; + result[2]); trace(&quot;minorVersion: &quot; + result[3]); trace(&quot;buildNumber: &quot; + result[4]); trace(&quot;internalBuildNumber: &quot; + result[5]);
+trace("input: " + result.input); trace("platform: " + result[1]); trace("majorVersion: " + result[2]); trace("minorVersion: " + result[3]); trace("buildNumber: " + result[4]); trace("internalBuildNumber: " + result[5]);
 
 }
 
@@ -22,13 +22,13 @@ else
 
 {
 
-trace(&quot;Unable to match RegExp.&quot;);
+trace("Unable to match RegExp.");
 
 }
 
 If you want to send the user’s system capabilities to a server-side script so that the information can be stored in a database, you can use the following Haxe code:
 
-var url:String = &quot;log_visitor.cfm&quot;;
+var url:String = "log_visitor.cfm";
 
 var request:URLRequest = new URLRequest(url); request.method = URLRequestMethod.POST;
 

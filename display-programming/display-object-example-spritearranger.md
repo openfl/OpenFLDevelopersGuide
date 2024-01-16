@@ -138,15 +138,15 @@ var newShape:GeometricSprite; switch (shapeName)
 
 {
 
-case &quot;Triangle&quot;:
+case "Triangle":
 
 newShape = new TriangleSprite(len); break;
 
-case &quot;Square&quot;:
+case "Square":
 
 newShape = new SquareSprite(len); break;
 
-case &quot;Circle&quot;:
+case "Circle":
 
 newShape = new CircleSprite(len); break;
 
@@ -174,7 +174,7 @@ public override function toString():String
 
 {
 
-return this.shapeType + &quot; of size &quot; + this.size + &quot; at &quot; + this.x + &quot;, &quot; + this.y;
+return this.shapeType + " of size " + this.size + " at " + this.x + ", " + this.y;
 
 }
 
@@ -184,7 +184,7 @@ Circle of size 50 at 0, 0
 
 The describeChildren() method of the DrawingCanvas class loops through the canvas’s child list, using the numChildren property (inherited from the DisplayObjectContainer class) to set the limit of the for loop. It generates a string listing each child, as follows:
 
-var desc:String = &quot;&quot;; var child:DisplayObject;
+var desc:String = ""; var child:DisplayObject;
 
 for (var i:int=0; i &lt; this.numChildren; i++)
 
@@ -192,7 +192,7 @@ for (var i:int=0; i &lt; this.numChildren; i++)
 
 child = this.getChildAt(i);
 
-desc += i + &quot;: &quot; + child + &#039;\n&#039;;
+desc += i + ": " + child + '\n';
 
 }
 

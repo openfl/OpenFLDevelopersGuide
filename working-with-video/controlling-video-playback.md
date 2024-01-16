@@ -18,7 +18,7 @@ The following example demonstrates how to control a video using several differen
 
 var nc:NetConnection = new NetConnection(); nc.connect(null);
 
-var ns:NetStream = new NetStream(nc); ns.addEventListener(AsyncErrorEvent.ASYNC_ERROR, asyncErrorHandler); ns.play(&quot;video.flv&quot;);
+var ns:NetStream = new NetStream(nc); ns.addEventListener(AsyncErrorEvent.ASYNC_ERROR, asyncErrorHandler); ns.play("video.flv");
 
 function asyncErrorHandler(event:AsyncErrorEvent):void
 
@@ -96,13 +96,13 @@ switch (event.info.code)
 
 {
 
-case &quot;NetStream.Play.Start&quot;:
+case "NetStream.Play.Start":
 
-trace(&quot;Start [&quot; + ns.time.toFixed(3) + &quot; seconds]&quot;); break;
+trace("Start [" + ns.time.toFixed(3) + " seconds]"); break;
 
-case &quot;NetStream.Play.Stop&quot;:
+case "NetStream.Play.Stop":
 
-trace(&quot;Stop [&quot; + ns.time.toFixed(3) + &quot; seconds]&quot;); break;
+trace("Stop [" + ns.time.toFixed(3) + " seconds]"); break;
 
 }
 

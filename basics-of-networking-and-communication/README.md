@@ -118,39 +118,39 @@ if( interfaces != null )
 
 {
 
-trace( &quot;Interface count: &quot; + interfaces.length );
+trace( "Interface count: " + interfaces.length );
 
 for each ( var interfaceObj:NetworkInterface in interfaces )
 
 {
 
-trace( &quot;\nname: &quot; + interfaceObj.name );
+trace( "\nname: " + interfaceObj.name );
 
-trace( &quot;display name: &quot; + interfaceObj.displayName ); trace( &quot;mtu: &quot; + interfaceObj.mtu );
+trace( "display name: " + interfaceObj.displayName ); trace( "mtu: " + interfaceObj.mtu );
 
-trace( &quot;active?: &quot; + interfaceObj.active );
+trace( "active?: " + interfaceObj.active );
 
-trace( &quot;parent interface: &quot; + interfaceObj.parent );
+trace( "parent interface: " + interfaceObj.parent );
 
-trace( &quot;hardware address: &quot; + interfaceObj.hardwareAddress ); if( interfaceObj.subInterfaces != null )
+trace( "hardware address: " + interfaceObj.hardwareAddress ); if( interfaceObj.subInterfaces != null )
 
 {
 
-trace( &quot;# subinterfaces: &quot; + interfaceObj.subInterfaces.length );
+trace( "# subinterfaces: " + interfaceObj.subInterfaces.length );
 
 }
 
-trace(&quot;# addresses: &quot; + interfaceObj.addresses.length );
+trace("# addresses: " + interfaceObj.addresses.length );
 
 for each ( var address:InterfaceAddress in interfaceObj.addresses )
 
 {
 
-trace( &quot; type: &quot; + address.ipVersion ); trace( &quot; address: &quot; + address.address );
+trace( " type: " + address.ipVersion ); trace( " address: " + address.address );
 
-trace( &quot; broadcast: &quot; + address.broadcast );
+trace( " broadcast: " + address.broadcast );
 
-trace( &quot; prefix length: &quot; + address.prefixLength );
+trace( " prefix length: " + address.prefixLength );
 
 }
 

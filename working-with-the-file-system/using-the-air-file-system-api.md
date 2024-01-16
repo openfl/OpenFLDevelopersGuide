@@ -63,7 +63,7 @@ Adobe AIR 1.0 and later
 
 You can use the File class for the following:
 
-*   Getting the path to special directories, including the user directory, the user&#039;s documents directory, the directory from which the application was launched, and the application directory
+*   Getting the path to special directories, including the user directory, the user's documents directory, the directory from which the application was launched, and the application directory
 *   Coping files and directories
 *   Moving files and directories
 *   Deleting files and directories (or moving them to the trash)
@@ -82,8 +82,8 @@ Each File object has two properties that each define its path:
 
 | **Property** | **Description** |
 | --- | --- |
-| nativePath | Specifies the platform-specific path to a file. For example, on Windows a path might be &quot;c:\Sample directory\test.txt&quot; whereas on Mac OS it could be &quot;/Sample directory/test.txt&quot;. A nativePath property uses the backslash (\) character as the directory separator character on Windows, and it uses the forward slash (/) character on Mac OS and Linux. |
-| url | This may use the file URL scheme to point to a file. For example, on Windows a path might be &quot;file:///c:/Sample%20directory/test.txt&quot; whereas on Mac OS it could be &quot;file:///Sample%20directory/test.txt&quot;. The runtime includes other special URL schemes besides file and are described in
+| nativePath | Specifies the platform-specific path to a file. For example, on Windows a path might be "c:\Sample directory\test.txt" whereas on Mac OS it could be "/Sample directory/test.txt". A nativePath property uses the backslash (\) character as the directory separator character on Windows, and it uses the forward slash (/) character on Mac OS and Linux. |
+| url | This may use the file URL scheme to point to a file. For example, on Windows a path might be "file:///c:/Sample%20directory/test.txt" whereas on Mac OS it could be "file:///Sample%20directory/test.txt". The runtime includes other special URL schemes besides file and are described in
 
 "Supported AIR URL schemes" on page 677
 
@@ -106,7 +106,7 @@ _File.documentsDirectory, File.desktopDirectory, and File.userDirectory can refe
 
 These properties have different values on different operating systems. For example, Mac and Windows each have a different native path to the user’s desktop directory. However, the File.desktopDirectory property points to an appropriate directory path on every platform. To write applications that work well across platforms, use these properties as the basis for referencing other directories and files used by the application. Then use the resolvePath() method to refine the path. For example, this code points to the preferences.xml file in the application storage directory:
 
-var prefsFile:File = File.applicationStorageDirectory; prefsFile = prefsFile.resolvePath(&quot;preferences.xml&quot;);
+var prefsFile:File = File.applicationStorageDirectory; prefsFile = prefsFile.resolvePath("preferences.xml");
 
 Although the File class lets you point to a specific file path, doing so can lead to applications that do not work across platforms. For example, the path C:\Documents and Settings\joe\ only works on Windows. For these reasons, it is best to use the static properties of the File class, such as File.documentsDirectory.
 
@@ -166,15 +166,15 @@ Pointing to the user’s home directory
 
 You can point a File object to the user’s home directory. The following code sets a File object to point to an AIR Test subdirectory of the home directory:
 
-var file:File = File.userDirectory.resolvePath(&quot;AIR Test&quot;);
+var file:File = File.userDirectory.resolvePath("AIR Test");
 
 Pointing to the user’s documents directory
 
 **Adobe AIR 1.0 and later**
 
-You can point a File object to the user&#039;s documents directory. The following code sets a File object to point to an AIR Test subdirectory of the documents directory:
+You can point a File object to the user's documents directory. The following code sets a File object to point to an AIR Test subdirectory of the documents directory:
 
-var file:File = File.documentsDirectory.resolvePath(&quot;AIR Test&quot;);
+var file:File = File.documentsDirectory.resolvePath("AIR Test");
 
 Pointing to the desktop directory
 
@@ -182,7 +182,7 @@ Pointing to the desktop directory
 
 You can point a File object to the desktop. The following code sets a File object to point to an AIR Test subdirectory of the desktop:
 
-var file:File = File.desktopDirectory.resolvePath(&quot;AIR Test&quot;);
+var file:File = File.desktopDirectory.resolvePath("AIR Test");
 
 Pointing to the application storage directory
 
@@ -190,7 +190,7 @@ Pointing to the application storage directory
 
 You can point a File object to the application storage directory. For every AIR application, there is a unique associated path that defines the application storage directory. This directory is unique to each application and user. You can use this directory to store user-specific, application-specific data (such as user data or preferences files). For example, the following code points a File object to a preferences file, prefs.xml, contained in the application storage directory:
 
-var file:File = File.applicationStorageDirectory; file = file.resolvePath(&quot;prefs.xml&quot;);
+var file:File = File.applicationStorageDirectory; file = file.resolvePath("prefs.xml");
 
 The application storage directory location is typically based on the user name and the application ID. The following file system locations are given here to help you debug your application. You should always use the File.applicationStorage property or app-storage: URI scheme to resolve files in this directory:
 
@@ -238,7 +238,7 @@ The URL (and url property) for a File object created with File.applicationStorag
 
 ), as in the following:
 
-var dir:File = File.applicationStorageDirectory; dir = dir.resolvePath(&quot;preferences&quot;); trace(dir.url); // app-storage:/preferences
+var dir:File = File.applicationStorageDirectory; dir = dir.resolvePath("preferences"); trace(dir.url); // app-storage:/preferences
 
 Pointing to the application directory
 
@@ -246,7 +246,7 @@ Pointing to the application directory
 
 You can point a File object to the directory in which the application was installed, known as the application directory. You can reference this directory using the File.applicationDirectory property. You can use this directory to examine the application descriptor file or other resources installed with the application. For example, the following code points a File object to a directory named _images_ in the application directory:
 
-var dir:File = File.applicationDirectory; dir = dir.resolvePath(&quot;images&quot;);
+var dir:File = File.applicationDirectory; dir = dir.resolvePath("images");
 
 The URL (and url property) for a File object created with File.applicationDirectory uses the app URL scheme (see
 
@@ -254,7 +254,7 @@ The URL (and url property) for a File object created with File.applicationDirect
 
 ), as in the following:
 
-var dir:File = File.applicationDirectory; dir = dir.resolvePath(&quot;images&quot;); trace(dir.url); // app:/images
+var dir:File = File.applicationDirectory; dir = dir.resolvePath("images"); trace(dir.url); // app:/images
 
 **_Note:_** _On Android, the files in the application package are not accessible via the nativePath. The nativePath property is an empty string. Always use the URL to access files in the application directory rather than a native path._
 
@@ -274,7 +274,7 @@ Pointing to the file system root
 
 **Adobe AIR 1.0 and later**
 
-The File.getRootDirectories() method lists all root volumes, such as C: and mounted volumes, on a Windows computer. On Mac OS and Linux, this method always returns the unique root directory for the machine (the &quot;/&quot; directory). The StorageVolumeInfo.getStorageVolumes() method provides more detailed information on mounted storage volumes (see
+The File.getRootDirectories() method lists all root volumes, such as C: and mounted volumes, on a Windows computer. On Mac OS and Linux, this method always returns the unique root directory for the machine (the "/" directory). The StorageVolumeInfo.getStorageVolumes() method provides more detailed information on mounted storage volumes (see
 
 "Working with storage volumes" on page 687
 
@@ -288,7 +288,7 @@ Pointing to an explicit directory
 
 You can point the File object to an explicit directory by setting the nativePath property of the File object, as in the following example (on Windows):
 
-var file:File = new File(); file.nativePath = &quot;C:\\AIR Test&quot;;
+var file:File = new File(); file.nativePath = "C:\\AIR Test";
 
 **Important:** Pointing to an explicit path this way can lead to code that does not work across platforms. For example, the previous example only works on Windows. You can use the static properties of the File object, such as File.applicationStorageDirectory, to locate a directory that works cross-platform. Then use the resolvePath() method (see the next section) to navigate to a relative path.
 
@@ -296,13 +296,13 @@ Navigating to relative paths
 
 **Adobe AIR 1.0 and later**
 
-You can use the resolvePath() method to obtain a path relative to another given path. For example, the following code sets a File object to point to an &quot;AIR Test&quot; subdirectory of the user&#039;s home directory:
+You can use the resolvePath() method to obtain a path relative to another given path. For example, the following code sets a File object to point to an "AIR Test" subdirectory of the user's home directory:
 
-var file:File = File.userDirectory; file = file.resolvePath(&quot;AIR Test&quot;);
+var file:File = File.userDirectory; file = file.resolvePath("AIR Test");
 
 You can also use the url property of a File object to point it to a directory based on a URL string, as in the following:
 
-var urlStr:String = &quot;file:///C:/AIR Test/&quot;; var file:File = new File()
+var urlStr:String = "file:///C:/AIR Test/"; var file:File = new File()
 
 file.url = urlStr;
 
@@ -320,7 +320,7 @@ The File class includes the browseForDirectory() method, which presents a system
 
 For example, the following code lets the user select a directory and outputs the directory path upon selection:
 
-var file:File = new File(); file.addEventListener(Event.SELECT, dirSelected); file.browseForDirectory(&quot;Select a directory&quot;); function dirSelected(e:Event):void {
+var file:File = new File(); file.addEventListener(Event.SELECT, dirSelected); file.browseForDirectory("Select a directory"); function dirSelected(e:Event):void {
 
 trace(file.nativePath);
 
@@ -358,27 +358,27 @@ Pointing to an explicit file path
 
 You can use the url property of a File object to point it to a file or directory based on a URL string, as in the following:
 
-var urlStr:String = &quot;file:///C:/AIR Test/test.txt&quot;; var file:File = new File()
+var urlStr:String = "file:///C:/AIR Test/test.txt"; var file:File = new File()
 
 file.url = urlStr;
 
 You can also pass the URL to the File() constructor function, as in the following:
 
-var urlStr:String = &quot;file:///C:/AIR Test/test.txt&quot;; var file:File = new File(urlStr);
+var urlStr:String = "file:///C:/AIR Test/test.txt"; var file:File = new File(urlStr);
 
 The url property always returns the URI-encoded version of the URL (for example, blank spaces are replaced with
 
-&quot;%20):
+"%20):
 
-file.url = &quot;file:///c:/AIR Test&quot;; trace(file.url); // file:///c:/AIR%20Test
+file.url = "file:///c:/AIR Test"; trace(file.url); // file:///c:/AIR%20Test
 
 You can also use the nativePath property of a File object to set an explicit path. For example, the following code, when run on a Windows computer, sets a File object to the test.txt file in the AIR Test subdirectory of the C: drive:
 
-var file:File = new File(); file.nativePath = &quot;C:/AIR Test/test.txt&quot;;
+var file:File = new File(); file.nativePath = "C:/AIR Test/test.txt";
 
 You can also pass this path to the File() constructor function, as in the following:
 
-var file:File = new File(&quot;C:/AIR Test/test.txt&quot;);
+var file:File = new File("C:/AIR Test/test.txt");
 
 Use the forward slash (/) character as the path delimiter for the nativePath property. On Windows, you can also use the backslash (\) character, but doing so leads to applications that do not work across platforms.
 
@@ -418,7 +418,7 @@ function selectTextFile(root:File):void
 
 {
 
-var txtFilter:FileFilter = new FileFilter(&quot;Text&quot;, &quot;*.as;*.css;*.html;*.txt;*.xml&quot;); root.browseForOpen(&quot;Open&quot;, [txtFilter]);
+var txtFilter:FileFilter = new FileFilter("Text", "*.as;*.css;*.html;*.txt;*.xml"); root.browseForOpen("Open", [txtFilter]);
 
 root.addEventListener(Event.SELECT, fileSelected);
 
@@ -444,19 +444,19 @@ You can also modify the path of an existing File object by calling the resolvePa
 
 nativePath or url property of the object, as in the following examples (on Windows):
 
-var file1:File = File.documentsDirectory; file1 = file1.resolvePath(&quot;AIR Test&quot;);
+var file1:File = File.documentsDirectory; file1 = file1.resolvePath("AIR Test");
 
 trace(file1.nativePath); // C:\Documents and Settings\userName\My Documents\AIR Test var file2:File = File.documentsDirectory;
 
-file2 = file2.resolvePath(&quot;..&quot;);
+file2 = file2.resolvePath("..");
 
 trace(file2.nativePath); // C:\Documents and Settings\userName var file3:File = File.documentsDirectory;
 
-file3.nativePath += &quot;/subdirectory&quot;;
+file3.nativePath += "/subdirectory";
 
 trace(file3.nativePath); // C:\Documents and Settings\userName\My Documents\subdirectory var file4:File = new File();
 
-file4.url = &quot;file:///c:/AIR Test/test.txt&quot;; trace(file4.nativePath); // C:\AIR Test\test.txt
+file4.url = "file:///c:/AIR Test/test.txt"; trace(file4.nativePath); // C:\AIR Test\test.txt
 
 When using the nativePath property, use the forward slash (/) character as the directory separator character. On Windows, you can use the backslash (\) character as well, but you should not do so, as it leads to code that does not work cross-platform.
 
@@ -511,17 +511,17 @@ Adobe AIR 1.0 and later
 
 You can use the getRelativePath() method to find the relative path between two files:
 
-var file1:File = File.documentsDirectory.resolvePath(&quot;AIR Test&quot;); var file2:File = File.documentsDirectory
+var file1:File = File.documentsDirectory.resolvePath("AIR Test"); var file2:File = File.documentsDirectory
 
-file2 = file2.resolvePath(&quot;AIR Test/bob/test.txt&quot;); trace(file1.getRelativePath(file2)); // bob/test.txt
+file2 = file2.resolvePath("AIR Test/bob/test.txt"); trace(file1.getRelativePath(file2)); // bob/test.txt
 
 The second parameter of the getRelativePath() method, the useDotDot parameter, allows for .. syntax to be returned in results, to indicate parent directories:
 
-var file1:File = File.documentsDirectory; file1 = file1.resolvePath(&quot;AIR Test&quot;); var file2:File = File.documentsDirectory;
+var file1:File = File.documentsDirectory; file1 = file1.resolvePath("AIR Test"); var file2:File = File.documentsDirectory;
 
-file2 = file2.resolvePath(&quot;AIR Test/bob/test.txt&quot;); var file3:File = File.documentsDirectory;
+file2 = file2.resolvePath("AIR Test/bob/test.txt"); var file3:File = File.documentsDirectory;
 
-file3 = file3.resolvePath(&quot;AIR Test/susan/test.txt&quot;);
+file3 = file3.resolvePath("AIR Test/susan/test.txt");
 
 trace(file2.getRelativePath(file1, true)); // ../.. trace(file3.getRelativePath(file2, true)); // ../../bob/test.txt
 
@@ -531,19 +531,19 @@ Adobe AIR 1.0 and later
 
 File and path names are not case sensitive on Windows and Mac OS. In the following, two File objects point to the same file:
 
-File.documentsDirectory.resolvePath(&quot;test.txt&quot;); File.documentsDirectory.resolvePath(&quot;TeSt.TxT&quot;);
+File.documentsDirectory.resolvePath("test.txt"); File.documentsDirectory.resolvePath("TeSt.TxT");
 
 However, documents and directory names do include capitalization. For example, the following assumes that there is a folder named AIR Test in the documents directory, as in the following examples:
 
-var file:File = File.documentsDirectory.resolvePath(&quot;AIR test&quot;); trace(file.nativePath); // ... AIR test
+var file:File = File.documentsDirectory.resolvePath("AIR test"); trace(file.nativePath); // ... AIR test
 
 file.canonicalize(); trace(file.nativePath); // ... AIR Test
 
 The canonicalize() method converts the nativePath object to use the correct capitalization for the file or directory name. On case sensitive file systems (such as Linux), when multiple files exists with names differing only in case, the canonicalize() method adjusts the path to match the first file found (in an order determined by the file system).
 
-You can also use the canonicalize() method to convert short file names (&quot;8.3&quot; names) to long file names on Windows, as in the following examples:
+You can also use the canonicalize() method to convert short file names ("8.3" names) to long file names on Windows, as in the following examples:
 
-var path:File = new File(); path.nativePath = &quot;C:\\AIR~1&quot;; path.canonicalize(); trace(path.nativePath); // C:\AIR Test
+var path:File = new File(); path.nativePath = "C:\\AIR~1"; path.canonicalize(); trace(path.nativePath); // C:\AIR Test
 
 Working with packages and symbolic links
 
@@ -637,7 +637,7 @@ Adobe AIR 2 and later
 
 In AIR 2, you can open a file using the application registered by the operating system to open it. For example, an AIR application can open a DOC file with the application registered to open it. Use the openWithDefaultApplication() method of a File object to open the file. For example, the following code opens a file named test.doc on the user’s desktop and opens it with the default application for DOC files:
 
-var file:File = File.deskopDirectory; file = file.resolvePath(&quot;test.doc&quot;); file.openWithDefaultApplication();
+var file:File = File.deskopDirectory; file = file.resolvePath("test.doc"); file.openWithDefaultApplication();
 
 **_Note:_** _On Linux, the file’s MIME type, not the filename extension, determines the default application for a file._
 
@@ -645,7 +645,7 @@ The following code lets the user navigate to an mp3 file and open it in the defa
 
 var file:File = File.documentsDirectory;
 
-var mp3Filter:FileFilter = new FileFilter(&quot;MP3 Files&quot;, &quot;*.mp3&quot;); file.browseForOpen(&quot;Open&quot;, [mp3Filter]); file.addEventListener(Event.SELECT, fileSelected);
+var mp3Filter:FileFilter = new FileFilter("MP3 Files", "*.mp3"); file.browseForOpen("Open", [mp3Filter]); file.addEventListener(Event.SELECT, fileSelected);
 
 function fileSelected(e:Event):void
 
@@ -670,7 +670,7 @@ The File class includes the following static properties that provide some useful
 | **Property** | **Description** |
 | --- | --- |
 | File.lineEnding | The line-ending character sequence used by the host operating system. On Mac OS and Linux, this is the line-feed character. On Windows, this is the carriage return character followed by the line-feed character. |
-| File.separator | The host operating system&#039;s path component separator character. On Mac OS and Linux, this is the forward slash (/) character. On Windows, it is the backslash (\) character. |
+| File.separator | The host operating system's path component separator character. On Mac OS and Linux, this is the forward slash (/) character. On Windows, it is the backslash (\) character. |
 | File.systemCharset | The default encoding used for files by the host operating system. This pertains to the character set used by the operating system, corresponding to its language. |
 
 The Capabilities class also includes useful system information that can be useful when working with files:
@@ -685,11 +685,11 @@ The Capabilities class also includes useful system information that can be usefu
 
 var separator:String;
 
-if (Capablities.os.indexOf(&quot;Mac&quot;) &gt; -1)
+if (Capablities.os.indexOf("Mac") &gt; -1)
 
 {
 
-separator = &quot;/&quot;;
+separator = "/";
 
 }
 
@@ -697,7 +697,7 @@ else
 
 {
 
-separator = &quot;\\&quot;;
+separator = "\\";
 
 }
 
@@ -719,9 +719,9 @@ For details on creating File objects that point to directories, see
 
 Adobe AIR 1.0 and later
 
-The File.createDirectory() method lets you create a directory. For example, the following code creates a directory named AIR Test as a subdirectory of the user&#039;s home directory:
+The File.createDirectory() method lets you create a directory. For example, the following code creates a directory named AIR Test as a subdirectory of the user's home directory:
 
-var dir:File = File.userDirectory.resolvePath(&quot;AIR Test&quot;); dir.createDirectory();
+var dir:File = File.userDirectory.resolvePath("AIR Test"); dir.createDirectory();
 
 If the directory exists, the createDirectory() method does nothing.
 
@@ -753,7 +753,7 @@ Adobe AIR 1.0 and later
 
 You can use the getDirectoryListing() method or the getDirectoryListingAsync() method of a File object to get an array of File objects pointing to files and subfolders in a directory.
 
-For example, the following code lists the contents of the user&#039;s documents directory (without examining subdirectories):
+For example, the following code lists the contents of the user's documents directory (without examining subdirectories):
 
 var directory:File = File.documentsDirectory;
 
@@ -791,9 +791,9 @@ Adobe AIR 1.0 and later
 
 You can copy or move a directory, using the same methods as you would to copy or move a file. For example, the following code copies a directory synchronously:
 
-var sourceDir:File = File.documentsDirectory.resolvePath(&quot;AIR Test&quot;);
+var sourceDir:File = File.documentsDirectory.resolvePath("AIR Test");
 
-var resultDir:File = File.documentsDirectory.resolvePath(&quot;AIR Test Copy&quot;); sourceDir.copyTo(resultDir);
+var resultDir:File = File.documentsDirectory.resolvePath("AIR Test Copy"); sourceDir.copyTo(resultDir);
 
 When you specify true for the overwrite parameter of the copyTo() method, all files and folders in an existing target directory are deleted and replaced with the files and folders in the source directory (even if the target file does not exist in the source directory).
 
@@ -817,15 +817,16 @@ page 667
 
 ). Both methods include a deleteDirectoryContents parameter (which takes a Boolean value); when this parameter is set to true (the default value is false) the call to the method deletes non-empty directories; otherwise, only empty directories are deleted.
 
-For example, the following code synchronously deletes the AIR Test subdirectory of the user&#039;s documents directory:
+For example, the following code synchronously deletes the AIR Test subdirectory of the user's documents directory:
 
-var directory:File = File.documentsDirectory.resolvePath(&quot;AIR Test&quot;); directory.deleteDirectory(true);
+var directory:File = File.documentsDirectory.resolvePath("AIR Test"); directory.deleteDirectory(true);
 
-The following code asynchronously deletes the AIR Test subdirectory of the user&#039;s documents directory:
+The following code asynchronously deletes the AIR Test subdirectory of the user's documents directory:
 
-var directory:File = File.documentsDirectory.resolvePath(&quot;AIR Test&quot;); directory.addEventListener(Event.COMPLETE, completeHandler) directory.deleteDirectoryAsync(true);
+var directory:File = File.documentsDirectory.resolvePath("AIR Test"); directory.addEventListener(Event.COMPLETE, completeHandler) directory.deleteDirectoryAsync(true);
 
-function completeHandler(event:Event):void { trace(&quot;Deleted.&quot;)
+function completeHandler(event:Event):void {
+	trace("Deleted.")
 
 }
 
@@ -845,7 +846,7 @@ Using the AIR file API, you can add basic file interaction capabilities to your 
 
 security" on page 1076
 
-, if you haven&#039;t already done so.
+, if you haven't already done so.
 
 **_Note:_** _You can associate a file type with an AIR application (so that double-clicking it opens the application). For details, see_
 
@@ -865,7 +866,7 @@ The File class includes the following properties that provide information about 
 | creator | Obsolete—use the extension property. (This property reports the Macintosh creator type of the file, which is only used in Mac OS versions prior to Mac OS X.) |
 | downloaded | (AIR 2 and later) Indicates whether the referenced file or directory was downloaded (from the internet) or not. property is only meaningful on operating systems in which files can be flagged as downloaded: |
 | exists | Whether the referenced file or directory exists. |
-| extension | The file extension, which is the part of the name following (and not including) the final dot (&quot;.&quot;). If there is no dot in the filename, the extension is null. |
+| extension | The file extension, which is the part of the name following (and not including) the final dot ("."). If there is no dot in the filename, the extension is null. |
 | icon | An Icon object containing the icons defined for the file. |
 | isDirectory | Whether the File object reference is to a directory. |
 | modificationDate | The date that the file or directory on the local disk was last modified. |
@@ -900,9 +901,9 @@ file basics" on page 667
 
 To copy or move a file, you set up two File objects. One points to the file to copy or move, and it is the object that calls the copy or move method; the other points to the destination (result) path.
 
-The following copies a test.txt file from the AIR Test subdirectory of the user&#039;s documents directory to a file named copy.txt in the same directory:
+The following copies a test.txt file from the AIR Test subdirectory of the user's documents directory to a file named copy.txt in the same directory:
 
-var original:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var newFile:File = File.resolvePath(&quot;AIR Test/copy.txt&quot;); original.copyTo(newFile, true);
+var original:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var newFile:File = File.resolvePath("AIR Test/copy.txt"); original.copyTo(newFile, true);
 
 In this example, the value of overwrite parameter of the copyTo() method (the second parameter) is set to true. By setting overwrite to true, an existing target file is overwritten. This parameter is optional. If you set it to false (the default value), the operation dispatches an IOErrorEvent event if the target file exists (and the file is not copied).
 
@@ -910,19 +911,21 @@ The "Async" versions of the copy and move methods work asynchronously. Use the a
 
 var original = File.documentsDirectory;
 
-original = original.resolvePath(&quot;AIR Test/test.txt&quot;);
+original = original.resolvePath("AIR Test/test.txt");
 
 var destination:File = File.documentsDirectory;
 
-destination = destination.resolvePath(&quot;AIR Test 2/copy.txt&quot;);
+destination = destination.resolvePath("AIR Test 2/copy.txt");
 
 original.addEventListener(Event.COMPLETE, fileMoveCompleteHandler); original.addEventListener(IOErrorEvent.IO_ERROR, fileMoveIOErrorEventHandler); original.moveToAsync(destination);
 
-function fileMoveCompleteHandler(event:Event):void { trace(event.target); // [object File]
+function fileMoveCompleteHandler(event:Event):void {
+	trace(event.target); // [object File]
 
 }
 
-function fileMoveIOErrorEventHandler(event:IOErrorEvent):void { trace(&quot;I/O Error.&quot;);
+function fileMoveIOErrorEventHandler(event:IOErrorEvent):void {
+	trace("I/O Error.");
 
 }
 
@@ -938,15 +941,16 @@ The File class includes a deleteFile() method and a deleteFileAsync() method. Th
 
 ).
 
-For example, the following code synchronously deletes the test.txt file in the user&#039;s documents directory:
+For example, the following code synchronously deletes the test.txt file in the user's documents directory:
 
-var file:File = File.documentsDirectory.resolvePath(&quot;test.txt&quot;); file.deleteFile();
+var file:File = File.documentsDirectory.resolvePath("test.txt"); file.deleteFile();
 
-The following code asynchronously deletes the test.txt file of the user&#039;s documents directory:
+The following code asynchronously deletes the test.txt file of the user's documents directory:
 
-var file:File = File.documentsDirectory.resolvePath(&quot;test.txt&quot;); file.addEventListener(Event.COMPLETE, completeHandler) file.deleteFileAsync();
+var file:File = File.documentsDirectory.resolvePath("test.txt"); file.addEventListener(Event.COMPLETE, completeHandler) file.deleteFileAsync();
 
-function completeHandler(event:Event):void { trace(&quot;Deleted.&quot;)
+function completeHandler(event:Event):void {
+	trace("Deleted.")
 
 }
 
@@ -968,9 +972,9 @@ basics" on page 667
 
 ).
 
-For example, the following code synchronously moves the test.txt file in the user&#039;s documents directory to the System trash:
+For example, the following code synchronously moves the test.txt file in the user's documents directory to the System trash:
 
-var file:File = File.documentsDirectory.resolvePath(&quot;test.txt&quot;); file.moveToTrash();
+var file:File = File.documentsDirectory.resolvePath("test.txt"); file.moveToTrash();
 
 **_Note:_** _On operating systems that do not support the concept of a recoverable trash folder, the files are removed immediately._
 
@@ -1001,7 +1005,7 @@ _storageVolumeUnmount events for physical devices and network drives mounted at 
 The storageVolume property of the StorageVolumeChangeEvent class is a StorageVolume object. The StorageVolume class defines basic properties of the storage volume:
 
 *   drive—The volume drive letter on Windows (null on other operating systems)
-*   fileSystemType—The type of file system on the storage volume (such as &quot;FAT&quot;, &quot;NTFS&quot;, &quot;HFS&quot;, or &quot;UFS&quot;)
+*   fileSystemType—The type of file system on the storage volume (such as "FAT", "NTFS", "HFS", or "UFS")
 *   isRemoveable—Whether a volume is removable (true) or not (false)
 *   isWritable—Whether a volume is writable (true) or not (false)
 *   name—The name of the volume
@@ -1081,7 +1085,7 @@ The File object represents the path of the file that you want to work with (or a
 
 var file:File = File.documentsDirectory;
 
-file = file.resolvePath(&quot;AIR Test/testFile.txt&quot;);
+file = file.resolvePath("AIR Test/testFile.txt");
 
 This example uses the File.documentsDirectory property and the resolvePath() method of a File object to initialize the File object. However, there are many other ways to point a File object to a file. For more information, see
 
@@ -1109,7 +1113,7 @@ For details, see ["Asynchronous programming and the events generated by a FileSt
 
 Include code for reading and writing data, as needed.
 
-There are many methods of the FileStream class related to reading and writing. (They each begin with &quot;read&quot; or &quot;write&quot;.) The method you choose to use to read or write data depends on the format of the data in the target file.
+There are many methods of the FileStream class related to reading and writing. (They each begin with "read" or "write".) The method you choose to use to read or write data depends on the format of the data in the target file.
 
 For example, if the data in the target file is UTF-encoded text, you may use the readUTFBytes() and writeUTFBytes() methods. If you want to deal with the data as byte arrays, you may use the readByte(), readBytes(), writeByte(), and writeBytes() methods. For details, see ["Data formats, and choosing the read and](#696154181379824-_bookmark426) [write methods to use" on page 695](#696154181379824-_bookmark426).
 
@@ -1170,7 +1174,7 @@ Initializing a FileStream object, and opening and closing files
 
 When you open a FileStream object, you make it available to read and write data to a file. You open a FileStream object by passing a File object to the open() or openAsync() method of the FileStream object:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream();
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream();
 
 myFileStream.open(myFile, FileMode.READ);
 
@@ -1178,7 +1182,7 @@ The fileMode parameter (the second parameter of the open() and openAsync() metho
 
 If you use the openAsync() method to open the file for asynchronous file operations, set up event listeners to handle the asynchronous events:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completeHandler); myFileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler); myFileStream.addEventListener(IOErrorEvent.IO_Error, errorHandler); myFileStream.openAsync(myFile, FileMode.READ);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completeHandler); myFileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler); myFileStream.addEventListener(IOErrorEvent.IO_Error, errorHandler); myFileStream.openAsync(myFile, FileMode.READ);
 
 function completeHandler(event:Event):void {
 
@@ -1218,11 +1222,11 @@ The position property of a FileStream object determines where data is read or wr
 
 Before a read or write operation, set the position property to any valid position in the file.
 
-For example, the following code writes the string &quot;hello&quot; (in UTF encoding) at position 8 in the file:
+For example, the following code writes the string "hello" (in UTF encoding) at position 8 in the file:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream();
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream();
 
-myFileStream.open(myFile, FileMode.UPDATE); myFileStream.position = 8; myFileStream.writeUTFBytes(&quot;hello&quot;);
+myFileStream.open(myFile, FileMode.UPDATE); myFileStream.position = 8; myFileStream.writeUTFBytes("hello");
 
 When you first open a FileStream object, the position property is set to 0.
 
@@ -1236,7 +1240,7 @@ The value of the position property is modified only in the following conditions:
 
 When you call a read or write method of a FileStream object, the position property is immediately incremented by the number of bytes that you read or write. Depending on the read method you use, the position property is either incremented by the number of bytes you specify to read or by the number of bytes available. When you call a read or write method subsequently, it reads or writes starting at the new position.
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream();
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream();
 
 myFileStream.open(myFile, FileMode.UPDATE); myFileStream.position = 4000;
 
@@ -1250,17 +1254,17 @@ There is, however, one exception: for a FileStream opened in append mode, the po
 
 For a file opened for asynchronous operations, the write operation does not complete before the next line of code is executed. However, you can call multiple asynchronous methods sequentially, and the runtime executes them in order:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.openAsync(myFile, FileMode.WRITE); myFileStream.writeUTFBytes(&quot;hello&quot;);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.openAsync(myFile, FileMode.WRITE); myFileStream.writeUTFBytes("hello");
 
-myFileStream.writeUTFBytes(&quot;world&quot;); myFileStream.addEventListener(Event.CLOSE, closeHandler); myFileStream.close();
+myFileStream.writeUTFBytes("world"); myFileStream.addEventListener(Event.CLOSE, closeHandler); myFileStream.close();
 
-trace(&quot;started.&quot;);
+trace("started.");
 
 closeHandler(event:Event):void
 
 {
 
-trace(&quot;finished.&quot;);
+trace("finished.");
 
 }
 
@@ -1270,7 +1274,7 @@ started. finished.
 
 You _can_ specify the position value immediately after you call a read or write method (or at any time), and the next read or write operation will take place starting at that position. For example, note that the following code sets the position property right after a call to the writeBytes() operation, and the position is set to that value (300) even after the write operation completes:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.openAsync(myFile, FileMode.UPDATE);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.openAsync(myFile, FileMode.UPDATE);
 
 myFileStream.position = 4000;
 
@@ -1290,7 +1294,7 @@ When a FileStream object with read capabilities (one in which the fileMode param
 
 For a file opened for synchronous operations (using the open() method), you can always set the position pointer to any valid position (within the bounds of the file) and begin reading any amount of data (within the bounds of the file), as shown in the following code (which assumes that the file contains at least 100 bytes):
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream();
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream();
 
 myFileStream.open(myFile, FileMode.READ); myFileStream.position = 10;
 
@@ -1300,7 +1304,7 @@ myFileStream.position = 89;
 
 myFileStream.readBytes(myByteArray, 0, 10);
 
-Whether a file is opened for synchronous or asynchronous operations, the read methods always read from the &quot;available&quot; bytes, represented by the bytesAvalable property. When reading synchronously, all of the bytes of the file are available all of the time. When reading asynchronously, the bytes become available starting at the position specified by the position property, in a series of asynchronous buffer fills signaled by progress events.
+Whether a file is opened for synchronous or asynchronous operations, the read methods always read from the "available" bytes, represented by the bytesAvalable property. When reading synchronously, all of the bytes of the file are available all of the time. When reading asynchronously, the bytes become available starting at the position specified by the position property, in a series of asynchronous buffer fills signaled by progress events.
 
 For files opened for _synchronous_ operations, the bytesAvailable property is always set to represent the number of bytes from the position property to the end of the file (all bytes in the file are always available for reading).
 
@@ -1310,7 +1314,7 @@ For a file opened asynchronously, as data becomes available in the read buffer, 
 
 var bytes:ByteArray = new ByteArray();
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler); myFileStream.openAsync(myFile, FileMode.READ);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler); myFileStream.openAsync(myFile, FileMode.READ);
 
 function progressHandler(event:ProgressEvent):void
 
@@ -1322,9 +1326,9 @@ myFileStream.readBytes(bytes, myFileStream.position, myFileStream.bytesAvailable
 
 For a file opened asynchronously, only the data in the read buffer can be read. Furthermore, as you read the data, it is removed from the read buffer. For read operations, you need to ensure that the data exists in the read buffer before calling the read operation. For example, the following code reads 8000 bytes of data starting from position 4000 in the file:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ);
 
-myFileStream.position = 4000; var str:String = &quot;&quot;;
+myFileStream.position = 4000; var str:String = "";
 
 function progressHandler(event:Event):void
 
@@ -1334,7 +1338,7 @@ if (myFileStream.bytesAvailable &gt; 8000 )
 
 {
 
-str += myFileStream.readMultiByte(8000, &quot;iso-8859-1&quot;);
+str += myFileStream.readMultiByte(8000, "iso-8859-1");
 
 }
 
@@ -1352,29 +1356,29 @@ This means that you need to register for events generated by the FileStream obje
 
 By registering for the progress event, you can be notified as new data becomes available for reading, as in the following code:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler); myFileStream.openAsync(myFile, FileMode.READ);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler); myFileStream.openAsync(myFile, FileMode.READ);
 
-var str:String = &quot;&quot;;
+var str:String = "";
 
 function progressHandler(event:ProgressEvent):void
 
 {
 
-str += myFileStream.readMultiByte(myFileStream.bytesAvailable, &quot;iso-8859-1&quot;);
+str += myFileStream.readMultiByte(myFileStream.bytesAvailable, "iso-8859-1");
 
 }
 
 You can read the entire data by registering for the complete event, as in the following code:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ);
 
-var str:String = &quot;&quot;;
+var str:String = "";
 
 function completeHandler(event:Event):void
 
 {
 
-str = myFileStream.readMultiByte(myFileStream.bytesAvailable, &quot;iso-8859-1&quot;);
+str = myFileStream.readMultiByte(myFileStream.bytesAvailable, "iso-8859-1");
 
 }
 
@@ -1386,7 +1390,7 @@ Data formats, and choosing the read and write methods to use
 
 Every file is a set of bytes on a disk. In Haxe, the data from a file can always be represented as a ByteArray. For example, the following code reads the data from a file into a ByteArray object named bytes:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completeHandler); myFileStream.openAsync(myFile, FileMode.READ);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completeHandler); myFileStream.openAsync(myFile, FileMode.READ);
 
 var bytes:ByteArray = new ByteArray();
 
@@ -1400,7 +1404,7 @@ myFileStream.readBytes(bytes, 0, myFileStream.bytesAvailable);
 
 Similarly, the following code writes data from a ByteArray named bytes to a file:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream();
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream();
 
 myFileStream.open(myFile, FileMode.WRITE); myFileStream.writeBytes(bytes, 0, bytes.length);
 
@@ -1410,19 +1414,19 @@ For example, the data in the file may be in a text file format, and you may want
 
 For this reason, the FileStream class includes read and write methods for reading and writing data to and from types other than ByteArray objects. For example, the readMultiByte() method lets you read data from a file and store it to a string, as in the following code:
 
-var myFile:File = File.documentsDirectory.resolvePath(&quot;AIR Test/test.txt&quot;); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ);
+var myFile:File = File.documentsDirectory.resolvePath("AIR Test/test.txt"); var myFileStream:FileStream = new FileStream(); myFileStream.addEventListener(Event.COMPLETE, completed); myFileStream.openAsync(myFile, FileMode.READ);
 
-var str:String = &quot;&quot;;
+var str:String = "";
 
 function completeHandler(event:Event):void
 
 {
 
-str = myFileStream.readMultiByte(myFileStream.bytesAvailable, &quot;iso-8859-1&quot;);
+str = myFileStream.readMultiByte(myFileStream.bytesAvailable, "iso-8859-1");
 
 }
 
-The second parameter of the readMultiByte() method specifies the text format that Haxe uses to interpret the data (&quot;iso-8859-1&quot; in the example). Adobe AIR supports common character set encodings (see Supported character sets).
+The second parameter of the readMultiByte() method specifies the text format that Haxe uses to interpret the data ("iso-8859-1" in the example). Adobe AIR supports common character set encodings (see Supported character sets).
 
 The FileStream class also includes the readUTFBytes() method, which reads data from the read buffer into a string using the UTF-8 character set. Since characters in the UTF-8 character set are of variable length, do not use readUTFBytes() in a method that responds to the progress event, since the data at the end of the read buffer may represent an incomplete character. (This is also true when using the readMultiByte() method with a variable-length character encoding.) For this reason, read the entire set of data when the FileStream object dispatches the complete event.
 
@@ -1430,7 +1434,7 @@ There are also similar write methods, writeMultiByte() and writeUTFBytes(), for 
 
 The readUTF() and the writeUTF() methods (not to be confused with readUTFBytes() and writeUTFBytes()) also read and write the text data to a file, but they assume that the text data is preceded by data specifying the length of the text data, which is not a common practice in standard text files.
 
-Some UTF-encoded text files begin with a &quot;UTF-BOM&quot; (byte order mark) character that defines the endianness as well as the encoding format (such as UTF-16 or UTF-32).
+Some UTF-encoded text files begin with a "UTF-BOM" (byte order mark) character that defines the endianness as well as the encoding format (such as UTF-16 or UTF-32).
 
 For an example of reading and writing to a text file, see
 
@@ -1462,7 +1466,7 @@ OpenFL 10 added the load() and save() methods to the FileReference class. These 
 
 For example, the following code saves a string to a text file:
 
-var file:File = File.applicationStorageDirectory.resolvePath(&quot;test.txt&quot;); var str:String = &quot;Hello.&quot;;
+var file:File = File.applicationStorageDirectory.resolvePath("test.txt"); var str:String = "Hello.";
 
 file.addEventListener(Event.COMPLETE, fileSaved); file.save(str);
 
@@ -1470,7 +1474,7 @@ function fileSaved(event:Event):void
 
 {
 
-trace(&quot;Done.&quot;);
+trace("Done.");
 
 }
 
@@ -1480,7 +1484,7 @@ When this code sample executes, the application displays a dialog box in which t
 
 The following code loads a string from a UTF-8–encoded text file:
 
-var file:File = File.applicationStorageDirectory.resolvePath(&quot;test.txt&quot;); file.addEventListener(Event.COMPLETE, loaded);
+var file:File = File.applicationStorageDirectory.resolvePath("test.txt"); file.addEventListener(Event.COMPLETE, loaded);
 
 file.load(); var str:String;
 
@@ -1511,7 +1515,7 @@ The following examples demonstrate how to read and write to a text file that con
 
 To read from the file, initialize the File and FileStream objects, call the readUTFBytes() method of the FileStream and convert the string to an XML object:
 
-var file:File = File.documentsDirectory.resolvePath(&quot;AIR Test/preferences.xml&quot;); var fileStream:FileStream = new FileStream();
+var file:File = File.documentsDirectory.resolvePath("AIR Test/preferences.xml"); var fileStream:FileStream = new FileStream();
 
 fileStream.open(file, FileMode.READ);
 
@@ -1521,11 +1525,11 @@ Similarly, writing the data to the file is as easy as setting up appropriate Fil
 
 var prefsXML:XML = &lt;prefs&gt;&lt;autoSave&gt;true&lt;/autoSave&gt;&lt;/prefs&gt;;
 
-var file:File = File.documentsDirectory.resolvePath(&quot;AIR Test/preferences.xml&quot;); fileStream = new FileStream();
+var file:File = File.documentsDirectory.resolvePath("AIR Test/preferences.xml"); fileStream = new FileStream();
 
 fileStream.open(file, FileMode.WRITE);
 
-var outputString:String = &#039;&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;\n&#039;; outputString += prefsXML.toXMLString();
+var outputString:String = '&lt;?xml version="1.0" encoding="utf-8"?&gt;\n'; outputString += prefsXML.toXMLString();
 
 fileStream.writeUTFBytes(outputString); fileStream.close();
 
@@ -1533,7 +1537,7 @@ These examples use the readUTFBytes() and writeUTFBytes() methods, because they 
 
 The previous examples use FileStream objects opened for synchronous operation. You can also open files for asynchronous operations (which rely on event listener functions to respond to events). For example, the following code shows how to read an XML file asynchronously:
 
-var file:File = File.documentsDirectory.resolvePath(&quot;AIR Test/preferences.xml&quot;); var fileStream:FileStream = new FileStream(); fileStream.addEventListener(Event.COMPLETE, processXMLData); fileStream.openAsync(file, FileMode.READ);
+var file:File = File.documentsDirectory.resolvePath("AIR Test/preferences.xml"); var fileStream:FileStream = new FileStream(); fileStream.addEventListener(Event.COMPLETE, processXMLData); fileStream.openAsync(file, FileMode.READ);
 
 var prefsXML:XML;
 
@@ -1553,13 +1557,13 @@ Example: Reading and writing data with random access
 
 Adobe AIR 1.0 and later
 
-MP3 files can include ID3 tags, which are sections at the beginning or end of the file that contain meta data identifying the recording. The ID3 tag format itself has different revisions. This example describes how to read and write from an MP3 file that contains the simplest ID3 format (ID3 version 1.0) using &quot;random access to file data&quot;, which means that it reads from and writes to arbitrary locations in the file.
+MP3 files can include ID3 tags, which are sections at the beginning or end of the file that contain meta data identifying the recording. The ID3 tag format itself has different revisions. This example describes how to read and write from an MP3 file that contains the simplest ID3 format (ID3 version 1.0) using "random access to file data", which means that it reads from and writes to arbitrary locations in the file.
 
 An MP3 file that contains an ID3 version 1 tag includes the ID3 data at the end of the file, in the final 128 bytes. When accessing a file for random read/write access, it is important to specify FileMode.UPDATE as the fileMode
 
 parameter for the open() or openAsync() method:
 
-var file:File = File.documentsDirectory.resolvePath(&quot;My Music/Sample ID3 v1.mp3&quot;); var fileStr:FileStream = new FileStream();
+var file:File = File.documentsDirectory.resolvePath("My Music/Sample ID3 v1.mp3"); var fileStr:FileStream = new FileStream();
 
 fileStr.open(file, FileMode.UPDATE);
 
@@ -1571,13 +1575,13 @@ fileStr.position = file.size - 128;
 
 This code sets the position property to this location in the file because the ID3 v1.0 format specifies that the ID3 tag data is stored in the last 128 bytes of the file. The specification also says the following:
 
-*   The first 3 bytes of the tag contain the string &quot;TAG&quot;.
+*   The first 3 bytes of the tag contain the string "TAG".
 *   The next 30 characters contain the title for the MP3 track, as a string.
 *   The next 30 characters contain the name of the artist, as a string.
 *   The next 30 characters contain the name of the album, as a string.
 *   The next 4 characters contain the year, as a string.
 *   The next 30 characters contain the comment, as a string.
-*   The next byte contains a code indicating the track&#039;s genre.
+*   The next byte contains a code indicating the track's genre.
 *   All text data is in ISO 8859-1 format.
 
 The id3TagRead() method checks the data after it is read in (upon the complete event):
@@ -1586,13 +1590,13 @@ function id3TagRead():void
 
 {
 
-if (fileStr.readMultiByte(3, &quot;iso-8859-1&quot;).match(/tag/i))
+if (fileStr.readMultiByte(3, "iso-8859-1").match(/tag/i))
 
 {
 
-var id3Title:String = fileStr.readMultiByte(30, &quot;iso-8859-1&quot;); var id3Artist:String = fileStr.readMultiByte(30, &quot;iso-8859-1&quot;); var id3Album:String = fileStr.readMultiByte(30, &quot;iso-8859-1&quot;); var id3Year:String = fileStr.readMultiByte(4, &quot;iso-8859-1&quot;);
+var id3Title:String = fileStr.readMultiByte(30, "iso-8859-1"); var id3Artist:String = fileStr.readMultiByte(30, "iso-8859-1"); var id3Album:String = fileStr.readMultiByte(30, "iso-8859-1"); var id3Year:String = fileStr.readMultiByte(4, "iso-8859-1");
 
-var id3Comment:String = fileStr.readMultiByte(30, &quot;iso-8859-1&quot;); var id3GenreCode:String = fileStr.readByte().toString(10);
+var id3Comment:String = fileStr.readMultiByte(30, "iso-8859-1"); var id3GenreCode:String = fileStr.readByte().toString(10);
 
 }
 
@@ -1600,6 +1604,6 @@ var id3Comment:String = fileStr.readMultiByte(30, &quot;iso-8859-1&quot;); var i
 
 You can also perform a random-access write to the file. For example, you could parse the id3Title variable to ensure that it is correctly capitalized (using methods of the String class), and then write a modified string, called newTitle, to the file, as in the following:
 
-fileStr.position = file.length - 125; // 128 - 3 fileStr.writeMultiByte(newTitle, &quot;iso-8859-1&quot;);
+fileStr.position = file.length - 125; // 128 - 3 fileStr.writeMultiByte(newTitle, "iso-8859-1");
 
 To conform with the ID3 version 1 standard, the length of the newTitle string should be 30 characters, padded at the end with the character code 0 (String.fromCharCode(0)).

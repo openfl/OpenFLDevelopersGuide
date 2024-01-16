@@ -14,21 +14,21 @@ Enabling full-screen mode for OpenFL in a browser
 
 Before you can implement full-screen mode for OpenFL in a browser, enable it through the Publish template for your application. Templates that allow full screen include &lt;object&gt; and &lt;embed&gt; tags that contain an allowFullScreen parameter. The following example shows the allowFullScreen parameter in an &lt;embed&gt; tag.
 
-&lt;object classid=&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot; id=&quot;fullScreen&quot; width=&quot;100%&quot; height=&quot;100%&quot;
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="fullScreen" width="100%" height="100%"
 
-[codebase=&quot;http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab&quot;&gt;](http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab)
+[codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab"&gt;](http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab)
 
 ...
 
-&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot; /&gt;
+&lt;param name="allowFullScreen" value="true" /&gt;
 
-&lt;embed src=&quot;fullScreen.swf&quot; allowFullScreen=&quot;true&quot; quality=&quot;high&quot; bgcolor=&quot;#869ca7&quot; width=&quot;100%&quot; height=&quot;100%&quot; name=&quot;fullScreen&quot; align=&quot;middle&quot;
+&lt;embed src="fullScreen.swf" allowFullScreen="true" quality="high" bgcolor="#869ca7" width="100%" height="100%" name="fullScreen" align="middle"
 
-play=&quot;true&quot; loop=&quot;false&quot; quality=&quot;high&quot;
+play="true" loop="false" quality="high"
 
-allowScriptAccess=&quot;sameDomain&quot; type=&quot;application/x-shockwave-flash&quot;
+allowScriptAccess="sameDomain" type="application/x-shockwave-flash"
 
-[pluginspage=&quot;http://www.adobe.com/go/getflashplayer&quot;&gt;](http://www.adobe.com/go/getflashplayer)
+[pluginspage="http://www.adobe.com/go/getflashplayer"&gt;](http://www.adobe.com/go/getflashplayer)
 
 &lt;/embed&gt;
 
@@ -46,7 +46,7 @@ Initiating full-screen mode
 
 For OpenFL content running in a browser, you initiate full-screen mode for video in response to either a mouse click or a keypress. For example, you can initiate full-screen mode when the user clicks a button labeled Full Screen or selects a Full Screen command from a context menu. To respond to the user, add an event listener to the object on which the action occurs. The following code adds an event listener to a button that the user clicks to enter full-screen mode:
 
-var fullScreenButton:Button = new Button(); fullScreenButton.label = &quot;Full Screen&quot;; addChild(fullScreenButton);
+var fullScreenButton:Button = new Button(); fullScreenButton.label = "Full Screen"; addChild(fullScreenButton);
 
 fullScreenButton.addEventListener(MouseEvent.CLICK, fullScreenButtonHandler);
 
@@ -80,33 +80,45 @@ package
 
 {
 
-import openfl.net.NetConnection; import openfl.net.NetStream; import openfl.media.Video;
+import openfl.net.NetConnection;
+import openfl.net.NetStream;
+import openfl.media.Video;
 
-import openfl.display.StageDisplayState; import fl.controls.Button;
+import openfl.display.StageDisplayState;
+import fl.controls.Button;
 
-import openfl.display.Sprite; import openfl.events.MouseEvent;
+import openfl.display.Sprite;
+import openfl.events.MouseEvent;
 
-import openfl.events.FullScreenEvent; import openfl.geom.Rectangle;
+import openfl.events.FullScreenEvent;
+import openfl.geom.Rectangle;
 
 public class FullScreenVideoExample extends Sprite
 
 {
 
-var fullScreenButton:Button = new Button(); var video:Video = new Video();
+var fullScreenButton:Button = new Button(); 
+ar video:Video = new Video();
 
 public function FullScreenVideoExample()
 
 {
 
-var videoConnection:NetConnection = new NetConnection(); videoConnection.connect(null);
+var videoConnection:NetConnection = new NetConnection();
+videoConnection.connect(null);
 
-var videoStream:NetStream = new NetStream(videoConnection); videoStream.client = this;
+var videoStream:NetStream = new NetStream(videoConnection);
+videoStream.client = this;
 
-addChild(video); video.attachNetStream(videoStream);
+addChild(video);
+video.attachNetStream(videoStream);
 
-[videoStream.play(&quot;http://www.helpexamples.com/flash/video/water.flv&quot;);](http://www.helpexamples.com/flash/video/water.flv) fullScreenButton.x = 100;
+videoStream.play("http://www.helpexamples.com/flash/video/water.flv");
+fullScreenButton.x = 100;
 
-fullScreenButton.y = 270; fullScreenButton.label = &quot;Full Screen&quot;; addChild(fullScreenButton);
+fullScreenButton.y = 270;
+fullScreenButton.label = "Full Screen";
+addChild(fullScreenButton);
 
 fullScreenButton.addEventListener(MouseEvent.CLICK, fullScreenButtonHandler);
 
@@ -148,13 +160,13 @@ private function netStatusHandler(event:NetStatusEvent)
 
 {
 
-if(event.info.code == &quot;NetStream.Play.Stop&quot;) stage.displayState = StageDisplayState.NORMAL;
+if(event.info.code == "NetStream.Play.Stop") stage.displayState = StageDisplayState.NORMAL;
 
 }
 
 Full-screen hardware acceleration
 
-When you rescale a rectangular area of the stage to full-screen mode, OpenFL uses hardware acceleration, if it&#039;s available and enabled. The runtime uses the video adapter on the computer to speed up scaling of the video, or a portion of the stage, to full-screen size. Under these circumstances, OpenFL applications can often profit by switching to the StageVideo class from the Video class (or Camera class; OpenFL 11.4/AIR 3.4 and higher).
+When you rescale a rectangular area of the stage to full-screen mode, OpenFL uses hardware acceleration, if it's available and enabled. The runtime uses the video adapter on the computer to speed up scaling of the video, or a portion of the stage, to full-screen size. Under these circumstances, OpenFL applications can often profit by switching to the StageVideo class from the Video class (or Camera class; OpenFL 11.4/AIR 3.4 and higher).
 
 For more information on hardware acceleration in full-screen mode, see
 

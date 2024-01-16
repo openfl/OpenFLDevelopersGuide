@@ -34,7 +34,9 @@ package
 
 {
 
-import openfl.display.Sprite; import openfl.text.TextField; import openfl.text.TextFieldType;
+import openfl.display.Sprite;
+import openfl.text.TextField;
+import openfl.text.TextFieldType;
 
 import openfl.events.SoftKeyboardEvent;
 
@@ -42,13 +44,16 @@ public class SoftKeyboardEventExample extends Sprite
 
 {
 
-private var tf1:TextField = new TextField(); private var tf2:TextField = new TextField();
+private var tf1:TextField = new TextField();
+private var tf2:TextField = new TextField();
 
 public function SoftKeyboardEventExample()
 
 {
 
-tf1.width = this.stage.stageWidth; tf1.type = TextFieldType.INPUT; tf1.border = true;
+tf1.width = this.stage.stageWidth;
+tf1.type = TextFieldType.INPUT;
+tf1.border = true;
 
 this.addChild( tf1 );
 
@@ -66,7 +71,9 @@ tf2.type = TextFieldType.INPUT;
 
 tf2.width = this.stage.stageWidth; tf2.y = tf1.y + tf1.height + 30; this.addChild( tf2 );
 
-tf2.addEventListener( SoftKeyboardEvent.SOFT_KEYBOARD_ACTIVATING, allowSoftKeyboard ); tf2.addEventListener( SoftKeyboardEvent.SOFT_KEYBOARD_ACTIVATE, allowSoftKeyboard ); tf2.addEventListener( SoftKeyboardEvent.SOFT_KEYBOARD_DEACTIVATE, allowSoftKeyboard);
+tf2.addEventListener( SoftKeyboardEvent.SOFT_KEYBOARD_ACTIVATING, allowSoftKeyboard );
+tf2.addEventListener( SoftKeyboardEvent.SOFT_KEYBOARD_ACTIVATE, allowSoftKeyboard );
+tf2.addEventListener( SoftKeyboardEvent.SOFT_KEYBOARD_DEACTIVATE, allowSoftKeyboard);
 
 }
 
@@ -78,7 +85,7 @@ event.preventDefault();
 
 this.stage.focus = null; //close the keyboard, if raised
 
-trace( &quot;tf1 dispatched: &quot; + event.type + &quot; -- &quot; + event.triggerType );
+trace( "tf1 dispatched: " + event.type + " -- " + event.triggerType );
 
 }
 
@@ -86,7 +93,7 @@ private function allowSoftKeyboard( event:SoftKeyboardEvent ) :void
 
 {
 
-trace( &quot;tf2 dispatched: &quot; + event.type + &quot; -- &quot; + event.triggerType );
+trace( "tf2 dispatched: " + event.type + " -- " + event.triggerType );
 
 }
 
@@ -108,41 +115,56 @@ The example uses the Flash text engine to append and display any typed text and 
 
 package {
 
-import openfl.geom.Rectangle; import openfl.display.Sprite;
+import openfl.geom.Rectangle;
+import openfl.display.Sprite;
 
-import openfl.text.engine.TextElement; import openfl.text.engine.TextBlock; import openfl.events.MouseEvent; import openfl.events.FocusEvent; import openfl.events.KeyboardEvent; import openfl.text.engine.TextLine;
+import openfl.text.engine.TextElement;
+import openfl.text.engine.TextBlock;
+import openfl.events.MouseEvent;
+import openfl.events.FocusEvent;
+import openfl.events.KeyboardEvent;
+import openfl.text.engine.TextLine;
 
-import openfl.text.engine.ElementFormat; import openfl.events.Event;
+import openfl.text.engine.ElementFormat;
+import openfl.events.Event;
 
 public class TextInput extends Sprite
 
 {
 
-public var text:String = &quot; &quot;; public var textSize:Number = 24;
+public var text:String = " ";
+public var textSize:Number = 24;
 
 public var textColor:uint = 0x000000;
 
-private var _bounds:Rectangle = new Rectangle( 0, 0, 100, textSize ); private var textElement: TextElement;
+private var _bounds:Rectangle = new Rectangle( 0, 0, 100, textSize );
+private var textElement: TextElement;
 
 private var textBlock:TextBlock = new TextBlock();
 
-public function TextInput( text:String = &quot;&quot; )
+public function TextInput( text:String = "" )
 
 {
 
-this.text = text; this.scrollRect = _bounds; this.focusRect= false;
+this.text = text;
+this.scrollRect = _bounds;
+this.focusRect = false;
 
 //Enable keyboard support this.needsSoftKeyboard = true;
 
-this.addEventListener(MouseEvent.MOUSE_DOWN, onSelect); this.addEventListener(FocusEvent.FOCUS_IN, onFocusIn); this.addEventListener(FocusEvent.FOCUS_OUT, onFocusOut);
+this.addEventListener(MouseEvent.MOUSE_DOWN, onSelect);
+this.addEventListener(FocusEvent.FOCUS_IN, onFocusIn); this.addEventListener(FocusEvent.FOCUS_OUT, onFocusOut);
 
 //Setup text engine
 
-textElement = new TextElement( text, new ElementFormat( null, textSize, textColor ) ); textBlock.content = textElement;
+textElement = new TextElement( text, new ElementFormat( null, textSize, textColor ) );
+textBlock.content = textElement;
 
-var firstLine:TextLine = textBlock.createTextLine( null, _bounds.width - 8 ); firstLine.x = 4;
+var firstLine:TextLine = textBlock.createTextLine( null, _bounds.width - 8 );
+firstLine.x = 4;
 
-firstLine.y = 4 + firstLine.totalHeight; this.addChild( firstLine );
+firstLine.y = 4 + firstLine.totalHeight;
+this.addChild( firstLine );
 
 }
 
@@ -260,23 +282,27 @@ package {
 
 import openfl.display.MovieClip;
 
-import openfl.events.SoftKeyboardEvent; import openfl.geom.Rectangle;
+import openfl.events.SoftKeyboardEvent;
+import openfl.geom.Rectangle;
 
 import openfl.events.Event;
 
-import openfl.display.StageScaleMode; import openfl.display.StageAlign;
+import openfl.display.StageScaleMode;
+import openfl.display.StageAlign;
 
 public class CustomTextField extends MovieClip {
 
-private var customField:TextInput = new TextInput(&quot;Input text: &quot;); public function CustomTextField() {
+private var customField:TextInput = new TextInput("Input text: ");
+public function CustomTextField() {
 
-this.stage.scaleMode = StageScaleMode.NO_SCALE; this.stage.align = StageAlign.TOP_LEFT; this.addChild( customField );
+this.stage.scaleMode = StageScaleMode.NO_SCALE;
+this.stage.align = StageAlign.TOP_LEFT;
+this.addChild( customField );
 
 customField.bounds = new Rectangle( 0, 0, this.stage.stageWidth, this.stage.stageHeight );
 
-//track soft keyboard and stage resize events customField.addEventListener(SoftKeyboardEvent.SOFT_KEYBOARD_ACTIVATE,
-
-onDisplayAreaChange );
+//track soft keyboard and stage resize events
+customField.addEventListener(SoftKeyboardEvent.SOFT_KEYBOARD_ACTIVATE, onDisplayAreaChange );
 
 customField.addEventListener(SoftKeyboardEvent.SOFT_KEYBOARD_DEACTIVATE, onDisplayAreaChange );
 
@@ -288,11 +314,10 @@ private function onDisplayAreaChange( event:Event ):void
 
 {
 
-//Fill the stage if possible, but avoid the area covered by a keyboard var desiredBounds = new Rectangle( 0, 0, this.stage.stageWidth,
+//Fill the stage if possible, but avoid the area covered by a keyboard 
+var desiredBounds = new Rectangle( 0, 0, this.stage.stageWidth, this.stage.stageHeight );
 
-this.stage.stageHeight );
-
-if( this.stage.stageHeight - this.stage.softKeyboardRect.height &lt; desiredBounds.height )
+if( this.stage.stageHeight - this.stage.softKeyboardRect.height < desiredBounds.height )
 
 desiredBounds.height = this.stage.stageHeight - this.stage.softKeyboardRect.height;
 
@@ -324,27 +349,37 @@ package {
 
 import openfl.display.MovieClip;
 
-import openfl.events.SoftKeyboardEvent; import openfl.events.Event;
+import openfl.events.SoftKeyboardEvent;
+import openfl.events.Event;
 
-import openfl.display.StageScaleMode; import openfl.display.StageAlign;
+import openfl.display.StageScaleMode;
+import openfl.display.StageAlign;
 
-import openfl.display.InteractiveObject; import openfl.text.TextFieldType;
+import openfl.display.InteractiveObject;
+import openfl.text.TextFieldType;
 
 import openfl.text.TextField;
 
-public class PanningExample extends MovieClip { private var textField:TextField = new TextField(); public function PanningExample() {
+public class PanningExample extends MovieClip {
+	private var textField:TextField = new TextField();
+public function PanningExample() {
 
-this.stage.scaleMode = StageScaleMode.NO_SCALE; this.stage.align = StageAlign.TOP_LEFT;
+this.stage.scaleMode = StageScaleMode.NO_SCALE;
+this.stage.align = StageAlign.TOP_LEFT;
 
-textField.y = this.stage.stageHeight - 201; textField.width = this.stage.stageWidth; textField.height = 200;
+textField.y = this.stage.stageHeight - 201;
+textField.width = this.stage.stageWidth; 
+textField.height = 200;
 
-textField.type = TextFieldType.INPUT; textField.border = true; textField.wordWrap = true; textField.multiline = true;
+textField.type = TextFieldType.INPUT;
+textField.border = true;
+textField.wordWrap = true;
+textField.multiline = true;
 
 this.addChild( textField );
 
-//track soft keyboard and stage resize events textField.addEventListener(SoftKeyboardEvent.SOFT_KEYBOARD_ACTIVATE,
-
-onKeyboardChange );
+//track soft keyboard and stage resize events
+textField.addEventListener(SoftKeyboardEvent.SOFT_KEYBOARD_ACTIVATE, onKeyboardChange );
 
 textField.addEventListener(SoftKeyboardEvent.SOFT_KEYBOARD_DEACTIVATE, onKeyboardChange );
 
@@ -356,7 +391,8 @@ private function onDisplayAreaChange( event:Event ):void
 
 {
 
-textField.y = this.stage.stageHeight - 201; textField.width = this.stage.stageWidth;
+textField.y = this.stage.stageHeight - 201;
+textField.width = this.stage.stageWidth;
 
 }
 
@@ -364,15 +400,16 @@ private function onKeyboardChange( event:SoftKeyboardEvent ):void
 
 {
 
-var field:InteractiveObject = textField; var offset:int = 0;
+var field:InteractiveObject = textField;
+var offset:int = 0;
 
-//if the softkeyboard is open and the field is at least partially covered if( (this.stage.softKeyboardRect.y != 0) &amp;&amp; (field.y + field.height &gt;
-
-this.stage.softKeyboardRect.y) )
+//if the softkeyboard is open and the field is at least partially covered
+if( (this.stage.softKeyboardRect.y != 0) &amp;&amp; (field.y + field.height &gt; this.stage.softKeyboardRect.y) )
 
 offset = field.y + field.height - this.stage.softKeyboardRect.y;
 
-//but don&#039;t push the top of the field above the top of the screen if( field.y - offset &lt; 0 ) offset += field.y - offset;
+//but don't push the top of the field above the top of the screen
+if( field.y - offset &lt; 0 ) offset += field.y - offset;
 
 this.y = -offset;
 

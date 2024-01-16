@@ -8,7 +8,9 @@ package
 
 {
 
-import openfl.display.Sprite; import openfl.display.Stage; import openfl.text.*;
+import openfl.display.Sprite;
+import openfl.display.Stage;
+import openfl.text.*;
 
 import openfl.events.*;
 
@@ -16,7 +18,9 @@ public class CaptureUserInput extends Sprite
 
 {
 
-private var myTextBox:TextField = new TextField(); private var myOutputBox:TextField = new TextField(); private var myText:String = &quot;Type your text here.&quot;;
+private var myTextBox:TextField = new TextField();
+private var myOutputBox:TextField = new TextField();
+private var myText:String = "Type your text here.";
 
 public function CaptureUserInput()
 
@@ -30,9 +34,12 @@ public function captureText():void
 
 {
 
-myTextBox.type = TextFieldType.INPUT; myTextBox.background = true; addChild(myTextBox);
+myTextBox.type = TextFieldType.INPUT;
+myTextBox.background = true;
+addChild(myTextBox);
 
-myTextBox.text = myText; myTextBox.addEventListener(TextEvent.TEXT_INPUT, textInputCapture);
+myTextBox.text = myText;
+myTextBox.addEventListener(TextEvent.TEXT_INPUT, textInputCapture);
 
 }
 
@@ -40,7 +47,8 @@ public function textInputCapture(event:TextEvent):void
 
 {
 
-var str:String = myTextBox.text; createOutputBox(str);
+var str:String = myTextBox.text;
+createOutputBox(str);
 
 }
 
@@ -48,7 +56,10 @@ public function createOutputBox(str:String):void
 
 {
 
-myOutputBox.background = true; myOutputBox.x = 200; addChild(myOutputBox); myOutputBox.text = str;
+myOutputBox.background = true;
+myOutputBox.x = 200;
+addChild(myOutputBox);
+myOutputBox.text = str;
 
 }
 

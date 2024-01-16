@@ -52,7 +52,7 @@ b.x = startX + (colCounter*buttonSize);
 
 b.y = startY + (rowCounter*buttonSize); b.addEventListener(MouseEvent.CLICK, letterClicked); b.label = getRandomLetter().toUpperCase(); b.setSize(buttonSize,buttonSize);
 
-b.name = &quot;buttonRow&quot;+rowCounter+&quot;Col&quot;+colCounter; addChild(b);
+b.name = "buttonRow"+rowCounter+"Col"+colCounter; addChild(b);
 
 buttons.push(b);
 
@@ -72,13 +72,13 @@ private function isLegalContinuation(prevButton:Button, currButton:Button):Boole
 
 {
 
-var currButtonRow:Number = Number(currButton.name.charAt(currButton.name. indexOf(&quot;Row&quot;) + 3));
+var currButtonRow:Number = Number(currButton.name.charAt(currButton.name. indexOf("Row") + 3));
 
-var currButtonCol:Number = Number(currButton.name.charAt(currButton.name.indexOf(&quot;Col&quot;) + 3));
+var currButtonCol:Number = Number(currButton.name.charAt(currButton.name.indexOf("Col") + 3));
 
-var prevButtonRow:Number = Number(prevButton.name.charAt(prevButton.name.indexOf(&quot;Row&quot;) + 3));
+var prevButtonRow:Number = Number(prevButton.name.charAt(prevButton.name.indexOf("Row") + 3));
 
-var prevButtonCol:Number = Number(prevButton.name.charAt(prevButton.name.indexOf(&quot;Col&quot;) + 3));
+var prevButtonCol:Number = Number(prevButton.name.charAt(prevButton.name.indexOf("Col") + 3));
 
 return ((prevButtonCol == currButtonCol &amp;&amp; Math.abs(prevButtonRow - currButtonRow) &lt;= 1) || (prevButtonRow == currButtonRow &amp;&amp; Math.abs(prevButtonCol - currButtonCol) &lt;= 1));
 
@@ -126,7 +126,7 @@ else
 
 {
 
-trace(&quot;WARNING: cannot find words, or string supplied is null&quot;);
+trace("WARNING: cannot find words, or string supplied is null");
 
 }
 

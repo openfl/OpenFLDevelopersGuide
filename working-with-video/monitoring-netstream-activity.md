@@ -45,7 +45,10 @@ package com.adobe.example
 
 {
 
-import openfl.events.NetDataEvent; import openfl.events.NetMonitorEvent; import openfl.events.NetStatusEvent; import openfl.net.NetMonitor;
+import openfl.events.NetDataEvent;
+import openfl.events.NetMonitorEvent;
+import openfl.events.NetStatusEvent;
+import openfl.net.NetMonitor;
 
 import openfl.net.NetStream;
 
@@ -77,7 +80,7 @@ private function newNetStream( event:NetMonitorEvent ):void
 
 {
 
-trace( &quot;New Netstream object&quot;);
+trace( "New Netstream object");
 
 var stream:NetStream = event.netStream; stream.addEventListener(NetDataEvent.MEDIA_TYPE_DATA, onStreamData); stream.addEventListener(NetStatusEvent.NET_STATUS, onStatus);
 
@@ -91,25 +94,25 @@ private function onStreamData( event:NetDataEvent ):void
 
 var netStream:NetStream = event.target as NetStream;
 
-trace( &quot;Data event from &quot; + netStream.info.uri + &quot; at &quot; + event.timestamp ); switch( event.info.handler )
+trace( "Data event from " + netStream.info.uri + " at " + event.timestamp ); switch( event.info.handler )
 
 {
 
-case &quot;onMetaData&quot;:
+case "onMetaData":
 
 //handle metadata; break;
 
-case &quot;onXMPData&quot;:
+case "onXMPData":
 
 //handle XMP; break;
 
-case &quot;onPlayStatus&quot;:
+case "onPlayStatus":
 
-//handle NetStream.Play.Complete case &quot;onImageData&quot;:
+//handle NetStream.Play.Complete case "onImageData":
 
 //handle image break;
 
-case &quot;onTextData&quot;:
+case "onTextData":
 
 //handle text break;
 
@@ -127,7 +130,7 @@ private function onStatus( event:NetStatusEvent ):void
 
 {
 
-trace( &quot;Status event from &quot; + event.target.info.uri + &quot; at &quot; + event.target.time );
+trace( "Status event from " + event.target.info.uri + " at " + event.target.time );
 
 //handle status events
 
@@ -143,7 +146,7 @@ var streams:Vector.&lt;NetStream&gt; = netmon.listStreams(); for( var i:int = 0;
 
 {
 
-trace( &quot;Heartbeat on &quot; + streams[i].info.uri + &quot; at &quot; + streams[i].time );
+trace( "Heartbeat on " + streams[i].info.uri + " at " + streams[i].time );
 
 //handle heartbeat event
 

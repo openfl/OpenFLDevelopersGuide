@@ -22,7 +22,7 @@ import openfl.desktop.Clipboard;
 
 import openfl.desktop.ClipboardFormats;
 
-var textToCopy:String = &quot;Copy to clipboard.&quot;; Clipboard.generalClipboard.clear();
+var textToCopy:String = "Copy to clipboard."; Clipboard.generalClipboard.clear();
 
 Clipboard.generalClipboard.setData(ClipboardFormats.TEXT_FORMAT, textToCopy, false);
 

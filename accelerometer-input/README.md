@@ -2,7 +2,7 @@
 
 OpenFL 10.1 and later, Adobe AIR 2 and later
 
-The Accelerometer class dispatches events based on activity detected by the device&#039;s motion sensor. This data represents the device&#039;s location or movement along a three-dimensional axis. When the device moves, the sensor detects this movement and returns the acceleration coordinates of the device. The Accelerometer class provides methods to query whether accelerometer is supported, and also to set the rate at which acceleration events are dispatched.
+The Accelerometer class dispatches events based on activity detected by the device's motion sensor. This data represents the device's location or movement along a three-dimensional axis. When the device moves, the sensor detects this movement and returns the acceleration coordinates of the device. The Accelerometer class provides methods to query whether accelerometer is supported, and also to set the rate at which acceleration events are dispatched.
 
 The accelerometer axes are normalized to the display orientation, not the physical orientation of the device. When the device re-orients the display, the accelerometer axes are re-oriented as well. Thus the y-axis is always roughly vertical when the user is holding the phone in a normal, upright viewing position — no matter which way the phone is rotated. If auto-orientation is off, for example, when SWF content in a browser is in full-screen mode, then the accelerometer axes are not re-oriented as the device is rotated.
 

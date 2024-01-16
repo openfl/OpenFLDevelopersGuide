@@ -39,29 +39,41 @@ However, in an AIR application, content in the application security sandbox (con
 
 The following example uses the SoundMixer.computeSpectrum() method to show a chart of the sound waveform that animates with each frame:
 
-import openfl.display.Graphics; import openfl.events.Event; import openfl.media.Sound;
+import openfl.display.Graphics;
+import openfl.events.Event;
+import openfl.media.Sound;
 
-import openfl.media.SoundChannel; import openfl.media.SoundMixer; import openfl.net.URLRequest;
+import openfl.media.SoundChannel;
+import openfl.media.SoundMixer;
+import openfl.net.URLRequest;
 
-const PLOT_HEIGHT:int = 200; const CHANNEL_LENGTH:int = 256;
+const PLOT_HEIGHT:int = 200;
+const CHANNEL_LENGTH:int = 256;
 
 var snd:Sound = new Sound();
 
-var req:URLRequest = new URLRequest(&quot;bigSound.mp3&quot;); snd.load(req);
+var req:URLRequest = new URLRequest("bigSound.mp3");
+snd.load(req);
 
-var channel:SoundChannel; channel = snd.play();
+var channel:SoundChannel;
+channel = snd.play();
 
-addEventListener(Event.ENTER_FRAME, onEnterFrame); snd.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
+addEventListener(Event.ENTER_FRAME, onEnterFrame);
+snd.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
 
-var bytes:ByteArray = new ByteArray(); function onEnterFrame(event:Event):void
+var bytes:ByteArray = new ByteArray();
+function onEnterFrame(event:Event):void
 
 {
 
-SoundMixer.computeSpectrum(bytes, false, 0); var g:Graphics = this.graphics;
+SoundMixer.computeSpectrum(bytes, false, 0);
+var g:Graphics = this.graphics;
 
 g.clear();
 
-g.lineStyle(0, 0x6600CC); g.beginFill(0x6600CC); g.moveTo(0, PLOT_HEIGHT);
+g.lineStyle(0, 0x6600CC);
+g.beginFill(0x6600CC);
+g.moveTo(0, PLOT_HEIGHT);
 
 var n:Number = 0;
 

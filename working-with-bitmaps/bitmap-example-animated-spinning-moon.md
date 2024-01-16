@@ -20,7 +20,7 @@ The first main task this sample performs is loading an external image file, whic
 
 Loading an external image is similar to loading an external SWF; both use an instance of the openfl.display.Loader class to perform the loading operation. The actual code in the MoonSphere() method that starts loading the image is as follows:
 
-var imageLoader:Loader = new Loader(); imageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, imageLoadComplete); imageLoader.load(new URLRequest(&quot;moonMap.png&quot;));
+var imageLoader:Loader = new Loader(); imageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, imageLoadComplete); imageLoader.load(new URLRequest("moonMap.png"));
 
 The first line declares the Loader instance named imageLoader. The third line actually starts the loading process by calling the Loader object’s load() method, passing a URLRequest instance representing the URL of the image to load. The second line sets up the event listener that will be triggered when the image has completely loaded. Notice that the addEventListener() method is not called on the Loader instance itself; instead, it’s called on the Loader object’s contentLoaderInfo property. The Loader instance itself doesn’t dispatch events relating to the content being loaded. Its contentLoaderInfo property, however, contains a reference to the LoaderInfo object that’s associated with the content being loaded into the Loader object (the external image in this case). That LoaderInfo object does provide several events relating to the progress and completion of loading the external content, including the complete event (Event.COMPLETE) that will trigger a call to the imageLoadComplete() method when the image has completely loaded.
 

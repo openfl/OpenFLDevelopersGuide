@@ -6,7 +6,7 @@ You must write callback methods for these handlers, or the Flash runtime may thr
 
 var nc:NetConnection = new NetConnection(); nc.connect(null);
 
-var ns:NetStream = new NetStream(nc); ns.addEventListener(AsyncErrorEvent.ASYNC_ERROR, asyncErrorHandler); ns.play(&quot;video.flv&quot;);
+var ns:NetStream = new NetStream(nc); ns.addEventListener(AsyncErrorEvent.ASYNC_ERROR, asyncErrorHandler); ns.play("video.flv");
 
 function asyncErrorHandler(event:AsyncErrorEvent):void
 
@@ -36,7 +36,7 @@ var nc:NetConnection = new NetConnection(); nc.connect(null);
 
 var customClient:Object = new Object();
 
-var ns:NetStream = new NetStream(nc); ns.client = customClient; ns.play(&quot;video.flv&quot;);
+var ns:NetStream = new NetStream(nc); ns.client = customClient; ns.play("video.flv");
 
 var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
 
@@ -46,7 +46,7 @@ var customClient:Object = new Object(); customClient.onMetaData = metaDataHandle
 
 {
 
-trace(&quot;metadata&quot;);
+trace("metadata");
 
 }
 
@@ -58,7 +58,7 @@ The following code sets the NetStream object’s client property to a custom cla
 
 var nc:NetConnection = new NetConnection(); nc.connect(null);
 
-var ns:NetStream = new NetStream(nc); ns.client = new CustomClient(); ns.play(&quot;video.flv&quot;);
+var ns:NetStream = new NetStream(nc); ns.client = new CustomClient(); ns.play("video.flv");
 
 var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
 
@@ -76,7 +76,7 @@ public function onMetaData(infoObject:Object):void
 
 {
 
-trace(&quot;metadata&quot;);
+trace("metadata");
 
 }
 
@@ -90,7 +90,7 @@ The CustomClient class defines a handler for the onMetaData callback handler. If
 
 The following code creates an instance of the CustomNetStream class, which is defined in a later code listing:
 
-var ns:CustomNetStream = new CustomNetStream(); ns.play(&quot;video.flv&quot;);
+var ns:CustomNetStream = new CustomNetStream(); ns.play("video.flv");
 
 var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
 
@@ -100,17 +100,21 @@ package
 
 {
 
-import openfl.net.NetConnection; import openfl.net.NetStream;
+import openfl.net.NetConnection;
+import openfl.net.NetStream;
 
 public class CustomNetStream extends NetStream
 
 {
 
-private var nc:NetConnection; public function CustomNetStream()
+private var nc:NetConnection;
+public function CustomNetStream()
 
 {
 
-nc = new NetConnection(); nc.connect(null); super(nc);
+nc = new NetConnection();
+nc.connect(null);
+super(nc);
 
 }
 
@@ -118,7 +122,7 @@ public function onMetaData(infoObject:Object):void
 
 {
 
-trace(&quot;metadata&quot;);
+trace("metadata");
 
 }
 
@@ -126,7 +130,7 @@ public function onCuePoint(infoObject:Object):void
 
 {
 
-trace(&quot;cue point&quot;);
+trace("cue point");
 
 }
 
@@ -140,13 +144,17 @@ package
 
 {
 
-import openfl.net.NetConnection; import openfl.net.NetStream;
+import openfl.net.NetConnection;
+import openfl.net.NetStream;
 
 public class CustomNetStream extends NetStream
 
 {
 
-private var nc:NetConnection; public var onMetaData:Function; public var onCuePoint:Function; public function CustomNetStream()
+private var nc:NetConnection;
+public var onMetaData:Function;
+public var onCuePoint:Function;
+public function CustomNetStream()
 
 {
 
@@ -160,7 +168,7 @@ private function metaDataHandler(infoObject:Object):void
 
 {
 
-trace(&quot;metadata&quot;);
+trace("metadata");
 
 }
 
@@ -168,7 +176,7 @@ private function cuePointHandler(infoObject:Object):void
 
 {
 
-trace(&quot;cue point&quot;);
+trace("cue point");
 
 }
 
@@ -180,7 +188,7 @@ trace(&quot;cue point&quot;);
 
 You can extend the NetStream class and make the subclass dynamic so that onCuePoint and onMetaData callback handlers can be added dynamically. This is demonstrated in the following listing:
 
-var ns:DynamicCustomNetStream = new DynamicCustomNetStream(); ns.play(&quot;video.flv&quot;);
+var ns:DynamicCustomNetStream = new DynamicCustomNetStream(); ns.play("video.flv");
 
 var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
 
@@ -190,7 +198,8 @@ package
 
 {
 
-import openfl.net.NetConnection; import openfl.net.NetStream;
+import openfl.net.NetConnection;
+import openfl.net.NetStream;
 
 public dynamic class DynamicCustomNetStream extends NetStream
 
@@ -202,7 +211,9 @@ public function DynamicCustomNetStream()
 
 {
 
-nc = new NetConnection(); nc.connect(null); super(nc);
+nc = new NetConnection();
+nc.connect(null);
+super(nc);
 
 }
 
@@ -214,15 +225,18 @@ Even with no handlers for the onMetaData and onCuePoint callback handlers, no er
 
 var ns:DynamicCustomNetStream = new DynamicCustomNetStream(); ns.onMetaData = metaDataHandler;
 
-ns.onCuePoint = cuePointHandler; [ns.play(&quot;http://www.helpexamples.com/flash/video/cuepoints.flv&quot;);](http://www.helpexamples.com/flash/video/cuepoints.flv)
+ns.onCuePoint = cuePointHandler;
+ns.play("http://www.helpexamples.com/flash/video/cuepoints.flv");
 
-var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
+var vid:Video = new Video();
+vid.attachNetStream(ns);
+addChild(vid);
 
 function metaDataHandler(infoObject:Object):void
 
 {
 
-trace(&quot;metadata&quot;);
+trace("metadata");
 
 }
 
@@ -230,7 +244,7 @@ function cuePointHandler(infoObject:Object):void
 
 {
 
-trace(&quot;cue point&quot;);
+trace("cue point");
 
 }
 
@@ -242,7 +256,7 @@ onCuePoint() methods. You can see this in the following example:
 
 var nc:NetConnection = new NetConnection(); nc.connect(null);
 
-var ns:NetStream = new NetStream(nc); ns.client = this; ns.play(&quot;video.flv&quot;);
+var ns:NetStream = new NetStream(nc); ns.client = this; ns.play("video.flv");
 
 var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
 
@@ -252,7 +266,7 @@ function onMetaData(infoObject:Object):void
 
 {
 
-trace(&quot;metadata&quot;);
+trace("metadata");
 
 }
 
@@ -260,6 +274,6 @@ function onCuePoint(infoObject:Object):void
 
 {
 
-trace(&quot;cue point&quot;);
+trace("cue point");
 
 }

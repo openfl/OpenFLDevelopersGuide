@@ -46,11 +46,11 @@ public static function getCapabilities():Array
 
 var capDP:Array = new Array();
 
-capDP.push({name:&quot;Capabilities.avHardwareDisable&quot;, value:Capabilities.avHardwareDisable}); capDP.push({name:&quot;Capabilities.hasAccessibility&quot;, value:Capabilities.hasAccessibility}); capDP.push({name:&quot;Capabilities.hasAudio&quot;, value:Capabilities.hasAudio});
+capDP.push({name:"Capabilities.avHardwareDisable", value:Capabilities.avHardwareDisable}); capDP.push({name:"Capabilities.hasAccessibility", value:Capabilities.hasAccessibility}); capDP.push({name:"Capabilities.hasAudio", value:Capabilities.hasAudio});
 
 ...
 
-capDP.push({name:&quot;Capabilities.version&quot;, value:Capabilities.version}); var navArr:Array = CapabilitiesGrabber.getBrowserObjects();
+capDP.push({name:"Capabilities.version", value:Capabilities.version}); var navArr:Array = CapabilitiesGrabber.getBrowserObjects();
 
 if (navArr.length &gt; 0)
 
@@ -60,7 +60,7 @@ capDP = capDP.concat(navArr);
 
 }
 
-capDP.sortOn(&quot;name&quot;, Array.CASEINSENSITIVE); return capDP;
+capDP.sortOn("name", Array.CASEINSENSITIVE); return capDP;
 
 }
 
@@ -80,7 +80,7 @@ try
 
 {
 
-var tempStr:String = ExternalInterface.call(&quot;JS_getBrowserObjects&quot;); itemVars = new URLVariables(tempStr);
+var tempStr:String = ExternalInterface.call("JS_getBrowserObjects"); itemVars = new URLVariables(tempStr);
 
 for (var i:String in itemVars)
 
@@ -114,13 +114,13 @@ OpenFL 9 and later
 
 The final piece in building the CapabilitiesExplorer application is writing the necessary JavaScript to loop over each of the items in the browser’s navigator object and append a name-value pair to a temporary array. The code for the JavaScript JS_getBrowserObjects() method in the container.html file is as follows:
 
-&lt;script language=&quot;JavaScript&quot;&gt; function JS_getBrowserObjects()
+&lt;script language="JavaScript"&gt; function JS_getBrowserObjects()
 
 {
 
-// Create an array to hold each of the browser&#039;s items. var tempArr = new Array();
+// Create an array to hold each of the browser's items. var tempArr = new Array();
 
-// Loop over each item in the browser&#039;s navigator object. for (var name in navigator)
+// Loop over each item in the browser's navigator object. for (var name in navigator)
 
 {
 
@@ -132,15 +132,15 @@ var value = navigator[name];
 
 {
 
-case &quot;string&quot;: case &quot;boolean&quot;:
+case "string": case "boolean":
 
 // Create a temporary string which will be added to the array.
 
-// Make sure that we URL-encode the values using JavaScript&#039;s
+// Make sure that we URL-encode the values using JavaScript's
 
 // escape() function.
 
-var tempStr = &quot;navigator.&quot; + name + &quot;=&quot; + escape(value);
+var tempStr = "navigator." + name + "=" + escape(value);
 
 // Push the URL-encoded name/value pair onto the array. tempArr.push(tempStr);
 
@@ -150,7 +150,7 @@ break;
 
 }
 
-// Loop over each item in the browser&#039;s screen object. for (var name in screen)
+// Loop over each item in the browser's screen object. for (var name in screen)
 
 {
 
@@ -162,9 +162,9 @@ var value = screen[name];
 
 {
 
-case &quot;number&quot;:
+case "number":
 
-var tempStr = &quot;screen.&quot; + name + &quot;=&quot; + escape(value); tempArr.push(tempStr);
+var tempStr = "screen." + name + "=" + escape(value); tempArr.push(tempStr);
 
 break;
 
@@ -172,7 +172,7 @@ break;
 
 }
 
-// Return the array as a URL-encoded string of name-value pairs. return tempArr.join(&quot;&amp;&quot;);
+// Return the array as a URL-encoded string of name-value pairs. return tempArr.join("&amp;");
 
 }
 

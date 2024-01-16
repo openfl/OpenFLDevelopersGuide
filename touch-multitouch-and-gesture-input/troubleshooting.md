@@ -38,7 +38,7 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(TouchEvent.TOUCH_TAP, taplistener); function taplistener(e:TouchEvent): void {
 
-myTextField.text = &quot;I&#039;ve been tapped&quot;; myTextField.y = 50; addChild(myTextField);
+myTextField.text = "I've been tapped"; myTextField.y = 50; addChild(myTextField);
 
 }
 
@@ -54,9 +54,9 @@ stage.addEventListener(TransformGestureEvent.GESTURE_ZOOM , onZoom); var myTextF
 
 myTextField.y = 200;
 
-myTextField.text = &quot;Perform a zoom gesture&quot;; addChild(myTextField);
+myTextField.text = "Perform a zoom gesture"; addChild(myTextField);
 
-function onZoom(evt:TransformGestureEvent):void { myTextField.text = &quot;Zoom is supported&quot;;
+function onZoom(evt:TransformGestureEvent):void { myTextField.text = "Zoom is supported";
 
 }
 
@@ -70,9 +70,9 @@ stage.addEventListener(TransformGestureEvent.GESTURE_PAN , onPan); var myTextFie
 
 myTextField.y = 200;
 
-myTextField.text = &quot;Perform a pan gesture&quot;; addChild(myTextField);
+myTextField.text = "Perform a pan gesture"; addChild(myTextField);
 
-function onPan(evt:TransformGestureEvent):void { myTextField.text = &quot;Pan is supported&quot;;
+function onPan(evt:TransformGestureEvent):void { myTextField.text = "Pan is supported";
 
 }
 
@@ -90,7 +90,7 @@ This Internet Explorer zoom behavior is overridden by adding the following to th
 
 &lt;head&gt;
 
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, height=device-height, initial- scale=1.0&quot;&gt;
+&lt;meta name="viewport" content="width=device-width, height=device-height, initial- scale=1.0"&gt;
 
 &lt;/head&gt;
 

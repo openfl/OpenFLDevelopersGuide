@@ -44,7 +44,8 @@ package
 
 {
 
-import openfl.display.Sprite; import openfl.media.Sound;
+import openfl.display.Sprite;
+import openfl.media.Sound;
 
 import openfl.media.SoundChannel;
 
@@ -52,7 +53,7 @@ public class EmbeddedSoundExample extends Sprite
 
 {
 
-[Embed(source=&quot;smallSound.mp3&quot;)] public var soundClass:Class;
+[Embed(source="smallSound.mp3")] public var soundClass:Class;
 
 public function EmbeddedSoundExample()
 

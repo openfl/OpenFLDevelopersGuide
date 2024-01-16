@@ -1,6 +1,6 @@
 # Encrypted local storage {#encrypted-local-storage}
 
-The [EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application&#039;s private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in &quot;Limitations of the encrypted local store&quot; and &quot;Best practices,&quot; below.
+The [EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application's private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in "Limitations of the encrypted local store" and "Best practices," below.
 
 **_Note:_** _In addition to the encrypted local store, AIR also provides encryption for content stored in SQL databases. For details, see_
 
@@ -56,15 +56,15 @@ Use the setItem() static method of the EncryptedLocalStore class to store data i
 
 For example, the following code stores a string in the encrypted local store:
 
-var str:String = &quot;Bob&quot;;
+var str:String = "Bob";
 
-var bytes:ByteArray = new ByteArray(); bytes.writeUTFBytes(str); EncryptedLocalStore.setItem(&quot;firstName&quot;, bytes);
+var bytes:ByteArray = new ByteArray(); bytes.writeUTFBytes(str); EncryptedLocalStore.setItem("firstName", bytes);
 
 The third parameter of the setItem() method, the stronglyBound parameter, is optional. When this parameter is set to true, the encrypted local store binds the stored item to the storing AIR application’s digital signature and bits:
 
-var str:String = &quot;Bob&quot;;
+var str:String = "Bob";
 
-var bytes:ByteArray = new ByteArray(); bytes.writeUTFBytes(str); EncryptedLocalStore.setItem(&quot;firstName&quot;, bytes, false);
+var bytes:ByteArray = new ByteArray(); bytes.writeUTFBytes(str); EncryptedLocalStore.setItem("firstName", bytes, false);
 
 For an item that is stored with stronglyBound set to true, subsequent calls to getItem() only succeed if the calling AIR application is identical to the storing application (if no data in files in the application directory have changed). If the calling AIR application is different from the storing application, the application throws an Error exception when you call getItem() for a strongly bound item. If you update your application, it will not be able to read strongly bound data previously written to the encrypted local store. Setting stronglyBound to true on mobile devices is ignored; the parameter is always treated as false.
 
@@ -78,7 +78,7 @@ Adobe AIR 1.0 and later
 
 You can retrieve a value from the encrypted local store by using the EncryptedLocalStore.getItem() method, as in the following example:
 
-var storedValue:ByteArray = EncryptedLocalStore.getItem(&quot;firstName&quot;); trace(storedValue.readUTFBytes(storedValue.length)); // &quot;Bob&quot;
+var storedValue:ByteArray = EncryptedLocalStore.getItem("firstName"); trace(storedValue.readUTFBytes(storedValue.length)); // "Bob"
 
 ## Removing data from the encrypted local store {#removing-data-from-the-encrypted-local-store}
 
@@ -86,7 +86,7 @@ Adobe AIR 1.0 and later
 
 You can delete a value from the encrypted local store by using the EncryptedLocalStore.removeItem() method, as in the following example:
 
-EncryptedLocalStore.removeItem(&quot;firstName&quot;);
+EncryptedLocalStore.removeItem("firstName");
 
 You can clear all data from the encrypted local store by calling the EncryptedLocalStore.reset() method, as in the following example:
 

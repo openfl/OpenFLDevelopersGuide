@@ -12,7 +12,7 @@ OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
 The initFilters() method initializes the filters. Its first argument is an array of the fully qualified class names of all the filters applied to the display object. This array of filter names is generated from the filters list for the motion tween in Flash. In your copy of the script, you can remove or add any of the filters in the openfl.filters package to this array. The following call initializes the filters list for the target display object. It applies the DropShadowFilter, GlowFilter, and BevelFilter and copies the list to each keyframe in the Motion object.
 
-motion_Box.initFilters([&quot;openfl.filters.DropShadowFilter&quot;, &quot;openfl.filters.GlowFilter&quot;, &quot;openfl.filters.BevelFilter&quot;], [0, 0, 0]);
+motion_Box.initFilters(["openfl.filters.DropShadowFilter", "openfl.filters.GlowFilter", "openfl.filters.BevelFilter"], [0, 0, 0]);
 
 ## Adding filters {#adding-filters-0}
 
@@ -26,31 +26,31 @@ The addFilterPropertyArray() method describes the properties of an initialized f
 
 Given the previous call to initFilters(), the following calls to addFilterPropertyArray() assign a value of 5 to the blurX and blurY properties of the DropShadowFilter. The DropShadowFilter is the first (index 0) item in the initialized filters array:
 
-motion_Box.addFilterPropertyArray(0, &quot;blurX&quot;, [5]);
+motion_Box.addFilterPropertyArray(0, "blurX", [5]);
 
-motion_Box.addFilterPropertyArray(0, &quot;blurY&quot;, [5]);
+motion_Box.addFilterPropertyArray(0, "blurY", [5]);
 
 The next three calls assign values to the quality, alpha, and color properties of the GlowFilter, the second item (index
 
 1) in the initialized filter array:
 
-motion_Box.addFilterPropertyArray(1, &quot;quality&quot;, [BitmapFilterQuality.LOW]);
+motion_Box.addFilterPropertyArray(1, "quality", [BitmapFilterQuality.LOW]);
 
-motion_Box.addFilterPropertyArray(1, &quot;alpha&quot;, [1.00]);
+motion_Box.addFilterPropertyArray(1, "alpha", [1.00]);
 
-motion_Box.addFilterPropertyArray(1, &quot;color&quot;, [0xff0000]);
+motion_Box.addFilterPropertyArray(1, "color", [0xff0000]);
 
 The next four calls assign values to the shadowAlpha, shadowColor, highlightAlpha, and highlightColor of the
 
 BevelFilter, the third (index 2) item in the initialized filters array:
 
-motion_Box.addFilterPropertyArray(2, &quot;shadowAlpha&quot;, [1.00]);
+motion_Box.addFilterPropertyArray(2, "shadowAlpha", [1.00]);
 
-motion_Box.addFilterPropertyArray(2, &quot;shadowColor&quot;, [0x000000]);
+motion_Box.addFilterPropertyArray(2, "shadowColor", [0x000000]);
 
-motion_Box.addFilterPropertyArray(2, &quot;highlightAlpha&quot;, [1.00]);
+motion_Box.addFilterPropertyArray(2, "highlightAlpha", [1.00]);
 
-motion_Box.addFilterPropertyArray(2, &quot;highlightColor&quot;, [0xffffff]);
+motion_Box.addFilterPropertyArray(2, "highlightColor", [0xffffff]);
 
 ## Adjusting color with the ColorMatrixFilter {#adjusting-color-with-the-colormatrixfilter}
 
@@ -58,13 +58,13 @@ OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
 After the ColorMatrixFilter has been initialized, you can set the appropriate AdjustColor properties to adjust the brightness, contrast, saturation, and hue of the tweened display object. Typically, the AdjustColor filter is applied when the motion tween is created in Flash; you can fine-tune it in your copy of the Haxe. The following example transforms the hue and saturation of the display object as it moves.
 
-motion_Leaf_1.initFilters([&quot;flash.filters.ColorMatrix&quot;], [0], -1, -1);
+motion_Leaf_1.initFilters(["flash.filters.ColorMatrix"], [0], -1, -1);
 
-motion_Leaf_1.addFilterPropertyArray(0, &quot;adjustColorBrightness&quot;, [0], -1, -1);
+motion_Leaf_1.addFilterPropertyArray(0, "adjustColorBrightness", [0], -1, -1);
 
-motion_Leaf_1.addFilterPropertyArray(0, &quot;adjustColorContrast&quot;, [0], -1, -1);
+motion_Leaf_1.addFilterPropertyArray(0, "adjustColorContrast", [0], -1, -1);
 
-motion_Leaf_1.addFilterPropertyArray(0, &quot;adjustColorSaturation&quot;, [
+motion_Leaf_1.addFilterPropertyArray(0, "adjustColorSaturation", [
 
 0,-0.589039,1.17808,-1.76712,-2.35616,-2.9452,-3.53424,-4.12328,
 
@@ -92,7 +92,7 @@ motion_Leaf_1.addFilterPropertyArray(0, &quot;adjustColorSaturation&quot;, [
 
 -1, -1);
 
-motion_Leaf_1.addFilterPropertyArray(0, &quot;adjustColorHue&quot;, [
+motion_Leaf_1.addFilterPropertyArray(0, "adjustColorHue", [
 
 0,0.677418,1.35484,2.03226,2.70967,3.38709,4.06451,4.74193,5.41935,
 

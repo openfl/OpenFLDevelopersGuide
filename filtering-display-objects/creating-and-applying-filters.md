@@ -14,19 +14,22 @@ Although not shown here, the DropShadowFilter() constructor (like all the filter
 
 ## Applying a filter {#applying-a-filter}
 
-Once you&#039;ve constructed a filter object, you can apply it to a display object or a BitmapData object; how you apply the filter depends on the object to which you’re applying it.
+Once you've constructed a filter object, you can apply it to a display object or a BitmapData object; how you apply the filter depends on the object to which you’re applying it.
 
 Applying a filter to a display object
 
 When you apply filter effects to a display object, you apply them through the filters property. The filters property of a display object is an Array instance, whose elements are the filter objects applied to the display object. To apply a single filter to a display object, create the filter instance, add it to an Array instance, and assign that Array object to the display object’s filters property:
 
-import openfl.display.Bitmap; import openfl.display.BitmapData;
+import openfl.display.Bitmap;
+import openfl.display.BitmapData;
 
 import openfl.filters.DropShadowFilter;
 
 // Create a bitmapData object and render it to screen
 
-var myBitmapData:BitmapData = new BitmapData(100,100,false,0xFFFF3300); var myDisplayObject:Bitmap = new Bitmap(myBitmapData); addChild(myDisplayObject);
+var myBitmapData:BitmapData = new BitmapData(100,100,false,0xFFFF3300);
+var myDisplayObject:Bitmap = new Bitmap(myBitmapData);
+addChild(myDisplayObject);
 
 // Create a DropShadowFilter instance.
 
@@ -42,15 +45,18 @@ var filtersArray:Array = new Array(dropShadow);
 
 If you want to assign multiple filters to the object, simply add all the filters to the Array instance before assigning it to the filters property. You can add multiple objects to an Array by passing them as parameters to its constructor. For example, this code applies a bevel filter and a glow filter to the previously created display object:
 
-import openfl.filters.BevelFilter; import openfl.filters.GlowFilter;
+import openfl.filters.BevelFilter;
+import openfl.filters.GlowFilter;
 
-// Create the filters and add them to an array. var bevel:BevelFilter = new BevelFilter();
+// Create the filters and add them to an array.
+var bevel:BevelFilter = new BevelFilter();
 
 var glow:GlowFilter = new GlowFilter();
 
 var filtersArray:Array = new Array(bevel, glow);
 
-// Assign the filters array to the display object to apply the filter. myDisplayObject.filters = filtersArray;
+// Assign the filters array to the display object to apply the filter.
+myDisplayObject.filters = filtersArray;
 
 When you’re creating the array containing the filters, you can create it using the new Array() constructor (as shown in the previous examples) or you can use Array literal syntax, wrapping the filters in square brackets ([]). For instance, this line of code:
 
@@ -116,9 +122,11 @@ Adding an additional filter
 
 The following code demonstrates the process of adding an additional filter to a display object that already has one or more filters applied to it. Initially, a glow filter is applied to the display object named myDisplayObject; later, when the display object is clicked, the addFilters() function is called. In this function, two additional filters are applied to myDisplayObject:
 
-import openfl.events.MouseEvent; import openfl.filters.*;
+import openfl.events.MouseEvent;
+import openfl.filters.*;
 
-myDisplayObject.filters = [new GlowFilter()]; function addFilters(event:MouseEvent):void
+myDisplayObject.filters = [new GlowFilter()];
+function addFilters(event:MouseEvent):void
 
 {
 
@@ -126,11 +134,13 @@ myDisplayObject.filters = [new GlowFilter()]; function addFilters(event:MouseEve
 
 var filtersCopy:Array = myDisplayObject.filters;
 
-// Make desired changes to the filters (in this case, adding filters). filtersCopy.push(new BlurFilter());
+// Make desired changes to the filters (in this case, adding filters).
+filtersCopy.push(new BlurFilter());
 
 filtersCopy.push(new DropShadowFilter());
 
-// Apply the changes by reassigning the array to the filters property. myDisplayObject.filters = filtersCopy;
+// Apply the changes by reassigning the array to the filters property.
+myDisplayObject.filters = filtersCopy;
 
 }
 
@@ -148,7 +158,7 @@ The most straightforward situation is to remove the top-most filter on the objec
 
 // Example of removing the top-most filter from a display object
 
-// named &quot;filteredObject&quot;.
+// named "filteredObject".
 
 var tempFilters:Array = filteredObject.filters;
 
@@ -162,15 +172,15 @@ To remove a filter from the middle of an array of filters (assuming that the arr
 
 // Example of removing a filter from the middle of a stack of filters
 
-// applied to a display object named &quot;filteredObject&quot;. var tempFilters:Array = filteredObject.filters;
+// applied to a display object named "filteredObject". var tempFilters:Array = filteredObject.filters;
 
-// Remove the second filter from the array. It&#039;s the item at index 1
+// Remove the second filter from the array. It's the item at index 1
 
 // because Array indexes start from 0.
 
-// The first &quot;1&quot; indicates the index of the filter to remove; the
+// The first "1" indicates the index of the filter to remove; the
 
-// second &quot;1&quot; indicates how many elements to remove. tempFilters.splice(1, 1);
+// second "1" indicates how many elements to remove. tempFilters.splice(1, 1);
 
 // Apply the new set of filters to the display object. filteredObject.filters = tempFilters;
 
@@ -236,7 +246,7 @@ var filterToRemove:ConvolutionFilter;
 
 // which is then assigned as the filteredObject.filters: filteredObject.filters = masterFilterList;
 
-// ... later, when it&#039;s time to remove the filter, this code gets called:
+// ... later, when it's time to remove the filter, this code gets called:
 
 // Loop through the filters to find the index of masterFilterList. var removeIndex:int = -1;
 

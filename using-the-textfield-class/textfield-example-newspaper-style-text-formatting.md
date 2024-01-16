@@ -29,7 +29,7 @@ The CSS file defines three styles, a standard paragraph style for the story, and
 
 p {
 
-font-family: Georgia, &quot;Times New Roman&quot;, Times, _serif; font-size: 12;
+font-family: Georgia, "Times New Roman", Times, _serif; font-size: 12;
 
 leading: 2;
 
@@ -67,7 +67,7 @@ public function onCSSFileLoaded(event:Event):void
 
 this.sheet = new StyleSheet(); this.sheet.parseCSS(loader.data);
 
-h1Format = getTextStyle(&quot;h1&quot;, this.sheet); if (h1Format == null)
+h1Format = getTextStyle("h1", this.sheet); if (h1Format == null)
 
 {
 
@@ -75,7 +75,7 @@ h1Format = getDefaultHeadFormat();
 
 }
 
-h2Format = getTextStyle(&quot;h2&quot;, this.sheet); if (h2Format == null)
+h2Format = getTextStyle("h2", this.sheet); if (h2Format == null)
 
 {
 
@@ -83,7 +83,7 @@ h2Format = getDefaultHeadFormat(); h2Format.size = 16;
 
 }
 
-pFormat = getTextStyle(&quot;p&quot;, this.sheet); if (pFormat == null)
+pFormat = getTextStyle("p", this.sheet); if (pFormat == null)
 
 {
 
@@ -111,7 +111,7 @@ var style:Object = ss.getStyle(styleName); if (style != null)
 
 var colorStr:String = style.color;
 
-if (colorStr != null &amp;&amp; colorStr.indexOf(&quot;#&quot;) == 0)
+if (colorStr != null &amp;&amp; colorStr.indexOf("#") == 0)
 
 {
 
@@ -123,11 +123,11 @@ format = new TextFormat(style.fontFamily,
 
 style.fontSize, style.color,
 
-(style.fontWeight == &quot;bold&quot;), (style.fontStyle == &quot;italic&quot;), (style.textDecoration == &quot;underline&quot;), style.url,
+(style.fontWeight == "bold"), (style.fontStyle == "italic"), (style.textDecoration == "underline"), style.url,
 
 style.target, style.textAlign, style.marginLeft, style.marginRight, style.indent, style.leading);
 
-if (style.hasOwnProperty(&quot;letterSpacing&quot;))
+if (style.hasOwnProperty("letterSpacing"))
 
 {
 
@@ -317,7 +317,7 @@ public function getOptimalHeight(str:String):int
 
 {
 
-if (field.text == &quot;&quot; || field.text == null)
+if (field.text == "" || field.text == null)
 
 {
 
@@ -349,7 +349,7 @@ public function layoutColumns():void
 
 {
 
-if (this._text == &quot;&quot; || this._text == null)
+if (this._text == "" || this._text == null)
 
 {
 
@@ -361,7 +361,7 @@ var field:TextField = fieldArray[0] as TextField; field.text = this._text; field
 
 this.preferredHeight = this.getOptimalHeight(field); var remainder:String = this._text;
 
-var fieldText:String = &quot;&quot;;
+var fieldText:String = "";
 
 var lastLineEndedPara:Boolean = true;
 
@@ -393,7 +393,7 @@ field.setTextFormat(this.firstLineFormat, 0, lineLen);
 
 field.x = i * (colWidth + gutter); field.y = 0;
 
-remainder = &quot;&quot;; fieldText = &quot;&quot;;
+remainder = ""; fieldText = "";
 
 var linesRemaining:int = field.numLines;
 

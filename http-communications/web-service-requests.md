@@ -44,29 +44,42 @@ Programming a REST-style web service call in Haxe, typically involves the follow
 
 For example, consider a web service that exposes a test method that echoes the call parameters back to the requestor. The following Haxe code could be used to call the service:
 
-import openfl.events.Event; import openfl.events.ErrorEvent;
+import openfl.events.Event;
+import openfl.events.ErrorEvent;
 
-import openfl.events.IOErrorEvent; import openfl.events.SecurityErrorEvent; import openfl.net.URLLoader;
+import openfl.events.IOErrorEvent;
+import openfl.events.SecurityErrorEvent;
+import openfl.net.URLLoader;
 
-import openfl.net.URLRequest; import openfl.net.URLRequestMethod; import openfl.net.URLVariables;
+import openfl.net.URLRequest;
+import openfl.net.URLRequestMethod;
+import openfl.net.URLVariables;
 
-private var requestor:URLLoader = new URLLoader(); public function restServiceCall():void
+private var requestor:URLLoader = new URLLoader();
+public function restServiceCall():void
 
 {
 
 //Create the HTTP request object
 
-var request:URLRequest = new URLRequest( [&quot;http://service.example.com/&quot;](http://service.example.com/) ); request.method = URLRequestMethod.GET;
+var request:URLRequest = new URLRequest( "http://service.example.com/" );
+request.method = URLRequestMethod.GET;
 
 //Add the URL variables
 
-var variables:URLVariables = new URLVariables(); variables.method = &quot;test.echo&quot;; variables.api_key = &quot;123456ABC&quot;;
+var variables:URLVariables = new URLVariables();
+variables.method = "test.echo";
+variables.api_key = "123456ABC";
 
-variables.message = &quot;Able was I, ere I saw Elba.&quot;; request.data = variables;
+variables.message = "Able was I, ere I saw Elba."; 
+equest.data = variables;
 
 //Initiate the transaction requestor = new URLLoader();
 
-requestor.addEventListener( Event.COMPLETE, httpRequestComplete ); requestor.addEventListener( IOErrorEvent.IOERROR, httpRequestError ); requestor.addEventListener( SecurityErrorEvent.SECURITY_ERROR, httpRequestError ); requestor.load( request );
+requestor.addEventListener( Event.COMPLETE, httpRequestComplete );
+requestor.addEventListener( IOErrorEvent.IOERROR, httpRequestError );
+requestor.addEventListener( SecurityErrorEvent.SECURITY_ERROR, httpRequestError );
+requestor.load( request );
 
 }
 
@@ -78,7 +91,8 @@ trace( event.target.data );
 
 }
 
-private function httpRequestError( error:ErrorEvent ):void{ trace( &quot;An error occured: &quot; + error.message );
+private function httpRequestError( error:ErrorEvent ):void{
+	trace( "An error occured: " + error.message );
 
 }
 
@@ -88,25 +102,32 @@ In JavaScript within an AIR application, you can make the same request using the
 
 &lt;head&gt;&lt;title&gt;RESTful web service request&lt;/title&gt;
 
-&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;script type="text/javascript"&gt;
 
 function makeRequest()
 
 {
 
-var requestDisplay = document.getElementById( &quot;request&quot; ); var resultDisplay = document.getElementById( &quot;result&quot; );
+var requestDisplay = document.getElementById( "request" ); var resultDisplay = document.getElementById( "result" );
 
 //Create a conveninece object to hold the call properties var request = {};
 
-request.URL = [&quot;http://service.example.com/&quot;;](http://service.example.com/) request.method = &quot;test.echo&quot;; request.HTTPmethod = &quot;GET&quot;; request.parameters = {}; request.parameters.api_key = &quot;ABCDEF123&quot;;
+request.URL = "http://service.example.com/";
+request.method = "test.echo";
+request.HTTPmethod = "GET";
+request.parameters = {};
+request.parameters.api_key = "ABCDEF123";
 
-request.parameters.message = &quot;Able was I ere I saw Elba.&quot;; var requestURL = makeURL( request );
+request.parameters.message = "Able was I ere I saw Elba.";
+var requestURL = makeURL( request );
 
 xmlhttp = new XMLHttpRequest();
 
-xmlhttp.open( request.HTTPmethod, requestURL, true); xmlhttp.onreadystatechange = function() {
+xmlhttp.open( request.HTTPmethod, requestURL, true);
+xmlhttp.onreadystatechange = function() {
 
-if (xmlhttp.readyState == 4) { resultDisplay.innerHTML = xmlhttp.responseText;
+if (xmlhttp.readyState == 4) {
+	resultDisplay.innerHTML = xmlhttp.responseText;
 
 }
 
@@ -118,15 +139,17 @@ requestDisplay.innerHTML = requestURL;
 
 }
 
-//Convert the request object into a properly formatted URL function makeURL( request )
+//Convert the request object into a properly formatted URL
+function makeURL( request )
 
 {
 
-var url = request.URL + &quot;?method=&quot; + escape( request.method ); for( var property in request.parameters )
+var url = request.URL + "?method=" + escape( request.method );
+for( var property in request.parameters )
 
 {
 
-url += &quot;&amp;&quot; + property + &quot;=&quot; + escape( request.parameters[property] );
+url += "&amp;" + property + "=" + escape( request.parameters[property] );
 
 }
 
@@ -138,15 +161,15 @@ return url;
 
 &lt;/head&gt;
 
-&lt;body onload=&quot;makeRequest()&quot;&gt;
+&lt;body onload="makeRequest()"&gt;
 
 &lt;h1&gt;Request:&lt;/h1&gt;
 
-&lt;div id=&quot;request&quot;&gt;&lt;/div&gt;
+&lt;div id="request"&gt;&lt;/div&gt;
 
 &lt;h1&gt;Result:&lt;/h1&gt;
 
-&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;div id="result"&gt;&lt;/div&gt;
 
 &lt;/body&gt;
 
@@ -158,11 +181,16 @@ An XML-RPC web service takes its call parameters as an XML document rather than 
 
 The following example illustrates how to use the same web service call shown in the REST example, but this time as an XML-RPC service:
 
-import openfl.events.Event; import openfl.events.ErrorEvent;
+import openfl.events.Event;
+import openfl.events.ErrorEvent;
 
-import openfl.events.IOErrorEvent; import openfl.events.SecurityErrorEvent; import openfl.net.URLLoader;
+import openfl.events.IOErrorEvent;
+import openfl.events.SecurityErrorEvent;
+import openfl.net.URLLoader;
 
-import openfl.net.URLRequest; import openfl.net.URLRequestMethod; import openfl.net.URLVariables;
+import openfl.net.URLRequest;
+import openfl.net.URLRequestMethod;
+import openfl.net.URLVariables;
 
 public function xmlRPCRequest():void
 
@@ -186,11 +214,11 @@ public function xmlRPCRequest():void
 
 &lt;/params&gt;
 
-&lt;/methodCall&gt;; xmlRPC.methodName = &quot;test.echo&quot;;
+&lt;/methodCall&gt;; xmlRPC.methodName = "test.echo";
 
 //Add the method parameters
 
-var parameters:Object = new Object(); parameters.api_key = &quot;123456ABC&quot;; parameters.message = &quot;Able was I, ere I saw Elba.&quot;;
+var parameters:Object = new Object(); parameters.api_key = "123456ABC"; parameters.message = "Able was I, ere I saw Elba.";
 
 for( var propertyName:String in parameters )
 
@@ -214,11 +242,11 @@ xmlRPC..struct.member[xmlRPC..struct.member.length + 1] =
 
 //Create the HTTP request object
 
-var request:URLRequest = new URLRequest( [&quot;http://service.example.com/xml-rpc/&quot;](http://service.example.com/xml-rpc/) ); request.method = URLRequestMethod.POST;
+var request:URLRequest = new URLRequest( ["http://service.example.com/xml-rpc/"](http://service.example.com/xml-rpc/) ); request.method = URLRequestMethod.POST;
 
 request.cacheResponse = false;
 
-request.requestHeaders.push(new URLRequestHeader(&quot;Content-Type&quot;, &quot;application/xml&quot;));
+request.requestHeaders.push(new URLRequestHeader("Content-Type", "application/xml"));
 
 request.data = xmlRPC;
 
@@ -242,7 +270,7 @@ private function xmlRPCRequestError( error:ErrorEvent ):void
 
 {
 
-trace( &quot;An error occurred: &quot; + error );
+trace( "An error occurred: " + error );
 
 }
 
@@ -256,27 +284,34 @@ The following example uses DOM methods to create an XML-RPC message and an XMLHt
 
 &lt;title&gt;XML-RPC web service request&lt;/title&gt;
 
-&lt;script type=&quot;text/javascript&quot;&gt;
+&lt;script type="text/javascript"&gt;
 
 function makeRequest()
 
 {
 
-var requestDisplay = document.getElementById( &quot;request&quot; ); var resultDisplay = document.getElementById( &quot;result&quot; );
+var requestDisplay = document.getElementById( "request" );
+var resultDisplay = document.getElementById( "result" );
 
 var request = {};
 
-request.URL = [&quot;http://services.example.com/xmlrpc/&quot;;](http://services.example.com/xmlrpc/) request.method = &quot;test.echo&quot;;
+request.URL = "http://services.example.com/xmlrpc/";
+request.method = "test.echo";
 
-request.HTTPmethod = &quot;POST&quot;; request.parameters = {}; request.parameters.api_key = &quot;123456ABC&quot;;
+request.HTTPmethod = "POST";
+request.parameters = {};
+request.parameters.api_key = "123456ABC";
 
-request.parameters.message = &quot;Able was I ere I saw Elba.&quot;; var requestMessage = formatXMLRPC( request );
+request.parameters.message = "Able was I ere I saw Elba.";
+var requestMessage = formatXMLRPC( request );
 
 xmlhttp = new XMLHttpRequest();
 
-xmlhttp.open( request.HTTPmethod, request.URL, true); xmlhttp.onreadystatechange = function() {
+xmlhttp.open( request.HTTPmethod, request.URL, true);
+xmlhttp.onreadystatechange = function() {
 
-if (xmlhttp.readyState == 4) { resultDisplay.innerText = xmlhttp.responseText;
+if (xmlhttp.readyState == 4) {
+	resultDisplay.innerText = xmlhttp.responseText;
 
 }
 
@@ -292,39 +327,50 @@ requestDisplay.innerText = xmlToString( requestMessage.documentElement );
 
 {
 
-var xmldoc = document.implementation.createDocument( &quot;&quot;, &quot;&quot;, null ); var root = xmldoc.createElement( &quot;methodCall&quot; );
+var xmldoc = document.implementation.createDocument( "", "", null );
+var root = xmldoc.createElement( "methodCall" );
 
 xmldoc.appendChild( root );
 
-var methodName = xmldoc.createElement( &quot;methodName&quot; );
+var methodName = xmldoc.createElement( "methodName" );
 
-var methodString = xmldoc.createTextNode( request.method ); methodName.appendChild( methodString );
+var methodString = xmldoc.createTextNode( request.method );
+methodName.appendChild( methodString );
 
 root.appendChild( methodName );
 
-var params = xmldoc.createElement( &quot;params&quot; ); root.appendChild( params );
+var params = xmldoc.createElement( "params" );
+root.appendChild( params );
 
-var param = xmldoc.createElement( &quot;param&quot; ); params.appendChild( param );
+var param = xmldoc.createElement( "param" );
+params.appendChild( param );
 
-var value = xmldoc.createElement( &quot;value&quot; ); param.appendChild( value );
+var value = xmldoc.createElement( "value" );
+param.appendChild( value );
 
-var struct = xmldoc.createElement( &quot;struct&quot; ); value.appendChild( struct );
+var struct = xmldoc.createElement( "struct" );
+value.appendChild( struct );
 
 for( var property in request.parameters )
 
 {
 
-var member = xmldoc.createElement( &quot;member&quot; ); struct.appendChild( member );
+var member = xmldoc.createElement( "member" );
+struct.appendChild( member );
 
-var name = xmldoc.createElement( &quot;name&quot; );
+var name = xmldoc.createElement( "name" );
 
-var paramName = xmldoc.createTextNode( property ); name.appendChild( paramName )
+var paramName = xmldoc.createTextNode( property );
+name.appendChild( paramName )
 
 member.appendChild( name );
 
-var value = xmldoc.createElement( &quot;value&quot; ); var type = xmldoc.createElement( &quot;string&quot; ); value.appendChild( type );
+var value = xmldoc.createElement( "value" );
+var type = xmldoc.createElement( "string" );
+value.appendChild( type );
 
-var paramValue = xmldoc.createTextNode( request.parameters[property] ); type.appendChild( paramValue )
+var paramValue = xmldoc.createTextNode( request.parameters[property] );
+type.appendChild( paramValue )
 
 member.appendChild( value );
 
@@ -338,9 +384,10 @@ return xmldoc;
 
 {
 
-if( indent == null ) indent = &quot;&quot;;
+if( indent == null ) indent = "";
 
-var result = indent + &quot;&lt;&quot; + rootNode.tagName + &quot;&gt;\n&quot;; for( var i = 0; i &lt; rootNode.childNodes.length; i++)
+var result = indent + "&lt;" + rootNode.tagName + "&gt;\n";
+for( var i = 0; i &lt; rootNode.childNodes.length; i++)
 
 {
 
@@ -348,7 +395,7 @@ if(rootNode.childNodes.item( i ).nodeType == Node.TEXT_NODE )
 
 {
 
-result += indent + &quot; &quot; + rootNode.childNodes.item( i ).textContent + &quot;\n&quot;;
+result += indent + " " + rootNode.childNodes.item( i ).textContent + "\n";
 
 }
 
@@ -358,7 +405,7 @@ if( rootNode.childElementCount &gt; 0 )
 
 {
 
-result += xmlToString( rootNode.firstElementChild, indent + &quot; &quot; );
+result += xmlToString( rootNode.firstElementChild, indent + " " );
 
 }
 
@@ -366,7 +413,7 @@ if( rootNode.nextElementSibling )
 
 {
 
-result += indent + &quot;&lt;/&quot; + rootNode.tagName + &quot;&gt;\n&quot;;
+result += indent + "&lt;/" + rootNode.tagName + "&gt;\n";
 
 result += xmlToString( rootNode.nextElementSibling, indent );
 
@@ -376,7 +423,7 @@ else
 
 {
 
-result += indent +&quot;&lt;/&quot; + rootNode.tagName + &quot;&gt;\n&quot;;
+result += indent +"&lt;/" + rootNode.tagName + "&gt;\n";
 
 }
 
@@ -388,15 +435,15 @@ return result;
 
 &lt;/head&gt;
 
-&lt;body onload=&quot;makeRequest()&quot;&gt;
+&lt;body onload="makeRequest()"&gt;
 
 &lt;h1&gt;Request:&lt;/h1&gt;
 
-&lt;pre id=&quot;request&quot;&gt;&lt;/pre&gt;
+&lt;pre id="request"&gt;&lt;/pre&gt;
 
 &lt;h1&gt;Result:&lt;/h1&gt;
 
-&lt;pre id=&quot;result&quot;&gt;&lt;/pre&gt;
+&lt;pre id="result"&gt;&lt;/pre&gt;
 
 &lt;/body&gt;
 

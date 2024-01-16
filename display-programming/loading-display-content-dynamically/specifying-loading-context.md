@@ -50,7 +50,7 @@ The following example shows the code to use to load a SWF from the application p
 
 var loader:Loader = new Loader();
 
-var url:URLRequest = new URLRequest(&quot;swfs/SecondarySwf.swf&quot;);
+var url:URLRequest = new URLRequest("swfs/SecondarySwf.swf");
 
 var loaderContext:LoaderContext = new LoaderContext(false, ApplicationDomain.currentDomain, null);
 
@@ -89,13 +89,16 @@ Updating code to use ProLoader instead of Loader
 
 Because ProLoader mirrors the Loader class, you can easily switch the two classes in your code. The following example shows how to update existing code to use the new class:
 
-import openfl.display.Loader; import openfl.events.Event; var l:Loader = new Loader();
+import openfl.display.Loader;
+import openfl.events.Event;
+var l:Loader = new Loader();
 
 addChild(l);
 
-l.contentLoaderInfo.addEventListener(Event.COMPLETE, loadComplete); l.load(&quot;my.swf&quot;);
+l.contentLoaderInfo.addEventListener(Event.COMPLETE, loadComplete); l.load("my.swf");
 
-function loadComplete(e:Event) { trace(&#039;load complete!&#039;);
+function loadComplete(e:Event) {
+	trace('load complete!');
 
 }
 
@@ -107,9 +110,9 @@ var l:**ProLoader** = new **ProLoader**();
 
 addChild(l);
 
-l.contentLoaderInfo.addEventListener(Event.COMPLETE, loadComplete); l.load(&quot;my.swf&quot;);
+l.contentLoaderInfo.addEventListener(Event.COMPLETE, loadComplete); l.load("my.swf");
 
-function loadComplete(e:Event) { trace(&#039;load complete!&#039;);
+function loadComplete(e:Event) { trace('load complete!');
 
 }
 -->

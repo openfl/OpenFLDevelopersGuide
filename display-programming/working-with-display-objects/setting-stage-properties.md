@@ -221,7 +221,7 @@ Events associated with mouse movement, such as the mouseMove event, use the Mous
 
 ### Hardware scaling in full-screen mode
 
-You can use the Stage class’s fullScreenSourceRect property to set OpenFL to scale a specific region of the stage to full-screen mode. OpenFL scale in hardware, if available, using the graphics and video card on a user&#039;s computer, and generally display content more quickly than software scaling.
+You can use the Stage class’s fullScreenSourceRect property to set OpenFL to scale a specific region of the stage to full-screen mode. OpenFL scale in hardware, if available, using the graphics and video card on a user's computer, and generally display content more quickly than software scaling.
 
 To take advantage of hardware scaling, you set the whole stage or part of the stage to full-screen mode. The following Haxe code sets the whole stage to full-screen mode:
 

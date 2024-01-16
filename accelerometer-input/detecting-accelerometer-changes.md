@@ -28,7 +28,7 @@ else
 
 {
 
-accTextField.text = &quot;Accelerometer feature not supported&quot;;
+accTextField.text = "Accelerometer feature not supported";
 
 }
 
@@ -36,11 +36,11 @@ function updateHandler(evt:AccelerometerEvent):void
 
 {
 
-accTextField.text = &quot;acceleration X: &quot; + evt.accelerationX.toString() + &quot;\n&quot;
+accTextField.text = "acceleration X: " + evt.accelerationX.toString() + "\n"
 
-+ &quot;acceleration Y: &quot; + evt.accelerationY.toString() + &quot;\n&quot;
++ "acceleration Y: " + evt.accelerationY.toString() + "\n"
 
-+ &quot;acceleration Z: &quot; + evt.accelerationZ.toString()
++ "acceleration Z: " + evt.accelerationZ.toString()
 
 }
 
@@ -54,7 +54,7 @@ var accl:Accelerometer; accl = new Accelerometer();
 
 accl.setRequestedUpdateInterval(1000);
 
-The actual time between accelerometer updates may be greater or lesser than this value. Any change in the update interval affects all registered listeners. If you don’t call the setRequestedUpdateInterval() method, the application receives updates based on the device&#039;s default interval.
+The actual time between accelerometer updates may be greater or lesser than this value. Any change in the update interval affects all registered listeners. If you don’t call the setRequestedUpdateInterval() method, the application receives updates based on the device's default interval.
 
 Accelerometer data has some degree of inaccuracy. You can use a moving average of recent data to smooth out the data. For example, the following example factors recent accelerometer readings with the current reading to get a rounded result:
 
@@ -74,7 +74,7 @@ else
 
 {
 
-accTextField.text = &quot;Accelerometer feature not supported&quot;;
+accTextField.text = "Accelerometer feature not supported";
 
 }
 
@@ -84,7 +84,7 @@ function updateHandler(event:AccelerometerEvent):void
 
 accelRollingAvg(event);
 
-accTextField.text = rollingX + &quot;\n&quot; + rollingY + &quot;\n&quot; + rollingZ + &quot;\n&quot;;
+accTextField.text = rollingX + "\n" + rollingY + "\n" + rollingZ + "\n";
 
 }
 

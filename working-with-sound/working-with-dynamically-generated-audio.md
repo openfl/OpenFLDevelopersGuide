@@ -50,7 +50,7 @@ You use the Sound.extract() method to extract data from a Sound object. You can 
 
 var mySound:Sound = new Sound(); var sourceSnd:Sound = new Sound();
 
-var urlReq:URLRequest = new URLRequest(&quot;test.mp3&quot;); sourceSnd.load(urlReq); sourceSnd.addEventListener(Event.COMPLETE, loaded); function loaded(event:Event):void
+var urlReq:URLRequest = new URLRequest("test.mp3"); sourceSnd.load(urlReq); sourceSnd.addEventListener(Event.COMPLETE, loaded); function loaded(event:Event):void
 
 {
 

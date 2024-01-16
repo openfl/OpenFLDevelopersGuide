@@ -20,7 +20,7 @@ Embedding the worker swf
 
 Use the [Embed] metatag to embed the worker swf into the main swf as a ByteArray:
 
-[Embed(source=&quot;../swfs/BgWorker.swf&quot;, mimeType=&quot;application/octet-stream&quot;)] private static var BgWorker_ByteClass:Class;
+[Embed(source="../swfs/BgWorker.swf", mimeType="application/octet-stream")] private static var BgWorker_ByteClass:Class;
 
 private function createWorker():void
 
@@ -40,7 +40,7 @@ Loading an external worker swf
 
 Use a URLLoader object to load an external project. The project must come from the same security domain, such as a project loaded from the same internet domain as the main swf or included in an AIR application package.
 
-var workerLoader:URLLoader = new URLLoader(); workerLoader.dataFormat = URLLoaderDataFormat.BINARY; workerLoader.addEventListener(Event.COMPLETE, loadComplete); workerLoader.load(new URLRequest(&quot;BgWorker.swf&quot;));
+var workerLoader:URLLoader = new URLLoader(); workerLoader.dataFormat = URLLoaderDataFormat.BINARY; workerLoader.addEventListener(Event.COMPLETE, loadComplete); workerLoader.load(new URLRequest("BgWorker.swf"));
 
 private function loadComplete(event:Event):void
 
@@ -66,7 +66,7 @@ You can use a single swf as both the main swf and the worker swf. Use the main d
 
 property to access the swf’s bytes.
 
-// The primordial worker&#039;s main class constructor public function PrimordialWorkerClass()
+// The primordial worker's main class constructor public function PrimordialWorkerClass()
 
 {
 

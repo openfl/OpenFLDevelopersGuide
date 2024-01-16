@@ -31,9 +31,9 @@ Following the file header is the actual file data, which can be either compresse
 
 The user interface for this example consists of a label and a text area (taFiles). The application writes the following information to the text area for each file it encounters in the .zip file: the file name, the compressed size, and the uncompressed size. The following MXML document defines the user interface for the Flex version of the application:
 
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
 
-&lt;mx:WindowedApplication [xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot;](http://www.adobe.com/2006/mxml) layout=&quot;vertical&quot; creationComplete=&quot;init();&quot;&gt;
+&lt;mx:WindowedApplication [xmlns:mx="http://www.adobe.com/2006/mxml"](http://www.adobe.com/2006/mxml) layout="vertical" creationComplete="init();"&gt;
 
 &lt;mx:Script&gt;
 
@@ -47,9 +47,9 @@ The user interface for this example consists of a label and a text area (taFiles
 
 &lt;mx:Form&gt;
 
-&lt;mx:FormItem label=&quot;Output&quot;&gt;
+&lt;mx:FormItem label="Output"&gt;
 
-&lt;mx:TextArea id=&quot;taFiles&quot; width=&quot;320&quot; height=&quot;150&quot;/&gt;
+&lt;mx:TextArea id="taFiles" width="320" height="150"/&gt;
 
 &lt;/mx:FormItem&gt;
 
@@ -61,15 +61,19 @@ The beginning of the program performs the following tasks:
 
 *   Imports the required classes
 
-import openfl.filesystem.*; import openfl.utils.ByteArray; import openfl.events.Event;
+import openfl.filesystem.*;
+import openfl.utils.ByteArray;
+import openfl.events.Event;
 
 *   Defines the user interface for Flash
 
 import fl.controls.*;
 
-//requires TextArea and Label components in the Library var taFiles = new TextArea();
+//requires TextArea and Label components in the Library
+var taFiles = new TextArea();
 
-var output = new Label(); taFiles.setSize(320, 150);
+var output = new Label();
+taFiles.setSize(320, 150);
 
 taFiles.move(10, 30);
 
@@ -77,7 +81,8 @@ output.move(10, 10);
 
 output.width = 150;
 
-output.text = &quot;Contents of HelloAir.zip&quot;; addChild(taFiles);
+output.text = "Contents of HelloAir.zip";
+addChild(taFiles);
 
 addChild(output);
 
@@ -99,7 +104,7 @@ var compSize:uint; var uncompSize:uint; var compMethod:int; var signature:int;
 
 // File variables for accessing .zip file
 
-var zfile:File = File.desktopDirectory.resolvePath(&quot;HelloAIR.zip&quot;); var zStream:FileStream = new FileStream();
+var zfile:File = File.desktopDirectory.resolvePath("HelloAIR.zip"); var zStream:FileStream = new FileStream();
 
 In Flex, the program code starts in the init() method, which is called as the creationComplete handler for the root
 
@@ -167,21 +172,21 @@ The program reads the file name from the variable length portion of the header a
 
 bytes.position = 30;
 
-fileName = bytes.readUTFBytes(flNameLength); // read file name taFiles.appendText(fileName + &quot;\n&quot;); // write file name to text area bytes.position = 18;
+fileName = bytes.readUTFBytes(flNameLength); // read file name taFiles.appendText(fileName + "\n"); // write file name to text area bytes.position = 18;
 
-compSize = bytes.readUnsignedInt(); // store size of compressed portion taFiles.appendText(&quot;\tCompressed size is: &quot; + compSize + &#039;\n&#039;); bytes.position = 22; // offset to uncompressed size
+compSize = bytes.readUnsignedInt(); // store size of compressed portion taFiles.appendText("\tCompressed size is: " + compSize + '\n'); bytes.position = 22; // offset to uncompressed size
 
-uncompSize = bytes.readUnsignedInt(); // store uncompressed size taFiles.appendText(&quot;\tUncompressed size is: &quot; + uncompSize + &#039;\n&#039;);
+uncompSize = bytes.readUnsignedInt(); // store uncompressed size taFiles.appendText("\tUncompressed size is: " + uncompSize + '\n');
 
 // Flex version
 
 bytes.position = 30;
 
-fileName = bytes.readUTFBytes(flNameLength); // read file name taFiles.text += fileName + &quot;\n&quot;; // write file name to text area bytes.position = 18;
+fileName = bytes.readUTFBytes(flNameLength); // read file name taFiles.text += fileName + "\n"; // write file name to text area bytes.position = 18;
 
-compSize = bytes.readUnsignedInt(); // store size of compressed portion taFiles.text += &quot;\tCompressed size is: &quot; + compSize + &#039;\n&#039;; bytes.position = 22; // offset to uncompressed size
+compSize = bytes.readUnsignedInt(); // store size of compressed portion taFiles.text += "\tCompressed size is: " + compSize + '\n'; bytes.position = 22; // offset to uncompressed size
 
-uncompSize = bytes.readUnsignedInt(); // store uncompressed size taFiles.text += &quot;\tUncompressed size is: &quot; + uncompSize + &#039;\n&#039;;
+uncompSize = bytes.readUnsignedInt(); // store uncompressed size taFiles.text += "\tUncompressed size is: " + uncompSize + '\n';
 
 The example reads the rest of the file from the file stream into bytes for the length specified by the compressed size, overwriting the file header in the first 30 bytes. The compressed size is accurate even if the file is not compressed because in that case the compressed size is equal to the uncompressed size of the file.
 

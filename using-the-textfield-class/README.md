@@ -50,7 +50,7 @@ Static text is created through Flash Professional only. You cannot create a stat
 
 You can define dynamic text by assigning a string to the [openfl.text.TextField.text](https://api.openfl.org/openfl/text/TextField.html#text) property. You assign a string directly to the property, as follows:
 
-myTextField.text = &quot;Hello World&quot;;
+myTextField.text = "Hello World";
 
 You can also assign the text property a value from a variable defined in your script, as in the following example:
 
@@ -58,19 +58,22 @@ package
 
 {
 
-import openfl.display.Sprite; import openfl.text.*;
+import openfl.display.Sprite;
+import openfl.text.*;
 
 public class TextWithImage extends Sprite
 
 {
 
-private var myTextBox:TextField = new TextField(); private var myText:String = &quot;Hello World&quot;;
+private var myTextBox:TextField = new TextField();
+private var myText:String = "Hello World";
 
 public function TextWithImage()
 
 {
 
-addChild(myTextBox); myTextBox.text = myText;
+addChild(myTextBox);
+myTextBox.text = myText;
 
 }
 
@@ -94,7 +97,7 @@ Alternatively, you can assign the text property a value from a remote variable. 
 
 The openfl.text.TextField class has an htmlText property that you can use to identify your text string as one containing HTML tags for formatting the content. As in the following example, you must assign your string value to the htmlText property (not the text property) for OpenFL to render the text as HTML:
 
-var myText:String = &quot;&lt;p&gt;This is &lt;b&gt;some&lt;/b&gt; content to &lt;i&gt;render&lt;/i&gt; as &lt;u&gt;HTML&lt;/u&gt; text.&lt;/p&gt;&quot;; myTextBox.htmlText = myText;
+var myText:String = "&lt;p&gt;This is &lt;b&gt;some&lt;/b&gt; content to &lt;i&gt;render&lt;/i&gt; as &lt;u&gt;HTML&lt;/u&gt; text.&lt;/p&gt;"; myTextBox.htmlText = myText;
 
 OpenFL support a subset of HTML tags and entities for the htmlText property. The [openfl.text.TextField.htmlText property description in the OpenFL API Reference](https://api.openfl.org/openfl/text/TextField.html#htmlText) provides detailed information about the supported HTML tags and entities.
 
@@ -114,7 +117,8 @@ package
 
 {
 
-import openfl.display.Sprite; import openfl.text.*;
+import openfl.display.Sprite;
+import openfl.text.*;
 
 public class TextWithImage extends Sprite
 
@@ -122,9 +126,9 @@ public class TextWithImage extends Sprite
 
 private var myTextBox:TextField;
 
-private var myText:String = &quot;&lt;p&gt;This is &lt;b&gt;some&lt;/b&gt; content to &lt;i&gt;test&lt;/i&gt; and
+private var myText:String = "&lt;p&gt;This is &lt;b&gt;some&lt;/b&gt; content to &lt;i&gt;test&lt;/i&gt; and
 
-&lt;i&gt;see&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&#039;eye.jpg&#039; width=&#039;20&#039; height=&#039;20&#039;&gt;&lt;/p&gt;&lt;p&gt;what can be rendered.&lt;/p&gt;&lt;p&gt;You should see an eye image and some &lt;u&gt;HTML&lt;/u&gt; text.&lt;/p&gt;&quot;;
+&lt;i&gt;see&lt;/i&gt;&lt;/p&gt;&lt;p&gt;&lt;img src='eye.jpg' width='20' height='20'&gt;&lt;/p&gt;&lt;p&gt;what can be rendered.&lt;/p&gt;&lt;p&gt;You should see an eye image and some &lt;u&gt;HTML&lt;/u&gt; text.&lt;/p&gt;";
 
 public function TextWithImage()
 
@@ -156,7 +160,8 @@ package
 
 {
 
-import openfl.display.Sprite; import openfl.text.*;
+import openfl.display.Sprite;
+import openfl.text.*;
 
 import openfl.events.MouseEvent;
 
@@ -166,7 +171,7 @@ public class TextScrollExample extends Sprite
 
 private var myTextBox:TextField = new TextField();
 
-private var myText:String = &quot;Hello world and welcome to the show. It&#039;s really nice to meet you. Take your coat off and stay a while. OK, show is over. Hope you had fun. You can go home now. Don&#039;t forget to tip your waiter. There are mints in the bowl by the door. Thank you. Please come again.&quot;;
+private var myText:String = "Hello world and welcome to the show. It's really nice to meet you. Take your coat off and stay a while. OK, show is over. Hope you had fun. You can go home now. Don't forget to tip your waiter. There are mints in the bowl by the door. Thank you. Please come again.";
 
 public function TextScrollExample()
 
@@ -176,7 +181,7 @@ myTextBox.text = myText; myTextBox.width = 200;
 
 myTextBox.height = 50; myTextBox.multiline = true; myTextBox.wordWrap = true; myTextBox.background = true; myTextBox.border = true;
 
-var format:TextFormat = new TextFormat(); format.font = &quot;Verdana&quot;;
+var format:TextFormat = new TextFormat(); format.font = "Verdana";
 
 format.color = 0xFF0000; format.size = 10;
 

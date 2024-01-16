@@ -2,7 +2,7 @@
 
 The IME class lets you manipulate the operating system’s IME within OpenFL. Using Haxe, you can determine the following:
 
-• If an IME is installed on the user&#039;s computer (Capabilities.hasIME)
+• If an IME is installed on the user's computer (Capabilities.hasIME)
 
 • If the IME is enabled or disabled on the user’s computer (IME.enabled)
 
@@ -20,7 +20,7 @@ For more information on working with IMEs, see the documentation for the operati
 
 • [http://www.java.sun.com/](http://www.java.sun.com/)
 
-**_Note:_** _If an IME is not active on the user&#039;s computer, calls to IME methods or properties, other than Capabilities.hasIME, will fail. Once you manually activate an IME, subsequent Haxe calls to IME methods and properties will work as expected. For example, if you are using a Japanese IME, you must activate it before you can call any IME method or property._
+**_Note:_** _If an IME is not active on the user's computer, calls to IME methods or properties, other than Capabilities.hasIME, will fail. Once you manually activate an IME, subsequent Haxe calls to IME methods and properties will work as expected. For example, if you are using a Japanese IME, you must activate it before you can call any IME method or property._
 
 **Checking if an IME is installed and enabled**
 
@@ -34,7 +34,7 @@ if (IME.enabled)
 
 {
 
-trace(&quot;IME is installed and enabled.&quot;);
+trace("IME is installed and enabled.");
 
 }
 
@@ -42,7 +42,7 @@ else
 
 {
 
-trace(&quot;IME is installed but not enabled. Please enable your IME and try again.&quot;);
+trace("IME is installed but not enabled. Please enable your IME and try again.");
 
 }
 
@@ -52,7 +52,7 @@ else
 
 {
 
-trace(&quot;IME is not installed. Please install an IME and try again.&quot;);
+trace("IME is not installed. Please install an IME and try again.");
 
 }
 
@@ -72,35 +72,35 @@ switch (IME.conversionMode)
 
 case IMEConversionMode.ALPHANUMERIC_FULL:
 
-tf.text = &quot;Current conversion mode is alphanumeric (full-width).&quot;; break;
+tf.text = "Current conversion mode is alphanumeric (full-width)."; break;
 
 case IMEConversionMode.ALPHANUMERIC_HALF:
 
-tf.text = &quot;Current conversion mode is alphanumeric (half-width).&quot;; break;
+tf.text = "Current conversion mode is alphanumeric (half-width)."; break;
 
 case IMEConversionMode.CHINESE:
 
-tf.text = &quot;Current conversion mode is Chinese.&quot;; break;
+tf.text = "Current conversion mode is Chinese."; break;
 
 case IMEConversionMode.JAPANESE_HIRAGANA:
 
-tf.text = &quot;Current conversion mode is Japananese Hiragana.&quot;; break;
+tf.text = "Current conversion mode is Japananese Hiragana."; break;
 
 case IMEConversionMode.JAPANESE_KATAKANA_FULL:
 
-tf.text = &quot;Current conversion mode is Japanese Katakana (full-width).&quot;; break;
+tf.text = "Current conversion mode is Japanese Katakana (full-width)."; break;
 
 case IMEConversionMode.JAPANESE_KATAKANA_HALF:
 
-tf.text = &quot;Current conversion mode is Japanese Katakana (half-width).&quot;; break;
+tf.text = "Current conversion mode is Japanese Katakana (half-width)."; break;
 
 case IMEConversionMode.KOREAN:
 
-tf.text = &quot;Current conversion mode is Korean.&quot;; break;
+tf.text = "Current conversion mode is Korean."; break;
 
 default:
 
-tf.text = &quot;Current conversion mode is &quot; + IME.conversionMode + &quot;.&quot;; break;
+tf.text = "Current conversion mode is " + IME.conversionMode + "."; break;
 
 }
 
@@ -110,7 +110,7 @@ else
 
 {
 
-tf.text = &quot;Please install an IME and try again.&quot;;
+tf.text = "Please install an IME and try again.";
 
 }
 
@@ -136,13 +136,13 @@ IME.enabled = true;
 
 IME.conversionMode = IMEConversionMode.KOREAN;
 
-statusText.text = &quot;Conversion mode is &quot; + IME.conversionMode + &quot;.&quot;;
+statusText.text = "Conversion mode is " + IME.conversionMode + ".";
 
 catch (error:Error)
 
 {
 
-statusText.text = &quot;Unable to set conversion mode.\n&quot; + error.message;
+statusText.text = "Unable to set conversion mode.\n" + error.message;
 
 }
 
@@ -160,7 +160,7 @@ events and disable the user’s IME accordingly:
 
 var phoneTxt:TextField = new TextField(); var nameTxt:TextField = new TextField();
 
-phoneTxt.type = TextFieldType.INPUT; phoneTxt.addEventListener(FocusEvent.FOCUS_IN, focusInHandler); phoneTxt.addEventListener(FocusEvent.FOCUS_OUT, focusOutHandler); phoneTxt.restrict = &quot;0-9&quot;;
+phoneTxt.type = TextFieldType.INPUT; phoneTxt.addEventListener(FocusEvent.FOCUS_IN, focusInHandler); phoneTxt.addEventListener(FocusEvent.FOCUS_OUT, focusOutHandler); phoneTxt.restrict = "0-9";
 
 phoneTxt.width = 100;
 
@@ -232,7 +232,7 @@ catch (error:Error)
 
 {
 
-outputTxt.text = &quot;Unable to change IME.&quot;;
+outputTxt.text = "Unable to change IME.";
 
 }
 
@@ -244,7 +244,7 @@ else
 
 {
 
-outputTxt.text = &quot;Please install IME and try again.&quot;;
+outputTxt.text = "Please install IME and try again.";
 
 }
 
@@ -252,7 +252,7 @@ function imeCompositionHandler(event:IMEEvent):void
 
 {
 
-outputTxt.text = &quot;you typed: &quot; + event.text;
+outputTxt.text = "you typed: " + event.text;
 
 }
 

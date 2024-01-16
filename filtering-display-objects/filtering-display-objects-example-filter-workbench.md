@@ -213,7 +213,7 @@ _currentTarget.filters = _currentFilters;
 
 // Remove the current filter from the set
 
-// (This doesn&#039;t remove it from the filter target, since
+// (This doesn't remove it from the filter target, since
 
 // the target uses a copy of the filters array internally.)
 

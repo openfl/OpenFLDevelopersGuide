@@ -16,7 +16,7 @@ When deciding which of these data-sharing techniques is appropriate for a partic
 
 The most basic way to share data between workers is to use a shared property. Each worker maintains an internal dictionary of shared property values. The properties are stored with String key names to distinguish between the properties. To store an object on a worker as a shared property, call the Worker object’s setSharedProperty() method with two arguments, the key name and the value to store:
 
-// code running in the parent worker bgWorker.setSharedProperty(&quot;sharedPropertyName&quot;, someObject);
+// code running in the parent worker bgWorker.setSharedProperty("sharedPropertyName", someObject);
 
 Once the shared property has been set, the value can be read by calling the Worker object’s getSharedProperty()
 
@@ -24,7 +24,7 @@ method, passing in the key name:
 
 // code running in the background worker
 
-receivedProperty = Worker.current.getSharedProperty(&quot;sharedPropertyName&quot;);
+receivedProperty = Worker.current.getSharedProperty("sharedPropertyName");
 
 There is no restriction on which worker reads or sets the property value. For example, code in a background worker can call its setSharedProperty() method to store a value. Code running in the parent worker can then use getSharedProperty() to receive the data.
 
@@ -48,7 +48,7 @@ sendChannel = Worker.current.createMessageChannel(receivingWorker);
 
 Both workers need to have access to the MessageChannel object. The simplest way to do this is to pass the MessageChannel object using the setSharedProperty() method:
 
-receivingWorker.setSharedProperty(&quot;incomingChannel&quot;, sendChannel);
+receivingWorker.setSharedProperty("incomingChannel", sendChannel);
 
 In the receiving worker, register a listener for the MessageChannel object’s channelMessage event. This event is dispatched when the sending worker sends data through the message channel.
 
@@ -56,11 +56,11 @@ In the receiving worker, register a listener for the MessageChannel object’s c
 
 var incomingChannel:MessageChannel;
 
-incomingChannel = Worker.current.getSharedProperty(&quot;incomingChannel&quot;); incomingChannel.addEventListener(Event.CHANNEL_MESSAGE, handleIncomingMessage);
+incomingChannel = Worker.current.getSharedProperty("incomingChannel"); incomingChannel.addEventListener(Event.CHANNEL_MESSAGE, handleIncomingMessage);
 
 To actually send data, in the sending worker call the MessageChannel object’s send() method:
 
-// In the sending worker swf sendChannel.send(&quot;This is a message&quot;);
+// In the sending worker swf sendChannel.send("This is a message");
 
 In the receiving worker, the MessageChannel calls the channelMessage event handler. The receiving worker can then get the data by calling the MessageChannel object’s receive() method.
 
@@ -116,7 +116,7 @@ In the normal case, when you call Worker.setSharedProperty() or MessageChannel.s
 
 Worker.setSharedProperty() or MessageChannel.send().
 
-• In order for a custom class to be deserialized properly, the class definition must be registered using the openfl.net.registerClassAlias() function or [RemoteClass] metadata. The same alias must be used for both worker&#039;s versions of the class.
+• In order for a custom class to be deserialized properly, the class definition must be registered using the openfl.net.registerClassAlias() function or [RemoteClass] metadata. The same alias must be used for both worker's versions of the class.
 
 There are five special cases of objects that are truly shared rather than copied between workers:
 
@@ -130,7 +130,7 @@ There are five special cases of objects that are truly shared rather than copied
 
 • Condition objects
 
-When you pass an instance of one of these objects using the Worker.setSharedProperty() method or MessageChannel.send() method, each worker has a reference to the same underlying object. Changes made to an instance in one worker are immediately available in other workers. In addition, if you pass the same instance of one of these objects to a worker more than once, the runtime doesn&#039;t create a new copy of the object in the receiving worker. Instead, the same reference is re-used.
+When you pass an instance of one of these objects using the Worker.setSharedProperty() method or MessageChannel.send() method, each worker has a reference to the same underlying object. Changes made to an instance in one worker are immediately available in other workers. In addition, if you pass the same instance of one of these objects to a worker more than once, the runtime doesn't create a new copy of the object in the receiving worker. Instead, the same reference is re-used.
 
 ## Additional data-sharing techniques {#additional-data-sharing-techniques}
 

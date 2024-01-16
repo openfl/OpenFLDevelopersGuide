@@ -27,7 +27,7 @@ function reportKeyDown(event:KeyboardEvent):void
 
 {
 
-trace(&quot;Key Pressed: &quot; + String.fromCharCode(event.charCode) + &quot; (character code: &quot; + event.charCode + &quot;)&quot;);
+trace("Key Pressed: " + String.fromCharCode(event.charCode) + " (character code: " + event.charCode + ")");
 
 }
 
@@ -41,7 +41,7 @@ In the following example, keystrokes are reflected in the Output panel only when
 
 This code assumes there is a TextField instance named tf on the Stage.
 
-tf.border = true; tf.type = &quot;input&quot;;
+tf.border = true; tf.type = "input";
 
 tf.addEventListener(KeyboardEvent.KEY_DOWN,reportKeyDown); tf.addEventListener(KeyboardEvent.KEY_UP,reportKeyUp);
 
@@ -49,7 +49,7 @@ function reportKeyDown(event:KeyboardEvent):void
 
 {
 
-trace(&quot;Key Pressed: &quot; + String.fromCharCode(event.charCode) + &quot; (key code: &quot; + event.keyCode + &quot; character code: &quot; + event.charCode + &quot;)&quot;);
+trace("Key Pressed: " + String.fromCharCode(event.charCode) + " (key code: " + event.keyCode + " character code: " + event.charCode + ")");
 
 if (event.keyCode == Keyboard.SHIFT) tf.borderColor = 0xFF0000;
 
@@ -59,7 +59,7 @@ function reportKeyUp(event:KeyboardEvent):void
 
 {
 
-trace(&quot;Key Released: &quot; + String.fromCharCode(event.charCode) + &quot; (key code: &quot; + event.keyCode + &quot; character code: &quot; + event.charCode + &quot;)&quot;);
+trace("Key Released: " + String.fromCharCode(event.charCode) + " (key code: " + event.keyCode + " character code: " + event.charCode + ")");
 
 if (event.keyCode == Keyboard.SHIFT)
 
@@ -97,15 +97,15 @@ For example, suppose you place a text field called tf inside a movie clip called
 
 container.addEventListener(KeyboardEvent.KEY_DOWN,reportKeyDown); container.tf.border = true;
 
-container.tf.type = &quot;input&quot;; container.tf.addEventListener(KeyboardEvent.KEY_DOWN,reportKeyDown);
+container.tf.type = "input"; container.tf.addEventListener(KeyboardEvent.KEY_DOWN,reportKeyDown);
 
 function reportKeyDown(event:KeyboardEvent):void
 
 {
 
-trace(event.currentTarget.name + &quot; hears key press: &quot; + String.fromCharCode(event.charCode)
+trace(event.currentTarget.name + " hears key press: " + String.fromCharCode(event.charCode)
 
-+ &quot; (key code: &quot; + event.keyCode + &quot; character code: &quot; + event.charCode + &quot;)&quot;);
++ " (key code: " + event.keyCode + " character code: " + event.charCode + ")");
 
 }
 

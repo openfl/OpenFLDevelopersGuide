@@ -14,11 +14,11 @@ The following code shows a simple start drag event handler and a stop drag event
 
 mySprite.addEventListener(TouchEvent.TOUCH_BEGIN, onTouchBegin); mySprite.addEventListener(TouchEvent.TOUCH_END, onTouchEnd);
 
-function onTouchBegin(e:TouchEvent) { e.target.startTouchDrag(e.touchPointID, false, bg.getRect(this)); trace(&quot;touch begin&quot;);
+function onTouchBegin(e:TouchEvent) { e.target.startTouchDrag(e.touchPointID, false, bg.getRect(this)); trace("touch begin");
 
 }
 
-function onTouchEnd(e:TouchEvent) { e.target.stopTouchDrag(e.touchPointID); trace(&quot;touch end&quot;);
+function onTouchEnd(e:TouchEvent) { e.target.stopTouchDrag(e.touchPointID); trace("touch end");
 
 }
 

@@ -35,7 +35,7 @@ stage.addEventListener(MouseEvent.CLICK, reportClick); function reportClick(even
 
 {
 
-trace(event.currentTarget.toString() + &quot; dispatches MouseEvent. Local coords [&quot; + event.localX + &quot;,&quot; + event.localY + &quot;] Stage coords [&quot; + event.stageX + &quot;,&quot; + event.stageY + &quot;]&quot;);
+trace(event.currentTarget.toString() + " dispatches MouseEvent. Local coords [" + event.localX + "," + event.localY + "] Stage coords [" + event.stageX + "," + event.stageY + "]");
 
 }
 
@@ -55,17 +55,29 @@ The MouseEvent object also contains altKey, ctrlKey, and shiftKey Boolean proper
 
 You can allow users to drag a Sprite object around the stage using the startDrag() method of the Sprite class. The following code shows an example of this:
 
-import openfl.display.Sprite; import openfl.events.MouseEvent;
+import openfl.display.Sprite;
+import openfl.events.MouseEvent;
 
-var circle:Sprite = new Sprite(); circle.graphics.beginFill(0xFFCC00); circle.graphics.drawCircle(0, 0, 40);
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0xFFCC00);
+circle.graphics.drawCircle(0, 0, 40);
 
-var target1:Sprite = new Sprite(); target1.graphics.beginFill(0xCCFF00); target1.graphics.drawRect(0, 0, 100, 100); target1.name = &quot;target1&quot;;
+var target1:Sprite = new Sprite();
+target1.graphics.beginFill(0xCCFF00);
+target1.graphics.drawRect(0, 0, 100, 100);
+target1.name = "target1";
 
-var target2:Sprite = new Sprite(); target2.graphics.beginFill(0xCCFF00); target2.graphics.drawRect(0, 200, 100, 100); target2.name = &quot;target2&quot;;
+var target2:Sprite = new Sprite();
+target2.graphics.beginFill(0xCCFF00);
+target2.graphics.drawRect(0, 200, 100, 100);
+target2.name = "target2";
 
-addChild(target1); addChild(target2); addChild(circle);
+addChild(target1);
+addChild(target2);
+addChild(circle);
 
-circle.addEventListener(MouseEvent.MOUSE_DOWN, mouseDown) function mouseDown(event:MouseEvent):void
+circle.addEventListener(MouseEvent.MOUSE_DOWN, mouseDown);
+function mouseDown(event:MouseEvent):void
 
 {
 

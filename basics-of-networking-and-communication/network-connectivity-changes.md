@@ -72,11 +72,11 @@ import openfl.events.StatusEvent;
 
 var monitor:URLMonitor;
 
-monitor = new URLMonitor(new URLRequest(&#039;http://www.example.com&#039;)); monitor.addEventListener(StatusEvent.STATUS, announceStatus); monitor.start();
+monitor = new URLMonitor(new URLRequest('http://www.example.com')); monitor.addEventListener(StatusEvent.STATUS, announceStatus); monitor.start();
 
 function announceStatus(e:StatusEvent):void {
 
-trace(&quot;Status change. Current status: &quot; + monitor.available);
+trace("Status change. Current status: " + monitor.available);
 
 }
 
@@ -88,13 +88,16 @@ AIR applications can also use socket connections for push-model connectivity. Fi
 
 The following code uses an instance of the SocketMonitor class to detect connectivity changes to a socket connection. The port monitored is 6667, a common port for IRC:
 
-import air.net.ServiceMonitor; import openfl.events.StatusEvent;
+import air.net.ServiceMonitor;
+import openfl.events.StatusEvent;
 
-socketMonitor = new SocketMonitor(&#039;www.example.com&#039;,6667); socketMonitor.addEventListener(StatusEvent.STATUS, socketStatusChange); socketMonitor.start();
+socketMonitor = new SocketMonitor('www.example.com',6667);
+socketMonitor.addEventListener(StatusEvent.STATUS, socketStatusChange);
+socketMonitor.start();
 
 function announceStatus(e:StatusEvent):void {
 
-trace(&quot;Status change. Current status: &quot; + socketMonitor.available);
+trace("Status change. Current status: " + socketMonitor.available);
 
 }
 

@@ -22,7 +22,7 @@ The clipboardData property of the event object dispatched as a result of one of 
 
 To write to the clipboard when handling a copy or cut event, use the setData() method of the clipboardData object, passing in the data to copy and the MIME type:
 
-function customCopy(event){ event.clipboardData.setData(&quot;text/plain&quot;, &quot;A copied string.&quot;);
+function customCopy(event){ event.clipboardData.setData("text/plain", "A copied string.");
 
 }
 
@@ -30,7 +30,7 @@ To access the data that is being pasted, you can use the getData() method of the
 
 function customPaste(event){
 
-var pastedData = event.clipboardData(&quot;text/plain&quot;);
+var pastedData = event.clipboardData("text/plain");
 
 }
 
@@ -46,15 +46,15 @@ The following example illustrates how to override the default copy and paste beh
 
 &lt;title&gt;Copy and Paste&lt;/title&gt;
 
-&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt; function onCopy(event){
+&lt;script language="javascript" type="text/javascript"&gt; function onCopy(event){
 
-var selection = window.getSelection(); event.clipboardData.setData(&quot;text/html&quot;,&quot;&lt;i&gt;&quot; + selection + &quot;&lt;/i&gt;&quot;); event.preventDefault();
+var selection = window.getSelection(); event.clipboardData.setData("text/html","&lt;i&gt;" + selection + "&lt;/i&gt;"); event.preventDefault();
 
 }
 
 function onCut(event){
 
-var selection = window.getSelection(); event.clipboardData.setData(&quot;text/html&quot;,&quot;&lt;i&gt;&quot; + selection + &quot;&lt;/i&gt;&quot;); var range = selection.getRangeAt(0);
+var selection = window.getSelection(); event.clipboardData.setData("text/html","&lt;i&gt;" + selection + "&lt;/i&gt;"); var range = selection.getRangeAt(0);
 
 range.extractContents();
 
@@ -64,7 +64,7 @@ event.preventDefault();
 
 function onPaste(event){
 
-var insertion = document.createElement(&quot;b&quot;); insertion.innerHTML = event.clipboardData.getData(&quot;text/html&quot;);
+var insertion = document.createElement("b"); insertion.innerHTML = event.clipboardData.getData("text/html");
 
 var selection = window.getSelection(); var range = selection.getRangeAt(0); range.insertNode(insertion);
 
@@ -76,7 +76,7 @@ event.preventDefault();
 
 &lt;/head&gt;
 
-&lt;body onCopy=&quot;onCopy(event)&quot; onPaste=&quot;onPaste(event)&quot; onCut=&quot;onCut(event)&quot;&gt;
+&lt;body onCopy="onCopy(event)" onPaste="onPaste(event)" onCut="onCut(event)"&gt;
 
 &lt;p&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.&lt;/p&gt;
 

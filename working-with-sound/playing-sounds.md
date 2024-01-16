@@ -2,7 +2,7 @@
 
 Playing a loaded sound can be as simple as calling the Sound.play() method for a Sound object, as follows:
 
-var snd:Sound = new Sound(new URLRequest(&quot;smallSound.mp3&quot;)); snd.play();
+var snd:Sound = new Sound(new URLRequest("smallSound.mp3")); snd.play();
 
 When playing back sounds using Haxe, you can perform the following operations:
 
@@ -22,7 +22,7 @@ Your application can play a sound from a specific starting position by passing t
 
 When the Sound.play() method is called with both a startTime parameter and a loops parameter, the sound is played back repeatedly from the same starting point each time, as shown in the following code:
 
-var snd:Sound = new Sound(new URLRequest(&quot;repeatingSound.mp3&quot;)); snd.play(1000, 3);
+var snd:Sound = new Sound(new URLRequest("repeatingSound.mp3")); snd.play(1000, 3);
 
 In this example, the sound is played from a point one second after the start of the sound, three times in succession.
 
@@ -32,7 +32,7 @@ If your application plays long sounds, like songs or podcasts, you probably want
 
 For example, let’s say your code loads and plays a sound file like this:
 
-var snd:Sound = new Sound(new URLRequest(&quot;bigSound.mp3&quot;)); var channel:SoundChannel = snd.play();
+var snd:Sound = new Sound(new URLRequest("bigSound.mp3")); var channel:SoundChannel = snd.play();
 
 While the sound plays, the SoundChannel.position property indicates the point in the sound file that is currently being played. Your application can store the position value before stopping the sound from playing, as follows:
 
@@ -46,19 +46,22 @@ channel = snd.play(pausePosition);
 
 Your application might want to know when a sound stops playing so it can start playing another sound, or clean up some resources used during the previous playback. The SoundChannel class dispatches an Event.SOUND_COMPLETE event when its sound finishes playing. Your application can listen for this event and take appropriate action, as shown below:
 
-import openfl.events.Event; import openfl.media.Sound; import openfl.net.URLRequest;
+import openfl.events.Event;
+import openfl.media.Sound;
+import openfl.net.URLRequest;
 
 var snd:Sound = new Sound();
 
-var req:URLRequest = new URLRequest(&quot;smallSound.mp3&quot;); snd.load(req);
+var req:URLRequest = new URLRequest("smallSound.mp3"); snd.load(req);
 
-var channel:SoundChannel = snd.play(); channel.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
+var channel:SoundChannel = snd.play();
+channel.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
 
 public function onPlaybackComplete(event:Event)
 
 {
 
-trace(&quot;The sound has finished playing.&quot;);
+trace("The sound has finished playing.");
 
 }
 
@@ -80,11 +83,13 @@ var playbackPercent:uint = 100 * (channel.position / estimatedLength);
 
 The following code loads a larger sound file and uses the Event.ENTER_FRAME event as its timing mechanism for showing playback progress. It periodically reports on the playback percentage, which is calculated as the current position value divided by the total length of the sound data:
 
-import openfl.events.Event; import openfl.media.Sound; import openfl.net.URLRequest;
+import openfl.events.Event;
+import openfl.media.Sound;
+import openfl.net.URLRequest;
 
-var snd:Sound = new Sound(); var req:URLRequest = new
-
-[URLRequest(&quot;http://av.adobe.com/podcast/csbu_dev_podcast_epi_2.mp3&quot;);](http://av.adobe.com/podcast/csbu_dev_podcast_epi_2.mp3) snd.load(req);
+var snd:Sound = new Sound();
+var req:URLRequest = new URLRequest("http://av.adobe.com/podcast/csbu_dev_podcast_epi_2.mp3");
+snd.load(req);
 
 var channel:SoundChannel; channel = snd.play();
 
@@ -98,7 +103,7 @@ var estimatedLength:int =
 
 Math.ceil(snd.length / (snd.bytesLoaded / snd.bytesTotal)); var playbackPercent:uint =
 
-Math.round(100 * (channel.position / estimatedLength)); trace(&quot;Sound playback is &quot; + playbackPercent + &quot;% complete.&quot;);
+Math.round(100 * (channel.position / estimatedLength)); trace("Sound playback is " + playbackPercent + "% complete.");
 
 }
 
@@ -106,7 +111,7 @@ function onPlaybackComplete(event:Event)
 
 {
 
-trace(&quot;The sound has finished playing.&quot;); removeEventListener(Event.ENTER_FRAME, onEnterFrame);
+trace("The sound has finished playing."); removeEventListener(Event.ENTER_FRAME, onEnterFrame);
 
 }
 

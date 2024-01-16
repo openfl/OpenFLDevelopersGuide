@@ -4,7 +4,7 @@ Each instance of the Sound class exists to load and trigger the playback of a sp
 
 If you are loading a small sound file, such as a click sound to be attached to a button, your application can create a new Sound and have it automatically load the sound file, as shown below:
 
-var req:URLRequest = new URLRequest(&quot;click.mp3&quot;); var s:Sound = new Sound(req);
+var req:URLRequest = new URLRequest("click.mp3"); var s:Sound = new Sound(req);
 
 The Sound() constructor accepts a URLRequest object as its first parameter. When a value for the URLRequest parameter is supplied, the new Sound object starts loading the specified sound resource automatically.
 
@@ -22,15 +22,20 @@ A Sound object dispatches a number of different events during the sound loading 
 
 The following code illustrates how to play a sound after it has finished loading:
 
-import openfl.events.Event; import openfl.media.Sound; import openfl.net.URLRequest;
+import openfl.events.Event;
+import openfl.media.Sound;
+import openfl.net.URLRequest;
 
-var s:Sound = new Sound(); s.addEventListener(Event.COMPLETE, onSoundLoaded); var req:URLRequest = new URLRequest(&quot;bigSound.mp3&quot;); s.load(req);
+var s:Sound = new Sound(); s.addEventListener(Event.COMPLETE, onSoundLoaded);
+var req:URLRequest = new URLRequest("bigSound.mp3");
+s.load(req);
 
 function onSoundLoaded(event:Event):void
 
 {
 
-var localSound:Sound = event.target as Sound; localSound.play();
+var localSound:Sound = event.target as Sound;
+localSound.play();
 
 }
 
@@ -46,19 +51,25 @@ The Sound class dispatches two events that make it relatively easy to display th
 
 import openfl.events.Event;
 
-import openfl.events.ProgressEvent; import openfl.media.Sound;
+import openfl.events.ProgressEvent;
+import openfl.media.Sound;
 
 import openfl.net.URLRequest;
 
-var s:Sound = new Sound(); s.addEventListener(ProgressEvent.PROGRESS, onLoadProgress); s.addEventListener(Event.COMPLETE, onLoadComplete); s.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
+var s:Sound = new Sound();
+s.addEventListener(ProgressEvent.PROGRESS, onLoadProgress);
+s.addEventListener(Event.COMPLETE, onLoadComplete);
+s.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
 
-var req:URLRequest = new URLRequest(&quot;bigSound.mp3&quot;); s.load(req);
+var req:URLRequest = new URLRequest("bigSound.mp3");
+s.load(req);
 
 function onLoadProgress(event:ProgressEvent):void
 
 {
 
-var loadedPct:uint = Math.round(100 * (event.bytesLoaded / event.bytesTotal)); trace(&quot;The sound is &quot; + loadedPct + &quot;% loaded.&quot;);
+var loadedPct:uint = Math.round(100 * (event.bytesLoaded / event.bytesTotal));
+trace("The sound is " + loadedPct + "% loaded.");
 
 }
 
@@ -66,7 +77,8 @@ function onLoadComplete(event:Event):void
 
 {
 
-var localSound:Sound = event.target as Sound; localSound.play();
+var localSound:Sound = event.target as Sound;
+localSound.play();
 
 }
 
@@ -74,7 +86,7 @@ function onIOError(event:IOErrorEvent)
 
 {
 
-trace(&quot;The sound could not be loaded: &quot; + event.text);
+trace("The sound could not be loaded: " + event.text);
 
 }
 

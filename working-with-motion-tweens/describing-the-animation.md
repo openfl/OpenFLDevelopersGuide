@@ -38,19 +38,19 @@ motion_Wheel = new Motion();
 
 motion_Wheel.duration = 29;
 
-motion_Wheel.addPropertyArray(&quot;x&quot;, [0]);
+motion_Wheel.addPropertyArray("x", [0]);
 
-motion_Wheel.addPropertyArray(&quot;y&quot;, [0]);
+motion_Wheel.addPropertyArray("y", [0]);
 
-motion_Wheel.addPropertyArray(&quot;scaleX&quot;, [1.00]);
+motion_Wheel.addPropertyArray("scaleX", [1.00]);
 
-motion_Wheel.addPropertyArray(&quot;scaleY&quot;, [1.00]);
+motion_Wheel.addPropertyArray("scaleY", [1.00]);
 
-motion_Wheel.addPropertyArray(&quot;skewX&quot;, [0]);
+motion_Wheel.addPropertyArray("skewX", [0]);
 
-motion_Wheel.addPropertyArray(&quot;skewY&quot;, [0]);
+motion_Wheel.addPropertyArray("skewY", [0]);
 
-motion_Wheel.addPropertyArray(&quot;rotationConcat&quot;, [
+motion_Wheel.addPropertyArray("rotationConcat", [
 
 0,-13.2143,-26.4285,-39.6428,-52.8571,-66.0714,-79.2857,-92.4999,-105.714,
 
@@ -64,7 +64,7 @@ motion_Wheel.addPropertyArray(&quot;rotationConcat&quot;, [
 
 );
 
-motion_Wheel.addPropertyArray(&quot;blendMode&quot;, [&quot;normal&quot;]);
+motion_Wheel.addPropertyArray("blendMode", ["normal"]);
 
 In the next example, the display object named Leaf_1 moves across the stage. Its x and y property arrays contain different values for each of the 100 frames of the animation. In addition, the object rotates on its z axis as it moves across the stage. The multiple items in the rotationZ property array determine the rotation.
 
@@ -72,7 +72,7 @@ motion_Leaf_1 = new MotionBase();
 
 motion_Leaf_1.duration = 100;
 
-motion_Symbol1_4.addPropertyArray(&quot;y&quot;, [
+motion_Symbol1_4.addPropertyArray("y", [
 
 0,5.91999,11.84,17.76,23.68,29.6,35.52,41.44,47.36,53.28,59.2,65.12,71.04,
 
@@ -98,15 +98,15 @@ motion_Symbol1_4.addPropertyArray(&quot;y&quot;, [
 
 );
 
-motion_Symbol1_4.addPropertyArray(&quot;scaleX&quot;, [1.00]);
+motion_Symbol1_4.addPropertyArray("scaleX", [1.00]);
 
-motion_Symbol1_4.addPropertyArray(&quot;scaleY&quot;, [1.00]);
+motion_Symbol1_4.addPropertyArray("scaleY", [1.00]);
 
-motion_Symbol1_4.addPropertyArray(&quot;skewX&quot;, [0]);
+motion_Symbol1_4.addPropertyArray("skewX", [0]);
 
-motion_Symbol1_4.addPropertyArray(&quot;skewY&quot;, [0]);
+motion_Symbol1_4.addPropertyArray("skewY", [0]);
 
-motion_Symbol1_4.addPropertyArray(&quot;z&quot;, [
+motion_Symbol1_4.addPropertyArray("z", [
 
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 
@@ -118,11 +118,11 @@ motion_Symbol1_4.addPropertyArray(&quot;z&quot;, [
 
 );
 
-motion_Symbol1_4.addPropertyArray(&quot;rotationX&quot;, [64.0361]);
+motion_Symbol1_4.addPropertyArray("rotationX", [64.0361]);
 
-motion_Symbol1_4.addPropertyArray(&quot;rotationY&quot;, [41.9578]);
+motion_Symbol1_4.addPropertyArray("rotationY", [41.9578]);
 
-motion_Symbol1_4.addPropertyArray(&quot;rotationZ&quot;, [
+motion_Symbol1_4.addPropertyArray("rotationZ", [
 
 -18.0336,-17.5536,-17.0736,-16.5936,-16.1136,-15.6336,-15.1536,-14.6736,
 
@@ -154,4 +154,4 @@ motion_Symbol1_4.addPropertyArray(&quot;rotationZ&quot;, [
 
 );
 
-motion_Symbol1_4.addPropertyArray(&quot;blendMode&quot;, [&quot;normal&quot;]);
+motion_Symbol1_4.addPropertyArray("blendMode", ["normal"]);

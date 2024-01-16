@@ -24,7 +24,7 @@ private function securityErrorHandler(event:SecurityErrorEvent):void
 
 {
 
-var errorString:String = &quot;[&quot; + event.type + &quot;] &quot; + event.text; trace(errorString);
+var errorString:String = "[" + event.type + "] " + event.text; trace(errorString);
 
 System.setClipboard(errorString);
 

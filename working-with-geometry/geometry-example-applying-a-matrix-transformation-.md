@@ -34,7 +34,7 @@ The transform() method includes parameters for each of the following:
 *   dx and dy—The _x_ and _y_ translation amounts, in pixels
 *   rotation—The rotation amount, in degrees
 *   skew—The skew factor, as a percentage
-*   skewType—The direction in which the skew, either &quot;right&quot; or &quot;left&quot;
+*   skewType—The direction in which the skew, either "right" or "left"
 
 The return value is the resulting matrix.
 
@@ -51,7 +51,7 @@ The skew() method
 
 The skew() method skews the matrix by adjusting the b and c properties of the matrix. An optional parameter, unit, determines the units used to define the skew angle, and if necessary, the method converts the angle value to radians:
 
-if (unit == &quot;degrees&quot;)
+if (unit == "degrees")
 
 {
 
@@ -59,7 +59,7 @@ angle = Math.PI * 2 * angle / 360;
 
 }
 
-if (unit == &quot;gradients&quot;)
+if (unit == "gradients")
 
 {
 
@@ -71,7 +71,7 @@ A skewMatrix Matrix object is created and adjusted to apply the skew transformat
 
 var skewMatrix:Matrix = new Matrix();
 
-The skewSide parameter determines the side to which the skew is applied. If it is set to &quot;right&quot;, the following code sets the b property of the matrix:
+The skewSide parameter determines the side to which the skew is applied. If it is set to "right", the following code sets the b property of the matrix:
 
 skewMatrix.b = Math.tan(angle);
 
@@ -107,7 +107,7 @@ The rotate() method
 
 The rotate() method converts the input rotation factor to radians (if it is provided in degrees or gradients), and then calls the rotate() method of the matrix object:
 
-if (unit == &quot;degrees&quot;)
+if (unit == "degrees")
 
 {
 
@@ -115,7 +115,7 @@ angle = Math.PI * 2 * angle / 360;
 
 }
 
-if (unit == &quot;gradients&quot;)
+if (unit == "gradients")
 
 {
 

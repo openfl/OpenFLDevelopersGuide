@@ -28,7 +28,7 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(TouchEvent.TOUCH_TAP, taphandler); function taphandler(evt:TouchEvent): void {
 
-myTextField.text = &quot;I&#039;ve been tapped&quot;; myTextField.y = 50; addChild(myTextField);
+myTextField.text = "I've been tapped"; myTextField.y = 50; addChild(myTextField);
 
 }
 
@@ -72,15 +72,15 @@ myTextField.height = 20; addChild(myTextField);
 
 mySprite.addEventListener(TouchEvent.TOUCH_BEGIN, onTouchBegin); stage.addEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.addEventListener(TouchEvent.TOUCH_END, onTouchEnd); function onTouchBegin(event:TouchEvent) {
 
-myTextField.text = &quot;touch begin&quot; + event.touchPointID;
+myTextField.text = "touch begin" + event.touchPointID;
 
 }
 
-function onTouchMove(event:TouchEvent) { myTextField.text = &quot;touch move&quot; + event.touchPointID;
+function onTouchMove(event:TouchEvent) { myTextField.text = "touch move" + event.touchPointID;
 
 }
 
-function onTouchEnd(event:TouchEvent) { myTextField.text = &quot;touch end&quot; + event.touchPointID;
+function onTouchEnd(event:TouchEvent) { myTextField.text = "touch end" + event.touchPointID;
 
 }
 
@@ -106,34 +106,34 @@ mySprite.addEventListener(TouchEvent.TOUCH_BEGIN, onTouchBegin); function onTouc
 
 if(touchMoveID != 0) {
 
-myTextField.text = &quot;already moving. ignoring new touch&quot;; return;
+myTextField.text = "already moving. ignoring new touch"; return;
 
 }
 
 touchMoveID = event.touchPointID;
 
-myTextField.text = &quot;touch begin&quot; + event.touchPointID; stage.addEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.addEventListener(TouchEvent.TOUCH_END, onTouchEnd);
+myTextField.text = "touch begin" + event.touchPointID; stage.addEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.addEventListener(TouchEvent.TOUCH_END, onTouchEnd);
 
 }
 
 function onTouchMove(event:TouchEvent) { if(event.touchPointID != touchMoveID) {
 
-myTextField.text = &quot;ignoring unrelated touch&quot;; return;
+myTextField.text = "ignoring unrelated touch"; return;
 
 }
 
 mySprite.x = event.stageX; mySprite.y = event.stageY;
 
-myTextField.text = &quot;touch move&quot; + event.touchPointID;
+myTextField.text = "touch move" + event.touchPointID;
 
 }
 
 function onTouchEnd(event:TouchEvent) { if(event.touchPointID != touchMoveID) {
 
-myTextField.text = &quot;ignoring unrelated touch end&quot;; return;
+myTextField.text = "ignoring unrelated touch end"; return;
 
 }
 
-touchMoveID = 0; stage.removeEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.removeEventListener(TouchEvent.TOUCH_END, onTouchEnd); myTextField.text = &quot;touch end&quot; + event.touchPointID;
+touchMoveID = 0; stage.removeEventListener(TouchEvent.TOUCH_MOVE, onTouchMove); stage.removeEventListener(TouchEvent.TOUCH_END, onTouchEnd); myTextField.text = "touch end" + event.touchPointID;
 
 }

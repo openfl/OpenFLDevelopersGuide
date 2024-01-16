@@ -46,7 +46,7 @@ public function DNSResolverExample()
 
 var resolver:DNSResolver = new DNSResolver(); resolver.addEventListener( DNSResolverEvent.LOOKUP, lookupComplete ); resolver.addEventListener( ErrorEvent.ERROR, lookupError );
 
-resolver.lookup( &quot;example.com.&quot;, ARecord );
+resolver.lookup( "example.com.", ARecord );
 
 }
 
@@ -54,9 +54,9 @@ private function lookupComplete( event:DNSResolverEvent ):void
 
 {
 
-trace( &quot;Query string: &quot; + event.host );
+trace( "Query string: " + event.host );
 
-trace( &quot;Record count: &quot; + event.resourceRecords.length ); for each( var record:* in event.resourceRecords )
+trace( "Record count: " + event.resourceRecords.length ); for each( var record:* in event.resourceRecords )
 
 {
 
@@ -70,7 +70,7 @@ private function lookupError( error:ErrorEvent ):void
 
 {
 
-trace(&quot;Error: &quot; + error.text );
+trace("Error: " + error.text );
 
 }
 

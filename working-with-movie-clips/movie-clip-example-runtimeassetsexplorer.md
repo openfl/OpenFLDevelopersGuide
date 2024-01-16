@@ -77,7 +77,7 @@ public function GeometricAssets() {
 
 public function getAssets():Array {
 
-return [ &quot;com.example.programmingas3.runtimeassetexplorer.AnimatingBox&quot;, &quot;com.example.programmingas3.runtimeassetexplorer.AnimatingStar&quot; ];
+return [ "com.example.programmingas3.runtimeassetexplorer.AnimatingBox", "com.example.programmingas3.runtimeassetexplorer.AnimatingStar" ];
 
 }
 

@@ -103,7 +103,7 @@ For complex projects, especially those in which buttons are routinely decorated 
 
 ### The currentTarget property
 
-The `currentTarget` property contains a reference to the object that is currently processing the event object. Although it may seem odd not to know which node is currently processing the event object that you are examining, keep in mind that you can add a listener function to any display object in that event object&#039;s event flow, and the listener function can be placed in any location. Moreover, the same listener function can be added to different display objects. As a project increases in size and complexity, the currentTarget property becomes more and more useful.
+The `currentTarget` property contains a reference to the object that is currently processing the event object. Although it may seem odd not to know which node is currently processing the event object that you are examining, keep in mind that you can add a listener function to any display object in that event object's event flow, and the listener function can be placed in any location. Moreover, the same listener function can be added to different display objects. As a project increases in size and complexity, the currentTarget property becomes more and more useful.
 
 ## Understanding Event class methods {#understanding-event-class-methods}
 

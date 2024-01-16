@@ -12,9 +12,10 @@ the URLRequest class" on page 811
 
 ). The second is an optional window parameter, in which you can specify the window name. For example, the following code opens the [www.adobe.com](http://www.adobe.com/) web page:
 
-var url:String = [&quot;http://www.adobe.com&quot;;](http://www.adobe.com/)
+var url:String = "http://www.adobe.com"
 
-var urlReq:URLRequest = new URLRequest(url); navigateToURL(urlReq);
+var urlReq:URLRequest = new URLRequest(url);
+navigateToURL(urlReq);
 
 **_Note:_** _When using the navigateToURL() function, the runtime treats a URLRequest object that uses the POST method (one that has its method property set to URLRequestMethod.POST) as using the GET method._
 
@@ -36,17 +37,17 @@ Any URI scheme can be used in URL launched by content running in the AIR applica
 *   mailto: — AIR directs these requests to the registered system mail application
 *   sms: — AIR directs sms: requests to the default text message app. The URL format must conform to the system conventions under which the app is running. For example, on Android, the URI scheme must be lowercase.
 
-navigateToURL( new URLRequest( &quot;sms:+15555550101&quot;) );
+navigateToURL( new URLRequest( "sms:+15555550101") );
 
 *   tel: — AIR directs tel: requests to the default telephone dialing app. The URL format must conform to the system conventions under which the app is running. For example, on Android, the URI scheme must be lowercase.
 
-navigateToURL( new URLRequest( &quot;tel:5555555555&quot;) );
+navigateToURL( new URLRequest( "tel:5555555555") );
 
 *   market: — AIR directs market: requests to the Market app typically supported on Android devices.
 
-navigateToURL( new URLRequest( &quot;market://search?q=Adobe Flash&quot;) );
+navigateToURL( new URLRequest( "market://search?q=Adobe Flash") );
 
-navigateToURL( new URLRequest( &quot;market://search?q=pname:com.adobe.flashplayer&quot;) );
+navigateToURL( new URLRequest( "market://search?q=pname:com.adobe.flashplayer") );
 
 Where allowed by the operating system, applications can define and register custom URI schemes. You can create a URL using the scheme to launch the application from AIR.
 

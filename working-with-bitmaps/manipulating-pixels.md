@@ -39,9 +39,9 @@ If you want to read the value of a group of pixels, as opposed to a single pixel
 
 Conversely, to change (or set) the value of a group of pixels, use the `setPixels()` method. This method expects two parameters (`rect` and `inputByteArray`), which are combined to output a rectangular region (`rect`) of pixel data (`inputByteArray`).
 
-As data is read (and written) out of the `inputByteArray`, the `ByteArray.readUnsignedInt()` method is called for each of the pixels in the array. If, for some reason, the `inputByteArray` doesn&#039;t contain a full rectangle worth of pixel data, the method stops processing the image data at that point.
+As data is read (and written) out of the `inputByteArray`, the `ByteArray.readUnsignedInt()` method is called for each of the pixels in the array. If, for some reason, the `inputByteArray` doesn't contain a full rectangle worth of pixel data, the method stops processing the image data at that point.
 
-It&#039;s important to remember that, for both getting and setting pixel data, the byte array expects 32-bit alpha, red, green, blue (ARGB) pixel values.
+It's important to remember that, for both getting and setting pixel data, the byte array expects 32-bit alpha, red, green, blue (ARGB) pixel values.
 
 The following example uses the `getPixels()` and `setPixels()` methods to copy a group of pixels from one BitmapData object to another:
 

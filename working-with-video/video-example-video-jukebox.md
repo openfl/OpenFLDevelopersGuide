@@ -40,11 +40,11 @@ The playlist XML object contains the raw XML from the external file, whereas the
 
 &lt;videos&gt;
 
-&lt;video url=&quot;video/caption_video.flv&quot; /&gt;
+&lt;video url="video/caption_video.flv" /&gt;
 
-&lt;video url=&quot;video/cuepoints.flv&quot; /&gt;
+&lt;video url="video/cuepoints.flv" /&gt;
 
-&lt;video url=&quot;video/water.flv&quot; /&gt;
+&lt;video url="video/water.flv" /&gt;
 
 &lt;/videos&gt;
 
@@ -144,11 +144,11 @@ switch (event.info.code)
 
 {
 
-case &quot;NetStream.Play.Start&quot;: t.start();
+case "NetStream.Play.Start": t.start();
 
 break;
 
-case &quot;NetStream.Play.StreamNotFound&quot;: case &quot;NetStream.Play.Stop&quot;:
+case "NetStream.Play.StreamNotFound": case "NetStream.Play.Stop":
 
 t.stop(); playNextVideo(); break;
 
@@ -182,7 +182,7 @@ try
 
 positionBar.setProgress(ns.time, meta.duration);
 
-positionLabel.text = ns.time.toFixed(1) + &quot; of &quot; meta.duration.toFixed(1) + &quot; seconds&quot;;
+positionLabel.text = ns.time.toFixed(1) + " of " meta.duration.toFixed(1) + " seconds";
 
 catch (error:Error)
 

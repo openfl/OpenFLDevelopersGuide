@@ -284,7 +284,7 @@ offsetY = event.stageY - draggedObject.y;
 
 // Move the dragged object to the location of the cursor, maintaining
 
-// the offset between the cursor&#039;s location and the location
+// the offset between the cursor's location and the location
 
 // of the dragged object.
 

@@ -16,9 +16,15 @@ _._
 
 In the following example, a circle Sprite instance, named circle, is created on the Stage. When the user clicks the circle, a scripted animation sequence begins, causing circle to fade (its alpha property is decreased) until it is completely transparent:
 
-import openfl.display.Sprite; import openfl.events.Event; import openfl.events.MouseEvent;
+import openfl.display.Sprite;
+import openfl.events.Event;
+import openfl.events.MouseEvent;
 
-// draw a circle and add it to the display list var circle:Sprite = new Sprite(); circle.graphics.beginFill(0x990000); circle.graphics.drawCircle(50, 50, 50); circle.graphics.endFill();
+// draw a circle and add it to the display list
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0x990000);
+circle.graphics.drawCircle(50, 50, 50);
+circle.graphics.endFill();
 
 addChild(circle);
 
@@ -26,7 +32,9 @@ addChild(circle);
 
 // The change made by this function (updated to the screen every
 
-// frame) is what causes the animation to occur. function fadeCircle(event:Event):void
+// frame) is what causes the animation to occur.
+
+function fadeCircle(event:Event):void
 
 {
 

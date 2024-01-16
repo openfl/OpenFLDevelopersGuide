@@ -2,7 +2,7 @@
 
 Loading videos using the NetStream and NetConnection classes is a multistep process. As a best practice, the steps of adding the Video object to the display list, attaching the NetStream object to the Video instance, and calling the NetStream object’s play() method should be performed in the specified order:
 
-1.  Create a NetConnection object. If you are connecting to a local video file or one that is not using a server such as Adobe&#039;s Flash Media Server 2, pass null to the connect() method to play the video files from either an HTTP address or a local drive. If you are connecting to a server, set the parameter to the URI of the application that contains the video file on the server.
+1.  Create a NetConnection object. If you are connecting to a local video file or one that is not using a server such as Adobe's Flash Media Server 2, pass null to the connect() method to play the video files from either an HTTP address or a local drive. If you are connecting to a server, set the parameter to the URI of the application that contains the video file on the server.
 
 var nc:NetConnection = new NetConnection(); nc.connect(null);
 
@@ -36,7 +36,7 @@ vid.attachNetStream(ns);
 
 1.  Call the NetStream object’s play() method with the video file url as an argument to start the video playing. The following snippet loads and plays a video file named "video.mp4" in the same directory as the project:
 
-ns.play(&quot;video.mp4&quot;);
+ns.play("video.mp4");
 
 **More Help topics**
 

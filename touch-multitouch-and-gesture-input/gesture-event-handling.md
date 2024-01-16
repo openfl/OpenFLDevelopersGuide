@@ -24,7 +24,7 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(TransformGestureEvent.GESTURE_SWIPE, swipehandler); function swipehandler(evt:TransformGestureEvent): void {
 
-myTextField.text = &quot;I&#039;ve been swiped&quot;; myTextField.y = 50; addChild(myTextField);
+myTextField.text = "I've been swiped"; myTextField.y = 50; addChild(myTextField);
 
 }
 
@@ -40,7 +40,7 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(GestureEvent.GESTURE_TWO_FINGER_TAP, taphandler); function taphandler(evt:GestureEvent): void {
 
-myTextField.text = &quot;I&#039;ve been two-finger tapped&quot;; myTextField.y = 50;
+myTextField.text = "I've been two-finger tapped"; myTextField.y = 50;
 
 addChild(myTextField);
 
@@ -58,7 +58,7 @@ mySprite.graphics.beginFill(0x336699); mySprite.graphics.drawRect(0,0,40,40); ad
 
 mySprite.addEventListener(PressAndTapGestureEvent.GESTURE_PRESS_AND_TAP, taphandler); function taphandler(evt:PressAndTapGestureEvent): void {
 
-myTextField.text = &quot;I&#039;ve been press-and-tapped&quot;; myTextField.y = 50;
+myTextField.text = "I've been press-and-tapped"; myTextField.y = 50;
 
 addChild(myTextField);
 
@@ -116,17 +116,17 @@ addChild(mySprite); addChild(myTextField);
 
 function onPan(evt:TransformGestureEvent):void { evt.target.localX++;
 
-if (evt.phase==GesturePhase.BEGIN) { myTextField.text = &quot;Begin&quot;; evt.target.scaleX *= 1.5;
+if (evt.phase==GesturePhase.BEGIN) { myTextField.text = "Begin"; evt.target.scaleX *= 1.5;
 
 evt.target.scaleY *= 1.5;
 
 }
 
-if (evt.phase==GesturePhase.UPDATE) { myTextField.text = &quot;Update&quot;; evt.target.alpha = 0.5;
+if (evt.phase==GesturePhase.UPDATE) { myTextField.text = "Update"; evt.target.alpha = 0.5;
 
 }
 
-if (evt.phase==GesturePhase.END) { myTextField.text = &quot;End&quot;; evt.target.width = 40;
+if (evt.phase==GesturePhase.END) { myTextField.text = "End"; evt.target.width = 40;
 
 evt.target.height = 40;
 
@@ -150,10 +150,10 @@ mySprite.graphics.drawRect(0, 0, 40, 40); var myTextField = new TextField(); myT
 
 addChild(mySprite); addChild(myTextField);
 
-function onSwipe(swipeEvt:TransformGestureEvent):void { myTextField.text = swipeEvt.phase // Output is &quot;all&quot;
+function onSwipe(swipeEvt:TransformGestureEvent):void { myTextField.text = swipeEvt.phase // Output is "all"
 
 }
 
-function onTwoTap(tapEvt:GestureEvent):void { myTextField.text = tapEvt.phase // Output is &quot;all&quot;
+function onTwoTap(tapEvt:GestureEvent):void { myTextField.text = tapEvt.phase // Output is "all"
 
 }

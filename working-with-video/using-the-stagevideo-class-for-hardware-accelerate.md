@@ -59,7 +59,7 @@ More Help topics
 
 Guidelines and limitations
 
-When video is running in full screen mode, stage video is always available if the device supports hardware acceleration. OpenFL, however, also runs within a browser. In the browser context, the wmode setting affects stage video availability. Try to use wmode=&quot;direct&quot; at all times if you want to use stage video. Stage video is not compatible with other wmode settings when not in full screen mode. This restriction means that, at run time, stage video can vacillate unpredictably between being available and unavailable. For example, if the user exits full screen mode while stage video is running, the video context reverts to the browser. If the browser wmode parameter is not set to &quot;direct&quot;, stage video can suddenly become unavailable. OpenFL communicates playback context changes to applications through a set of events. If you implement the StageVideo API, maintain a Video object as a backup when stage video becomes unavailable.
+When video is running in full screen mode, stage video is always available if the device supports hardware acceleration. OpenFL, however, also runs within a browser. In the browser context, the wmode setting affects stage video availability. Try to use wmode="direct" at all times if you want to use stage video. Stage video is not compatible with other wmode settings when not in full screen mode. This restriction means that, at run time, stage video can vacillate unpredictably between being available and unavailable. For example, if the user exits full screen mode while stage video is running, the video context reverts to the browser. If the browser wmode parameter is not set to "direct", stage video can suddenly become unavailable. OpenFL communicates playback context changes to applications through a set of events. If you implement the StageVideo API, maintain a Video object as a backup when stage video becomes unavailable.
 
 Because of its direct relationship to hardware, stage video restricts some video features. Stage video enforces the following constraints:
 
@@ -213,7 +213,8 @@ If the StageVideoAvailabilityEvent.availability property is set to StageVideoAva
 
 The following code shows how to handle the StageVideoAvailabilityEvent.STAGE_VIDEO_AVAILABILITY event:
 
-private var sv:StageVideo; private var video:Video;
+private var sv:StageVideo;
+private var video:Video;
 
 private function onStageVideoState(event:StageVideoAvailabilityEvent):void
 
@@ -324,6 +325,6 @@ currColorSpace = (event as StageVideoEvent).colorSpace;
 
 }
 
-If OpenFL cannot find a substitute for an unsupported color space, stage video uses the default color space BT.601\. For example, video streams with H.264 encoding typically use the BT.709 color space. If the device hardware does not support BT.709, the colorSpace property returns &quot;BT601&quot;. A StageVideoEvent.colorSpace value of &quot;unknown&quot; indicates that the hardware does not provide a means of querying the color space.
+If OpenFL cannot find a substitute for an unsupported color space, stage video uses the default color space BT.601\. For example, video streams with H.264 encoding typically use the BT.709 color space. If the device hardware does not support BT.709, the colorSpace property returns "BT601". A StageVideoEvent.colorSpace value of "unknown" indicates that the hardware does not provide a means of querying the color space.
 
 If your application deems the current color space unacceptable, you can choose to switch from a StageVideo object to a Video object. The Video class supports all color spaces through software compositing.

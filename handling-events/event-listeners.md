@@ -58,7 +58,7 @@ clickHandler detected an event of type: click
 the this keyword refers to: [object ChildSprite]
 ```
 
-Notice that the event object is passed as an argument to `clickHandler()`. This allows your listener function to examine the event object. In this example, you use the event object&#039;s `type` property to ascertain that the event is a click event.
+Notice that the event object is passed as an argument to `clickHandler()`. This allows your listener function to examine the event object. In this example, you use the event object's `type` property to ascertain that the event is a click event.
 
 The example also checks the value of the `this` keyword. In this case, this represents the Sprite object, because Haxe preserves the scope when creating functions.
 
@@ -170,6 +170,6 @@ Exceptions, rather than events, are the primary mechanism for error handling in 
 
 Most error events are based on the ErrorEvent class, and as such will have a property named `text` that is used to store the error message that OpenFL displays. The two exceptions are the StatusEvent and NetStatusEvent classes. Both of these classes have a `level` property (`StatusEvent.level` and `NetStatusEvent.info.level`).
 
-When the value of the level property is &quot;error&quot;, these event types are considered to be error events.
+When the value of the level property is "error", these event types are considered to be error events.
 
 An error event will not cause dynamic platforms (such as HTML5 or Flash Player) to stop running, but will stop execution on all other platforms. It will manifest as a dialog box on the debugger versions of Flash Player, and will not manifest in release versions of Flash Player.

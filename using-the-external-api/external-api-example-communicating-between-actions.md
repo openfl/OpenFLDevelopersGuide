@@ -47,7 +47,7 @@ var containerReady:Boolean = isContainerReady(); if (containerReady)
 
 {
 
-// If the container is ready, register the SWF&#039;s functions. setupCallbacks();
+// If the container is ready, register the SWF's functions. setupCallbacks();
 
 }
 
@@ -67,7 +67,7 @@ else
 
 // container at 100ms intervals. Once the container responds that
 
-// it&#039;s ready, the timer will be stopped. var readyTimer:Timer = new Timer(100);
+// it's ready, the timer will be stopped. var readyTimer:Timer = new Timer(100);
 
 readyTimer.addEventListener(TimerEvent.TIMER, timerHandler); readyTimer.start();
 
@@ -75,7 +75,7 @@ else
 
 {
 
-trace(&quot;External interface is not available for this container.&quot;);
+trace("External interface is not available for this container.");
 
 }
 
@@ -89,7 +89,7 @@ private function isContainerReady():Boolean
 
 {
 
-var result:Boolean = ExternalInterface.call(&quot;isReady&quot;); return result;
+var result:Boolean = ExternalInterface.call("isReady"); return result;
 
 }
 
@@ -97,7 +97,7 @@ The isContainerReady() method in turn uses ExternalInterface.call() method to ca
 
 isReady(), as follows:
 
-&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;script language="JavaScript"&gt;
 
 &lt;!--
 
@@ -131,7 +131,7 @@ return jsReady;
 
 &lt;/script&gt;
 
-The isReady() function simply returns the value of the jsReady variable. That variable is initially false; once the onload event of the web page has been triggered, the variable’s value is changed to true. In other words, if Haxe calls the isReady() function before the page is loaded, JavaScript returns false to ExternalInterface.call(&quot;isReady&quot;), and consequently the Haxe isContainerReady() method returns false. Once the page has loaded, the JavaScript isReady() function returns true, so the Haxe isContainerReady() method also returns true.
+The isReady() function simply returns the value of the jsReady variable. That variable is initially false; once the onload event of the web page has been triggered, the variable’s value is changed to true. In other words, if Haxe calls the isReady() function before the page is loaded, JavaScript returns false to ExternalInterface.call("isReady"), and consequently the Haxe isContainerReady() method returns false. Once the page has loaded, the JavaScript isReady() function returns true, so the Haxe isContainerReady() method also returns true.
 
 Back in the IMManager constructor, one of two things happens depending on the readiness of the container. If isContainerReady() returns true, the code simply calls the setupCallbacks() method, which completes the process of setting up communication with JavaScript. On the other hand, if isContainerReady() returns false, the process is essentially put on hold. A Timer object is created and is told to call the timerHandler() method every 100 milliseconds, as follows:
 
@@ -143,7 +143,7 @@ private function timerHandler(event:TimerEvent):void
 
 {
 
-// If the container has become ready, we don&#039;t need to check anymore,
+// If the container has become ready, we don't need to check anymore,
 
 // so stop the timer. Timer(event.target).stop();
 
@@ -165,23 +165,23 @@ private function setupCallbacks():void
 
 {
 
-// Register the SWF client functions with the container ExternalInterface.addCallback(&quot;newMessage&quot;, newMessage); ExternalInterface.addCallback(&quot;getStatus&quot;, getStatus);
+// Register the SWF client functions with the container ExternalInterface.addCallback("newMessage", newMessage); ExternalInterface.addCallback("getStatus", getStatus);
 
-// Notify the container that the SWF is ready to be called. ExternalInterface.call(&quot;setSWFIsReady&quot;);
+// Notify the container that the SWF is ready to be called. ExternalInterface.call("setSWFIsReady");
 
 }
 
-The setCallBacks() method finishes the task of preparing for communication with the container by calling ExternalInterface.addCallback() to register the two methods that will be available to be called from JavaScript. In this code, the first parameter—the name by which the method is known to JavaScript (&quot;newMessage&quot; and &quot;getStatus&quot;)—is the same as the method’s name in Haxe. (In this case, there was no benefit to using different names, so the same name was reused for simplicity.) Finally, the ExternalInterface.call() method is used to call the JavaScript function setSWFIsReady(), which notifies the container that the Haxe functions have been registered.
+The setCallBacks() method finishes the task of preparing for communication with the container by calling ExternalInterface.addCallback() to register the two methods that will be available to be called from JavaScript. In this code, the first parameter—the name by which the method is known to JavaScript ("newMessage" and "getStatus")—is the same as the method’s name in Haxe. (In this case, there was no benefit to using different names, so the same name was reused for simplicity.) Finally, the ExternalInterface.call() method is used to call the JavaScript function setSWFIsReady(), which notifies the container that the Haxe functions have been registered.
 
 ## Communication from Haxe to the browser {#communication-from-Haxe-to-the-browser}
 
 The Introvert IM application demonstrates a range of examples of calling JavaScript functions in the container page. In the simplest case (an example from the setupCallbacks() method), the JavaScript function setSWFIsReady() is called without passing any parameters or receiving a value in return:
 
-ExternalInterface.call(&quot;setSWFIsReady&quot;);
+ExternalInterface.call("setSWFIsReady");
 
 In another example from the isContainerReady() method, Haxe calls the isReady() function and receives a Boolean value in response:
 
-var result:Boolean = ExternalInterface.call(&quot;isReady&quot;);
+var result:Boolean = ExternalInterface.call("isReady");
 
 You can also pass parameters to JavaScript functions using the external API. For instance, consider the IMManager class’s sendMessage() method, which is called when the user is sending a new message to his or her "conversation partner":
 
@@ -189,7 +189,7 @@ public function sendMessage(message:String):void
 
 {
 
-ExternalInterface.call(&quot;newMessage&quot;, message);
+ExternalInterface.call("newMessage", message);
 
 }
 
@@ -199,7 +199,7 @@ Once again, ExternalInterface.call() is used to call the designated JavaScript f
 
 Communication is supposed to be a two-way street, and the Introvert IM application is no exception. Not only does the OpenFL IM client call JavaScript to send messages, but the HTML form calls JavaScript code to send messages to and ask for information from the project as well. For example, when the project notifies the container that it has finished establishing contact and it’s ready to communicate, the first thing the browser does is call the IMManager class’s getStatus() method to retrieve the initial user availability status from the SWF IM client. This is done in the web page, in the updateStatus() function, as follows:
 
-&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;script language="JavaScript"&gt;
 
 ...
 
@@ -217,7 +217,7 @@ if (swfReady)
 
 ...
 
-var currentStatus = getSWF(&quot;IntrovertIMApp&quot;).getStatus(); document.forms[&quot;imForm&quot;].status.value = currentStatus;
+var currentStatus = getSWF("IntrovertIMApp").getStatus(); document.forms["imForm"].status.value = currentStatus;
 
 &lt;/script&gt;
 
@@ -227,11 +227,11 @@ The code checks the value of the swfReady variable, which tracks whether the pro
 *   Using the reference to the project, the getStatus() method is called as though it’s a method of the SWF object. In this case the function name " getStatus" is used because that’s the name under which the Haxe function is registered using ExternalInterface.addCallback().
 *   The getStatus() Haxe method returns a value, and that value is assigned to the currentStatus variable, which is then assigned as the content (the value property) of the status text field.
 
-**_Note:_** _If you’re following along in the code, you’ve probably noticed that in the source code for the updateStatus() function, the line of code that calls the getSWF() function, is actually written as follows: var currentStatus = getSWF(&quot;${application}&quot;).getStatus(); The ${application} text is a placeholder in the HTML page template; when Adobe Flash Builder generates the actual HTML page for the application, this placeholder text is replaced by the same text that is used as the object tag’s id attribute and the embed tag’s name attribute (IntrovertIMApp in the example). That is the value that is expected by the getSWF() function._
+**_Note:_** _If you’re following along in the code, you’ve probably noticed that in the source code for the updateStatus() function, the line of code that calls the getSWF() function, is actually written as follows: var currentStatus = getSWF("${application}").getStatus(); The ${application} text is a placeholder in the HTML page template; when Adobe Flash Builder generates the actual HTML page for the application, this placeholder text is replaced by the same text that is used as the object tag’s id attribute and the embed tag’s name attribute (IntrovertIMApp in the example). That is the value that is expected by the getSWF() function._
 
 The sendMessage() JavaScript function demonstrates passing a parameter to an Haxe function. (sendMessage() is thefunction that is called when the user presses the Send button on the HTML page.)
 
-&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;script language="JavaScript"&gt;
 
 ...
 
@@ -251,7 +251,7 @@ if (swfReady)
 
 ...
 
-getSWF(&quot;IntrovertIMApp&quot;).newMessage(message);
+getSWF("IntrovertIMApp").newMessage(message);
 
 &lt;/script&gt;
 
@@ -261,7 +261,7 @@ The newMessage() Haxe method expects one parameter, so the JavaScript message va
 
 Because of differences in how browsers access content, it’s important to always use JavaScript to detect which browser the user is running and to access the movie according to the browser-specific syntax, using the window or document object, as shown in the getSWF() JavaScript function in this example:
 
-&lt;script language=&quot;JavaScript&quot;&gt;
+&lt;script language="JavaScript"&gt;
 
 ...
 
@@ -269,7 +269,7 @@ function getSWF(movieName)
 
 {
 
-if (navigator.appName.indexOf(&quot;Microsoft&quot;) != -1)
+if (navigator.appName.indexOf("Microsoft") != -1)
 
 {
 

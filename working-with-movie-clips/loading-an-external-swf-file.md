@@ -9,9 +9,11 @@ In Haxe, projects are loaded using the Loader class. To load an external project
 
 Ultimately, the code looks like this:
 
-var request:URLRequest = new [URLRequest(&quot;http://www.[yourdomain].com/externalSwf.swf&quot;);](http://www/) var loader:Loader = new Loader()
+var request:URLRequest = new URLRequest("http://www.[yourdomain].com/externalSwf.swf");
+var loader:Loader = new Loader()
 
-loader.load(request); addChild(loader);
+loader.load(request);
+addChild(loader);
 
 This same code can be used to load an external image file such as a JPEG, GIF, or PNG image, by specifying the image file’s url rather than a project’s url. A project, unlike an image file, may contain Haxe. Thus, although the process of loading a project may be identical to loading an image, when loading an external project both the project doing the loading and the project being loaded must reside in the same security sandbox if OpenFL is playing the SWF and you plan to use Haxe to communicate in any way to the external project. Additionally, if the external project contains classes that share the same namespace as classes in the loading project, you may need to create a new application domain for the loaded project in order to avoid namespace conflicts. For more information on security and application domain considerations, see
 
@@ -40,7 +42,7 @@ There are important differences when loading an Haxe 1.0 or 2.0 project into an 
 *   Haxe code can load a project written in Haxe 1.0 or 2.0\. When an Haxe 1.0 or 2.0 project is successfully loaded, the loaded object (the Loader.content property) is an AVM1Movie object. An AVM1Movie instance is not the same as a MovieClip instance. It is a display object, but unlike a movie clip, it does not include timeline-related methods or properties. The parent AVM2 project cannot access the properties, methods, or objects of the loaded AVM1Movie object.
 *   projects written in Haxe 1.0 or 2.0 cannot load projects written in Haxe\. This means that projects authored in Flash 8 or Flex Builder 1.5 or earlier versions cannot load Haxe projects.
 
-The only exception to this rule is that an Haxe 2.0 project can replace itself with an Haxe project, as long as the Haxe 2.0 project hasn&#039;t previously loaded anything into any of its levels. An Haxe
+The only exception to this rule is that an Haxe 2.0 project can replace itself with an Haxe project, as long as the Haxe 2.0 project hasn't previously loaded anything into any of its levels. An Haxe
 
 2.0 project can do this through a call to loadMovieNum(), passing a value of 0 to the level parameter.
 

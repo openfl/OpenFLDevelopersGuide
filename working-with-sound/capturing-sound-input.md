@@ -30,19 +30,19 @@ function onMicStatus(event:StatusEvent):void
 
 {
 
-if (event.code == &quot;Microphone.Unmuted&quot;)
+if (event.code == "Microphone.Unmuted")
 
 {
 
-trace(&quot;Microphone access was allowed.&quot;);
+trace("Microphone access was allowed.");
 
 }
 
-else if (event.code == &quot;Microphone.Muted&quot;)
+else if (event.code == "Microphone.Muted")
 
 {
 
-trace(&quot;Microphone access was denied.&quot;);
+trace("Microphone access was denied.");
 
 }
 
@@ -94,35 +94,47 @@ In some cases, the process of activating the microphone when new activity is det
 
 The following example displays information about the microphone and reports on activity events and status events dispatched by a Microphone object:
 
-import openfl.events.ActivityEvent; import openfl.events.StatusEvent; import openfl.media.Microphone;
+import openfl.events.ActivityEvent;
+import openfl.events.StatusEvent;
+import openfl.media.Microphone;
 
-var deviceArray:Array = Microphone.names; trace(&quot;Available sound input devices:&quot;);
+var deviceArray:Array = Microphone.names;
+trace("Available sound input devices:");
 
 for (var i:int = 0; i &lt; deviceArray.length; i++)
 
 {
 
-trace(&quot; &quot; + deviceArray[i]);
+trace(" " + deviceArray[i]);
 
 }
 
-var mic:Microphone = Microphone.getMicrophone(); mic.gain = 60;
+var mic:Microphone = Microphone.getMicrophone();
+mic.gain = 60;
 
-mic.rate = 11; mic.setUseEchoSuppression(true); mic.setLoopBack(true); mic.setSilenceLevel(5, 1000);
+mic.rate = 11;
+mic.setUseEchoSuppression(true);
+mic.setLoopBack(true);
+mic.setSilenceLevel(5, 1000);
 
-mic.addEventListener(ActivityEvent.ACTIVITY, this.onMicActivity); mic.addEventListener(StatusEvent.STATUS, this.onMicStatus);
+mic.addEventListener(ActivityEvent.ACTIVITY, this.onMicActivity);
+mic.addEventListener(StatusEvent.STATUS, this.onMicStatus);
 
-var micDetails:String = &quot;Sound input device name: &quot; + mic.name + &#039;\n&#039;; micDetails += &quot;Gain: &quot; + mic.gain + &#039;\n&#039;;
+var micDetails:String = "Sound input device name: " + mic.name + '\n';
+micDetails += "Gain: " + mic.gain + '\n';
 
-micDetails += &quot;Rate: &quot; + mic.rate + &quot; kHz&quot; + &#039;\n&#039;; micDetails += &quot;Muted: &quot; + mic.muted + &#039;\n&#039;;
+micDetails += "Rate: " + mic.rate + " kHz" + '\n'; micDetails += "Muted: " + mic.muted + '\n';
 
-micDetails += &quot;Silence level: &quot; + mic.silenceLevel + &#039;\n&#039;; micDetails += &quot;Silence timeout: &quot; + mic.silenceTimeout + &#039;\n&#039;; micDetails += &quot;Echo suppression: &quot; + mic.useEchoSuppression + &#039;\n&#039;; trace(micDetails);
+micDetails += "Silence level: " + mic.silenceLevel + '\n';
+micDetails += "Silence timeout: " + mic.silenceTimeout + '\n';
+micDetails += "Echo suppression: " + mic.useEchoSuppression + '\n';
+trace(micDetails);
 
 function onMicActivity(event:ActivityEvent):void
 
 {
 
-trace(&quot;activating=&quot; + event.activating + &quot;, activityLevel=&quot; + mic.activityLevel);
+trace("activating=" + event.activating + ", activityLevel=" + mic.activityLevel);
 
 }
 
@@ -130,7 +142,7 @@ function onMicStatus(event:StatusEvent):void
 
 {
 
-trace(&quot;status: level=&quot; + event.level + &quot;, code=&quot; + event.code);
+trace("status: level=" + event.level + ", code=" + event.code);
 
 }
 
@@ -228,7 +240,7 @@ function playbackComplete( event:Event ):void
 
 {
 
-trace( &quot;Playback finished.&quot;);
+trace( "Playback finished.");
 
 }
 

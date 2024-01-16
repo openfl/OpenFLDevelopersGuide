@@ -6,9 +6,13 @@ Not every mp3 file contains ID3 metadata. When a Sound object loads an mp3 sound
 
 The following code shows how to recognize when the ID3 metadata for a sound file has been loaded:
 
-import openfl.events.Event; import openfl.media.ID3Info; import openfl.media.Sound;
+import openfl.events.Event;
+import openfl.media.ID3Info;
+import openfl.media.Sound;
 
-var s:Sound = new Sound(); s.addEventListener(Event.ID3, onID3InfoReceived); s.load(&quot;mySound.mp3&quot;);
+var s:Sound = new Sound();
+s.addEventListener(Event.ID3, onID3InfoReceived);
+s.load("mySound.mp3");
 
 function onID3InfoReceived(event:Event)
 
@@ -16,13 +20,13 @@ function onID3InfoReceived(event:Event)
 
 var id3:ID3Info = event.target.id3;
 
-trace(&quot;Received ID3 Info:&quot;);
+trace("Received ID3 Info:");
 
 for (var propName:String in id3)
 
 {
 
-trace(propName + &quot; = &quot; + id3[propName]);
+trace(propName + " = " + id3[propName]);
 
 }
 

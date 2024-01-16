@@ -12,7 +12,7 @@ For example, you can set specific text within a text field to be selected when t
 
 var myTextField:TextField = new TextField();
 
-myTextField.text = &quot;No matter where you click on this text field the TEXT IN ALL CAPS is selected.&quot;; myTextField.autoSize = TextFieldAutoSize.LEFT;
+myTextField.text = "No matter where you click on this text field the TEXT IN ALL CAPS is selected."; myTextField.autoSize = TextFieldAutoSize.LEFT;
 
 addChild(myTextField); addEventListener(MouseEvent.CLICK, selectText);
 
@@ -34,7 +34,7 @@ For example, the following code traces the index values of user-selected text:
 
 var myTextField:TextField = new TextField();
 
-myTextField.text = &quot;Please select the TEXT IN ALL CAPS to see the index values for the first and last letters.&quot;;
+myTextField.text = "Please select the TEXT IN ALL CAPS to see the index values for the first and last letters.";
 
 myTextField.autoSize = TextFieldAutoSize.LEFT; addChild(myTextField); addEventListener(MouseEvent.MOUSE_UP, selectText);
 
@@ -42,7 +42,7 @@ function selectText(event:MouseEvent):void
 
 {
 
-trace(&quot;First letter index position: &quot; + myTextField.selectionBeginIndex); trace(&quot;Last letter index position: &quot; + myTextField.selectionEndIndex);
+trace("First letter index position: " + myTextField.selectionBeginIndex); trace("Last letter index position: " + myTextField.selectionEndIndex);
 
 }
 

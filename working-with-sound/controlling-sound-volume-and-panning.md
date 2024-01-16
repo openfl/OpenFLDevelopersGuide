@@ -8,7 +8,7 @@ The pan property of a SoundChannel object can be used to specify a different vol
 
 The following code example creates a SoundTransform object with a volume value of 0.6 and a pan value of -1 (top left channel volume and no right channel volume). It passes the SoundTransform object as a parameter to the play() method, which applies that SoundTransform object to the new SoundChannel object that is created to control the playback.
 
-var snd:Sound = new Sound(new URLRequest(&quot;bigSound.mp3&quot;)); var trans:SoundTransform = new SoundTransform(0.6, -1); var channel:SoundChannel = snd.play(0, 1, trans);
+var snd:Sound = new Sound(new URLRequest("bigSound.mp3")); var trans:SoundTransform = new SoundTransform(0.6, -1); var channel:SoundChannel = snd.play(0, 1, trans);
 
 You can alter the volume and panning while a sound is playing by setting the pan or volume properties of a SoundTransform object and then applying that object as the soundTransform property of a SoundChannel object.
 
@@ -26,27 +26,35 @@ sound input" on page 461
 
 The following example alternates the panning of the sound from the left channel to the right channel and back while the sound plays.
 
-import openfl.events.Event; import openfl.media.Sound;
+import openfl.events.Event;
+import openfl.media.Sound;
 
-import openfl.media.SoundChannel; import openfl.media.SoundMixer; import openfl.net.URLRequest;
+import openfl.media.SoundChannel;
+import openfl.media.SoundMixer;
+import openfl.net.URLRequest;
 
 var snd:Sound = new Sound();
 
-var req:URLRequest = new URLRequest(&quot;bigSound.mp3&quot;); snd.load(req);
+var req:URLRequest = new URLRequest("bigSound.mp3");
+snd.load(req);
 
-var panCounter:Number = 0; var trans:SoundTransform;
+var panCounter:Number = 0;
+var trans:SoundTransform;
 
 trans = new SoundTransform(1, 0);
 
-var channel:SoundChannel = snd.play(0, 1, trans); channel.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
+var channel:SoundChannel = snd.play(0, 1, trans);
+channel.addEventListener(Event.SOUND_COMPLETE, onPlaybackComplete);
 
-addEventListener(Event.ENTER_FRAME, onEnterFrame); function onEnterFrame(event:Event):void
+addEventListener(Event.ENTER_FRAME, onEnterFrame);
+function onEnterFrame(event:Event):void
 
 {
 
 trans.pan = Math.sin(panCounter);
 
-channel.soundTransform = trans; // or SoundMixer.soundTransform = trans; panCounter += 0.05;
+channel.soundTransform = trans; // or SoundMixer.soundTransform = trans;
+panCounter += 0.05;
 
 }
 

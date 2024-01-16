@@ -17,7 +17,7 @@ In all other situations (such as running in a stand-alone player), the ExternalI
 From Haxe, you can call a JavaScript function on the HTML page. The external API offers the following improved functionality compared with fscommand():
 
 *   You can use any JavaScript function, not only the functions that you can use with the fscommand() function.
-*   You can pass any number of arguments, with any names; you aren&#039;t limited to passing a command and a single string argument. This gives the external API much more flexibility than fscommand().
+*   You can pass any number of arguments, with any names; you aren't limited to passing a command and a single string argument. This gives the external API much more flexibility than fscommand().
 *   You can pass various data types (such as Boolean, Number, and String); you aren’t limited to String parameters.
 *   You can receive the value of a call, and that value returns immediately to Haxe (as the return value of the call you make).
 

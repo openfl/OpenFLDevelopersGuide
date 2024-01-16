@@ -12,7 +12,7 @@ for (var i = 0; i &lt; this.numChildren; i++) {
 
 var displayitem:DisplayObject = this.getChildAt(i); if (displayitem instanceof StaticText) {
 
-trace(&quot;a static text field is item &quot; + i + &quot; on the display list&quot;); var myFieldLabel:StaticText = StaticText(displayitem); trace(&quot;and contains the text: &quot; + myFieldLabel.text);
+trace("a static text field is item " + i + " on the display list"); var myFieldLabel:StaticText = StaticText(displayitem); trace("and contains the text: " + myFieldLabel.text);
 
 }
 
@@ -24,13 +24,13 @@ var myField:TextField = new TextField(); addChild(myField);
 
 myField.x = myFieldLabel.x; myField.y = myFieldLabel.y + 20;
 
-myField.autoSize = TextFieldAutoSize.LEFT; myField.text = &quot;and &quot; + myFieldLabel.text
+myField.autoSize = TextFieldAutoSize.LEFT; myField.text = "and " + myFieldLabel.text
 
 ## Using the TextSnapshot class {#using-the-textsnapshot-class}
 
 If you want to programmatically work with an existing static text instance, you can use the openfl.text.TextSnapshot class to work with the textSnapshot property of a openfl.display.DisplayObjectContainer. In other words, you create a TextSnapshot instance from the DisplayObjectContainer.textSnapshot property. You can then apply methods to that instance to retrieve values or select parts of the static text.
 
-For example, place a static text field that contains the text &quot;TextSnapshot Example&quot; on the Stage. Add the following Haxe to Frame 1 of the Timeline:
+For example, place a static text field that contains the text "TextSnapshot Example" on the Stage. Add the following Haxe to Frame 1 of the Timeline:
 
 var mySnap:TextSnapshot = this.textSnapshot; var count:Number = mySnap.charCount; mySnap.setSelected(0, 4, true);
 

@@ -34,7 +34,8 @@ Providing notification when something happens is the job that events are made fo
 
 As mentioned previously, the only functionality that the AlarmClock class actually provides relates to setting and triggering the alarm. The built-in Timer class (openfl.utils.Timer) provides a way for a developer to define code that will be executed after a specified amount of time. The AlarmClock class uses a Timer instance to determine when to set off the alarm.
 
-import openfl.events.TimerEvent; import openfl.utils.Timer;
+import openfl.events.TimerEvent;
+import openfl.utils.Timer;
 
 /**
 
@@ -56,7 +57,8 @@ public override function initClock(faceSize:Number = 200):void
 
 {
 
-super.initClock(faceSize); alarmTimer = new Timer(0, 1);
+super.initClock(faceSize);
+alarmTimer = new Timer(0, 1);
 
 alarmTimer.addEventListener(TimerEvent.TIMER, onAlarm);
 
@@ -76,13 +78,13 @@ In order to actually set the alarm, the AlarmClock class’s setAlarm() method i
 
 */
 
-public function setAlarm(hour:Number = 0, minutes:Number = 0, message:String = &quot;Alarm!&quot;):Date
+public function setAlarm(hour:Number = 0, minutes:Number = 0, message:String = "Alarm!"):Date
 
 {
 
 this.alarmMessage = message; var now:Date = new Date();
 
-// Create this time on today&#039;s date.
+// Create this time on today's date.
 
 alarmTime = new Date(now.fullYear, now.month, now.date, hour, minutes);
 
@@ -94,7 +96,7 @@ alarmTime.setTime(alarmTime.time + MILLISECONDS_PER_DAY);
 
 }
 
-// Stop the alarm timer if it&#039;s currently set. alarmTimer.reset();
+// Stop the alarm timer if it's currently set. alarmTimer.reset();
 
 // Calculate how many milliseconds should pass before the alarm should
 
@@ -122,7 +124,7 @@ public function onAlarm(event:TimerEvent):void
 
 {
 
-trace(&quot;Alarm!&quot;);
+trace("Alarm!");
 
 var alarm:AlarmEvent = new AlarmEvent(this.alarmMessage); this.dispatchEvent(alarm);
 
@@ -162,7 +164,7 @@ public class AlarmEvent extends Event
 
 */
 
-public static const ALARM:String = &quot;alarm&quot;;
+public static const ALARM:String = "alarm";
 
 /**
 
@@ -181,7 +183,7 @@ public var message:String;
 
 */
 
-public function AlarmEvent(message:String = &quot;ALARM!&quot;)
+public function AlarmEvent(message:String = "ALARM!")
 
 {
 
@@ -224,7 +226,7 @@ public override function toString():String
 
 {
 
-return formatToString(&quot;AlarmEvent&quot;, &quot;type&quot;, &quot;bubbles&quot;, &quot;cancelable&quot;, &quot;eventPhase&quot;, &quot;message&quot;);
+return formatToString("AlarmEvent", "type", "bubbles", "cancelable", "eventPhase", "message");
 
 }
 
