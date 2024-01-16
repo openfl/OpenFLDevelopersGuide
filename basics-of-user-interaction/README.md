@@ -28,6 +28,6 @@ It’s important to familiarize yourself with the following key user interaction
 
 **More Help topics**
 
-[InteractiveObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/InteractiveObject.html) [Keyboard](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Keyboard.html)
+[InteractiveObject](https://api.openfl.org/openfl/display/InteractiveObject.html) [Keyboard](https://api.openfl.org/openfl/ui/Keyboard.html)
 
-[Mouse](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Mouse.html) [ContextMenu](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/ContextMenu.html)
+[Mouse](https://api.openfl.org/openfl/ui/Mouse.html) [ContextMenu](https://api.openfl.org/openfl/ui/ContextMenu.html)

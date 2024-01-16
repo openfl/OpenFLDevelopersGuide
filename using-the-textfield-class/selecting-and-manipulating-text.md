@@ -2,11 +2,11 @@
 
 You can select dynamic or input text. Since the text selection properties and methods of the TextField class use index positions to set the range of text to manipulate, you can programmatically select dynamic or input text even if you don’t know the content.
 
-**_Note:_ **_In Flash Professional, if you choose the selectable option on a static text field, the text field that is exported and placed on the display list is a regular, dynamic text field._
+**_Note:_** _In Flash Professional, if you choose the selectable option on a static text field, the text field that is exported and placed on the display list is a regular, dynamic text field._
 
 **Selecting text**
 
-The flash.text.TextField.selectable property is true by default, and you can programmatically select text using the setSelection() method.
+The openfl.text.TextField.selectable property is true by default, and you can programmatically select text using the setSelection() method.
 
 For example, you can set specific text within a text field to be selected when the user clicks the text field:
 

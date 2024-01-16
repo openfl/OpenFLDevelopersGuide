@@ -16,7 +16,7 @@ The Stage class defines two properties that report orientation:
 
 *   Stage.deviceOrientation — Reports the physical orientation of the device relative to the default position.
 
-**_Note:_ **_The deviceOrientation is not always available when your application first starts up or when the device is lying flat. In these cases, the device orientation is reported as unknown._
+**_Note:_** _The deviceOrientation is not always available when your application first starts up or when the device is lying flat. In these cases, the device orientation is reported as unknown._
 
 *   Stage.orientation — Reports the orientation of the Stage relative to the default position. When auto-orientation is enabled, the stage rotates in the opposite direction as the device to remain upright. Thus, the right and left positions reported by the orientation property are the opposite of those reported by the deviceOrientation property. For example, when deviceRotation reports _rotated right_, orientation reports _rotated left_.
 
@@ -52,7 +52,7 @@ The _resize_ event is the best event to use when you are relying on auto-orienta
 
 The orientationChange event can also be used to detect orientation changes. The orientationChange event is only dispatched when auto-orientation is enabled.
 
-**_Note:_ **_On some mobile platforms, the stage dispatches a cancelable orientationChanging event before dispatching the resize or orientationChange events. Since the event is not supported on all platforms, avoid relying on it._
+**_Note:_** _On some mobile platforms, the stage dispatches a cancelable orientationChanging event before dispatching the resize or orientationChange events. Since the event is not supported on all platforms, avoid relying on it._
 
 ## Manual orientation {#manual-orientation}
 

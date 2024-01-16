@@ -6,7 +6,10 @@ Adobe® AIR® provides more complete access to the file system of the host compu
 
 **More Help topics**
 
-[flash.net.FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html) [flash.net.FileReferenceList](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReferenceList.html) [flash.filesystem.File](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/File.html) [flash.filesystem.FileStream](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/File.html)
+[openfl.net.FileReference](https://api.openfl.org/openfl/net/FileReference.html)
+[openfl.net.FileReferenceList](https://api.openfl.org/openfl/net/FileReferenceList.html)
+[openfl.filesystem.File](https://api.openfl.org/openfl/filesystem/File.html)
+[openfl.filesystem.FileStream](https://api.openfl.org/openfl/filesystem/File.html)
 
 **Using the FileReference class**
 
@@ -14,21 +17,21 @@ A FileReference object represents a data file on a client or server machine. The
 
 The FileReference class offers two different approaches to loading, transferring, and saving data files. Since its introduction, the FileReference class has includedthe browse() method, the upload() method, and the download() method. Use the browse() method to let the user select a file. Use the upload() method to transfer the file data to a remote server. Use the download() method to retrieve that data from the server and save it in a local file. Starting with OpenFL 10 and Adobe AIR 1.5, the FileReference class includes the load() and save() methods. The load() and save() methods allow you to access and save local files directly as well. The use of those methods is similar to the equivalent-named methods in the URLLoader and Loader classes.
 
-**_Note:_ **_The File class, which extends the FileReference class, and the FileStream class provide additional functions for working with files and the local file system. The File and FileStream classes are only supported in AIR and not in the OpenFL._
+**_Note:_** _The File class, which extends the FileReference class, and the FileStream class provide additional functions for working with files and the local file system. The File and FileStream classes are only supported in AIR and not in the OpenFL._
 
 **FileReference class**
 
 Each FileReference object represents a single data file on the local machine. The properties of the FileReference class contain information about the file’s size, type, name, filename extension, creator, creation date, and modification date.
 
-**_Note:_ **_The creator property is supported on Mac OS only. All other platforms return null._
+**_Note:_** _The creator property is supported on Mac OS only. All other platforms return null._
 
-**_Note:_ **_The extension property is only supported in Adobe AIR._
+**_Note:_** _The extension property is only supported in Adobe AIR._
 
 You can create an instance of the FileReference class one of two ways:
 
 • Use the new operator, as shown in the following code:
 
-import flash.net.FileReference;
+import openfl.net.FileReference;
 
 var fileRef:FileReference = new FileReference();
 
@@ -44,7 +47,7 @@ Once you have created a FileReference object, you can do the following:
 
 • Call the FileReference.save() method. This method opens a dialog box and prompts the user to choose a single file location on the local file system. It then saves data to the specified location.
 
-**_Note:_ **_You can only perform one browse(), download(), or save() action at a time, because only one dialog box can be open at any point._
+**_Note:_** _You can only perform one browse(), download(), or save() action at a time, because only one dialog box can be open at any point._
 
 The FileReference object properties such as name, size, or modificationDate are not defined until one of the following happens:
 
@@ -52,19 +55,19 @@ The FileReference object properties such as name, size, or modificationDate are 
 
 • The FileReference.download() method has been called, and the user has specified a new file location using the dialog box.
 
-**_Note:_ **_When performing a download, only the FileReference.name property is populated before the download is complete. After the file has been downloaded, all properties are available._
+**_Note:_** _When performing a download, only the FileReference.name property is populated before the download is complete. After the file has been downloaded, all properties are available._
 
 While calls to the FileReference.browse(), FileReferenceList.browse(), FileReference.download(), FileReference.load(), or FileReference.save() methods are executing, most players continue project playback including dispatching events and executing code.
 
 For uploading and downloading operations, a project can access files only within its own domain, including any domains specified by a policy file. You need to put a policy file on the server containing the file if that server is not in the same domain as the project initiating the upload or download.
 
-See [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html).
+See [FileReference](https://api.openfl.org/openfl/net/FileReference.html).
 
 ## Loading data from files {#loading-data-from-files}
 
 The FileReference.load() method lets you load data from a local file into memory.
 
-**_Note:_ **_Your code must first call the FileReference.browse() method to let the user select a file to load. This restriction does not apply to content running in Adobe AIR in the application security sandbox_
+**_Note:_** _Your code must first call the FileReference.browse() method to let the user select a file to load. This restriction does not apply to content running in Adobe AIR in the application security sandbox_
 
 The FileReference.load() method returns immediately after being called, but the data being loaded isn’t available immediately. The FileReference object dispatches events to invoke listener methods at each step of the loading process.
 
@@ -86,9 +89,9 @@ package
 
 {
 
-import flash.display.Sprite; import flash.events.*; import flash.net.FileFilter;
+import openfl.display.Sprite; import openfl.events.*; import openfl.net.FileFilter;
 
-import flash.net.FileReference; import flash.net.URLRequest; import flash.utils.ByteArray;
+import openfl.net.FileReference; import openfl.net.URLRequest; import openfl.utils.ByteArray;
 
 public class FileReferenceExample1 extends Sprite
 
@@ -174,7 +177,7 @@ and writing files” on page 689
 
 The FileReference.save() method lets you save data to a local file. It starts by opening a dialog box to let the user enter a new filename and location to which to save a file. After the user selects the filename and location, the data is written to the new file. When the file is saved successfully, the properties of the FileReference object are populated with the properties of the local file.
 
-**_Note:_ **_Your code can only call the FileReference.save() method in response to a user-initiated event such as a mouse click or a keypress event. Otherwise an error is thrown. This restriction does not apply to content running in Adobe AIR in the application security sandbox._
+**_Note:_** _Your code can only call the FileReference.save() method in response to a user-initiated event such as a mouse click or a keypress event. Otherwise an error is thrown. This restriction does not apply to content running in Adobe AIR in the application security sandbox._
 
 The FileReference.save() method returns immediately after being called. The FileReference object then dispatches events to call listener methods at each step of the file saving process.
 
@@ -210,9 +213,9 @@ package
 
 {
 
-import flash.display.Sprite; import flash.events.*; import flash.net.FileFilter;
+import openfl.display.Sprite; import openfl.events.*; import openfl.net.FileFilter;
 
-import flash.net.FileReference; import flash.net.URLRequest; import flash.utils.ByteArray;
+import openfl.net.FileReference; import openfl.net.URLRequest; import openfl.utils.ByteArray;
 
 public class FileReferenceExample2 extends Sprite
 
@@ -342,7 +345,7 @@ writing files” on page 689
 
 To upload files to a server, first call the browse() method to allow a user to select one or more files. Next, when the FileReference.upload() method is called, the selected file is transferred to the server. If the user selects multiple files using the FileReferenceList.browse() method, OpenFL creates an array of selected files called FileReferenceList.fileList. You can then use the FileReference.upload() method to upload each file individually.
 
-**_Note:_ **_Using the FileReference.browse() method allows you to upload single files only. To allow a user to upload multiple files, use the FileReferenceList.browse() method._
+**_Note:_** _Using the FileReference.browse() method allows you to upload single files only. To allow a user to upload multiple files, use the FileReferenceList.browse() method._
 
 By default, the system file picker dialog box allows users to pick any file type from the local computer. Developers can specify one or more custom file type filters by using the FileFilter class and passing an array of file filter instances to the browse() method:
 
@@ -562,7 +565,7 @@ Haxe also lets you override the default Filedata upload file field name by provi
 
 By default, OpenFL does not attempt to send a test upload, although you can override this default by passing a value of true as the third parameter to the upload() method. The purpose of the test upload is to check whether the actual file upload will be successful and that server authentication, if required, will succeed.
 
-**_Note:_ **_A test upload occurs only on Windows-based OpenFLs at this time._
+**_Note:_** _A test upload occurs only on Windows-based OpenFLs at this time._
 
 The server script that handles the file upload should expect an HTTP POST request with the following elements:
 
@@ -672,7 +675,7 @@ package
 
 {
 
-import flash.display.Sprite; import flash.net.FileReference; import flash.net.URLRequest; import flash.net.URLRequestMethod; import flash.net.URLVariables;
+import openfl.display.Sprite; import openfl.net.FileReference; import openfl.net.URLRequest; import openfl.net.URLRequestMethod; import openfl.net.URLVariables;
 
 public class DownloadFileExample extends Sprite
 

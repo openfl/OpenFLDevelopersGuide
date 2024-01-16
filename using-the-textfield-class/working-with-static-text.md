@@ -4,7 +4,7 @@ Static text is created only within Flash Professional. You cannot programmatical
 
 **Accessing static text fields with the StaticText class**
 
-Typically, you use the flash.text.StaticText class in the Actions panel of Flash Professional to interact with a static text instance placed on the Stage. You may also work in Haxe files that interact with a project containing static text. In either case, you can’t instantiate a static text instance programmatically. Static text is created in Flash Professional.
+Typically, you use the openfl.text.StaticText class in the Actions panel of Flash Professional to interact with a static text instance placed on the Stage. You may also work in Haxe files that interact with a project containing static text. In either case, you can’t instantiate a static text instance programmatically. Static text is created in Flash Professional.
 
 To create a reference to an existing static text field, iterate over the items in the display list and assign a variable. For example:
 
@@ -28,7 +28,7 @@ myField.autoSize = TextFieldAutoSize.LEFT; myField.text = &quot;and &quot; + myF
 
 ## Using the TextSnapshot class {#using-the-textsnapshot-class}
 
-If you want to programmatically work with an existing static text instance, you can use the flash.text.TextSnapshot class to work with the textSnapshot property of a flash.display.DisplayObjectContainer. In other words, you create a TextSnapshot instance from the DisplayObjectContainer.textSnapshot property. You can then apply methods to that instance to retrieve values or select parts of the static text.
+If you want to programmatically work with an existing static text instance, you can use the openfl.text.TextSnapshot class to work with the textSnapshot property of a openfl.display.DisplayObjectContainer. In other words, you create a TextSnapshot instance from the DisplayObjectContainer.textSnapshot property. You can then apply methods to that instance to retrieve values or select parts of the static text.
 
 For example, place a static text field that contains the text &quot;TextSnapshot Example&quot; on the Stage. Add the following Haxe to Frame 1 of the Timeline:
 

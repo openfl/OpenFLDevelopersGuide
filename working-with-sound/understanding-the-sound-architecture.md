@@ -18,18 +18,18 @@ The Haxe sound classes support sound files that are stored in the mp3 format. Th
 
 Using Adobe Flash Professional, you can import WAV or AIFF sound files and then embed them into your application’s projects in the mp3 format. The Flash Authoring tool also lets you compress embedded sound files to reduce their file size, though this size reduction comes at the expense of sound quality. For more information see “Importing Sounds” in _Using Flash_.
 
-The Haxe sound architecture makes use of the following classes in the flash.media package.
+The Haxe sound architecture makes use of the following classes in the openfl.media package.
 
 | **Class** | **Description** |
 | --- | --- |
-| flash.media.Sound | The Sound class handles the loading of sound, manages basic sound properties, and starts a sound playing. |
-| flash.media.SoundChannel | When an application plays a Sound object, a new SoundChannel object is created to control the playback. The SoundChannel object controls the volume of both the left and right playback channels of the sound. Each sound that plays has its own SoundChannel object. |
-| flash.media.SoundLoaderContext | The SoundLoaderContext class specifies how many seconds of buffering to use when loading a sound, and whether OpenFL looks for a policy file from the server when loading a file. A SoundLoaderContext object is used as a parameter to the Sound.load() method. |
-| flash.media.SoundMixer | The SoundMixer class controls playback and security properties that pertain to all sounds in an application. In effect, multiple sound channels are mixed through a common SoundMixer object, so property values in the SoundMixer object will affect all SoundChannel objects that are currently playing. |
-| flash.media.SoundTransform | The SoundTransform class contains values that control sound volume and panning. A SoundTransform object can be applied to an individual SoundChannel object, to the global SoundMixer object, or to a Microphone object, among others. |
-| flash.media.ID3Info | An ID3Info object contains properties that represent ID3 metadata information that is often stored in mp3 sound files. |
-| flash.media.Microphone | The Microphone class represents a microphone or other sound input device attached to the user’s computer. Audio input from a microphone can be routed to local speakers or sent to a remote server. The Microphone object controls the gain, sampling rate, and other characteristics of its own sound stream. |
-| flash.media.AudioPlaybackMode | The AudioPlaybackMode class defines constants for the audioPlaybackMode property of the SoundMixer class. |
+| openfl.media.Sound | The Sound class handles the loading of sound, manages basic sound properties, and starts a sound playing. |
+| openfl.media.SoundChannel | When an application plays a Sound object, a new SoundChannel object is created to control the playback. The SoundChannel object controls the volume of both the left and right playback channels of the sound. Each sound that plays has its own SoundChannel object. |
+| openfl.media.SoundLoaderContext | The SoundLoaderContext class specifies how many seconds of buffering to use when loading a sound, and whether OpenFL looks for a policy file from the server when loading a file. A SoundLoaderContext object is used as a parameter to the Sound.load() method. |
+| openfl.media.SoundMixer | The SoundMixer class controls playback and security properties that pertain to all sounds in an application. In effect, multiple sound channels are mixed through a common SoundMixer object, so property values in the SoundMixer object will affect all SoundChannel objects that are currently playing. |
+| openfl.media.SoundTransform | The SoundTransform class contains values that control sound volume and panning. A SoundTransform object can be applied to an individual SoundChannel object, to the global SoundMixer object, or to a Microphone object, among others. |
+| openfl.media.ID3Info | An ID3Info object contains properties that represent ID3 metadata information that is often stored in mp3 sound files. |
+| openfl.media.Microphone | The Microphone class represents a microphone or other sound input device attached to the user’s computer. Audio input from a microphone can be routed to local speakers or sent to a remote server. The Microphone object controls the gain, sampling rate, and other characteristics of its own sound stream. |
+| openfl.media.AudioPlaybackMode | The AudioPlaybackMode class defines constants for the audioPlaybackMode property of the SoundMixer class. |
 
 Each sound that is loaded and played needs its own instance of the Sound class and the SoundChannel class. The output from multiple SoundChannel instances is then mixed together by the global SoundMixer class during playback,
 

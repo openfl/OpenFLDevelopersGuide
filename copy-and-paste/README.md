@@ -28,11 +28,11 @@ The copy-and-paste API contains the following classes.
 
 | **Package** | **Classes** |
 | --- | --- |
-| flash.desktop | 
+| openfl.desktop | 
 
-*   [Clipboard](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/desktop/Clipboard.html)
-*   [ClipboardFormats](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/desktop/ClipboardFormats.html)
-*   [ClipboardTransferMode](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/desktop/ClipboardTransferMode.html)
+*   [Clipboard](https://api.openfl.org/openfl/desktop/Clipboard.html)
+*   [ClipboardFormats](https://api.openfl.org/openfl/desktop/ClipboardFormats.html)
+*   [ClipboardTransferMode](https://api.openfl.org/openfl/desktop/ClipboardTransferMode.html)
 
  |
 

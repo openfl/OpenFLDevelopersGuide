@@ -14,9 +14,9 @@ The Video class enables you to display live streaming video in an application wi
 
 • Use the VideoDisplay control.
 
-**_Note:_ **_Instances of a Video object on the Stage are instances of the Video class._
+**_Note:_** _Instances of a Video object on the Stage are instances of the Video class._
 
-Even though the Video class is in the flash.media package, it inherits from the flash.display.DisplayObject class. Therefore, all display object functionality, such as matrix transformations and filters, also applies to Video instances.
+Even though the Video class is in the openfl.media package, it inherits from the openfl.display.DisplayObject class. Therefore, all display object functionality, such as matrix transformations and filters, also applies to Video instances.
 
 For more information see
 

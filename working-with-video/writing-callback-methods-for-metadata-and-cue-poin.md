@@ -20,7 +20,7 @@ var vid:Video = new Video(); vid.attachNetStream(ns); addChild(vid);
 
 The previous code loads a local video file named video.flv and listens for the asyncError (AsyncErrorEvent.ASYNC_ERROR) to be dispatched. This event is dispatched when an exception is thrown from native asynchronous code. In this case, it is dispatched when the video file contains metadata or cue point information, and the appropriate listeners have not been defined. The previous code handles the asyncError event and ignores the error if you are not interested in the video file’s metadata or cue point information. If you had an FLV with metadata and several cue points, the trace() function would display the following error messages:
 
-Error #2095: flash.net.NetStream was unable to invoke callback onMetaData. Error #2095: flash.net.NetStream was unable to invoke callback onCuePoint. Error #2095: flash.net.NetStream was unable to invoke callback onCuePoint. Error #2095: flash.net.NetStream was unable to invoke callback onCuePoint.
+Error #2095: openfl.net.NetStream was unable to invoke callback onMetaData. Error #2095: openfl.net.NetStream was unable to invoke callback onCuePoint. Error #2095: openfl.net.NetStream was unable to invoke callback onCuePoint. Error #2095: openfl.net.NetStream was unable to invoke callback onCuePoint.
 
 The errors occur because the NetStream object was unable to find an onMetaData or onCuePoint callback method. There are several ways to define these callback methods within your applications.
 
@@ -100,7 +100,7 @@ package
 
 {
 
-import flash.net.NetConnection; import flash.net.NetStream;
+import openfl.net.NetConnection; import openfl.net.NetStream;
 
 public class CustomNetStream extends NetStream
 
@@ -140,7 +140,7 @@ package
 
 {
 
-import flash.net.NetConnection; import flash.net.NetStream;
+import openfl.net.NetConnection; import openfl.net.NetStream;
 
 public class CustomNetStream extends NetStream
 
@@ -190,7 +190,7 @@ package
 
 {
 
-import flash.net.NetConnection; import flash.net.NetStream;
+import openfl.net.NetConnection; import openfl.net.NetStream;
 
 public dynamic class DynamicCustomNetStream extends NetStream
 

@@ -20,7 +20,7 @@ The networkChange event does not indicate a change in all network activity, only
 
 In general, the only way for an application to determine whether it can connect to a remote resource is to try it. The service monitoring framework provides an event-based means of responding to changes in network connectivity to a specified host.
 
-**_Note:_ **_The service monitoring framework detects whether a server responds acceptably to a request. A successful check does not guarantee full connectivity. Scalable web services often use caching and load-balancing appliances to redirect traffic to a cluster of web servers. In this situation, service providers only provide a partial diagnosis of network connectivity._
+**_Note:_** _The service monitoring framework detects whether a server responds acceptably to a request. A successful check does not guarantee full connectivity. Scalable web services often use caching and load-balancing appliances to redirect traffic to a cluster of web servers. In this situation, service providers only provide a partial diagnosis of network connectivity._
 
 **Service monitoring**
 
@@ -36,7 +36,7 @@ The URLMonitor class, a subclass of the ServiceMonitor class, detects changes in
 
 The SocketMonitor class, also a subclass of the ServiceMonitor class, detects changes in connectivity to a specified host at a specified port.
 
-**_Note:_ **_Prior to AIR 2, the service monitor framework was published in the servicemonitor.swc library. This library is now deprecated. Use the aircore.swc library instead._
+**_Note:_** _Prior to AIR 2, the service monitor framework was published in the servicemonitor.swc library. This library is now deprecated. Use the aircore.swc library instead._
 
 Flash CS4 and CS5 Professional
 
@@ -66,7 +66,11 @@ Adobe AIR 1.0 and later
 
 The URLMonitor class determines if HTTP requests can be made to a specified address at port 80 (the typical port for HTTP communication). The following code uses an instance of the URLMonitor class to detect connectivity changes to the Adobe website:
 
-import air.net.URLMonitor; import flash.net.URLRequest; import flash.events.StatusEvent; var monitor:URLMonitor;
+import air.net.URLMonitor;
+import openfl.net.URLRequest;
+import openfl.events.StatusEvent;
+
+var monitor:URLMonitor;
 
 monitor = new URLMonitor(new URLRequest(&#039;http://www.example.com&#039;)); monitor.addEventListener(StatusEvent.STATUS, announceStatus); monitor.start();
 
@@ -84,7 +88,7 @@ AIR applications can also use socket connections for push-model connectivity. Fi
 
 The following code uses an instance of the SocketMonitor class to detect connectivity changes to a socket connection. The port monitored is 6667, a common port for IRC:
 
-import air.net.ServiceMonitor; import flash.events.StatusEvent;
+import air.net.ServiceMonitor; import openfl.events.StatusEvent;
 
 socketMonitor = new SocketMonitor(&#039;www.example.com&#039;,6667); socketMonitor.addEventListener(StatusEvent.STATUS, socketStatusChange); socketMonitor.start();
 

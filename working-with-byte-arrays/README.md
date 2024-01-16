@@ -8,15 +8,16 @@ The sample Adobe® AIR® application described here reads a .zip file as an exam
 
 **More Help topics**
 
-[flash.utils.ByteArray](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html) [flash.utils.IExternalizable](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/IExternalizable.html)
+[openfl.utils.ByteArray](https://api.openfl.org/openfl/utils/ByteArray.html)
+[openfl.utils.IExternalizable](https://api.openfl.org/openfl/utils/IExternalizable.html)
 
 [Action Message Format specification](http://opensource.adobe.com/wiki/download/attachments/1114283/amf3_spec_05_05_08.pdf)
 
 **Reading and writing a ByteArray**
 
-The ByteArray class is part of the flash.utils package. To create a ByteArray object in Haxe, import the ByteArray class and invoke the constructor, as shown in the following example:
+The ByteArray class is part of the openfl.utils package. To create a ByteArray object in Haxe, import the ByteArray class and invoke the constructor, as shown in the following example:
 
-import flash.utils.ByteArray;
+import openfl.utils.ByteArray;
 
 var stream:ByteArray = new ByteArray();
 
@@ -30,7 +31,7 @@ For example, the following code reads a simple array of strings and floating-poi
 
 // The following example reads a simple Array (groceries), made up of strings
 
-// and floating-point numbers, and writes it to a ByteArray. import flash.utils.ByteArray;
+// and floating-point numbers, and writes it to a ByteArray. import openfl.utils.ByteArray;
 
 // define the grocery list Array
 
@@ -146,11 +147,11 @@ xml-type | byte-array-type
 
 The encoded data follows the type marker unless the marker represents a single possible value, such as null or true or false, in which case nothing else is encoded.
 
-There are two versions of AMF: AMF0 and AMF3\. AMF 0 supports sending complex objects by reference and allows endpoints to restore object relationships. AMF 3 improves AMF 0 by sending object traits and strings by reference, in addition to object references, and by supporting new data types that were introduced in Haxe\. The ByteArray.objectEcoding property specifies the version of AMF that is used to encode the object data. The flash.net.ObjectEncoding class defines constants for specifying the AMF version: ObjectEncoding.AMF0 and ObjectEncoding.AMF3.
+There are two versions of AMF: AMF0 and AMF3\. AMF 0 supports sending complex objects by reference and allows endpoints to restore object relationships. AMF 3 improves AMF 0 by sending object traits and strings by reference, in addition to object references, and by supporting new data types that were introduced in Haxe\. The ByteArray.objectEcoding property specifies the version of AMF that is used to encode the object data. The openfl.net.ObjectEncoding class defines constants for specifying the AMF version: ObjectEncoding.AMF0 and ObjectEncoding.AMF3.
 
 The following example calls writeObject() to write an XML object to a ByteArray, which it then compresses using the Deflate algorithm and writes to the order file on the desktop. The example uses a label to display the message “Wrote order file to desktop!” in the AIR window when it is finished.
 
-import flash.filesystem.*; import flash.display.Sprite; import flash.display.TextField; import flash.utils.ByteArray;
+import openfl.filesystem.*; import openfl.display.Sprite; import openfl.display.TextField; import openfl.utils.ByteArray;
 
 public class WriteObjectExample extends Sprite
 
@@ -216,7 +217,7 @@ var outFile:File = File.desktopDirectory; // dest folder is desktop outFile = ou
 
 The readObject() method reads an object in serialized AMF from a ByteArray and stores it in an object of the specified type. The following example reads the order file from the desktop into a ByteArray (inBytes), uncompresses it, and calls readObject() to store it in the XML object orderXML. The example uses a for each() loop construct to add each node to a text area for display. The example also displays the value of the objectEncoding property along with a header for the contents of the order file.
 
-import flash.filesystem.*; import flash.display.Sprite; import flash.display.TextField; import flash.utils.ByteArray;
+import openfl.filesystem.*; import openfl.display.Sprite; import openfl.display.TextField; import openfl.utils.ByteArray;
 
 public class ReadObjectExample extends Sprite
 

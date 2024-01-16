@@ -3,7 +3,7 @@
 The Stage class overrides most properties and methods of the DisplayObject class. If you call one of these overridden properties or methods, OpenFL will ignore the request. For example, the Stage object does not have `x` or `y` properties, since its position is fixed as the main container for the application. The `x` and `y` properties refer to the position of a display object relative to its container, and since the Stage is not contained in another display object container, these properties do not apply.
 
 <!--
-**_Note:_ **_Some properties and methods of the Stage class are only available to display objects that are in the same security sandbox as the first project loaded. For details, see_
+**_Note:_** _Some properties and methods of the Stage class are only available to display objects that are in the same security sandbox as the first project loaded. For details, see_
 
 _“Stage security” on page 1063_
 
@@ -120,7 +120,7 @@ AC_FL_RunContent(
 
 This does not apply to projects running in the stand-alone Flash Player.
 
-**_Note:_ **_If you set the Window Mode (wmode in the HTML) to Opaque Windowless (opaque) or Transparent Windowless (transparent), the full-screen window is always opaque_
+**_Note:_** _If you set the Window Mode (wmode in the HTML) to Opaque Windowless (opaque) or Transparent Windowless (transparent), the full-screen window is always opaque_
 
 <!--
 There are also security-related restrictions for using full-screen mode with Flash Player in a browser. These restrictions are described in
@@ -208,7 +208,7 @@ These restrictions are not present for Flash content running in the stand-alone 
 
 By default, mouse events in full-screen mode work the same way as when not in full-screen mode. However, in full-screen mode, you can optionally set the `Stage.mouseLock` property to enable mouse locking. Mouse locking disables the cursor and enables unbounded mouse movement.
 
-**_Note:_ **_You can only enable mouse locking in full-screen mode for desktop applications. Setting it on applications not in full-screen mode, or for applications on mobile devices, throws an exception._
+**_Note:_** _You can only enable mouse locking in full-screen mode for desktop applications. Setting it on applications not in full-screen mode, or for applications on mobile devices, throws an exception._
 
 Mouse locking is disabled automatically and the mouse cursor is made visible again when:
 
@@ -225,7 +225,7 @@ You can use the Stage class’s fullScreenSourceRect property to set OpenFL to s
 
 To take advantage of hardware scaling, you set the whole stage or part of the stage to full-screen mode. The following Haxe code sets the whole stage to full-screen mode:
 
-import flash.geom.*;
+import openfl.geom.*;
 
 {
 

@@ -26,13 +26,13 @@ For a quick explanation and code examples of working with the file system in AIR
 *   [Reading and writing from an XML preferences file](http://www.adobe.com/go/learn_air_qs_xmlpref_flex_en) (Flex)
 *   [Compressing files and data](http://www.adobe.com/go/learn_air_qs_compress_en) (Flex)
 
-Adobe AIR provides classes that you can use to access, create, and manage both files and folders. These classes, contained in the flash.filesystem package, are used as follows:
+Adobe AIR provides classes that you can use to access, create, and manage both files and folders. These classes, contained in the openfl.filesystem package, are used as follows:
 
 | **File classes** | **Description** |
 | --- | --- |
-| [File](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/File.html) | File object represents a path to a file or directory. You use a file object to create a pointer to a file or folder, initiating interaction with the file or folder. |
-| [FileMode](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/FileMode.html) | The FileMode class defines string constants used in the fileMode parameter of the open() and openAsync() methods of the FileStream class. The fileMode parameter of these methods determines the capabilities available to the FileStream object once the file is opened, which include writing, reading, appending, and updating. |
-| [FileStream](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/FileStream.html) | FileStream object is used to open files for reading and writing. Once you’ve created a File object that points to a new or existing file, you pass that pointer to the FileStream object so that you can open it and read or write data. |
+| [File](https://api.openfl.org/openfl/filesystem/File.html) | File object represents a path to a file or directory. You use a file object to create a pointer to a file or folder, initiating interaction with the file or folder. |
+| [FileMode](https://api.openfl.org/openfl/filesystem/FileMode.html) | The FileMode class defines string constants used in the fileMode parameter of the open() and openAsync() methods of the FileStream class. The fileMode parameter of these methods determines the capabilities available to the FileStream object once the file is opened, which include writing, reading, appending, and updating. |
+| [FileStream](https://api.openfl.org/openfl/filesystem/FileStream.html) | FileStream object is used to open files for reading and writing. Once you’ve created a File object that points to a new or existing file, you pass that pointer to the FileStream object so that you can open it and read or write data. |
 
 Some methods in the File class have both synchronous and asynchronous versions:
 
@@ -100,7 +100,7 @@ On Android and iOS, the application storage directory is removed when the applic
 *   File.documentsDirectory—the user’s documents directory. If a platform does not define a documents directory, another location on the file system is used.
 *   File.userDirectory—the user directory. If a platform does not define a user directory, another location on the file system is used.
 
-**_Note:_ **_When a platform does not define standard locations for desktop, documents, or user directories,_
+**_Note:_** _When a platform does not define standard locations for desktop, documents, or user directories,_
 
 _File.documentsDirectory, File.desktopDirectory, and File.userDirectory can reference the same directory._
 
@@ -230,7 +230,7 @@ For example:
 
 /data/data/air.com.example.TestApp/com.example.TestApp/Local Store
 
-**_Note:_ **_If an application has a publisher ID, then the publisher ID is also used as part of the path to the application storage directory._
+**_Note:_** _If an application has a publisher ID, then the publisher ID is also used as part of the path to the application storage directory._
 
 The URL (and url property) for a File object created with File.applicationStorageDirectory uses the app- storage URL scheme (see
 
@@ -256,7 +256,7 @@ The URL (and url property) for a File object created with File.applicationDirect
 
 var dir:File = File.applicationDirectory; dir = dir.resolvePath(&quot;images&quot;); trace(dir.url); // app:/images
 
-**_Note:_ **_On Android, the files in the application package are not accessible via the nativePath. The nativePath property is an empty string. Always use the URL to access files in the application directory rather than a native path._
+**_Note:_** _On Android, the files in the application package are not accessible via the nativePath. The nativePath property is an empty string. Always use the URL to access files in the application directory rather than a native path._
 
 Pointing to the cache directory
 
@@ -280,7 +280,7 @@ The File.getRootDirectories() method lists all root volumes, such as C: and moun
 
 ).
 
-**_Note:_ **_The root of the file system is not readable on Android. A File object referencing the directory with the native path, “/”, is returned, but the properties of that object do not have accurate values. For example, spaceAvailable is always 0._
+**_Note:_** _The root of the file system is not readable on Android. A File object referencing the directory with the native path, “/”, is returned, but the properties of that object do not have accurate values. For example, spaceAvailable is always 0._
 
 Pointing to an explicit directory
 
@@ -326,7 +326,7 @@ trace(file.nativePath);
 
 }
 
-**_Note:_ **_On Android, the browseForDirectory() method is not supported. Calling this method has no effect; a cancel event is dispatched immediately. To allow users to select a directory, use a custom, application-defined dialog, instead._
+**_Note:_** _On Android, the browseForDirectory() method is not supported. Calling this method has no effect; a cancel event is dispatched immediately. To allow users to select a directory, use a custom, application-defined dialog, instead._
 
 Pointing to the directory from which the application was invoked
 
@@ -434,7 +434,7 @@ trace(fileToOpen.nativePath);
 
 If the application has another browser dialog box open when you call a browse method, the runtime throws an Error exception.
 
-**_Note:_ **_On Android, only image, video, and audio files can be selected with the browseForOpen() and browseForOpenMultiple() methods. The browseForSave() dialog also displays only media files even though the user can enter an arbitrary filename. For opening and saving non-media files, you should consider using custom dialogs instead of these methods._
+**_Note:_** _On Android, only image, video, and audio files can be selected with the browseForOpen() and browseForOpenMultiple() methods. The browseForSave() dialog also displays only media files even though the user can enter an arbitrary filename. For opening and saving non-media files, you should consider using custom dialogs instead of these methods._
 
 Modifying File paths
 
@@ -639,7 +639,7 @@ In AIR 2, you can open a file using the application registered by the operating 
 
 var file:File = File.deskopDirectory; file = file.resolvePath(&quot;test.doc&quot;); file.openWithDefaultApplication();
 
-**_Note:_ **_On Linux, the file’s MIME type, not the filename extension, determines the default application for a file._
+**_Note:_** _On Linux, the file’s MIME type, not the filename extension, determines the default application for a file._
 
 The following code lets the user navigate to an mp3 file and open it in the default application for playing mp3 files:
 
@@ -659,7 +659,7 @@ You cannot use the openWithDefaultApplication() method with files located in the
 
 AIR prevents you from using the openWithDefaultApplication() method to open certain files. On Windows, AIR prevents you from opening files that have certain filetypes, such as EXE or BAT. On Mac OS and Linux, AIR prevents you from opening files that will launch in certain application. (These include Terminal and AppletLauncher on Mac OS; and csh, bash, or ruby on Linux.) Attempting to open one of these files using the openWithDefaultApplication() method results in an exception. For a complete list of prevented filetypes, see the language reference entry for the File.openWithDefaultApplication() method.
 
-**_Note:_ **_This limitation does not exist for an AIR application installed using a native installer (an extended desktop application)._
+**_Note:_** _This limitation does not exist for an AIR application installed using a native installer (an extended desktop application)._
 
 ## Getting file system information {#getting-file-system-information}
 
@@ -681,7 +681,7 @@ The Capabilities class also includes useful system information that can be usefu
 | Capabilities.language | Specifies the language code of the system on which the player is running. |
 | Capabilities.os | Specifies the current operating system. |
 
-**_Note:_ **_Be careful when using Capabilities.os to determine system characteristics. If a more specific property exists to determine a system characteristic, use it. Otherwise, you run the risk of writing code that does not work correctly on all platforms. For example, consider the following code:_
+**_Note:_** _Be careful when using Capabilities.os to determine system characteristics. If a more specific property exists to determine a system characteristic, use it. Otherwise, you run the risk of writing code that does not work correctly on all platforms. For example, consider the following code:_
 
 var separator:String;
 
@@ -847,7 +847,7 @@ security” on page 1076
 
 , if you haven&#039;t already done so.
 
-**_Note:_ **_You can associate a file type with an AIR application (so that double-clicking it opens the application). For details, see_
+**_Note:_** _You can associate a file type with an AIR application (so that double-clicking it opens the application). For details, see_
 
 _“Managing file associations” on page 888_
 
@@ -884,7 +884,7 @@ The File class includes the following properties that provide information about 
 
 . |
 
-For details on these properties, see the File class entry in the [Haxe Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/File.html).
+For details on these properties, see the File class entry in the [OpenFL API Reference](https://api.openfl.org/openfl/filesystem/File.html).
 
 Copying and moving files
 
@@ -972,7 +972,7 @@ For example, the following code synchronously moves the test.txt file in the use
 
 var file:File = File.documentsDirectory.resolvePath(&quot;test.txt&quot;); file.moveToTrash();
 
-**_Note:_ **_On operating systems that do not support the concept of a recoverable trash folder, the files are removed immediately._
+**_Note:_** _On operating systems that do not support the concept of a recoverable trash folder, the files are removed immediately._
 
 Creating a temporary file
 
@@ -994,7 +994,7 @@ Adobe AIR 2 and later
 
 In AIR 2, you can detect when mass storage volumes are mounted or unmounted. The StorageVolumeInfo class defines a singleton storageVolumeInfo object. The StorageVolumeInfo.storageVolumeInfo object dispatches a storageVolumeMount event when a storage volume is mounted. And it dispatches a storageVolumeUnmount event when a volume is unmounted. The StorageVolumeChangeEvent class defines these events.
 
-**_Note:_ **_On modern Linux distributions, the StorageVolumeInfo object only dispatches storageVolumeMount and_
+**_Note:_** _On modern Linux distributions, the StorageVolumeInfo object only dispatches storageVolumeMount and_
 
 _storageVolumeUnmount events for physical devices and network drives mounted at particular locations._
 
@@ -1049,7 +1049,7 @@ trace(volumes[i].name, volumes[i].rootDirectory.nativePath);
 
 }
 
-**_Note:_ **_On modern Linux distributions, the getStorageVolumes() method returns objects corresponding to physical devices and network drives mounted at particular locations._
+**_Note:_** _On modern Linux distributions, the getStorageVolumes() method returns objects corresponding to physical devices and network drives mounted at particular locations._
 
 The File.getRootDirectories() method lists the root directories (see [“Pointing to the file system root” on](#696154181379824-_bookmark409) [page 673](#696154181379824-_bookmark409). However, the StorageVolume objects (enumerated by the StorageVolumeInfo.getStorageVolumes() method) provides more information about the storage volumes.
 
@@ -1061,13 +1061,13 @@ You can use the spaceAvailable property of the rootDirectory property of a Stora
 
 **More Help topics**
 
-[StorageVolume](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/StorageVolume.html) [StorageVolumeInfo](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/StorageVolumeInfo.html)
+[StorageVolume](https://api.openfl.org/openfl/filesystem/StorageVolume.html) [StorageVolumeInfo](https://api.openfl.org/openfl/filesystem/StorageVolumeInfo.html)
 
 ## Reading and writing files {#reading-and-writing-files}
 
 Adobe AIR 1.0 and later
 
-The [FileStream](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filesystem/FileStream.html) class lets AIR applications read and write to the file system.
+The [FileStream](https://api.openfl.org/openfl/filesystem/FileStream.html) class lets AIR applications read and write to the file system.
 
 **Workflow for reading and writing files**
 

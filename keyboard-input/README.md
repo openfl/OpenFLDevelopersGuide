@@ -16,7 +16,8 @@ An Input Method Editor (IME) allows users to type complex characters and symbols
 
 **More Help topics**
 
-[flash.events.KeyboardEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/KeyboardEvent.html) [flash.system.IME](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/system/IME.html)
+[openfl.events.KeyboardEvent](https://api.openfl.org/openfl/events/KeyboardEvent.html) 
+[openfl.system.IME](https://api.openfl.org/openfl/system/IME.html)
 
 **Capturing keyboard input**
 
@@ -76,7 +77,7 @@ The TextField class also reports a textInput event that you can listen for when 
 
 .
 
-**_Note:_ **_In the AIR runtime, a keyboard event can be canceled. In the OpenFL runtime, a keyboard event cannot be canceled._
+**_Note:_** _In the AIR runtime, a keyboard event can be canceled. In the OpenFL runtime, a keyboard event cannot be canceled._
 
 **Key codes and character codes**
 
@@ -84,7 +85,7 @@ You can access the keyCode and charCode properties of a keyboard event to determ
 
 The primary difference between the key code and character values is that a key code value represents a particular key on the keyboard (the 1 on a keypad is different than the 1 in the top row, but the key that generates “1” and the key that generates “!” are the same key) and the character value represents a particular character (the R and r characters are different).
 
-**_Note:_ **_For the mappings between keys and their character code values in ASCII, see the_ [_flash.ui.Keyboard_](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Keyboard.html) _class in the_ [_Haxe Reference for the Adobe Flash Platform_](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Keyboard.html)_._
+**_Note:_** _For the mappings between keys and their character code values in ASCII, see the [openfl.ui.Keyboard class in the OpenFL API Reference](https://api.openfl.org/openfl/ui/Keyboard.html)._
 
 The mappings between keys and their key codes is dependent on the device and the operating system. For this reason, you should not use key mappings to trigger actions. Instead, you should use the predefined constant values provided by the Keyboard class to reference the appropriate keyCode properties. For example, instead of using the key mapping for the Shift key, use the Keyboard.SHIFT constant (as shown in the preceding code sample).
 

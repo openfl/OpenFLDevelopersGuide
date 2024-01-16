@@ -6,7 +6,7 @@ The System class contains methods and properties that allow you to interact with
 
 By checking the System.totalMemory property, you can determine the amount of memory (in bytes) that the runtime is currently using. This property allows you to monitor memory usage and optimize your applications based on how the memory level changes. For example, if a particular visual effect causes a large increase in memory usage, you may want to consider modifying the effect or eliminating it altogether.
 
-The System.ime property is a reference to the currently installed Input Method Editor (IME). This property allows you to listen for imeComposition events (flash.events.IMEEvent.IME_COMPOSITION) by using the addEventListener() method.
+The System.ime property is a reference to the currently installed Input Method Editor (IME). This property allows you to listen for imeComposition events (openfl.events.IMEEvent.IME_COMPOSITION) by using the addEventListener() method.
 
 The third property in the System class is useCodePage. When useCodePage is set to true, the runtime uses the traditional code page of the operating system to load external text files. If you set this property to false, you tell the runtime to interpret the external file as Unicode.
 

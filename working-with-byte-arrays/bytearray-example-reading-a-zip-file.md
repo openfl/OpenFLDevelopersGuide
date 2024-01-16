@@ -61,7 +61,7 @@ The beginning of the program performs the following tasks:
 
 *   Imports the required classes
 
-import flash.filesystem.*; import flash.utils.ByteArray; import flash.events.Event;
+import openfl.filesystem.*; import openfl.utils.ByteArray; import openfl.events.Event;
 
 *   Defines the user interface for Flash
 

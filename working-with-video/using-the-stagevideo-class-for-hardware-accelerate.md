@@ -8,7 +8,7 @@ Runtimes that support the StageVideo API include:
 
 • OpenFL 10.2 and later
 
-**_Note:_ **_In OpenFL 11.4/AIR 3.4 and higher, you can use camera input with StageVideo._
+**_Note:_** _In OpenFL 11.4/AIR 3.4 and higher, you can use camera input with StageVideo._
 
 Downloadable source code and additional details for the stage video feature are available at [Getting Started with](http://www.adobe.com/go/learn_as3_usingstagevideo_en) [Stage Video](http://www.adobe.com/go/learn_as3_usingstagevideo_en).
 
@@ -16,7 +16,7 @@ For a StageVideo quick start tutorial, see [Working with Stage Video](http://www
 
 **About hardware acceleration using StageVideo**
 
-Hardware accelerated presentation—which includes video scaling, color conversion, and blitting—enhances the performance benefits of hardware accelerated decoding. On devices that offer GPU (hardware) acceleration, you can use a flash.media.StageVideo object to process video directly on the device hardware. Direct processing frees the CPU to perform other tasks while the GPU handles video. The legacy Video class, on the other hand, typically uses software presentation. Software presentation occurs in the CPU and can consume a significant share of system resources.
+Hardware accelerated presentation—which includes video scaling, color conversion, and blitting—enhances the performance benefits of hardware accelerated decoding. On devices that offer GPU (hardware) acceleration, you can use a openfl.media.StageVideo object to process video directly on the device hardware. Direct processing frees the CPU to perform other tasks while the GPU handles video. The legacy Video class, on the other hand, typically uses software presentation. Software presentation occurs in the CPU and can consume a significant share of system resources.
 
 Currently, few devices provide full GPU acceleration. However, stage video lets applications take maximum advantage of whatever hardware acceleration is available.
 
@@ -103,7 +103,7 @@ To use stage video, you implement a framework of event handlers that detect when
 
 On OpenFL, when you receive notification that stage video is no longer available, switch your video stream back to a Video object.
 
-**_Note:_ **_You cannot create StageVideo objects._
+**_Note:_** _You cannot create StageVideo objects._
 
 Stage.stageVideos property
 
@@ -157,7 +157,7 @@ StageVideo.attachCamera().
 
 Initializing StageVideo event listeners
 
-Set up your StageVideoAvailabilityEvent and VideoEvent listeners during application initialization. For example, you can initialize these listeners in the flash.events.Event.ADDED_TO_STAGE event handler. This event guarantees that your application is visible on the stage:
+Set up your StageVideoAvailabilityEvent and VideoEvent listeners during application initialization. For example, you can initialize these listeners in the openfl.events.Event.ADDED_TO_STAGE event handler. This event guarantees that your application is visible on the stage:
 
 public class SimpleStageVideo extends Sprite private var nc:NetConnection;
 

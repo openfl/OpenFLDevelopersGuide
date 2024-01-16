@@ -44,11 +44,11 @@ Programming a REST-style web service call in Haxe, typically involves the follow
 
 For example, consider a web service that exposes a test method that echoes the call parameters back to the requestor. The following Haxe code could be used to call the service:
 
-import flash.events.Event; import flash.events.ErrorEvent;
+import openfl.events.Event; import openfl.events.ErrorEvent;
 
-import flash.events.IOErrorEvent; import flash.events.SecurityErrorEvent; import flash.net.URLLoader;
+import openfl.events.IOErrorEvent; import openfl.events.SecurityErrorEvent; import openfl.net.URLLoader;
 
-import flash.net.URLRequest; import flash.net.URLRequestMethod; import flash.net.URLVariables;
+import openfl.net.URLRequest; import openfl.net.URLRequestMethod; import openfl.net.URLVariables;
 
 private var requestor:URLLoader = new URLLoader(); public function restServiceCall():void
 
@@ -158,11 +158,11 @@ An XML-RPC web service takes its call parameters as an XML document rather than 
 
 The following example illustrates how to use the same web service call shown in the REST example, but this time as an XML-RPC service:
 
-import flash.events.Event; import flash.events.ErrorEvent;
+import openfl.events.Event; import openfl.events.ErrorEvent;
 
-import flash.events.IOErrorEvent; import flash.events.SecurityErrorEvent; import flash.net.URLLoader;
+import openfl.events.IOErrorEvent; import openfl.events.SecurityErrorEvent; import openfl.net.URLLoader;
 
-import flash.net.URLRequest; import flash.net.URLRequestMethod; import flash.net.URLVariables;
+import openfl.net.URLRequest; import openfl.net.URLRequestMethod; import openfl.net.URLVariables;
 
 public function xmlRPCRequest():void
 

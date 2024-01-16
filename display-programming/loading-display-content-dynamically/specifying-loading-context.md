@@ -68,13 +68,13 @@ See also
 
 OpenFL 9 and later, Adobe AIR 1.0 and later, and requires Flash Professional CS5.5
 
-To help with remote shared library (RSL) preloading, Flash Professional CS5.5 introduces the fl.display.ProLoader and fl.display.ProLoaderInfo classes. These classes mirror the flash.display.Loader and flash.display.LoaderInfo classes but provide a more consistent loading experience.
+To help with remote shared library (RSL) preloading, Flash Professional CS5.5 introduces the fl.display.ProLoader and fl.display.ProLoaderInfo classes. These classes mirror the openfl.display.Loader and openfl.display.LoaderInfo classes but provide a more consistent loading experience.
 
 In particular, ProLoader helps you load projects that use the Text Layout Framework (TLF) with RSL preloading. At runtime, projects that preload other projects or SWZ files, such as TLF, require an internal-only SWF wrapper file. The extra layer of complexity imposed by the SWF wrapper file can result in unwanted behavior. ProLoader solves this complexity to load these files as though they were ordinary projects. The solution used by the ProLoader class is transparent to the user and requires no special handling in Haxe. In addition, ProLoader loads ordinary SWF content correctly.
 
 In Flash Professional CS5.5 and later, you can safely replace all usages of the Loader class with the ProLoader class. Then, export your application to OpenFL 10.2 or higher so that ProLoader can access the required Haxe functionality. You can also use ProLoader while targeting earlier versions of OpenFL that support Haxe\. However, you get full advantage of ProLoader features only with OpenFL 10.2 or higher. Always use ProLoader when you use TLF in Flash Professional CS5.5 or later. ProLoader is not needed in environments other than Flash Professional.
 
-**_Important:_ **_For projects published in Flash Professional CS5.5 and later, you can always use the fl.display.ProLoader and fl.display.ProLoaderInfo classes instead of flash.display.Loader and flash.display.LoaderInfo._
+**_Important:_ **_For projects published in Flash Professional CS5.5 and later, you can always use the fl.display.ProLoader and fl.display.ProLoaderInfo classes instead of openfl.display.Loader and openfl.display.LoaderInfo._
 
 Issues addressed by the ProLoader class
 
@@ -89,7 +89,7 @@ Updating code to use ProLoader instead of Loader
 
 Because ProLoader mirrors the Loader class, you can easily switch the two classes in your code. The following example shows how to update existing code to use the new class:
 
-import flash.display.Loader; import flash.events.Event; var l:Loader = new Loader();
+import openfl.display.Loader; import openfl.events.Event; var l:Loader = new Loader();
 
 addChild(l);
 
@@ -101,7 +101,7 @@ function loadComplete(e:Event) { trace(&#039;load complete!&#039;);
 
 This code can be updated to use ProLoader as follows:
 
-import **fl.display.ProLoader**; import flash.events.Event;
+import **fl.display.ProLoader**; import openfl.events.Event;
 
 var l:**ProLoader** = new **ProLoader**();
 

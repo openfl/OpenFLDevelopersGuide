@@ -27,7 +27,7 @@ The following classes, which are not in the openfl.display package, are subclass
 *   The TextField class, included in the openfl.text package, is a display object for text display and input. For more information, see [Basics of Working with text](../basics-of-working-with-text/README.md).
 
 <!-- 
-*   The TextLine class, included in the flash.text.engine package, is the display object used to display lines of text composed by the Flash Text Engine and the Text Layout Framework. For more information, see
+*   The TextLine class, included in the openfl.text.engine package, is the display object used to display lines of text composed by the Flash Text Engine and the Text Layout Framework. For more information, see
 
     “Using the Flash
 
@@ -78,13 +78,13 @@ The following classes are not display objects or display object containers, and 
 
     .
 
-The following fl.display classes provide functionality that parallels the flash.display.Loader and LoaderInfo classes. Use these classes instead of their flash.display counterparts if you are developing in the Flash Professional environment (CS5.5 or later). In that environment, these classes help solve issues involving TLF with RSL preloading. For more information, see
+The following fl.display classes provide functionality that parallels the openfl.display.Loader and LoaderInfo classes. Use these classes instead of their openfl.display counterparts if you are developing in the Flash Professional environment (CS5.5 or later). In that environment, these classes help solve issues involving TLF with RSL preloading. For more information, see
 
 “Using the ProLoader and ProLoaderInfo classes” on page 202
 
 .
 
-*   fl.display.ProLoader—Analogous to flash.display.Loader
-*   fl.display.ProLoaderInfo—Analogous to flash.display.LoaderInfo
+*   fl.display.ProLoader—Analogous to openfl.display.Loader
+*   fl.display.ProLoaderInfo—Analogous to openfl.display.LoaderInfo
 
 -->

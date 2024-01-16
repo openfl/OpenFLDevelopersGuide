@@ -28,7 +28,7 @@ Text fields can contain either plain text or HTML-formatted text. Plain text is 
 
 You can use CSS style declarations to define text styles that you can apply to many different text fields. CSS style declarations can be created in your application code or loaded in at run time from an external CSS file.
 
-The flash.text.StyleSheet class handles CSS styles. The StyleSheet class recognizes a limited set of CSS properties. For a detailed list of the style properties that the StyleSheet class supports, see the flash.textStylesheet entry in the Haxe Reference.
+The openfl.text.StyleSheet class handles CSS styles. The StyleSheet class recognizes a limited set of CSS properties. For a detailed list of the style properties that the StyleSheet class supports, see the [openfl.text.StyleSheet entry in the OpenFL API Reference](https://api.openfl.org/openfl/text/StyleSheet.html).
 
 As the following example shows, you can create CSS in your code and apply those styles to HTML text by using a StyleSheet object:
 
@@ -89,9 +89,9 @@ package
 
 {
 
-import flash.display.Sprite; import flash.events.Event; import flash.net.URLLoader; import flash.net.URLRequest; import flash.text.StyleSheet; import flash.text.TextField;
+import openfl.display.Sprite; import openfl.events.Event; import openfl.net.URLLoader; import openfl.net.URLRequest; import openfl.text.StyleSheet; import openfl.text.TextField;
 
-import flash.text.TextFieldAutoSize;
+import openfl.text.TextFieldAutoSize;
 
 public class CSSFormattingExample extends Sprite
 
@@ -137,7 +137,7 @@ method to transfer the style declarations to the StyleSheet object.
 
 ## Formatting ranges of text within a text field {#formatting-ranges-of-text-within-a-text-field}
 
-A useful method of the flash.text.TextField class is the setTextFormat() method. Using setTextFormat(), you can assign specific properties to the contents of a part of a text field to respond to user input, such as forms that need to remind users that certain entries are required or to change the emphasis of a subsection of a passage of text within a text field as a user selects parts of the text.
+A useful method of the openfl.text.TextField class is the setTextFormat() method. Using setTextFormat(), you can assign specific properties to the contents of a part of a text field to respond to user input, such as forms that need to remind users that certain entries are required or to change the emphasis of a subsection of a passage of text within a text field as a user selects parts of the text.
 
 The following example uses TextField.setTextFormat() on a range of characters to change the appearance of part of the content of myTextField when the user clicks the text field:
 

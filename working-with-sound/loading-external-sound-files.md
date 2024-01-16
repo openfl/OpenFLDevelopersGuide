@@ -22,7 +22,7 @@ A Sound object dispatches a number of different events during the sound loading 
 
 The following code illustrates how to play a sound after it has finished loading:
 
-import flash.events.Event; import flash.media.Sound; import flash.net.URLRequest;
+import openfl.events.Event; import openfl.media.Sound; import openfl.net.URLRequest;
 
 var s:Sound = new Sound(); s.addEventListener(Event.COMPLETE, onSoundLoaded); var req:URLRequest = new URLRequest(&quot;bigSound.mp3&quot;); s.load(req);
 
@@ -44,11 +44,11 @@ Sound files can be very large and take a long time to load. While OpenFL let you
 
 The Sound class dispatches two events that make it relatively easy to display the loading progress of a sound: ProgressEvent.PROGRESS and Event.COMPLETE. The following example shows how to use these events to display progress information about the sound being loaded:
 
-import flash.events.Event;
+import openfl.events.Event;
 
-import flash.events.ProgressEvent; import flash.media.Sound;
+import openfl.events.ProgressEvent; import openfl.media.Sound;
 
-import flash.net.URLRequest;
+import openfl.net.URLRequest;
 
 var s:Sound = new Sound(); s.addEventListener(ProgressEvent.PROGRESS, onLoadProgress); s.addEventListener(Event.COMPLETE, onLoadComplete); s.addEventListener(IOErrorEvent.IO_ERROR, onIOError);
 

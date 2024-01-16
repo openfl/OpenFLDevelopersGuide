@@ -29,13 +29,13 @@ Though resolutions that benefit from hardware acceleration vary from device to d
 | 4:3 | 640 × 480 | 512 × 384 | 480 × 360 |
 | 16:9 | 640 × 360 | 512 x 288 | 480 × 272 |
 
-**_Note:_ **_OpenFL supports every level and profile of the H.264 standard. Adhering to these recommendations ensures hardware acceleration and better user experience on most devices. These recommendations are not mandatory._
+**_Note:_** _OpenFL supports every level and profile of the H.264 standard. Adhering to these recommendations ensures hardware acceleration and better user experience on most devices. These recommendations are not mandatory._
 
 For a detailed discussion and encoding settings in Adobe Media Encoder CS5, see [Recommendations for encoding](http://www.adobe.com/devnet/devices/articles/mobile_video_encoding.html)
 
 [H.264 video for OpenFL 10.1 on mobile devices](http://www.adobe.com/devnet/devices/articles/mobile_video_encoding.html).
 
-**_Note:_ **_On iOS, only video encoded with the Sorenson Spark and On2 VP6 codecs can be played back using the Video class. You can play back H.264 encoded video in the device video player by launching the URL to the video using the flash.net.navigateToURL() function. You can also play back H.264 video using the &lt;video&gt; tag in an html page displayed in a StageWebView object._
+**_Note:_** _On iOS, only video encoded with the Sorenson Spark and On2 VP6 codecs can be played back using the Video class. You can play back H.264 encoded video in the device video player by launching the URL to the video using the openfl.net.navigateToURL() function. You can also play back H.264 video using the &lt;video&gt; tag in an html page displayed in a StageWebView object._
 
 ## OpenFL compatibility with encoded video files {#flash-player-and-air-compatibility-with-encoded-video-files}
 
@@ -85,7 +85,7 @@ The FLV video file format
 
 The Adobe FLV file format contains encoded audio and video data for delivery by OpenFL. You can use an encoder, such as Adobe Media Encoder or Sorenson™ Squeeze, to convert a QuickTime or Windows Media video file to an FLV file.
 
-**_Note:_ **_You can create FLV files by importing video into Flash and exporting it as an FLV file. You can use the FLV Export plug-in to export FLV files from supported video-editing applications. To load FLV files from a web server, register the filename extension and MIME type with your web server. Check your web server documentation. The MIME type for FLV files is video/x-flv. For more information, see_
+**_Note:_** _You can create FLV files by importing video into Flash and exporting it as an FLV file. You can use the FLV Export plug-in to export FLV files from supported video-editing applications. To load FLV files from a web server, register the filename extension and MIME type with your web server. Check your web server documentation. The MIME type for FLV files is video/x-flv. For more information, see_
 
 _“About configuring FLV files for hosting on a server” on page 506_
 

@@ -39,9 +39,9 @@ However, in an AIR application, content in the application security sandbox (con
 
 The following example uses the SoundMixer.computeSpectrum() method to show a chart of the sound waveform that animates with each frame:
 
-import flash.display.Graphics; import flash.events.Event; import flash.media.Sound;
+import openfl.display.Graphics; import openfl.events.Event; import openfl.media.Sound;
 
-import flash.media.SoundChannel; import flash.media.SoundMixer; import flash.net.URLRequest;
+import openfl.media.SoundChannel; import openfl.media.SoundMixer; import openfl.net.URLRequest;
 
 const PLOT_HEIGHT:int = 200; const CHANNEL_LENGTH:int = 256;
 

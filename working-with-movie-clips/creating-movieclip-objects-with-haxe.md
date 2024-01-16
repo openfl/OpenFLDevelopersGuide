@@ -18,7 +18,7 @@ To export a symbol for Haxe code:
 
 By default, the Class field is populated with the symbol name, with spaces removed (for example, a symbol named “Tree House” would become “TreeHouse”). To specify that the symbol should use a custom class for its behavior, enter the full name of the class including its package in this field. If you want to be able to create instances of the symbol in Haxe code, but don’t need to add any additional behavior, you can leave the class name as-is.
 
-The Base Class field’s value defaults to flash.display.MovieClip (which will become openfl.display.MovieClip when including the SWF asset in OpenFL). If you want your symbol to extend the functionality of another customer class, you can specify that class’s name instead, as long as that class extends the Sprite (or MovieClip) class.
+The Base Class field’s value defaults to openfl.display.MovieClip (which will become openfl.display.MovieClip when including the SWF asset in OpenFL). If you want your symbol to extend the functionality of another customer class, you can specify that class’s name instead, as long as that class extends the Sprite (or MovieClip) class.
 
 1.  Press the OK button to save the changes.
 

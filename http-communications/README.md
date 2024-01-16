@@ -4,7 +4,13 @@ Adobe® AIR® and Adobe® Flash® Player applications can communicate with HTTP-
 
 **More Help topics**
 
-[flash.net.URLLoader](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLLoader.html) [flash.net.URLStream](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLStream.html) [flash.net.URLRequest](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLRequest.html) [flash.net.URLRequestDefaults](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLRequestDefaults.html) [flash.net.URLRequestHeader](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLRequestHeader.html) [flash.net.URLRequestMethod](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLRequestMethod.html) [flash.net.URLVariables](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLVariables.html)
+[openfl.net.URLLoader](https://api.openfl.org/openfl/net/URLLoader.html)
+[openfl.net.URLStream](https://api.openfl.org/openfl/net/URLStream.html)
+[openfl.net.URLRequest](https://api.openfl.org/openfl/net/URLRequest.html)
+[openfl.net.URLRequestDefaults](https://api.openfl.org/openfl/net/URLRequestDefaults.html)
+[openfl.net.URLRequestHeader](https://api.openfl.org/openfl/net/URLRequestHeader.html)
+[openfl.net.URLRequestMethod](https://api.openfl.org/openfl/net/URLRequestMethod.html)
+[openfl.net.URLVariables](https://api.openfl.org/openfl/net/URLVariables.html)
 
 **Loading external data**
 
@@ -46,7 +52,7 @@ In AIR, you can set additional properties of the URLRequest class, which are onl
 | useCache | Specifies whether the local cache should be consulted before this URLRequest fetches data. Setting this property is only supported in the AIR application sandbox. The default (true) is to use the local cached version, if available. |
 | userAgent | Specifies the user-agent string to be used in the HTTP request. |
 
-**_Note:_ **_The HTMLLoader class has related properties for settings pertaining to content loaded by an HTMLLoader object. For details, see_
+**_Note:_** _The HTMLLoader class has related properties for settings pertaining to content loaded by an HTMLLoader object. For details, see_
 
 _“About the HTMLLoader class” on page 981_
 
@@ -60,7 +66,7 @@ The URLRequestDefaults class lets you define application-specific default settin
 
 URLRequestDefaults.manageCookies = false; URLRequestDefaults.useCache = false;
 
-**_Note:_ **_The URLRequestDefaults class is defined for content running in Adobe AIR only. It is not supported in OpenFL._
+**_Note:_** _The URLRequestDefaults class is defined for content running in Adobe AIR only. It is not supported in OpenFL._
 
 The URLRequestDefaults class includes a setLoginCredentialsForHost() method that lets you specify a default user name and password to use for a specific host. The host, which is defined in the hostname parameter of the method, can be a domain, such as [&quot;www.example.com&quot;](http://www.example.com/), or a domain and a port number, such as &quot;www.example.com:80&quot;. Note that &quot;example.com&quot;, [&quot;www.example.com&quot;](http://www.example.com/), and &quot;sales.example.com&quot; are each considered unique hosts.
 
@@ -72,7 +78,7 @@ The following code sets the default user name and password to use for requests s
 
 The URLRequestDefaults settings only apply to the current application domain, with one exception. The credentials passed to the setLoginCredentialsForHost() method are used for requests made in any application domain within the AIR application.
 
-For more information, see the URLRequestDefaults class in the [Haxe Reference for the Adobe Flash](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLRequestDefaults.html) [Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/URLRequestDefaults.html)_._
+For more information, see the URLRequestDefaults class in the [OpenFL API Reference](https://api.openfl.org/openfl/net/URLRequestDefaults.html).
 
 URI schemes
 
@@ -252,9 +258,9 @@ package
 
 {
 
-import flash.display.Sprite; import flash.events.*; import flash.net.URLLoader;
+import openfl.display.Sprite; import openfl.events.*; import openfl.net.URLLoader;
 
-import flash.net.URLLoaderDataFormat; import flash.net.URLRequest;
+import openfl.net.URLLoaderDataFormat; import openfl.net.URLRequest;
 
 public class URLLoaderDataFormatExample extends Sprite
 
@@ -296,7 +302,7 @@ var loader:URLLoader = URLLoader(event.target); trace(loader.data.dayNames);
 
 }
 
-**_Note:_ **_The default value for URLLoader.dataFormat is URLLoaderDataFormat.TEXT._
+**_Note:_** _The default value for URLLoader.dataFormat is URLLoaderDataFormat.TEXT._
 
 As the following example shows, loading XML from an external file is the same as loading URLVariables. You can create a URLRequest instance and a URLLoader instance and use them to download a remote XML document. When the file has completely downloaded, the Event.COMPLETE event is dispatched and the contents of the external file are converted to an XML instance, which you can parse using XML methods and properties.
 
@@ -304,7 +310,7 @@ package
 
 {
 
-import flash.display.Sprite; import flash.errors.*; import flash.events.*; import flash.net.URLLoader; import flash.net.URLRequest;
+import openfl.display.Sprite; import openfl.errors.*; import openfl.events.*; import openfl.net.URLLoader; import openfl.net.URLRequest;
 
 public class ExternalDocs extends Sprite
 

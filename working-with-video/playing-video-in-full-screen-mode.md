@@ -72,7 +72,7 @@ stage.displayState = StageDisplayState.FULL_SCREEN;
 
 }
 
-Though this example invokes an event handler in response to a mouse click, the technique of going to full-screen mode is the same for both OpenFL. Define the rectangle that you want to scale and then set the Stage.displayState property. For more information, see the [Haxe Reference for the Adobe Flash](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/index.html) [Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/index.html).
+Though this example invokes an event handler in response to a mouse click, the technique of going to full-screen mode is the same for both OpenFL. Define the rectangle that you want to scale and then set the Stage.displayState property. For more information, see the [OpenFL API Reference](https://api.openfl.org/openfl/display/Stage.html#displayState).
 
 The complete example, which follows, adds code that creates the connection and the NetStream object for the video and begins to play it.
 
@@ -80,13 +80,13 @@ package
 
 {
 
-import flash.net.NetConnection; import flash.net.NetStream; import flash.media.Video;
+import openfl.net.NetConnection; import openfl.net.NetStream; import openfl.media.Video;
 
-import flash.display.StageDisplayState; import fl.controls.Button;
+import openfl.display.StageDisplayState; import fl.controls.Button;
 
-import flash.display.Sprite; import flash.events.MouseEvent;
+import openfl.display.Sprite; import openfl.events.MouseEvent;
 
-import flash.events.FullScreenEvent; import flash.geom.Rectangle;
+import openfl.events.FullScreenEvent; import openfl.geom.Rectangle;
 
 public class FullScreenVideoExample extends Sprite
 

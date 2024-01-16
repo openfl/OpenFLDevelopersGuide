@@ -10,7 +10,7 @@ Adobe AIR adds several additional classes for socket-based network programming. 
 
 **More Help topics**
 
-[flash.net package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/package-detail.html)
+[openfl.net package](https://api.openfl.org/openfl/net/index.html)
 
 “Connecting to sockets” on page 1068
 
@@ -35,7 +35,7 @@ The Socket class enables you to make socket connections and to read and write ra
 
 OpenFL can interface with a server by using the binary protocol of that server directly. Some servers use the big- endian byte order, and some use the little-endian byte order. Most servers on the Internet use the big-endian byte order because “network byte order” is big-endian. The little-endian byte order is popular because the Intel® x86 architecture uses it. You should use the endian byte order that matches the byte order of the server that is sending or receiving data. All operations that are performed by the IDataInput and IDataOutput interfaces, and the classes that implement those interfaces (ByteArray, Socket, and URLStream), are encoded by default in big-endian format; that is, with the most significant byte first. This default byte order was chosen to match Java and the official network byte order. To change whether big-endian or little-endian byte order is used, you can set the endian property to Endian.BIG_ENDIAN or Endian.LITTLE_ENDIAN.
 
-_The Socket class inherits all the methods defined by the IDataInput and IDataOutput interfaces (located in the flash.utils package). Those methods must be used to write to and read from the Socket._
+_The Socket class inherits all the methods defined by the IDataInput and IDataOutput interfaces (located in the openfl.utils package). Those methods must be used to write to and read from the Socket._
 
 For more information, see:
 
@@ -248,7 +248,7 @@ The following restrictions apply to how and where content in OpenFL or in an AIR
 
     .
 
-**_Note:_ **_Setting up a server to communicate with the XMLSocket object can be challenging. If your application does not require real-time interactivity, use the URLLoader class instead of the XMLSocket class._
+**_Note:_** _Setting up a server to communicate with the XMLSocket object can be challenging. If your application does not require real-time interactivity, use the URLLoader class instead of the XMLSocket class._
 
 You can use the XMLSocket.connect() and XMLSocket.send() methods of the XMLSocket class to transfer XML to and from a server over a socket connection. The XMLSocket.connect() method establishes a socket connection with a web server port. The XMLSocket.send() method passes an XML object to the server specified in the socket connection.
 
@@ -389,7 +389,7 @@ To connect to the XMLSocket from your application, you need to create a new inst
 
 var xmlsock:XMLSocket = new XMLSocket(); xmlsock.connect(&quot;127.0.0.1&quot;, 8080);
 
-Whenever you receive data from the server, the data event (flash.events.DataEvent.DATA) is dispatched:
+Whenever you receive data from the server, the data event (openfl.events.DataEvent.DATA) is dispatched:
 
 xmlsock.addEventListener(DataEvent.DATA, onData); private function onData(event:DataEvent):void
 
@@ -428,13 +428,13 @@ package
 
 {
 
-import flash.display.Sprite; import flash.events.Event;
+import openfl.display.Sprite; import openfl.events.Event;
 
-import flash.events.IOErrorEvent; import flash.events.ProgressEvent;
+import openfl.events.IOErrorEvent; import openfl.events.ProgressEvent;
 
-import flash.events.ServerSocketConnectEvent; import flash.net.ServerSocket;
+import openfl.events.ServerSocketConnectEvent; import openfl.net.ServerSocket;
 
-import flash.net.Socket;
+import openfl.net.Socket;
 
 public class ServerSocketExample extends Sprite
 

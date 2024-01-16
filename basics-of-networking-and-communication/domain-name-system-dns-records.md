@@ -26,11 +26,15 @@ package
 
 {
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.events.DNSResolverEvent; import flash.events.ErrorEvent; import flash.net.dns.ARecord;
+import openfl.events.DNSResolverEvent;
 
-import flash.net.dns.DNSResolver;
+import openfl.events.ErrorEvent;
+
+import openfl.net.dns.ARecord;
+
+import openfl.net.dns.DNSResolver;
 
 public class DNSResolverExample extends Sprite
 

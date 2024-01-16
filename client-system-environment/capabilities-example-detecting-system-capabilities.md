@@ -2,7 +2,7 @@
 
 OpenFL 9 and later
 
-The CapabilitiesExplorer example demonstrates how you can use the flash.system.Capabilities class to determine which features the user’s version of the Flash runtime supports. This example teaches the following techniques:
+The CapabilitiesExplorer example demonstrates how you can use the openfl.system.Capabilities class to determine which features the user’s version of the Flash runtime supports. This example teaches the following techniques:
 
 • Detecting which capabilities the user’s version of the Flash runtime supports using the Capabilities class
 
@@ -38,7 +38,7 @@ The CapabilitiesGrabber.getCapabilities() method returns a sorted array of the F
 
 OpenFL 9 and later
 
-The static getCapabilities() method of the CapabilitiesGrabber class adds each property from the flash.system.Capabilities class to an array (capDP). It then calls the static getBrowserObjects() method in the CapabilitiesGrabber class. The getBrowserObjects() method uses the external API to loop over the browser’s navigator object, which contains the browser’s capabilities. The getCapabilities() method is as follows:
+The static getCapabilities() method of the CapabilitiesGrabber class adds each property from the openfl.system.Capabilities class to an array (capDP). It then calls the static getBrowserObjects() method in the CapabilitiesGrabber class. The getBrowserObjects() method uses the external API to loop over the browser’s navigator object, which contains the browser’s capabilities. The getCapabilities() method is as follows:
 
 public static function getCapabilities():Array
 

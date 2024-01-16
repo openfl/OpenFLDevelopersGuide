@@ -6,7 +6,7 @@ The [GraphicsPathCommand](http://api.openfl.org/openfl/display/GraphicsPathComma
 
 In addition to the Vector of drawing commands, the `drawPath()` method needs a set of coordinates that correspond to the coordinates for each drawing command. Create a Vector instance containing coordinates (Float values) and pass it to the `drawPath()` method as the second (data) argument.
 
-**_Note:_ **_The values in the vector are not Point objects; the vector is a series of numbers where each group of two numbers represents an x/y coordinate pair._
+**_Note:_** _The values in the vector are not Point objects; the vector is a series of numbers where each group of two numbers represents an x/y coordinate pair._
 
 The `Graphics.drawPath()` method matches each command with its respective point values (a collection of two or four numbers) to generate a path in the Graphics object:
 

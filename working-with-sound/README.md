@@ -6,7 +6,8 @@ You can load external audio files and work with audio that’s embedded in a SWF
 
 **More Help topics**
 
-[flash.media package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/media/package-detail.html) [flash.events.SampleDataEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/SampleDataEvent.html)
+[openfl.media package](https://api.openfl.org/openfl/media/index.html)
+[openfl.events.SampleDataEvent](https://api.openfl.org/openfl/events/SampleDataEvent.html)
 
 **Basics of working with sound**
 
@@ -26,7 +27,7 @@ When you load sound data from an external sound file, you can begin playing back
 
 Although there are various sound file formats used to encode digital audio, Haxe, OpenFL support sound files that are stored in the mp3 format. They cannot directly load or play sound files in other formats like WAV or AIFF.
 
-While you’re working with sound in Haxe, you’ll likely work with several classes from the flash.media package. The Sound class is the class you use to get access to audio information by loading a sound file or assigning a function to an event that samples sound data and then starting playback. Once you start playing a sound, OpenFL give you access to a SoundChannel object. Since an audio file that you’ve loaded may only be one of several sounds that you play on a user’s computer, each individual sound that’s playing uses its own SoundChannel object; the combined output of all the SoundChannel objects mixed together is what actually plays over the computer’s speakers. You use this SoundChannel instance to control properties of the sound and to stop its playback. Finally, if you want to control the combined audio, the SoundMixer class gives you control over the mixed output.
+While you’re working with sound in Haxe, you’ll likely work with several classes from the openfl.media package. The Sound class is the class you use to get access to audio information by loading a sound file or assigning a function to an event that samples sound data and then starting playback. Once you start playing a sound, OpenFL give you access to a SoundChannel object. Since an audio file that you’ve loaded may only be one of several sounds that you play on a user’s computer, each individual sound that’s playing uses its own SoundChannel object; the combined output of all the SoundChannel objects mixed together is what actually plays over the computer’s speakers. You use this SoundChannel instance to control properties of the sound and to stop its playback. Finally, if you want to control the combined audio, the SoundMixer class gives you control over the mixed output.
 
 You can also use several other classes to perform more specific tasks when you’re working with sound in Haxe; for more information on all the sound-related classes, see
 

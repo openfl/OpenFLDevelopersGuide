@@ -30,7 +30,7 @@ When copying and pasting data in response to a copy, cut, or paste event in HTML
 | Bitmap | &quot;image/x-vnd.adobe.air.bitmap&quot; |
 | File list | &quot;application/x-vnd.adobe.air.file-list&quot; |
 
-**_Note:_ **_Rich text format data is not available from the clipboardData property of the event object dispatched as a result of a paste event within HTML content._
+**_Note:_** _Rich text format data is not available from the clipboardData property of the event object dispatched as a result of a paste event within HTML content._
 
 ## Custom data formats {#custom-data-formats}
 
@@ -85,7 +85,7 @@ The rendering function is added to a Clipboard object using the setDataHandler()
 
 If a data format of the same type is added to a Clipboard object with the setData() method, that data takes precedence over the deferred version (the rendering function is never called). The rendering function may or may not be called again if the same clipboard data is accessed a second time.
 
-**_Note:_ **_On Mac OS X, deferred rendering works only with custom data formats. With standard data formats, the rendering function is called immediately._
+**_Note:_** _On Mac OS X, deferred rendering works only with custom data formats. With standard data formats, the rendering function is called immediately._
 
 **Pasting text using a deferred rendering function**
 
@@ -103,11 +103,11 @@ Flash example
 
 package {
 
-import flash.desktop.Clipboard;
+import openfl.desktop.Clipboard;
 
-import flash.desktop.ClipboardFormats; import flash.desktop.ClipboardTransferMode; import flash.display.Sprite;
+import openfl.desktop.ClipboardFormats; import openfl.desktop.ClipboardTransferMode; import openfl.display.Sprite;
 
-import flash.text.TextField; import flash.text.TextFormat; import flash.text.TextFieldType; import flash.events.MouseEvent; import flash.events.Event;
+import openfl.text.TextField; import openfl.text.TextFormat; import openfl.text.TextFieldType; import openfl.events.MouseEvent; import openfl.events.Event;
 
 public class DeferredRenderingExample extends Sprite
 
@@ -201,9 +201,9 @@ Flex example
 
 &lt;![CDATA[
 
-import flash.desktop.Clipboard;
+import openfl.desktop.Clipboard;
 
-import flash.desktop.ClipboardFormats;
+import openfl.desktop.ClipboardFormats;
 
 public function init():void
 

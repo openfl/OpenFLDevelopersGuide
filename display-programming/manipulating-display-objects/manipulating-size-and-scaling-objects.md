@@ -17,7 +17,7 @@ Changing the `height` or `width` of a display object causes the object to scale,
 
 When you change the `width` or `height` properties of a display object, OpenFL updates the `scaleX` and `scaleY` properties of the object as well.
 
-**_Note:_ **_TextField objects are an exception to this scaling behavior. Text fields need to resize themselves to accommodate text wrapping and font sizes, so they reset their `scaleX` or `scaleY` values to 1 after resizing. However, if you adjust the `scaleX` or `scaleY` values of a TextField object, the `width` and `height` values change to accommodate the scaling values you provide._
+**_Note:_** _TextField objects are an exception to this scaling behavior. Text fields need to resize themselves to accommodate text wrapping and font sizes, so they reset their `scaleX` or `scaleY` values to 1 after resizing. However, if you adjust the `scaleX` or `scaleY` values of a TextField object, the `width` and `height` values change to accommodate the scaling values you provide._
 
 These properties represent the relative size of the display object compared to its original size. The `scaleX` and `scaleY` properties use fraction (decimal) values to represent percentage. For example, if a display object’s `width` has been changed so that it’s half as wide as its original size, the object’s `scaleX` property will have the value .5, meaning 50 percent. If its `height` has been doubled, its `scaleY` property will have the value 2, meaning 200 percent.
 

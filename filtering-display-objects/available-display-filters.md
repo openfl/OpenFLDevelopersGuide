@@ -17,7 +17,7 @@ The first six filters are simple filters that can be used to create one specific
 
 The final four filters are available in Haxe only. Those filters, the color matrix filter, convolution filter, displacement map filter, and shader filter, are much more flexible in the types of effects that they can be used to create. Rather than being optimized for a single effect, they provide power and flexibility. For example, by selecting different values for its matrix, the convolution filter can be used to create effects such as blurring, embossing, sharpening, finding color edges, transformations, and more.
 
-Each of the filters, whether simple or complex, can be customized using their properties. Generally, you have two choices for setting filter properties. All the filters let you set the properties by passing parameter values to the filter object’s constructor. Alternatively, whether or not you set the filter properties by passing parameters, you can adjust the filters later by setting values for the filter object’s properties. Most of the example code listings set the properties directlyto make the example easier to follow. Nevertheless, you could usually achieve the same result in fewer lines of code by passing the values as parameters in the filter object’s constructor. For more details on the specifics of each filter, its properties and its constructor parameters, see the listings for the flash.filters package in the [Haxe](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/package-detail.html) [Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/package-detail.html).
+Each of the filters, whether simple or complex, can be customized using their properties. Generally, you have two choices for setting filter properties. All the filters let you set the properties by passing parameter values to the filter object’s constructor. Alternatively, whether or not you set the filter properties by passing parameters, you can adjust the filters later by setting values for the filter object’s properties. Most of the example code listings set the properties directlyto make the example easier to follow. Nevertheless, you could usually achieve the same result in fewer lines of code by passing the values as parameters in the filter object’s constructor. For more details on the specifics of each filter, its properties and its constructor parameters, see the listings for the openfl.filters package in the [Haxe](https://api.openfl.org/openfl/filters/index.html) [Reference for the Adobe Flash Platform](https://api.openfl.org/openfl/filters/index.html).
 
 **Bevel filter**
 
@@ -27,11 +27,11 @@ The BevelFilter class properties allow you to customize the appearance of the be
 
 The following example loads an external image and applies a bevel filter to it.
 
-import flash.display.*;
+import openfl.display.*;
 
-import flash.filters.BevelFilter;
+import openfl.filters.BevelFilter;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.BitmapFilterType; import flash.net.URLRequest;
+import openfl.filters.BitmapFilterQuality; import openfl.filters.BitmapFilterType; import openfl.net.URLRequest;
 
 // Load an image onto the Stage.
 
@@ -63,9 +63,9 @@ The BlurFilter class smears, or blurs, a display object and its contents. Blur e
 
 The following example creates a circle object using the drawCircle() method of the Graphics class and applies a blur filter to it:
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.BlurFilter;
+import openfl.filters.BitmapFilterQuality; import openfl.filters.BlurFilter;
 
 // Draw a circle.
 
@@ -89,9 +89,9 @@ The drop shadow filter also allows you to apply custom transformation options on
 
 The following code creates a square box sprite and applies a drop shadow filter to it:
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.filters.DropShadowFilter;
+import openfl.filters.DropShadowFilter;
 
 // Draw a box.
 
@@ -117,9 +117,9 @@ Similar to the drop shadow filter, the glow filter includes properties to modify
 
 The following code creates a cross using the Sprite class and applies a glow filter to it:
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.GlowFilter;
+import openfl.filters.BitmapFilterQuality; import openfl.filters.GlowFilter;
 
 // Create a cross graphic.
 
@@ -143,9 +143,9 @@ The GradientBevelFilter class lets you apply an enhanced bevel effect to display
 
 The following code creates a rectangle object using the drawRect() method of the Shape class and applies a gradient bevel filter to it.
 
-import flash.display.Shape;
+import openfl.display.Shape;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.GradientBevelFilter;
+import openfl.filters.BitmapFilterQuality; import openfl.filters.GradientBevelFilter;
 
 // Draw a rectangle.
 
@@ -179,9 +179,9 @@ The GradientGlowFilter class lets you apply an enhanced glow effect to display o
 
 The following example draws a circle on the Stage, and applies a gradient glow filter to it. As you move the mouse further to the right and down, the amount of blur increases in the horizontal and vertical directions respectively. In addition, any time you click on the Stage, the strength of the blur increases.
 
-import flash.events.MouseEvent;
+import openfl.events.MouseEvent;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.BitmapFilterType; import flash.filters.GradientGlowFilter;
+import openfl.filters.BitmapFilterQuality; import openfl.filters.BitmapFilterType; import openfl.filters.GradientGlowFilter;
 
 // Create a new Shape instance. var shape:Shape = new Shape();
 
@@ -241,11 +241,11 @@ stage.addEventListener(MouseEvent.CLICK, onClick); stage.addEventListener(MouseE
 
 The following code example uses several basic filters, combined with a Timer for creating repeating actions, to create an animated traffic light simulation.
 
-import flash.display.Shape; import flash.events.TimerEvent;
+import openfl.display.Shape; import openfl.events.TimerEvent;
 
-import flash.filters.BitmapFilterQuality; import flash.filters.BitmapFilterType; import flash.filters.DropShadowFilter; import flash.filters.GlowFilter;
+import openfl.filters.BitmapFilterQuality; import openfl.filters.BitmapFilterType; import openfl.filters.DropShadowFilter; import openfl.filters.GlowFilter;
 
-import flash.filters.GradientBevelFilter; import flash.utils.Timer;
+import openfl.filters.GradientBevelFilter; import openfl.utils.Timer;
 
 var count:Number = 1; var distance:Number = 8;
 
@@ -339,7 +339,7 @@ count++;
 
 The ColorMatrixFilter class is used to manipulate the color and alpha values of the filtered object. This allows you to create saturation changes, hue rotation (shifting a palette from one range of colors to another), luminance-to-alpha changes, and other color manipulation effects using values from one color channel and potentially applying them to other channels.
 
-Conceptually, the filter goes through the pixels in the source image one by one and separates each pixel into its red, green, blue, and alpha components. It then multiplies values provided in the color matrix by each of these values, adding the results together to determine the resulting color value that will be displayed on the screen for that pixel. The matrix property of the filter is an array of 20 numbers that are used in calculating the final color. For details of the specific algorithm used to calculate the color values, see the entry describing the ColorMatrixFilter class’s matrix property in the [Haxe Reference for the Adobe Flash Platform](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/filters/ColorMatrixFilter.html).
+Conceptually, the filter goes through the pixels in the source image one by one and separates each pixel into its red, green, blue, and alpha components. It then multiplies values provided in the color matrix by each of these values, adding the results together to determine the resulting color value that will be displayed on the screen for that pixel. The matrix property of the filter is an array of 20 numbers that are used in calculating the final color. For details of the specific algorithm used to calculate the color values, see the entry describing the ColorMatrixFilter class’s matrix property in the [OpenFL API Reference](https://api.openfl.org/openfl/filters/ColorMatrixFilter.html).
 
 ## Convolution filter {#convolution-filter}
 
@@ -457,11 +457,11 @@ The location and amount of displacement applied to a given pixel is determined b
 
 To understand how the displacement map filter works, consider a basic example. In the following code, an image is loaded, and when it finishes loading it is centered on the Stage and a displacement map filter is applied to it, causing the pixels in the entire image to shift horizontally to the left.
 
-import flash.display.BitmapData; import flash.display.Loader; import flash.events.MouseEvent;
+import openfl.display.BitmapData; import openfl.display.Loader; import openfl.events.MouseEvent;
 
-import flash.filters.DisplacementMapFilter; import flash.geom.Point;
+import openfl.filters.DisplacementMapFilter; import openfl.geom.Point;
 
-import flash.net.URLRequest;
+import openfl.net.URLRequest;
 
 // Load an image onto the Stage. var loader:Loader = new Loader();
 
@@ -517,15 +517,15 @@ displacementMap.mode = DisplacementMapFilterMode.CLAMP;
 
 For a more complex example, the following listing uses a displacement map filter to create a magnifying glass effect on an image:
 
-import flash.display.Bitmap; import flash.display.BitmapData;
+import openfl.display.Bitmap; import openfl.display.BitmapData;
 
-import flash.display.BitmapDataChannel; import flash.display.GradientType; import flash.display.Loader;
+import openfl.display.BitmapDataChannel; import openfl.display.GradientType; import openfl.display.Loader;
 
-import flash.display.Shape; import flash.events.MouseEvent;
+import openfl.display.Shape; import openfl.events.MouseEvent;
 
-import flash.filters.DisplacementMapFilter; import flash.filters.DisplacementMapFilterMode; import flash.geom.Matrix;
+import openfl.filters.DisplacementMapFilter; import openfl.filters.DisplacementMapFilterMode; import openfl.geom.Matrix;
 
-import flash.geom.Point; import flash.net.URLRequest;
+import openfl.geom.Point; import openfl.net.URLRequest;
 
 // Create the gradient circles that will together form the
 
@@ -629,7 +629,7 @@ OpenFL 10 and later, Adobe AIR 1.5 and later
 
 The ShaderFilter class lets you use a custom filter effect defined as a Pixel Bender shader. Because the filter effect is written as a Pixel Bender shader, the effect can be completely customized. The filtered content is passed in to the shader as an image input, and the result of the shader operation becomes the filter result.
 
-**_Note:_ **_The Shader filter is available in Haxe starting with OpenFL 10 and Adobe AIR 1.5._
+**_Note:_** _The Shader filter is available in Haxe starting with OpenFL 10 and Adobe AIR 1.5._
 
 To apply a shader filter to an object, you first create a Shader instance representing the Pixel Bender shader that you are using. For details on the procedure for creating a Shader instance and on how to specify input image and parameter values, see
 

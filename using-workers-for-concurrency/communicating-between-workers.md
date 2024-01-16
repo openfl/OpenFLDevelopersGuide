@@ -96,15 +96,15 @@ Because workers execute their code simultaneously, it’s possible for two worke
 
 The ByteArray class has methods that allow you to validate and change the byte array’s contents in a single operation:
 
-• [atomicCompareAndSwapIntAt() method](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html#atomicCompareAndSwapIntAt())
+• [atomicCompareAndSwapIntAt() method](https://api.openfl.org/openfl/utils/ByteArray.html#atomicCompareAndSwapIntAt)
 
-• [atomicCompareAndSwapLength() method](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/utils/ByteArray.html#atomicCompareAndSwapLength())
+• [atomicCompareAndSwapLength() method](https://api.openfl.org/openfl/utils/ByteArray.html#atomicCompareAndSwapLength)
 
-In addition, the flash.concurrent package includes classes that provide access control for working with shared resources:
+In addition, the openfl.concurrent package includes classes that provide access control for working with shared resources:
 
-• [Mutex class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/Mutex.html)
+• [Mutex class](https://api.openfl.org/openfl/concurrent/Mutex.html)
 
-• [Condition class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/Condition.html)
+• [Condition class](https://api.openfl.org/openfl/concurrent/Condition.html)
 
 ## Shared references and copied values {#shared-references-and-copied-values}
 
@@ -116,7 +116,7 @@ In the normal case, when you call Worker.setSharedProperty() or MessageChannel.s
 
 Worker.setSharedProperty() or MessageChannel.send().
 
-• In order for a custom class to be deserialized properly, the class definition must be registered using the flash.net.registerClassAlias() function or [RemoteClass] metadata. The same alias must be used for both worker&#039;s versions of the class.
+• In order for a custom class to be deserialized properly, the class definition must be registered using the openfl.net.registerClassAlias() function or [RemoteClass] metadata. The same alias must be used for both worker&#039;s versions of the class.
 
 There are five special cases of objects that are truly shared rather than copied between workers:
 
@@ -144,7 +144,7 @@ In addition to the worker-specific mechanisms for passing data, workers can also
 
 When you share a resource between two or more workers, you generally need to avoid having multiple workers accessing the resource at the same time. For example, having multiple workers access a file on the local file system could cause data loss or corruption and may not be supported by the operating system.
 
-To guard against concurrent access problems, use the Mutex and Condition classes in the flash.concurrent package to provide access control for working with shared resources.
+To guard against concurrent access problems, use the Mutex and Condition classes in the openfl.concurrent package to provide access control for working with shared resources.
 
 Unlike other data-sharing mechanisms, the SQLite database engine is designed for concurrent access and has its own transaction support built in. Multiple workers can access a SQLite database without risk of corrupting the data.
 
@@ -154,4 +154,4 @@ See also
 
 “Working with local SQL databases in AIR” on page 714
 
-[flash.concurrent package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/concurrent/package-detail.html)
+[openfl.concurrent package](https://api.openfl.org/openfl/concurrent/index.html)

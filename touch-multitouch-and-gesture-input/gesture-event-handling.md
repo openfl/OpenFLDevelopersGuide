@@ -2,11 +2,11 @@
 
 OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Handle gesture events in the same way as basic touch events. You can listen for a series of gesture events defined by the event type constants in the [TransformGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TransformGestureEvent.html) class, the [GestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/GestureEvent.html) class and the [PressAndTapGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/PressAndTapGestureEvent.html) class.
+Handle gesture events in the same way as basic touch events. You can listen for a series of gesture events defined by the event type constants in the [TransformGestureEvent](https://api.openfl.org/openfl/events/TransformGestureEvent.html) class, the [GestureEvent](https://api.openfl.org/openfl/events/GestureEvent.html) class and the [PressAndTapGestureEvent](https://api.openfl.org/openfl/events/PressAndTapGestureEvent.html) class.
 
 To handle a gesture touch event:
 
-1.  Set your application to handle gesture input by setting the flash.ui.Multitouch.inputMode property to
+1.  Set your application to handle gesture input by setting the openfl.ui.Multitouch.inputMode property to
 
 MultitouchInputMode.GESTURE.
 
@@ -64,7 +64,7 @@ addChild(myTextField);
 
 }
 
-**_Note:_ **_Not all GestureEvent, TransformGestureEvent, and PressAndTapGestureEvent event types are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting a multi-finger swipe. So, the InteractiveObject gestureSwipe events are not supported on those devices. Try testing for specific event support to ensure your application works, and see_
+**_Note:_** _Not all GestureEvent, TransformGestureEvent, and PressAndTapGestureEvent event types are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting a multi-finger swipe. So, the InteractiveObject gestureSwipe events are not supported on those devices. Try testing for specific event support to ensure your application works, and see_
 
 _“Troubleshooting” on page 593_
 
@@ -96,7 +96,7 @@ function rothandler(evt:TransformGestureEvent): void { evt.target.parent.rotatio
 
 }
 
-**_Note:_ **_Not all TransformGestureEvent properties are supported in all runtime environments. For example, not all touch- enabled devices are capable or detecting the rotation of a gesture on the screen. So, the TransformGestureEvent.rotation property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
+**_Note:_** _Not all TransformGestureEvent properties are supported in all runtime environments. For example, not all touch- enabled devices are capable or detecting the rotation of a gesture on the screen. So, the TransformGestureEvent.rotation property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
 
 _“Troubleshooting” on page 593_
 
@@ -136,7 +136,7 @@ evt.target.alpha = 1;
 
 }
 
-**_Note:_ **_The frequency of the update phase depends on the runtime’s environment. Some operating system and hardware combinations do not relay updates at all._
+**_Note:_** _The frequency of the update phase depends on the runtime’s environment. Some operating system and hardware combinations do not relay updates at all._
 
 Gesture phase is “all” for simple gesture events
 

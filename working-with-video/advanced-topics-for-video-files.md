@@ -30,7 +30,7 @@ For information about configuring Microsoft Windows 2003 and Microsoft IIS Serve
 
 If you attempt to play a local FLV from a non-system drive on an Apple® Macintosh® computer by using a path that uses a relative slash (/), the video will not play. Non-system drives include, but are not limited to, CD-ROMs, partitioned hard disks, removable storage media, and connected storage devices.
 
-**_Note:_ **_The reason for this failure is a limitation of the operating system, not a limitation in OpenFL._
+**_Note:_** _The reason for this failure is a limitation of the operating system, not a limitation in OpenFL._
 
 For an FLV file to play from a non-system drive on a Macintosh, refer to it with an absolute path using a colon-based notation (:) rather than slash-based notation (/). The following list shows the difference in the two kinds of notation:
 

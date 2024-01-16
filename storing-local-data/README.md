@@ -1,6 +1,6 @@
 # Chapter 39: Storing local data {#chapter-39-storing-local-data}
 
-You use the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) class to store small amounts of data on the client computer. In Adobe AIR, you can also use the [EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/data/EncryptedLocalStore.html) class to store small amounts of privacy-sensitive user data on the local computer in an AIR application.
+You use the [SharedObject](https://api.openfl.org/openfl/net/SharedObject.html) class to store small amounts of data on the client computer. In Adobe AIR, you can also use the [EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore.html) class to store small amounts of privacy-sensitive user data on the local computer in an AIR application.
 
 You can also read and write files on the file system and (in Adobe AIR) access local database files. For more information, see
 
@@ -32,7 +32,7 @@ A shared object, sometimes referred to as a “Flash cookie,” is a data file t
 
 **About shared objects**
 
-Shared objects function like browser cookies. You use the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) class to store data on the user’s local hard disk and call that data during the same session or in a later session. Applications can access only their own SharedObject data, and only if they are running on the same domain. The data is not sent to the server and is not accessible by other applications running on other domains, but can be made accessible by applications from the same domain.
+Shared objects function like browser cookies. You use the [SharedObject](https://api.openfl.org/openfl/net/SharedObject.html) class to store data on the user’s local hard disk and call that data during the same session or in a later session. Applications can access only their own SharedObject data, and only if they are running on the same domain. The data is not sent to the server and is not accessible by other applications running on other domains, but can be made accessible by applications from the same domain.
 
 **Shared objects compared with cookies**
 
@@ -55,11 +55,11 @@ Cookies that adhere to the RFC 2109 standard generally have the following proper
 
 About the SharedObject class
 
-Using the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) class, you can create and delete shared objects, as well as detect the current size of a SharedObject object that you are using.
+Using the [SharedObject](https://api.openfl.org/openfl/net/SharedObject.html) class, you can create and delete shared objects, as well as detect the current size of a SharedObject object that you are using.
 
 ## Creating a shared object {#creating-a-shared-object}
 
-To create a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) object, use the SharedObject.getLocal() method, which has the following syntax:
+To create a [SharedObject](https://api.openfl.org/openfl/net/SharedObject.html) object, use the SharedObject.getLocal() method, which has the following syntax:
 
 SharedObject.getLocal(&quot;objectName&quot; [, pathname]): SharedObject
 
@@ -88,13 +88,13 @@ For example, if you request an application named MyApp.swf on the local host, an
 
 c:/Documents and Settings/fred/Application Data/Macromedia/OpenFL/#SharedObjects/KROKWXRK/#localhost/sos/MyApp.swf/data.sol
 
-**_Note:_ **_If you do not provide a name in the SharedObject.getLocal() method, OpenFL names the file undefined.sol._
+**_Note:_** _If you do not provide a name in the SharedObject.getLocal() method, OpenFL names the file undefined.sol._
 
 By default, Flash can save locally persistent SharedObject objects of up to 100 KB per domain. This value is user- configurable. When the application tries to save data to a shared object that would make it bigger than 100 KB, OpenFL displays the Local Storage dialog box, which lets the user allow or deny more local storage for the domain that is requesting access.
 
 **Specifying a path**
 
-You can use the optional _pathname_ parameter to specify a location for the [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) file. This file must be a subdirectory of that domain’s SharedObject directory. For example, if you request an application on the localhost and specify the following:
+You can use the optional _pathname_ parameter to specify a location for the [SharedObject](https://api.openfl.org/openfl/net/SharedObject.html) file. This file must be a subdirectory of that domain’s SharedObject directory. For example, if you request an application on the localhost and specify the following:
 
 mySO = SharedObject.getLocal(&quot;myObjectFile&quot;,&quot;/&quot;);
 
@@ -104,7 +104,7 @@ If you specify a directory that does not exist, OpenFL does not create a SharedO
 
 Adding data to a shared object
 
-You add data to a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html)’s *.sol file using the data property of the SharedObject object. To add new data to the shared object, use the following syntax:
+You add data to a [SharedObject](https://api.openfl.org/openfl/net/SharedObject.html)’s *.sol file using the data property of the SharedObject object. To add new data to the shared object, use the following syntax:
 
 _sharedObject_name_.data._variable_ = _value_;
 
@@ -132,7 +132,7 @@ The following example is an Haxe class that defines methods that control the int
 
 package {
 
-import mx.collections.ArrayCollection; import flash.net.SharedObject;
+import mx.collections.ArrayCollection; import openfl.net.SharedObject;
 
 public class LSOHandler {
 
@@ -192,7 +192,7 @@ The following Flex application creates an instance of the Haxe class for each of
 
 import mx.collections.ArrayCollection; import mx.utils.ObjectUtil;
 
-import flash.net.SharedObject;
+import openfl.net.SharedObject;
 
 [Bindable]
 
@@ -362,7 +362,7 @@ id=&quot;mySitesGrid&quot; dataProvider=&quot;{localSites}&quot; width=&quot;400
 
 Storing typed objects in shared objects
 
-You can store typed Haxe instances in shared objects. You do this by calling the flash.net.registerClassAlias() method to register the class. If you create an instance of your class and store it in the data member of your shared object and later read the object out, you will get a typed instance. By default, the SharedObject objectEncoding property supports AMF3 encoding, and unpacks your stored instance from the SharedObject object; the stored instance retains the same type you specified when you called the registerClassAlias() method.
+You can store typed Haxe instances in shared objects. You do this by calling the openfl.net.registerClassAlias() method to register the class. If you create an instance of your class and store it in the data member of your shared object and later read the object out, you will get a typed instance. By default, the SharedObject objectEncoding property supports AMF3 encoding, and unpacks your stored instance from the SharedObject object; the stored instance retains the same type you specified when you called the registerClassAlias() method.
 
 (iOS only) Prevent cloud backup of local shared objects
 
@@ -430,7 +430,7 @@ public function destroySharedObject():void { mySO.clear();
 
 ## SharedObject example {#sharedobject-example}
 
-The following example shows that you can store simple objects, such as a Date object, in a [SharedObject](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/SharedObject.html) object without having to manually serialize and deserialize those objects.
+The following example shows that you can store simple objects, such as a Date object, in a [SharedObject](https://api.openfl.org/openfl/net/SharedObject.html) object without having to manually serialize and deserialize those objects.
 
 The following example begins by welcoming you as a first-time visitor. When you click Log Out, the application stores the current date in a shared object. The next time you launch this application or refresh the page, the application welcomes you back with a reminder of the time you logged out.
 

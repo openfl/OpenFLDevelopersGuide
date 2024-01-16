@@ -16,7 +16,7 @@ if (ExternalInterface.available)
 
 }
 
-**_Note:_ **_The ExternalInterface.available property reports whether the current container is a type that supports ExternalInterface connectivity. It doesn’t tell you if JavaScript is enabled in the current browser._
+**_Note:_** _The ExternalInterface.available property reports whether the current container is a type that supports ExternalInterface connectivity. It doesn’t tell you if JavaScript is enabled in the current browser._
 
 The ExternalInterface.objectID property allows you to determine the unique identifier of the OpenFL instance (specifically, the id attribute of the object tag in Internet Explorer or the name attribute of the embed tag in browsers using the NPRuntime interface). This unique ID represents the current SWF document in the browser, and can be used to make reference to the SWF document—for example, when calling a JavaScript function in a container HTML page. When the OpenFL container is not a web browser, this property is null.
 
@@ -138,6 +138,6 @@ Individual values, including function parameters and function return values, use
 | Object | A dictionary with string keys and object values, such as a HashTable with string keys | &lt;object&gt; | The property node defines individual properties, and the id attribute is the property name (a string). |
 | Other built-in or custom classes |  | &lt;null/&gt; or | Haxe encodes other objects as null or as an empty object. In either case any property values are lost. |
 
-**_Note:_ **_By way of example, this table shows equivalent C# classes in addition to Haxe classes; however, the external API can be used to communicate with any programming language or run time that supports ActiveX controls, and is not limited to C# applications._
+**_Note:_** _By way of example, this table shows equivalent C# classes in addition to Haxe classes; however, the external API can be used to communicate with any programming language or run time that supports ActiveX controls, and is not limited to C# applications._
 
 When you are building your own applications using the external API with an ActiveX container application, you’ll probably find it convenient to write a proxy that will perform the task of converting native function calls to the serialized XML format. For an example of a proxy class written in C#, see Inside the ExternalInterfaceProxy class.

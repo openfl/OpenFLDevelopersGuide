@@ -10,9 +10,9 @@ addFilterPropertyArray() methods of the Motion class.
 
 OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
-The initFilters() method initializes the filters. Its first argument is an array of the fully qualified class names of all the filters applied to the display object. This array of filter names is generated from the filters list for the motion tween in Flash. In your copy of the script, you can remove or add any of the filters in the flash.filters package to this array. The following call initializes the filters list for the target display object. It applies the DropShadowFilter, GlowFilter, and BevelFilter and copies the list to each keyframe in the Motion object.
+The initFilters() method initializes the filters. Its first argument is an array of the fully qualified class names of all the filters applied to the display object. This array of filter names is generated from the filters list for the motion tween in Flash. In your copy of the script, you can remove or add any of the filters in the openfl.filters package to this array. The following call initializes the filters list for the target display object. It applies the DropShadowFilter, GlowFilter, and BevelFilter and copies the list to each keyframe in the Motion object.
 
-motion_Box.initFilters([&quot;flash.filters.DropShadowFilter&quot;, &quot;flash.filters.GlowFilter&quot;, &quot;flash.filters.BevelFilter&quot;], [0, 0, 0]);
+motion_Box.initFilters([&quot;openfl.filters.DropShadowFilter&quot;, &quot;openfl.filters.GlowFilter&quot;, &quot;openfl.filters.BevelFilter&quot;], [0, 0, 0]);
 
 ## Adding filters {#adding-filters-0}
 

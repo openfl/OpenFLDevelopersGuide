@@ -15,7 +15,7 @@ To draw with the `graphics` property of a Shape, Sprite, or MovieClip instance, 
 myShape.graphics.lineStyle (2, 0x990000, .75);
 ```
 
-The default value for the `alpha` parameter is 1.0 (100%), so you can leave that parameter off if you want a completely opaque line. The `lineStyle()` method also accepts two additional parameters for pixel hinting and scale mode; for more information about using those parameters see the description of the `Graphics.lineStyle()` method in the [API Reference](http://api.openfl.org/openfl/display/Graphics.html#lineStyle()).
+The default value for the `alpha` parameter is 1.0 (100%), so you can leave that parameter off if you want a completely opaque line. The `lineStyle()` method also accepts two additional parameters for pixel hinting and scale mode; for more information about using those parameters see the description of the `Graphics.lineStyle()` method in the [API Reference](http://api.openfl.org/openfl/display/Graphics.html#lineStyle).
 
 To create a gradient line, use the `lineGradientStyle()` method. This method is described in [Creating gradient lines and fills](creating-gradient-lines-and-fills.md).
 

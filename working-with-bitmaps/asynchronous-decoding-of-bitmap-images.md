@@ -4,14 +4,14 @@ OpenFL 11 and later, Adobe AIR 2.6 and later
 
 When you work with bitmap images, you can asynchronously decode and load the bitmap images to improve your application’s perceived performance. Decoding a bitmap image asynchronously can take the same time as decoding the image synchronously in many cases. However, the bitmap image gets decoded in a separate thread before the associated Loader object sends the COMPLETE event. Hence, you can asynchronously decode larger images after loading them.
 
-The ImageDecodingPolicy class in the flash.system package, allows you to specify the bitmap loading scheme. The default loading scheme is synchronous.
+The ImageDecodingPolicy class in the openfl.system package, allows you to specify the bitmap loading scheme. The default loading scheme is synchronous.
 
 | **Bitmap Decoding Policy** | **Bitmap Loading Scheme** | **Description** |
 | --- | --- | --- |
 | ImageDecodingPolicy.ON_DEMAND | Synchronous | Loaded images are decoded when the image data is accessed. |
 | ImageDecodingPolicy.ON_LOAD | Asynchronous | Loaded images are decoded on load, before the COMPLETE event is dispatched. |
 
-**_Note:_ **_If the file being loaded is a bitmap image and the decoding policy used is ON_LOAD, the image is decoded asynchronously before the COMPLETE event is dispatched._
+**_Note:_** _If the file being loaded is a bitmap image and the decoding policy used is ON_LOAD, the image is decoded asynchronously before the COMPLETE event is dispatched._
 
 The following code shows the usage of the ImageDecodingPolicy class:
 
@@ -27,9 +27,9 @@ package
 
 {
 
-import flash.display.Loader; import flash.display.Sprite; import flash.events.Event; import flash.net.URLRequest;
+import openfl.display.Loader; import openfl.display.Sprite; import openfl.events.Event; import openfl.net.URLRequest;
 
-import flash.system.ImageDecodingPolicy; import flash.system.LoaderContext;
+import openfl.system.ImageDecodingPolicy; import openfl.system.LoaderContext;
 
 public class AsyncTest extends Sprite
 

@@ -10,7 +10,7 @@ An interactive object can receive focus, either programmatically or through a us
 
 In each of these situations, you can add a listener for FocusEvent.FOCUS_IN or FocusEvent.FOCUS_OUT to provide additional behavior when focus changes. This is particularly useful for text fields and forms, but can also be used on sprites, movie clips, or any object that inherits from the InteractiveObject class. The following example shows how to enable focus cycling with the Tab key and how to respond to the subsequent focus event. In this case, each square changes color as it receives focus.
 
-**_Note:_ **_Flash Professional uses keyboard shortcuts to manage focus; therefore, to properly simulate focus management, projects should be tested in a browser or AIR rather than within Flash._
+**_Note:_** _Flash Professional uses keyboard shortcuts to manage focus; therefore, to properly simulate focus management, projects should be tested in a browser or AIR rather than within Flash._
 
 var rows:uint = 10; var cols:uint = 10;
 

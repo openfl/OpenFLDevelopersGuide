@@ -8,7 +8,7 @@ The header in the Haxe code that you copy from Flash lists all the modules requi
 
 OpenFL 9 and later, Adobe AIR 1.0 and later, requires Flash CS3 or later
 
-The essential motion tween classes are the AnimatorFactory, MotionBase, and Motion classes from the fl.motion package. You could need additional classes, depending on the properties that the motion tween manipulates. For example, if the motion tween transforms or rotates the display object, import the appropriate flash.geom classes. If it applies filters, import the flash.filter classes. In Haxe, a motion tween is an instance of the Motion class. The Motion class stores a keyframe animation sequence that can be applied to a visual object. The animation data includes position, scale, rotation, skew, color, filters, and easing.
+The essential motion tween classes are the AnimatorFactory, MotionBase, and Motion classes from the fl.motion package. You could need additional classes, depending on the properties that the motion tween manipulates. For example, if the motion tween transforms or rotates the display object, import the appropriate openfl.geom classes. If it applies filters, import the openfl.filter classes. In Haxe, a motion tween is an instance of the Motion class. The Motion class stores a keyframe animation sequence that can be applied to a visual object. The animation data includes position, scale, rotation, skew, color, filters, and easing.
 
 The following Haxe was copied from a motion tween that was created in Flash to animate a display object whose instance name is Symbol1_2\. It declares a variable for a MotionBase object named motion_Symbol1_2\. The MotionBase class is the parent of the Motion class.
 

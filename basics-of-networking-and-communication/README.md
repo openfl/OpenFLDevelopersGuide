@@ -6,9 +6,9 @@ The following classes can be used to send and receive data across a network:
 
 | **Class** | **Supported data formats** | **Protocols** | **Description** |
 | --- | --- | --- | --- |
-| [Loader](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/display/Loader.html) | SWF, PNG, JPEG, GIF | HTTP, HTTPS | Loads supported data types and converts the data into a display object. |
+| [Loader](https://api.openfl.org/openfl/display/Loader.html) | SWF, PNG, JPEG, GIF | HTTP, HTTPS | Loads supported data types and converts the data into a display object. |
 | URLLoader | Any (text, XML, binary, etc.) | HTTP, HTTPS | Loads arbitrary formats of data. Your application is responsible for interpreting the data. |
-| [FileReference](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/FileReference.html) | Any | HTTP | Upload and download files. |
+| [FileReference](https://api.openfl.org/openfl/net/FileReference.html) | Any | HTTP | Upload and download files. |
 | NetConnection | Video, audio, Haxe Message Format (AMF) | HTTP, HTTPS, RTMP, RTMFP | Connects to video, audio and remote object streams. |
 | Sound | Audio | HTTP | Loads and plays supported audio formats. |
 | XMLSocket | XML | TCP | Exchanges XML messages with an XMLSocket server. |
@@ -97,7 +97,10 @@ The following code example traces the NetworkInterface properties of each interf
 
 package {
 
-import flash.display.Sprite; import flash.net.InterfaceAddress; import flash.net.NetworkInfo; import flash.net.NetworkInterface;
+import openfl.display.Sprite;
+import openfl.net.InterfaceAddress;
+import openfl.net.NetworkInfo;
+import openfl.net.NetworkInterface;
 
 public class NetworkInformationExample extends Sprite
 

@@ -16,7 +16,7 @@ var url:String = [&quot;http://www.adobe.com&quot;;](http://www.adobe.com/)
 
 var urlReq:URLRequest = new URLRequest(url); navigateToURL(urlReq);
 
-**_Note:_ **_When using the navigateToURL() function, the runtime treats a URLRequest object that uses the POST method (one that has its method property set to URLRequestMethod.POST) as using the GET method._
+**_Note:_** _When using the navigateToURL() function, the runtime treats a URLRequest object that uses the POST method (one that has its method property set to URLRequestMethod.POST) as using the GET method._
 
 When using the navigateToURL() function, URI schemes are permitted based on the security sandbox of the code calling the navigateToURL() function.
 

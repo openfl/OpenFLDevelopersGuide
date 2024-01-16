@@ -6,7 +6,7 @@ Filters allow you to apply a range of effects to bitmap and display objects, ran
 
 To create a filter object, simply call the constructor method of your selected filter class. For example, to create a DropShadowFilter object, use the following code:
 
-import flash.filters.DropShadowFilter;
+import openfl.filters.DropShadowFilter;
 
 var myFilter:DropShadowFilter = new DropShadowFilter();
 
@@ -20,9 +20,9 @@ Applying a filter to a display object
 
 When you apply filter effects to a display object, you apply them through the filters property. The filters property of a display object is an Array instance, whose elements are the filter objects applied to the display object. To apply a single filter to a display object, create the filter instance, add it to an Array instance, and assign that Array object to the display object’s filters property:
 
-import flash.display.Bitmap; import flash.display.BitmapData;
+import openfl.display.Bitmap; import openfl.display.BitmapData;
 
-import flash.filters.DropShadowFilter;
+import openfl.filters.DropShadowFilter;
 
 // Create a bitmapData object and render it to screen
 
@@ -42,7 +42,7 @@ var filtersArray:Array = new Array(dropShadow);
 
 If you want to assign multiple filters to the object, simply add all the filters to the Array instance before assigning it to the filters property. You can add multiple objects to an Array by passing them as parameters to its constructor. For example, this code applies a bevel filter and a glow filter to the previously created display object:
 
-import flash.filters.BevelFilter; import flash.filters.GlowFilter;
+import openfl.filters.BevelFilter; import openfl.filters.GlowFilter;
 
 // Create the filters and add them to an array. var bevel:BevelFilter = new BevelFilter();
 
@@ -116,7 +116,7 @@ Adding an additional filter
 
 The following code demonstrates the process of adding an additional filter to a display object that already has one or more filters applied to it. Initially, a glow filter is applied to the display object named myDisplayObject; later, when the display object is clicked, the addFilters() function is called. In this function, two additional filters are applied to myDisplayObject:
 
-import flash.events.MouseEvent; import flash.filters.*;
+import openfl.events.MouseEvent; import openfl.filters.*;
 
 myDisplayObject.filters = [new GlowFilter()]; function addFilters(event:MouseEvent):void
 

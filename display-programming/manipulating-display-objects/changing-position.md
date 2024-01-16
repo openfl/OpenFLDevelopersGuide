@@ -57,7 +57,7 @@ You can likewise use the DisplayObject class’s `localToGlobal()` method to con
 You can let a user move display objects with mouse using two different techniques in Haxe. In both cases, two mouse events are used: when the mouse button is pressed down, the object is told to follow the mouse cursor, and when it’s released, the object is told to stop following the mouse cursor.
 
 <!--
-**_Note:_ **_OpenFL 11.3 and higher, AIR 3.3 and higher: You can also use the MouseEvent.RELEASE_OUTSIDE event to cover the case of a user releasing the mouse button outside the bounds of the containing Sprite._
+**_Note:_** _OpenFL 11.3 and higher, AIR 3.3 and higher: You can also use the MouseEvent.RELEASE_OUTSIDE event to cover the case of a user releasing the mouse button outside the bounds of the containing Sprite._
 -->
 
 The first technique, using the `startDrag()` method, is simpler, but more limited. When the mouse button is pressed, the `startDrag()` method of the display object to be dragged is called. When the mouse button is released, the `stopDrag()` method is called. The Sprite class defines these two functions, so the object moved must be a Sprite or one of its subclasses.

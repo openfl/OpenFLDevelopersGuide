@@ -4,7 +4,7 @@ As your designs in OpenFL grow in size, whether you are creating an application 
 
 You can cache specified display objects to improve the performance of your project. The display object is a _surface_, essentially a bitmap version of the instance’s vector data, which is data that you do not intend to change much over the course of your project. Therefore, instances with caching turned on are not continually redrawn as the project plays, letting the project render quickly.
 
-**_Note:_ **_You can update the vector data, at which time the surface is recreated. Therefore, the vector data cached in the surface does not need to remain the same for the entire project._
+**_Note:_** _You can update the vector data, at which time the surface is recreated. Therefore, the vector data cached in the surface does not need to remain the same for the entire project._
 
 Setting a display object’s `cacheAsBitmap` property to `true` makes the display object cache a bitmap representation of itself. OpenFL creates a surface object for the instance, which is a cached bitmap instead of vector data. If you change the bounds of the display object, the surface is recreated instead of resized. Surfaces can nest within other surfaces. The child surface copies its bitmap onto its parent surface. For more information, see [Enabling bitmap caching](#enabling-bitmap-caching).
 

@@ -2,13 +2,13 @@
 
 OpenFL 10.1 and later, Adobe AIR 2 and later
 
-Basic touch events are handled the same way you handle other events, like mouse events, in Haxe. You can listen for a series of touch events defined by the event type constants in the [TouchEvent class](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Multitouch.html).
+Basic touch events are handled the same way you handle other events, like mouse events, in Haxe. You can listen for a series of touch events defined by the event type constants in the [TouchEvent class](https://api.openfl.org/openfl/ui/Multitouch.html).
 
-**_Note:_ **_For multiple touch point input (such as touching a device with more than one finger), the first point of contact dispatches a mouse event and a touch event._
+**_Note:_** _For multiple touch point input (such as touching a device with more than one finger), the first point of contact dispatches a mouse event and a touch event._
 
 To handle a basic touch event:
 
-1.  Set your application to handle touch events by setting the flash.ui.Multitouch.inputMode property to
+1.  Set your application to handle touch events by setting the openfl.ui.Multitouch.inputMode property to
 
 MultitouchInputMode.TOUCH_POINT.
 
@@ -50,9 +50,9 @@ myTextField.text = evt.stageX.toString; myTextField.y = 50; addChild(myTextField
 
 }
 
-See the [TouchEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TouchEvent.html) class for the properties available through the event object.
+See the [TouchEvent](https://api.openfl.org/openfl/events/TouchEvent.html) class for the properties available through the event object.
 
-**_Note:_ **_Not all TouchEvent properties are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting the amount of pressure the user is applying to the touch screen. So, the TouchEvent.pressure property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
+**_Note:_** _Not all TouchEvent properties are supported in all runtime environments. For example, not all touch-enabled devices are capable or detecting the amount of pressure the user is applying to the touch screen. So, the TouchEvent.pressure property is not supported on those devices. Try testing for specific property support to ensure your application works, and see_
 
 _“Troubleshooting” on page 593_
 
@@ -84,7 +84,7 @@ function onTouchEnd(event:TouchEvent) { myTextField.text = &quot;touch end&quot;
 
 }
 
-**_Note:_ **_The initial touch listener is attached to mySprite, but the listeners for moving and ending the touch event are not. If the users’s finger or pointing devices moves ahead of the display object, the Stage continues to listen for the touch event._
+**_Note:_** _The initial touch listener is attached to mySprite, but the listeners for moving and ending the touch event are not. If the users’s finger or pointing devices moves ahead of the display object, the Stage continues to listen for the touch event._
 
 Touch Point ID
 

@@ -12,11 +12,16 @@ The touch event handling features of the Flash Platform include input from a sin
 
 Both touch and gesture input can be multitouch input depending on the user’s device. Haxe provides API for handling touch events, gesture events, and individually tracked touch events for multitouch input.
 
-**_Note:_ **_Listening for touch and gesture events can consume a significant amount of processing resources (equivalent to rendering several frames per second), depending on the computing device and operating system. It is often better to use mouse events when you do not actually need the extra functionality provided by touch or gestures. When you do use touch or gesture events, consider reducing the amount of graphical changes that can occur, especially when such events can be dispatched rapidly, as during a pan, rotate, or zoom operation. For example, you could stop animation within a component while the user resizes it using a zoom gesture._
+**_Note:_** _Listening for touch and gesture events can consume a significant amount of processing resources (equivalent to rendering several frames per second), depending on the computing device and operating system. It is often better to use mouse events when you do not actually need the extra functionality provided by touch or gestures. When you do use touch or gesture events, consider reducing the amount of graphical changes that can occur, especially when such events can be dispatched rapidly, as during a pan, rotate, or zoom operation. For example, you could stop animation within a component while the user resizes it using a zoom gesture._
 
 **More Help topics**
 
-[flash.ui.Multitouch](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Multitouch.html) [flash.events.TouchEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TouchEvent.html) [flash.events.GestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/GestureEvent.html) [flash.events.TransformGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/TransformGestureEvent.html) [flash.events.GesturePhase](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/GesturePhase.html) [flash.events.PressAndTapGestureEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/PressAndTapGestureEvent.html)
+[openfl.ui.Multitouch](https://api.openfl.org/openfl/ui/Multitouch.html)
+[openfl.events.TouchEvent](https://api.openfl.org/openfl/events/TouchEvent.html)
+[openfl.events.GestureEvent](https://api.openfl.org/openfl/events/GestureEvent.html)
+[openfl.events.TransformGestureEvent](https://api.openfl.org/openfl/events/TransformGestureEvent.html)
+[openfl.events.GesturePhase](https://api.openfl.org/openfl/events/GesturePhase.html)
+[openfl.events.PressAndTapGestureEvent](https://api.openfl.org/openfl/events/PressAndTapGestureEvent.html)
 
 [Paul Trani: Touch Events and Gestures on Mobile](http://www.paultrani.com/blog/index.php/2011/02/touch-events-and-gestures-on-mobile/) [Mike Jones: Virtual Game Controllers](http://blog.flashgen.com/2011/03/21/virtual-game-controllers/)
 

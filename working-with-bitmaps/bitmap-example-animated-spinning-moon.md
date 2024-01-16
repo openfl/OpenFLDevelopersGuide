@@ -18,7 +18,7 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 
 The first main task this sample performs is loading an external image file, which is a photograph of the moon’s surface. The loading operation is handled by two methods in the MoonSphere class: the MoonSphere() constructor, where the loading process is initiated, and the imageLoadComplete() method, which is called when the external image is completely loaded.
 
-Loading an external image is similar to loading an external SWF; both use an instance of the flash.display.Loader class to perform the loading operation. The actual code in the MoonSphere() method that starts loading the image is as follows:
+Loading an external image is similar to loading an external SWF; both use an instance of the openfl.display.Loader class to perform the loading operation. The actual code in the MoonSphere() method that starts loading the image is as follows:
 
 var imageLoader:Loader = new Loader(); imageLoader.contentLoaderInfo.addEventListener(Event.COMPLETE, imageLoadComplete); imageLoader.load(new URLRequest(&quot;moonMap.png&quot;));
 

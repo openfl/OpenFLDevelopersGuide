@@ -8,9 +8,9 @@ package
 
 {
 
-import flash.display.Sprite; import flash.display.Stage; import flash.text.*;
+import openfl.display.Sprite; import openfl.display.Stage; import openfl.text.*;
 
-import flash.events.*;
+import openfl.events.*;
 
 public class CaptureUserInput extends Sprite
 

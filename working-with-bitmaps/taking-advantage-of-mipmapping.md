@@ -16,8 +16,8 @@ Context3D.createCubeTexture() and Context3D.createTexture() methods.
 
 Texture compression lets you store texture images in compressed format directly on the GPU, which saves GPU memory and memory bandwidth. Typically, compressed textures are compressed offline and uploaded to the GPU in compressed format. However, OpenFL 11.4 and AIR 3.4 support runtime texture compression, which is useful in certain situations, such as when rendering dynami textures from vector art. To use runtime texture compression, perform the following steps:
 
-*   Create the texture object by calling the Context3D.createTexture() method, passing either flash.display3D.Context3DTextureFormat.COMPRESSED or flash.display3D.Context3DTextureFormat.COMPRESSED_ALPHA in the third parameter.
-*   Using the flash.display3D.textures.Texture instance returned by createTexture(), call either flash.display3D.textures.Texture.uploadFromBitmapData() or flash.display3D.textures.Texture.uploadFromByteArray(). These methods upload and compress the texture in one step.
+*   Create the texture object by calling the Context3D.createTexture() method, passing either openfl.display3D.Context3DTextureFormat.COMPRESSED or openfl.display3D.Context3DTextureFormat.COMPRESSED_ALPHA in the third parameter.
+*   Using the openfl.display3D.textures.Texture instance returned by createTexture(), call either openfl.display3D.textures.Texture.uploadFromBitmapData() or openfl.display3D.textures.Texture.uploadFromByteArray(). These methods upload and compress the texture in one step.
 
 MIP maps are created for the following types of bitmaps:
 

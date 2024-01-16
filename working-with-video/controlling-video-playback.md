@@ -2,17 +2,17 @@
 
 The NetStream class offers four main methods for controlling video playback:
 
-[pause()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/NetStream.html#pause()): Pauses playback of a video stream. If the video is already paused, calling this method does nothing.
+[pause()](https://api.openfl.org/openfl/net/NetStream.html#pause): Pauses playback of a video stream. If the video is already paused, calling this method does nothing.
 
-[resume()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/NetStream.html#resume()): Resumes playback of a video stream that is paused. If the video is already playing, calling this method does nothing.
+[resume()](https://api.openfl.org/openfl/net/NetStream.html#resume): Resumes playback of a video stream that is paused. If the video is already playing, calling this method does nothing.
 
-[seek()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/NetStream.html#seek()): Seeks the keyframe closest to the specified location (an offset, in seconds, from the beginning of the stream).
+[seek()](https://api.openfl.org/openfl/net/NetStream.html#seek): Seeks the keyframe closest to the specified location (an offset, in seconds, from the beginning of the stream).
 
-[togglePause()](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/net/NetStream.html#togglePause()): Pauses or resumes playback of a stream.
+[togglePause()](https://api.openfl.org/openfl/net/NetStream.html#togglePause): Pauses or resumes playback of a stream.
 
-**_Note:_ **_There is no stop() method. In order to stop a stream you must pause playback and seek to the beginning of the video stream._
+**_Note:_** _There is no stop() method. In order to stop a stream you must pause playback and seek to the beginning of the video stream._
 
-**_Note:_ **_The play() method does not resume playback, it is used for loading video files._
+**_Note:_** _The play() method does not resume playback, it is used for loading video files._
 
 The following example demonstrates how to control a video using several different buttons. To run the following example, create a new document and add four button instances to your workspace (pauseBtn, playBtn, stopBtn, and togglePauseBtn):
 

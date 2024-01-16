@@ -186,13 +186,13 @@ package
 
 {
 
-import flash.net.NetConnection; import flash.net.NetStream;
+import openfl.net.NetConnection; import openfl.net.NetStream;
 
-import flash.events.NetStatusEvent; import flash.media.Video;
+import openfl.events.NetStatusEvent; import openfl.media.Video;
 
-import flash.display.StageDisplayState; import flash.display.Loader;
+import openfl.display.StageDisplayState; import openfl.display.Loader;
 
-import flash.display.Sprite; import flash.events.MouseEvent;
+import openfl.display.Sprite; import openfl.events.MouseEvent;
 
 public class onMetaDataExample extends Sprite
 
@@ -310,9 +310,9 @@ package
 
 {
 
-import flash.display.*; import flash.net.*;
+import openfl.display.*; import openfl.net.*;
 
-import flash.events.NetStatusEvent; import flash.media.Video;
+import openfl.events.NetStatusEvent; import openfl.media.Video;
 
 public class onXMPDataExample extends Sprite
 
@@ -440,7 +440,7 @@ onMetaData fired onXMPData Fired
 
 &lt;/xmpDM:markers&gt; onMetaData fired
 
-**_Note:_ **_In XMP data, time is stored as DVA Ticks rather than seconds. To compute the cue point time, divide the start time by the framerate. For example, the start time of 7695905817600 divided by a framerate of 254016000000 equals 30:30._
+**_Note:_** _In XMP data, time is stored as DVA Ticks rather than seconds. To compute the cue point time, divide the start time by the framerate. For example, the start time of 7695905817600 divided by a framerate of 254016000000 equals 30:30._
 
 To see the complete raw XMP metadata, which includes the framerate, remove the comment identifiers (//’s) preceding the second and third trace() statements at the beginning of the onXMPData() function.
 

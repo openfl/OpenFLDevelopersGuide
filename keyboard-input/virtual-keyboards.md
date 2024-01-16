@@ -24,7 +24,7 @@ softKeyboardActivating event — dispatched immediately before the keyboard begi
 
 softKeyboardActivate event — dispatched after softKeyboardActivating event handling has completed. When the focused object dispatches this event, the softKeyboardRect property of the Stage object has been updated to reflect the area of the stage obscured by the virtual keyboard. This event cannot be canceled.
 
-**_Note:_ **_If the keyboard changes size, for example, when the user changes the keyboard type, the focused object dispatches a second softKeyboardActivate event._
+**_Note:_** _If the keyboard changes size, for example, when the user changes the keyboard type, the focused object dispatches a second softKeyboardActivate event._
 
 softKeyboardDeactivate event — dispatched when the virtual keyboard closes for any reason. This event cannot be canceled.
 
@@ -34,9 +34,9 @@ package
 
 {
 
-import flash.display.Sprite; import flash.text.TextField; import flash.text.TextFieldType;
+import openfl.display.Sprite; import openfl.text.TextField; import openfl.text.TextFieldType;
 
-import flash.events.SoftKeyboardEvent;
+import openfl.events.SoftKeyboardEvent;
 
 public class SoftKeyboardEventExample extends Sprite
 
@@ -108,11 +108,11 @@ The example uses the Flash text engine to append and display any typed text and 
 
 package {
 
-import flash.geom.Rectangle; import flash.display.Sprite;
+import openfl.geom.Rectangle; import openfl.display.Sprite;
 
-import flash.text.engine.TextElement; import flash.text.engine.TextBlock; import flash.events.MouseEvent; import flash.events.FocusEvent; import flash.events.KeyboardEvent; import flash.text.engine.TextLine;
+import openfl.text.engine.TextElement; import openfl.text.engine.TextBlock; import openfl.events.MouseEvent; import openfl.events.FocusEvent; import openfl.events.KeyboardEvent; import openfl.text.engine.TextLine;
 
-import flash.text.engine.ElementFormat; import flash.events.Event;
+import openfl.text.engine.ElementFormat; import openfl.events.Event;
 
 public class TextInput extends Sprite
 
@@ -258,13 +258,13 @@ Irrespective of the cause of the event, the application determines the visible a
 
 package {
 
-import flash.display.MovieClip;
+import openfl.display.MovieClip;
 
-import flash.events.SoftKeyboardEvent; import flash.geom.Rectangle;
+import openfl.events.SoftKeyboardEvent; import openfl.geom.Rectangle;
 
-import flash.events.Event;
+import openfl.events.Event;
 
-import flash.display.StageScaleMode; import flash.display.StageAlign;
+import openfl.display.StageScaleMode; import openfl.display.StageAlign;
 
 public class CustomTextField extends MovieClip {
 
@@ -304,7 +304,7 @@ customField.bounds = desiredBounds;
 
 }
 
-**_Note:_ **_The stage only dispatches resize events in response to an orientation change when the scaleMode property is set to_
+**_Note:_** _The stage only dispatches resize events in response to an orientation change when the scaleMode property is set to_
 
 _noScale. In other modes, the dimensions of the stage do not change; instead, the content is scaled to compensate._
 
@@ -322,15 +322,15 @@ When the keyboard closes, a softKeyboardDeactivate event is dispatched, and you 
 
 package {
 
-import flash.display.MovieClip;
+import openfl.display.MovieClip;
 
-import flash.events.SoftKeyboardEvent; import flash.events.Event;
+import openfl.events.SoftKeyboardEvent; import openfl.events.Event;
 
-import flash.display.StageScaleMode; import flash.display.StageAlign;
+import openfl.display.StageScaleMode; import openfl.display.StageAlign;
 
-import flash.display.InteractiveObject; import flash.text.TextFieldType;
+import openfl.display.InteractiveObject; import openfl.text.TextFieldType;
 
-import flash.text.TextField;
+import openfl.text.TextField;
 
 public class PanningExample extends MovieClip { private var textField:TextField = new TextField(); public function PanningExample() {
 
@@ -382,4 +382,4 @@ this.y = -offset;
 
 }
 
-**_Note:_ **_On Android, there are circumstances, including fullscreen mode, in which the exact dimensions of the keyboard are not available from the operating system. In these cases, the size is estimated. Also, in landscape orientations, the native fullscreen IME keyboard is used for all text entry. This IME keyboard has a built-in text entry field and obscures the entire stage. There is no way to display a landscape keyboard that does not fill the screen._
+**_Note:_** _On Android, there are circumstances, including fullscreen mode, in which the exact dimensions of the keyboard are not available from the operating system. In these cases, the size is estimated. Also, in landscape orientations, the native fullscreen IME keyboard is used for all text entry. This IME keyboard has a built-in text entry field and obscures the entire stage. There is no way to display a landscape keyboard that does not fill the screen._

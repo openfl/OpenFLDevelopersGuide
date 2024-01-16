@@ -20,7 +20,7 @@ For more information on working with IMEs, see the documentation for the operati
 
 • [http://www.java.sun.com/](http://www.java.sun.com/)
 
-**_Note:_ **_If an IME is not active on the user&#039;s computer, calls to IME methods or properties, other than Capabilities.hasIME, will fail. Once you manually activate an IME, subsequent Haxe calls to IME methods and properties will work as expected. For example, if you are using a Japanese IME, you must activate it before you can call any IME method or property._
+**_Note:_** _If an IME is not active on the user&#039;s computer, calls to IME methods or properties, other than Capabilities.hasIME, will fail. Once you manually activate an IME, subsequent Haxe calls to IME methods and properties will work as expected. For example, if you are using a Japanese IME, you must activate it before you can call any IME method or property._
 
 **Checking if an IME is installed and enabled**
 
@@ -204,7 +204,7 @@ This example creates two input text fields, phoneTxt and nameTxt, and then adds 
 
 ## Listening for IME composition events {#listening-for-ime-composition-events}
 
-IME composition events are dispatched when a composition string is being set. For example, if the user has their IME enabled and active and types a string in Japanese, the IMEEvent.IME_COMPOSITION event would dispatch as soon as the user selects the composition string. In order to listen for the IMEEvent.IME_COMPOSITION event, you need to add an event listener to the static ime property in the System class (flash.system.System.ime.addEventListener(...)), as shown in the following example:
+IME composition events are dispatched when a composition string is being set. For example, if the user has their IME enabled and active and types a string in Japanese, the IMEEvent.IME_COMPOSITION event would dispatch as soon as the user selects the composition string. In order to listen for the IMEEvent.IME_COMPOSITION event, you need to add an event listener to the static ime property in the System class (openfl.system.System.ime.addEventListener(...)), as shown in the following example:
 
 var inputTxt:TextField; var outputTxt:TextField;
 

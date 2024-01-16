@@ -8,7 +8,8 @@ The accelerometer axes are normalized to the display orientation, not the physic
 
 **More Help topics**
 
-[flash.sensors.Accelerometer](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/sensors/Accelerometer.html) [flash.events.AccelerometerEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/AccelerometerEvent.html)
+[openfl.sensors.Accelerometer](https://api.openfl.org/openfl/sensors/Accelerometer.html)
+[openfl.events.AccelerometerEvent](https://api.openfl.org/openfl/events/AccelerometerEvent.html)
 
 **Checking accelerometer support**
 

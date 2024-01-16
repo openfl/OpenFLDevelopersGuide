@@ -46,7 +46,7 @@ channel = snd.play(pausePosition);
 
 Your application might want to know when a sound stops playing so it can start playing another sound, or clean up some resources used during the previous playback. The SoundChannel class dispatches an Event.SOUND_COMPLETE event when its sound finishes playing. Your application can listen for this event and take appropriate action, as shown below:
 
-import flash.events.Event; import flash.media.Sound; import flash.net.URLRequest;
+import openfl.events.Event; import openfl.media.Sound; import openfl.net.URLRequest;
 
 var snd:Sound = new Sound();
 
@@ -80,7 +80,7 @@ var playbackPercent:uint = 100 * (channel.position / estimatedLength);
 
 The following code loads a larger sound file and uses the Event.ENTER_FRAME event as its timing mechanism for showing playback progress. It periodically reports on the playback percentage, which is calculated as the current position value divided by the total length of the sound data:
 
-import flash.events.Event; import flash.media.Sound; import flash.net.URLRequest;
+import openfl.events.Event; import openfl.media.Sound; import openfl.net.URLRequest;
 
 var snd:Sound = new Sound(); var req:URLRequest = new
 
@@ -116,7 +116,7 @@ Each time the application reaches a new frame in its animation, the onEnterFrame
 
 When the entire sound has been played, the onPlaybackComplete() method executes, removing the event listener for the Event.ENTER_FRAME event so that it doesn’t try to display progress updates after playback is done.
 
-The Event.ENTER_FRAME event can be dispatched many times per second. In some cases, you won’t want to display playback progress that frequently. In those cases, your application can set up its own timing mechanism using the flash.util.Timer class; see
+The Event.ENTER_FRAME event can be dispatched many times per second. In some cases, you won’t want to display playback progress that frequently. In those cases, your application can set up its own timing mechanism using the openfl.util.Timer class; see
 
 “Working with dates and times” on page 1
 

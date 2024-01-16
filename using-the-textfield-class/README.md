@@ -2,11 +2,11 @@
 
 You can use an instance of the TextField class to display text or create a text input field on the screen in Adobe® Flash® Player or Adobe® AIR™. The TextField class is the basis for other text-based components, such as the TextArea components or the TextInput components.
 
-Text field content can be pre-specified in the project, loaded from a text file or database, or entered by a user interacting with your application. Within a text field, the text can appear as rendered HTML content, with images embedded in the rendered HTML. After you create an instance of a text field, you can use flash.text classes, such as TextFormat and StyleSheet, to control the appearance of the text. The [flash.text package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/text/package-detail.html) contains nearly all the classes related to creating, managing, and formatting text in Haxe.
+Text field content can be pre-specified in the project, loaded from a text file or database, or entered by a user interacting with your application. Within a text field, the text can appear as rendered HTML content, with images embedded in the rendered HTML. After you create an instance of a text field, you can use openfl.text classes, such as TextFormat and StyleSheet, to control the appearance of the text. The [openfl.text package](https://api.openfl.org/openfl/text/index.html) contains nearly all the classes related to creating, managing, and formatting text in Haxe.
 
 You can format text by defining the formatting with a TextFormat object and assigning that object to the text field. If your text field contains HTML text, you can apply a StyleSheet object to the text field to assign styles to specific pieces of the text field content. The TextFormat object or StyleSheet object contains properties defining the appearance of the text, such as color, size, and weight. The TextFormat object assigns the properties to all the content within a text field or to a range of text. For example, within the same text field, one sentence can be bold red text and the next sentence can be blue italic text.
 
-In addition to the classes in the flash.text package, you can use the flash.events.TextEvent class to respond to user actions related to text.
+In addition to the classes in the openfl.text package, you can use the openfl.events.TextEvent class to respond to user actions related to text.
 
 **More Help topics**
 
@@ -30,7 +30,7 @@ Dynamic text includes content that is loaded from an external source, such as a 
 
 *   Input text
 
-Input text is any text entered by a user or dynamic text that a user can edit. You can set up a style sheet to format input text, or use the flash.text.TextFormat class to assign properties to the text field for the input content. For more information, see
+Input text is any text entered by a user or dynamic text that a user can edit. You can set up a style sheet to format input text, or use the openfl.text.TextFormat class to assign properties to the text field for the input content. For more information, see
 
 “Capturing text input” on page 378
 
@@ -48,7 +48,7 @@ Static text is created through Flash Professional only. You cannot create a stat
 
 ## Modifying the text field contents {#modifying-the-text-field-contents}
 
-You can define dynamic text by assigning a string to the [flash.text.TextField.text](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/text/TextField.html#text) property. You assign a string directly to the property, as follows:
+You can define dynamic text by assigning a string to the [openfl.text.TextField.text](https://api.openfl.org/openfl/text/TextField.html#text) property. You assign a string directly to the property, as follows:
 
 myTextField.text = &quot;Hello World&quot;;
 
@@ -58,7 +58,7 @@ package
 
 {
 
-import flash.display.Sprite; import flash.text.*;
+import openfl.display.Sprite; import openfl.text.*;
 
 public class TextWithImage extends Sprite
 
@@ -80,9 +80,9 @@ addChild(myTextBox); myTextBox.text = myText;
 
 Alternatively, you can assign the text property a value from a remote variable. You have three options for loading text values from remote sources:
 
-*   The flash.net.URLLoader and flash.net.URLRequest classes load variables for the text from a local or remote location.
+*   The openfl.net.URLLoader and openfl.net.URLRequest classes load variables for the text from a local or remote location.
 *   The FlashVars attribute is embedded in the HTML page hosting the project and can contain values for text variables.
-*   The flash.net.SharedObject class manages persistent storage of values. For more information, see
+*   The openfl.net.SharedObject class manages persistent storage of values. For more information, see
 
     “Storing local
 
@@ -92,11 +92,11 @@ Alternatively, you can assign the text property a value from a remote variable. 
 
 ## Displaying HTML text {#displaying-html-text}
 
-The flash.text.TextField class has an htmlText property that you can use to identify your text string as one containing HTML tags for formatting the content. As in the following example, you must assign your string value to the htmlText property (not the text property) for OpenFL to render the text as HTML:
+The openfl.text.TextField class has an htmlText property that you can use to identify your text string as one containing HTML tags for formatting the content. As in the following example, you must assign your string value to the htmlText property (not the text property) for OpenFL to render the text as HTML:
 
 var myText:String = &quot;&lt;p&gt;This is &lt;b&gt;some&lt;/b&gt; content to &lt;i&gt;render&lt;/i&gt; as &lt;u&gt;HTML&lt;/u&gt; text.&lt;/p&gt;&quot;; myTextBox.htmlText = myText;
 
-OpenFL support a subset of HTML tags and entities for the htmlText property. The flash.text.TextField.htmlText property description in the Haxe Reference provides detailed information about the supported HTML tags and entities.
+OpenFL support a subset of HTML tags and entities for the htmlText property. The [openfl.text.TextField.htmlText property description in the OpenFL API Reference](https://api.openfl.org/openfl/text/TextField.html#htmlText) provides detailed information about the supported HTML tags and entities.
 
 Once you designate your content using the htmlText property, you can use style sheets or the textformat tag to manage the formatting of your content. For more information, see
 
@@ -114,7 +114,7 @@ package
 
 {
 
-import flash.display.Sprite; import flash.text.*;
+import openfl.display.Sprite; import openfl.text.*;
 
 public class TextWithImage extends Sprite
 
@@ -146,7 +146,7 @@ The img tag supports JPEG, GIF, PNG, and projects.
 
 ## Scrolling text in a text field {#scrolling-text-in-a-text-field}
 
-In many cases, your text can be longer than the text field displaying the text. Or you may have an input field that allows a user to input more text than can be displayed at one time. You can use the scroll-related properties of the flash.text.TextField class to manage lengthy content, either vertically or horizontally.
+In many cases, your text can be longer than the text field displaying the text. Or you may have an input field that allows a user to input more text than can be displayed at one time. You can use the scroll-related properties of the openfl.text.TextField class to manage lengthy content, either vertically or horizontally.
 
 The scroll-related properties include TextField.scrollV, TextField.scrollH and maxScrollV and maxScrollH. Use these properties to respond to events, like a mouse click or a keypress.
 
@@ -156,9 +156,9 @@ package
 
 {
 
-import flash.display.Sprite; import flash.text.*;
+import openfl.display.Sprite; import openfl.text.*;
 
-import flash.events.MouseEvent;
+import openfl.events.MouseEvent;
 
 public class TextScrollExample extends Sprite
 

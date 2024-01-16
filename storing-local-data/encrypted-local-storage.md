@@ -1,8 +1,8 @@
 # Encrypted local storage {#encrypted-local-storage}
 
-The [EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application&#039;s private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in &quot;Limitations of the encrypted local store&quot; and &quot;Best practices,&quot; below.
+The [EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore.html) class (ELS) provides an encrypted local storage mechanism that you can be use as a small cache for an application&#039;s private data. ELS data cannot be shared between applications. The intent of ELS is to allow an application to store easily recreated items such as login credentials and other private information. ELS data should not be considered as permanent, as outlined in &quot;Limitations of the encrypted local store&quot; and &quot;Best practices,&quot; below.
 
-**_Note:_ **_In addition to the encrypted local store, AIR also provides encryption for content stored in SQL databases. For details, see_
+**_Note:_** _In addition to the encrypted local store, AIR also provides encryption for content stored in SQL databases. For details, see_
 
 _“Using encryption with SQL databases” on page 758_
 
@@ -48,7 +48,7 @@ The best practices for using the ELS include:
 
 **More Help topics**
 
-[flash.data.EncryptedLocalStore](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/data/EncryptedLocalStore.html)
+[openfl.data.EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore.html)
 
 **Adding data to the encrypted local store**
 
@@ -70,7 +70,7 @@ For an item that is stored with stronglyBound set to true, subsequent calls to g
 
 If the stronglyBound parameter is set to false (the default), only the publisher ID needs to stay the same for the application to read the data. The bits of the application may change (and they need to be signed by the same publisher), but they do not need to be the exact same bits as were in application that stored the data. Updated applications with the same publisher ID as the original can continue to access the data.
 
-**_Note:_ **_In practice, setting stronglyBound to true does not add any additional data protection. A “malicious” user could still alter an application to gain access to items stored in the ELS. Furthermore, data is protected from external, non-user threats just as strongly whether stronglyBound is set to true or false. For these reasons, setting stronglyBound to true is discouraged._
+**_Note:_** _In practice, setting stronglyBound to true does not add any additional data protection. A “malicious” user could still alter an application to gain access to items stored in the ELS. Furthermore, data is protected from external, non-user threats just as strongly whether stronglyBound is set to true or false. For these reasons, setting stronglyBound to true is discouraged._
 
 ## Accessing data in the encrypted local store {#accessing-data-in-the-encrypted-local-store}
 

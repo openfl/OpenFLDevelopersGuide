@@ -100,7 +100,7 @@ Each display object the user can add to the canvas is an instance of one of the 
 *   SquareSprite
 *   TriangleSprite
 
-The GeometricSprite class extends the flash.display.Sprite class:
+The GeometricSprite class extends the openfl.display.Sprite class:
 
 public class GeometricSprite extends Sprite
 

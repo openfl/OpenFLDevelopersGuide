@@ -45,9 +45,9 @@ package com.adobe.example
 
 {
 
-import flash.events.NetDataEvent; import flash.events.NetMonitorEvent; import flash.events.NetStatusEvent; import flash.net.NetMonitor;
+import openfl.events.NetDataEvent; import openfl.events.NetMonitorEvent; import openfl.events.NetStatusEvent; import openfl.net.NetMonitor;
 
-import flash.net.NetStream;
+import openfl.net.NetStream;
 
 public class NetStreamEventMonitor
 

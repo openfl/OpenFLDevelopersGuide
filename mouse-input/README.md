@@ -16,7 +16,8 @@ For information on discovering what kind of mouse support is available (such as 
 
 **More Help topics**
 
-[flash.ui.Mouse](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/ui/Mouse.html) [flash.events.MouseEvent](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/events/MouseEvent.html)
+[openfl.ui.Mouse](https://api.openfl.org/openfl/ui/Mouse.html)
+[openfl.events.MouseEvent](https://api.openfl.org/openfl/events/MouseEvent.html)
 
 “Touch, multitouch and gesture input” on page 581
 
@@ -42,7 +43,7 @@ In the previous example, notice that the mouse event contains positional informa
 
 Alternatively, the stageX and stageY properties refer to the global coordinates of the click on the Stage. The same click reports [50,50] for these coordinates, because square was moved to these coordinates. Both of these coordinate pairs can be useful depending on how you want to respond to user interaction.
 
-**_Note:_ **_In full-screen mode, you can configure the application to use mouse locking. Mouse locking disables the cursor and enables unbounded mouse movement. For more information, see_
+**_Note:_** _In full-screen mode, you can configure the application to use mouse locking. Mouse locking disables the cursor and enables unbounded mouse movement. For more information, see_
 
 _“Working with full-screen mode” on page 167_
 
@@ -54,7 +55,7 @@ The MouseEvent object also contains altKey, ctrlKey, and shiftKey Boolean proper
 
 You can allow users to drag a Sprite object around the stage using the startDrag() method of the Sprite class. The following code shows an example of this:
 
-import flash.display.Sprite; import flash.events.MouseEvent;
+import openfl.display.Sprite; import openfl.events.MouseEvent;
 
 var circle:Sprite = new Sprite(); circle.graphics.beginFill(0xFFCC00); circle.graphics.drawCircle(0, 0, 40);
 

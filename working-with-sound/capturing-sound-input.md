@@ -22,7 +22,7 @@ A system might not have a microphone or other sound input device attached to it.
 
 When your application calls the Microphone.getMicrophone() method, OpenFL displays the OpenFL Settings dialog box, which prompts the user to either allow or deny OpenFL access to the camera and microphone on the system. After the user clicks on either the Allow button or the Deny button in this dialog, a StatusEvent is dispatched. The code property of that StatusEvent instance indicates whether microphone access was allowed or denied, as shown in this example:
 
-import flash.media.Microphone;
+import openfl.media.Microphone;
 
 var mic:Microphone = Microphone.getMicrophone(); mic.addEventListener(StatusEvent.STATUS, this.onMicStatus);
 
@@ -78,7 +78,7 @@ Your application can also change the sample rate of the input audio. Higher samp
 
 To conserve bandwidth and processing resources, OpenFL tries to detect when no sound is being transmitted by a microphone. When the microphone’s activity level stays below the silence level threshold for a period of time, OpenFL stops transmitting the audio input and dispatches a simple ActivityEvent instead. If you use the Speex codec (available in OpenFL 10 or later and Adobe AIR 1.5 or later), set the silence level to 0, to ensure that the application continuously transmits audio data. Speex voice activity detection automatically reduces bandwidth.
 
-**_Note:_ **_A Microphone object only dispatches Activity events when your application is monitoring the microphone. Thus, if you do not call setLoopBack( true ), add a listener for sample data events, or attach the microphone to a NetStream object, then no activity events are dispatched._
+**_Note:_** _A Microphone object only dispatches Activity events when your application is monitoring the microphone. Thus, if you do not call setLoopBack( true ), add a listener for sample data events, or attach the microphone to a NetStream object, then no activity events are dispatched._
 
 Three properties of the Microphone class monitor and control the detection of activity:
 
@@ -94,7 +94,7 @@ In some cases, the process of activating the microphone when new activity is det
 
 The following example displays information about the microphone and reports on activity events and status events dispatched by a Microphone object:
 
-import flash.events.ActivityEvent; import flash.events.StatusEvent; import flash.media.Microphone;
+import openfl.events.ActivityEvent; import openfl.events.StatusEvent; import openfl.media.Microphone;
 
 var deviceArray:Array = Microphone.names; trace(&quot;Available sound input devices:&quot;);
 

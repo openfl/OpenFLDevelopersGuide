@@ -44,14 +44,14 @@ To get the application files for this sample, see [www.adobe.com/go/learn_progra
 
 The Filter Workbench application is designed to help you experiment with various filter effects and generate the relevant Haxe code for that effect. The application lets you select from three different files containing visual content, including bitmap images and an animation created by Flash, and apply eight different Haxe filters to the selected image, either individually or in combination with other filters. The application includes the following filters:
 
-*   Bevel (flash.filters.BevelFilter)
-*   Blur (flash.filters.BlurFilter)
-*   Color matrix (flash.filters.ColorMatrixFilter)
-*   Convolution (flash.filters.ConvolutionFilter)
-*   Drop shadow (flash.filters.DropShadowFilter)
-*   Glow (flash.filters.GlowFilter)
-*   Gradient bevel (flash.filters.GradientBevelFilter)
-*   Gradient glow (flash.filters.GradientGlowFilter)
+*   Bevel (openfl.filters.BevelFilter)
+*   Blur (openfl.filters.BlurFilter)
+*   Color matrix (openfl.filters.ColorMatrixFilter)
+*   Convolution (openfl.filters.ConvolutionFilter)
+*   Drop shadow (openfl.filters.DropShadowFilter)
+*   Glow (openfl.filters.GlowFilter)
+*   Gradient bevel (openfl.filters.GradientBevelFilter)
+*   Gradient glow (openfl.filters.GradientGlowFilter)
 
 Once a user has selected an image and a filter to apply to that image, the application displays a panel with controls for setting the specific properties of the selected filter. For example, the following image shows the application with the Bevel filter selected:
 

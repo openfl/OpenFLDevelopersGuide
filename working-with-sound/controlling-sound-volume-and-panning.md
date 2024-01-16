@@ -26,9 +26,9 @@ sound input” on page 461
 
 The following example alternates the panning of the sound from the left channel to the right channel and back while the sound plays.
 
-import flash.events.Event; import flash.media.Sound;
+import openfl.events.Event; import openfl.media.Sound;
 
-import flash.media.SoundChannel; import flash.media.SoundMixer; import flash.net.URLRequest;
+import openfl.media.SoundChannel; import openfl.media.SoundMixer; import openfl.net.URLRequest;
 
 var snd:Sound = new Sound();
 

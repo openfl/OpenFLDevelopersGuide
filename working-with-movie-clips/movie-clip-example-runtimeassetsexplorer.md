@@ -63,7 +63,7 @@ package
 
 {
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
 import com.example.programmingas3.runtimeassetexplorer.RuntimeLibrary;
 
@@ -95,7 +95,7 @@ package com.example.programmingas3.runtimeassetexplorer
 
 {
 
-import flash.display.MovieClip;
+import openfl.display.MovieClip;
 
 public class AnimatingStar extends MovieClip
 
@@ -111,7 +111,7 @@ public function AnimatingStar() {
 
 Publishing the library
 
-We’ll now connect the MovieClip-based assets to the new class by creating a new FLA and entering GeometricAssets into the Document Class field of the Property inspector. For the purposes of this example, we’ll create two very basic shapes that use a timeline tween to make one clockwise rotation over 360 frames. Both the animatingBox and animatingStar symbols are set to Export for Haxe and have the Class field set to the respective classpaths specified in the getAssets() implementation. The default base class of flash.display.MovieClip remains, as we want to subclass the standard MovieClip methods.
+We’ll now connect the MovieClip-based assets to the new class by creating a new FLA and entering GeometricAssets into the Document Class field of the Property inspector. For the purposes of this example, we’ll create two very basic shapes that use a timeline tween to make one clockwise rotation over 360 frames. Both the animatingBox and animatingStar symbols are set to Export for Haxe and have the Class field set to the respective classpaths specified in the getAssets() implementation. The default base class of openfl.display.MovieClip remains, as we want to subclass the standard MovieClip methods.
 
 After setting up your symbol’s export settings, publish the FLA. You now have your first run-time library. This project could be loaded into another AVM2 project and the AnimatingBox and AnimatingStar symbols would be available to the new project.
 
@@ -145,4 +145,4 @@ var AssetClass:Class = getDefinitionByName(className) as Class; var mc:MovieClip
 
 }
 
-which gets the classpath of whichever asset is currently selected in the ComboBox (assetNameCbo.selectedItem.data), and uses the getDefinitionByName() function (from the flash.utils package) to obtain an actual reference to the asset’s class in order to create a new instance of that asset.
+which gets the classpath of whichever asset is currently selected in the ComboBox (assetNameCbo.selectedItem.data), and uses the getDefinitionByName() function (from the openfl.utils package) to obtain an actual reference to the asset’s class in order to create a new instance of that asset.

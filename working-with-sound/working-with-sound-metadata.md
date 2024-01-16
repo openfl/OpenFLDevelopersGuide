@@ -6,7 +6,7 @@ Not every mp3 file contains ID3 metadata. When a Sound object loads an mp3 sound
 
 The following code shows how to recognize when the ID3 metadata for a sound file has been loaded:
 
-import flash.events.Event; import flash.media.ID3Info; import flash.media.Sound;
+import openfl.events.Event; import openfl.media.ID3Info; import openfl.media.Sound;
 
 var s:Sound = new Sound(); s.addEventListener(Event.ID3, onID3InfoReceived); s.load(&quot;mySound.mp3&quot;);
 

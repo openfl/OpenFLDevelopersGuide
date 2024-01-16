@@ -14,13 +14,13 @@ To embed a sound file using the Flash authoring tool:
 
 1.  Select File &gt; Import &gt; Import to Library, and then select a sound file and import it.
 2.  Right-click the name of the imported file in the Library panel, and select Properties. Click the Export for Haxe checkbox.
-3.  In the Class field, enter a name to use when referring to this embedded sound in Haxe. By default, it will use the name of the sound file in this field. If the filename includes a period, as in the name “DrumSound.mp3”, you must change it to something like “DrumSound”; Haxe does not allow a period character in a class name. The Base Class field should still show flash.media.Sound.
-4.  Click OK. You might see a dialog box saying that a definition for this class could not be found in the classpath. Click OK and continue. If you entered a class name that doesn’t match the name of any of the classes in your application’s classpath, a new class that inherits from the flash.media.Sound class is automatically generated for you.
+3.  In the Class field, enter a name to use when referring to this embedded sound in Haxe. By default, it will use the name of the sound file in this field. If the filename includes a period, as in the name “DrumSound.mp3”, you must change it to something like “DrumSound”; Haxe does not allow a period character in a class name. The Base Class field should still show openfl.media.Sound.
+4.  Click OK. You might see a dialog box saying that a definition for this class could not be found in the classpath. Click OK and continue. If you entered a class name that doesn’t match the name of any of the classes in your application’s classpath, a new class that inherits from the openfl.media.Sound class is automatically generated for you.
 5.  To use the embedded sound, you reference the class name for that sound in Haxe. For example, the following code starts by creating a new instance of the automatically generated DrumSound class:
 
 var drum:DrumSound = new DrumSound(); var channel:SoundChannel = drum.play();
 
-DrumSound is a subclass of the flash.media.Sound class so it inherits the Sound class’s methods and properties, including the play() method as shown above.
+DrumSound is a subclass of the openfl.media.Sound class so it inherits the Sound class’s methods and properties, including the play() method as shown above.
 
 ## Using an embedded sound file in Flex {#using-an-embedded-sound-file-in-flex}
 
@@ -44,9 +44,9 @@ package
 
 {
 
-import flash.display.Sprite; import flash.media.Sound;
+import openfl.display.Sprite; import openfl.media.Sound;
 
-import flash.media.SoundChannel;
+import openfl.media.SoundChannel;
 
 public class EmbeddedSoundExample extends Sprite
 

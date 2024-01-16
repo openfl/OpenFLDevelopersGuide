@@ -78,7 +78,7 @@ graphicsS.drawGraphicsData (drawing);
 
 Though IGraphicsData objects can define fill and stroke styles, the fill and stroke styles are not a requirement. In other words, Graphics class methods can be used to set styles while IGraphicsData objects can be used to draw a saved collection of paths, or vice-versa.
 
-**_Note:_ **_Use the `Graphics.clear()` method to clear out a previous drawing before starting a new one; unless you&#039;re adding on to the original drawing, as seen in the example above. As you change a single portion of a path or collection of IGraphicsData objects, redraw the entire drawing to see the changes._
+**_Note:_** _Use the `Graphics.clear()` method to clear out a previous drawing before starting a new one; unless you&#039;re adding on to the original drawing, as seen in the example above. As you change a single portion of a path or collection of IGraphicsData objects, redraw the entire drawing to see the changes._
 
 When using graphics data classes, the fill is rendered whenever three or more points are drawn, because the shape is inherently closed at that point. Even though the fill closes, the stroke does not, and this behavior is different than when using multiple `Graphics.lineTo()` or `Graphics.moveTo()` commands.
 

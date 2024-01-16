@@ -4,11 +4,12 @@ This discussion explains how to interact with the user’s system. It shows you 
 
 **More Help topics**
 
-[flash.system.System](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/system/System.html) [flash.system.Capabilities](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/flash/system/Capabilities.html)
+[openfl.system.System](https://api.openfl.org/openfl/system/System.html)
+[openfl.system.Capabilities](https://api.openfl.org/openfl/system/Capabilities.html)
 
 **Basics of the client system environment**
 
-As you build more advanced applications, you may find a need to know details about—and access functions of—your users’ operating systems. The flash.system package contains a collection of classes that allow you to access system-level functionality such as the following:
+As you build more advanced applications, you may find a need to know details about—and access functions of—your users’ operating systems. The openfl.system package contains a collection of classes that allow you to access system-level functionality such as the following:
 
 • Determining which application and security domain code is executing in
 
@@ -20,7 +21,7 @@ As you build more advanced applications, you may find a need to know details abo
 
 • Saving information to the user’s clipboard
 
-The flash.system package also includes the IMEConversionMode and SecurityPanel classes. These classes contain static constants that you use with the IME and Security classes, respectively.
+The openfl.system package also includes the IMEConversionMode and SecurityPanel classes. These classes contain static constants that you use with the IME and Security classes, respectively.
 
 Important concepts and terms
 

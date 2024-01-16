@@ -2,9 +2,9 @@
 
 OpenFL 10 and later, Adobe AIR 1.5 and later
 
-**_Note:_ **_The ability to dynamically generate audio is available starting with OpenFL 10 and Adobe AIR 1.5._
+**_Note:_** _The ability to dynamically generate audio is available starting with OpenFL 10 and Adobe AIR 1.5._
 
-Instead of loading or streaming an existing sound, you can generate audio data dynamically. You can generate audio data when you assign an event listener for the sampleData event of a Sound object. (The sampleData event is defined in the SampleDataEvent class in the flash.events package.) In this environment, the Sound object doesn’t load sound data from a file. Instead, it acts as a socket for sound data that is being streamed to it through the use of the function you assign to this event.
+Instead of loading or streaming an existing sound, you can generate audio data dynamically. You can generate audio data when you assign an event listener for the sampleData event of a Sound object. (The sampleData event is defined in the SampleDataEvent class in the openfl.events package.) In this environment, the Sound object doesn’t load sound data from a file. Instead, it acts as a socket for sound data that is being streamed to it through the use of the function you assign to this event.
 
 When you add a sampleData event listener to a Sound object, the object periodically requests data to add to the sound buffer. This buffer contains data for the Sound object to play. When you call the play() method of the Sound object, it dispatches the sampleData event when requesting new sound data. (This is true only when the Sound object has not loaded mp3 data from a file.)
 

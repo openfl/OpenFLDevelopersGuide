@@ -22,11 +22,11 @@ package
 
 {
 
-import flash.display.Sprite;
+import openfl.display.Sprite;
 
-import flash.events.DatagramSocketDataEvent; import flash.events.Event;
+import openfl.events.DatagramSocketDataEvent; import openfl.events.Event;
 
-import flash.net.DatagramSocket; import flash.utils.ByteArray;
+import openfl.net.DatagramSocket; import openfl.utils.ByteArray;
 
 public class DatagramSocketExample extends Sprite
 
