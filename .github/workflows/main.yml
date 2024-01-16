@@ -9,3 +9,8 @@ jobs:
       - name: Build
         run: |
           npx honkit build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: openfl-developers-guide
+          path: _book
+          if-no-files-found: error
