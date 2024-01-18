@@ -24,6 +24,7 @@
     * [Panning and scrolling display objects](display-programming\manipulating-display-objects\panning-and-scrolling-display-objects.md)
     * [Manipulating size and scaling objects](display-programming\manipulating-display-objects\manipulating-size-and-scaling-objects.md)
     * [Caching display objects](display-programming\manipulating-display-objects\caching-display-objects.md)
+    * [Setting an opaque background color](display-programming\manipulating-display-objects\setting-an-opaque-background.md)
     * [Applying blending modes](display-programming\manipulating-display-objects\applying-blending-modes.md)
     * [Adjusting DisplayObject colors](display-programming\manipulating-display-objects\adjusting-displayobject-colors.md)
     * [Rotating objects](display-programming\manipulating-display-objects\rotating-objects.md)
