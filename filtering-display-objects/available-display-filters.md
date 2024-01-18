@@ -738,7 +738,7 @@ loader.addEventListener(MouseEvent.MOUSE_MOVE, moveMagnifier);
 
 The code first generates two gradient circles, which are combined together to form the displacement map image. The red circle creates the x axis displacement (xyFilter.componentX = BitmapDataChannel.RED), and the blue circle creates the y axis displacement (xyFilter.componentY = BitmapDataChannel.BLUE). To help you understand what the displacement map image looks like, the code adds the original circles as well as the combined circle that serves as the map image to the bottom of the screen.
 
-![Image showing a photo of a flower with a circle-shaped portion under the mouse cursor magnified.](C:\Development\Books\HaxeDevelopersGuide\export\assets\image_showing_a_photo_of_a_flower_w.jpeg)
+![Image showing a photo of a flower with a circle-shaped portion under the mouse cursor magnified.](..\..\assets\image-showing-a-photo-of-a-flower-w.jpeg)
 
 The code then loads an image and, as the mouse moves, applies the displacement filter to the portion of the image that’s under the mouse. The gradient circles used as the displacement map image causes the displaced region to spread out away from the pointer. Notice that the gray regions of the displacement map image don’t cause any displacement. The gray color is 0x7F7F7F. The blue and red channels of that shade of gray exactly match the middle shade of those color channels, so there is no displacement in a gray area of the map image. Likewise, in the center of the circle there is no displacement. Although the color there isn’t gray, that color’s blue channel and red channel are identical to the blue channel and red channel of medium gray, and since blue and red are the colors that cause displacement, no displacement happens there.
 

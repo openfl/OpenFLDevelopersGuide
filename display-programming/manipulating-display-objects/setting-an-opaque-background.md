@@ -10,6 +10,6 @@ myShape.cacheAsBitmap = true; myShape.opaqueBackground = 0xFF0000;
 
 In this case, the background color of the Shape named myShape is set to red (0xFF0000). Assuming the Shape instance contains a drawing of a green triangle, on a Stage with a white background, this would show up as a green triangle with red in the empty space in the Shape instance’s bounding box (the rectangle that completely encloses the Shape).
 
-![<Effect of setting opaqueBackground color>](C:\Development\Books\HaxeDevelopersGuide\export\assets\effect_of_setting_opaquebackground.png)
+![<Effect of setting opaqueBackground color>](..\..\assets\effect-of-setting-opaquebackground.png)
 
 Of course, this code would make more sense if it were used with a Stage with a solid red background. On another colored background, that color would be specified instead. For example, in a SWF with a white background, the opaqueBackground property would most likely be set to 0xFFFFFF, or pure white.

@@ -2,15 +2,15 @@
 
 Normally when a display object is scaled (for example, stretched horizontally), the resulting distortion is spread equally across the object, so that each part is stretched the same amount. For graphics and design elements, this is probably what you want. However, sometimes it’s preferable to have control over which portions of the display object stretch and which portions remain unchanged. One common example of this is a button that’s a rectangle with rounded corners. With normal scaling, the corners of the button will stretch, making the corner radius change as the button resizes.
 
-![<Scaling distortion on a button with rounded corners>](C:\Development\Books\HaxeDevelopersGuide\export\assets\scaling_distortion_on_a_button_wit.png)
+![<Scaling distortion on a button with rounded corners>](..\..\assets\scaling-distortion-on-a-button-wit.png)
 
 However, in this case it would be preferable to have control over the scaling—to be able to designate certain areas which should scale (the straight sides and middle) and areas which shouldn’t (the corners)—so that scaling happens without visible distortion.
 
-![<Button scaled without distortion>](C:\Development\Books\HaxeDevelopersGuide\export\assets\button_scaled_without_distortion.png)
+![<Button scaled without distortion>](..\..\assets\button-scaled-without-distortion.png)
 
 You can use 9-slice scaling (Scale-9) to create display objects where you have control over how the objects scale. With 9-slice scaling, the display object is divided into nine separate rectangles (a 3 by 3 grid, like the grid of a tic-tac-toe board). The rectangles aren’t necessarily the same size—you designate where the grid lines are placed. Any content that lies in the four corner rectangles (such as the rounded corners of a button) will not be stretched or compressed when the display object scales. The top-center and bottom-center rectangles will scale horizontally but not vertically, while the left-middle and right-middle rectangles will scale vertically but not horizontally. The center rectangle will scale both horizontally and vertically.
 
-![<9-slice scaling grid>](C:\Development\Books\HaxeDevelopersGuide\export\assets\9-slice_scaling_grid.png)
+![<9-slice scaling grid>](..\..\assets\9-slice-scaling-grid.png)
 
 Keeping this in mind, if you’re creating a display object and you want certain content to never scale, you just have to make sure that the dividing lines of the 9-slice scaling grid are placed so that the content ends up in one of the corner rectangles.
 
@@ -20,11 +20,11 @@ myButton.scale9Grid = new Rectangle(32, 27, 71, 64);
 
 The four parameters of the Rectangle constructor are the x coordinate, y coordinate, width, and height. In this example, the rectangle’s top-left corner is placed at the point x: 32, y: 27 on the display object named myButton. The rectangle is 71 pixels wide and 64 pixels tall (so its right edge is at the x coordinate 103 on the display object and its bottom edge is at the y coordinate 92 on the display object).
 
-![<Core rectangle of the Scale-9 grid>](C:\Development\Books\HaxeDevelopersGuide\export\assets\core_rectangle_of_the_scale-9_grid.png)
+![<Core rectangle of the Scale-9 grid>](..\..\assets\core-rectangle-of-the-scale-9-grid.png)
 
 The actual area contained in the region defined by the Rectangle instance represents the center rectangle of the Scale- 9 grid. The other rectangles are calculated by OpenFL by extending the sides of the Rectangle instance, as shown here:
 
-![<Complete Scale-9 grid derived from core rectangle>](C:\Development\Books\HaxeDevelopersGuide\export\assets\complete_scale-9_grid_derived_from.png)
+![<Complete Scale-9 grid derived from core rectangle>](..\..\assets\complete-scale-9-grid-derived-from.png)
 
 In this case, as the button scales up or down, the rounded corners will not stretch or compress, but the other areas will adjust to accommodate the scaling.
 
@@ -143,6 +143,6 @@ myShape.cacheAsBitmap = true; myShape.opaqueBackground = 0xFF0000;
 
 In this case, the background color of the Shape named myShape is set to red (0xFF0000). Assuming the Shape instance contains a drawing of a green triangle, on a Stage with a white background, this would show up as a green triangle with red in the empty space in the Shape instance’s bounding box (the rectangle that completely encloses the Shape).
 
-![<Effect of setting opaqueBackground color>](C:\Development\Books\HaxeDevelopersGuide\export\assets\effect_of_setting_opaquebackground.png)
+![<Effect of setting opaqueBackground color>](..\..\assets\effect-of-setting-opaquebackground.png)
 
 Of course, this code would make more sense if it were used with a Stage with a solid red background. On another colored background, that color would be specified instead. For example, in a SWF with a white background, the opaqueBackground property would most likely be set to 0xFFFFFF, or pure white.
