@@ -2,7 +2,7 @@
 
 This discussion explains how to interact with the user’s system. It shows you how to determine what features are supported and how to build multilingual applications using the user’s installed input method editor (IME) if available. It also shows typical uses for application domains.
 
-**More Help topics**
+## More Help topics
 
 [openfl.system.System](https://api.openfl.org/openfl/system/System.html)
 [openfl.system.Capabilities](https://api.openfl.org/openfl/system/Capabilities.html)

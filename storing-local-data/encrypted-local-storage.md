@@ -46,7 +46,7 @@ The best practices for using the ELS include:
 *   If you do set stronglyBound to true, do not migrate stored items during an update. Recreate the data after the update instead.
 *   Only store relatively small amounts of data. For larger amounts of data, use an AIR SQL database with encryption.
 
-**More Help topics**
+## More Help topics
 
 [openfl.data.EncryptedLocalStore](https://api.openfl.org/openfl/data/EncryptedLocalStore.html)
 

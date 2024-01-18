@@ -27,7 +27,7 @@ When media is played via HTTP streaming, the NetStream.Play.Start, NetStream.Pla
 
 Likewise, NetStream.Play.Transition and NetStream.Play.TransitionComplete are not dispatched for either progressive download or HTTP media. Dynamic bitrate switching is an RTMP feature. If a video player using an HTTP stream supports a similar feature, the player can synthesize and dispatch transition events.
 
-**More Help topics**
+## More Help topics
 
 [Adobe Developer Connection: Measuring video consumption in Flash](http://www.adobe.com/devnet/video/articles/media-measurement-flash.html)
 

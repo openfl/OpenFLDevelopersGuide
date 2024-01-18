@@ -39,6 +39,18 @@ be dispatched rapidly, as during a pan, rotate, or zoom operation. For example,
 you could stop animation within a component while the user resizes it using a
 zoom gesture.
 
+## Section Contents
+
+- [Basics of touch input](./basics-of-touch-input.md)
+- [Touch support discovery](./touch-support-discovery.md)
+- [Touch event handling](./touch-event-handling.md)
+- [Troubleshooting](./troubleshooting.md)
+
+<!-- TODO: uncomment when startTouchDrag is implemented
+- [Touch and drag](./touch-and-drag.md)->
+<!-- TODO: uncomment when gesture events are implemented
+- [Gesture event handling](./gesture-event-handling.md)-->
+
 ## More Help topics
 
 - [openfl.ui.Multitouch](https://api.openfl.org/openfl/ui/Multitouch.html)

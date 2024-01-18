@@ -2,7 +2,7 @@
 
 The main OpenFL classes for working with bitmap images are the Bitmap class, which is used to display bitmap images on the screen, and the BitmapData class, which is used to access and manipulate the raw image data of a bitmap.
 
-**More Help topics**
+## More Help topics
 
  * [openfl.display.Bitmap](http://api.openfl.org/openfl/display/Bitmap.html)
  * [openfl.display.BitmapData](http://api.openfl.org/openfl/display/BitmapData.html)

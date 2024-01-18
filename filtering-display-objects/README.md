@@ -26,7 +26,7 @@ The following reference list contains important terms that you might encounter w
 
 **Matrix** A grid of numbers used to perform certain mathematical calculations by applying the numbers in the grid to various values, then combining the results.
 
-**More Help topics**
+## More Help topics
 
 [openfl.filters package](https://api.openfl.org/openfl/filters/index.html)
 [openfl.display.DisplayObject.filters](https://api.openfl.org/openfl/display/DisplayObject.html#filters)

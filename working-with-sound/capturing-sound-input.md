@@ -2,7 +2,7 @@
 
 The Microphone class lets your application connect to a microphone or other sound input device on the user’s system and broadcast the input audio to that system’s speakers or send the audio data to a remote server, such as Flash Media Server. You can access the raw audio data from the microphone and record or process it; you can also send the audio directly to the system’s speakers or send compressed audio data to a remote server. You can use either Speex or Nellymoser codec for data sent to a remote server. (The Speex codec is supported starting with OpenFL 10 and Adobe AIR 1.5.)
 
-**More Help topics**
+## More Help topics
 
 [Michael Chaize: AIR, Android, and the Microphone](http://www.riagora.com/2010/08/air-android-and-the-microphone/) [Christophe Coenraets: Voice Notes for Android](http://coenraets.org/blog/air-for-android-samples/voice-notes-for-android/)
 

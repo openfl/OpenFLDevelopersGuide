@@ -10,9 +10,15 @@ For information on discovering what kind of mouse support is available (such as
 persistent cursor, stylus or touch input) during runtime, see
 [Discovering input types](../basics-of-user-interaction.md#discovering-input-types).-->
 
+## Section Contents
+
+- [Capturing mouse input](./capturing-mouse-input.md)
+
+<!-- TODO: uncomment when this is adapted for OpenFL
+- [Mouse input example: WordSearch](./mouse-input-example-word-search.md)-->
+
 ## More Help topics
 
-<!-- [Touch, multitouch and gesture input](../touch-multitouch-and-gesture-input/index.md) -->
-
+- [Touch, multitouch and gesture input](../touch-multitouch-and-gesture-input/index.md)
 - [openfl.ui.Mouse](https://api.openfl.org/openfl/ui/Mouse.html)
 - [openfl.events.MouseEvent](https://api.openfl.org/openfl/events/MouseEvent.html)

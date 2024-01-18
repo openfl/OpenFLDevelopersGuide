@@ -14,7 +14,7 @@ When your application runs in a browser, you can only use web services in the sa
 
 In AIR applications, a cross-domain policy file is not required when the web service call originates from the application security sandbox. AIR application content is never served from a remote domain, so it cannot participate in the types of attacks that cross-domain policies prevent. In HTML-based AIR applications, content in the application security sandbox can make cross-domain XMLHttpRequests. You can allow content in other security sandboxes to make cross- domain XMLHttpRequests as long as that content is loaded into an iframe.
 
-**More Help topics**
+## More Help topics
 
 "Website controls (policy files)" on page 1051
 
@@ -455,6 +455,6 @@ SOAP builds on the general XML-RPC web service concept and provides a richer, al
 
 The Flex framework includes libraries for accessing SOAP web services. In Flash Builder the library, rpc.swc, is automatically included in Flex projects, since it is part of the Flex framework. In Flash Professional, you can add the Flex framework.swc and rpc.swc to the library path of a project and then access the Flex classes with Haxe.
 
-**More Help topics**
+## More Help topics
 
 [Using the Flex web service component in Flash Professional](http://tv.adobe.com/watch/adc-presents/use-the-flex-webservice-component-in-flash/) [Cristophe Coenraets: Real-time Trader Desktop for Android](http://coenraets.org/blog/air-for-android-samples/real-time-trader-desktop-for-android/)

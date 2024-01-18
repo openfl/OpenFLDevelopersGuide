@@ -18,13 +18,20 @@ to custom class instances if the custom class is available to the runtime. After
 serializing an object to bytes, you can efficiently transfer it over a network
 connection or save it to a file.
 
-Objects in Adobe Flash were always serialized using _Action Message Format_
-(abbreviated as AMF). OpenFL supports a number of serialization formats,
-including:
+> Objects in Adobe Flash were always serialized using _Action Message Format_
+> (abbreviated as AMF). OpenFL supports a number of serialization formats,
+> including:
+> 
+> - [Haxe Serialization Format](https://haxe.org/manual/std-serialization.html)
+> - [JSON](https://en.wikipedia.org/wiki/JSON)
+> - [Action Message Format (AMF)](https://en.wikipedia.org/wiki/Action_Message_Format)
 
-- [Haxe Serialization Format](https://haxe.org/manual/std-serialization.html)
-- [JSON](https://en.wikipedia.org/wiki/JSON)
-- [Action Message Format (AMF)](https://en.wikipedia.org/wiki/Action_Message_Format)
+## Section Contents
+
+- [Reading and writing a byte array](./reading-and-writing-a-byte-array.md)
+
+<!-- TODO: uncomment when this content is adapted for OpenFL
+- [ByteArray example: Reading a .zip file](./bytearray-example-reading-a-zip-file.md)-->
 
 ## More Help topics
 

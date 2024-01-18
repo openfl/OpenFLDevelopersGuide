@@ -12,7 +12,7 @@ Flash Professional automatically generates the Haxe that implements the motion t
 
 To create motion tweens, you must have a license for Flash Professional.
 
-**More Help topics**
+## More Help topics
 
 [fl.motion package](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/fl/motion/package-detail.html)
 

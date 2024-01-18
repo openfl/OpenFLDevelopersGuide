@@ -32,3 +32,16 @@ In addition to the classes in the
 use the
 [openfl.events.TextEvent class](https://api.openfl.org/openfl/events/TextEvent.html)
 to respond to user actions related to text.
+
+## Section Contents
+
+- [Displaying text](./displaying-text.md)
+- [Selecting and manipulating text](./selecting-and-manipulating-text.md)
+- [Capturing text input](./capturing-text-input.md)
+- [Restricting text input](./restricting-text-input.md)
+- [Formatting text](./formatting-text.md)
+- [Advanced text rendering](./advanced-text-rendering.md)
+- [Working with static text](./working-with-static-text.md)
+
+<!-- TODO: uncomment when this content is adapted for OpenFL
+- [TextField Example: Newspaper-style text formatting](./textfield-example-newspaper-style-text-formatting.md)-->

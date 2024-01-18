@@ -1,7 +1,11 @@
 # Chapter 44: HTTP communications {#chapter-44-http-communications}
 
-OpenFL applications can communicate with
-HTTP-based servers to load data, images, video and to exchange messages.
+OpenFL applications can communicate with HTTP-based servers to load data,
+images, video and to exchange messages.
+
+## Section Contents
+
+- [Loading external data](./loading-external-data.md)
 
 <!-- TODO: uncomment when these documents are adapted for OpenFL
 - [Web service requests](./web-service-requests.md)

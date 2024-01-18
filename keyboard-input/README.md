@@ -18,6 +18,15 @@ An Input Method Editor (IME) allows users to type complex characters and symbols
 using a standard keyboard. You can use the IME classes to enable users to take
 advantage of their system IME in your applications.-->
 
+## Section Contents
+
+- [Capturing keyboard input](./capturing-keyboard-input.md)
+
+<!-- TODO: uncomment if IME is implemented
+- [Using the IME class](./using-the-ime-class.md)-->
+<!-- TODO: uncomment if these capabilities are implemented
+- [Virtual keyboards](./virtual-keyboards.md)-->
+
 ## More Help topics
 
 - [openfl.events.KeyboardEvent](https://api.openfl.org/openfl/events/KeyboardEvent.html)

@@ -26,7 +26,7 @@ It’s important to familiarize yourself with the following key user interaction
 
 **Key code** A numeric code corresponding to a physical key on the keyboard.
 
-**More Help topics**
+## More Help topics
 
 [InteractiveObject](https://api.openfl.org/openfl/display/InteractiveObject.html) [Keyboard](https://api.openfl.org/openfl/ui/Keyboard.html)
 

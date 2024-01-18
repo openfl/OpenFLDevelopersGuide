@@ -4,7 +4,7 @@ Flash® Player provides basic file reading and writing capabilities, via the Fil
 
 Adobe® AIR® provides more complete access to the file system of the host computer than is available in OpenFL. Using the AIR file system API, you can access and manage directories and files, create directories and files, write data to files, and so on.
 
-**More Help topics**
+## More Help topics
 
 [openfl.net.FileReference](https://api.openfl.org/openfl/net/FileReference.html)
 [openfl.net.FileReferenceList](https://api.openfl.org/openfl/net/FileReferenceList.html)

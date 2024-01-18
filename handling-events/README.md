@@ -4,7 +4,17 @@ An event-handling system allows programmers to respond to user input and system 
 
 The OpenFL event-handling system interacts closely with the display list. To gain a basic understanding of the display list, read [Display programming](..\display-programming\README.md).
 
-**More Help topics**
+## Section Contents
+
+- [Basics of handling events](./basics-of-handling-events.md)
+- [The event flow](./the-event-flow.md)
+- [Event objects](./event-objects.md)
+- [Event listeners](./event-listeners.md)
+
+<!-- TODO: uncomment when this content is adapted to OpenFL
+- [Event handling example: Alarm Clock](./event-handling-example-alarm-clock.md) -->
+
+## More Help topics
 
 * [openfl.events package](http://api.openfl.org/openfl/events/)
 * [Document Object Model (DOM) Level 3 Events Specification](http://www.w3.org/TR/DOM-Level-3-Events/)

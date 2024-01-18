@@ -38,6 +38,6 @@ vid.attachNetStream(ns);
 
 ns.play("video.mp4");
 
-**More Help topics**
+## More Help topics
 
 [Flex: Spark VideoPlayer control](http://help.adobe.com/en_US/flex/using/WSc78f87379113c38b-669905c51221a3b97af-8000.html) [spark.components.VideoDisplay](http://help.adobe.com/en_US/FlashPlatform/reference/Haxe/3/spark/components/VideoDisplay.html?allClasses=1)

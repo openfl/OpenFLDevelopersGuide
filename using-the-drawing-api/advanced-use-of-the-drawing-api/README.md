@@ -21,3 +21,10 @@ The following reference list contains important terms that you will encounter in
 *   Winding: The direction of a path as interpreted by the renderer; either positive (clockwise) or negative (counter- clockwise).
 *   GraphicsStroke: A class for setting the line style. While the term "stroke" isn’t part of the drawing API enhancements, the use of a class to designate a line style with its own fill property is part of the new drawing API. You can dynamically adjust a line’s style using the GraphicsStroke class.
 *   Fill object: Objects created using display classes like openfl.display.GraphicsBitmapFill and openfl.display.GraphicsGradientFill that are passed to the drawing command `Graphics.drawGraphicsData()`. Fill objects and the enhanced drawing commands introduce a more object-oriented programming approach to replicating `Graphics.beginBitmapFill()` and `Graphics.beginGradientFill()`.
+
+## Section Contents
+
+- [Drawing paths](./drawing-paths.md)
+- [Defining winding rules](./defining-winding-rules.md)
+- [Using graphics data classes](./using-graphics-data-classes.md)
+- [About using drawTriangles](./about-using-drawtriangles.md)

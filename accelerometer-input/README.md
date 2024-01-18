@@ -6,7 +6,7 @@ The Accelerometer class dispatches events based on activity detected by the devi
 
 The accelerometer axes are normalized to the display orientation, not the physical orientation of the device. When the device re-orients the display, the accelerometer axes are re-oriented as well. Thus the y-axis is always roughly vertical when the user is holding the phone in a normal, upright viewing position — no matter which way the phone is rotated. If auto-orientation is off, for example, when SWF content in a browser is in full-screen mode, then the accelerometer axes are not re-oriented as the device is rotated.
 
-**More Help topics**
+## More Help topics
 
 [openfl.sensors.Accelerometer](https://api.openfl.org/openfl/sensors/Accelerometer.html)
 [openfl.events.AccelerometerEvent](https://api.openfl.org/openfl/events/AccelerometerEvent.html)

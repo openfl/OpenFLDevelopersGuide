@@ -1063,7 +1063,7 @@ You can use the spaceAvailable property of the rootDirectory property of a Stora
 
 .)
 
-**More Help topics**
+## More Help topics
 
 [StorageVolume](https://api.openfl.org/openfl/filesystem/StorageVolume.html) [StorageVolumeInfo](https://api.openfl.org/openfl/filesystem/StorageVolumeInfo.html)
 
