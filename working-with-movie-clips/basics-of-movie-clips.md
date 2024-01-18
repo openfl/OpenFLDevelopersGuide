@@ -1,5 +1,4 @@
-
-**Basics of movie clips**
+# Basics of movie clips
 
 Movie clips are a key element for people who create animated content with the Flash authoring tool and want to control that content with Haxe code. Whenever you create a movie clip symbol in Flash, Flash adds the symbol to the library of that Flash document. By default, this symbol becomes an instance of the [MovieClip class](http://api.openfl.org/openfl/display/MovieClip.html), and as such has the properties and methods of the MovieClip class.
 

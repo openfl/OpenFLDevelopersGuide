@@ -1,4 +1,4 @@
-## Basics of working with bitmaps
+# Basics of working with bitmaps
 
 When you work with digital images, you’re likely to encounter two main types of graphics: bitmap and vector. Bitmap graphics, also known as raster graphics, are composed of tiny squares (pixels) that are arranged in a rectangular grid formation. Vector graphics are composed of mathematically generated geometric shapes such as lines, curves, and polygons.
 
