@@ -12,7 +12,7 @@ API, you can access and manage directories and files, create directories and
 files, write data to files, and so on.
 
 - [Using the FileReference class](./using-the-filereference-class.md)
-<!-- - [Using the file system API](./using-the-file-system-api.md) -->
+- [Using the native file system API](./using-the-native-file-system-api.md)
 
 ## More Help topics
 

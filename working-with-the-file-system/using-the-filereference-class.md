@@ -212,10 +212,9 @@ other handler methods in the example simply output messages to report on the
 progress of the load operation. When the loading completes, the application
 displays the contents of the loaded file using the `trace()` method.
 
-<!-- TODO: uncomment when converted to OpenFL
 On native platforms, the FileStream class provides additional functionality for
 reading data from a local file. See
-[Reading and writing files](./reading-and-writing-files.md).-->
+[Workflow for reading and writing files](./workflow-for-reading-and-writing-files.md)
 
 ## Saving data to local files
 
@@ -378,10 +377,9 @@ dialog box to let the user enter a new filename and location to save the file.
 The remaining event listener methods trace the progress of the file saving
 process until it is complete.
 
-<!-- TODO: uncomment when converted to OpenFL
-In OpenFL on native platforms, the FileStream class provides additional
+On native platforms, the FileStream class provides additional
 functionality for writing data to a local file. See
-[Reading and writing files](./reading-and-writing-files.md).-->
+[Workflow for reading and writing files](./workflow-for-reading-and-writing-files.md).
 
 ## Uploading files to a server
 
@@ -404,7 +402,7 @@ instances to the `browse()` method:
 ```haxe
 var imageTypes:FileFilter = new FileFilter("Images (*.jpg, *.jpeg, *.gif, *.png)", "*.jpg; *.jpeg; *.gif; *.png");
 var textTypes:FileFilter = new FileFilter("Text Files (*.txt, *.rtf)", "*.txt; *.rtf");
-var allTypes:Array = new Array(imageTypes, textTypes);
+var allTypes:Array<FileFilter> = [imageTypes, textTypes];
 var fileRef:FileReference = new FileReference();
 fileRef.browse(allTypes);
 ```
