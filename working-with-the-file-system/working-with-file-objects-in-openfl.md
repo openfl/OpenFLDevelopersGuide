@@ -255,7 +255,7 @@ in this directory:
 
   <samp>C:\Users\</samp><em><samp>&lt;userName&gt;</samp></em><samp>\AppData\Roaming\</samp><em><samp>&lt;Company
   Name&gt;</samp></em><samp>\</samp><em><samp>&lt;Program
-  Name&gt;</samp></em></p>
+  Name&gt;</samp></em>
 
   For example:
 
