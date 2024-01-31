@@ -1,6 +1,6 @@
 # Using the load() and save() methods
 
-The `load()` and `save()` methods aree available on the FileReference class, and
+The `load()` and `save()` methods are available on the FileReference class, and
 the File class inherits them. These methods were designed to provide a secure
 means for users to load and save file data in web browsers. However, OpenFL
 applications targeting native platforms can also use these methods as an easy
