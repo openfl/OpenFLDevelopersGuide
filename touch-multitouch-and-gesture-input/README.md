@@ -41,7 +41,6 @@ zoom gesture.
 
 ## Section Contents
 
-- [Basics of touch input](./basics-of-touch-input.md)
 - [Touch support discovery](./touch-support-discovery.md)
 - [Touch event handling](./touch-event-handling.md)
 - [Troubleshooting](./troubleshooting.md)

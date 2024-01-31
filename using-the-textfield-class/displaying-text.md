@@ -75,7 +75,7 @@ variable. You have multiple options for loading text values from remote sources:
 <!-- TODO: add link when it is converted from Flash/AS3 to OpenFL
 - The openfl.net.SharedObject class manages persistent storage of values. For
   more information, see
-  [Storing local data](../../files-and-data/storing-local-data/index.md).
+  [Storing local data](../../files-and-data/storing-local-data/README.md).
 -->
 
 ## Displaying HTML text

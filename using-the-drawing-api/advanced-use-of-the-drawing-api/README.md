@@ -16,7 +16,9 @@ The following tasks are things you’ll likely want to accomplish using the adva
 
 The following reference list contains important terms that you will encounter in this section:
 
-*   Vector: An array of values all of the same data type. A Vector object can store an array of values that drawing methods use to construct lines and shapes with a single command. For more information on Vector objects, see [Indexed arrays](/working-with-arrays/README.md).
+*   Vector: An array of values all of the same data type. A Vector object can store an array of values that drawing methods use to construct lines and shapes with a single command.
+<!-- TODO: uncomment if this is written for OpenFL
+For more information on Vector objects, see [Indexed arrays](/working-with-arrays/README.md).-->
 *   Path: A path is made up of one or more straight or curved segments. The beginning and end of each segment are marked by coordinates, which work like pins holding a wire in place. A path can be closed (for example, a circle), or open, with distinct endpoints (for example, a wavy line).
 *   Winding: The direction of a path as interpreted by the renderer; either positive (clockwise) or negative (counter- clockwise).
 *   GraphicsStroke: A class for setting the line style. While the term "stroke" isn’t part of the drawing API enhancements, the use of a class to designate a line style with its own fill property is part of the new drawing API. You can dynamically adjust a line’s style using the GraphicsStroke class.

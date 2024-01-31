@@ -10,7 +10,7 @@ Regardless of which display object you choose to use, there are a number of mani
 - [Caching display objects](./caching-display-objects.md)
 - [Setting an opaque background color](./setting-an-opaque-background-color.md)
 - [Applying blending modes](./applying-blending-modes.md)
-- [Adjusting DisplayObject colors](./adjusting-display-object-colors.md)
+- [Adjusting DisplayObject colors](./adjusting-displayobject-colors.md)
 - [Rotating objects](./rotating-objects.md)
 - [Fading objects](./fading-objects.md)
 - [Masking display objects](./masking-display-objects.md)

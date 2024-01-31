@@ -168,7 +168,7 @@ For details, see
 The File class includes a `deleteDirectory()` method and a
 `deleteDirectoryAsync()` method. These methods delete directories, the first
 working synchronously, the second working asynchronously (see
-[OpenFL file basics](./openfl-file-basics.md)). Both methods include a
+[Native file system basics](./native-file-system-basics.md)). Both methods include a
 `deleteDirectoryContents` parameter (which takes a Boolean value); when this
 parameter is set to `true` (the default value is `false`) the call to the method
 deletes non-empty directories; otherwise, only empty directories are deleted.

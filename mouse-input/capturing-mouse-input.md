@@ -116,7 +116,7 @@ For more details, see the section on creating mouse drag interaction in
 
 On native targets, you can enable drag-and-drop support to allow users to drag
 data into and out of your application. For more details, see
-[Drag and drop in native targets](../drag-and-drop-in-native-targets/index.md).-->
+[Drag and drop in native targets](../drag-and-drop-in-native-targets/README.md).-->
 
 ## Customizing the mouse cursor
 

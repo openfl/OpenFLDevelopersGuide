@@ -10,4 +10,4 @@ Now that you understand the basic concepts of the Stage, display objects, displa
 - [Traversing the display list](./traversing-the-display-list.md)
 - [Setting Stage properties](./setting-stage-properties.md)
 - [Handling events for display objects](./handling-events-for-display-objects.md)
-- [Choosing a DisplayObject subclass](./choosing-a-display-object-subclass.md)
+- [Choosing a DisplayObject subclass](./choosing-a-displayobject-subclass.md)

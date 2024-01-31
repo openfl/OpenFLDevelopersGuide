@@ -6,7 +6,7 @@ files, and so on.
 
 <!-- TODO: uncomment if this content is converted for OpenFL
 Since your applications can access the local file system,
-refer to [AIR security](../../security/air-security/index.md), if you haven't
+refer to [AIR security](../../security/air-security/README.md), if you haven't
 already done so.-->
 
 <!-- TODO: uncomment if this content is converted for OpenFL
@@ -110,7 +110,7 @@ The File class includes two methods for copying files or directories: `copyTo()`
 and `copyToAsync()`. The File class includes two methods for moving files or
 directories: `moveTo()` and `moveToAsync()`. The `copyTo()` and `moveTo()`
 methods work synchronously, and the `copyToAsync()` and `moveToAsync()` methods
-work asynchronously (see [OpenFL file basics](./openfl-file-basics.md)).
+work asynchronously (see [Native file system basics](./native-file-system-basics.md)).
 
 To copy or move a file, you set up two File objects. One points to the file to
 copy or move, and it is the object that calls the copy or move method; the other
@@ -188,7 +188,7 @@ trash.
 
 The File class includes a `deleteFile()` method and a `deleteFileAsync()`
 method. These methods delete files, the first working synchronously, the second
-working asynchronously (see [OpenFL file basics](./openfl-file-basics.md)).
+working asynchronously (see [Native file system basics](./native-file-system-basics.md)).
 
 For example, the following code synchronously deletes the test.txt file in the
 user's documents directory:
@@ -244,7 +244,7 @@ can use to move a file or directory to the System trash. For details, see
 The File class includes a `moveToTrash()` method and a `moveToTrashAsync()`
 method. These methods send a file or directory to the System trash, the first
 working synchronously, the second working asynchronously (see
-[OpenFL file basics](./openfl-file-basics.md)).
+[Native file system basics](./native-file-system-basics.md)).
 
 For example, the following code synchronously moves the test.txt file in the
 user's documents directory to the System trash:

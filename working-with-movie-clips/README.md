@@ -7,7 +7,7 @@ The MovieClip class is the core class for animation and movie clip symbols that 
 - [Basics of movie clips](./basics-of-movie-clips.md)
 - [Working with MovieClip objects](./working-with-movieclip-objects.md)
 - [Controlling movie clip playback](./controlling-movie-clip-playback.md)
-- [Creating MovieClip objects with ActionScript](./creating-movieclip-objects-with-actionscript.md)
+- [Creating MovieClip objects with Haxe](./creating-movieclip-objects-with-haxe.md)
 
 <!-- TODO: uncomment if this content is adapted to OpenFL
 - [Loading an external SWF file](./loading-an-external-swf-file.md)

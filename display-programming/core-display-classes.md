@@ -10,9 +10,9 @@ All classes that extend the DisplayObject class inherit its methods and properti
 
 You can instantiate objects of the following classes contained in the openfl.display package:
 
-*   Bitmap&mdash;You use the Bitmap class to define bitmap objects, either loaded from external files or rendered through Haxe. You can load bitmaps from external files through the Loader class. You can load GIF, JPG, or PNG files. You can also create a BitmapData object with custom data and then create a Bitmap object that uses that data. You can use the methods of the BitmapData class to alter bitmaps, whether they are loaded or created in Haxe. For more information, see [Loading display objects](loading-display-content-dynamically.md#loading-display-objects) and [Working with bitmaps](../working-with-bitmaps/README.md).
+*   Bitmap&mdash;You use the Bitmap class to define bitmap objects, either loaded from external files or rendered through Haxe. You can load bitmaps from external files through the Loader class. You can load GIF, JPG, or PNG files. You can also create a BitmapData object with custom data and then create a Bitmap object that uses that data. You can use the methods of the BitmapData class to alter bitmaps, whether they are loaded or created in Haxe. For more information, see [Loading display objects](./loading-display-content-dynamically/loading-display-objects.md) and [Working with bitmaps](../working-with-bitmaps/README.md).
 
-*   Loader&mdash;You use the Loader class to load external assets (either projects or graphics). For more information, see [Loading display content dynamically](loading-display-content-dynamically.md).
+*   Loader&mdash;You use the Loader class to load external assets (either projects or graphics). For more information, see [Loading display content dynamically](./loading-display-content-dynamically/README.md).
 
 *   Shape&mdash;You use the Shape class to create vector graphics, such as rectangles, lines, circles, and so on. For more information, see [Using the drawing API](../using-the-drawing-api/README.md).
 
@@ -24,7 +24,7 @@ You can instantiate objects of the following classes contained in the openfl.dis
 
 The following classes, which are not in the openfl.display package, are subclasses of the DisplayObject class:
 
-*   The TextField class, included in the openfl.text package, is a display object for text display and input. For more information, see [Basics of Working with text](../basics-of-working-with-text/README.md).
+*   The TextField class, included in the openfl.text package, is a display object for text display and input. For more information, see [Using the TextField class](../using-the-textfield-class/README.md).
 
 <!-- 
 *   The TextLine class, included in the openfl.text.engine package, is the display object used to display lines of text composed by the Flash Text Engine and the Text Layout Framework. For more information, see
@@ -40,7 +40,9 @@ The following classes, which are not in the openfl.display package, are subclass
     .
 -->
 
-*   The Video class, included in the openfl.media package, is the display object used for displaying video files. For more information, see [Working with video](../working-with-video/README.md).
+*   The Video class, included in the openfl.media package, is the display object used for displaying video files.
+<!-- TODO: uncomment if this content is adapted for OpenFL
+For more information, see [Working with video](../working-with-video/README.md).-->
 
 The following classes in the openfl.display package extend the DisplayObject class, but you cannot create instances of them. Instead, they serve as parent classes for other display objects, combining common functionality into a single class.
 
@@ -53,7 +55,9 @@ The following classes in the openfl.display package extend the DisplayObject cla
     .
 -->
 
-*   InteractiveObject&mdash;InteractiveObject is the base class for all objects used to interact with the mouse and keyboard. SimpleButton, TextField, Loader, Sprite, Stage, and MovieClip objects are all subclasses of the InteractiveObject class. For more information on creating mouse and keyboard interaction, see [Basics of user interaction](../basics-of-user-interaction/README.md).
+*   InteractiveObject&mdash;InteractiveObject is the base class for all objects used to interact with the mouse and keyboard. SimpleButton, TextField, Loader, Sprite, Stage, and MovieClip objects are all subclasses of the InteractiveObject class.
+<!-- TODO: uncomment if this content is adapted for OpenFL
+For more information on creating mouse and keyboard interaction, see [Basics of user interaction](../basics-of-user-interaction/README.md).-->
 
 *   MorphShape&mdash;These objects are created when you create a shape tween in the Flash authoring tool. You cannot instantiate them using Haxe, but they can be accessed from the display list.
 

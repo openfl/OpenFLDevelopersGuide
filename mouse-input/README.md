@@ -19,6 +19,6 @@ persistent cursor, stylus or touch input) during runtime, see
 
 ## More Help topics
 
-- [Touch, multitouch and gesture input](../touch-multitouch-and-gesture-input/index.md)
+- [Touch, multitouch and gesture input](../touch-multitouch-and-gesture-input/README.md)
 - [openfl.ui.Mouse](https://api.openfl.org/openfl/ui/Mouse.html)
 - [openfl.events.MouseEvent](https://api.openfl.org/openfl/events/MouseEvent.html)

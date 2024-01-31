@@ -75,7 +75,7 @@ class FileStreamOpenAsyncExample extends Sprite
 
 The file is opened for synchronous or asynchronous operations, depending upon
 whether you use the `open()` or `openAsync()` method. For details, see
-[OpenFL file basics](./openfl-file-basics.md).
+[Native file system basics](./native-file-system-basics.md).
 
 If you set the `fileMode` parameter to `FileMode.READ` or `FileMode.UPDATE` in
 the open method of the FileStream object, data is read into the read buffer as

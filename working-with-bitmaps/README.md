@@ -5,7 +5,7 @@ In addition to its vector drawing capabilities, OpenFL includes the ability to c
 ## Section Contents
 
 - [Basics of working with bitmaps](./basics-of-working-with-bitmaps.md)
-- [The Bitmap and BitmapData classes](./the-bitmap-and-bitmap-data-classes.md)
+- [The Bitmap and BitmapData classes](./the-bitmap-and-bitmapdata-classes.md)
 - [Manipulating pixels](./manipulating-pixels.md)
 - [Copying bitmap data](./copying-bitmap-data.md)
 - [Compressing bitmap data](./compressing-bitmap-data.md)
