@@ -33,7 +33,7 @@ var format2:TextFormat = new TextFormat();
 format2.font = "Courier";
 
 tf.setTextFormat(format1);
-var startRange:uint = 6;
+var startRange:Int = 6;
 tf.setTextFormat(format2, startRange);
 
 addChild(tf);
