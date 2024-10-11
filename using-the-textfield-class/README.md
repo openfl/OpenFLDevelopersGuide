@@ -42,6 +42,7 @@ to respond to user actions related to text.
 - [Formatting text](./formatting-text.md)
 - [Advanced text rendering](./advanced-text-rendering.md)
 - [Working with static text](./working-with-static-text.md)
+- [Working with font assets](./working-with-font-assets.md)
 
 <!-- TODO: uncomment when this content is adapted for OpenFL
 - [TextField Example: Newspaper-style text formatting](./textfield-example-newspaper-style-text-formatting.md)-->

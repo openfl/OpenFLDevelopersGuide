@@ -46,6 +46,10 @@ format can be deferred so that the format is not actually created until the data
 in that format is read.
 -->
 
+## Section Contents
+
+- [Reading from and writing to the system clipboard](./reading-from-and-writing-to-the-system-clipboard.md)
+
 ## More Help Topics
 
 - [Clipboard](https://api.openfl.org/openfl/desktop/Clipboard.html)

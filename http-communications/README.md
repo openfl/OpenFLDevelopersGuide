@@ -6,9 +6,9 @@ images, video and to exchange messages.
 ## Section Contents
 
 - [Loading external data](./loading-external-data.md)
+- [Web service requests](./web-service-requests.md)
 
 <!-- TODO: uncomment when these documents are adapted for OpenFL
-- [Web service requests](./web-service-requests.md)
 - [Opening a URL in another application](./opening-a-url-in-another-application.md)-->
 
 ## More Help topics

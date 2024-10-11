@@ -29,6 +29,7 @@ connection or save it to a file.
 ## Section Contents
 
 - [Reading and writing a byte array](./reading-and-writing-a-byte-array.md)
+- [Working with byte array assets](./working-with-byte-array-assets.md)
 
 <!-- TODO: uncomment when this content is adapted for OpenFL
 - [ByteArray example: Reading a .zip file](./bytearray-example-reading-a-zip-file.md)-->

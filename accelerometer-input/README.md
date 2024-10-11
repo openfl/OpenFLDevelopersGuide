@@ -43,6 +43,10 @@ properties for desktop, mobile, and web, but you need to use the
 Accelerometer feature on the user's device. If `Accelerometer.isSupported` is
 `true` at runtime, then Accelerometer support currently exists.
 
+## Section Contents
+
+- [Detecting accelerometer changes](./detecting-accelerometer-changes.md)
+
 ## More Help Topics
 
 - [openfl.sensors.Accelerometer](https://api.openfl.org/openfl/sensors/Accelerometer.html)

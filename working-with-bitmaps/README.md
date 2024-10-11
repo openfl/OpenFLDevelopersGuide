@@ -11,6 +11,7 @@ In addition to its vector drawing capabilities, OpenFL includes the ability to c
 - [Compressing bitmap data](./compressing-bitmap-data.md)
 - [Making textures with noise functions](./making-textures-with-noise-functions.md)
 - [Scrolling bitmaps](./scrolling-bitmaps.md)
+- [Working with bitmap assets](./working-with-bitmap-assets.md)
 
 <!-- TODO: uncomment when this content is adapted for OpenFL
 - [Taking advantage of mipmapping](./taking-advantage-of-mipmapping.md)
