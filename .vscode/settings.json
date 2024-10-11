@@ -1,0 +1,13 @@
+{
+	"[markdown]": {
+	  "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.proseWrap": "always",
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/*.code-search": true,
+		"**/_book": true
+	}
+  }
+  
