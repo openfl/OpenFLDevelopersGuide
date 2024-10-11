@@ -21,8 +21,6 @@ Use the `Accelerometer.isSupported` property to test the runtime environment for
 the ability to use this feature:
 
 ```haxe
-package devguide;
-
 import openfl.display.Sprite;
 import openfl.sensors.Accelerometer;
 
