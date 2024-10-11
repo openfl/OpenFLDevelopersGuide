@@ -12,7 +12,7 @@ In a
 [Lime _project.xml_ file](https://lime.openfl.org/docs/project-files/xml-format/),
 include sound files using the
 [`<assets>` element](https://lime.openfl.org/docs/project-files/xml-format/#assets).
-Sounds assets may be of one of the following types:
+Sound assets may be of one of the following types:
 
 - music
 - sound
@@ -28,9 +28,9 @@ Sounds assets may be of one of the following types:
 </assets>
 ```
 
-## Using sound assts
+## Using sound assets
 
-The following code works with a sound asset with the id "MySound". The code get
+The following code works with a sound asset with the id "MySound". The code gets
 an instance of the sound asset and calls the `play()` method on that instance:
 
 ```haxe
