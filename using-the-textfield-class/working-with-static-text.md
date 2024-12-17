@@ -70,4 +70,4 @@ trace(myText);
 
 The TextSnapshot class is useful for getting the text out of static text fields
 in a loaded SWF file, if you want to use the text as a value in another part of
-an application.
+an application.-->
