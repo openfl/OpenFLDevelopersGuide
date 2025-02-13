@@ -8,14 +8,11 @@ For example, imagine you want to create a simple animation, such as making a bal
 
 From a practical standpoint, it makes sense to synchronize scripted animation with the project’s frame rate (in other words, make one animation change each time a new frame displays or would display), since that defines how frequently OpenFL updates the screen. Each display object has an enterFrame event that is dispatched according to the frame rate of the project—one event per frame. Most developers who create scripted animation use the enterFrame event as a way to create actions that repeat over time. You could write code that listens to the enterFrame event, moving the animated ball a certain amount each frame, and as the screen is updated (each frame), the ball would be redrawn in its new location, creating motion.
 
-**_Note:_** _Another way to perform an action repeatedly over time is to use the Timer class. A Timer instance triggers an event notification each time a specified amount of time has past. You could write code that performs animation by handling the Timer class’s timer event, setting the time interval to a small one (some fraction of a second). For more information about using the Timer class, see_
-
-_"Controlling time intervals" on page 4_
-
-_._
+**_Note:_** _Another way to perform an action repeatedly over time is to use the Timer class. A Timer instance triggers an event notification each time a specified amount of time has past. You could write code that performs animation by handling the Timer class’s timer event, setting the time interval to a small one (some fraction of a second).
 
 In the following example, a circle Sprite instance, named circle, is created on the Stage. When the user clicks the circle, a scripted animation sequence begins, causing circle to fade (its alpha property is decreased) until it is completely transparent:
 
+```haxe
 import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.events.MouseEvent;
@@ -29,45 +26,38 @@ circle.graphics.endFill();
 addChild(circle);
 
 // When this animation starts, this function is called every frame.
-
 // The change made by this function (updated to the screen every
-
 // frame) is what causes the animation to occur.
 
-function fadeCircle(event:Event):void
-
+function fadeCircle(event:Event):Void
 {
-
-circle.alpha -= .05;
-
-if (circle.alpha &lt;= 0)
-
-{
-
-circle.removeEventListener(Event.ENTER_FRAME, fadeCircle);
-
+	circle.alpha -= .05;
+	if (circle.alpha <= 0)
+	{
+		circle.removeEventListener(Event.ENTER_FRAME, fadeCircle);
+	}
 }
 
-}
-
-function startAnimation(event:MouseEvent):void
-
+function startAnimation(event:MouseEvent):Void
 {
-
-circle.addEventListener(Event.ENTER_FRAME, fadeCircle);
-
+	circle.addEventListener(Event.ENTER_FRAME, fadeCircle);
 }
 
 circle.addEventListener(MouseEvent.CLICK, startAnimation);
+```
 
 When the user clicks the circle, the function fadeCircle() is subscribed as a listener of the enterFrame event, meaning it begins to be called once per frame. That function fades circle by changing its alpha property, so once per frame the circle’s alpha decreases by .05 (5 percent) and the screen is updated. Eventually, when the alpha value is 0 (circle is completely transparent), the fadeCircle() function is removed as an event listener, ending the animation.
 
 The same code could be used, for example, to create animated motion instead of fading. By substituting a different property for alpha in the function that is an enterFrame event listener, that property will be animated instead. For example, changing this line
 
+```haxe
 circle.alpha -= .05;
+```
 
 to this code
 
+```haxe
 circle.x += 5;
+```
 
 will animate the x property, causing the circle to move to the right across the Stage. The condition that ends the animation could be changed to end the animation (that is, unsubscribe the enterFrame listener) when the desired x coordinate is reached.
