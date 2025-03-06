@@ -41,7 +41,7 @@ class FontAssetExample extends Sprite
 		super();
 		var fnt:Font = Assets.getFont("MyFont");
 		var tf:TextField = new TextField();
-		tf.defaultTextFormat = new TextFormat(fnt.getName());
+		tf.defaultTextFormat = new TextFormat(fnt.fontName);
 		tf.text = "Hello world";
 		addChild(tf);
 	}
